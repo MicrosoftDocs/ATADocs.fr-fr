@@ -1,6 +1,6 @@
 ---
-title: "Présentation d’Azure - Protection avancée contre les menaces (ATP) | Microsoft Docs"
-description: "Explique ce qu’est Azure - Protection avancée contre les menaces (ATP) et quels types d’activités suspectes il peut détecter"
+title: "Qu’est-ce qu’Advanced Threat Protection ? (ATP) | Microsoft Docs"
+description: "Explique ce qu’est Azure Advanced Threat Protection (ATP) et quels types d’activités suspectes il peut détecter"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
@@ -19,11 +19,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
-# <a name="what-is-azure-advanced-threat-protection"></a>Présentation d’Azure - Protection avancée contre les menaces
-Le service Azure - Protection avancée contre les menaces (ATP, Advanced Threat Protection) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
+# <a name="what-is-azure-advanced-threat-protection"></a>Qu’est-ce qu’Advanced Threat Protection ?
+Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
 
 ## <a name="how-azure-atp-works"></a>Fonctionnement d’Azure ATP
 
@@ -43,15 +43,15 @@ Azure ATP peut recevoir des événements et des journaux des éléments suivants
 
 Pour plus d’informations sur l’architecture Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
 
-## <a name="what-does-azure-atp-do"></a>Fonction d’Azure ATP
+## <a name="what-does-azure-atp-do"></a>Que fait Azure ATP ?
 
 La technologie Azure ATP détecte des activités suspectes multiples en se focalisant sur plusieurs phases de la chaîne de frappe de cyberattaques, notamment :
 
--   Les différentes ressources de reconnaissance, au cours de laquelle des personnes malveillantes recueillir des informations sur la façon dont l’environnement est construit, sont, et les entités qui existent. Elles élaborent généralement leur plan pour les prochaines étapes de l’attaque.
--   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la propagation de sa surface d’attaque au sein de votre réseau.
--   Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques. 
+-   Reconnaissance, au cours de laquelle les personnes malveillantes vont recueillir des informations sur la façon dont l’environnement est construit, sur les différents assets, et sur les entités qui existent. Elles élaborent généralement leur plan pour les prochaines phases de l’attaque.
+-   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
+-   Dominance de domaine (persistance), pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques. 
 
-Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
+Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visée ou le type d’informations ciblées.
 Azure ATP recherche trois principaux types d’attaques : les attaques malveillantes, le comportement anormal, et les risques et problèmes de sécurité.
 
 Les **attaques malveillantes** sont détectées de façon déterministe ainsi que par l’analytique d’un comportement anormal. La liste complète des types d’attaques connus comprend :
