@@ -1,6 +1,6 @@
----
-title: Qu’est-ce qu’Advanced Threat Protection ? (ATP) | Microsoft Docs
-description: Explique ce qu’est Azure Advanced Threat Protection (ATP) et quels types d’activités suspectes il peut détecter
+﻿---
+title: "Qu’est-ce qu’Advanced Threat Protection ? (ATP) | Microsoft Docs"
+description: "Explique ce qu’est Azure Advanced Threat Protection (ATP) et quels types d’activités suspectes il peut détecter"
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -51,7 +51,7 @@ La technologie Azure ATP détecte des activités suspectes multiples en se focal
 -   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
 -   Dominance de domaine (persistance), pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques. 
 
-Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
+Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visée ou le type d’informations ciblées.
 Azure ATP recherche trois principaux types d’attaques : les attaques malveillantes, le comportement anormal, et les risques et problèmes de sécurité.
 
 Les **attaques malveillantes** sont détectées de façon déterministe ainsi que par l’analytique d’un comportement anormal. La liste complète des types d’attaques connus comprend :
