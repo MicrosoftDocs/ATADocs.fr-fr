@@ -1,15 +1,15 @@
----
+﻿---
 title: "Qu’est-ce qu’Advanced Threat Protection ? (ATP) | Microsoft Docs"
 description: "Explique ce qu’est Azure Advanced Threat Protection (ATP) et quels types d’activités suspectes il peut détecter"
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
