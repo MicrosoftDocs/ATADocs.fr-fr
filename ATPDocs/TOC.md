@@ -1,11 +1,12 @@
 # Comprendre et explorer
 ## [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
-## [Forum Aux Questions](atp-technical-faq.md)
+## [Questions fréquentes (FAQ)](atp-technical-faq.md)
 ## [Nouveautés dans Azure ATP](atp-whats-new.md)
 # Planification et conception
 ## [Prérequis d’Azure ATP](atp-prerequisites.md)
 ## [Architecture Azure ATP](atp-architecture.md)
 ## [Planifier la capacité Azure ATP](atp-capacity-planning.md)
+### [Configurer un proxy pour permettre la communication](configure-proxy.md)
 # Déploiement
 ## [1 Créer un espace de travail dans le portail de gestion d’espace de travail](install-atp-step1.md)
 ## [2 Se connecter à AD](install-atp-step2.md)
@@ -21,7 +22,6 @@
 ### [Valider la mise en miroir des ports](validate-port-mirroring.md)
 ### [Configurer la collecte d’événements](configure-event-collection.md)
 ### [Configurer les transferts d’événements Windows](configure-event-forwarding.md)
-### [Configurer un proxy pour permettre la communication](configure-proxy.md)
 # Utiliser
 ## [Centre d’intégrité Azure ATP](atp-health-center.md)
 ## [Rapports Azure ATP](reports.md)
@@ -36,7 +36,7 @@
 ## [Utilisation du portail d’espace de travail Azure ATP](workspace-portal.md)
 ## Informations de référence sur Azure ATP
 ### [Informations de référence sur le journal SIEM](cef-format-sa.md)
-# Investiguer
+# Étudier
 ## [Gestion des activités suspectes](working-with-suspicious-activities.md)
 ## [Guide des activités suspectes](suspicious-activity-guide.md)
 ## [Examiner les chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
@@ -44,3 +44,4 @@
 # Résolution des problèmes
 ## [Résolution des problèmes connus](troubleshooting-atp-known-issues.md)
 ## [Support et informations](atp-support.md)
+## [Guide de préparation à Azure ATP](atp-resources.md)
