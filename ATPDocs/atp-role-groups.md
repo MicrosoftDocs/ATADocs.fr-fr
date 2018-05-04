@@ -1,23 +1,23 @@
 ---
-title: "Groupes de rôles Azure - Protection avancée contre les menaces pour la gestion des accès | Microsoft Docs"
-description: "Explique comment utiliser des groupes de rôles Azure ATP."
-keywords: 
+title: Groupes de rôles Azure - Protection avancée contre les menaces pour la gestion des accès | Microsoft Docs
+description: Explique comment utiliser des groupes de rôles Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 4/30/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86cb55fd2b5ce81460dead4b8b753c88f79edd7b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -45,11 +45,10 @@ Azure ATP présente trois types de groupes de sécurité : Administrateurs *nom 
 
 |Activité |Administrateurs *nom de l’espace de travail* Azure ATP|Utilisateurs *nom de l’espace de travail* Azure ATP|Observateurs *nom de l’espace de travail* Azure ATP|
 |----|----|----|----|
-|Connexion|Disponible|Disponible|Disponible|
-|Fournir des commentaires sur les activités suspectes|Disponible|Disponible|Non disponible|
+|Se connecter|Disponible|Disponible|Disponible|
 |Modifier l’état des activités suspectes|Disponible|Disponible|Non disponible|
-|Partager/exporter une activité suspecte par e-mail/via un lien|Disponible|Disponible|Non disponible|
-|Modifier l’état de la surveillance des alertes|Disponible|Disponible|Non disponible|
+|Partager/exporter une activité suspecte par e-mail/via un lien|Disponible|Disponible|Disponible|
+|Modifier l’état de la surveillance des alertes|Disponible|Non disponible|Non disponible|
 |Mettre à jour la configuration Azure ATP|Disponible|Non disponible|Non disponible|
 |Capteur – Ajouter|Disponible|Non disponible|Non disponible|
 |Capteur – Supprimer |Disponible|Non disponible|Non disponible|
@@ -62,12 +61,12 @@ Quand les utilisateurs tentent d’accéder à une page qui n’est pas disponib
 
 ## <a name="add-and-remove-users"></a>Ajouter et supprimer des utilisateurs 
 
-Azure ATP utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés à partir de [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Seuls des utilisateurs AAD peuvent être ajoutés ou supprimés dans les groupes de sécurité. 
+Azure ATP utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés à partir des groupes [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Seuls des utilisateurs AAD peuvent être ajoutés ou supprimés dans les groupes de sécurité. 
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement ATA](http://aka.ms/aatpsizingtool)
 - [Architecture d’ATA](atp-architecture.md)
 - [Installer ATA](install-atp-step1.md)
-- [Consultez le forum ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
 
