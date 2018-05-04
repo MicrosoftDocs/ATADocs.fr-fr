@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -30,6 +30,8 @@ L’architecture Azure - Protection avancée contre les menaces est détaillée 
 Azure ATP surveille le trafic réseau de vos contrôleurs de domaine en utilisant la mise en miroir des ports sur un capteur autonome Azure ATP à l’aide de commutateurs physiques ou virtuels. Si vous déployez le capteur autonome Azure ATP directement sur vos contrôleurs de domaine, la mise en miroir des ports est inutile. De plus, Azure ATP peut tirer parti des événements Windows (transférés directement à partir de vos contrôleurs de domaine ou d’un serveur SIEM) et analyser les données à la recherche d’attaques et de menaces. Azure ATP reçoit le trafic analysé à partir du capteur autonome Azure ATP et du capteur Azure ATP. Le centre ATA effectue ensuite le profilage, exécute la détection déterministe, et exécute l’apprentissage automatique et les algorithmes comportementaux pour en savoir plus sur votre réseau afin de détecter les anomalies et vous avertir des activités suspectes.
 
 Cette section décrit le flux de capture réseau et d’événements, ainsi que les fonctionnalités des principaux composants d’ATP : le capteur autonome Azure ATP, le capteur Azure ATP (qui a les mêmes fonctionnalités de base que le capteur autonome Azure ATP) et le service cloud Azure ATP. 
+
+Lors de son installation directe sur les contrôleurs de domaine, le capteur accède aux journaux d’événements directement à partir du contrôleur de domaine. Une fois ces journaux et le trafic analysés par le capteur, Azure ATP envoie uniquement cette information analysée au service Azure ATP (pas tous les journaux).
 
 ## <a name="azure-atp-components"></a>Composants d’Azure ATP
 Azure ATP est constitué des composants suivants :

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,51 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: de761df3badbd1ae1118c96d018a24dd22318328
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+
+
+## <a name="azure-atp-release-230"></a>Azure ATP version 2.30
+
+Publication : 29 avril 2018
+ 
+- Les activités de passage à une version antérieure de chiffrement suspectes incluent désormais une section de preuve qui décrit les symptômes détectés par Azure ATP provoquant la suspicion de l’apparition d’une activité de passage à une version antérieure de chiffrement. 
+-   Azure ATP utilise désormais Azure E-mail Orchestrator pour tous les e-mails envoyés à partir de Azure ATP, y compris les activités suspectes, alertes et rapports de surveillance. Vous verrez que ces notifications par e-mail désormais suivent un format cohérent pour la facilité d’utilisation et les fichiers Excel seront liés par e-mail pour être téléchargés à partir de la console.
+ 
+ 
+
+## <a name="azure-atp-release-229"></a>Azure ATP version 2.29
+
+Publication : 22 avril 2018
+ 
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+ 
+ 
+## <a name="azure-atp-release-228"></a>Azure ATP version 2.28
+
+Publication : 15 avril 2018
+ 
+-   Les utilisateurs membres des groupes de rôles Utilisateurs Azure ATP et Observateurs ATP Azure sont à présent autorisés à voir les alertes de surveillance.
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
+
+## <a name="azure-atp-release-227"></a>Azure ATP version 2.27
+
+Publication : 8 avril 2018
+
+- Vous avez maintenant la possibilité de fournir des commentaires utilisateur à partir de la barre de navigation supérieure. Cliquez sur l’émoticône dans la barre de menus pour envoyer un e-mail contenant vos commentaires à l’équipe Azure ATP.
+
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+ 
 
 ## <a name="azure-atp-release-226"></a>Azure ATP version 2.26
 

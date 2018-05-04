@@ -1,28 +1,51 @@
 ---
-title: "Dépannage des problèmes connus d’Azure ATP | Microsoft Docs"
-description: "Décrit comment résoudre les problèmes d’Azure ATP."
-keywords: 
+title: Dépannage des problèmes connus d’Azure ATP | Microsoft Docs
+description: Décrit comment résoudre les problèmes d’Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/6/2018
+ms.date: 4/29/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2895a38e2328fb7de4fe7f47d00c4e40ac854e74
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/30/2018
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP 
+
+
+## <a name="deployment-log-location"></a>Emplacement des journaux de déploiement
+ 
+Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. À l’emplacement d’installation par défaut, ce répertoire se trouve ici : C:\Users\Administrator\AppData\Local\Temp (ou un répertoire au-dessus de %temp%).
+
+## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Le problème d’authentification du proxy se présente sous la forme d’erreur de licence
+
+Lors de l’installation du capteur, vous recevez l’erreur suivante : **le capteur a échoué en raison de problèmes de licence.**
+
+Les entrées de journal de déploiement : [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync renvoient [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Arrêt, code de  sortie : 0x642
+
+
+**Cause :**
+
+Dans certains cas, lors de la communication via un proxy, lors de l’authentification, il peut répondre au capteur Azure ATP avec l’erreur 401 ou 403 au lieu de l’erreur 407. Le capteur Azure ATP interprétera l’erreur 401 ou 403 comme un problème de licence et non comme un problème d’authentification du proxy. 
+
+**Résolution :**
+
+Assurez-vous que le capteur peut naviguer vers *.atp.azure.com via le proxy configuré sans authentification. Pour plus d'informations, consultez [Configurer le proxy pour activer la communication](configure-proxy.md).
+
+
+
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problème d’association de cartes réseau du capteur Azure ATP
 
@@ -30,14 +53,14 @@ Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec u
 
 Si vous n’avez pas encore installé le capteur :
 
-1.  Téléchargez Npcap à partir du site [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Téléchargez Npcap depuis [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.  Désinstallez WinPcap, s’il était installé.
 3.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
 4.  Installez le package du capteur.
 
 Si vous avez déjà installé le capteur :
 
-1.  Téléchargez Npcap à partir du site [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Téléchargez Npcap depuis [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.  Désinstallez le capteur.
 3.  Désinstallez WinPcap.
 4.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
