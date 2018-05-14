@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 5/8/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
+ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/08/2018
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -88,7 +88,7 @@ Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous de
 Pour plus d’informations sur l’utilisation de machines virtuelles avec le capteur autonome Azure ATP, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
+> Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur autonome Azure ATP.<br>
@@ -107,9 +107,9 @@ L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est in
 ### <a name="network-adapters"></a>Cartes réseau
 Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moins une carte de capture :
 
--   **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Elle doit être configurée avec les paramètres suivants :
+-   **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Le capteur utilise cette carte pour interroger le contrôleur de domaine qu’il protège et procéder à la résolution des comptes d’ordinateur. <br>Elle doit être configurée avec les paramètres suivants :
 
-    -   Adresse IP statique (capteur par défaut inclus)
+    -   Adresse IP statique (passerelle par défaut incluse)
 
     -   Serveurs DNS préféré et auxiliaire
 
@@ -139,21 +139,21 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
 |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
 |Kerberos|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Contrôleurs de domaine|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDDP|1813|RADIUS|Entrant|
+|RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]
 > - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
 > - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
 >   -   NTLM sur RPC (port TCP 135) à des fins de résolution
 >   -   NetBIOS (port UDP 137) à des fins de résolution
->   -   Requêtes SAM-R (port TCP/UDP 445) à des fins de détection
-
+>   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
 ## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
 Cette section décrit la configuration requise pour le capteur Azure ATP.
@@ -164,11 +164,11 @@ Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule 
 
 Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
 
-Pendant l’installation, .NET Framework 4.7 est installé et peut entraîner un redémarrage du contrôleur de domaine.
+Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
 
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
+> Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 
@@ -202,18 +202,18 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |**Ports internes**|||||
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Contrôleurs de domaine|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDDP|1813|RADIUS|Entrant|
+|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]
-> - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md).
-> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs Azure ATP :
+> - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
+> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
 >   -   NTLM sur RPC (port TCP 135) à des fins de résolution
 >   -   NetBIOS (port UDP 137) à des fins de résolution
->   -   Requêtes SAM-R (port TCP/UDP 445) à des fins de détection
-
+>   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
 
 

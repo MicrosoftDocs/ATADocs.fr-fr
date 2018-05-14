@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -121,9 +121,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
 |**DNS**|TCP et UDP|53|Serveurs DNS|Sortant|
 |**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|**Netlogon** (facultatif si joint à un domaine)|TCP et UDP|445|Contrôleurs de domaine|Sortant|
 |**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Sortant|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP et UDP|445|Passerelles et appareils|Entrant et sortant|
 
 > [!NOTE]
 > LDAP est obligatoire pour tester les informations d’identification à utiliser entre les passerelles ATA et les contrôleurs de domaine. Le test est effectué à partir du centre ATA sur un contrôleur de domaine pour tester la validité de ces informations d’identification. Ensuite, la passerelle ATA utilise le protocole LDAP dans le cadre de son processus de résolution normal.
@@ -212,7 +210,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
 |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
 |Kerberos|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|Netlogon|TCP et UDP|445|Contrôleurs de domaine|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
@@ -225,6 +223,10 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 >
 > -   NTLM sur RPC (port TCP 135)
 > -   NetBIOS (port UDP 137)
+> - En utilisant le compte d’utilisateur du service d’annuaire, la passerelle ATA interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux avec SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-ata-step9-samr.md).
+> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir de la passerelle ATA :
+>   -   NTLM sur RPC (port TCP 135) à des fins de résolution
+>   -   NetBIOS (port UDP 137) à des fins de résolution
 
 ## <a name="ata-lightweight-gateway-requirements"></a>Configuration requise pour la passerelle légère ATA
 Cette section décrit la configuration requise pour la passerelle légère ATA.
@@ -280,12 +282,17 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par la pas
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
 |SSL|TCP|443|Centre ATA|Sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]
 > Dans le cadre du processus de résolution effectué par la passerelle légère ATA, les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des passerelles légères ATA.
 >
 > -   NTLM sur RPC
 > -   NetBIOS
+> - En utilisant le compte d’utilisateur du service d’annuaire, la passerelle légère ATA interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux avec SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-ata-step9-samr.md).
+> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir de la passerelle ATA :
+>   -   NTLM sur RPC (port TCP 135) à des fins de résolution
+>   -   NetBIOS (port UDP 137) à des fins de résolution
 
 ## <a name="ata-console"></a>Console ATA
 L’accès à la console ATA s’effectue au moyen d’un navigateur, avec prise en charge des navigateurs et paramètres suivants :

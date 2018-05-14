@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -51,6 +51,10 @@ Pour plus d’informations sur la mise à niveau de la version, consultez [Chemi
 
 Pour obtenir la matrice de mise à niveau de la version d’ATA, consultez [Chemin de mise à niveau d’ATA](upgrade-path.md).
 
+
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Comment le centre ATA met-il à jour ses dernières signatures ?
+
+Le mécanisme de détection ATA est amélioré quand une nouvelle version est installée sur le centre ATA. Vous pouvez mettre à niveau le centre avec Microsoft Update (MU), ou en téléchargeant manuellement la nouvelle version depuis le Centre de téléchargement ou le site des licences en volume.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Comment vérifier le transfert d’événements Windows ?
 Vous pouvez placer le code qui suit dans un fichier, puis l’exécuter à partir d’une invite de commandes dans le répertoire **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** comme suit :
