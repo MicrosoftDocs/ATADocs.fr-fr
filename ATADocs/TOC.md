@@ -14,12 +14,13 @@
 #### [Mise à jour vers ATA 1.5 : guide de migration](ata-update-1.5-migration-guide.md)
 ### [Nouveautés d’ATA version 1.4](whats-new-version-1.4.md)
 ## [Forum Aux Questions](ata-technical-faq.md)
+## [ATA : conformité, confiance, sécurité et confidentialité des données](ata-privacy-compliance.md)
 # Planification et conception
 ## [Architecture d’ATA](ata-architecture.md)
 ## [Planifier la capacité d’ATA](ata-capacity-planning.md)
 ## [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 ## [Parcours de mise à niveau recommandé](upgrade-path.md)
-# Déploiement
+# Déployez
 ## [1 Télécharger et installer le Centre](install-ata-step1.md)
 ## [2 Se connecter à AD](install-ata-step2.md)
 ## [3 Télécharger le package de la passerelle ATA](install-ata-step3.md)
@@ -34,7 +35,7 @@
 ### [1. Configurer la mise en miroir des ports](configure-port-mirroring.md)
 ### [2. Valider la mise en miroir des ports](validate-port-mirroring.md)
 ### [3. Configurer le transfert d’événements Windows](configure-event-collection.md)
-# Utiliser
+# Utilisez
 ## [Gestion de la base de données ATA](ata-database-management.md)
 ## [Centre d’intégrité ATA](ata-health-center.md)
 ## [Rapports ATA](reports.md)
@@ -54,14 +55,14 @@
 ## ATA Informations de référence
 ### [Informations de référence sur le journal SIEM](cef-format-sa.md)
 ### [Référence de ID de l'événement](event-id-reference.md)
-# Investiguer
+# Étudier
 ## [Guide des activités suspectes](suspicious-activity-guide.md)
-# Dépanner
+# Dépannage
 ## [Utilisation des journaux d’audit](troubleshoot-audit.md)
 ## [Résolution des problèmes connus](troubleshooting-ata-known-errors.md)
 ## [Résoudre les problèmes à l’aide des journaux](troubleshooting-ata-using-logs.md)
 ## [Résolution des problèmes à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md)
 ## [Résolution des problèmes à l’aide de la base de données](troubleshooting-ata-using-ata-database.md)
 ## [Résolution des problèmes de démarrage du service](troubleshooting-service-startup.md)
-## [Récupération d'urgence](disaster-recovery.md)
+## [Récupération d’urgence](disaster-recovery.md)
 # [Guide de préparation à ATA](ata-resources.md)
