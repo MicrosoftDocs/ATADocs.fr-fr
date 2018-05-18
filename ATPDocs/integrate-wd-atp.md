@@ -1,23 +1,23 @@
 ---
-title: "Intégration d’Azure - Protection avancée contre les menaces et de Windows Defender ATP | Microsoft Docs"
-description: "Guide pratique pour intégrer Azure - Protection avancée contre les menaces et Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces"
-keywords: 
+title: Intégration d’Azure - Protection avancée contre les menaces et de Windows Defender ATP | Microsoft Docs
+description: Guide pratique pour intégrer Azure - Protection avancée contre les menaces et Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -40,9 +40,9 @@ En intégrant Windows Defender ATP et Azure ATP, vous pouvez tirer parti de tout
 
 La technologie Azure ATP détecte des activités suspectes multiples en se focalisant sur plusieurs phases de la chaîne de cyberattaque, notamment :
 
-- Les différentes ressources de reconnaissance, au cours de laquelle des personnes malveillantes recueillir des informations sur la façon dont l’environnement est construit, sont, et les entités qui existent. Elles élaborent généralement leur plan pour les prochaines étapes de l’attaque.
+- Reconnaissance, au cours de laquelle les personnes malveillantes vont recueillir des informations sur la façon dont l’environnement est construit, sur les différents assets, et sur les entités qui existent. Elles élaborent généralement leur plan pour les prochaines phases de l’attaque.
 
-- Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la propagation de sa surface d’attaque au sein de votre réseau.
+- Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
 
 - Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques.
 
@@ -96,8 +96,10 @@ Si vous cliquez sur le badge, vous êtes dirigé vers le portail Windows Defende
  ![Windows Defender ATP grisé](./media/wd-grey.png)
 
 Dans le portail Windows Defender ATP, lorsque vous cliquez sur un point de terminaison, vous pouvez visualiser les alertes Azure ATP. Si vous cliquez sur les alertes pour cette entité dans Windows Defender ATP, la page de profil de l’entité s’ouvre dans Azure ATP. 
+ 
+ > ![REMARQUE] Actuellement, l’intégration d’Azure ATP avec Windows Defender ATP prend en charge uniquement les utilisateurs et les machines qui font partie de l’AD local. Les utilisateurs d’Azure AD et les machines virtuelles gérées dans Azure ne sont pas pris en compte dans le cadre de l’intégration 
 
- ![Alertes Windows Defender ATP](./media/wd-atp-alerts.png)
+![Alertes Windows Defender ATP](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Voir aussi

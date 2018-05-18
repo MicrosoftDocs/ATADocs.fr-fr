@@ -1,57 +1,80 @@
 ---
-title: "Configurer votre proxy ou pare-feu pour permettre la communication d’Azure ATP avec le capteur | Microsoft Docs"
-description: "Décrit comment configurer votre pare-feu ou proxy pour permettre la communication entre le service cloud Azure ATP et les capteurs Azure ATP"
-keywords: 
+title: Configurer votre proxy ou pare-feu pour permettre la communication d’Azure ATP avec le capteur | Microsoft Docs
+description: Décrit comment configurer votre pare-feu ou proxy pour permettre la communication entre le service cloud Azure ATP et les capteurs Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/16/2018
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
-# <a name="configure-your-proxy-to-allow-communication-between-azure-atp-sensors-and-the-azure-atp-cloud-service"></a>Configurer votre proxy pour permettre la communication entre les capteurs Azure ATP et le service cloud Azure ATP
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 *.atp.azure.com dans votre pare-feu ou proxy. La configuration doit être effectuée au niveau de l’ordinateur (= compte d’ordinateur) et non pas au niveau du compte d’utilisateur. Vous pouvez tester votre configuration en procédant comme suit :
+Chaque capteur Azure ATP requiert une connectivité Internet au service cloud Azure ATP pour fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web. Chaque capteur Azure ATP nécessite que vous utilisiez la configuration de proxy de Microsoft Windows Internet (WinINET) pour signaler les données de capteur et communiquer avec le service Azure ATP. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez toujours configurer les paramètres de proxy de navigateur Windows Internet (WinINet) pour la communication entre le capteur et le service cloud Azure ATP.
+
+
+Quand vous configurez le proxy, vous devez savoir que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide de **LocalSystem** compte. 
+
+> [!NOTE]
+> Si vous utilisez un proxy transparent ou WPAD dans votre topologie de réseau, vous n’avez pas besoin de configurer WinINET pour votre proxy.
+
+## <a name="configure-the-proxy"></a>Configurer le proxy 
+
+Configurez votre serveur proxy manuellement à l’aide d’un proxy statique basé sur le Registre pour permettre au capteur Azure ATP de signaler des données de diagnostic et de communiquer avec le service cloud Azure ATP quand un ordinateur n’est pas autorisé à se connecter à Internet.
+
+> [!NOTE]
+> Les modifications de Registre doivent être appliquées uniquement à LocalService et à LocalSystem.
+
+Le proxy statique est configurable par le biais du Registre. Vous devez copier la configuration du proxy que vous utilisez dans le contexte de l’utilisateur pour localsystem et localservice. Pour copier vos paramètres de proxy du contexte de l’utilisateur :
+
+1.   Veillez à sauvegarder les clés de Registre avant de les modifier.
+
+2. Dans le Registre, recherchez la valeur `DefaultConnectionSetting` comme REG_BINARY sous la clé de Registre `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` et copiez-la.
  
-1.  Vérifiez que l’**utilisateur actuel** a accès au point de terminaison de processeur à l’aide d’Internet Explorer, en accédant à l’URL suivante à partir du contrôleur de domaine : https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (pour les États-Unis). Vous devez obtenir l’erreur 503 :
+2.  Si LocalSystem n’a pas les paramètres de proxy appropriés (non configurés ou différents de Current_User), alors copiez le paramètre de proxy de Current_User vers LocalSystem. Sous la clé de Registre `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
- ![service non disponible](./media/service-unavailable.png)
+3.  Collez la valeur de Current_user `DefaultConnectionSetting` comme REG_BINARY.
+
+4.  Si LocalService n’a pas les paramètres de proxy appropriés, alors copiez le paramètre de proxy à partir de Current_User vers LocalService. Sous la clé de Registre `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+
+5.  Collez la valeur de Current_User `DefaultConnectionSetting` comme REG_BINARY.
+
+> [!NOTE]
+> Toutes les applications sont concernées, notamment les services Windows qui utilisent WinINET avec le contexte LocalService, LocalSytem.
+
+
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Activer l’accès aux URL du service Azure ATP dans le serveur proxy
+
+Si un proxy ou pare-feu bloque tout le trafic par défaut et autorise uniquement des domaines spécifiques ou que l’analyse HTTPS (inspection SSL) est activée, vérifiez que les URL suivantes sont autorisées pour permettre la communication avec le service Azure ATP dans le port 443 :
+
+|Emplacement du service|Enregistrement DNS .Atp.Azure.com|
+|----|----|
+|FR |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
+|Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
+|Asie|triprd1wcasse1sensorapi.atp.azure.com|
+
+
+Vous pouvez également renforcer les règles du pare-feu ou du proxy pour un espace de travail que vous avez créé, en définissant une règle pour les enregistrements DNS suivants :
+- <nom-espace de travail>.atp.azure.com : pour la connectivité de la console
+- <nom-espace de travail>sensorapi.atp.azure.com : pour la connectivité du capteur
  
-2.  Si vous n’obtenez pas l’erreur 503, passez en revue la configuration du proxy, puis réessayez.
-
-3.  Si la configuration du proxy fonctionne pour **CURRENT_USER** (autrement dit, vous voyez l’erreur 503), vérifiez si les paramètres du proxy WinInet sont activés pour le compte **LOCAL_SYSTEM** (utilisé par le service de mise à jour de capteur) en exécutant la commande suivante dans une invite de commandes avec élévation de privilèges :
- 
-    reg compare "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" "HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings
-
-Si vous obtenez l’erreur «Erreur : le système n'a pas trouvé la clé ou la valeur de Registre spécifiée. », cela signifie qu’aucun proxy n’a été défini au niveau **LOCAL_SYSTEM**.
- 
- ![erreur de système local proxy](./media/proxy-local-system-error.png)
-
-Si le résultat est « Résultat comparé : Différent », cela signifie que le proxy est défini pour **LOCAL_SYSTEM**, mais qu’il n’est pas le même que **CURRENT_USER** :
- 
-  ![résultat de proxy comparé](./media/proxy-result-compared.png)
-
-5.  Si **LOCAL_SYSTEM** n’a pas les paramètres de proxy appropriés (non configurés ou différents de **CURRENT_USER**), vous pouvez être amené à copier le paramètre de proxy de **CURRENT_USER** pour **LOCAL_SYSTEM**. Veillez à sauvegarder cette clé de Registre avant de la modifier :
-
- Clé de l’utilisateur actuel : HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings” Clé du système local : HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings”
-
- 
-6.  Effectuez les étapes 4 et 5 pour le compte **Local_Service** (il est identique à **Local_System** mais doit être S-1-5-19 au lieu de S-1-5-18).
-
+> [!NOTE]
+> Lors de l’inspection SSL sur le trafic réseau Azure ATP (entre le capteur et le service Azure ATP), l’inspection SSL doit prendre en charge une inspection mutuelle.
 
 
 ## <a name="see-also"></a>Voir aussi
