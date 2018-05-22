@@ -20,7 +20,7 @@
 ## [Planifier la capacité d’ATA](ata-capacity-planning.md)
 ## [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 ## [Parcours de mise à niveau recommandé](upgrade-path.md)
-# Déployez
+# Déploiement
 ## [1 Télécharger et installer le Centre](install-ata-step1.md)
 ## [2 Se connecter à AD](install-ata-step2.md)
 ## [3 Télécharger le package de la passerelle ATA](install-ata-step3.md)
@@ -35,7 +35,7 @@
 ### [1. Configurer la mise en miroir des ports](configure-port-mirroring.md)
 ### [2. Valider la mise en miroir des ports](validate-port-mirroring.md)
 ### [3. Configurer le transfert d’événements Windows](configure-event-collection.md)
-# Utilisez
+# Utiliser
 ## [Gestion de la base de données ATA](ata-database-management.md)
 ## [Centre d’intégrité ATA](ata-health-center.md)
 ## [Rapports ATA](reports.md)
@@ -44,7 +44,7 @@
 ## [Modifier le mot de passe de connectivité de domaine](modifying-ata-config-dcpassword.md)
 ## [Exclusion d’entités des détections](excluding-entities-from-detections.md)
 ## [Configuration de l’exportation/importation d’ATA](ata-configuration-file.md)
-## [Gérer la télémétrie ATA](manage-telemetry-settings.md)
+## [Gérer les journaux générés par le système](manage-telemetry-settings.md)
 ## [Définir des notifications ATA](setting-ata-alerts.md)
 ## [Définir les paramètres du serveur Syslog et du serveur de messagerie](setting-syslog-email-server-settings.md)
 ## [Identifier les comptes sensibles](tag-sensitive-accounts.md)
@@ -64,5 +64,5 @@
 ## [Résolution des problèmes à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md)
 ## [Résolution des problèmes à l’aide de la base de données](troubleshooting-ata-using-ata-database.md)
 ## [Résolution des problèmes de démarrage du service](troubleshooting-service-startup.md)
-## [Récupération d’urgence](disaster-recovery.md)
+## [Récupération d'urgence](disaster-recovery.md)
 # [Guide de préparation à ATA](ata-resources.md)
