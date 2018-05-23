@@ -1,7 +1,8 @@
 # Comprendre et explorer
 ## [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
-## [Questions fréquentes (FAQ)](atp-technical-faq.md)
+## [Forum Aux Questions](atp-technical-faq.md)
 ## [Nouveautés dans Azure ATP](atp-whats-new.md)
+## [Sécurité et confidentialité des données Azure ATP](atp-privacy-compliance.md)
 # Planification et conception
 ## [Prérequis d’Azure ATP](atp-prerequisites.md)
 ## [Architecture Azure ATP](atp-architecture.md)
