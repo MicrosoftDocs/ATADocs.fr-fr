@@ -1,22 +1,22 @@
 ---
-title: "Planification de votre déploiement Azure - Protection avancée contre les menaces | Microsoft Docs"
-description: "Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau"
-keywords: 
+title: Planification de votre déploiement Azure - Protection avancée contre les menaces | Microsoft Docs
+description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -40,7 +40,7 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 Si, pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimensionnement Azure ATP, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, vous devez calculer la moyenne quotidienne et la moyenne des périodes les plus occupées (15 minutes).
 Les sections suivantes expliquent comment collecter le compteur paquets/s dans un contrôleur de domaine.
 
-## Choix du type de capteur approprié pour votre déploiement<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Choix du type de capteur approprié pour votre déploiement<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 Dans un déploiement Azure ATP, n’importe quelle combinaison de types de capteurs autonomes Azure ATP est prise en charge :
 
 - Uniquement des capteurs autonomes Azure ATP
