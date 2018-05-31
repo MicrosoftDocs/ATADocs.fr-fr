@@ -1,5 +1,5 @@
 ---
-title: Gérer les paramètres de télémétrie d’Advanced Threat Analytics | Microsoft Docs
+title: Gérer les journaux générés par le système Advanced Threat Analytics | Microsoft Docs
 description: Décrit les données collectées par ATA et explique comment désactiver la collecte de données.
 keywords: ''
 author: rkarlin
@@ -13,18 +13,22 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 98d377dd7e09636d1866d461a981cdcf1cf8aea7
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444516"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 
 
-# <a name="manage-telemetry-settings"></a>Gérer les paramètres de télémétrie
-ATA (Advanced Threat Analytics) collecte des données de télémétrie rendues anonymes sur ATA et les transmet via une connexion HTTPS aux serveurs Microsoft.  Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA.
+# <a name="manage-system-generated-logs-note"></a>Gérer les journaux générés par le système>[!NOTE]
+> Si vous voulez afficher ou supprimer des données personnelles, veuillez consulter les conseils de Microsoft dans [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) et dans la [section RGPD du site Conformité de Microsoft 365 Entreprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Si vous recherchez des informations générales sur le RGPD, consultez la [section sur le RGPD du portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
+ATA (Advanced Threat Analytics) collecte des données de journaux générés par le système rendues anonymes sur ATA et les transmet via une connexion HTTPS aux serveurs Microsoft.  Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA.
 
 ## <a name="data-collected"></a>Données collectées
 Les données rendues anonymes collectées incluent les paramètres suivants :

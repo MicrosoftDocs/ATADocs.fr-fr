@@ -1,11 +1,11 @@
 ---
-title: Conformité, approbation, sécurité des données et confidentialité dans ATA (Advanced Threat Analytics) | Microsoft Docs
-description: Fournit une liste de ressources, de vidéos et de liens de démarrage, de déploiement et de guide de préparation pour ATA.
+title: Stratégie relative aux données personnelles Advanced Threat Analytics | Microsoft Docs
+description: Fournit des liens vers des informations sur la suppression des informations personnelles et des données personnelles à partir d’ATA.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,17 +13,18 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: dee55446c18ee9bc560045c94f9421840fc28fc2
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: b89e841412385c9eca20e40d78ff10be342c6b22
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34470727"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-# <a name="ata-compliance-trust-data-security-and-privacy"></a>ATA : conformité, approbation, sécurité des données et confidentialité 
+# <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
 
-Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Recherche et identification des données personnelles 
 
@@ -36,6 +37,7 @@ Toutes les données dans ATA qui se rapportent à des entités sont dérivées d
 Les données personnelles des utilisateurs et des entités dans ATA sont dérivées de l’objet utilisateur figurant dans l’AD de votre organisation. Pour cette raison, toutes les modifications apportées au profil utilisateur dans AD sont répercutées dans ATA. 
 
 ## <a name="deleting-personal-data"></a>Suppression des données personnelles 
+
 
 Les données dans ATA sont répliquées et toujours mises à jour à partir d’AD. Toutefois, quand une entité est supprimée dans AD, ses données dans ATA sont conservées à des fins d’investigation de sécurité. 
 
@@ -74,29 +76,17 @@ Du fait que les données relatives aux entités dans ATA sont dérivées d’AD,
 ATA vous permet d’exporter dans Excel toutes les informations de sécurité, qui sont susceptibles d’inclure des données personnelles. 
 
  
-## <a name="opt-out-of-telemetry"></a>Désactivation de la télémétrie 
+## <a name="opt-out-of-system-generated-logs"></a>Désactivation des journaux générés par le système 
 
-ATA collecte des données de télémétrie rendues anonymes sur chaque déploiement et les transmet via une connexion HTTPS aux serveurs Microsoft. Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA. 
+ATA collecte des journaux générés par le système rendus anonymes sur chaque déploiement et les transmet via une connexion HTTPS aux serveurs Microsoft. Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA. 
 
-Pour plus d’informations, consultez [Gérer les paramètres de télémétrie](manage-telemetry-settings.md).
+Pour plus d’informations, consultez [Gérer les journaux générés par le système](manage-telemetry-settings.md).
 
 Pour désactiver la collecte de données :
 
 1. Connectez-vous à la console ATA, cliquez sur les trois points dans la barre d’outils, puis sélectionnez **À propos de**. 
 2. Décochez la case **Envoyez-nous des informations d’utilisation pour nous aider à améliorer votre expérience utilisateur à l’avenir**. 
 
- 
-
- 
-
- 
-
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Page Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## <a name="community-resources"></a>Ressources de la communauté
-
-[Blog ATA](https://aka.ms/ATABlog)
-[Communauté ATA](https://aka.ms/ATACommunity)
-[Donner son avis sur ATA](https://aka.ms/ATAUserVoice)
+- Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
