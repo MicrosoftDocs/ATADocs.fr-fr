@@ -1,15 +1,15 @@
 ---
-title: "Modifier le mot de passe de connectivité de domaine dans la configuration d’Azure - Protection avancée contre les menaces | Microsoft Docs"
-description: "Décrit comment modifier le mot de passe de connectivité de domaine sur le capteur autonome Azure ATP."
-keywords: 
+title: Modifier le mot de passe de connectivité de domaine dans la configuration d’Azure - Protection avancée contre les menaces | Microsoft Docs
+description: Décrit comment modifier le mot de passe de connectivité de domaine sur le capteur autonome Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444825"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 

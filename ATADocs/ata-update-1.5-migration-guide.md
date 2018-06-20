@@ -1,15 +1,15 @@
 ---
-title: "Mise à jour d’Advanced Threat Analytics vers la version 1.5 - Guide de migration | Microsoft Docs"
-description: "Procédures pour mettre à jour ATA vers la version 1.5"
-keywords: 
+title: Mise à jour d’Advanced Threat Analytics vers la version 1.5 - Guide de migration | Microsoft Docs
+description: Procédures pour mettre à jour ATA vers la version 1.5
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019321"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Mise à jour d’ATA vers la version 1.5 : guide de migration
 La mise à jour vers ATA 1.5 comprend des améliorations dans les domaines suivants :

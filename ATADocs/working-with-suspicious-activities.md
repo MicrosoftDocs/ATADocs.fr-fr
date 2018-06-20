@@ -18,6 +18,7 @@ ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/30/2018
+ms.locfileid: "32298450"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 

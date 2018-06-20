@@ -1,15 +1,15 @@
 ---
-title: "Définir des notifications Azure - Protection avancée contre les menaces | Microsoft Docs"
-description: "Décrit comment définir des alertes Azure ATP qui vous notifient quand des activités suspectes sont détectées."
-keywords: 
+title: Définir des notifications Azure - Protection avancée contre les menaces | Microsoft Docs
+description: Décrit comment définir des alertes Azure ATP qui vous notifient quand des activités suspectes sont détectées.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444845"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 

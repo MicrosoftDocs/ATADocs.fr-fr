@@ -4,7 +4,7 @@ description: Explique les différentes options de support pour les versions de M
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -12,11 +12,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 88ccd0e1667805d96ddd69145c4c85475ed6a2fc
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
+ms.locfileid: "31007285"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -44,7 +45,9 @@ Microsoft prévoit de publier des mises à jour d’ATA plusieurs fois par an, c
 |1.7|1.7.5402|31 AOÛT 2016|30 AOÛT 2017|
 |1.7.1|1.7.5647|06 OCT 2016|05 OCT 2017|
 |1.7.2|1.7.5757|15 NOV 2016|14 NOV 2017|
-
+|1.8|1.8.6645|30 JUIN 2017|30 JUIN 2018|
+|1.8.1|1.8.6765|2 AOÛT 2017|2 AOÛT 2018|
+|1.9|1.9.7312|21 MARS 2018|21 MARS 2019|
 
 
 

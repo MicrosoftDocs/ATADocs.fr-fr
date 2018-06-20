@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010293"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -34,11 +35,11 @@ Pour plus d’informations, reportez-vous à la documentation de votre fournisse
 
 Vos contrôleurs de domaine et vos passerelles ATA peuvent être physiques ou virtuels. Voici les méthodes couramment employées dans le cadre de la mise en miroir des ports et quelques considérations à prendre en compte. Pour plus d’informations, reportez-vous à la documentation produit de votre commutateur ou de votre serveur de virtualisation. Le fabricant de votre commutateur peut utiliser une terminologie différente.
 
-**SPAN (Switched Port Analyzer)** : copie le trafic réseau à partir d’un ou plusieurs ports de commutateur vers un autre port du même commutateur. La passerelle ATA et les contrôleurs de domaine doivent être connectés au même commutateur physique.
+**SPAN (Switched Port Analyzer)**  : copie le trafic réseau à partir d’un ou plusieurs ports de commutateur vers un autre port du même commutateur. La passerelle ATA et les contrôleurs de domaine doivent être connectés au même commutateur physique.
 
-**RSPAN (Remote Switch Port Analyzer)** : vous permet de surveiller le trafic réseau à partir de ports sources répartis sur plusieurs commutateurs physiques. RSPAN copie le trafic source dans un VLAN spécial configuré pour RSPAN. Ce VLAN doit être relié en mode trunk aux autres commutateurs impliqués. RSPAN fonctionne sur la couche 2.
+**RSPAN (Remote Switch Port Analyzer)**  : vous permet de surveiller le trafic réseau à partir de ports sources répartis sur plusieurs commutateurs physiques. RSPAN copie le trafic source dans un VLAN spécial configuré pour RSPAN. Ce VLAN doit être relié en mode trunk aux autres commutateurs impliqués. RSPAN fonctionne sur la couche 2.
 
-**ERSPAN (Encapsulated Remote Switch Port Analyzer)** : il s’agit d’une technologie propriétaire qui fonctionne sur la couche 3. ERSPAN vous permet de surveiller le trafic entre les commutateurs sans faire appel à des trunks VLAN. ERSPAN utilise le protocole GRE (Generic Routing Encapsulation) pour copier le trafic réseau surveillé. ATA ne peut pas recevoir directement le trafic ERSPAN pour l’instant. Pour qu’ATA fonctionne avec le trafic ERSPAN, un commutateur ou un routeur capable de décapsuler le trafic doit être configuré comme destination d’ERSPAN à l’endroit où le trafic est décapsulé. Configurez ensuite le commutateur ou le routeur pour transférer le trafic décapsulé vers la passerelle ATA à l’aide de SPAN ou de RSPAN.
+**ERSPAN (Encapsulated Remote Switch Port Analyzer)**  : il s’agit d’une technologie propriétaire qui fonctionne sur la couche 3. ERSPAN vous permet de surveiller le trafic entre les commutateurs sans faire appel à des trunks VLAN. ERSPAN utilise le protocole GRE (Generic Routing Encapsulation) pour copier le trafic réseau surveillé. ATA ne peut pas recevoir directement le trafic ERSPAN pour l’instant. Pour qu’ATA fonctionne avec le trafic ERSPAN, un commutateur ou un routeur capable de décapsuler le trafic doit être configuré comme destination d’ERSPAN à l’endroit où le trafic est décapsulé. Configurez ensuite le commutateur ou le routeur pour transférer le trafic décapsulé vers la passerelle ATA à l’aide de SPAN ou de RSPAN.
 
 > [!NOTE]
 > Si le contrôleur de domaine faisant l’objet d’une mise en miroir des ports est connecté via une liaison WAN, vérifiez que celle-ci peut gérer la charge supplémentaire du trafic ERSPAN.

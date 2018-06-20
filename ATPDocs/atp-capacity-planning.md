@@ -17,6 +17,7 @@ ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444788"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 

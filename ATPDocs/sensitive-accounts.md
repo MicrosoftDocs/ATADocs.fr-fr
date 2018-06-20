@@ -1,15 +1,15 @@
 ---
 title: Identifier des comptes sensibles avec Azure ATP | Microsoft Docs
-description: "Décrit comment identifier des comptes sensibles à l’aide d’Azure - Protection avancée contre les menaces (ATP)"
-keywords: 
+description: Décrit comment identifier des comptes sensibles à l’aide d’Azure - Protection avancée contre les menaces (ATP)
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444955"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces version 1.9*
 

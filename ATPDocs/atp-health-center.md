@@ -1,15 +1,15 @@
 ---
-title: "Surveiller les événements et l’intégrité système d’Azure - Protection avancée contre les menaces | Microsoft Docs"
-description: "Le centre d’intégrité d’espace de travail Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements."
-keywords: 
+title: Surveiller les événements et l’intégrité système d’Azure - Protection avancée contre les menaces | Microsoft Docs
+description: Le centre d’intégrité d’espace de travail Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444905"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 

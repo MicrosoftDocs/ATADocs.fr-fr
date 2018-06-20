@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
+ms.locfileid: "31007268"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -32,7 +33,8 @@ Cette procédure d’installation fournit des instructions pour créer et gérer
 Dans Azure ATP, vous avez la possibilité de gérer et de surveiller plusieurs espaces de travail. Ceci est particulièrement utile si vous souhaitez créer un espace de travail de démonstration et un espace de travail de test dans lequel vous pouvez démontrer la preuve de concept Azure ATP avant de le déployer dans toute l’organisation. Cela est également nécessaire pour prendre en charge des déploiements avec plusieurs forêts. Un espace de travail individuel peut uniquement surveiller plusieurs domaines d’une même forêt. 
 
 > [!NOTE]
-> Vous pouvez avoir un maximum de deux espaces de travail actifs. Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
+> - Vous pouvez avoir un maximum de deux espaces de travail actifs. Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
+> - Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Caraïbes et en Asie.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Étape 1. Accéder au portail de gestion d’espace de travail
 

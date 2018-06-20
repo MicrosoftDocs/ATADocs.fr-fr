@@ -1,23 +1,24 @@
 ---
-title: "Nouveautés de la version 1.8 d’ATA | Microsoft Docs"
-description: "Liste les nouveautés de la version 1.8 d’ATA ainsi que les problèmes connus"
-keywords: 
+title: Nouveautés de la version 1.8 d’ATA | Microsoft Docs
+description: Liste les nouveautés de la version 1.8 d’ATA ainsi que les problèmes connus
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
 ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019049"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nouveautés de la version 1.8 d’ATA
 
@@ -121,7 +122,7 @@ Sur Windows Server 2016 Core, vous ne verrez peut-être pas l’erreur mais le 
 
 ### <a name="proxy-interference"></a>Interférence de proxy
 
-**Symptômes** : Après la mise à niveau vers ATA 1.8, le service de passerelle ATA risque de ne pas démarrer. Dans le journal des erreurs ATA, vous verrez peut-être l’exception suivante :  *: une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
+**Symptômes** : Après la mise à niveau vers ATA 1.8, le service de passerelle ATA risque de ne pas démarrer. Dans le journal des erreurs ATA, vous verrez peut-être l’exception suivante :   *: une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
 
 **Description** : Depuis ATA 1.8, la passerelle ATA communique avec le centre ATA à l’aide du protocole HTTP. Si l’ordinateur sur lequel vous avez installé la passerelle ATA utilise un serveur proxy pour se connecter au centre ATA, il peut rompre cette communication. 
 

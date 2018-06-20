@@ -1,11 +1,12 @@
 ---
 layout: LandingPage
-description: "Découvrez comment utiliser Azure - Protection avancée contre les menaces."
+description: Découvrez comment utiliser Azure - Protection avancée contre les menaces.
 ms.openlocfilehash: 0d7ec7d0aefceb27ba435af98a75538e5be37b6e
 ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444127"
 ---
 # <a name="azure-advanced-threat-protection-documentation"></a>Documentation Azure - Protection avancée contre les menaces
 
