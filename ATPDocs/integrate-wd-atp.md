@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 6/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: 6d6c2cdb157d4e3f75794c8c40abfc7556e314d5
+ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34760071"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -25,9 +26,6 @@ ms.lasthandoff: 05/16/2018
 
 Azure - Protection avancée contre les menaces vous permet d’intégrer Azure ATP et Windows Defender ATP pour obtenir une solution encore plus complète de protection contre les menaces. Azure ATP surveille le trafic sur vos contrôleurs de domaine alors que Windows Defender ATP surveille vos points de terminaison, offrant ainsi ensemble une interface unique pour protéger votre environnement.
 
-> [!NOTE]
-> L’intégration est actuellement activée uniquement si vous êtes client de la préversion limitée de Windows Defender ATP.
- 
 En intégrant Windows Defender ATP et Azure ATP, vous pouvez tirer parti de toute la puissance des deux services et sécuriser votre environnement, notamment :
 
 - Les capteurs Azure ATP et les capteurs autonomes : Peuvent être installés directement sur vos contrôleurs de domaine ou mettre en miroir les ports de vos contrôleurs de domaine, pour capturer et analyser le trafic réseau de plusieurs protocoles (tels que Kerberos, DNS, RPC, NTLM, etc.) à des fins d’authentification, d’autorisation et de collecte d’informations. 

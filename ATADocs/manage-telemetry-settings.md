@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 1216d70f75376f295e9b6164babdaf24241195b4
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444516"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948912"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 
 
 # <a name="manage-system-generated-logs-note"></a>Gérer les journaux générés par le système>[!NOTE]
-> Si vous voulez afficher ou supprimer des données personnelles, veuillez consulter les conseils de Microsoft dans [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) et dans la [section RGPD du site Conformité de Microsoft 365 Entreprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Si vous recherchez des informations générales sur le RGPD, consultez la [section sur le RGPD du portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ATA (Advanced Threat Analytics) collecte des données de journaux générés par le système rendues anonymes sur ATA et les transmet via une connexion HTTPS aux serveurs Microsoft.  Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA.
 
