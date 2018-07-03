@@ -18,6 +18,7 @@
 ## [7 Exclusions et comptes honeytoken](install-atp-step7.md)
 ## [8 Configurer les autorisations requises SAM-R](install-atp-step8-samr.md)
 ## [Installation sans assistance](ATP-silent-installation.md)
+## [Mettre à jour les capteurs ATP](sensor-update.md)
 ## Étapes supplémentaires liées aux capteurs Azure ATP
 ### [Configurer la mise en miroir des ports](configure-port-mirroring.md)
 ### [Valider la mise en miroir des ports](validate-port-mirroring.md)
