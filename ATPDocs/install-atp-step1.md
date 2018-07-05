@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007268"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799074"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -33,8 +33,7 @@ Cette procédure d’installation fournit des instructions pour créer et gérer
 Dans Azure ATP, vous avez la possibilité de gérer et de surveiller plusieurs espaces de travail. Ceci est particulièrement utile si vous souhaitez créer un espace de travail de démonstration et un espace de travail de test dans lequel vous pouvez démontrer la preuve de concept Azure ATP avant de le déployer dans toute l’organisation. Cela est également nécessaire pour prendre en charge des déploiements avec plusieurs forêts. Un espace de travail individuel peut uniquement surveiller plusieurs domaines d’une même forêt. 
 
 > [!NOTE]
-> - Vous pouvez avoir un maximum de deux espaces de travail actifs. Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
-> - Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Caraïbes et en Asie.
+> Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Caraïbes et en Asie.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Étape 1. Accéder au portail de gestion d’espace de travail
 
@@ -69,7 +68,7 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 - Seul l’espace de travail principal peut être modifié. Pour apporter des modifications à d’autres espaces de travail, vous pouvez les supprimer et les ajouter à nouveau. Si vous souhaitez supprimer l’espace de travail principal, vous devez commencer par désactiver les intégrations et définir l’espace de travail comme non **principal** afin de pouvoir le supprimer.
 - Pour modifier un espace de travail principal, vous devez commencer par désactiver les intégrations existantes dans cet espace de travail.
 
-- Rétention des données – les espaces de travail supprimés n’apparaissent pas dans l’interface utilisateur, mais leurs données sont conservées conformément à la [stratégie de rétention des données de Microsoft](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
+- Conservation des données – les espaces de travail supprimés n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité des données Azure ATP et confidentialité](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]

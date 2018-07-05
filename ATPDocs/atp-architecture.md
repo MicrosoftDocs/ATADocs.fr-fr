@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/4/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799178"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -72,11 +73,12 @@ Le portail de gestion d’espace de travail Azure ATP vous permet de :
 
 -   Effectuer l’intégration à d’autres services de sécurité Microsoft
 
-Définir votre espace de travail principal en tant que **principal**. Un seul espace de travail peut être défini comme principal. La définition d’un espace de travail comme principal affecte les intégrations - vous pouvez intégrer Azure ATP et Windows Defender ATP uniquement pour votre espace de travail principal. Vous pouvez changer ultérieurement l’espace de travail principal, mais pour cela, vous devez supprimer toutes les intégrations déjà définies pour l’espace de travail principal actuel.
+Définir votre espace de travail principal en tant que **principal**. La définition d’un espace de travail comme principal affecte les intégrations - vous pouvez intégrer Azure ATP et Windows Defender ATP uniquement pour votre espace de travail principal. 
 
 > [!NOTE]
-> Azure ATP prend actuellement en charge la création de deux espaces de travail. Nous vous recommandons de créer un espace de travail principal pour votre environnement de production et un espace de travail supplémentaire comme environnement intermédiaire.
-> Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
+> - Azure ATP prend actuellement en charge la création d’un seul espace de travail. Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
+> - Si aucun capteur n’est installé sur votre espace de travail dans un délai de 60 jours, l’espace de travail risque d’être supprimé, et vous devrez le recréer.
+
 
 
 ### <a name="azure-atp-workspace-portal"></a>Portail d’espace de travail Azure ATP
