@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444618"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259206"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -50,6 +50,25 @@ Chaque activité suspecte comporte les informations suivantes :
 > -   Quand vous cliquez sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
 
 ![Image de la chronologie des activités suspectes Azure ATP](media/atp-sa-timeline.png)
+
+## Détections en préversion<a name="preview-detections"></a>
+
+L’équipe de recherche Azure ATP travaille sans relâche à l’implémentation de nouvelles détections pour les attaques récemment découvertes. Dans la mesure où Azure ATP est un service cloud, il est possible de publier ces nouvelles détections rapidement pour permettre aux clients Azure ATP d’en bénéficier dès que possible.
+
+Ces détections sont marquées d’un badge de préversion pour vous permettre d’identifier les nouvelles détections et les nouveautés du produit. Si vous désactivez les détections en préversion, vous ne les verrez pas dans la console Azure ATP (ni dans la chronologie ni dans les profils d’entité). Les nouvelles alertes ne seront pas non plus ouvertes.
+
+![détection vpn en préversion](./media/preview-detection-vpn.png) 
+
+Par défaut, les détections en préversion sont activées dans Azure ATP. 
+
+Pour désactiver les détections en préversion :
+
+1. Dans la console Azure ATP, cliquez sur la roue dentée des paramètres.
+2. Dans le menu de gauche, sous Préversion, cliquez sur **Détections**.
+3. Utilisez le curseur pour activer et désactiver les détections en préversion.
+ 
+![détections en préversion](./media/preview-detections.png) 
+
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrer la liste des activités suspectes
 Pour filtrer la liste des activités suspectes :

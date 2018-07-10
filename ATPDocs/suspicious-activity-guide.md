@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 6/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259223"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -462,6 +463,26 @@ Un service suspect a été créé sur un contrôleur de domaine dans votre organ
 **Correction**
 
 - Implémentez un accès doté de moins de privilèges sur les ordinateurs du domaine pour autoriser uniquement des utilisateurs spécifiques à créer de nouveaux services.
+
+## Connexion VPN suspecte - Préversion<a name="suspicious-vpn-detection"></a>
+
+**Description**
+
+Azure ATP apprend le comportement de l’entité pour les utilisateurs de connexions VPN sur une période mobile d’un mois. 
+
+Le modèle de comportement VPN est basé sur les activités suivantes : les ordinateurs auxquels les utilisateurs se connectent et les emplacements à partir desquels les utilisateurs se connectent. 
+
+Une alerte est ouverte quand il y a un écart entre le comportement de l’utilisateur et l’algorithme d’apprentissage automatique.
+
+**Examen**
+
+1.  L’utilisateur en question est-il supposé effectuer ces opérations normalement ?
+2.  Considérez les cas suivants comme faux positifs potentiels : un utilisateur qui a changé d’emplacement, un utilisateur qui est en déplacement et qui se connecte depuis un nouvel appareil.
+
+**Correction**
+
+1.  Réinitialisez le mot de passe de cet utilisateur. Cette opération empêche l’attaquant de créer des connexions VPN avec les anciennes informations d’identification.
+2.  Empêchez cet utilisateur de se connecter par VPN.
 
 ## <a name="unusual-protocol-implementation"></a>Implémentation de protocole inhabituelle
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 6/7/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
+ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34401984"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827483"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -83,7 +83,7 @@ L’installation du capteur autonome Azure ATP sur un serveur Windows Server 201
 Le capteur autonome Azure ATP peut être installé sur un serveur membre d’un domaine ou d’un groupe de travail.
 Le capteur autonome Azure ATP peut servir à surveiller les contrôleurs de domaine avec le niveau fonctionnel de domaine Windows 2003 et versions ultérieures.
 
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
+Pour que votre capteur autonome communique avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feux et proxies sur *.atp.azure.com.
 
 
 Pour plus d’informations sur l’utilisation de machines virtuelles avec le capteur autonome Azure ATP, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
@@ -146,7 +146,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
-|RADIUS|UDDP|1813|RADIUS|Entrant|
+|RADIUS|UDP|1813|RADIUS|Entrant|
 |RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]
@@ -206,7 +206,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
-|RADIUS|UDDP|1813|RADIUS|Entrant|
+|RADIUS|UDP|1813|RADIUS|Entrant|
 |TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]

@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
+ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233002"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/08/2018
 # <a name="ata-prerequisites"></a>Prérequis pour ATA
 Cet article décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement.
 
->[!NOTE]
+> [!NOTE]
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
 
@@ -81,7 +82,7 @@ Pour vous en assurer, exécutez l’applet de commande Windows PowerShell suivan
 
 L’installation du centre ATA en tant que machine virtuelle est prise en charge. 
 
->[!NOTE] 
+> [!NOTE] 
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
 
 Si vous exécutez le centre ATA en tant que machine virtuelle, arrêtez le serveur avant de créer un point de contrôle pour éviter tout risque d’endommagement de la base de données.
@@ -142,7 +143,7 @@ Le certificat doit avoir les éléments suivants :
 Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ordinateur**.
 
 > [!WARNING]
-> - Le processus de renouvellement d’un certificat existant n’est pas pris en charge. La seule façon de renouveler un certificat consiste à créer un certificat et à configurer ATA pour qu’il utilise le nouveau certificat.
+> Le processus de renouvellement d’un certificat existant n’est pas pris en charge. La seule façon de renouveler un certificat consiste à créer un certificat et à configurer ATA pour qu’il utilise le nouveau certificat.
 
 
 > [!NOTE]
@@ -164,13 +165,13 @@ Pour vous en assurer, exécutez l’applet de commande Windows PowerShell suivan
 Pour plus d’informations sur l’utilisation de machines virtuelles avec la passerelle ATA, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
+> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.<br>
 Une passerelle ATA peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau à destination et en provenance des contrôleurs de domaine.
 
->[!NOTE] 
+> [!NOTE] 
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
@@ -218,6 +219,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |SSL|TCP|443|Centre ATA|Sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 
+
 > [!NOTE]
 > Dans le cadre du processus de résolution effectué par la passerelle ATA, les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des passerelles ATA.
 >
@@ -248,7 +250,7 @@ Pendant l’installation, le .Net Framework 4.6.1 est installé et peut entraîn
 
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
+> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 
@@ -256,7 +258,7 @@ La passerelle légère ATA nécessite au minimum deux cœurs et 6 Go de RAM sur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle légère ATA.
 Vous pouvez déployer la passerelle légère ATA sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et à partir des contrôleurs de domaine et de la quantité de ressources installées sur ce contrôleur de domaine.
 
->[!NOTE] 
+> [!NOTE] 
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
@@ -270,7 +272,8 @@ L’heure du serveur du centre ATA, des serveurs de la passerelle légère ATA e
 La passerelle légère ATA surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
 Après le déploiement, vous pouvez utiliser la console ATA si vous voulez changer les cartes réseau analysées.
 
-La passerelle légère n’est pas prise en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
+> [!NOTE]
+> La passerelle légère n’est pas prise en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
 
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par la passerelle légère ATA :

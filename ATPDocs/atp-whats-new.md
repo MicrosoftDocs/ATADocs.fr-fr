@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/13/2018
+ms.date: 6/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,72 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a40c2b188e777ca78462e4a3901b311af457d9ae
-ms.sourcegitcommit: 170bc1c04d1ea0538dddbb497d8045781a6a8b74
+ms.openlocfilehash: 7282b58e25c3cc79f40ca05477bb015f8746cd0d
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948983"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+## <a name="azure-atp-release-237"></a>Azure ATP version 2.37
+
+Publication : 24 juin 2018
+
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
+## <a name="azure-atp-release-236"></a>Azure ATP version 2.36
+
+Publication : 17 juin 2018
+
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
+
+## <a name="azure-atp-release-235"></a>Azure ATP version 2.35
+
+Publication : 10 juin 2018
+ 
+- **Nouvelles détections en préversion**<br></br>À partir de maintenant, Azure ATP tire parti du fait qu’il est un service cloud, où les nouvelles fonctionnalités peuvent être livrées par cycles rapides, pour vous fournir de nouvelles détections aussi vite que possible. Ces nouvelles détections sont marquées en « préversion » lors de leur publication. En général, une nouvelle détection passe de préversion à disposition générale en quelques semaines. Par défaut, vous voyez les détections en préversion. Si vous ne voulez pas les voir, consultez [Détections en préversion](working-with-suspicious-activities.md#preview-detections).
+ 
+- **Détection de VPN suspect**<br></br>Cette version introduit une préversion de la détection de VPN suspect. Azure ATP apprend le comportement VPN des utilisateurs, notamment les ordinateurs auxquels se connectent les utilisateurs et les emplacements à partir desquels ils se connectent, et vous alerte quand il détecte un écart avec le comportement attendu. Pour plus d’informations, consultez [Détection de VPN suspect](suspicious-activity-guide.md#suspicious-vpn-detection).
+
+- **Mise à jour différée**<br></br>Vous avez maintenant la possibilité de définir des capteurs Azure ATP pour différer les mises à jour chaque fois qu’Azure ATP se met à jour. Vous pouvez définir chaque capteur Azure ATP sur **Mise à jour différée** pour déclencher la mise à jour 24 heures après la mise à jour du service cloud Azure ATP. Cette fonctionnalité vous permet de tester la mise à jour sur des capteurs de test spécifiques et de mettre à jour vos capteurs de production seulement après. Si vous découvrez un problème pendant le premier cycle de mise à jour, ouvrez un ticket de support. Pour plus d’informations, consultez [Mettre à jour les capteurs Azure ATP](sensor-update.md).
+
+- **Mise à jour de la détection d’implémentation de protocole inhabituelle**<br></br>La détection d’implémentation de protocole inhabituelle fournit des informations supplémentaires. Maintenant, vous pouvez voir quel outil d’attaque potentiel Azure ATP soupçonne d’agir sur votre réseau. Pour plus d’informations, consultez le [Guide des activités suspectes](suspicious-activity-guide.md).
+ 
+- **Alerte de capteur obsolète**<br></br>Azure ATP inclut une nouvelle alerte de monitoring pour vous permettre de savoir si un capteur a plus de trois versions de retard. Si vous voyez cette alerte, vous devez mettre à jour le capteur ou rechercher pourquoi le capteur n’est pas mis à jour automatiquement. Si l’alerte persiste, désinstallez et réinstallez le capteur.
+
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
+## <a name="azure-atp-release-234"></a>Azure ATP version 2.34
+
+Publication : 3 juin 2018
+ 
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
+ 
+## <a name="azure-atp-release-233"></a>Azure ATP version 2.33
+
+Publication : 27 mai 2018
+
+- Fonctionnalité en préversion : Azure ATP prend désormais en charge de nouvelles langues et 13 nouveaux paramètres régionaux :
+    - Tchèque
+    - Hongrois
+    - Italien
+    - Coréen
+    - Néerlandais
+    - Polonais
+    - Portugais (Brésil)
+    - Portugais (Portugal)
+    - Russie
+    - Suédois
+    - Turc
+    - Chinois (Chine)
+    - Chinois (Taïwan)
 
 
 
