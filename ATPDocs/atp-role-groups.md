@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39709e4749b7f897bffb914dd1e15c80277d6ed8
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: c41e695124b65623e9c2aed5aeb6e76369add5b6
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948963"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800655"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -66,7 +66,7 @@ Quand les utilisateurs tentent d’accéder à une page qui n’est pas disponib
 
 ## <a name="add-and-remove-users"></a>Ajouter et supprimer des utilisateurs 
 
-Azure ATP utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés depuis [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). Seuls des utilisateurs AAD peuvent être ajoutés ou supprimés dans les groupes de sécurité. 
+Azure ATP utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés à partir des groupes [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). Seuls des utilisateurs AAD peuvent être ajoutés ou supprimés dans les groupes de sécurité. 
 
 
 ## <a name="see-also"></a>Voir aussi
