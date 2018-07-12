@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259223"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800672"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -188,19 +188,38 @@ Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaqua
 
 Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le [compte KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ils utilisent ensuite ce compte KRBTGT pour créer un ticket TGT (Ticket Granting Ticket) Kerberos qui fournit une autorisation d’accès à toutes les ressources du réseau, et définir l’heure d’expiration du ticket à la valeur de leur choix. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir un accès persistant dans le réseau.
 
-Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée définie dans la stratégie de sécurité [Durée de vie maximale du ticket utilisateur](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée définie dans la [Durée de vie maximale du ticket utilisateur](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), c’est une attaque Golden Ticket de type **anomalie de temps**, ou par un compte inexistant, c’est une attaque Golden Ticket de type **compte inexistant**.
+stratégie de sécurité.
 
 **Examen**
 
-1. Le paramètre **Durée de vie maximale du ticket utilisateur** défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Si c’est le cas, **fermez** l’alerte, car il s’agit d’un faux positif.
+- **Anomalie de temps**
+   1.   Le paramètre Durée de vie maximale du ticket utilisateur défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Vérifiez la valeur spécifique pour voir si elle est inférieure à la durée pendant laquelle le ticket a été utilisé. Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
+   2.   Le capteur Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, fermez l’alerte.
+   3.   Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
+- **Compte inexistant**
+   1.   Posez les questions suivantes :
+         - L’utilisateur est-il un utilisateur de domaine connu et valide ? Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
+         - L’utilisateur a-t-il été récemment ajouté ? Si c’est le cas, fermez l’alerte, car le changement n’a peut-être pas été encore été synchronisé.
+         - L’utilisateur a-t-il été récemment supprimé d’AD ? Si c’est le cas, fermez l’alerte.
+   2.   Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
 
-2. Le capteur autonome Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, **fermez** l’alerte.
+1. Pour les deux types d’attaques par Golden Ticket, cliquez sur l’ordinateur source pour accéder à sa page **Profil**. Vérifiez ce qui s’est passé à peu près au même moment que l’activité, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources ? 
 
-3. Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
+2.  Tous les utilisateurs connectés à l’ordinateur sont-ils censés l’être ? Quels sont leurs privilèges ? 
+
+3.  Ces utilisateurs sont-ils censés avoir accès à ces ressources ?<br>
+Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge WD](./media/wd-badge.png).
+ 
+ 4. Pour un examen approfondi de l’ordinateur, dans Windows Defender ATP, vérifiez quels processus et quelles alertes se sont produits au moment de l’alerte.
 
 **Correction**
 
+
 Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Demande d’information privée de protection contre les données malveillantes
 
@@ -232,9 +251,14 @@ Dans cette détection, une alerte est déclenchée quand une demande de réplica
 
 **Examen**
 
-1.  L’ordinateur en question est-il un contrôleur de domaine ? Par exemple, un contrôleur de domaine récemment promu ayant rencontré des problèmes de réplication. Si c’est le cas, **fermez** l’activité suspecte. 
-2.  L’ordinateur en question est-il supposé répliquer des données à partir d’Active Directory ? Par exemple, Azure AD Connect. Si c’est le cas, **fermez et excluez** l’activité suspecte.
-3.  Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que la réplication, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte. 
+> [!NOTE]
+> Si vous avez des contrôleurs de domaine sur lesquels les capteurs Azure ATP ne sont pas installés, ces contrôleurs de domaine ne sont pas couverts par Azure ATP. Dans ce cas, si vous déployez un nouveau contrôleur de domaine sur un contrôleur de domaine non inscrit ou non protégé, il peut ne pas être identifié par Azure ATP comme contrôleur de domaine dans un premier temps. Il est vivement recommandé d’installer le capteur Azure ATP sur chaque contrôleur de domaine pour obtenir une couverture complète.
+
+1. L’ordinateur en question est-il un contrôleur de domaine ? Par exemple, un contrôleur de domaine récemment promu ayant rencontré des problèmes de réplication. Si c’est le cas, **fermez** l’activité suspecte. 
+2.  L’ordinateur en question est-il supposé répliquer des données à partir d’Active Directory ? Par exemple, Azure AD Connect ou des appareils de monitoring des performances réseau. Si c’est le cas, **fermez et excluez** l’activité suspecte.
+3. L’adresse IP à partir de laquelle la demande de réplication a été envoyée est-elle un NAT ou un proxy ? Si c’est le cas, vérifiez s’il existe un nouveau contrôleur de domaine derrière l’appareil ou si d’autres activités suspectes se sont produites à partir de celui-ci. 
+
+4. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que la réplication, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte. 
 
 
 **Correction**
@@ -505,9 +529,9 @@ Pour déterminer s’il s’agit d’une attaque WannaCry, effectuez les étapes
 
 2. Si vous ne trouvez aucun outil d’attaque, vérifiez si l’ordinateur source exécute une application qui implémente sa propre pile NTLM ou SMB.
 
-3. Si ce n’est pas le cas, vérifiez si l’alerte est causée par WannaCry, en exécutant un script de scanner WannaCry, par exemple [this scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) sur l’ordinateur source impliqué dans l’activité suspecte. Si le scanner identifie la machine comme infectée ou vulnérable, installez les correctifs appropriés sur la machine et supprimez/bloquez le programme malveillant sur le réseau.
+3. Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que l’alerte, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge wd](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
 
-4. Si le script ne détecte pas que la machine est infectée ou vulnérable, cela ne signifie pas qu’elle ne l’est pas. En effet, SMBv1 peut avoir été désactivé ou un correctif peut avoir été installé sur la machine, ce qui fausse l’analyse de l’outil.
+
 
 **Correction**
 
