@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 7/5/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f38e7fc2fb1c50718cac27664737e46d83fa6084
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: f533d835c9129dd56db5ac6e0ef2cca4b33cc043
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799091"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800706"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
+
+Publication : 5 juillet 2018
+-   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md#golden-ticket)
+
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
+
 
 ## <a name="azure-atp-release-238"></a>Azure ATP version 2.38
 
