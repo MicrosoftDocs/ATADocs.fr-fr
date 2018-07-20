@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800672"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064115"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -107,9 +107,11 @@ Vérifiez tout d’abord la description de l’alerte, pour déterminer le type 
 
 2.  Golden Ticket – Dans la feuille de calcul Excel, accédez à l’onglet relatif à l’activité réseau. Vous voyez que le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement renforcé.
 
-  1. Vérifiez l’ordinateur source et le compte, ou s’il en existe plusieurs, vérifiez qu’ils ont bien quelque chose en commun (par exemple, tout le personnel marketing utilise une application spécifique susceptible d’être à l’origine du déclenchement de l’alerte). Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
+  1. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
   
-  2. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
+  2. Vérifiez l’ordinateur source et le compte, ou s’il en existe plusieurs, vérifiez qu’ils ont bien quelque chose en commun (par exemple, tout le personnel marketing utilise une application spécifique susceptible d’être à l’origine du déclenchement de l’alerte). Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
+  
+  
 
 3.  Overpass-the-Hash – Dans la feuille de calcul Excel, accédez à l’onglet relatif à l’activité réseau. Vous voyez que le champ qui a changé de version concerne le **type de chiffrement d’horodateur chiffré** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement renforcé.
 
@@ -197,7 +199,8 @@ stratégie de sécurité.
    1.   Le paramètre Durée de vie maximale du ticket utilisateur défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Vérifiez la valeur spécifique pour voir si elle est inférieure à la durée pendant laquelle le ticket a été utilisé. Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
    2.   Le capteur Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, fermez l’alerte.
    3.   Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
-- **Compte inexistant**
+
+- **Compte inexistant** (Préversion)
    1.   Posez les questions suivantes :
          - L’utilisateur est-il un utilisateur de domaine connu et valide ? Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
          - L’utilisateur a-t-il été récemment ajouté ? Si c’est le cas, fermez l’alerte, car le changement n’a peut-être pas été encore été synchronisé.

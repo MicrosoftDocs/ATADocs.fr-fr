@@ -4,7 +4,7 @@ description: Explique les différentes options de support pour les versions de M
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 2aebec8f93153f626905067880235479705aa20a
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007285"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064016"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -29,14 +29,12 @@ Microsoft prévoit de publier des mises à jour d’ATA plusieurs fois par an, c
 
 -   Phase de maintenance Mises à jour de sécurité (uniquement) : Après la publication d’une nouvelle version d’ATA, le support des anciennes versions sera réduit aux mises à jour de sécurité uniquement pour le reste du cycle de vie du support de 12 mois (illustré dans l’exemple suivant du support de maintenance des versions).
  
-![Exemple de support de maintenance des versions](media/versions.png)
-
 > [!Note]
 > La dernière version d’ATA est toujours en phase de maintenance Mises à jour critiques et de sécurité. Cela signifie que si vous rencontrez une erreur de code qui nécessite une mise à jour critique, vous devez avoir la dernière version Current Branch pour recevoir un correctif. Toutes les autres versions prises en charge ne peuvent recevoir que les mises à jour de sécurité. Tout support se termine après l’expiration du cycle de vie du support de 12 mois d’une version. À ce stade, les clients doivent effectuer une mise à jour vers une version prise en charge.
 
 ## <a name="version-history"></a>Historique des versions
 
-|VERSION|NUMÉRO DE BUILD|DATE DE DISPONIBILITÉ| DATE DE FIN DE SUPPORT|
+|VERSION|NUMÉRO DE BUILD|DATE DE DISPONIBILITÉ|DATE DE FIN DE SUPPORT|
 |----|----|----|----|
 |1.4|1.4.2457|31 AOÛT 2015|30 AOÛT 2016|
 |1.5|1.5.2946|17 DÉC 2015|16 DÉC 2016|
@@ -48,7 +46,7 @@ Microsoft prévoit de publier des mises à jour d’ATA plusieurs fois par an, c
 |1.8|1.8.6645|30 JUIN 2017|30 JUIN 2018|
 |1.8.1|1.8.6765|2 AOÛT 2017|2 AOÛT 2018|
 |1.9|1.9.7312|21 MARS 2018|21 MARS 2019|
-
+|1.9.1|1.9.7412|1er JUILLET 2018|1er JUILLET 2019|
 
 
 
