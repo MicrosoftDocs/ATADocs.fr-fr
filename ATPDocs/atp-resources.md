@@ -2,10 +2,10 @@
 title: Liste de ressources utiles pour Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Cet article fournit une liste de ressources utiles pour Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8d91468664a76436078772ad1fc8510ea56d67a
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298482"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227136"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -46,7 +46,7 @@ Ces ressources vous permettent de configurer Azure ATP, de vous connecter à Act
 - [Essayez Azure ATP (compris dans EMS E5)](http://aka.ms/aatptrial)  L’essai est valide pendant 90 jours.
 - [Guide de déploiement](install-atp-step1.md)  Déployez Azure ATP dans votre environnement en suivant ces étapes.
 - [Intégrer Azure ATP et Windows Defender ATP](integrate-wd-atp.md)
-- 
+
 ## <a name="azure-atp-settings"></a>Paramètres Azure ATP
 
 Les paramètres nécessaires de base dans Azure ATP sont configurés lors de la création de l’espace de travail. Toutefois, vous pouvez configurer d’autres paramètres pour ajuster Azure ATP de sorte à obtenir des détections plus précises pour votre environnement, telles que l’intégration SIEM et les paramètres d’audit. 
@@ -61,9 +61,10 @@ Une fois Azure ATP opérationnel, vous pouvez voir les activités suspectes dét
 - [Guide des activités suspectes Azure ATP](suspicious-activity-guide.md) Apprenez à trier et passez aux étapes suivantes avec vos détections Azure ATP.
 - [Identifier des groupes comme sensibles](sensitive-accounts.md) Gagnez en visibilité dans l’exposition des informations d’identification sur les groupes de sécurité sensibles.
 
-## <a name="security-best-practices"></a>Bonnes pratiques de sécurité
+## <a name="security-best-practices"></a>Meilleures pratiques en matière de sécurité
 
 - [Questions fréquentes sur Azure ATP](atp-technical-faq.md) - Cet article fournit des éléments d’informations et des réponses aux questions les plus fréquemment posées sur Azure ATP. 
+
 ## <a name="community-resources"></a>Ressources de la communauté
 
 Blog : [Blog sur Azure ATP](https://aka.ms/aatpblog)
