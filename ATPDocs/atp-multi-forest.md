@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098181"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202130"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -44,7 +44,7 @@ Avec la prise en charge de plusieurs forêts Active Directory :
 Pour détecter les activités inter-forêts, les capteurs Azure ATP interrogent les contrôleurs de domaine dans des forêts distantes pour créer des profils pour toutes les entités impliquées, notamment les utilisateurs et les ordinateurs de forêts distantes. 
 
 > [!NOTE]
-> - Pour que cela fonctionne, la forêt sur laquelle sont installés les capteurs Azure ATP doit être approuvée par toutes les autres forêts.
+> - Les capteurs Azure ATP peuvent être installés sur toutes les forêts (à condition qu’il existe une relation d’approbation à sens unique minimale).
 > - L’utilisateur que vous configurez dans la console Azure ATP sous **Services d’annuaire** doit être approuvé dans toutes les autres forêts.
 
 

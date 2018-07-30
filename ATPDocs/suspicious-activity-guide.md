@@ -2,10 +2,10 @@
 title: Guide Azure ATP des activités suspectes | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064115"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227170"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -468,6 +468,72 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 **Correction**
 
 Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Promotion du contrôleur de domaine suspect (attaque potentielle DCShadow) – Aperçu
+
+**Description**
+
+Une attaque DCShadow (« Domain Controller Shadow ») est une attaque conçue pour modifier des objets annuaire par réplication malveillante. Elle consiste à créer, sur n’importe quel ordinateur, un contrôleur de domaine non autorisé suivant un processus de réplication.
+ 
+DCShadow utilise les protocoles RPC et LDAP pour :
+1. Enregistrer le compte d’ordinateur comme contrôleur de domaine (à l’aide de droits d’administrateur de domaine).
+2. Effectuer la réplication (grâce aux droits de réplication accordés) sur DRSUAPI et envoyer les modifications aux objets annuaire.
+ 
+Dans cette détection, une alerte est déclenchée lorsqu’un ordinateur du réseau tente de s’enregistrer comme contrôleur de domaine non autorisé. 
+
+**Examen**
+ 
+1. L’ordinateur en question est-il un contrôleur de domaine ? Par exemple, un contrôleur de domaine récemment promu ayant rencontré des problèmes de réplication. Si c’est le cas, **fermez** l’activité suspecte.
+2. L’ordinateur en question est-il supposé répliquer des données à partir d’Active Directory ? Par exemple, Azure AD Connect. Si c’est le cas, **fermez et excluez** l’activité suspecte.
+3. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Regardez ce qui s’est passé à peu près au même moment que la réplication, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté, à quelles ressources et avec quel système d’exploitation.
+   1. Tous les utilisateurs connectés à l’ordinateur sont-ils censés l’être ? Quels sont leurs privilèges ? Ont-ils l’autorisation de promouvoir un serveur comme contrôleur de domaine (sont-ils administrateurs de domaine) ?
+   2. Ces utilisateurs sont-ils censés avoir accès à ces ressources ?
+   3. L’ordinateur fonctionne-t-il sous le système d’exploitation Windows Server (ou Windows/Linux) ? Un ordinateur qui n’est pas un serveur n’est pas censé répliquer des données.
+Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour explorer la machine plus en détail. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
+
+4. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
+
+**Corriger**
+
+Renseignez-vous pour savoir quels utilisateurs de votre organisation disposent des autorisations suivantes : 
+- Répliquer les changements d’annuaire 
+- Répliquer tous les changements d’annuaire 
+ 
+ 
+Pour plus d’informations, consultez [Accorder des autorisations Active Directory Domain Services pour la synchronisation de profils dans SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou créer un script Windows PowerShell pour déterminer qui a ces autorisations dans le domaine.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Demande de réplication suspecte (attaque potentielle DCShadow) – Aperçu
+
+**Description** 
+
+La réplication Active Directory est le processus par lequel les modifications apportées à un contrôleur de domaine sont synchronisées avec d’autres contrôleurs de domaine. Disposant des autorisations nécessaires, les attaquants peuvent accorder des droits pour leur compte d’ordinateur, ce qui leur permet d’emprunter l’identité d’un contrôleur de domaine. Ils s’efforcent de lancer une demande de réplication malveillante, ce qui leur permet de modifier des objets Active Directory sur un contrôleur de domaine authentique et d’obtenir une persistance dans le domaine.
+Dans cette détection, une alerte est déclenchée lorsqu’une demande de réplication suspecte est générée par rapport à un contrôleur de domaine authentique protégé par Azure ATP. Le comportement est révélateur de certaines techniques utilisées dans les attaques DCShadow.
+
+**Examen** 
+ 
+1. L’ordinateur en question est-il un contrôleur de domaine ? Par exemple, un contrôleur de domaine récemment promu ayant rencontré des problèmes de réplication. Si c’est le cas, **fermez** l’activité suspecte.
+2. L’ordinateur en question est-il supposé répliquer des données à partir d’Active Directory ? Par exemple, Azure AD Connect. Si c’est le cas, **fermez et excluez** l’activité suspecte.
+3. Cliquez sur l’ordinateur source pour accéder à sa page de profil. Regardez ce qui s’est passé **à peu près au même moment** que la réplication, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté, quelles ressources ont été utilisées et quel système d’exploitation possède l’ordinateur.
+
+   1.  Tous les utilisateurs connectés à l’ordinateur sont-ils censés l’être ? Quels sont leurs privilèges ? Ont-ils l’autorisation d’effectuer des réplications (sont-ils administrateurs de domaine) ?
+   2.  Ces utilisateurs sont-ils censés avoir accès à ces ressources ?
+   3. L’ordinateur fonctionne-t-il sous le système d’exploitation Windows Server (ou Windows/Linux) ? Un ordinateur qui n’est pas un serveur n’est pas censé répliquer des données.
+Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour explorer la machine plus en détail. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
+1. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
+
+**Correction**
+
+Renseignez-vous pour savoir quels utilisateurs de votre organisation disposent des autorisations suivantes : 
+- Répliquer les changements d’annuaire 
+- Répliquer tous les changements d’annuaire 
+
+Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou créer un script Windows PowerShell pour déterminer qui a ces autorisations dans le domaine.
+
 
 ## <a name="suspicious-service-creation"></a>Création de service malveillant
 
