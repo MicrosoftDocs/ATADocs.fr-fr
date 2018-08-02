@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df06235de3a29051f9ffcd889bb95936ed9fc27d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445005"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396415"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces version 1.9*
+*S’applique à : Azure - Protection avancée contre les menaces version 1.9*
 
 
 
@@ -57,15 +57,15 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 2.  Sur la ligne de commande, tapez *gpedit.msc*.
 3.  Développez **Configuration ordinateur > Modèles d’administration > Composants Windows > Transfert d’événements**.
 
- ![Image de l’éditeur de groupe de stratégie locale](media/wef 1 local group policy editor.png)
+ ![Image de l’éditeur de groupe de stratégie locale](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Double-cliquez sur **Configurer le Gestionnaire d’abonnements cible**.
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (par exemple : Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Par exemple : Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
-   ![Configurer l’image d’abonnement cible](media/wef 2 config target sub manager.png)
+   ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Cliquez sur **OK**.
     6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
@@ -82,7 +82,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
         1.  Cliquez sur **Ajouter un ordinateur de domaine**.
         2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
        
-        ![Image de l’Observateur d’événements](media/wef3 event viewer.png)
+        ![Image de l’Observateur d’événements](media/wef3%20event%20viewer.png)
    
         
         3.  Cliquez sur **OK**.
