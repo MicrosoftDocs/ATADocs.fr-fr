@@ -2,10 +2,10 @@
 title: Prérequis pour Advanced Threat Analytics | Microsoft Docs
 description: Décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233002"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335909"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -129,7 +129,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 
 ### <a name="certificates"></a>Certificats
 
-Pour faciliter l’installation d’ATA, vous pouvez installer des certificats auto-signés pendant l’installation. Une fois le déploiement terminé, remplacez les certificats auto-signés par un certificat d’une autorité de certification interne pour être utilisé par le centre ATA.
+Pour installer et déployer ATA plus rapidement, vous pouvez installer des certificats auto-signés pendant l’installation. Il est alors recommandé, après le déploiement initial, de remplacer ces certificats auto-signés par des certificats issus d’une autorité de certification interne et utilisables par le centre ATA.
 
 
 Vérifiez que le centre ATA et les passerelles ATA ont accès au point de distribution de votre liste de révocation de certificats. S’ils n’ont pas accès à Internet, suivez la [procédure d’importation manuelle d’une liste de révocation de certificats](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) en veillant à installer l’ensemble des points de distribution de la liste pour toute la chaîne.
@@ -139,6 +139,7 @@ Le certificat doit avoir les éléments suivants :
 -   Un fournisseur de type CSP (fournisseur de services de chiffrement) ou de type KSP (fournisseur de stockage de clés)
 -   Une clé publique de 2 048 bits de longueur
 -   Des indicateurs d’utilisation KeyEncipherment et ServerAuthentication définis à une valeur
+-   La valeur « KeyExchange » pour KeySpec (KeyNumber) (AT\_KEYEXCHANGE). À noter que la valeur « Signature » (AT\_SIGNATURE) n’est pas prise en charge. 
 
 Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ordinateur**.
 

@@ -2,10 +2,10 @@
 title: Dépannage des problèmes connus d’ATA | Microsoft Docs
 description: Décrit comment résoudre les problèmes connus dans Advanced Threat Analytics
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 3433da5ca3d6d08f91cd97b24f6b97251c6b28ae
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010480"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335994"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -66,7 +66,11 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 |Error [\[]DeploymentModel[\]] Failed management authentication [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>configuration du proxy ;</br>problèmes de mise en réseau ;</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
 
 
-
+## <a name="ata-center-errors"></a>Erreurs du centre ATA
+> [!div class="mx-tableFixed"]
+|Erreur|Description|Résolution|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\_KEYEXCHANGE).|1.    Arrêtez le service du centre ATA. <br></br>2.     Supprimez le certificat du centre ATA de son magasin de certificats. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3.    Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE. <br></br>4.     Démarrez le service du centre ATA. <br></br>5.     Vérifiez que tout fonctionne maintenant comme prévu.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problèmes de la passerelle ATA et de la passerelle légère
