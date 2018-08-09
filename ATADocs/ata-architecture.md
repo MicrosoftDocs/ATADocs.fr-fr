@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b620e5b6203d387de389cfb857c2dd6125239ed9
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010055"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585050"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -92,6 +92,7 @@ Le centre ATA reçoit le trafic analysé de la passerelle ATA et de la passerell
 |Database|ATA utilise MongoDB pour stocker l’ensemble des données du système :<br /><br />- Activités réseau<br />- Activités d’événements<br />- Entités uniques<br />- Activités suspectes<br />- Configuration ATA|
 |Détecteurs|Les détecteurs utilisent des algorithmes d’apprentissage automatique et des règles déterministes pour rechercher les activités suspectes et les comportements anormaux des utilisateurs sur votre réseau.|
 |Console ATA|La console ATA permet de configurer ATA et de surveiller les activités suspectes détectées par ATA sur votre réseau. La console ATA ne dépend pas du service du centre ATA et s’exécute même quand celui-ci est arrêté, à condition qu’elle puisse communiquer avec la base de données.|
+
 Prenez en compte les critères suivants quand vous choisissez le nombre de centres ATA à déployer sur votre réseau :
 
 -   Un centre ATA ne peut surveiller qu’une seule forêt Active Directory. Si vous avez plusieurs forêts Active Directory, vous avez besoin d’au moins un centre ATA par forêt Active Directory.

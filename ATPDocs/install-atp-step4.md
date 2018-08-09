@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: a6876de4f5cf293d58da08ab4e3a8443e76480f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30202270"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585067"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -49,14 +49,14 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
 > [!NOTE] 
 > L’installation directe à partir du fichier zip est vouée à l’échec.
 
-2.  Exécutez **Azure ATP sensor setup.exe**, puis suivez les instructions de l’Assistant Installation.
+3.  Exécutez **Azure ATP sensor setup.exe**, puis suivez les instructions de l’Assistant Installation.
 
-3.  Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
+4.  Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
 
      ![Langue d’installation du capteur autonome Azure ATP](media/sensor-install-language.png)
 
 
-4.  L’Assistant Installation vérifie automatiquement si le serveur est un contrôleur de domaine ou un serveur dédié. S’il s’agit d’un contrôleur de domaine, le capteur Azure ATP est installé. S’il s’agit d’un serveur dédié, le capteur autonome Azure ATP est installé. 
+5.  L’Assistant Installation vérifie automatiquement si le serveur est un contrôleur de domaine ou un serveur dédié. S’il s’agit d’un contrôleur de domaine, le capteur Azure ATP est installé. S’il s’agit d’un serveur dédié, le capteur autonome Azure ATP est installé. 
     
     Par exemple, pour un capteur autonome Azure ATP, l’écran suivant s’affiche pour vous informer qu’un capteur autonome Azure ATP est installé sur votre serveur dédié :
     
@@ -67,7 +67,7 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
     > [!NOTE] 
     > Si le contrôleur de domaine ou le serveur dédié ne dispose pas de la configuration matérielle minimale requise pour l’installation, un avertissement s’affiche. Il ne vous empêche pas de cliquer sur **Suivant** et de procéder à l’installation. Cela peut être le bon choix pour l’installation d’Azure ATP dans un petit environnement de test de laboratoire dans lequel vous n’avez pas besoin d’autant de place pour le stockage des données. Pour les environnements de production, nous vous recommandons vivement de respecter le guide de [planification de la capacité](atp-capacity-planning.md) d’Azure ATP pour vous assurer que vos contrôleurs de domaine ou serveurs dédiés répondent aux conditions requises.
 
-4.  Sous **Configurer le capteur**, entrez le chemin d’installation et la clé d’accès que vous avez copiée à l’étape précédente, en fonction de votre environnement :
+6.  Sous **Configurer le capteur**, entrez le chemin d’installation et la clé d’accès que vous avez copiée à l’étape précédente, en fonction de votre environnement :
 
     ![Image de configuration du capteur autonome Azure ATP](media/sensor-install-config.png)
 
@@ -75,7 +75,7 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
 
       - Clé d’accès : valeur extraite du portail d’espace de travail à l’étape précédente.
     
-5. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
+7. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
 
     -   KB 3047154 (pour Windows Server 2012 R2 uniquement)
 
@@ -86,7 +86,7 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
     -   Service de capteur Azure ATP et service de mise à jour du capteur Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-5.  Une fois l’installation terminée, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter au portail d’espace de travail Azure ATP.
+8.  Une fois l’installation terminée, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter au portail d’espace de travail Azure ATP.
 
 
 >[!div class="step-by-step"]

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a77e7e86d635d80ee09338843c42e003220133a0
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f415fabe71512a5f9948a824d04e7bfece086ba4
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010157"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585033"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -43,6 +43,7 @@ ATA peut vous avertir quand il détecte une activité suspecte. Pour qu’ATA pu
     |SSL|Activez/désactivez SSL si le serveur SMTP exigeait SSL. **Remarque :** si vous activez SSL, vous devez également modifier le numéro de port.|La valeur par défaut est désactivée|
     |Authentification|Activez l’authentification si votre serveur SMTP l’exige. **Remarque :** si vous activez l’authentification, vous devez fournir le nom d’utilisateur et le mot de passe d’un compte de messagerie qui a l’autorisation de se connecter au serveur SMTP.|La valeur par défaut est désactivée|
     |Envoyer depuis (obligatoire)|Entrez une adresse de messagerie à partir de laquelle le courrier sera envoyé.|Par exemple :<br />ATA@contoso.com|
+    
     ![Image des paramètres du serveur de messagerie ATA](media/ata-email-server.png)
 
 ## <a name="provide-ata-with-your-syslog-server-settings"></a>Fournir à ATA les paramètres de votre serveur Syslog
