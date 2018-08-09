@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "29977571"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625606"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure - Protection avancée contre les menaces 
@@ -30,7 +30,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure - Pr
 
 |Pour effectuer cette opération...|procédez ainsi :|
 |----|----|
-|Consulter notre documentation la plus lue|Lire les cinq pages les plus consultées :|- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>- [Création d’un espace de travail](install-atp-step1.md)|
+|Consulter notre documentation la plus lue|Lire les cinq pages les plus consultées :<br>- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>- [Création d’un espace de travail](install-atp-step1.md)|
 |Prendre contact avec l’équipe du produit et vos collègues|Visitez la [Communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) pour Azure - Protection avancée contre les menaces.|
 |Vérifier les informations d’abonnement et obtenir la liste des fonctionnalités prises en charge|Consultez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site web Azure - Protection avancée contre les menaces.|
 
