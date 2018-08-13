@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 5fafa4e8e9644c870a92c1684fa5165ef68b31a7
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010021"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "39585104"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -155,6 +155,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 |10 000|3|12|
 |20,000|6|24|
 |50 000|16|48|
+
 &#42;Nombre total moyen de paquets par seconde provenant de l’ensemble des contrôleurs de domaine surveillés par une passerelle ATA donnée durant leur heure de la journée la plus occupée.
 
 &#42; La quantité totale de trafic des contrôleurs de domaine avec mise en miroir des ports ne peut pas dépasser la capacité de la carte réseau de capture de la passerelle ATA.
