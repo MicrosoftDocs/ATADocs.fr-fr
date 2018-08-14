@@ -2,10 +2,10 @@
 title: Informations de référence sur le journal SIEM Azure ATP | Microsoft Docs
 description: Fournit des exemples de journaux d’activités suspectes envoyés depuis Azure ATP vers votre serveur SIEM.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0a632473490d157e2b85a30bdb82947982da9551
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: adfb47e8dd006b660c4a031080eaecd6d2d5be84
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30251406"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585252"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -65,17 +65,26 @@ Priorités :
 21-02-2018  16:19:20    Auth.Error  192.168.0.220   1 2018-02-21T14:19:14.358037+00:00 CENTER CEF 6076 ForgedPacSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|ForgedPacSecurityAlert|Réaffectation de privilèges à l’aide de données d’autorisation falsifiées|10|start=2018-02-21T14:19:02.8595383Z app=Kerberos suser=user1 msg=La tentative d’user1 de réaffecter des privilèges sur DC1 dans host/domain1.test.local à partir de CLIENT1 en utilisant des données d’autorisation falsifiées a échoué. externalId=2013 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/f3359eff-cb59-44b9-82b6-5e82ff06e6c8
 ### <a name="golden-ticket"></a>Golden Ticket
 21-02-2018  16:22:39    Auth.Error  192.168.0.220   1 2018-02-21T14:22:34.274054+00:00 CENTER CEF 6076 GoldenTicketSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|GoldenTicketSecurityAlert|Activité de Golden Ticket Kerberos|10|start=2018-02-21T14:19:03.2416152Z app=Kerberos suser=Lanell Campos msg=Nous avons détecté une utilisation suspecte du ticket Kerberos de Lanell Campos (Software Engineer), ce qui peut indiquer une attaque par Golden Ticket. externalId=2022 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/702c836e-6f49-4479-9892-80e8bccbfac0
+### <a name="kerberos-golden-ticket-nonexistent-account"></a>Golden Ticket Kerberos - compte non existant
+07-01-2018  14:28:49    Auth.Error  192.168.0.100   1 2018-07-01T11:28:35.546638+00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï»¿0|Microsoft|Azure ATP|2.39.0.0|ForgedPrincipalSecurityAlert|Golden Ticket Kerberos - compte inexistant|10|start=2018-07-01T09:48:31.2567987Z app=Kerberos suser=domain1.test.local\fake msg=domain1.test.local\faux, qui n’existe pas dans Active Directory, a utilisé un ticket Kerberos. Le ticket a été détecté sur 2 ordinateurs pour accéder à 3 ressources. Cela peut indiquer une attaque potentielle de Golden Ticket. externalId=2027 cs1Label=url cs1=https://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4
+
+
 ### <a name="honey-token-activity"></a>Activité de jeton honeytoken
-21-02-2018  16:20:36    Auth.Warning    192.168.0.220   1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Activité honeytoken|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=Les activités suivantes ont été exécutées par honey :\r\nConnecté à CLIENT2 par le biais de DC1. externalId=2014 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c
+02-21-2018  16:20:36    Auth.Warning  192.168.0.220 1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=Les activités suivantes ont été exécutées par honey :\r\nConnecté à CLIENT2 par le biais de DC1. externalId=2014 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c
 ### <a name="suspicious-replication-of-directory-services"></a>Réplication suspecte de services d’annuaire
 21-02-2018  16:21:22    Auth.Error  192.168.0.220   1 2018-02-21T14:21:13.978554+00:00 CENTER CEF 6076 DirectoryServicesReplicationSecu ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|DirectoryServicesReplicationSecurityAlert|Réplication malveillante de services d’annuaires|10|start=2018-02-21T14:19:03.9975656Z app=Drsr shost=CLIENT1 msg=Des demandes de réplication malveillante ont été réalisées avec succès par user1 depuis CLIENT1 sur DC1. outcome=Success externalId=2006 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/cb95648e-1b6f-4d3b-81b9-7605532787d7
+### <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Demande de réplication suspecte (attaque potentielle DcShadow)
+07-12-2018  11:18:37    Auth.Error  192.168.0.200    1 2018-07-12T08:18:32.265989+00:00 DC1 CEF 3868 DirectoryServicesRogueReplicatio ï»¿0|Microsoft|Azure ATP|2.40.0.0|DirectoryServicesRogueReplicationSecurityAlert|[PREVIEW] **Demande de réplication suspecte (attaque potentielle DcShadow)**|10|start=2018-07-12T08:17:55.3816102Z **app=Replication Activity** shost=CLIENT1 msg=CLIENT1, qui n'est pas un contrôleur de domaine valide dans domain1.test.local, a envoyé des changements aux objets du répertoire sur DC1. externalId=2029 cs1Label=url cs1=https://contoso-corp.atp.azure.com:13000/securityAlert/1d5d1444-12cf-4db9-be48-39ebc2f51515
+### <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Promotion du contrôleur de domaine suspect (attaque potentielle DcShadow)
+07-12-2018  11:18:07    Auth.Error  192.168.0.200    1 2018-07-12T08:18:06.883880+00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï»¿0|Microsoft|Azure ATP|2.40.0.0|DirectoryServicesRoguePromotionSecurityAlert|[PREVIEW] **Promotion du contrôleur de domaine suspect (attaque potentielle DcShadow)**|10|start=2018-07-12T08:17:55.4067092Z app=Ldap shost=CLIENT1 msg=CLIENT1, qui n’est pas un ordinateur dans domain1.test.local, a été enregistré comme contrôleur de domaine sur DC1. externalId=2028 cs1Label=url cs1=https://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53
+
 ### <a name="malicious-data-protection-private-information-request"></a>Demande d’information privée de protection contre les données malveillantes
 21-02-2018  16:22:08    Auth.Error  192.168.0.220   1 2018-02-21T14:21:54.080266+00:00 CENTER CEF 6076 RetrieveDataProtectionBackupKeyS ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|RetrieveDataProtectionBackupKeySecurityAlert|Demande d’information privée de protection contre les données malveillantes|10|start=2018-02-21T14:19:41.8382786Z app=LsaRpc shost=CLIENT1 msg=user1 a effectué 1 tentatives réussies depuis CLIENT1 de récupérer la clé de sauvegarde du domaine DPAPI dans DC1. externalId=2020 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/b22221d1-764a-4fae-a5ce-e6a0c69dc55a
 
 ### <a name="over-pass-the-hash"></a>Over-pass-the-hash
 21-02-2018  16:21:07    Auth.Warning    192.168.0.220   1 2018-02-21T14:20:54.145833+00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EncryptionDowngradeSecurityAlert|Activité de passage à une version antérieure du chiffrement|5|start=2018-02-21T14:19:41.8737870Z app=Kerberos msg= La méthode de chiffrement du champ Encrypted_Timestamp du message AS_REQ de CLIENT1 a été passée à une version antérieure suivant un précédent comportement appris. Cela peut provenir d’un vol des informations d’identification de type overpass-the-hash depuis CLIENT1. externalId=2011 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2
 ### <a name="pass-the-hash"></a>Pass-the-hash
-21-02-2018  17:04:47    Auth.Error  192.168.0.220   1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheHashSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheHashSecurityAlert|Usurpation d’identité par attaque de type « Pass-The-Hash »|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Le code de hachage de Eugene Jenkins (Software Engineer) a été volé à l’un des ordinateurs déjà connectés par Eugene Jenkins (Software Engineer) et utilisé à partir de CLIENT1. externalId=2017 cs1Label=url cs1=https://test-syslog.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+21-02-2018  17:04:47    Auth.Error  192.168.0.220   1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheHashSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheHashSecurityAlert|Usurpation d’identité par attaque de type « Pass-The-Hash »|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Le code de hachage de Eugene Jenkins (Software Engineer) a été volé à l’un des ordinateurs déjà connectés par Eugene Jenkins (Software Engineer) et utilisé à partir de CLIENT1. externalId=2017 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
 ### <a name="account-enumeration"></a>Énumération de comptes
 21-02-2018  16:19:35    Auth.Warning    192.168.0.220   1 2018-02-21T14:19:27.540731+00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AccountEnumerationSecurityAlert|Reconnaissance à l’aide de l’énumération de compte|5|start=2018-02-21T14:19:02.6045416Z app=Kerberos shost=CLIENT1 suser=LMaldonado msg=Une activité d’énumération de compte suspecte utilisant le protocole Kerberos, provenant de CLIENT1, a été observée et a deviné avec succès Lamon Maldonado (Software Engineer). externalId=2003 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d
 ### <a name="dns-recon"></a>Reconnaissance DNS
@@ -98,8 +107,7 @@ Priorités :
 21-02-2018  16:20:06    Auth.Warning    192.168.0.220   1 2018-02-21T14:19:54.254930+00:00 CENTER CEF 6076 MaliciousServiceCreationSecurity ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|MaliciousServiceCreationSecurityAlert|Création de service suspect|5|start=2018-02-21T14:19:41.7897808Z app=ServiceInstalledEvent shost=CLIENT1 msg=user1 a créé MaliciousService pour exécuter des commandes potentiellement dangereuses sur CLIENT1. externalId=2026 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c
 
 ### <a name="pass-the-ticket"></a>Pass-the-Ticket
-
-21-02-2018  17:04:47    Auth.Error  192.168.0.220   1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheTicketSecurityAlert|Usurpation d’identité par attaque pass-the-ticket|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Les tickets Kerberos d’Eugene Jenkins (Software Engineer) ont été volés d’Admin-PC vers Victom-PC et utilisés pour accéder à krbtgt/DOMAIN1.TEST.LOCAL. externalId=2017 cs1Label=url cs1=https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+21-02-2018  17:04:47    Auth.Error  192.168.0.220   1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheTicketSecurityAlert|Usurpation d’identité par attaque pass-the-ticket|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Les tickets Kerberos d’Eugene Jenkins (Software Engineer) ont été volés d’Admin-PC vers Victim-PC et utilisés pour accéder à krbtgt/DOMAIN1.TEST.LOCAL. externalId=2017 cs1Label=url cs1=https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
 
 
 ## <a name="see-also"></a>Voir aussi

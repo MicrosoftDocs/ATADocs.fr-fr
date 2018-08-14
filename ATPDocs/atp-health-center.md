@@ -2,10 +2,10 @@
 title: Surveiller les événements et l’intégrité système d’Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Le centre d’intégrité d’espace de travail Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86eb90f452d5aee2504e525e64bfc62c22207880
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444905"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39584998"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -50,9 +50,9 @@ Pour vérifier l’intégrité globale de votre espace de travail, cliquez sur l
 
 -   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
 
--   **Rouvrir** : si vous fermez ou supprimez un problème, vous pouvez le rouvrir afin qu’il figure de nouveau à l’état Ouvert dans la chronologie.
-- 
-- **Supprimer** : dans la chronologie des activités suspectes, vous avez également la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, elle est supprimée de l’espace de travail et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
+-   **Rouvrir** : vous pouvez rouvrir un problème fermé ou supprimé afin qu’il figure de nouveau à l’état Ouvert dans la chronologie.
+
+-   **Supprimer** : dans la chronologie des activités suspectes, vous avez également la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, elle est supprimée de l’espace de travail et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
 
 
 

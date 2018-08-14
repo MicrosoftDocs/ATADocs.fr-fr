@@ -2,10 +2,10 @@
 title: Mettre à jour vos capteurs Azure ATP | Microsoft Docs
 description: Cette section décrit comment mettre à jour les capteurs dans Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/24/2018
+ms.date: 8/06/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b6a9cbb203068e1318425631f9f83c796bb26aa8
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 35ca436a1da10b1675daed974920c9dc8ccc3da0
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948982"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585016"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -65,7 +65,7 @@ Pour définir un capteur sur une mise à jour différée :
 1. À partir du portail d’espace de travail Azure ATP, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
 2. Cliquez sur l’onglet **Mises à jour**.
 3. Dans la ligne du tableau, à côté de chaque capteur que vous voulez différer, positionnez le curseur **Mise à jour différée** sur **Activé**.
-4. Cliquez sur **Enregistrer**.
+4. Cliquez sur **Save**.
  
 ## <a name="sensor-update-process"></a>Processus de mise à jour des capteurs
 

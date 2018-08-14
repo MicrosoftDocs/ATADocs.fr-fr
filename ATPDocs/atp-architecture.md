@@ -2,10 +2,10 @@
 title: Architecture Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit l’architecture Azure - Protection avancée contre les menaces (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799178"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567642"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
-L’architecture Azure - Protection avancée contre les menaces est détaillée dans ce diagramme :
+Architecture Azure - Protection avancée contre les menaces :
 
 ![Diagramme de la topologie de l’architecture Azure ATP](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Prenez en compte les critères suivants quand vous choisissez le nombre d’espa
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Capteur Azure ATP et capteur autonome Azure ATP
 
-Le **capteur Azure ATP** et le **capteur autonome Azure ATP** ont tous les deux les mêmes fonctionnalités de base :
+Le **capteur Azure ATP** et le **capteur autonome Azure ATP** ont les mêmes fonctionnalités de base :
 
 -   Capturez et inspectez le trafic réseau des contrôleurs de domaine. Il s’agit du trafic avec mise en miroir des ports pour les capteurs autonomes Azure ATP et du trafic local du contrôleur de domaine dans les capteurs Azure ATP. 
 
 -   Recevoir des événements Windows directement à partir des contrôleurs de domaine (pour les capteurs ATP) ou à partir des serveurs SIEM ou Syslog (pour les capteurs autonomes ATP)
 
--  Recevoir des informations de gestion de comptes RADIUS à partir de votre fournisseur VPN
+-   Recevoir des informations de gestion de comptes RADIUS à partir de votre fournisseur VPN
 
 -   Récupérer les données concernant les utilisateurs et les ordinateurs à partir du domaine Active Directory
 
@@ -176,7 +176,7 @@ Si Active Directory a besoin de davantage de puissance de calcul, le quota requi
 
 
 ## <a name="your-network-components"></a>Composants du réseau
-Pour utiliser Azure ATP, veillez à vérifier que les composants suivants sont configurés.
+Pour utiliser Azure ATP, vérifiez que les composants suivants sont configurés.
 
 ### <a name="port-mirroring"></a>Mise en miroir des ports
 Si vous utilisez des capteurs autonomes Azure ATP, vous devez configurer la mise en miroir des ports pour les contrôleurs de domaine à surveiller et définir le capteur autonome Azure ATP comme destination à l’aide de commutateurs physiques ou virtuels. Une autre option consiste à utiliser des TAP réseau. Azure ATP fonctionne si plusieurs contrôleurs de domaine sont surveillés, mais pas tous. Toutefois, la détection est moins efficace.

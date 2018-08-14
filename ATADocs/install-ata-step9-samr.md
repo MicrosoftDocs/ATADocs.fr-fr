@@ -2,10 +2,10 @@
 title: Configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Advanced Threat Analytics | Microsoft Docs
 description: Décrit comment configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/25/2018
+ms.date: 7/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e32f3ce59b049d0ced68a1330eefca7315bf49d
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 65068251436b17aac9ad8efc3d4842c8e2a109cf
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298365"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567965"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -44,9 +44,12 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
  
   ![Ajoutez le service](./media/samr-add-service.png)
 
-3. Le **service ATA** (service ATA créé pendant l’installation) a désormais les privilèges appropriés pour exécuter SAMR dans l’environnement.
+3. Le **service ATA** (service ATA créé pendant l’installation) a désormais les privilèges appropriés pour exécuter SAM-R dans l’environnement.
 
-Pour plus d’informations sur SAM-R et cette stratégie de groupe, consultez [Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Avant d’appliquer de nouvelles stratégies, assurez-vous que votre environnement reste sécurisé, sans affecter la compatibilité de votre application en activant et en vérifiant vos modifications proposées en mode audit. 
+
+ Pour plus d’informations sur SAM-R et la stratégie de groupe, consultez [Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]

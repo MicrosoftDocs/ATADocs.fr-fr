@@ -2,10 +2,10 @@
 title: Utilisation des profils utilisateur dans le portail d’espace de travail Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit comment enquêter sur les utilisateurs à partir de l’écran des profils utilisateur dans le portail d’espace de travail Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ceefeeba6a52abf5da7ff44135cff55e9beab02
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: cd34be695a190c719f991f8cc4b374942363a7c1
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444975"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567880"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
-# <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
+# <a name="understanding-entity-profiles"></a>Présentation des profils d’entité
 
 Le profil d’entité fournit une page complète sur l’entité, qui permet une enquête approfondie sur les utilisateurs, les ordinateurs, les périphériques et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 

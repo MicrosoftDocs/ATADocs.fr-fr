@@ -2,10 +2,10 @@
 title: Configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Azure ATP | Microsoft Docs
 description: Décrit comment configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/31/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a529c9751fc993ec0913a54772d46161f39199f6
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: 955051a93b017af2f1d97bccf32735e9ceaaf19f
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098166"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567846"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -32,7 +32,7 @@ ms.locfileid: "39098166"
 
 La détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur des requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont effectuées à l’aide du protocole SAM-R, via le compte du service Azure ATP créé à l’[étape 2. Se connecter à AD](install-atp-step2.md).
  
-Pour vous assurer que les clients et serveurs Windows autorisent le compte Azure ATP à effectuer cette opération SAM-R, vous devez modifier la **stratégie de groupe** de manière à ajouter le compte de service Azure ATP en plus des comptes configurés listés dans la stratégie **Accès réseau**.
+Pour vous assurer que les clients et serveurs Windows autorisent votre compte Azure ATP à exécuter SAM-R, vous devez modifier la **stratégie de groupe** de manière à ajouter le compte de service Azure ATP en plus des comptes configurés listés dans la stratégie **Accès réseau**.
 
 1. Recherchez la stratégie :
 
@@ -45,7 +45,10 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte Azure
  
   ![Ajoutez le service](./media/samr-add-service.png)
 
-3. **AATP Service** (le service Azure ATP créé pendant l’installation) a désormais les privilèges appropriés pour exécuter SAMR dans l’environnement.
+3. **AATP Service** (le service Azure ATP créé pendant l’installation) a désormais les privilèges requis pour exécuter SAM-R dans l’environnement.
+
+> [!NOTE]
+> Avant d’appliquer de nouvelles stratégies, assurez-vous que votre environnement reste sécurisé, sans affecter la compatibilité de votre application en activant et en vérifiant les modifications proposées en mode audit.
 
 Pour plus d’informations sur SAM-R et cette stratégie de groupe, consultez [Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 

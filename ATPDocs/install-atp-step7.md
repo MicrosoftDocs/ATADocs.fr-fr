@@ -1,23 +1,24 @@
 ---
-title: "Installer Azure - Protection avancée contre les menaces – Étape 7 | Microsoft Docs"
-description: "Lors de l’étape finale de l’installation d’Azure ATP, vous configurez l’utilisateur Honeytoken."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
+title: Installer Azure - Protection avancée contre les menaces – Étape 7 | Microsoft Docs
+description: Lors de l’étape finale de l’installation d’Azure ATP, vous configurez l’utilisateur Honeytoken.
+keywords: ''
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/2/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bef13d0f4799a4483eda6604a8ed96befaa13508
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 7b3c128f6e2b524d778d68af7bcea65476cae2b7
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568000"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -29,15 +30,15 @@ ms.lasthandoff: 02/21/2018
 [« Étape 6](install-atp-step6-vpn.md)
 [Étape 8 »](install-atp-step8-samr.md)
 
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-user"></a>Étape 7. Configurer des exclusions d’adresses IP et l’utilisateur honeytoken
+## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Étape 7. Configurer des exclusions d’adresses IP et de comptes honeytoken
 
 Azure ATP permet d’exclure des adresses IP ou des utilisateurs spécifiques d’un certain nombre de détections. 
 
 Par exemple, une **exclusion DNS Reconnaissance** peut être un analyseur de sécurité qui utilise DNS comme mécanisme d’analyse. L’exclusion permet à Azure ATP d’ignorer ces analyseurs.  
 
-Avec Azure ATP, vous pouvez aussi configurer un utilisateur Honeytoken servant de piège pour les utilisateurs malveillants. Toute authentification associée à ce compte (normalement dormant) déclenche une alerte.
+Avec Azure ATP, vous pouvez aussi configurer des comptes honeytoken servant de pièges pour les utilisateurs malveillants. Toute authentification associée à ces comptes honeytoken (normalement dormants) déclenche une alerte.
 
-Pour configurer ceci, procédez comme suit :
+Pour la configuration, procédez comme suit :
 
 1.  À partir du portail d’espace de travail Azure ATP, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
 
@@ -45,15 +46,16 @@ Pour configurer ceci, procédez comme suit :
 
 2.  Sous **Détection**, cliquez sur **Étiquettes d’entité**.
 
-3. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken et cliquez sur le signe **+**. Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Enregistrer**.
+3. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken et cliquez sur le signe **+**. Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Save**.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. Cliquez sur **Exclusions**. Pour chaque type de menace, entrez un compte d’utilisateur ou une adresse IP à exclure de la détection de ces menaces, et cliquez sur le signe *plus*. Le champ **Ajouter une entité** (utilisateur ou ordinateur) peut faire l’objet d’une recherche et est automatiquement renseigné avec les entités de votre réseau. Pour plus d’informations, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md) et le [guide des activités suspectes](suspicious-activity-guide.md).
+4. Cliquez sur **Exclusions**. Pour chaque type de menace, entrez un compte d’utilisateur ou une adresse IP à exclure de la détection. 
+5. Cliquez sur le signe *plus*. Le champ **Ajouter une entité** (utilisateur ou ordinateur) peut faire l’objet d’une recherche et est automatiquement renseigné avec les entités de votre réseau. Pour plus d’informations, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md) et le [guide des activités suspectes](suspicious-activity-guide.md).
 
    ![Exclusions](media/exclusions.png)
 
-5.  Cliquez sur **Enregistrer**.
+6.  Cliquez sur **Save**.
 
 
 Félicitations, vous avez correctement déployé Azure - Protection avancée contre les menaces !

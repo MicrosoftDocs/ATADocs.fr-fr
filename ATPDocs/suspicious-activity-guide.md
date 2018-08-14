@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585235"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -101,7 +101,7 @@ Il existe trois types de détection :
 
 **Examen**
 
-Lisez d’abord la description de l’alerte pour déterminer de quel type de détection il s’agit entre les trois types de détection ci-dessus. Pour plus d’informations, téléchargez la feuille de calcul Excel.
+Lisez d’abord la description de l’alerte pour déterminer de quel type de détection il s’agit entre les trois types de détection répertoriés ci-dessus. Pour plus d’informations, téléchargez la feuille de calcul Excel.
 
 1.  Skeleton Key : déterminez si Skeleton Key a affecté vos contrôleurs de domaine à l’aide du [scanneur écrit par l’équipe Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Si l’analyseur détecte la présence d’un logiciel malveillant sur un ou plusieurs de vos contrôleurs de domaine, l’alerte est un vrai positif.
 
@@ -191,7 +191,7 @@ Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaqua
 Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le [compte KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ils utilisent ensuite ce compte KRBTGT pour créer un ticket TGT (Ticket Granting Ticket) Kerberos qui fournit une autorisation d’accès à toutes les ressources du réseau, et définir l’heure d’expiration du ticket à la valeur de leur choix. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir un accès persistant dans le réseau.
 
 Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée définie dans la [Durée de vie maximale du ticket utilisateur](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), c’est une attaque Golden Ticket de type **anomalie de temps**, ou par un compte inexistant, c’est une attaque Golden Ticket de type **compte inexistant**.
-stratégie de sécurité.
+
 
 **Examen**
 
@@ -275,21 +275,6 @@ Vérifiez les autorisations suivantes :
 Pour plus d’informations, consultez [Accorder des autorisations Active Directory Domain Services pour la synchronisation de profils dans SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou créer un script Windows PowerShell pour déterminer qui a ces autorisations dans le domaine.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Mot de passe exposé dans le rapport de texte en clair
-
-**Description**
-
-Certains services envoient des informations d’identification de compte au format texte brut, Ceci peut se produire y compris pour les comptes d’utilisateurs. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. 
-
-**Examen**
-
-Cliquez sur la page des rapports et téléchargez le Mot de passe exposé dans le rapport de texte en clair. Consultez dans la feuille de calcul Excel les comptes qui ont été exposés.
-En général, il y a une application de script ou héritée sur les ordinateurs sources qui utilise une liaison simple LDAP.
-
-**Correction**
-
-Vérifiez la configuration des ordinateurs sources et que vous n’utilisez pas de liaison simple LDAP. À la place des liaisons simples LDAP, utilisez des liaisons SALS LDAP ou LDAPS.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Réaffectation de privilèges à l’aide de données d’autorisation falsifiées
 
