@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010242"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585086"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -56,15 +56,15 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 2.  Sur la ligne de commande, tapez *gpedit.msc*.
 3.  Développez **Configuration ordinateur > Modèles d’administration > Composants Windows > Transfert d’événements**.
 
- ![Image de l’éditeur de groupe de stratégie locale](media/wef 1 local group policy editor.png)
+![Image de l’éditeur de groupe de stratégie locale](media/wef 1 local group policy editor.png)
 
 4.  Double-cliquez sur **Configurer le Gestionnaire d’abonnements cible**.
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Par exemple : Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Par exemple : Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Configurer l’image d’abonnement cible](media/wef 2 config target sub manager.png)
+    ![Configurer l’image d’abonnement cible](media/wef 2 config target sub manager.png)
    
     5.  Cliquez sur **OK**.
     6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
@@ -75,25 +75,25 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 2.  Ouvrez l’**Observateur d’événements**. 
 3.  Cliquez avec le bouton droit sur **Abonnements** et sélectionnez **Créer un abonnement**. 
 
-   1.   Entrez un nom et une description pour l’abonnement. 
-   2.   Pour **Journal de destination**, vérifiez que **Événements transférés** est sélectionné. Pour qu’ATA lise les événements, le journal de destination doit être **Événements transférés**. 
-   3.   Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
+    1.  Entrez un nom et une description pour l’abonnement. 
+    2.  Pour **Journal de destination**, vérifiez que **Événements transférés** est sélectionné. Pour qu’ATA lise les événements, le journal de destination doit être **Événements transférés**. 
+    3.  Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
         1.  Cliquez sur **Ajouter un ordinateur de domaine**.
         2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
-       
-        ![Image de l’Observateur d’événements](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Image de l’Observateur d’événements](media/wef3 event viewer.png)
+ 
+ 
         3.  Cliquez sur **OK**.
-   4.   Cliquez sur **Sélectionner des événements**.
+     4. Cliquez sur **Sélectionner des événements**.
 
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
         2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant.
 
- ![Image de filtre de requête](media/wef 4 query filter.png)
+    ![Image de filtre de requête](media/wef 4 query filter.png)
 
-   5.   Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
-   6.   Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur la passerelle ATA.
+    5.  Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
+    6.  Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur la passerelle ATA.
 
 
 Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)
