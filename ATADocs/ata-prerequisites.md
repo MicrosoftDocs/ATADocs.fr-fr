@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 04284a622aec1985e363bac7f0215cfd031d9854
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567659"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723410"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -215,8 +215,8 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
-|NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
+|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
+|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |SSL|TCP|443|Centre ATA|Sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 
@@ -282,8 +282,8 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par la pas
 |Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
-|NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
+|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
+|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |SSL|TCP|443|Centre ATA|Sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 |Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
