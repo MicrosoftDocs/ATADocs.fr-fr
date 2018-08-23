@@ -2,10 +2,10 @@
 title: Récupération d’urgence pour Advanced Threat Analytics | Microsoft Docs
 description: Décrit comment vous pouvez récupérer rapidement les fonctionnalités ATA après un sinistre
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 72598380f574e0475e4796887f44131009911be2
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 5e6fac695e1dc51a1a0afcf20330918be82c75e9
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009551"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734522"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -54,12 +54,12 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
     1. Supprimez le document du profil système du centre ATA par défaut dans MongoDB : 
         1. Accédez à **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Exécutez `mongo.exe ATA` 
-        3. Démarrez le service du centre ATA.
-        4. Exécutez cette commande pour supprimer le profil système par défaut : `db.SystemProfile.remove({})`
+        3. Exécutez cette commande pour supprimer le profil système par défaut : `db.SystemProfile.remove({})`
     2. Exécutez la commande : `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` en utilisant le fichier de sauvegarde de l’étape 1.</br>
     Pour obtenir une explication complète de la localisation et de l’importation des fichiers de sauvegarde, consultez [Exporter et importer la configuration ATA](ata-configuration-file.md). 
-    3. Ouvrez la console ATA. Vous devez normalement voir toutes les passerelles ATA liées sous l’onglet Configuration/Passerelles. 
-    4. Veillez à définir un [**utilisateur des services d’annuaire**](install-ata-step2.md) et à choisir un [**synchronisateur de contrôleur de domaine**](install-ata-step5.md). 
+    3. Démarrez le service du centre ATA.
+    4. Ouvrez la console ATA. Vous devez normalement voir toutes les passerelles ATA liées sous l’onglet Configuration/Passerelles.
+    5. Veillez à définir un [**utilisateur des services d’annuaire**](install-ata-step2.md) et à choisir un [**synchronisateur de contrôleur de domaine**](install-ata-step5.md). 
 
 
 

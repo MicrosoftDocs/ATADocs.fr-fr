@@ -2,10 +2,10 @@
 title: Configurer les transferts d’événements Windows dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit les options de configuration des transferts d’événements Windows avec Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396415"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734566"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces version 1.9*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
@@ -63,12 +63,12 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Par exemple : Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
- 
-   ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Cliquez sur **OK**.
-    6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Par exemple : Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  Cliquez sur **OK**.
+6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
 
 **Étape 3 : effectuer les opérations suivantes sur le capteur autonome Azure ATP** 
 
@@ -91,7 +91,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
         2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant :
 
- ![Image de filtre de requête](media/wef-4-query-filter.png)
+        ![Image de filtre de requête](media/wef-4-query-filter.png)
 
    5.   Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
    6.   Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.

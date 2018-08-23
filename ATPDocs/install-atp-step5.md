@@ -2,10 +2,10 @@
 title: Installer Azure - Protection avancée contre les menaces – Étape 5 | Microsoft Docs
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a2e61758e06aedfe607afc0d3365227af872fe20
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 05355460ec8dac4febc24096e802135cf52e1cc8
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444925"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734629"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -54,12 +54,11 @@ Une fois le capteur Azure ATP installé, effectuez les étapes suivantes pour co
      - Dans le cas d’un capteur autonome Azure ATP sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Elles reçoivent le trafic du contrôleur de domaine mis en miroir.
      - Dans le cas d’un capteur Azure ATP, il doit s’agir de toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
 
-
-  - **Candidat synchronisateur de domaine** : tout capteur autonome Azure ATP défini comme candidat synchronisateur de domaine peut être responsable de la synchronisation entre Azure ATP et votre domaine Active Directory. Suivant la taille du domaine, la synchronisation initiale peut prendre un certain temps et consommer beaucoup de ressources. Par défaut, seuls les capteurs autonomes Azure ATP sont définis comme candidats synchronisateurs de domaine.
+    - **Candidat synchronisateur de domaine** : tout capteur autonome Azure ATP défini comme candidat synchronisateur de domaine peut être responsable de la synchronisation entre Azure ATP et votre domaine Active Directory. Suivant la taille du domaine, la synchronisation initiale peut prendre un certain temps et consommer beaucoup de ressources. Par défaut, seuls les capteurs autonomes Azure ATP sont définis comme candidats synchronisateurs de domaine.
    Dans la mesure du possible, évitez qu’un capteur autonome Azure ATP de site distant soit candidat synchronisateur de domaine.
    Si votre contrôleur de domaine est en lecture seule, ne le définissez pas comme candidat synchronisateur de domaine. Pour plus d'informations, consultez [Architecture Azure ATP](atp-architecture.md#azure-atp-sensor-features).
   
-4. Cliquez sur **Enregistrer**.
+4. Cliquez sur **Save**.
 
 
 ## <a name="validate-installations"></a>Valider les installations
