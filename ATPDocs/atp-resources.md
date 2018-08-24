@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/23/2018
+ms.date: 8/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 7018fb46a9d9da326ba999aff34a5ac2de6b860c
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227136"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734575"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -26,17 +26,17 @@ ms.locfileid: "39227136"
 
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
 
-Cet article vous offre un guide de préparation qui vous donne une liste de ressources qui vous aideront à commencer à utiliser Azure ATP. 
+Cet article vous fournit un guide de préparation qui vous donne une liste de ressources pour vous aider avec la prise en main d’Azure - Protection avancée contre les menaces. 
 
 ## <a name="understanding-azure-atp"></a>Présentation d’Azure ATP
 
-Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à protéger votre entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes. Utilisez les ressources suivantes pour en savoir plus sur Azure ATP : 
+Azure - Protection avancée contre les menaces (ATP) est un service cloud qui vous aide à identifier et protéger votre entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes. Utilisez les ressources suivantes pour en savoir plus sur Azure ATP : 
 - [Vue d’ensemble d’Azure ATP](what-is-atp.md)
 - [Vidéo d’introduction à Azure ATP - version longue](https://www.youtube.com/watch?v=KX-xpFc0sBw) 
 
 ## <a name="deployment-decisions"></a>Décisions de déploiement
 
-Azure ATP se compose d’un service cloud résidant dans Azure et de capteurs qui peuvent être installés sur un contrôleur de domaine ou sur des serveurs dédiés. Avant de commencer à utiliser Azure ATP, il est important de choisir le type de capteurs qui conviennent le mieux à votre déploiement.<br>Si vous utilisez des serveurs physiques, vous devez planifier la capacité. Vous pouvez vous aider de l’outil de dimensionnement pour allouer de l’espace à vos capteurs : 
+Azure ATP se compose d’un service cloud résidant dans Azure et de capteurs intégrés qui peuvent être installés sur un contrôleur de domaine ou des capteurs autonomes sur des serveurs dédiés. Avant de commencer à utiliser Azure ATP, il est important de choisir le type de capteurs qui conviennent le mieux à votre déploiement et vos besoins. Les capteurs intégrés Azure ATP permettent d’obtenir une sécurité renforcée, des coûts opérationnels réduits et un déploiement plus facile. Les capteurs autonomes Azure ATP nécessitent un matériel physique, des étapes de configuration supplémentaires et des coûts opérationnels plus lourds. <br>Si vous utilisez des serveurs physiques, il est essentiel de planifier la capacité. Vous pouvez vous aider de l’outil de dimensionnement pour allouer de l’espace à vos capteurs : 
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool) - L’outil de dimensionnement automatise la collecte de la somme de trafic surveillé par Azure ATP. Il fournit automatiquement des recommandations de prise en charge et de ressource pour les capteurs. 
 - [Guide de planification de la capacité d’ATA](atp-capacity-planning.md)
 
@@ -49,14 +49,14 @@ Ces ressources vous permettent de configurer Azure ATP, de vous connecter à Act
 
 ## <a name="azure-atp-settings"></a>Paramètres Azure ATP
 
-Les paramètres nécessaires de base dans Azure ATP sont configurés lors de la création de l’espace de travail. Toutefois, vous pouvez configurer d’autres paramètres pour ajuster Azure ATP de sorte à obtenir des détections plus précises pour votre environnement, telles que l’intégration SIEM et les paramètres d’audit. 
+Les paramètres de base nécessaires dans Azure ATP sont configurés lors de la création de l’espace de travail. Toutefois, vous pouvez configurer d’autres paramètres pour ajuster Azure ATP de sorte à obtenir des détections plus précises pour votre environnement, telles que l’intégration SIEM et les paramètres d’audit. 
 
 - [Documentation générale d’Azure ATP](what-is-atp.md)
-- [Paramètres d’audit](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – Auditez l’intégrité de votre contrôleur de domaine avant et après un déploiement d’ATA. 
+- [Paramètres d’audit](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – Auditez l’intégrité de votre contrôleur de domaine avant et après un déploiement d’ATP. 
 
 ## <a name="work-with-azure-atp"></a>Utiliser Azure ATP
 
-Une fois Azure ATP opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des activités. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez au portail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’Azure ATP : 
+Une fois Azure ATP opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des activités du portail Azure ATP. La chronologie des activités est la page d’accueil par défaut une fois que vous êtes connecté au portail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’Azure ATP : 
 
 - [Guide des activités suspectes Azure ATP](suspicious-activity-guide.md) Apprenez à trier et passez aux étapes suivantes avec vos détections Azure ATP.
 - [Identifier des groupes comme sensibles](sensitive-accounts.md) Gagnez en visibilité dans l’exposition des informations d’identification sur les groupes de sécurité sensibles.

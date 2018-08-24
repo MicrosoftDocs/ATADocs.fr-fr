@@ -2,10 +2,10 @@
 title: Stratégie relative aux données personnelles Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Fournit des liens vers des informations sur la suppression des informations personnelles et des données personnelles à partir d’Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: d64cc0d40acc31e2187305c38a625924a91db06b
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: e4aad8af65c27f351185808585aea37a8a67de42
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948929"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734615"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -30,13 +30,13 @@ ms.locfileid: "36948929"
 
 Dans Azure - Protection avancée contre les menaces, vous pouvez afficher les données personnelles identifiables à partir du [portail de l’espace de travail](workspace-portal.md) à l’aide de la [barre de recherche](workspace-portal.md#search-bar). 
 
-Vous pouvez rechercher un utilisateur ou un ordinateur spécifique et cliquer sur l’entité pour accéder à la [page de profil](entity-profiles.md) de l’utilisateur ou de l’ordinateur. Le profil vous fournit des informations détaillées sur l’entité à partir d’Active Directory, notamment l’activité réseau liée à cette entité et son historique.
+Recherchez un utilisateur ou un ordinateur spécifique et cliquez sur l’entité pour accéder à la [page de profil](entity-profiles.md) de l’utilisateur ou de l’ordinateur. Le profil vous fournit des informations détaillées sur l’entité à partir d’Active Directory, notamment l’activité réseau liée à cette entité et son historique.
 
 Les données personnelles Azure ATP sont recueillies à partir d’Active Directory par le biais du capteur Azure ATP et stockées dans une base de données principale.
 
 ## <a name="update-personal-data"></a>Mettre à jour les données personnelles 
 
-Étant donné que les données personnelles de l’utilisateur d’Azure ATP sont dérivées de l’objet utilisateur dans Active Directory de l’organisation, les modifications apportées au profil utilisateur dans AD seront reflétées dans Azure ATP.
+Les données utilisateur personnelles d’Azure ATP sont dérivées de l’objet utilisateur dans Active Directory de l’organisation. Par conséquent, les modifications apportées au profil utilisateur dans l’AD de l’organisation sont répercutées dans Azure ATP.
 
 
 ## <a name="delete-personal-data"></a>Supprimer les données personnelles 
@@ -45,7 +45,7 @@ Si un utilisateur est supprimé de l’annuaire Active Directory de l’organisa
 
 ## <a name="export-personal-data"></a>Exporter les données personnelles 
 
-Dans Azure ATP, il est possible [d’exporter](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) les informations relatives aux alertes de sécurité dans Excel. Ceci exporte également les données personnelles. 
+Dans Azure ATP, il est possible [d’exporter](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) les informations relatives aux alertes de sécurité dans Excel. Cette fonction exporte également les données personnelles. 
  
 ## <a name="audit-personal-data"></a>Effectuer un audit des données personnelles
 

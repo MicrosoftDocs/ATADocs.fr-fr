@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585235"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734836"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -200,7 +200,7 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
    2.   Le capteur Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, fermez l’alerte.
    3.   Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
 
-- **Compte inexistant** (Préversion)
+- **Compte inexistant**
    1.   Posez les questions suivantes :
          - L’utilisateur est-il un utilisateur de domaine connu et valide ? Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
          - L’utilisateur a-t-il été récemment ajouté ? Si c’est le cas, fermez l’alerte, car le changement n’a peut-être pas été encore été synchronisé.
@@ -454,7 +454,7 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Promotion du contrôleur de domaine suspect (attaque potentielle DCShadow) – Aperçu
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Promotion du contrôleur de domaine suspect (attaque DCShadow potentielle) - Nouveau
 
 **Description**
 
@@ -489,10 +489,11 @@ Pour plus d’informations, consultez [Accorder des autorisations Active Directo
 
 Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou créer un script Windows PowerShell pour déterminer qui a ces autorisations dans le domaine.
  
+> [!NOTE]
+> Les détections de promotion du contrôleur de domaine suspect (attaque DCShadow potentielle) sont prises en charge par les capteurs ATP uniquement. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Demande de réplication suspecte (attaque potentielle DCShadow) – Aperçu
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Demande de réplication suspecte (attaque DCShadow potentielle) - Nouveau
 
 **Description** 
 
@@ -519,6 +520,9 @@ Renseignez-vous pour savoir quels utilisateurs de votre organisation disposent d
 
 Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou créer un script Windows PowerShell pour déterminer qui a ces autorisations dans le domaine.
 
+> [!NOTE]
+> Les détections de demande de réplication suspecte (attaque DCShadow potentielle) sont prises en charge par les capteurs ATP uniquement. 
+
 
 ## <a name="suspicious-service-creation"></a>Création de service malveillant
 
@@ -542,7 +546,7 @@ Un service suspect a été créé sur un contrôleur de domaine dans votre organ
 
 - Implémentez un accès doté de moins de privilèges sur les ordinateurs du domaine pour autoriser uniquement des utilisateurs spécifiques à créer de nouveaux services.
 
-## Connexion VPN suspecte - Préversion<a name="suspicious-vpn-detection"></a>
+## Connexion VPN suspecte <a name="suspicious-vpn-detection"></a>
 
 **Description**
 

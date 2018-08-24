@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064064"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734608"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -36,9 +36,9 @@ Les groupes de rôles permettent de gérer les accès pour Azure ATP. À l’aid
 > [!NOTE]
 > N’importe quel administrateur général ou de la sécurité de l’annuaire Azure Active Directory du locataire est automatiquement un administrateur Azure ATP.
 
-## <a name="accessing-the-workspace-management-portal"></a>Accès au portail de gestion de l’espace de travail
+## <a name="accessing-the-management-portal"></a>Accès au portail de gestion
 
-L’accès au portail de gestion de l’espace de travail (portal.atp.azure.com) est possible uniquement par un utilisateur Azure AD qui a le rôle d’annuaire de l’administrateur général ou de la sécurité. Après avoir passé le portail, vous pouvez créer les différents espaces de travail. Pour chaque espace de travail, le service Azure ATP crée trois groupes de sécurité dans votre locataire Azure Active Directory : Administrateurs, Utilisateurs, Observateurs. 
+L’accès au portail de gestion (portal.atp.azure.com) est possible uniquement par un utilisateur Azure AD qui a le rôle d’annuaire de l’administrateur général ou de la sécurité. Après avoir passé le portail, vous pouvez créer votre espace de travail. Le service Azure ATP crée trois groupes de sécurité dans votre locataire Azure Active Directory : Administrateurs, Utilisateurs, Observateurs. 
 
 > [!NOTE]
 > L’accès au portail de l’espace de travail Azure ATP est accordé uniquement aux utilisateurs au sein de groupes de sécurité Azure AD pour cet espace de travail ainsi qu’aux administrateurs généraux et de sécurité.

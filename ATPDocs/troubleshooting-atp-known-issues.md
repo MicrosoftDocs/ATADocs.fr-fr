@@ -2,10 +2,10 @@
 title: Dépannage des problèmes connus d’Azure ATP | Microsoft Docs
 description: Décrit comment résoudre les problèmes d’Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 986dc057127e8de1e26a78dd7a138b02efeebf99
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760054"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734614"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -28,7 +28,7 @@ ms.locfileid: "34760054"
 
 ## <a name="deployment-log-location"></a>Emplacement des journaux de déploiement
  
-Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. À l’emplacement d’installation par défaut, ce répertoire se trouve ici : C:\Users\Administrator\AppData\Local\Temp (ou un répertoire au-dessus de %temp%).
+Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. À l’emplacement d’installation par défaut, ce répertoire se trouve ici : C:\Users\Administrator\AppData\Local\Temp (ou un répertoire au-dessus de %temp%). Pour plus d'informations, consultez [Résolution des problèmes liés à ATP à l’aide des journaux](troubleshooting-atp-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Le problème d’authentification du proxy se présente sous la forme d’erreur de licence
 

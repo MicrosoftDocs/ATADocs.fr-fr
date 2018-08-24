@@ -2,10 +2,10 @@
 title: Prérequis pour Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
-ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
+ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827483"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734512"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -31,20 +31,20 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité Azure ATP](atp-capacity-planning.md).
 
 
-Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail de gestion de l’espace de travail et d’un portail d’espace de travail, du capteur autonome Azure ATP et/ou du capteur Azure ATP. Pour plus d’informations sur les composants Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
+Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail de gestion, du portail de l’espace de travail, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
 
-Chaque espace de travail Azure ATP prend en charge une limite de forêt Active Directory et le niveau fonctionnel de forêt Windows 2003 et versions ultérieures. Pour les déploiements à plusieurs forêts, un espace de travail Azure ATP distinct est nécessaire pour chaque forêt.
+Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures. 
 
 
 [Avant de commencer](#before-you-start) : cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
 
-[Portail de gestion de l’espace de travail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : cette section décrit la configuration requise du navigateur du portail de gestion de l’espace de travail.
+[Portail de gestion Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : cette section décrit la configuration requise du navigateur du portail de gestion Azure ATP.
 
 [Portail de l’espace de travail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : cette section décrit la configuration requise du navigateur pour l’exécution du portail de l’espace de travail Azure ATP.
 
-[Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : cette section répertorie le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
-
 [Capteur Azure ATP](#azure-atp-lightweight-sensor-requirements) : cette section répertorie le matériel du capteur Azure ATP ainsi que la configuration logicielle requise.
+
+[Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : cette section répertorie le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
 
 ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
 
@@ -65,7 +65,7 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 
 -   Facultatif : compte d’un utilisateur sans activité réseau. Ce compte est configuré comme l’utilisateur honeytoken Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
--   Facultatif : quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à ATP pour qu’Azure ATP puisse encore mieux détecter les attaques de type « Pass-The-Hash », par force brute et Honey Tokens, la modification de groupes sensibles ainsi que la création de service malveillant. Dans le capteur Azure ATP, ces événements sont reçus automatiquement. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+-   Facultatif : quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à ATP pour qu’Azure ATP puisse encore mieux détecter les attaques de type « Pass-The-Hash », par force brute et Honey Tokens, la modification de groupes sensibles ainsi que la création de service malveillant. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 
 ## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Configuration requise pour le portail de l’espace de travail et le portail de gestion de l’espace de travail Azure ATP
@@ -143,11 +143,11 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
-|NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
+|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
+|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDP|1813|RADIUS|Entrant|
-|RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
+|TLS vers RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
 
 > [!NOTE]
 > - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
@@ -202,12 +202,12 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
 |**Ports internes**|||||
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Sortant|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
-|NetBIOS|UDP|137|Tous les appareils sur le réseau|Sortant|
+|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
+|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDP|1813|RADIUS|Entrant|
-|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Sortant|
+|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
 
 > [!NOTE]
 > - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).

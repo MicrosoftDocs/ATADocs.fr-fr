@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567642"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734568"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -28,20 +28,17 @@ Architecture Azure - Protection avancée contre les menaces :
 
 ![Diagramme de la topologie de l’architecture Azure ATP](media/atp-architecture-topology.png)
 
-Azure ATP surveille le trafic réseau de vos contrôleurs de domaine en utilisant la mise en miroir des ports sur un capteur autonome Azure ATP à l’aide de commutateurs physiques ou virtuels. Si vous déployez le capteur autonome Azure ATP directement sur vos contrôleurs de domaine, la mise en miroir des ports est inutile. De plus, Azure ATP peut tirer parti des événements Windows (transférés directement à partir de vos contrôleurs de domaine ou d’un serveur SIEM) et analyser les données à la recherche d’attaques et de menaces. Azure ATP reçoit le trafic analysé à partir du capteur autonome Azure ATP et du capteur Azure ATP. Le centre ATA effectue ensuite le profilage, exécute la détection déterministe, et exécute l’apprentissage automatique et les algorithmes comportementaux pour en savoir plus sur votre réseau afin de détecter les anomalies et vous avertir des activités suspectes.
+Azure ATP surveille le trafic réseau de vos contrôleurs de domaine en utilisant la mise en miroir des ports sur un capteur autonome Azure ATP à l’aide de commutateurs physiques ou virtuels. Si vous déployez le capteur autonome Azure ATP directement sur vos contrôleurs de domaine, la mise en miroir des ports est inutile. De plus, Azure ATP peut tirer parti des événements Windows (transférés directement à partir de vos contrôleurs de domaine ou d’un serveur SIEM) et analyser les données à la recherche d’attaques et de menaces. Azure ATP reçoit le trafic analysé à partir du capteur autonome Azure ATP et du capteur Azure ATP. Azure ATP effectue ensuite le profilage, exécute la détection déterministe, et exécute l’apprentissage automatique et les algorithmes comportementaux pour en savoir plus sur votre réseau afin de détecter les anomalies et vous avertir des activités suspectes.
 
-Cette section décrit le flux de capture réseau et d’événements, ainsi que les fonctionnalités des principaux composants d’ATP : le capteur autonome Azure ATP, le capteur Azure ATP (qui a les mêmes fonctionnalités de base que le capteur autonome Azure ATP) et le service cloud Azure ATP. 
+Cette section décrit le flux de capture réseau et d’événements, ainsi que les fonctionnalités des principaux composants d’ATP : le capteur Azure ATP, le capteur autonome Azure ATP (qui a les mêmes fonctionnalités de base que le capteur autonome Azure ATP mais nécessite du matériel supplémentaire, la mise en miroir des ports, une configuration, et ne prend pas en charge les détections basées sur ETW) et le service cloud Azure ATP. 
 
-Lors de son installation directe sur les contrôleurs de domaine, le capteur accède aux journaux d’événements directement à partir du contrôleur de domaine. Une fois ces journaux et le trafic analysés par le capteur, Azure ATP envoie uniquement cette information analysée au service Azure ATP (pas tous les journaux).
+Lors de son installation directe sur les contrôleurs de domaine, le capteur ATP accède aux journaux d’événements directement à partir du contrôleur de domaine. Une fois ces journaux et le trafic analysés par le capteur, Azure ATP envoie uniquement cette information analysée au service Azure ATP (pas tous les journaux).
 
 ## <a name="azure-atp-components"></a>Composants d’Azure ATP
 Azure ATP est constitué des composants suivants :
 
 -   **Portail de gestion d’espace de travail Azure ATP** <br>
-Le portail de gestion d’espace de travail Azure ATP vous permet de créer des espaces de travail et permet l’intégration à d’autres services Microsoft.
-
-> [!NOTE]
-> Seuls les capteurs d’une même forêt Active Directory peuvent se connecter à un espace de travail individuel.
+Le portail de gestion d’espace de travail Azure ATP vous permet de créer et de gérer votre espace de travail et permet l’intégration à d’autres services Microsoft.
 
 -   **Portail d’espace de travail Azure ATP** <br>
 Le portail d’espace de travail Azure ATP reçoit des données des capteurs et des capteurs autonomes ATP. Il surveille, gère et examine les menaces dans votre environnement.
@@ -50,30 +47,28 @@ Le portail d’espace de travail Azure ATP reçoit des données des capteurs et 
 Le capteur Azure ATP est installé directement sur vos contrôleurs de domaine et il surveille directement leur trafic, sans recourir à un serveur dédié ni à une configuration de mise en miroir des ports. 
 
 -   **Capteur autonome Azure ATP**<br>
-Le capteur autonome Azure ATP est installé sur un serveur dédié qui surveille le trafic à partir de vos contrôleurs de domaine à l’aide de la mise en miroir des ports ou d’un TAP réseau. Il s’agit d’une alternative au capteur Azure ATP.
+Le capteur autonome Azure ATP est installé sur un serveur dédié qui surveille le trafic à partir de vos contrôleurs de domaine à l’aide de la mise en miroir des ports ou d’un TAP réseau. Il s’agit d’une alternative au capteur Azure ATP qui nécessite du matériel supplémentaire, la mise en miroir des ports et une configuration. Les capteurs autonomes Azure ATP ne prennent pas en charge les détections basées sur ETW prises en charge par le capteur ATP. 
 
 ## <a name="deployment-options"></a>Options de déploiement
 Vous pouvez déployer Azure ATP à l’aide de la combinaison suivante de capteurs :
 
 -   **Utilisation de capteurs Azure ATP uniquement**<br>
-Votre déploiement Azure ATP peut contenir uniquement des capteurs Azure ATP : les capteurs Azure ATP sont déployés sur chaque contrôleur de domaine et aucun serveur supplémentaire ni configuration de mise en miroir des ports n’est nécessaire.
+Votre déploiement Azure ATP peut contenir uniquement des capteurs Azure ATP : les capteurs Azure ATP sont déployés directement sur chaque contrôleur de domaine et aucun serveur supplémentaire ni configuration de mise en miroir des ports n’est nécessaire.
 
 -   **Utilisation de capteurs autonomes Azure ATP uniquement** <br>
 Votre déploiement Azure ATP peut contenir uniquement des capteurs autonomes Azure ATP, sans aucun capteur Azure ATP : tous les contrôleurs de domaine doivent être configurés pour activer la mise en miroir des ports sur un capteur autonome Azure ATP ou des TAP réseau doivent être en place.
 
 -   **Utilisation de capteurs autonomes Azure ATP et de capteurs Azure ATP**<br>
-Votre déploiement Azure ATP inclut des capteurs autonomes Azure ATP et des capteurs Azure ATP. Les capteurs autonomes Azure ATP sont installés sur certains de vos contrôleurs de domaine (par exemple, tous les contrôleurs de domaine de vos sites de succursale). En même temps, d’autres contrôleurs de domaine sont surveillés par des capteurs autonomes Azure ATP (par exemple, les plus grands contrôleurs de domaine de vos principaux centres de données).
+Votre déploiement Azure ATP inclut des capteurs autonomes Azure ATP et des capteurs Azure ATP. Les capteurs autonomes Azure ATP sont installés sur certains de vos contrôleurs de domaine (par exemple, tous les contrôleurs de domaine de vos sites de succursale). En même temps, d’autres contrôleurs de domaine sont surveillés par des capteurs autonomes Azure ATP (par exemple, les plus grands contrôleurs de domaine de vos principaux centres de données). 
 
 
-### <a name="azure-atp-workspace-management-portal"></a>Portail de gestion d’espace de travail Azure ATP
+### <a name="azure-atp-management-portal"></a>Portail de gestion Azure ATP
 
-Le portail de gestion d’espace de travail Azure ATP vous permet de :
+Le portail de gestion Azure ATP vous permet d’effectuer les opérations suivantes :
 
--   Créer et gérer des espaces de travail Azure ATP
+-   Créer et gérer votre espace de travail Azure ATP
 
 -   Effectuer l’intégration à d’autres services de sécurité Microsoft
-
-Définir votre espace de travail principal en tant que **principal**. La définition d’un espace de travail comme principal affecte les intégrations - vous pouvez intégrer Azure ATP et Windows Defender ATP uniquement pour votre espace de travail principal. 
 
 > [!NOTE]
 > - Azure ATP prend actuellement en charge la création d’un seul espace de travail. Après avoir supprimé un espace de travail, vous pouvez contacter le support pour le réactiver. Vous pouvez avoir au maximum trois espaces de travail supprimés. Pour augmenter le nombre d’espaces de travail enregistrés et supprimés, contactez le support Azure ATP.
@@ -99,20 +94,16 @@ L’espace de travail Azure ATP vous permet de gérer les fonctionnalités Azure
 |Récepteur d’entité|Reçoit des lots d’entités à partir de tous les capteurs Azure ATP et capteurs autonomes Azure ATP.|
 |Processeur d’activité réseau|Traite toutes les activités réseau au sein de chaque lot reçu. par exemple, en mettant en correspondance les différentes étapes Kerberos effectuées depuis des ordinateurs potentiellement différents.|
 |Profileur d’entité|Associe un profil à toutes les entités uniques en fonction du trafic et des événements. Par exemple, Azure ATP met à jour la liste des ordinateurs connectés pour chaque profil utilisateur.|
-|Portail de gestion d’espace de travail Azure ATP|Gère vos espaces de travail Azure ATP.|
+|Portail de gestion Azure ATP|Gère votre espace de travail Azure ATP.|
 |Portail d’espace de travail Azure ATP|L’espace de travail Azure ATP est utilisé pour configurer Azure ATP et surveiller les activités suspectes détectées par Azure ATP sur votre réseau. L’espace de travail Azure ATP ne dépend pas du capteur Azure ATP et s’exécute même lorsque le service de capteur Azure ATP est arrêté. |
 |Détecteurs|Les détecteurs utilisent des algorithmes d’apprentissage automatique et des règles déterministes pour rechercher les activités suspectes et les comportements anormaux des utilisateurs sur votre réseau.|
-
-Prenez en compte les critères suivants quand vous choisissez le nombre d’espaces de travail Azure ATP à déployer sur votre réseau :
-
--   Un espace de travail Azure ATP peut surveiller une forêt Active Directory individuelle. Si vous avez plusieurs forêts Active Directory, vous avez besoin d’au moins un service cloud Azure ATP par forêt Active Directory.
 
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Capteur Azure ATP et capteur autonome Azure ATP
 
 Le **capteur Azure ATP** et le **capteur autonome Azure ATP** ont les mêmes fonctionnalités de base :
 
--   Capturez et inspectez le trafic réseau des contrôleurs de domaine. Il s’agit du trafic avec mise en miroir des ports pour les capteurs autonomes Azure ATP et du trafic local du contrôleur de domaine dans les capteurs Azure ATP. 
+-   Capturez et inspectez le trafic réseau des contrôleurs de domaine. Il s’agit du trafic local du contrôleur de domaine dans les capteurs Azure ATP et du trafic avec mise en miroir des ports pour les capteurs autonomes Azure ATP. 
 
 -   Recevoir des événements Windows directement à partir des contrôleurs de domaine (pour les capteurs ATP) ou à partir des serveurs SIEM ou Syslog (pour les capteurs autonomes ATP)
 
@@ -124,7 +115,7 @@ Le **capteur Azure ATP** et le **capteur autonome Azure ATP** ont les mêmes fon
 
 -   Transférer les données pertinentes au service cloud Azure ATP
 
--   Surveillez plusieurs contrôleurs de domaine à partir d’un seul capteur autonome Azure ATP, ou surveillez un seul contrôleur de domaine pour un capteur Azure ATP.
+-   Surveillez un seul contrôleur de domaine pour un capteur Azure ATP ou surveillez plusieurs contrôleurs de domaine à partir d’un seul capteur autonome Azure ATP.
 
 Par défaut, Azure ATP prend en charge jusqu’à 100 capteurs. Si vous voulez en installer plus, contactez le support Azure ATP.
 
@@ -141,9 +132,9 @@ Le capteur autonome Azure ATP reçoit le trafic réseau et les événements Wind
 
 ## <a name="azure-atp-sensor-features"></a>Fonctionnalités des capteurs Azure ATP
 
-Les fonctionnalités suivantes fonctionnent différemment selon que vous exécutez un capteur autonome Azure ATP ou un capteur Azure ATP.
+Les fonctionnalités suivantes fonctionnent différemment selon que vous exécutez un capteur Azure ATP ou un capteur autonome Azure ATP.
 
--   Le capteur Azure ATP peut lire les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
+-   Le capteur Azure ATP lit les événements localement, sans devoir acheter et entretenir du matériel supplémentaire ou configurer le transfert d’événements requis avec les capteurs autonomes ATP. Le capteur Azure ATP prend également en charge ETW qui fournit les informations du journal pour plusieurs détections. Les détections ETW incluent : Demande de réplication suspecte et Promotion du contrôleur de domaine suspect, deux attaques DCShadow potentielles, et ne sont pas prises en charge par les capteurs autonomes ATP.  
 
 -   **Candidat synchronisateur de domaine**<br>
 Le candidat synchronisateur de domaine est responsable de la synchronisation proactive de toutes les entités d’un domaine Active Directory spécifique (semblable au mécanisme utilisé par les contrôleurs de domaine eux-mêmes pour la réplication). Un capteur est choisi au hasard, dans la liste des candidats, comme synchronisateur de domaine. <br><br>
@@ -179,7 +170,7 @@ Si Active Directory a besoin de davantage de puissance de calcul, le quota requi
 Pour utiliser Azure ATP, vérifiez que les composants suivants sont configurés.
 
 ### <a name="port-mirroring"></a>Mise en miroir des ports
-Si vous utilisez des capteurs autonomes Azure ATP, vous devez configurer la mise en miroir des ports pour les contrôleurs de domaine à surveiller et définir le capteur autonome Azure ATP comme destination à l’aide de commutateurs physiques ou virtuels. Une autre option consiste à utiliser des TAP réseau. Azure ATP fonctionne si plusieurs contrôleurs de domaine sont surveillés, mais pas tous. Toutefois, la détection est moins efficace.
+Si vous utilisez des capteurs autonomes Azure ATP, la configuration de la mise en miroir de port est requise pour les contrôleurs de domaine sont supervisés. Configurez le capteur autonome Azure ATP comme destination à l’aide des commutateurs physiques ou virtuels. Une autre option consiste à utiliser des TAP réseau. Azure ATP fonctionne si plusieurs contrôleurs de domaine sont surveillés, mais pas tous. Toutefois, la détection est moins efficace.
 
 Même si tout le trafic réseau des contrôleurs de domaine est mis en miroir vers le capteur autonome Azure ATP, seul un faible pourcentage de ce trafic est envoyé (compressé) au service cloud Azure ATP à des fins d’analyse.
 
@@ -187,9 +178,12 @@ Vos contrôleurs de domaine et les capteurs autonomes Azure ATP peuvent être ph
 
 
 ### <a name="events"></a>Événements
-Pour améliorer la détection par Azure ATP des attaques de type Pass-the-Hash, force brute, modification des groupes sensibles, création de services suspects et modifications Honeytoken, Azure ATP a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant le transfert d’événements Windows](configure-event-forwarding.md).
+Pour améliorer la couverture de détection d’Azure ATP des types d’attaques Pass-the-Hash, échecs d’authentification suspecte, Modification des groupes sensibles, Création de services suspects et activité de jeton honeytoken, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757 et 7045. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les paramètres de stratégie d’audit avancés corrects. Si des capteurs autonomes Azure ATP sont déployés, les journaux d’événements peuvent être transférés au capteur autonome de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant les transferts d’événements Windows](configure-event-forwarding.md). 
 
--   Configuration du capteur autonome Azure ATP pour écouter les événements SIEM <br>Configurez votre serveur SIEM de manière à transférer des événements Windows spécifiques vers ATP. Azure ATP prend en charge plusieurs fournisseurs SIEM. Pour plus d’informations, consultez [Configurer le transfert d’événements](configure-event-forwarding.md).
+> [!NOTE]
+> - Le transfert d’événements Windows pour les capteurs autonomes ne prend pas en charge ETW (Suivi d’événements pour Windows). Les détections ETW incluent : Demande de réplication suspecte et Promotion du contrôleur de domaine suspect, deux attaques DCShadow potentielles.  
+
+-   Configuration du capteur autonome Azure ATP pour écouter les événements SIEM <br>Configurez votre serveur SIEM de manière à transférer des événements Windows spécifiques vers ATP. Azure ATP prend en charge plusieurs fournisseurs SIEM. Pour plus d’informations, consultez [Configuration du transfert d’événements Windows](configure-event-forwarding.md).
 
 -   Configuration du transfert d’événements Windows<br>Azure ATP peut aussi obtenir vos événements en configurant vos contrôleurs de domaine pour qu’ils transfèrent les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à votre capteur autonome Azure ATP. Cette méthode est particulièrement utile si vous n’avez pas de serveur SIEM ou si votre serveur SIEM n’est actuellement pas pris en charge par ATP. Pour plus d’informations sur le transfert d’événements Windows dans ATP, consultez [Configuration du transfert d’événements Windows](configure-event-forwarding.md). Cela s’applique uniquement aux capteurs autonomes Azure ATP physiques, et non pas au capteur Azure ATP.
 

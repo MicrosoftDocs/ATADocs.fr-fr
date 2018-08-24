@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ccac90a171c895ee8b4d5336a125ccd7fa66239
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: c889fc070ffaf79a89c072d83edf6cc6f1cd0413
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445075"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734682"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -50,7 +50,7 @@ La technologie Azure ATP détecte des activités suspectes multiples en se focal
 
 -   Reconnaissance, au cours de laquelle les personnes malveillantes vont recueillir des informations sur la façon dont l’environnement est construit, sur les différents assets, et sur les entités qui existent. Elles élaborent généralement leur plan pour les prochaines phases de l’attaque.
 -   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
--   Dominance de domaine (persistance), pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques. 
+-   Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne à l’aide de différents ensembles de points d’entrée, d’informations d’identification et de techniques. 
 
 Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
 Azure ATP recherche trois principaux types d’attaques : les attaques malveillantes, le comportement anormal, et les risques et problèmes de sécurité.
@@ -62,6 +62,8 @@ Les **attaques malveillantes** sont détectées de façon déterministe ainsi qu
 -   Overpass-the-Hash
 -   Faux PAC (MS14-068)
 -   Golden Ticket
+    -   anomalie de temps
+    -   compte inexistant - Nouveau
 -   Réplication malveillante
 -   Énumération des services d’annuaires
 -   Énumération des sessions SMB
@@ -73,6 +75,9 @@ Les **attaques malveillantes** sont détectées de façon déterministe ainsi qu
 -   Passage à une version antérieure du chiffrement
 -   Exécution à distance
 -   Création de service malveillant
+-   Promotion du contrôleur de domaine suspect (attaque DCShadow potentielle) - Nouveau
+-   Demande de réplication suspecte (attaque DCShadow potentielle) - Nouveau
+-   VPN 
 
 
 Azure ATP détecte ces activités suspectes et expose les informations dans le portail de l’espace de travail Azure ATP, avec une vue claire précisant qui, quoi, quand et comment. Comme vous pouvez le voir, en surveillant ce tableau de bord simple et convivial, vous êtes averti qu’Azure ATP soupçonne qu’une attaque pass-the-ticket a été tentée sur les ordinateurs Client 1 et Client 2 de votre réseau.
