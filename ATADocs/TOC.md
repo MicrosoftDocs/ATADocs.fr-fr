@@ -60,7 +60,7 @@
 # Dépannage
 ## [Utilisation des journaux d’audit](troubleshoot-audit.md)
 ## [Résolution des problèmes connus](troubleshooting-ata-known-errors.md)
-## [Résoudre les problèmes à l’aide des journaux](troubleshooting-ata-using-logs.md)
+## [Résolution des problèmes à l’aide des journaux](troubleshooting-ata-using-logs.md)
 ## [Résolution des problèmes à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md)
 ## [Résolution des problèmes à l’aide de la base de données](troubleshooting-ata-using-ata-database.md)
 ## [Résolution des problèmes de démarrage du service](troubleshooting-service-startup.md)
