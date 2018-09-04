@@ -45,7 +45,9 @@
 ## [Examiner les chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
 ## [Examiner les entités](investigate-entity.md)
 ## [Présentation des profils d’entité](entity-profiles.md)
-# Résolution des problèmes
+# Dépannage
+## [Vérification de la stratégie d’audit avancée](atp-advanced-audit-policy.md)
 ## [Résolution des problèmes connus](troubleshooting-atp-known-issues.md)
+## [Résolution des problèmes à l’aide des journaux](troubleshooting-atp-using-logs.md)
 ## [Support et informations](atp-support.md)
 ## [Guide de préparation à Azure ATP](atp-resources.md)
