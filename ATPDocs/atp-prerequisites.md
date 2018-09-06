@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: f1c9e4bc90289e7c7bfb90710ecbc83beb368ba8
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734512"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038981"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -125,7 +125,7 @@ Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moi
 
     > [!IMPORTANT]
     > -   Configurez la mise en miroir des ports de la carte de capture comme la destination du trafic réseau des contrôleurs de domaine. Pour plus d’informations, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md). En règle générale, vous devez collaborer avec l’équipe de virtualisation ou de mise en réseau pour configurer la mise en miroir des ports.
-    > -   Configurez une adresse IP statique non routable pour votre environnement, sans capteur par défaut ni adresse de serveur DNS. Par exemple : 1.1.1.1/32. Cela permet de garantir que la carte réseau de capture peut capturer le volume maximum de trafic et que la carte réseau de gestion est utilisée pour envoyer et recevoir le trafic réseau demandé.
+    > -   Configurez une adresse IP statique non routable (avec masque /32) pour votre environnement, sans passerelle de capteur par défaut ni adresse de serveur DNS, par exemple, 10.10.0.10/32. Cela permet de garantir que la carte réseau de capture peut capturer le volume maximum de trafic et que la carte réseau de gestion est utilisée pour envoyer et recevoir le trafic réseau demandé.
 
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences du capteur autonome Azure ATP :

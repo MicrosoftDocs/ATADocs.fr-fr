@@ -2,10 +2,10 @@
 title: Architecture d’Advanced Threat Analytics | Microsoft Docs
 description: Décrit l’architecture de Microsoft Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: f2ae9948f6865480797b4a2a8b761c12553728b9
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585050"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039017"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -179,7 +179,7 @@ Pour améliorer la détection ATA de l’attaque Pass-the-Hash, de l’attaque p
 
 -   Configuration de la passerelle ATA pour écouter les événements SIEM <br>Configurez votre serveur SIEM de manière à transférer des événements Windows spécifiques vers ATA. ATA prend en charge plusieurs fournisseurs SIEM. Pour plus d’informations, consultez [Configurer la collecte d’événements](configure-event-collection.md).
 
--   Configuration du transfert d’événements Windows<br>ATA peut aussi obtenir vos événements en configurant vos contrôleurs de domaine pour qu’ils transfèrent les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 à votre passerelle ATA. Cette méthode est particulièrement utile si vous n’avez pas de serveur SIEM ou si votre serveur SIEM n’est pas actuellement pris en charge par ATA. Pour plus d’informations sur le transfert d’événements Windows dans ATA, consultez [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding). Cela s’applique uniquement aux passerelles ATA physiques et non à la passerelle légère ATA.
+-   Configuration du transfert d’événements Windows<br>ATA peut aussi obtenir vos événements en configurant vos contrôleurs de domaine pour qu’ils transfèrent les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 à votre passerelle ATA. Cette méthode est particulièrement utile si vous n’avez pas de serveur SIEM ou si votre serveur SIEM n’est pas actuellement pris en charge par ATA. Pour effectuer la configuration du transfert d’événements Windows dans ATA, voir [Configurer le transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding). Cela s’applique uniquement aux passerelles ATA physiques et non à la passerelle légère ATA.
 
 ## <a name="related-videos"></a>Vidéos connexes
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

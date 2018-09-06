@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734836"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709774"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -200,7 +200,7 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
    2.   Le capteur Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, fermez l’alerte.
    3.   Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
 
-- **Compte inexistant**
+- **Compte inexistant – Nouveau** 
    1.   Posez les questions suivantes :
          - L’utilisateur est-il un utilisateur de domaine connu et valide ? Si c’est le cas, fermez l’alerte, car il s’agit d’un faux positif.
          - L’utilisateur a-t-il été récemment ajouté ? Si c’est le cas, fermez l’alerte, car le changement n’a peut-être pas été encore été synchronisé.
@@ -546,7 +546,8 @@ Un service suspect a été créé sur un contrôleur de domaine dans votre organ
 
 - Implémentez un accès doté de moins de privilèges sur les ordinateurs du domaine pour autoriser uniquement des utilisateurs spécifiques à créer de nouveaux services.
 
-## Connexion VPN suspecte <a name="suspicious-vpn-detection"></a>
+
+## Connexion VPN suspecte – Nouveau <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
