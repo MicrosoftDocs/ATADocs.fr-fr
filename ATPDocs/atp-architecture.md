@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 8/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 6b94282411cd2918e475acb08600265455d9e0f3
+ms.sourcegitcommit: 6f1406f28c4c2af6a36bc691ebaf4e819adc6b4b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039077"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675132"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -191,5 +191,4 @@ Pour améliorer la couverture de détection d’Azure ATP des types d’attaques
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
-
-- - [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)

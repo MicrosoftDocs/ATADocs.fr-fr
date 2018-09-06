@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585086"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353094"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -79,11 +79,8 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     2.  Pour **Journal de destination**, vérifiez que **Événements transférés** est sélectionné. Pour qu’ATA lise les événements, le journal de destination doit être **Événements transférés**. 
     3.  Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
         1.  Cliquez sur **Ajouter un ordinateur de domaine**.
-        2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
- 
-    ![Image de l’Observateur d’événements](media/wef3 event viewer.png)
- 
- 
+        2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**.  
+          ![Image de l’Observateur d’événements](media/wef3 event viewer.png)  
         3.  Cliquez sur **OK**.
      4. Cliquez sur **Sélectionner des événements**.
 
