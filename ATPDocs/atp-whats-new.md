@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a72c4dbde37a415797c467afac2c7c2636bfec
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 91e20af8e0bfedd626ee4625b0a5ec5647a41f97
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039036"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743397"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
 
+## <a name="azure-atp-release-247"></a>Azure ATP version 2.47
+Publication : 2 septembre 2018
 
+- **Vérification des stratégies d’audit avancées d’Azure ATP**
+ 
+Azure - Protection avancée contre les menaces (Azure ATP) vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
+
+**Cette nouvelle vérification vous permet de :**
+  -  Identifier les événements manquants dans vos journaux des événements Windows, qui sont actuellement exclus de votre couverture Azure ATP.
+  -  Vérifiez les paramètres idéaux et apporter des modifications sur la base des recommandations fournies quant aux alertes d’intégrité.
+  -  Une même alerte d’intégrité agrégée est émise pour tous vos contrôleurs de domaine, avec des suggestions de correction (le cas échéant, si nécessaire).
+
+Examinez comment [configurer les stratégies d’audit avancées](atp-advanced-audit-policy.md) pour vérifier que votre système est configuré correctement. 
+- Cette version comprend aussi des correctifs et des améliorations visant plusieurs problèmes.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP version 2.46
 

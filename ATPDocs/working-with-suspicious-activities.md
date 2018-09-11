@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259206"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469666"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -53,7 +53,7 @@ Chaque activité suspecte comporte les informations suivantes :
 
 ## Détections en préversion<a name="preview-detections"></a>
 
-L’équipe de recherche Azure ATP travaille sans relâche à l’implémentation de nouvelles détections pour les attaques récemment découvertes. Dans la mesure où Azure ATP est un service cloud, il est possible de publier ces nouvelles détections rapidement pour permettre aux clients Azure ATP d’en bénéficier dès que possible.
+L’équipe de recherche Azure ATP travaille sans relâche à l’implémentation de nouvelles détections pour les attaques récemment découvertes. Dans la mesure où Azure ATP est un service cloud, de nouvelles détections sont publiées rapidement pour permettre aux clients Azure ATP d’en bénéficier dès que possible.
 
 Ces détections sont marquées d’un badge de préversion pour vous permettre d’identifier les nouvelles détections et les nouveautés du produit. Si vous désactivez les détections en préversion, vous ne les verrez pas dans la console Azure ATP (ni dans la chronologie ni dans les profils d’entité). Les nouvelles alertes ne seront pas non plus ouvertes.
 

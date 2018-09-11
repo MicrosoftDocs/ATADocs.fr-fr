@@ -1,11 +1,11 @@
 ---
 title: Installer Azure - Protection avancée contre les menaces – Étape 1 | Microsoft Docs
-description: La première étape pour installer Azure ATP implique la création d’un espace de travail pour votre déploiement Azure ATP.
+description: La première étape pour installer Azure ATP implique la création de l’instance pour votre déploiement Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 9ba476c579de3c468ce9c8ca09e8b8bab4fa9e1d
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799074"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743312"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Création d’un espace de travail dans le portail de gestion d’espace de travail Azure ATP – Étape 1
@@ -28,30 +28,30 @@ ms.locfileid: "37799074"
 >[!div class="step-by-step"]
 [Étape 2 »](install-atp-step2.md)
 
-Cette procédure d’installation fournit des instructions pour créer et gérer un espace de travail dans le portail de gestion d’espace de travail Azure ATP. Pour obtenir des informations sur l’architecture Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
+Cette procédure d’installation fournit des instructions pour créer et gérer votre instance Azure ATP. Pour obtenir des informations sur l’architecture Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
 
-Dans Azure ATP, vous avez la possibilité de gérer et de surveiller plusieurs espaces de travail. Ceci est particulièrement utile si vous souhaitez créer un espace de travail de démonstration et un espace de travail de test dans lequel vous pouvez démontrer la preuve de concept Azure ATP avant de le déployer dans toute l’organisation. Cela est également nécessaire pour prendre en charge des déploiements avec plusieurs forêts. Un espace de travail individuel peut uniquement surveiller plusieurs domaines d’une même forêt. 
+Dans Azure ATP, vous disposez d’un seul espace de travail ou d’une seule instance pour gérer plusieurs forêts dans un volet unique. 
 
 > [!NOTE]
 > Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Caraïbes et en Asie.
 
-## <a name="step-1-enter-the-workspace-management-portal"></a>Étape 1. Accéder au portail de gestion d’espace de travail
+## <a name="step-1-enter-the-management-portal"></a>Étape 1. Accéder au portail de gestion
 
 Après avoir vérifié que votre réseau est conforme aux exigences du capteur, vous pouvez passer à la création de l’espace de travail Azure ATP.
 
 > [!NOTE]
->Pour accéder au portail de gestion d’espace de travail, vous devez être un administrateur général ou un administrateur de sécurité sur ce client.
+>Pour accéder au portail de gestion d’espace de travail, vous devez être administrateur général ou administrateur de sécurité sur ce locataire.
 
 
-1.  Accédez au [portail d’espace de travail Azure ATP](https://portal.atp.azure.com).
+1.  Accédez au [portail Azure ATP](https://portal.atp.azure.com).
 
 2.  Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
 
-## <a name="step-2-create-a-workspace"></a>Étape 2. Créer un espace de travail
+## <a name="step-2-create-your-workspace"></a>Étape 2. Créer votre espace de travail
 
 1. Cliquez sur **Créer un espace de travail**.
 
-2. Dans la boîte de dialogue **Créer un espace de travail**, nommez votre espace de travail, décidez s’il s’agit de votre espace de travail principal ou non, puis sélectionnez une **géolocalisation** pour votre centre de données. Un seul espace de travail peut être défini comme principal. La définition d’un espace de travail comme principal affecte les intégrations - vous pouvez intégrer Azure ATP et Windows Defender ATP uniquement pour votre espace de travail principal. Vous pouvez changer ultérieurement l’espace de travail principal, mais pour cela, vous devez supprimer toutes les intégrations déjà définies pour l’espace de travail principal actuel.
+2. Dans la boîte de dialogue **Créer un espace de travail**, nommez votre espace de travail, puis sélectionnez une **géolocalisation** pour votre centre de données. Un seul espace de travail peut être défini comme principal. La définition d’un espace de travail comme principal affecte les intégrations - vous pouvez intégrer Azure ATP et Windows Defender ATP uniquement pour votre espace de travail principal. Vous pouvez changer ultérieurement l’espace de travail principal, mais pour cela, vous devez supprimer toutes les intégrations déjà définies pour l’espace de travail principal actuel.
  > [!NOTE]
  > Après avoir sélectionné une géolocalisation, vous ne pouvez plus la modifier.
     ![Espace de travail Azure ATP](media/create-workspace.png)
