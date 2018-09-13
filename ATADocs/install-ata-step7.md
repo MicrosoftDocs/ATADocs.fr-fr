@@ -5,19 +5,20 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.date: 6/14/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7d53222c4eb98fba554b59f14d8728a88c9d95
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f15f897539f2f41941675960e425f669cba2c878
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126023"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -42,7 +43,7 @@ Pour configurer ceci, procédez comme suit :
 
     ![Paramètres de configuration ATA](media/ATA-config-icon.png)
 
-2.  Sous **Détection**, cliquez sur **Général**.
+2.  Sous **Détection**, cliquez sur **Étiquettes d’entité**.
 
 2. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken. Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau.
 

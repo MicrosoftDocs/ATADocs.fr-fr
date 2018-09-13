@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 11f9d5bf69ffda0843a94c7a2bb31869dc980dce
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: b2f83da3192770ddde05b04bed46a558a4491290
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445575"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125887"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -30,7 +30,7 @@ ms.locfileid: "29445575"
 [« Étape 1](install-atp-step1.md)
 [Étape 3 »](install-atp-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour vous connecter à votre forêt Active Directory
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour vous connecter à votre forêt Active Directory
 
 La première fois que vous ouvrez le portail d’espace de travail Azure ATP, l’écran suivant apparaît :
 
