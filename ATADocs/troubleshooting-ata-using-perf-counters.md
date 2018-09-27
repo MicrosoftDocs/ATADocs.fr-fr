@@ -2,10 +2,10 @@
 title: Résolution des problèmes d’Advanced Threat Analytics avec les compteurs de performances | Microsoft Docs
 description: Explique comment utiliser les compteurs de performances pour résoudre les problèmes liés à ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c7a0ded6092740f92c12fbd7c57100293bf735c2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 455e66b286916f125fcc34d61b167b86ccc59740
+ms.sourcegitcommit: caaa864708ec631ca4903f6270ad0012951ceef1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134124"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114457"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -108,7 +108,7 @@ Voici la liste des principaux compteurs du centre ATA :
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Nombre de lots d’entités mis en file d’attente par le centre ATA.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 10 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener.  Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
 |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|Nombre d’activités réseau en attente de traitement.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 50 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
-|Microsoft ATA Center\EntityProfiler Network Activity Block Size|Nombre d’activités réseau en attente de profilage.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 10 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
+|Microsoft ATA Center\EntityProfiler Network Activity Block Size|Nombre d’activités réseau en attente de profilage.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 100 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
 |Centre Microsoft ATA\Base de données &#42; Taille de bloc|Nombre d’activités réseau d’un type spécifique en attente d’écriture dans la base de données.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 50 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
 
 
