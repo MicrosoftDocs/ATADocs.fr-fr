@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e37954252708da31347b0af6479fbafbfd9433a7
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133733"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454154"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
->[!div class="step-by-step"]
-[Étape 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [Étape 2 »](install-ata-step2.md)
 
 Cette procédure d’installation fournit des instructions pour effectuer une nouvelle installation d’ATA 1.8. Pour plus d’informations sur la mise à jour d’un déploiement d’ATA existant à partir d’une version antérieure, consultez le [guide de migration d’ATA pour la version 1.9](ata-update-1.9-migration-guide.md).
 
@@ -98,9 +98,9 @@ Après avoir installé le Centre ATA, vous devez exclure le répertoire de base 
 
 
 
->[!div class="step-by-step"]
-[« Préinstallation](configure-port-mirroring.md)
-[Étape 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [« Préinstallation](configure-port-mirroring.md)
+> [Étape 2 »](install-ata-step2.md)
 
 ## <a name="related-videos"></a>Vidéos connexes
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

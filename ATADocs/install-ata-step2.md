@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4b2e7ae1dad939db3a2394876acfe9ed4042924b
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 431368a1ceee57870a3eadf176b5899b69784c98
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133257"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454120"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133257"
 
 # <a name="install-ata---step-2"></a>Installer ATA - Étape 2
 
->[!div class="step-by-step"]
-[« Étape 1](install-ata-step1.md)
-[Étape 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Étape 1](install-ata-step1.md)
+> [Étape 3 »](install-ata-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour se connecter à votre forêt Active Directory
 
@@ -51,9 +51,9 @@ La première fois que vous ouvrez la console ATA, l’écran suivant apparaît 
 3. Dans la console, cliquez sur **Télécharger l’installation de la passerelle et installer la première passerelle** pour continuer.
 
 
->[!div class="step-by-step"]
-[« Étape 1](install-ata-step1.md)
-[Étape 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Étape 1](install-ata-step1.md)
+> [Étape 3 »](install-ata-step3.md)
 
 
 ## <a name="see-also"></a>Voir aussi

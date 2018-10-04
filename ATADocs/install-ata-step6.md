@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1a8df6ebb4b2ea6f16f1087b4b615922b4f122ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a347d8666ee8c2628592b8d4c866defd85d67ff8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133511"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453991"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133511"
 
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
->[!div class="step-by-step"]
-[« Étape 5](install-ata-step5.md)
-[Étape 7 »](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [« Étape 5](install-ata-step5.md)
+> [Étape 7 »](vpn-integration-install-step.md)
 
 ## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collecte d’événements
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
@@ -187,9 +187,9 @@ Assurez-vous que \t sépare les paires clé/valeur.
 
 
 
->[!div class="step-by-step"]
-[« Étape 5](install-ata-step5.md)
-[Étape 7 »](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [« Étape 5](install-ata-step5.md)
+> [Étape 7 »](vpn-integration-install-step.md)
 
 
 

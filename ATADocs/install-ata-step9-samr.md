@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df128b4f8258a7d937934795db92cf8fb89fb214
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7fae5fa320aab6a2ad6db4695b0087eab72344e8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133395"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453950"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
->[!div class="step-by-step"]
-[« Étape 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Étape 8](install-ata-step7.md)
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9. Configurer les autorisations requises SAM-R
 
@@ -52,8 +52,8 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
  Pour plus d’informations sur SAM-R et la stratégie de groupe, consultez [Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[« Étape 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Étape 8](install-ata-step7.md)
 
 ## <a name="see-also"></a>Voir aussi
 - [Guide de déploiement ATA POC](http://aka.ms/atapoc)

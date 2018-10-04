@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eacc3c2449e6fd7771c43b97b8ed08276ab130d2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b45012f82a2457d09a616c2bd9e7e8866d0f5cdc
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133533"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453933"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133533"
 
 # <a name="install-ata---step-8"></a>Installer ATA - Étape 8
 
->[!div class="step-by-step"]
-[« Étape 7](vpn-integration-install-step.md)
-[Étape 9 »](install-ata-step9-samr.md)
+> [!div class="step-by-step"]
+> [« Étape 7](vpn-integration-install-step.md)
+> [Étape 9 »](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Étape 8. Configurer des exclusions d’adresses IP et un utilisateur Honeytoken
 ATA permet d’exclure des adresses IP ou utilisateurs spécifiques d’un certain nombre de détections. 
@@ -65,9 +65,9 @@ ATA démarre immédiatement l’analyse pour rechercher les activités suspectes
 Pour vérifier qu’ATA est opérationnel et qu’il détecte les violations dans votre réseau, vous pouvez consulter le [Scénario de simulation d’attaque Advanced Threat Analytics](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
 
->[!div class="step-by-step"]
-[« Étape 7](vpn-integration-install-step.md)
-[Étape 9 »](install-ata-step9-samr.md)
+> [!div class="step-by-step"]
+> [« Étape 7](vpn-integration-install-step.md)
+> [Étape 9 »](install-ata-step9-samr.md)
 
 
 ## <a name="related-videos"></a>Vidéos connexes
