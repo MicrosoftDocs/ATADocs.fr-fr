@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/29/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: be809f422e797f08655b7841fc7f9ecb7423a0a6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: be1a699ffd1ab0925df43910aec7f8166d4e423d
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133920"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315844"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -42,7 +42,7 @@ Si vous avez des questions ou des commentaires à ce sujet, contactez l'équipe 
 
 **Description**
 
-Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Leur but est d’accéder à davantage de ressources et d’obtenir un accès persistant. La détection s’appuie sur le profilage des activités de modification des utilisateurs d’un groupe et déclenche une alerte quand un ajout anormal à un groupe sensible est observé. ATA effectue le profilage en continu. La période minimale avant le déclenchement d’une alerte est d’un mois pour chaque contrôleur de domaine.
+Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Leur but est d’accéder à davantage de ressources et d’obtenir un accès persistant. Les détections s’appuient sur le profilage des activités de modification de groupes d’utilisateurs et déclenchent une alerte quand un ajout anormal à un groupe sensible est observé. ATA effectue le profilage en continu. La période minimale avant le déclenchement d’une alerte est d’un mois pour chaque contrôleur de domaine.
 
 Pour avoir une définition des groupes sensibles dans ATA, consultez [Utilisation de la console ATA](working-with-ata-console.md#sensitive-groups).
 
@@ -64,15 +64,16 @@ Installez [Privileged Access Management pour les services de domaine Active Dire
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Relation de confiance rompue entre les ordinateurs et le domaine
 
-> ![REMARQUE] Cette activité suspecte a été dépréciée et apparaît uniquement dans les versions d’ATA antérieures à la version 1.9.
+> [!NOTE]
+> La relation de confiance rompue entre les ordinateurs et l’alerte du domaine a été dépréciée et apparaît uniquement dans les versions ATA antérieures à 1.9.
 
 **Description**
 
-Une relation de confiance rompue signifie que les exigences de sécurité des services de domaine Active Directory ne sont pas respectées pour les ordinateurs concernés. Cela est souvent considéré comme un échec de référence en matière de sécurité et de conformité, et une cible facile pour les attaquants. Cette détection déclenche une alerte si plus de cinq échecs d’authentification Kerberos ont été observés pour le même compte d’ordinateur sur une période de 24 heures.
+Une relation de confiance rompue signifie que les exigences de sécurité des services de domaine Active Directory ne sont pas respectées pour ces ordinateurs. Considéré comme une défaillance de sécurité et de conformité élémentaire, c’est une cible facile pour les attaquants. Cette détection déclenche une alerte si plus de cinq échecs d’authentification Kerberos ont été observés pour le même compte d’ordinateur dans un délai de 24 heures.
 
 **Examen**
 
-L’ordinateur en question permet-il aux utilisateurs du domaine de se connecter ? 
+L’ordinateur en cours d’examen permet-il aux utilisateurs du domaine de se connecter ? 
 - Si c’est le cas, vous pouvez ignorer cet ordinateur dans la procédure de correction.
 
 **Correction**
@@ -107,7 +108,7 @@ Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device
 
 **Description**
 
-Le passage à une version antérieure du chiffrement est une méthode visant à affaiblir Kerberos en abaissant le niveau de chiffrement de différents champs du protocole qui sont généralement chiffrés à l’aide du niveau de chiffrement le plus élevé. Un champ au chiffrement affaibli peut être plus vulnérable à des attaques de force brute en mode hors connexion. Plusieurs méthodes d’attaque exploitent les codes faibles de chiffrement Kerberos. Dans cette détection, ATA apprend les types de chiffrement Kerberos utilisés par les ordinateurs et les utilisateurs, et déclenche des alertes quand un code de chiffrement plus faible utilisé : (1) est inhabituel pour l’ordinateur source et/ou l’utilisateur ; et (2) correspond à une technique d’attaque connue.
+Le passage à une version antérieure du chiffrement est une méthode visant à affaiblir Kerberos en abaissant le niveau de chiffrement de différents champs du protocole qui sont normalement chiffrés à l’aide du niveau de chiffrement le plus élevé. Un champ au chiffrement affaibli peut être plus vulnérable à des attaques de force brute en mode hors connexion. Plusieurs méthodes d’attaque exploitent les codes faibles de chiffrement Kerberos. Dans cette détection, ATA apprend les types de chiffrement Kerberos utilisés par les ordinateurs et les utilisateurs, et déclenche des alertes quand un code de chiffrement plus faible utilisé : (1) est inhabituel pour l’ordinateur source et/ou l’utilisateur ; et (2) correspond à une technique d’attaque connue.
 
 Il existe trois types de détection :
 
@@ -121,7 +122,7 @@ Il existe trois types de détection :
 
 Lisez d’abord la description de l’alerte pour déterminer de quel type de détection il s’agit entre les trois types de détection ci-dessus. Pour plus d’informations, téléchargez la feuille de calcul Excel.
 1.  Skeleton Key : Déterminez si Skeleton Key a affecté vos contrôleurs de domaine à l’aide de [l’analyseur écrit par l’équipe ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Si l’analyseur détecte la présence d’un logiciel malveillant sur un ou plusieurs de vos contrôleurs de domaine, l’alerte est un vrai positif.
-2.  Golden Ticket : Dans la feuille de calcul Excel, accédez à l’onglet **Activité réseau**. Vous voyez que le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement plus poussé.
+2.  Golden Ticket : Dans la feuille de calcul Excel, accédez à l’onglet **Activité réseau**. Vous voyez que le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** liste des méthodes de chiffrement plus poussé.
   a.    Vérifiez l’ordinateur source et le compte, ou s’il en existe plusieurs, vérifiez qu’ils ont bien quelque chose en commun (par exemple, tout le personnel marketing utilise une application spécifique susceptible d’être à l’origine du déclenchement de l’alerte). Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité que vous pouvez **supprimer**.
   b.    Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut `msDS-SupportedEncryptionTypes` du compte de service de la ressource.
 3.  Overpass-the-Hash : Dans la feuille de calcul Excel, accédez à l’onglet **Activité réseau**. Vous voyez que le champ qui a changé de version concerne le **type de chiffrement d’horodateur chiffré** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement plus poussé.
@@ -133,9 +134,9 @@ Lisez d’abord la description de l’alerte pour déterminer de quel type de d�
 1.  Skeleton Key : supprimez le logiciel malveillant. Pour plus d’informations, voir [Analyse des programmes malveillants Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket : suivez les instructions pour les activités suspectes [Golden Ticket](#golden-ticket).   
-    De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+    De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Overpass-the-Hash : si le compte concerné n’est pas un compte sensible, réinitialisez son mot de passe. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients). Utilisez également [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+3.  Overpass-the-Hash : si le compte concerné n’est pas un compte sensible, réinitialisez son mot de passe. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients). Utilisez également [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 ## <a name="honeytoken-activity"></a>Activité Honeytoken
@@ -169,13 +170,13 @@ Pass-the-Hash est une technique de mouvement latéral par laquelle les attaquant
 
 **Examen**
 
-Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement utilisé par l’utilisateur ciblé ? Si c’est le cas, il s’agit d’un faux positif. Si ce n’est pas le cas, il s’agit probablement d’un vrai positif.
+Vérifier si le hachage est utilisé sur un ordinateur qui appartient à l’utilisateur ciblé ou utilisé régulièrement ? Si oui, l’alerte est un faux positif, si non, c’est probablement un vrai positif.
 
 **Correction**
 
-1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. 
+1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. La réinitialisation du mot de passe empêche les attaquants de créer de nouveaux tickets Kerberos à partir du hachage de mot de passe. Les tickets existants restent utilisables jusqu’à leur expiration. 
 
-2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+2. Si le compte impliqué est sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos de domaine, donc prévoyez son impact avant de procéder à cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Comme il s’agit typiquement d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Usurpation d’identité par attaque Pass-the-Ticket
 
@@ -185,21 +186,21 @@ Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaqua
 
 **Examen**
 
-1. Cliquez sur le bouton **Télécharger les détails** pour afficher la liste complète des adresses IP impliquées. L’adresse IP de l’un ou des deux ordinateurs appartient-elle à un sous-réseau alloué à partir d’un pool DHCP de taille insuffisante, par exemple, VPN ou WiFi ? L’adresse IP est-elle partagée ? Par exemple, par un appareil NAT ? Si vous répondez par l’affirmative à l’une de ces questions, il s’agit d’un faux positif.
+1. Cliquez sur le bouton **Télécharger les détails** pour afficher la liste complète des adresses IP impliquées. L’adresse IP de l’un ou des deux ordinateurs fait-elle partie d’un sous-réseau alloué à partir d’un pool DHCP de taille insuffisante, par exemple, VPN ou WiFi ? L’adresse IP est-elle partagée ? Par exemple, par un appareil NAT ? Si vous répondez par l’affirmative à l’une de ces questions, l’alerte est un faux positif.
 
 2. Y a-t-il une application personnalisée qui transfère les tickets pour le compte d’utilisateurs ? Si c’est le cas, il s’agit d’un vrai positif.
 
 **Correction**
 
-1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration.  
+1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. La réinitialisation du mot de passe empêche les attaquants de créer de nouveaux tickets Kerberos à partir du hachage de mot de passe. Les tickets existants restent utilisables jusqu’à leur expiration.  
 
-2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Golden Ticket Kerberos<a name="golden-ticket"></a>
 
 **Description**
 
-Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le [compte KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ils utilisent ensuite ce compte KRBTGT pour créer un ticket TGT (Ticket Granting Ticket) Kerberos qui fournit une autorisation d’accès à toutes les ressources du réseau, et définir l’heure d’expiration du ticket à la valeur de leur choix. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir un accès persistant dans le réseau.
+Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre votre [compte KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Les attaquants peuvent utiliser le compte KRBTGT pour créer un ticket TGT Kerberos qui leur fournit une autorisation sur n’importe quelle ressource. L’expiration du ticket peut être définie à tout moment. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir et de garder un accès persistant sur votre réseau.
 
 Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée définie dans la stratégie de sécurité [Durée de vie maximale du ticket utilisateur](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
 
@@ -214,7 +215,7 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
 **Correction**
 
 Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération.  
-De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 ## <a name="malicious-data-protection-private-information-request"></a>Demande d’information privée de protection contre les données malveillantes
@@ -230,11 +231,11 @@ Cette détection déclenche une alerte quand DPAPI est utilisé pour récupérer
 
 2. Si c’est le cas et si ce comportement est normal, **fermez et excluez** l’activité suspecte.
 
-3. Si c’est le cas, mais que ce comportement n’est pas normal, **fermez** l’activité suspecte.
+3. Si c’est le cas, mais que ce comportement n’est pas normal, **fermez l’activité suspecte.
 
 **Correction**
 
-Pour pouvoir utiliser DPAPI, un attaquant doit avoir les droits d’administrateur de domaine. Suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+Pour pouvoir utiliser DPAPI, un attaquant doit avoir les droits d’administrateur de domaine. Suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Réplication malveillante de services d’annuaire
 
@@ -267,14 +268,14 @@ Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/
 
 **Description**
 
-Dans certains scénarios, les attaquants effectuent une attaque par déni de service (DoS) au lieu de simplement voler des informations. La suppression d’un grand nombre de comptes est une technique d’attaque DoS.
+Dans certains scénarios, les attaquants effectuent des attaque par déni de service (DoS) au lieu de seulement voler des informations. La suppression d’un grand nombre de comptes est une méthode de tentative d’une attaque DoS. 
 
 Dans cette détection, une alerte est déclenchée quand plus de 5 % de l’ensemble des comptes sont supprimés. La détection nécessite un accès en lecture sur le conteneur d’objets supprimés.  
 Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur d’objets supprimés, consultez la section **Changing permissions on a deleted object container** (Modifier les autorisations sur un conteneur d’objets supprimés) dans [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Afficher ou définir des autorisations sur un objet répertoire).
 
 **Examen**
 
-Passez en revue la liste des comptes supprimés et déterminez si un modèle ou un motif particulier justifie cette suppression massive.
+Passez en revue la liste des comptes supprimés et déterminez si un modèle ou un motif particulier justifie cette suppression à grande échelle.
 
 **Correction**
 
@@ -284,7 +285,7 @@ Supprimez les autorisations des utilisateurs qui peuvent supprimer des comptes d
 
 **Description**
 
-Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants d’obtenir des privilèges supplémentaires par le biais du certificat PAC (Privileged Attribute Certificate), un champ dans le ticket Kerberos qui contient les données d’autorisation de l’utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe).
+Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants de manipuler le certificat PAC (Privileged Attribute Certificate). PAC est un champ du ticket Kerberos qui contient des données d’autorisation utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe) et accorde des privilèges supplémentaires aux attaquants.
 
 **Examen**
 
@@ -292,9 +293,9 @@ Des vulnérabilités connues dans les versions antérieures de Windows Server pe
 
 2. Le correctif MS14-068 (contrôleur de domaine) ou MS11-013 (serveur) a-t-il été installé sur l’ordinateur de destination (sous la colonne **ACCESSED**) ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif).
 
-3. Sinon, l’ordinateur source s’exécute (sous la colonne **FROM**) exécute-t-il un système d’exploitation ou une application connu pour modifier le certificat PAC ? Si c’est le cas, **supprimez** l’activité suspecte (c’est un vrai positif sans gravité).
+3. Si l’ordinateur de destination n’est pas corrigé, l’ordinateur source s’exécute (sous la colonne **FROM**) exécute-t-il un système d’exploitation ou une application connu pour modifier le certificat PAC ? Si c’est le cas, **supprimez** l’activité suspecte (c’est un vrai positif sans gravité).
 
-4. Si vous avez répondu non aux deux questions ci-dessus, considérez l’alerte comme une attaque malveillante.
+4. Si la réponse à ces deux questions est non, considérez que cette activité est malveillante.
 
 **Correction**
 
@@ -361,7 +362,7 @@ Dans cette détection, aucune alerte n’est déclenchée durant le premier mois
 Utilisez [l’outil SAMRi10](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) pour mieux protéger votre environnement contre cette technique d’attaque.
 Si l’outil n’est pas applicable à votre contrôleur de domaine :
 1. L’ordinateur exécute-t-il un outil d’analyse des vulnérabilités ?  
-2. Vérifiez si les utilisateurs et groupes spécifiques interrogés dans l’attaque sont des comptes avec privilèges ou sensibles (par ex., PDG, directeur financier, gestion de l’informatique, etc.).  Si c’est le cas, examinez aussi les autres activités sur le point de terminaison et surveillez les ordinateurs auxquels les comptes interrogés sont connectés, car ils sont probablement la cible d’un mouvement latéral.
+2. Vérifiez si les utilisateurs et groupes spécifiques interrogés dans l’attaque sont des comptes avec privilèges ou sensibles (par ex., PDG, directeur financier, direction informatique, etc.).  Si c’est le cas, examinez aussi les autres activités sur le point de terminaison et surveillez les ordinateurs auxquels les comptes interrogés sont connectés, car ils sont probablement la cible d’un mouvement latéral.
 
 ## <a name="reconnaissance-using-dns"></a>Reconnaissance à l’aide de DNS
 
@@ -390,11 +391,11 @@ La modification des transferts de zone est l’une des tâches de la liste de co
 
 L’énumération SMB (Server Message Block) permet aux attaquants d’obtenir des informations sur les emplacements de connexion récents des utilisateurs. Une fois qu’ils connaissent ces informations, les attaquants peuvent se déplacer de façon latérale dans le réseau pour accéder à un compte sensible spécifique.
 
-Dans cette détection, une alerte est déclenchée quand une énumération de sessions SMB est effectuée sur un contrôleur de domaine, ce qui ne doit pas se produire normalement.
+Dans cette détection, une alerte est déclenchée quand une énumération de sessions SMB est effectuée sur un contrôleur de domaine.
 
 **Examen**
 
-1. Cliquez sur l’alerte pour accéder à la page de détails correspondante. Déterminez quels comptes ont effectué l’opération et quels comptes ont été exposés, le cas échéant.
+1. Cliquez sur l’alerte pour accéder à la page de détails correspondante. Déterminez le ou les comptes qui ont effectué l’opération et ceux qui ont été exposés, le cas échéant.
 
  - L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **fermez et excluez** l’activité suspecte.
 
@@ -402,13 +403,13 @@ Dans cette détection, une alerte est déclenchée quand une énumération de se
 
 3. Si c’est le cas et que l’alerte a été mise à jour, **supprimez** l’activité suspecte.  
 
-4. Si c’est le cas, mais que cela ne devrait plus se produire, **fermez** l’activité suspecte.
+4. Si c’est le cas et qu’elle ne devrait pas être mise à jour, **fermez** l’activité suspecte.
 
-5. Si vous avez répondu non à toutes les questions ci-dessus, considérez l’alerte comme une attaque malveillante.
+5. Si vous avez répondu non à toutes les questions ci-dessus, considérez l’activité comme une attaque malveillante.
 
 **Correction**
 
-Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer la protection de votre environnement contre cette attaque.
+Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer votre environnement contre ce type d’attaque.
 
 ## <a name="remote-execution-attempt-detected"></a>Tentative d’exécution à distance détectée
 
@@ -418,11 +419,11 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 
 **Examen**
 
-1. Cette situation est fréquente pour les stations de travail d’administration, ainsi que pour les membres des équipes informatiques et les comptes de service qui effectuent des tâches d’administration sur des contrôleurs de domaine. Si c’est le cas et que l’alerte a été mise à jour parce que le même administrateur ou ordinateur ont effectué la tâche, **supprimez** l’alerte.
+1. Cette situation est fréquente pour les stations de travail d’administration, ainsi que pour les membres des équipes informatiques et les comptes de service qui effectuent des tâches d’administration sur des contrôleurs de domaine. Si c’est le cas et que l’alerte a été mise à jour parce que le même administrateur ou ordinateur effectue la tâche, **supprimez** l’alerte.
 2.  L’ordinateur en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
   - Le compte en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
   - Si la réponse à ces deux questions est oui, **fermez** l’alerte.
-3.  Si la réponse à l’une de ces questions est non, considérez l’attaque comme un vrai positif. Essayez de rechercher la source de la tentative en vérifiant les profils d’ordinateur et de compte. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
+3.  Si la réponse à l’une de ces questions est non, considérez cette activité comme un vrai positif. Essayez de rechercher la source de la tentative en vérifiant les profils d’ordinateur et de compte. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
 
 
 **Correction**
@@ -496,7 +497,6 @@ Les attaquants tentent d’exécuter des services suspects sur votre réseau. AT
 - Implémentez un accès doté de moins de privilèges sur les ordinateurs du domaine pour autoriser uniquement des utilisateurs spécifiques à créer de nouveaux services.
 
 
-
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Suspicion d’usurpation d’identité basée sur un comportement inhabituel
 
 **Description**
@@ -512,7 +512,7 @@ ATA apprend le comportement de l’entité pour les utilisateurs, les ordinateur
 
 **Correction**
 
-En fonction de la cause de ce comportement anormal, vous devez effectuer des actions différentes. Par exemple, si cela est dû à l’analyse du réseau, empêchez la machine source d’accéder au réseau (sauf si elle est approuvée).
+ Différentes actions doivent être entreprises en fonction de la cause de ce comportement anormal. Par exemple, si le réseau a été analysé, la machine source doit être bloquée à partir du réseau (sauf si elle est approuvée).
 
 ## <a name="unusual-protocol-implementation"></a>Implémentation de protocole inhabituelle
 
@@ -525,11 +525,11 @@ Les attaquants utilisent des outils qui implémentent différents protocoles (SM
 
 Identifiez le protocole inhabituel, à partir de la chronologie des activités suspectes, et cliquez sur l’activité suspecte pour accéder à la page de détails correspondante. Le protocole s’affiche au-dessus de la flèche : Kerberos ou NTLM.
 
-- **Kerberos** : une alerte est souvent déclenchée si un outil de piratage comme Mimikatz a été utilisé dans le cadre d’une attaque potentielle de type Overpass-the-Hash. Vérifiez si l’ordinateur source exécute une application qui implémente sa propre pile Kerberos, de manière non conforme à la RFC Kerberos. Si c’est le cas, il s’agit d’un vrai positif sans gravité. Vous pouvez **fermer** l’alerte. Si l’alerte continue d’être déclenchée et que c’est toujours le cas, **supprimez** l’alerte.
+- **Kerberos** : souvent déclenché si un outil de piratage comme Mimikatz a été éventuellement utilisé dans une attaque de type Overpass-the-Hash. Vérifiez si l’ordinateur source exécute une application qui implémente sa propre pile Kerberos, qui n’est pas conforme à la RFC Kerberos. Si c’est le cas, il s’agit d’un vrai positif sans gravité et l’alerte peut être **fermée**. Si l’alerte continue d’être déclenchée et que c’est toujours le cas, **supprimez** l’alerte.
 
 - **NTLM** : une alerte peut être déclenchée si WannaCry ou un outil comme Metasploit, Medusa ou Hydra est utilisé.  
 
-Pour déterminer s’il s’agit d’une attaque WannaCry, effectuez les étapes suivantes :
+Pour déterminer si l’activité est une attaque WannaCry, effectuez les étapes suivantes :
 
 1. Vérifiez si l’ordinateur source exécute un outil d’attaque tel que Metasploit, Medusa ou Hydra.
 
@@ -541,17 +541,17 @@ Pour déterminer s’il s’agit d’une attaque WannaCry, effectuez les étapes
 
 **Correction**
 
-Installez tous les correctifs logiciels nécessaires sur les machines, notamment les mises à jour de sécurité.
+Appliquez les derniers correctifs à tous vos ordinateurs et vérifiez que toutes les mises à jour de sécurité sont appliquées.
 
 1. [Désactivez SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
 2. [Supprimez WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo).
 
-3. WanaKiwi peut déchiffrer les données interceptées par certains ransomware, mais uniquement si l’utilisateur n’a pas redémarré ou éteint l’ordinateur. Pour plus d’informations, consultez [Ransomware WannaCry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1).
+3.  Les données dans le contrôle de certains logiciels ransom peuvent parfois être déchiffrées. Le déchiffrement est possible seulement si l’utilisateur n’a pas redémarré ou éteint l’ordinateur. Pour plus d’informations, consultez [Ransomware WannaCry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1).
 
 
 >[!NOTE]
-> Pour désactiver une activité suspecte, contactez le support.
+> Pour désactiver une alerte d’activité suspecte, contactez le support.
 
 ## <a name="related-videos"></a>Vidéos connexes
 - [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
