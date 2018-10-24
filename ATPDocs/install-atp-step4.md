@@ -1,11 +1,11 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces – Étape 4 | Microsoft Docs
-description: La quatrième étape de la procédure d’installation d’Azure ATP vous permet d’installer le capteur autonome Azure ATP.
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+description: La quatrième étape de la procédure d’installation d’Azure ATP vous permet d’installer le capteur Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454137"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783727"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
@@ -32,13 +32,10 @@ ms.locfileid: "47454137"
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Étape 4. Installer le capteur Azure ATP
 
-Avant d’installer le capteur autonome Azure ATP sur un serveur dédié, confirmez que la mise en miroir des ports est correctement configurée et que le capteur autonome Azure ATP peut voir le trafic à destination et en provenance des contrôleurs de domaine. 
-
-
 > [!IMPORTANT]
 >Vérifiez que .NET Framework 4.7 est installé sur l'ordinateur. Si .NET Framework 4.7 n’est pas installé, le package d’installation de capteur Azure ATP l’installe, ce qui nécessite un redémarrage du serveur.
 
-Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du capteur Azure ATP.
+Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 1. Vérifiez que l’ordinateur dispose d’une connectivité au point de terminaison du service cloud Azure ATP approprié :
   - https://triprd1wceuw1sensorapi.atp.azure.com (pour l’Europe)  
@@ -73,7 +70,7 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
 
       - Chemin d’installation : il s’agit de l’emplacement où le capteur autonome Azure ATP est installé. Par défaut, il s’agit de %programfiles%\Azure Advanced Threat Protection sensor. Conservez la valeur par défaut.
 
-      - Clé d’accès : valeur extraite du portail d’espace de travail à l’étape précédente.
+      - Clé d’accès : valeur extraite du portail Azure ATP à l’étape précédente.
     
 7. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
 
@@ -86,7 +83,7 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
     -   Service de capteur Azure ATP et service de mise à jour du capteur Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-8.  Une fois l’installation terminée, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter au portail d’espace de travail Azure ATP.
+8.  Une fois l’installation terminée, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter au portail Azure ATP.
 
 
 > [!div class="step-by-step"]
@@ -102,4 +99,4 @@ Effectuez les étapes suivantes sur le contrôleur de domaine ou le serveur du c
 
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

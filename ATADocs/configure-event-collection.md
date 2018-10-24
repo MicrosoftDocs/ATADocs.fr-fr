@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697206"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403214"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -27,16 +27,16 @@ ms.locfileid: "44697206"
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
 > [!NOTE]
-> Pour les versions 1.8 et ultérieures d’ATA, la configuration de la collecte d’événements n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA peut désormais lire les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
-
+> Pour les versions 1.8 et ultérieures d’ATA, la configuration de la collecte d’événements n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA lit désormais les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
 
 Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA afin qu’elle reste à l’écoute des événements SIEM ou en configurant le transfert d’événements Windows.
 
-
+> [!NOTE]
+> Si vous n’utilisez pas Server Core, [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) peut être utilisé pour créer et gérer des abonnements aux événements qui sont transférés à partir d’ordinateurs distants.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Configuration WEF pour la passerelle ATA avec mise en miroir de ports
 
-Une fois que vous avez configuré la mise en miroir des ports des contrôleurs de domaine sur la passerelle ATA, suivez les instructions ci-dessous pour configurer Windows Event Forwarding à l’aide de la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding. 
+Après avoir configuré la mise en miroir des ports depuis les contrôleurs de domaine sur la passerelle ATA, utilisez les instructions ci-dessous pour configurer les transferts d’événements Windows à l’aide de la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding. 
 
 **Étape 1 : ajouter le compte service réseau au groupe Lecteurs des journaux d’événements du domaine** 
 
@@ -44,7 +44,7 @@ Dans ce scénario, nous partons du principe que la passerelle ATA est un membre 
 
 1.  Ouvrez Utilisateurs et ordinateurs Active Directory, accédez au dossier **BuiltIn** et double-cliquez sur **Lecteurs des journaux d’événements**. 
 2.  Sélectionnez **Membres**.
-4.  Si **Service réseau** ne figure pas dans la liste, cliquez sur **Ajouter** et tapez **Service réseau** dans le champ **Entrez les noms d’objets à sélectionner**. Ensuite, cliquez sur **Vérifier les noms** et cliquez deux fois sur **OK**. 
+3.  Si **Service réseau** ne figure pas dans la liste, cliquez sur **Ajouter** et tapez **Service réseau** dans le champ **Entrez les noms d’objets à sélectionner**. Ensuite, cliquez sur **Vérifier les noms** et cliquez deux fois sur **OK**. 
 
 Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d’événements**, redémarrez les contrôleurs de domaine pour que la modification prenne effet.
 
@@ -62,7 +62,9 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Par exemple : Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
+    
+        *(Par exemple : Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)*
  
     ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
    
