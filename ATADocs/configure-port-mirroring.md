@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9d5ea1dfce5a162c0bf4642f2159b13a5b0f169
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134141"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480648"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -64,9 +64,10 @@ Vos contrôleurs de domaine et vos passerelles ATA peuvent être physiques ou vi
 **Si vous travaillez avec des clusters de virtualisation :**
 
 -   Pour chaque contrôleur de domaine en cours d’exécution sur le cluster de virtualisation dans une machine virtuelle avec la passerelle ATA, configurez l’affinité entre le contrôleur de domaine et la passerelle ATA. Ainsi, quand le contrôleur de domaine passe à un autre hôte dans le cluster, la passerelle ATA le suit. Cela fonctionne bien quand il y a quelques contrôleurs de domaine.
+
 > [!NOTE]
 > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
-> 
+
 -   Pour vérifier que les passerelles ATA sont correctement dimensionnées pour gérer elles-mêmes la surveillance de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et installez une passerelle ATA sur chaque hôte. Configurez chaque passerelle ATA de façon à surveiller tous les contrôleurs de domaine qui s’exécutent sur le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
 
 Après avoir configuré la mise en miroir des ports, validez son fonctionnement avant d’installer la passerelle ATA.

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ddbcd8877ca36afe9e56e9bc6febee19ff9957ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5069fdda7c27a54705a17da79dbb536d412c4113
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133478"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480631"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -79,7 +79,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 |Problème|Description|Résolution|
 |-------------|----------|---------|
 |Aucun trafic reçu du contrôleur de domaine, mais des alertes de surveillance sont observées|    Aucun trafic n’a été reçu d’un contrôleur de domaine utilisant la mise en miroir de ports via une passerelle ATA|Sur la carte réseau de capture de la passerelle ATA, désactivez ces fonctionnalités dans **Paramètres avancés** :<br></br>RSC (Receive Segment Coalescing) (IPv4)<br></br>RSC (Receive Segment Coalescing) (IPv6)|
-|Cette alerte de surveillance s’affiche : **Une partie du trafic réseau n'est pas analysée**|Si vous avez une passerelle ATA ou une passerelle légère sur les machines virtuelles VMware, vous pouvez recevoir cette alerte de surveillance. Ce scénario se produit à cause d’une différence de configuration dans VMware.|Définissez les paramètres suivants avec les valeurs **0** ou **Désactivé** dans la configuration de carte réseau des machines virtuelles : TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|TLS 1.0 est désactivé sur la passerelle ATA, tandis que .Net est configuré pour utiliser TLS 1.2|
+|Cette alerte de surveillance s’affiche : **Une partie du trafic réseau n'est pas analysée**|Si vous avez une passerelle ATA ou une passerelle légère sur les machines virtuelles VMware, vous pouvez recevoir cette alerte de surveillance. Ce scénario se produit à cause d’une différence de configuration dans VMware.|Définissez les paramètres suivants avec les valeurs **0** ou **Désactivé** dans la configuration de carte réseau des machines virtuelles : TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|TLS 1.0 est désactivé sur la passerelle ATA, tandis que .Net est configuré pour utiliser TLS 1.2|<!-- line contains 5 vertical lines -->
 
 
 
