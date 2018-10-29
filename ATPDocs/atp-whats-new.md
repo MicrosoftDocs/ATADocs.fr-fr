@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,52 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6f291ebed680278391498361737e0f8be5ea710
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166678"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848628"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+## <a name="azure-atp-release-249"></a>Azure ATP version 2.49
+Publiée le 7 octobre 2018
+-   **Nouvelles détections : Communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour aider à protéger contre les attaques de communication DNS suspecte :
+
+    -   Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Ceci permet à un attaquant sur une machine compromise d’abuser le protocole DNS. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
+
+- **Nouvelle fonctionnalité** <br>**Rôle d’utilisateur** Azure ATP amélioré avec les fonctionnalités suivantes :
+  - Changer l’état des alertes de sécurité (rouvrir, fermer, exclure, supprimer)
+  - Définir des rapports planifiés
+  - Définir des étiquettes d’entité (sensible et honeytoken)
+  - Exclusion de la détection
+  - Changer la langue
+  - Définir des notifications via e-mail ou Syslog
+
+
+- Une augmentation temporaire des alertes de sécurité **Reconnaissance à l’aide de requêtes de services d’annuaire** qui s’est produite le 16/09/2018 a été identifiée et résolue. 
+
+- Cette version comprend aussi des correctifs et des améliorations visant plusieurs problèmes.
+
+
+## <a name="azure-atp-release-248"></a>Azure ATP version 2.48
+Publiée le 16 septembre 2018
+- **Alerte de sécurité :** Reconnaissance à l’aide de requêtes de services d’annuaire
+
+  Cette alerte de sécurité a désormais une infographie et des preuves améliorées. 
+
+- **Exclure des entités des détections** 
+
+  Pour réduire les faux positifs, vous pouvez maintenant choisir d’exclure des entités des détections suivantes : 
+  - Connexion VPN suspecte (exclusion d’utilisateur)
+  - Promotion du contrôleur de domaine suspect (attaque potentielle DcShadow)
+  - Demande de réplication suspecte (attaque potentielle DcShadow)
+
+- Cette version comprend aussi des correctifs et des améliorations visant plusieurs problèmes.
+
 
 ## <a name="azure-atp-release-247"></a>Azure ATP version 2.47
 Publication : 2 septembre 2018
@@ -117,7 +153,7 @@ Publication : 15 juillet 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
 
 Publication : 5 juillet 2018
--   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md#golden-ticket)
+-   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide des activités suspectes Azure Advanced Threat Protection](suspicious-activity-guide.md#golden-ticket)
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -270,8 +306,8 @@ Date de publication : 11 mars 2018
  -  L’infrastructure des capteurs Azure ATP a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 
 ## <a name="see-also"></a>Voir aussi
+- [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
+- [Forum Aux Questions](atp-technical-faq.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Planification de la capacité Azure ATP](atp-capacity-planning.md)
-- [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Planification de la capacité Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

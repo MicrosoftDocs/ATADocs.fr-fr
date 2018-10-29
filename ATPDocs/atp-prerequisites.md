@@ -1,11 +1,11 @@
 ---
-title: Prérequis pour Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Prérequis pour Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 10/7/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 78c30240489e81109aadcb17f9f7395642d2b19b
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126346"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848539"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
@@ -31,26 +31,26 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité Azure ATP](atp-capacity-planning.md).
 
 
-Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail de gestion, du portail de l’espace de travail, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
+Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
 
-Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures. 
+Pour créer votre instance d’Azure ATP, vous avez besoin d’un locataire AAD au moins un administrateur général/de sécurité. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures. 
 
+Ce guide des prérequis comprend les sections suivantes qui vous permettent de vérifier que vous avez tout ce qu’il faut pour déployer Azure ATP. 
 
-[Avant de commencer](#before-you-start) : cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
+[Avant de commencer](#before-you-start) : liste les informations à rassembler, ainsi que les comptes et les entités réseau dont vous devez disposer avant de procéder à l’installation.
 
-[Portail de gestion Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : cette section décrit la configuration requise du navigateur du portail de gestion Azure ATP.
+[Portail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : décrit la configuration requise pour le navigateur du portail Azure ATP.
 
-[Portail de l’espace de travail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : cette section décrit la configuration requise du navigateur pour l’exécution du portail de l’espace de travail Azure ATP.
+[Capteur Azure ATP](#azure-atp-lightweight-sensor-requirements) : liste le matériel du capteur Azure ATP, ainsi que la configuration logicielle requise.
 
-[Capteur Azure ATP](#azure-atp-lightweight-sensor-requirements) : cette section répertorie le matériel du capteur Azure ATP ainsi que la configuration logicielle requise.
-
-[Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : cette section répertorie le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
-
-![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
+[Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : liste le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
 
 ## <a name="before-you-start"></a>Avant de commencer
 Cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
 
+- Vous pouvez acquérir une licence pour Enterprise Mobility + Security 5 (EMS E5) directement via le [portail Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence CSP (Cloud Solution Partner).  
+
+- Vérifiez que le ou les contrôleurs de domaine sur lesquels vous prévoyez d’installer des capteurs Azure ATP ont une connectivité Internet au service cloud Azure ATP. Le capteur Azure ATP prend en charge l’utilisation d’un proxy. Pour plus d’informations sur la configuration du proxy, consultez [Configuration d’un proxy pour Azure ATP](configure-proxy.md).  
 
 -   Compte d’utilisateur AD **local** et mot de passe avec accès en lecture à tous les objets dans les domaines surveillés.
 
@@ -59,22 +59,87 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 
 -   Si vous exécutez Wireshark sur le capteur autonome Azure ATP, vous devez redémarrer le service de capteur Azure - Protection avancée contre les menaces après avoir arrêté la capture Wireshark. Sinon, le capteur arrête la capture du trafic.
 
-- Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec une carte d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le capteur ATP sur un ordinateur configuré avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
+- Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Azure ATP peut ainsi détecter la suppression en bloc d’objets dans le domaine. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Ceci permet à Azure ATP de détecter la suppression d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Facultatif : compte d’un utilisateur sans activité réseau. Ce compte est configuré comme l’utilisateur honeytoken Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
+-   Facultatif : compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
--   Facultatif : quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à ATP pour qu’Azure ATP puisse encore mieux détecter les attaques de type « Pass-The-Hash », par force brute et Honey Tokens, la modification de groupes sensibles ainsi que la création de service malveillant. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+-   Facultatif : quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honey Tokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
-
-## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Configuration requise pour le portail de l’espace de travail et le portail de gestion de l’espace de travail Azure ATP
-L’accès au portail de l’espace de travail Azure ATP et au portail de gestion de l’espace de travail Azure ATP s’effectue via un navigateur prenant en charge les navigateurs et les paramètres suivants :
+## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
+L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
 -   Microsoft Edge
 -   Internet Explorer 10 et versions ultérieures
 -   Google Chrome 4.0 et versions ultérieures
 -   Largeur d’écran d’une résolution minimale de 1 700 pixels
--   Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com. 
+-   Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
+
+ ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
+
+
+> [!NOTE]
+> Par défaut, Azure ATP prend en charge jusqu’à 100 capteurs. Si vous voulez en installer plus, contactez le support Azure ATP.
+
+## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
+Cette section décrit la configuration requise pour le capteur Azure ATP.
+### <a name="general"></a>Général
+Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus, mais pas Nano).
+
+Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
+
+Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
+
+Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
+
+
+> [!NOTE]
+> Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
+
+### <a name="server-specifications"></a>Spécifications du serveur
+
+Le capteur Azure ATP nécessite au minimum deux cœurs et 6 Go de RAM sur le contrôleur de domaine.
+Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
+Vous pouvez déployer le capteur Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées sur ce contrôleur de domaine.
+
+>[!NOTE] 
+> En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
+
+Pour plus d’informations sur la configuration matérielle requise pour le capteur Azure ATP, consultez [Planification de la capacité Azure ATP](atp-capacity-planning.md).
+
+### <a name="time-synchronization"></a>Synchronisation de l’heure
+
+L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est installé doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
+
+### <a name="network-adapters"></a>Cartes réseau
+
+Le capteur Azure ATP surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
+Après le déploiement, vous pouvez utiliser le portail de l’espace de travail Azure ATP si vous voulez changer les cartes réseau surveillées.
+
+Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
+
+### <a name="ports"></a>Ports
+Le tableau suivant répertorie les ports qui, au minimum, sont requis par le capteur Azure ATP :
+
+|Protocole|Transport|Port|Vers/À partir de|Sens|
+|------------|-------------|--------|-----------|-------------|
+|**Ports Internet**|||||
+|SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
+|**Ports internes**|||||
+|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
+|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
+|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
+|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
+|RADIUS|UDP|1813|RADIUS|Entrant|
+|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
+
+> [!NOTE]
+> - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
+> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
+>   -   NTLM sur RPC (port TCP 135) à des fins de résolution
+>   -   NetBIOS (port UDP 137) à des fins de résolution
+>   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Configuration requise pour le capteur autonome Azure ATP
 Cette section décrit la configuration requise pour le capteur autonome Azure ATP.
@@ -156,72 +221,11 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 >   -   NetBIOS (port UDP 137) à des fins de résolution
 >   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
-## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
-Cette section décrit la configuration requise pour le capteur Azure ATP.
-### <a name="general"></a>Général
-Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus, mais pas Nano).
-
-Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
-
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
-
-Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
-
-
-> [!NOTE]
-> Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
-
-### <a name="server-specifications"></a>Spécifications du serveur
-
-Le capteur Azure ATP nécessite au minimum deux cœurs et 6 Go de RAM sur le contrôleur de domaine.
-Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
-Vous pouvez déployer le capteur Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées sur ce contrôleur de domaine.
-
->[!NOTE] 
-> En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
-
-Pour plus d’informations sur la configuration matérielle requise pour le capteur Azure ATP, consultez [Planification de la capacité Azure ATP](atp-capacity-planning.md).
-
-### <a name="time-synchronization"></a>Synchronisation de l’heure
-
-L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est installé doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
-
-### <a name="network-adapters"></a>Cartes réseau
-
-Le capteur Azure ATP surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
-Après le déploiement, vous pouvez utiliser le portail de l’espace de travail Azure ATP si vous voulez changer les cartes réseau surveillées.
-
-Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
-
-### <a name="ports"></a>Ports
-Le tableau suivant répertorie les ports qui, au minimum, sont requis par le capteur Azure ATP :
-
-|Protocole|Transport|Port|Vers/À partir de|Sens|
-|------------|-------------|--------|-----------|-------------|
-|**Ports Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
-|**Ports internes**|||||
-|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
-|NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
-|NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
-|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
-|RADIUS|UDP|1813|RADIUS|Entrant|
-|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
-
-> [!NOTE]
-> - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
-> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
->   -   NTLM sur RPC (port TCP 135) à des fins de résolution
->   -   NetBIOS (port UDP 137) à des fins de résolution
->   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
-
-
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Architecture Azure ATP](atp-architecture.md)
-- [Installer ATP](install-atp-step1.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Installer Azure ATP](install-atp-step1.md)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
 

@@ -1,11 +1,11 @@
 ---
-title: Modifier le mot de passe de connectivité de domaine dans la configuration d’Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Changer le mot de passe de connectivité de domaine dans la configuration d’Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit comment modifier le mot de passe de connectivité de domaine sur le capteur autonome Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5b3fd544fb52cd2979ab95d34918ffba3f56541
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166185"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783115"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
@@ -33,12 +33,12 @@ Si vous avez besoin de modifier le mot de passe de connectivité de domaine, ass
 
 Si vous pensez que cela s’est produit, recherchez les erreurs suivantes dans le fichier Microsoft.Tri.sensor-Errors.log sur le capteur autonome Azure ATP : `The supplied credential is invalid.`
 
-Procédez comme suit pour mettre à jour le mot de passe de connectivité de domaine dans le portail d’espace de travail Azure ATP :
+Suivez la procédure ci-dessous pour mettre à jour le mot de passe de connectivité de domaine dans le portail Azure ATP :
 
 > [!NOTE]
 > Il s’agit du nom d’utilisateur et du mot de passe du déploiement local d’Active Directory et non d’Azure AD.
 
-1.  Ouvrez le portail d’espace de travail Azure ATP en accédant à l’URL de l’espace de travail.
+1.  Ouvrez le portail Azure ATP en accédant à l’URL de l’espace de travail.
 
 2.  Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 
@@ -57,9 +57,9 @@ Procédez comme suit pour mettre à jour le mot de passe de connectivité de dom
 
 6.  Après avoir changé le mot de passe, vérifiez manuellement que le service de capteur autonome Azure ATP est en cours d’exécution sur les serveurs de capteur autonome Azure ATP.
 
-7. Dans le portail d’espace de travail, sous **Configuration**, accédez à la page **Capteur** et vérifiez le statut des capteurs.
+7. Dans le portail Azure ATP, sous **Configuration**, accédez à la page **Capteur** et vérifiez l’état des capteurs.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Intégration à Windows Defender ATP](integrate-wd-atp.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

@@ -2,10 +2,10 @@
 title: Utilisation des rapports Azure ATP | Microsoft Docs
 description: Explique comment vous pouvez générer des rapports dans Azure ATP pour surveiller votre réseau.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165930"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783183"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="azure-atp-reports"></a>Rapports Azure ATP
 
-La section Rapports Azure ATP du portail d’espace de travail vous permet de générer des rapports contenant des informations sur l’état du système, sur l’intégrité du système et sur les activités suspectes détectées dans votre environnement.
+La section Rapports d’Azure ATP dans le portail Azure ATP vous permet de générer des rapports contenant des informations sur l’état du système, sur l’intégrité du système et sur les activités suspectes détectées dans votre environnement.
 
 
 Pour accéder à la page Rapports, cliquez sur l’icône de rapport dans la barre de menus : ![icône de rapport](./media/atp-report-icon.png).
@@ -43,7 +43,7 @@ Il existe deux façons de générer un rapport : à la demande ou en planifiant 
 
 Pour générer un rapport à la demande :
 
-1. Dans la barre de menus du portail d’espace de travail Azure ATP, cliquez sur l’icône de rapport : ![icône de rapport](./media/atp-report-icon.png).
+1. Dans la barre de menus du portail Azure ATP, cliquez sur l’icône Rapport : ![icône de rapport](./media/atp-report-icon.png).
 
 2. Sous le type de rapport sélectionné, définissez les dates **De** et **À**, et cliquez sur **Télécharger**. 
  ![rapports](./media/reports.png)
@@ -67,4 +67,4 @@ Pour définir un rapport planifié :
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

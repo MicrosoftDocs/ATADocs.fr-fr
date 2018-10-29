@@ -1,11 +1,11 @@
 ---
-title: Guide Azure ATP des activités suspectes | Microsoft Docs
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Guide des alertes de sécurité d’Azure ATP | Microsoft Docs
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7146c9830a6d3e4f9f655020aa2711e8aeeba40d
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
+ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126448"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914500"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
-# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes
+# <a name="azure-advanced-threat-protection-security-alert-guide"></a>Guide des alertes de sécurité d’Azure Advanced Threat Protection
 
-Après avoir examiné une activité suspecte, vous pouvez la classer comme :
+Après une investigation appropriée, toutes les alertes de sécurité Azure ATP peuvent être classées comme suit :
 
 -   **Vrai positif** : action malveillante détectée par Azure ATP.
 
@@ -33,33 +33,9 @@ Après avoir examiné une activité suspecte, vous pouvez la classer comme :
 
 -   **Faux positif** : fausse alerte. L’activité n’a pas eu lieu.
 
-Pour plus d’informations sur la gestion des alertes Azure ATP, consultez [Gestion des activités suspectes](working-with-suspicious-activities.md).
+Pour plus d’informations sur l’utilisation des alertes de sécurité d’Azure ATP, consultez [Utilisation des alertes de sécurité](working-with-suspicious-activities.md).
 
 
-## <a name="abnormal-sensitive-group-modification"></a>Modification anormale de groupes sensibles
-
-
-**Description**
-
-Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Leur but est d’accéder à davantage de ressources et d’obtenir un accès persistant. La détection s’appuie sur le profilage des activités de modification des utilisateurs d’un groupe et déclenche une alerte quand un ajout anormal à un groupe sensible est observé. ATP effectue un profilage en continu. La période minimale avant le déclenchement d’une alerte est d’un mois pour chaque contrôleur de domaine.
-
-Pour obtenir la définition des groupes sensibles dans Azure ATP, consultez [Gestion des comptes sensibles](sensitive-accounts.md).
-
-
-La détection s’appuie sur les [événements audités sur les contrôleurs de domaine](configure-event-collection.md).
-Pour vous assurer que vos contrôleurs de domaine effectuent l’audit des événements requis.
-
-**Examen**
-
-1. La modification du groupe est-elle légitime ? </br>Une modification de groupe légitime qui est peu fréquente ou qui n’a pas été classée comme « normale » pendant l’apprentissage peut déclencher une alerte. Considérez cette alerte comme un vrai positif sans gravité.
-
-2. Si l’objet ajouté est un compte d’utilisateur, déterminez les actions que ce compte a effectuées après son ajout au groupe d’administration. Consultez la page de l’utilisateur dans Azure ATP pour obtenir plus de contexte. D’autres activités suspectes associées au compte ont-elles été effectuées avant ou après l’ajout ? Téléchargez le rapport **Modifications des groupes sensibles** pour examiner toutes les autres modifications effectuées au cours de la même période et déterminer les auteurs de ces modifications.
-
-**Correction**
-
-Réduisez le nombre d’utilisateurs autorisés à modifier les groupes sensibles.
-
-Installez [Privileged Access Management pour les services de domaine Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services), si cela est approprié.
 
 
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Attaque par force brute par le biais d’une liaison simple LDAP
@@ -406,7 +382,7 @@ Dans cette détection, une alerte est déclenchée quand une énumération de se
 
 Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer la protection de votre environnement contre cette attaque.
 
-## <a name="remote-execution-attempt"></a>Tentative d’exécution à distance
+## <a name="remote-code-execution-attempt"></a>Tentative d’exécution de code à distance
 
 **Description**
 
@@ -454,7 +430,25 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Promotion du contrôleur de domaine suspect (attaque DCShadow potentielle) - Nouveau
+## <a name="suspicious-communication-over-dns---preview"></a>Communication suspecte sur DNS - préversion
+
+**Description**
+
+Dans la plupart des organisations, le protocole DNS n’est généralement pas surveillé et les activités malveillantes sont rarement bloquées. Ceci permet à un attaquant sur une machine compromise d’abuser le protocole DNS. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
+
+**Examen**
+> [!NOTE]
+> Les alertes de sécurité *Communications suspectes via DNS* indiquent le domaine suspecté. Les nouveaux domaines, ou les domaines récemment ajoutés qui ne sont pas encore connus ou reconnus par Azure ATP, mais qui sont connus de votre organisation ou en font partie, peuvent être fermés. 
+
+
+1.  Certaines entreprises légitimes utilisent DNS pour les communications régulières. Vérifiez si le domaine de requête inscrit appartient à une source approuvée, comme votre fournisseur d’antivirus. Si le domaine est connu et approuvé, et que les requêtes DNS sont autorisées, l’alerte peut être fermée et le domaine peut être [exclu](excluding-entities-from-detections.md) des alertes futures. 
+3.   Si le domaine de requête inscrit n’est pas approuvé, identifiez le processus qui crée la demande sur la machine source. Utilisez le [Moniteur de processus](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) pour vous aider dans cette tâche.
+4.  À quel moment l’activité suspecte a-t-elle commencé ? De nouveaux programmes ont-ils été déployés ou installés dans l’organisation ? Y a-t-il d’autres alertes au même moment ?
+5.  Cliquez sur l’ordinateur source pour accéder à la page de son profil. Vérifiez ce qui s’est passé à peu près au même moment que la requête DNS, en recherchant d’éventuelles activités inhabituelles, notamment qui s’est connecté et quelles ressources ont été utilisées. Si vous avez déjà activé l’intégration de Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
+
+**Correction** Si le domaine de requête inscrit n’est pas approuvé après votre investigation, nous vous recommandons de bloquer le domaine de destination afin d’éviter toute communication future. 
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Promotion du contrôleur de domaine suspect (attaque DcShadow potentielle)
 
 **Description**
 
@@ -492,8 +486,33 @@ Vous pouvez utiliser [l’analyseur AD ACL](https://blogs.technet.microsoft.com/
 > [!NOTE]
 > Les détections de promotion du contrôleur de domaine suspect (attaque DCShadow potentielle) sont prises en charge par les capteurs ATP uniquement. 
 
+## <a name="suspicious-modification-of-sensitive-groups"></a>Modification suspecte de groupes sensibles
 
-## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Demande de réplication suspecte (attaque DCShadow potentielle) - Nouveau
+**Description**
+
+Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Leur but est d’accéder à davantage de ressources et d’obtenir un accès persistant. La détection s’appuie sur le profilage des activités de modification des utilisateurs d’un groupe et déclenche une alerte quand un ajout anormal à un groupe sensible est observé. Azure ATP effectue un profilage en continu. La période minimale avant le déclenchement d’une alerte est d’un mois pour chaque contrôleur de domaine.
+
+Pour obtenir la définition des groupes sensibles dans Azure ATP, consultez [Gestion des comptes sensibles](sensitive-accounts.md).
+
+
+La détection s’appuie sur les [événements audités sur les contrôleurs de domaine](configure-event-collection.md).
+Pour vous assurer que vos contrôleurs de domaine effectuent l’audit des événements requis.
+
+**Examen**
+
+1. La modification du groupe est-elle légitime ? </br>Une modification de groupe légitime qui est peu fréquente ou qui n’a pas été classée comme « normale » pendant l’apprentissage peut déclencher une alerte. Considérez cette alerte comme un vrai positif sans gravité.
+
+2. Si l’objet ajouté est un compte d’utilisateur, déterminez les actions que ce compte a effectuées après son ajout au groupe d’administration. Consultez la page de l’utilisateur dans Azure ATP pour obtenir plus de contexte. D’autres activités suspectes associées au compte ont-elles été effectuées avant ou après l’ajout ? Téléchargez le rapport **Modifications des groupes sensibles** pour examiner toutes les autres modifications effectuées au cours de la même période et déterminer les auteurs de ces modifications.
+
+**Correction**
+
+Réduisez le nombre d’utilisateurs autorisés à modifier les groupes sensibles.
+
+Installez [Privileged Access Management pour les services de domaine Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services), si cela est approprié.
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Demande de réplication suspecte (attaque DcShadow potentielle) 
 
 **Description** 
 
@@ -547,7 +566,7 @@ Un service suspect a été créé sur un contrôleur de domaine dans votre organ
 - Implémentez un accès doté de moins de privilèges sur les ordinateurs du domaine pour autoriser uniquement des utilisateurs spécifiques à créer de nouveaux services.
 
 
-## Connexion VPN suspecte – Nouveau <a name="suspicious-vpn-detection"></a>
+## Connexion VPN suspecte <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
@@ -555,7 +574,7 @@ Azure ATP apprend le comportement de l’entité pour les utilisateurs de connex
 
 Le modèle de comportement VPN est basé sur les activités suivantes : les ordinateurs auxquels les utilisateurs se connectent et les emplacements à partir desquels les utilisateurs se connectent. 
 
-Une alerte est ouverte quand il y a un écart entre le comportement de l’utilisateur et l’algorithme d’apprentissage automatique.
+Une alerte est ouverte quand il y a un écart entre le comportement de l’utilisateur et l’algorithme de machine learning.
 
 **Examen**
 
@@ -604,9 +623,9 @@ Installez tous les correctifs logiciels nécessaires sur les machines, notamment
 
 
 > [!NOTE]
-> Pour désactiver une activité suspecte, contactez le support.
+> Pour désactiver une alerte de sécurité, contactez le support technique.
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

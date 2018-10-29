@@ -1,11 +1,11 @@
 ---
-title: Examen des attaques par chemins de mouvement latéral avec Azure ATP | Microsoft Docs
-description: Cet article décrit comment détecter des attaques par chemins de mouvement latéral avec Azure - Protection avancée contre les menaces (ATP).
+title: Examen des attaques par mouvement latéral avec Azure ATP | Microsoft Docs
+description: Cet article explique comment détecter des attaques par mouvement latéral avec Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fcdfdbeaeed7e42aff9d63f4f88300346c73465
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165573"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783489"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -32,7 +32,7 @@ Il est question de mouvement latéral quand un attaquant utilise des comptes non
 
 Pour détecter les comptes sensibles du réseau qui sont vulnérables en raison de leur connexion à des comptes, des groupes ou des ordinateurs non sensibles, suivez ces étapes. 
 
-1. Dans le menu du portail de l’espace de travail Azure ATP, cliquez sur l’icône Rapports ![Icône Rapports](./media/atp-report-icon.png).
+1. Dans le menu du portail Azure ATP, cliquez sur l’icône Rapports. ![Icône Rapports](./media/atp-report-icon.png).
 
 2. Sous **Chemins d’accès par mouvement latéral à des comptes sensibles**, le rapport est grisé en l’absence de chemins potentiels de mouvement latéral. S’il en existe, il présélectionne automatiquement la première date présentant des données pertinentes. Il contient des données couvrant au maximum les 60 derniers jours.
 
@@ -47,7 +47,7 @@ Pour détecter les comptes sensibles du réseau qui sont vulnérables en raison 
 
 
 
-1. Sur le portail de l’espace de travail Azure ATP, recherchez le badge de mouvement latéral ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou ![icône de chemin d’accès](./media/paths-icon.png). Remarque : Les badges ne s’affichent que s’il s’est produit un mouvement latéral au cours des dernières 48 heures. 
+1. Dans le portail Azure ATP, recherchez le badge Mouvement latéral qui est ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral. ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou ![icône de chemin d’accès](./media/paths-icon.png). Remarque : Les badges ne s’affichent que s’il s’est produit un mouvement latéral au cours des dernières 48 heures. 
 
 2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**. 
 
@@ -73,6 +73,6 @@ Pour détecter les comptes sensibles du réseau qui sont vulnérables en raison 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md)
-- [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Configurer Azure ATP pour effectuer des appels distants vers SAM](install-atp-step8-samr.md)
+- [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

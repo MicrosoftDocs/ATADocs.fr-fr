@@ -1,11 +1,11 @@
 ---
 title: Définir des notifications Azure - Protection avancée contre les menaces | Microsoft Docs
-description: Décrit comment définir des alertes Azure ATP qui vous notifient quand des activités suspectes sont détectées.
+description: Décrit comment définir des alertes de sécurité Azure ATP qui vous notifient quand des activités suspectes sont détectées.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c3fc5adbb700c4b8df66c243a655cf98aacc79af
-ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
+ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362423"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783047"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 # <a name="set-azure-atp-notifications"></a>Définir des notifications Azure ATP
 
-Azure ATP peut vous notifier par e-mail quand il détecte une activité suspecte ou une alerte d’intégrité. 
+Azure ATP peut vous notifier par e-mail quand il détecte une activité suspecte, et qu’il émet une alerte de sécurité ou d’intégrité via un e-mail. 
 
 Pour recevoir des notifications à une adresse e-mail spécifique, définissez les paramètres suivants :
 
 
-1. Dans le portail d’espace de travail Azure ATP, sélectionnez l’option de paramètres dans la barre d’outils et sélectionnez **Configuration**.
+1. Dans le portail Azure ATP, sélectionnez l’option Paramètres dans la barre d’outils, puis **Configuration**.
 
 ![Icône de paramètres de configuration d’Azure ATP](media/atp-config-menu.png)
 
@@ -51,4 +51,4 @@ Pour recevoir des notifications à une adresse e-mail spécifique, définissez l
 - [Configurer la collecte d’événements](configure-event-collection.md)
 
 - [Définir les paramètres de Syslog](setting-syslog.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

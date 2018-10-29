@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4353de9d004358ddcdc929271fd96665e1c7322
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165845"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783506"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -59,7 +59,7 @@ En cliquant sur l’onglet Chemins d'accès de mouvement latéral, vous pouvez a
 
 Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés.
 
-Si l’activité n’est pas détectée au cours des deux derniers jours, le graphe n’apparaît plus, mais le [rapport des chemins de mouvement latéral](reports.md) vous fournit des informations sur les chemins de mouvement latéral au cours des 60 derniers jours. 
+Si l’activité n’est pas détectée au cours des deux derniers jours, le graphe n’apparaît plus. Toutefois, le [rapport des chemins de mouvement latéral](reports.md) vous fournit des informations sur les chemins de mouvement latéral qui ont été détectés au cours des 60 derniers jours. 
 
 Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 
@@ -69,4 +69,4 @@ Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-l
 ## <a name="see-also"></a>Voir aussi
 
 - [Examiner les chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

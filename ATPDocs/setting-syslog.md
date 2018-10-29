@@ -2,10 +2,10 @@
 title: Définition des paramètres de notification par e-mail dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit le mode de notification d’Azure ATP (par e-mail ou transfert d’événements Azure ATP) quand il détecte des activités suspectes
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 399773b174f52cfc26888fcaa9923de4f258e897
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166882"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783540"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44166882"
 
 # <a name="integrate-with-syslog"></a>Intégrer à Syslog
 
-Azure ATP peut vous informer quand il détecte des activités suspectes ou des alertes d’intégrité en envoyant la notification à votre serveur Syslog. Si vous activez les notifications Syslog, vous pouvez définir les éléments associés suivants.
+Azure ATP peut vous informer quand il détecte des activités suspectes et émet des alertes de sécurité ou des alertes d’intégrité, en envoyant la notification à votre serveur Syslog. Si vous activez les notifications Syslog, vous pouvez définir les éléments suivants :
 
 1.  Avant de configurer les notifications Syslog, collaborez avec votre administrateur SIEM pour connaître les informations suivantes :
 
@@ -38,7 +38,7 @@ Azure ATP peut vous informer quand il détecte des activités suspectes ou des a
 
     -   Format sous lequel envoyer les données, RFC 3164 ou 5424
 
-2.  Entrez l’URL du portail d’espace de travail.
+2.  Entrer l’URL de l’espace de travail
 
 3.  Entrez votre nom d’utilisateur et votre mot de passe Azure Active Directory, puis cliquez sur **Se connecter**.
 
@@ -63,4 +63,4 @@ Azure ATP peut vous informer quand il détecte des activités suspectes ou des a
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de comptes sensibles](sensitive-accounts.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

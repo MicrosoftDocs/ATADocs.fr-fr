@@ -1,37 +1,41 @@
 ---
-title: "Installer Azure - Protection avancée contre les menaces – Étape 6 | Microsoft Docs"
-description: "Dans cette étape de la procédure d’installation d’ATP, vous intégrez votre VPN."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
+title: Installer l’intégration VPN d’Azure Advanced Threat Protection | Microsoft Docs
+description: Collectez des informations de gestion des comptes pour Azure ATP en intégrant un VPN.
+keywords: ''
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/14/2018
-ms.topic: get-started-article
-ms.prod: 
+ms.date: 10/04/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d29210983f3f9f879b462ef760d0b3fe6e53cd5d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 382b0f31cbc24dde3905d99bab7ed8be8feb5cb4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783744"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
-# <a name="install-azure-atp---step-6"></a>Installer Azure ATP – Étape 6
+# <a name="integrate-vpn"></a>Intégrer le VPN
 
->[!div class="step-by-step"]
-[« Étape 5](install-atp-step5.md)
-[Étape 7 »](install-atp-step7.md)
+<<<<<<< HEAD Azure Advanced Threat Protection (ATP) peut collecter des informations de gestion des comptes auprès des solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs, ainsi qu’une nouvelle détection pour les connexions VPN anormales. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
+=======
+> [!div class="step-by-step"]
+> [« Étape 5](install-atp-step5.md)
+> [Étape 7 »](install-atp-step7.md)
 
-## <a name="step-6-integrate-vpn"></a>Étape 6 : Intégrer le VPN
+## <a name="step-6-integrate-vpn"></a>Étape 6. Intégrer le VPN
 
 Azure - Protection avancée contre les menaces (ATP) peut collecter des informations de gestion de comptes dans les solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs, ainsi qu’une nouvelle détection pour les connexions VPN anormales. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP s’intègre à votre solution VPN en écoutant les événements de gestion de comptes RADIUS transférés aux capteurs Azure ATP. Ce mécanisme est basé sur la gestion de comptes RADIUS standard ([RFC 2866](https://tools.ietf.org/html/rfc2866)) et les fournisseurs VPN suivants sont pris en charge :
 
@@ -44,7 +48,7 @@ Azure ATP s’intègre à votre solution VPN en écoutant les événements de ge
 
 Pour activer l’intégration VPN, veillez à définir les paramètres suivants :
 
--   Ouvrez le port UDP 1813 sur vos capteurs autonomes Azure ATP et votre capteur Azure ATP.
+-   Ouvrez le port UDP 1813 sur vos capteurs Azure ATP et/ou vos capteurs autonomes Azure ATP.
 
 
 L’exemple ci-dessous utilise Microsoft Routing and Remote Access Server (RRAS) pour décrire le processus de configuration VPN.
@@ -67,11 +71,11 @@ Effectuez les étapes suivantes sur votre serveur RRAS.
      
 ### <a name="configure-vpn-in-atp"></a>Configurer le VPN dans ATP
 
-Azure ATP collecte les données VPN qui vous aident à profiler les emplacements depuis lesquels les ordinateurs se connectent au réseau et à pouvoir détecter les connexions VPN anormales.
+Azure ATP collecte les données des VPN qui vous aident à profiler les emplacements depuis lesquels les ordinateurs se connectent au réseau et à détecter les connexions VPN anormales.
 
 Pour configurer les données VPN dans ATP :
 
-1.  Dans le portail d’espace de travail Azure ATP, cliquez sur l’icône de configuration (roue dentée), puis sur **VPN**.
+1.  Dans le portail Azure ATP, cliquez sur l’icône de configuration (engrenage), puis sur **VPN**.
  
 
 2.  Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Cliquez ensuite sur **Enregistrer**.
@@ -80,23 +84,20 @@ Pour configurer les données VPN dans ATP :
   ![Configurer le VPN Azure ATP](./media/atp-vpn-radius.png)
 
 
-Une fois l’activation effectuée, tous les capteurs et capteurs autonomes Azure ATP sont à l’écoute sur le port 1813 pour les événements de gestion de comptes RADIUS. 
+Une fois l’activation effectuée, tous les capteurs et capteurs autonomes Azure ATP sont à l’écoute sur le port 1813 pour les événements de gestion de comptes RADIUS : votre configuration est alors terminée. 
 
-L'installation est terminée. 
+ Une fois que le capteur Azure ATP a reçu les événements VPN et les envoie au service cloud Azure ATP en vue de leur traitement, le profil d’entité indique différents emplacements VPN d’accès et les activités figurant dans le profil indiquent les emplacements.
 
-Une fois que le capteur Azure ATP a reçu les événements VPN et les envoie au service cloud Azure ATP en vue de leur traitement, le profil d’entité indique différents emplacements VPN d’accès et les activités figurant dans le profil indiquent les emplacements.
-
-
-
-
-
->[!div class="step-by-step"]
-[« Étape 6](install-atp-step5.md)
-[Étape 7 »](install-atp-step7.md)
+<a name="-head"></a><<<<<<< HEAD
+=======
+> [!div class="step-by-step"]
+> [« Étape 6](install-atp-step5.md)
+> [Étape 7 »](install-atp-step7.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

@@ -1,24 +1,24 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: Dans cette étape d’installation d’ATP, vous configurez des sources de données.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 91e3caf8e15313069e4c2cec194a11855fd45c24
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126176"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783591"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -29,7 +29,7 @@ ms.locfileid: "44126176"
 Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant les transferts d’événements Windows](configure-event-forwarding.md).
 
 > [!NOTE]
-> Il est important d’exécuter le script d’audit ATA avant de configurer la collecte d’événements pour vous assurer que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires. 
+> Il est important d’exécuter le script d’audit d’Azure ATP avant de configurer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires. 
 
 Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, Azure ATP peut utiliser des événements Windows pour améliorer les détections. Il utilise l’événement 4776 pour NTLM, qui améliore plusieurs détections, et les événements 4732, 4733, 4728, 4729, 4756, 4757 et 7045 pour améliorer la détection des modifications de groupes sensibles et la création de services. Vous pouvez soit recevoir cet événement de votre serveur SIEM, soit définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
@@ -50,7 +50,7 @@ Pour qu’Azure ATP puisse consommer des données provenant d’un serveur Syslo
 Pour plus d’informations sur la façon de configurer le transfert d’événements spécifiques vers un autre serveur, consultez la documentation produit de votre serveur SIEM/Syslog. 
 
 > [!NOTE]
->Si vous n’utilisez pas un serveur SIEM/Syslog, vous pouvez configurer vos contrôleurs de domaine Windows de façon à transférer tous les événements requis pour qu’ils soient collectés et analysés par ATP.
+>Si vous n’utilisez pas un serveur SIEM/Syslog, vous pouvez configurer vos contrôleurs de domaine Windows de façon à transférer tous les événements nécessaires pour qu’ils soient collectés et analysés par Azure ATP.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Configuration du capteur Azure ATP pour écouter les événements SIEM
 
@@ -188,4 +188,4 @@ Assurez-vous que \t sépare les paires clé/valeur.
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

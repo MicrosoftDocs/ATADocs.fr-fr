@@ -1,11 +1,11 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces – Étape 2 | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: La deuxième étape de la procédure d’installation d’Azure ATP vous permet de configurer les paramètres de connectivité du domaine sur votre service cloud Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 7e13bf0e3d32fc14cf1f0a91f3e7d18accea067c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453831"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782992"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
@@ -32,7 +32,7 @@ ms.locfileid: "47453831"
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour vous connecter à votre forêt Active Directory
 
-La première fois que vous ouvrez le portail d’espace de travail Azure ATP, l’écran suivant apparaît :
+La première fois que vous ouvrez le portail Azure ATP, l’écran suivant s’affiche :
 
 ![Étape 1 de bienvenue Azure ATP](media/directory-services.png)
 
@@ -48,7 +48,7 @@ La première fois que vous ouvrez le portail d’espace de travail Azure ATP, l�
     |**Mot de passe** (obligatoire)|Entrez le mot de passe de l’utilisateur en lecture seule, par exemple : **Pencil1**.|
     |**Domaine** (obligatoire)|Entrez le domaine de l’utilisateur en lecture seule, par exemple : **contoso.com**. **Remarque :** il est important d’entrer le nom complet du domaine où se trouve l’utilisateur. Par exemple, si le compte de l’utilisateur se trouve dans le domaine corp.contoso.com, vous devez entrer `corp.contoso.com`, et non contoso.com.|
 
-3. Dans le portail d’espace de travail, cliquez sur **Télécharger le programme d'installation du capteur et installer le premier capteur** pour continuer.
+3. Dans le portail Azure ATP, cliquez sur **Télécharger le programme d’installation du capteur et installer le premier capteur** pour continuer.
 
 
 > [!div class="step-by-step"]
@@ -60,4 +60,4 @@ La première fois que vous ouvrez le portail d’espace de travail Azure ATP, l�
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

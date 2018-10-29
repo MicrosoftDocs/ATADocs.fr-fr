@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133342"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -30,7 +30,8 @@ ms.locfileid: "30009266"
 
 Si votre centre ATA ne démarre pas, effectuez la procédure de dépannage suivante :
 
-1.  Exécutez la commande Windows PowerShell suivante : `Get-Service Pla | Select Status` pour vérifier que le service de compteur de performances est en cours d’exécution. Si ce n’est pas le cas, c’est qu’il s’agit d’un problème de la plateforme, et vous devez faire en sorte que ce service fonctionne à nouveau.
+1.  Exécutez la commande Windows PowerShell suivante : `Get-Service Pla | Select Status`
+    pour vérifier que le service Compteur de performances est en cours d’exécution. Si ce n’est pas le cas, c’est qu’il s’agit d’un problème de la plateforme, et vous devez faire en sorte que ce service fonctionne à nouveau.
 2.  S’il était en cours d’exécution, essayez de le redémarrer et vérifiez si cela résout le problème : `Restart-Service Pla`
 3.  Essayez de créer manuellement un nouveau collecteur de données (n’importe quel collecteur fera l’affaire, vous pouvez même collecter par exemple l’utilisation de l’UC de l’ordinateur).
 S’il peut démarrer, la plateforme est probablement opérationnelle. Sinon, il s’agit toujours d’un problème de plateforme.
@@ -58,7 +59,8 @@ Cela se produit parce que, dans le cadre du processus d’installation de la pas
 
 **Résolution**
 
-1. Sous les clés de Registre, si vous trouvez une valeur DWORD appelée **Désactiver les compteurs de performances**, vérifiez qu’elle est définie sur **0** : `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. Sous les clés du Registre, s’il existe une valeur DWORD nommée **Désactiver les compteurs de performances**, vérifiez qu’elle est définie sur **0** : `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Ensuite, redémarrez le service Pla. La passerelle légère ATA détecte automatiquement le changement et redémarre le service.
 

@@ -1,17 +1,24 @@
 ---
 layout: LandingPage
-description: Découvrez comment utiliser Azure - Protection avancée contre les menaces.
+title: 'Documentation Azure - Protection avancée contre les menaces : tutoriels, exemples, références et ressources'
+description: Découvrir comment utiliser Azure Advanced Threat Protection
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 5c7261a99e1b6209598a29e5d3a751ea77a150ce
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+keywords: Advanced Threat Protection, azure, atp, tutoriels, exemples, informations de référence
+author: rkarlin
+manager: mbaldwin
+ms.author: rkarlin
+ms.topic: landing-page
+ms.date: 09/26/2018
+ms.openlocfilehash: ac88b5b2acad571ce0d578847fe9eeb795f6b45a
+ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566585"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233879"
 ---
-# <a name="azure-advanced-threat-protection-documentation"></a>Documentation Azure - Protection avancée contre les menaces
+# <a name="azure-advanced-threat-protection-documentation"></a>Documentation Azure Advanced Threat Protection
 
-Le service Azure - Protection avancée contre les menaces (ATP, Advanced Threat Protection) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
+Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -25,7 +32,7 @@ Le service Azure - Protection avancée contre les menaces (ATP, Advanced Threat 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>En savoir plus sur Azure - Protection avancée contre les menaces</h3>
+                        <h3>En savoir plus sur Azure Advanced Threat Protection</h3>
                     </div>
                 </div>
             </div>
@@ -61,7 +68,7 @@ Le service Azure - Protection avancée contre les menaces (ATP, Advanced Threat 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Architecture Azure - Protection avancée contre les menaces</h3>
+                        <h3>Architecture Azure Advanced Threat Protection</h3>
                     </div>
                 </div>
             </div>
@@ -105,3 +112,4 @@ Le service Azure - Protection avancée contre les menaces (ATP, Advanced Threat 
         </a>
     </li>
 </ul>
+

@@ -1,11 +1,11 @@
 ---
-title: Présentation du portail d’espace de travail Azure - Protection avancée contre les menaces | Microsoft Docs
-description: Décrit comment se connecter au portail d’espace de travail Azure ATP et aux composants de ce portail d’espace de travail
+title: Présentation du portail Azure Advanced Threat Protection | Microsoft Docs
+description: Décrit comment se connecter au portail Azure ATP et aux composants de ce portail
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,45 +13,45 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fa8c1e19fde1ec779699b3a2c5411dea0908451
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166289"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783795"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
-# <a name="working-with-the-azure-atp-workspace-portal"></a>Utilisation du portail d’espace de travail Azure ATP
+# <a name="working-with-the-azure-atp-portal"></a>Utilisation du portail Azure ATP
 
-Utilisez le portail d’espace de travail Azure ATP pour surveiller les activités suspectes détectées par ATP et y répondre.
+Utilisez le portail Azure ATP pour surveiller les activités suspectes détectées par ATP et y répondre.
 
-Entrez la clé `?` pour obtenir les raccourcis clavier d’accessibilité au portail d’espace de travail Azure ATP. 
+Tapez sur la touche `?` pour obtenir les raccourcis clavier d’accessibilité au portail Azure ATP. 
 
-Le portail d’espace de travail Azure ATP fournit un aperçu rapide de toutes les activités suspectes par ordre chronologique. Elle vous permet d’examiner les détails de toutes les activités et d’effectuer des actions en fonction de ces activités. Le portail d’espace de travail affiche également des alertes et des notifications pour signaler des problèmes détectés par Azure ATP ou de nouvelles activités considérées suspectes.
+Le portail Azure ATP offre un aperçu rapide de toutes les activités suspectes par ordre chronologique. Elle vous permet d’examiner les détails de toutes les activités et d’effectuer des actions en fonction de ces activités. Le portail Azure ATP affiche également des alertes et des notifications pour mettre en évidence des problèmes détectés par Azure ATP ou de nouvelles activités considérées comme suspectes.
 
-Cet article décrit comment utiliser les éléments clés du portail d’espace de travail Azure ATP.
-
-
-## <a name="enabling-access-to-the-azure-atp-workspace-portal"></a>Activation de l’accès au portail d’espace de travail Azure ATP
-Pour pouvoir vous connecter au portail d’espace de travail Azure ATP, vous devez vous connecter en tant qu’utilisateur auquel le groupe de sécurité Azure Active Directory approprié a été affecté pour accéder au portail d’espace de travail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
-
-## <a name="logging-into-the-azure-atp-workspace-portal"></a>Connexion au portail d’espace de travail Azure ATP
-
-1. Vous pouvez entrer sur le portail d’espace de travail en vous connectant au portail de gestion d’espace de travail [https://portal.atp.azure.com](https://portal.atp.azure.com), puis en sélectionnant l’espace de travail approprié ou en accédant à l’URL d’espace de travail : [https://*nom_espace_de_travail*.atp.azure.com](https://*workspacename*.atp.azure.com).
+Cet article décrit comment utiliser les éléments clés du portail Azure ATP.
 
 
-2.  Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail d’espace de travail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
+## <a name="enabling-access-to-the-azure-atp-portal"></a>Activation de l’accès au portail Azure ATP
+Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comme utilisateur affecté à un groupe de sécurité Azure Active Directory avec un accès au portail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
+
+## <a name="logging-into-the-azure-atp-portal"></a>Connexion au portail Azure ATP
+
+1. Vous pouvez entrer dans le portail Azure ATP en vous connectant au portail [https://portal.atp.azure.com](https://portal.atp.azure.com), puis en sélectionnant l’espace de travail approprié ou en accédant à l’URL de l’espace de travail : [https://*nom_espace_de_travail*.atp.azure.com](https://*workspacename*.atp.azure.com).
+
+
+2.  Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
 
  > [!NOTE]
- > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail d’espace de travail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Vous pouvez également exécuter votre navigateur en tant qu’un autre utilisateur, ou fermer votre session Windows et vous connecter avec votre utilisateur administrateur d’Azure ATP. 
+ > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Vous pouvez également exécuter votre navigateur en tant qu’un autre utilisateur, ou fermer votre session Windows et vous connecter avec votre utilisateur administrateur d’Azure ATP. 
 
 
 ### <a name="attack-time-line"></a>Chronologie des attaques
 
-Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez au portail d’espace de travail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez filtrer la chronologie des attaques de manière à tout afficher ou à afficher uniquement les activités suspectes dont l’état est Ouvert, Masqué ou Ignoré. Vous pouvez également voir le niveau de gravité attribué à chaque activité.
+Chronologie des attaques : il s’agit de la page d’accueil qui s’affiche par défaut quand vous vous connectez au portail d’espace de travail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez filtrer la chronologie des attaques de manière à tout afficher ou à afficher uniquement les activités suspectes dont l’état est Ouvert, Masqué ou Ignoré. Vous pouvez également voir le niveau de gravité attribué à chaque activité.
 
 ![Image de la chronologie des attaques Azure ATP](media/atp-sa-timeline.png)
 
@@ -69,7 +69,7 @@ Vous pouvez filtrer les activités suspectes qui s’affichent dans la chronolog
 
 Le menu supérieur comprend une barre de recherche. Vous pouvez rechercher un utilisateur spécifique, un ordinateur ou un groupe dans Azure ATP. Pour tester la fonction de recherche, commencez à taper un nom. Au bas de la barre de recherche, le nombre de résultats de recherche trouvés est indiqué. 
 
-![Image de recherche dans le portail d’espace de travail Azure ATP](media/atp-workspace-portal-search.png)
+![Image d’une recherche dans le portail Azure ATP](media/atp-workspace-portal-search.png)
 
 Si vous cliquez sur ce nombre, vous pouvez accéder à la page des résultats de recherche, dans laquelle vous pouvez filtrer les résultats par type d’entité pour un examen approfondi.
 
@@ -87,7 +87,7 @@ Quand votre système rencontre un problème, tel qu’une erreur de connectivit�
 
 ### <a name="sensitive-groups"></a>Groupes sensibles
 
-Pour obtenir des informations sur les groupes sensibles dans ATP, consultez [Utilisation de groupes sensibles](sensitive-accounts.md).
+Pour obtenir des informations sur les groupes sensibles dans Azure ATP, consultez [Utilisation de groupes sensibles](sensitive-accounts.md).
 
 ### <a name="mini-profile"></a>Mini-profil
 
@@ -115,4 +115,4 @@ Si vous pointez votre souris sur une entité, n'importe où dans le portail d’
 ## <a name="see-also"></a>Voir aussi
 
 - [Création d’espaces de travail Azure ATP](install-atp-step1.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

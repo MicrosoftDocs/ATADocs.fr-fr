@@ -1,11 +1,11 @@
 ---
-title: Configurer les transferts d’événements Windows dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Configurer les transferts d’événements Windows dans Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit les options de configuration des transferts d’événements Windows avec Azure ATP
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 08/12/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4adae00e0985a831cddf1d9b5276c937e82523d3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126040"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848522"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -45,7 +45,7 @@ Dans ce scénario, nous partons du principe que le capteur autonome Azure ATP es
 
 1.  Ouvrez Utilisateurs et ordinateurs Active Directory, accédez au dossier **BuiltIn** et double-cliquez sur **Lecteurs des journaux d’événements**. 
 2.  Sélectionnez **Membres**.
-4.  Si **Service réseau** ne figure pas dans la liste, cliquez sur **Ajouter** et tapez **Service réseau** dans le champ **Entrez les noms d’objets à sélectionner**. Ensuite, cliquez sur **Vérifier les noms** et cliquez deux fois sur **OK**. 
+3.  Si **Service réseau** ne figure pas dans la liste, cliquez sur **Ajouter** et tapez **Service réseau** dans le champ **Entrez les noms d’objets à sélectionner**. Ensuite, cliquez sur **Vérifier les noms** et cliquez deux fois sur **OK**. 
 
 Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d’événements**, redémarrez les contrôleurs de domaine pour que la modification prenne effet.
 
@@ -63,7 +63,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Par exemple : Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(Par exemple Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -81,18 +81,11 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    3.   Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
         1.  Cliquez sur **Ajouter un ordinateur de domaine**.
         2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
-       
-        ![Image de l’Observateur d’événements](media/wef3%20event%20viewer.png)
-   
-        
         3.  Cliquez sur **OK**.
+        ![Image de l’Observateur d’événements](media/wef3%20event%20viewer.png)     
    4.   Cliquez sur **Sélectionner des événements**.
-
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
-        2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant :
-
-        ![Image de filtre de requête](media/wef-4-query-filter.png)
-
+        2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant : ![Image de filtre de requête](media/wef-4-query-filter.png)
    5.   Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
    6.   Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
 
@@ -102,4 +95,4 @@ Pour plus d’informations, consultez [Configurer les ordinateurs pour transfér
 ## <a name="see-also"></a>Voir aussi
 
 - [Installer Azure ATP](install-atp-step1.md)
-- [Consultez le forum ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

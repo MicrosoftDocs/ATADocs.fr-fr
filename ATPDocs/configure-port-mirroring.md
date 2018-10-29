@@ -1,11 +1,11 @@
 ---
-title: Configurer la mise en miroir des ports lors du déploiement d’Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Configurer la mise en miroir des ports lors du déploiement d’Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit les options de mise en miroir des ports et comment les configurer pour Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ac3c584f5eb73b33415c6c1250eee4c41a12763
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125989"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783574"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44125989"
 
 # <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
 > [!NOTE] 
-> Cet article s’applique uniquement si vous déployez le capteur autonome Azure ATP à la place du capteur Azure ATP. Pour déterminer si vous devez utiliser le capteur autonome Azure ATP, consultez [Choix des capteurs appropriés pour votre déploiement](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Cet article s’applique seulement si vous déployez des capteurs autonomes Azure ATP à la place de capteurs Azure ATP. Pour déterminer si vous devez utiliser des capteurs autonomes Azure ATP, consultez [Choix des capteurs appropriés pour votre déploiement](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 La principale source de données utilisée par Azure ATP est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’Azure ATP puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports ou utiliser un TAP réseau.
 
@@ -74,4 +74,4 @@ Après avoir configuré la mise en miroir des ports, validez son fonctionnement 
 
 ## <a name="see-also"></a>Voir aussi
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

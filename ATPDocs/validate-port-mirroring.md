@@ -1,23 +1,23 @@
 ---
-title: Valider la mise en miroir des ports dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Valider la mise en miroir des ports dans Azure Advanced Threat Protection | Microsoft Docs
 description: Explique comment vérifier que la mise en miroir des ports est configurée correctement dans Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: ''
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 15e53ef145b9d7bbbc980730acec6c3b92c1a0fa
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566602"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783438"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -63,4 +63,4 @@ Les étapes suivantes sont conçues pour vous guider dans le processus de valida
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Configurer la mise en miroir des ports](configure-port-mirroring.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

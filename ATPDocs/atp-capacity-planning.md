@@ -2,22 +2,22 @@
 title: Planification de votre déploiement Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126363"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783455"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -26,13 +26,13 @@ ms.locfileid: "44126363"
 # <a name="azure-atp-capacity-planning"></a>Planification de la capacité Azure ATP
 Cet article vous aide à déterminer le nombre de capteurs autonomes et de capteurs Azure ATP dont vous avez besoin.
 
-> [!NOTE] 
-> L’outil de dimensionnement présente deux feuilles : une pour ATA et une pour Azure ATP. Vérifiez que vous êtes sur la feuille appropriée.
-
 ## <a name="using-the-sizing-tool"></a>Utilisation de l’outil de dimensionnement
 La manière recommandée la plus simple de déterminer la capacité pour votre déploiement Azure ATP est d’utiliser [l’outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool). Exécutez l’outil de dimensionnement Azure ATP et, dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la mémoire et le processeur utilisés par le capteur :
 
-- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats au champ **PAQUETS PAR SECONDE** dans le [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing) ou [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing), selon le [type de capteur que vous choisissez](#choosing-the-right-sensor-type-for-your-deployment).
+> [!NOTE] 
+> L’outil de dimensionnement présente deux feuilles : une pour ATA et une pour Azure ATP. Vérifiez que vous utilisez la bonne feuille.
+
+- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing) ou le [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing), selon le [type de capteur que vous choisissez](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
@@ -42,10 +42,10 @@ Si, pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimen
 Les sections suivantes expliquent comment collecter le compteur paquets/s dans un contrôleur de domaine.
 
 ## Choix du type de capteur approprié pour votre déploiement<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-Dans un déploiement Azure ATP, n’importe quelle combinaison de types de capteurs autonomes Azure ATP est prise en charge :
+Dans un déploiement Azure ATP, toutes les combinaisons de types de capteurs Azure ATP sont prises en charge :
 
+- Uniquement des capteurs Azure ATP
 - Uniquement des capteurs autonomes Azure ATP
-- Uniquement un capteur Azure ATP
 - Une combinaison des deux
 
 Quand vous choisissez le type de déploiement de capteur, prenez en compte les avantages suivants :
@@ -58,10 +58,10 @@ Quand vous choisissez le type de déploiement de capteur, prenez en compte les a
 Prenez en compte les problèmes suivants quand vous choisissez le nombre de capteurs autonomes Azure ATP à déployer.
 
 -   **Forêts et domaines Active Directory**<br>
-    Azure ATP peut surveiller le trafic à partir de plusieurs domaines au sein d’une forêt Active Directory unique pour chaque espace de travail que vous créez. Pour surveiller plusieurs forêts, vous devez créer plusieurs espaces de travail. 
+    Pour chaque espace de travail que vous créez, Azure ATP peut superviser le trafic provenant de plusieurs domaines appartenant à plusieurs forêts Active Directory. 
 
 -   **Mise en miroir des ports**<br>
-Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs capteurs autonomes Azure ATP par site de succursale ou centre de données.
+    Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs capteurs autonomes Azure ATP par site de succursale ou centre de données.
 
 -   **Capacité**<br>
     Un capteur autonome Azure ATP peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau lié aux contrôleurs de domaine surveillés. 
@@ -149,4 +149,4 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Architecture Azure ATP](atp-architecture.md)
-- [Consultez le forum ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

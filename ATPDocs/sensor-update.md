@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
-ms.topic: get-started-article
+ms.date: 10/04/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35ca436a1da10b1675daed974920c9dc8ccc3da0
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585016"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783761"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -28,7 +28,9 @@ Il est essentiel de garder Azure - Protection avancée contre les menaces à jou
 
 Le service Azure ATP est mis à jour plusieurs fois par mois avec des correctifs de bogues, des améliorations de performance et de nouvelles détections. Ces mises à jour nécessitent parfois une mise à jour correspondante pour les capteurs. 
 
-Si vous ne mettez pas à jour vos capteurs, ces derniers risquent de ne pas pouvoir communiquer avec le service cloud Azure ATP, ce qui peut entraîner une dégradation du service.
+Si vous ne mettez pas à jour vos capteurs, ces derniers risquent de ne pas pouvoir communiquer avec le service cloud Azure ATP, ce qui peut entraîner une dégradation du service. 
+
+L’authentification entre vos capteurs et le service cloud Azure est mutuelle, forte et basée sur les certificats. 
 
 Chaque mise à jour est testée et validée sur tous les systèmes d’exploitation pris en charge pour minimiser l’impact sur votre réseau et vos opérations.
 
@@ -58,7 +60,7 @@ En règle générale, les capteurs se mettent à jour automatiquement lorsque le
 Cela vous permet de sélectionner des capteurs spécifiques sur lesquels la mise à jour est déployée automatiquement et de mettre à jour le reste de vos capteurs plus tard, uniquement après avoir vu que la mise à jour initiale s’est bien passée.
 
 > [!NOTE]
-> Si une erreur se produit et qu’un capteur ne se met pas à jour, ouvrez un ticket de support.
+> Si une erreur se produit et qu’un capteur ne se met pas à jour, ouvrez un ticket de support. Pour renforcer votre proxy en ne communiquant qu’avec votre espace de travail, consultez [Configuration du proxy](configure-proxy.md)
 
 Pour définir un capteur sur une mise à jour différée :
 
@@ -85,7 +87,7 @@ Pour définir un capteur sur une mise à jour différée :
   7. Un capteur reçoit l’autorisation du service cloud Azure. Cela peut être vérifié dans la page **Mises à jour**.
   8. Le capteur suivant démarre le processus de mise à jour. 
 
-4. 24 heures après,le service cloud Azure ATP est mis à jour et les capteurs sélectionnés pour une **Mise à jour différée démarrent le processus de mise à jour.
+4. 24 heures après, le service cloud Azure ATP est mis à jour et les capteurs sélectionnés pour une **Mise à jour différée** démarrent le processus de mise à jour.
 
 ![mise à jour des capteurs](./media/sensor-update.png)
 
@@ -99,4 +101,4 @@ En cas de défaillance, si le capteur n’a pas terminé le processus de mise à
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Exclusion d’entités des détections dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Exclusion d’entités des détections dans Azure Advanced Threat Protection | Microsoft Docs
 description: Explique comment empêcher Azure ATP de détecter comme suspectes les activités d’entités spécifiques
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d5ac2ae53dfe13b850a06f6dd4b89a91ffedd946
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166032"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782928"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
-Cet article explique comment empêcher des entités de déclencher des alertes afin de minimiser les vrais positifs sans gravité, tout en vous assurant d’intercepter les vrais positifs. Pour empêcher Azure ATP de déclencher des alertes sur des activités qui peuvent faire partie de l’activité professionnelle normale d’utilisateurs spécifiques, vous pouvez empêcher des entités spécifiques de déclencher des alertes.
+Cet article explique comment exclure des entités pour les empêcher de déclencher des alertes, afin de minimiser les vrais positifs sans gravité, tout en vous assurant d’intercepter les vrais positifs. Pour empêcher Azure ATP de déclencher des alertes sur des activités qui peuvent faire partie de l’activité professionnelle normale d’utilisateurs spécifiques, vous pouvez empêcher des entités spécifiques de déclencher des alertes.
 
 Par exemple, si vous disposez d’un scanneur de sécurité qui effectue le rapprochement DNS ou un administrateur qui exécute à distance des scripts sur le contrôleur de domaine et qu’il s’agit d’activités approuvées faisant partie des opérations informatiques normales de votre organisation. Afin d’obtenir plus d’informations sur les détections Azure ATP pour mieux déterminer les entités à exclure, consultez le [guide des activités suspectes](suspicious-activity-guide.md).
 
@@ -63,4 +63,4 @@ Lorsque vous avez la possibilité d’exclure une adresse IP ou un ordinateur, v
 ## <a name="see-also"></a>Voir aussi
 
 - [Intégration à Windows Defender ATP](integrate-wd-atp.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
