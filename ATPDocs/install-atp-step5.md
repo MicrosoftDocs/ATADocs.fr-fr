@@ -1,5 +1,5 @@
 ---
-title: Installer Azure Advanced Threat Protection | Microsoft Docs
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
 keywords: ''
 author: mlottner
@@ -13,21 +13,22 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783863"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800036"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 
 # <a name="install-azure-atp---step-5"></a>Installer Azure ATP – Étape 5
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-atp-step4.md)
+> [« Étape 4](install-atp-step4.md)
+> [Étape 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -61,7 +62,7 @@ Une fois le capteur Azure ATP installé, effectuez les étapes suivantes pour co
    Il est recommandé de ne pas activer les capteurs Azure ATP de site distant comme des candidats synchronisateurs de domaine.
    Si votre contrôleur de domaine est en lecture seule, ne le définissez pas comme un candidat synchronisateur de domaine. Pour plus d’informations sur la synchronisation de domaine Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md#azure-atp-sensor-features).
   
-4. Cliquez sur **Enregistrer**.
+3. Cliquez sur **Save**.
 
 
 ## <a name="validate-installations"></a>Valider les installations
@@ -79,7 +80,8 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-atp-step4.md)
+> [« Étape 4](install-atp-step4.md)
+> [Étape 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -88,4 +90,4 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

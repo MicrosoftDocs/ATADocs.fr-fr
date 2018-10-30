@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,28 +13,17 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a538ce4596da106d11646e27aa65131bb47380d2
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782980"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315742"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
-<<<<<<< HEAD
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurer des exclusions d’adresses IP et de comptes honeytoken
-=======
-
-# <a name="install-azure-atp---step-7"></a>Installer Azure ATP – Étape 7
-
-> [!div class="step-by-step"]
-> [« Étape 6](install-atp-step6-vpn.md)
-> [Étape 8 »](install-atp-step8-samr.md)
-
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Étape 7. Configurer des exclusions d’adresses IP et de comptes honeytoken
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP permet d’exclure des adresses IP ou des utilisateurs spécifiques d’un certain nombre de détections. 
 
@@ -69,14 +58,6 @@ Vérifiez la chronologie des attaques pour afficher les activités suspectes dé
 Azure ATP démarre immédiatement l’analyse pour rechercher les activités suspectes. Certaines détections, telles que les modifications anormales de groupe, nécessitent une période d’apprentissage et ne sont pas disponibles immédiatement après le déploiement d’Azure ATP.
 
 
-<a name="-head"></a><<<<<<< HEAD
-=======
-
-> [!div class="step-by-step"]
-> [« Étape 6](install-atp-step6-vpn.md)
-> [Étape 8 »](install-atp-step8-samr.md)
-
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)

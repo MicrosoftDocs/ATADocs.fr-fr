@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
-ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
+ms.openlocfilehash: 3edcde9466ade71afe22a735256f3cb84f88df17
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914500"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315861"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -99,9 +99,9 @@ Lisez d’abord la description de l’alerte pour déterminer de quel type de d�
 1.  Skeleton Key : supprimez le logiciel malveillant. Pour plus d’informations, voir [Analyse des programmes malveillants Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket : suivez les instructions pour les activités suspectes [Golden Ticket](#golden-ticket).   
-    De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+    De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Overpass-the-Hash : si le compte concerné n’est pas un compte sensible, réinitialisez son mot de passe. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients). Utilisez également [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+3.  Overpass-the-Hash : si le compte concerné n’est pas un compte sensible, réinitialisez son mot de passe. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients). Utilisez également [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="honeytoken-activity"></a>Activité Honeytoken
 
@@ -140,7 +140,7 @@ Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement uti
 
 1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. 
 
-2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Usurpation d’identité par attaque Pass-the-Ticket
 
@@ -158,7 +158,7 @@ Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaqua
 
 1. Si le compte concerné n’est pas un compte sensible, réinitialisez le mot de passe de ce compte. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration.  
 
-2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Golden Ticket Kerberos<a name="golden-ticket"></a>
 
@@ -195,7 +195,7 @@ Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge
 **Correction**
 
 
-Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 
@@ -217,7 +217,7 @@ Cette détection déclenche une alerte quand DPAPI est utilisé pour récupérer
 
 **Correction**
 
-Pour pouvoir utiliser DPAPI, un attaquant doit avoir les droits d’administrateur de domaine. Suivez les [recommandations pour Pass-the-Hash](http://aka.ms/PtH).
+Pour pouvoir utiliser DPAPI, un attaquant doit avoir les droits d’administrateur de domaine. Suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Réplication malveillante de services d’annuaire
 
@@ -442,9 +442,9 @@ Dans la plupart des organisations, le protocole DNS n’est généralement pas s
 
 
 1.  Certaines entreprises légitimes utilisent DNS pour les communications régulières. Vérifiez si le domaine de requête inscrit appartient à une source approuvée, comme votre fournisseur d’antivirus. Si le domaine est connu et approuvé, et que les requêtes DNS sont autorisées, l’alerte peut être fermée et le domaine peut être [exclu](excluding-entities-from-detections.md) des alertes futures. 
-3.   Si le domaine de requête inscrit n’est pas approuvé, identifiez le processus qui crée la demande sur la machine source. Utilisez le [Moniteur de processus](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) pour vous aider dans cette tâche.
-4.  À quel moment l’activité suspecte a-t-elle commencé ? De nouveaux programmes ont-ils été déployés ou installés dans l’organisation ? Y a-t-il d’autres alertes au même moment ?
-5.  Cliquez sur l’ordinateur source pour accéder à la page de son profil. Vérifiez ce qui s’est passé à peu près au même moment que la requête DNS, en recherchant d’éventuelles activités inhabituelles, notamment qui s’est connecté et quelles ressources ont été utilisées. Si vous avez déjà activé l’intégration de Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
+2.   Si le domaine de requête inscrit n’est pas approuvé, identifiez le processus qui crée la demande sur la machine source. Utilisez le [Moniteur de processus](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) pour vous aider dans cette tâche.
+3.  À quel moment l’activité suspecte a-t-elle commencé ? De nouveaux programmes ont-ils été déployés ou installés dans l’organisation ? Y a-t-il d’autres alertes au même moment ?
+4.  Cliquez sur l’ordinateur source pour accéder à la page de son profil. Vérifiez ce qui s’est passé à peu près au même moment que la requête DNS, en recherchant d’éventuelles activités inhabituelles, notamment qui s’est connecté et quelles ressources ont été utilisées. Si vous avez déjà activé l’intégration de Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
 
 **Correction** Si le domaine de requête inscrit n’est pas approuvé après votre investigation, nous vous recommandons de bloquer le domaine de destination afin d’éviter toute communication future. 
 
@@ -470,7 +470,7 @@ Dans cette détection, une alerte est déclenchée lorsqu’un ordinateur du ré
    3. L’ordinateur fonctionne-t-il sous le système d’exploitation Windows Server (ou Windows/Linux) ? Un ordinateur qui n’est pas un serveur n’est pas censé répliquer des données.
 Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour explorer la machine plus en détail. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
 
-4. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
+4. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
 
 **Corriger**
 
@@ -529,7 +529,7 @@ Dans cette détection, une alerte est déclenchée lorsqu’une demande de répl
    2.  Ces utilisateurs sont-ils censés avoir accès à ces ressources ?
    3. L’ordinateur fonctionne-t-il sous le système d’exploitation Windows Server (ou Windows/Linux) ? Un ordinateur qui n’est pas un serveur n’est pas censé répliquer des données.
 Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour explorer la machine plus en détail. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
-1. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
+1. Dans l’observateur d’événements, consultez les [événements Active Directory qu’il enregistre dans le journal des Services d’annuaire](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). Vous pouvez utiliser le journal pour contrôler les modifications dans Active Directory. Par défaut, Active Directory n’enregistre que les événements d’erreur critique ; cependant, si cette alerte se reproduit, activez cet audit sur le contrôleur de domaine correspondant pour un examen approfondi.
 
 **Correction**
 
@@ -574,7 +574,7 @@ Azure ATP apprend le comportement de l’entité pour les utilisateurs de connex
 
 Le modèle de comportement VPN est basé sur les activités suivantes : les ordinateurs auxquels les utilisateurs se connectent et les emplacements à partir desquels les utilisateurs se connectent. 
 
-Une alerte est ouverte quand il y a un écart entre le comportement de l’utilisateur et l’algorithme de machine learning.
+Une alerte est ouverte quand il y a un écart entre le comportement de l’utilisateur et l’algorithme d’apprentissage automatique.
 
 **Examen**
 
