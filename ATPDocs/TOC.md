@@ -1,5 +1,5 @@
 # Comprendre et explorer
-## [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
+## [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
 ## [Forum Aux Questions](atp-technical-faq.md)
 ## [Nouveautés dans Azure ATP](atp-whats-new.md)
 ## [Sécurité et confidentialité des données Azure ATP](atp-privacy-compliance.md)
@@ -36,6 +36,8 @@
 ## [Portail Azure ATP](workspace-portal.md)
 ## [Rapports Azure ATP](reports.md)
 ## [Présentation des profils d’entité](entity-profiles.md)
+## [Activités supervisées](monitored-activities.md)
+### [Rechercher et filtrer des activités supervisées](atp-activities-search.md)
 ## [Gestion des comptes sensibles](sensitive-accounts.md)
 ## [Exclusion d’entités des détections](excluding-entities-from-detections.md)
 ## [Exclusions et comptes honeytoken](install-atp-step7.md)
