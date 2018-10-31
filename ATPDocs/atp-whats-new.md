@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,28 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848628"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480665"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+## <a name="azure-atp-release-251"></a>Azure ATP version 2.5.1
+Publiée le 21 octobre 2018
+
+- Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-250"></a>Azure ATP version 2.50
+Publiée le 14 octobre 2018
+- Cette version comprend des correctifs et des améliorations visant plusieurs problèmes.
+
 
 ## <a name="azure-atp-release-249"></a>Azure ATP version 2.49
 Publiée le 7 octobre 2018
@@ -65,7 +77,7 @@ Publication : 2 septembre 2018
 
 - **Vérification des stratégies d’audit avancées d’Azure ATP**
  
-Azure - Protection avancée contre les menaces (Azure ATP) vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
+Azure Advanced Threat Protection vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
 
 **Cette nouvelle vérification vous permet de :**
   -  Identifier les événements manquants dans vos journaux des événements Windows, qui sont actuellement exclus de votre couverture Azure ATP.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,25 +13,25 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783234"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315759"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
-# <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure Advanced Threat Protection 
+# <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure Advanced Threat Protection 
 
 
-Utilisez les ressources suivantes pour en savoir plus sur le service Azure Advanced Threat Protection, son déploiement et sa prise en charge dans votre organisation.
+Utilisez les ressources suivantes pour en savoir plus sur le service Azure Advanced Threat Protection, son déploiement et son assistance pour votre organisation.
 
 |Pour effectuer cette opération...|procédez ainsi :|
 |----|----|
-|Consulter notre documentation la plus lue|Lire les cinq pages les plus consultées :<br>- [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>- [Création d’un espace de travail](install-atp-step1.md)|
-|Prendre contact avec l’équipe du produit et vos collègues|Visitez la [Communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) portant sur Azure Advanced Threat Protection.|
+|Consulter notre documentation la plus lue|Lire les cinq pages les plus consultées :<br>- [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>- [Création d’un espace de travail](install-atp-step1.md)|
+|Prendre contact avec l’équipe du produit et vos collègues|Visitez la [Communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) pour Azure Advanced Threat Protection.|
 |Vérifier les informations d’abonnement et obtenir la liste des fonctionnalités prises en charge|Consultez les [informations sur les abonnements](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site web Azure Advanced Threat Protection.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informations sur les nouvelles versions et mises à jour
@@ -54,7 +54,7 @@ Pour les autres clients, utilisez les canaux de support comme suit :
 | Channels|Instructions|
 |------|-----|
 |Utiliser le portail Azure|1. Sélectionnez **Nouvelle demande de support** dans **Aide + support** du portail Azure. <br>2. Quand vous y êtes invité, dans le panneau **Bases**, comme **Type de problème**, choisissez **Technique**, comme **Service** sous Sécurité + identité, choisissez **Azure - Protection avancée contre les menaces**. <br>3. Vérifiez que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
-|Utiliser Azure - Protection avancée contre les menaces| 1. Cliquez sur l’icône « ? » (point d’interrogation) icône de la barre de navigation supérieure dans le portail Azure - Protection avancée contre les menaces.<br>2. Recherchez Azure - Protection avancée contre les menaces.<br>3. Ouvrez un ticket d’incident.<br>- Sélectionnez « Support ».<br>4. Ouvrez un ticket d’incident. Si vous réussissez à entrer dans le portail Azure ATP, vous pouvez accéder au [portail de support assisté en ligne](https://support.microsoft.com/assistedsupportproducts). |
+|Utiliser Azure - Protection avancée contre les menaces| 1. Cliquez sur l’icône « ? » (point d’interrogation) icône de la barre de navigation supérieure dans le portail Azure - Protection avancée contre les menaces.<br>2. Recherchez Azure - Protection avancée contre les menaces.<br>3. Ouvrez un ticket d’incident.<br>- Sélectionnez « Support ».<br>4. Ouvrez un ticket d’incident. Si vous réussissez à entrer dans le portail Azure - Protection avancée contre les menaces, vous pouvez accéder au [portail de support assisté en ligne](https://support.microsoft.com/assistedsupportproducts). |
 
 Pour connaître les autres options de support, adressez-vous à votre contact Microsoft.
 
@@ -62,7 +62,7 @@ Pour connaître les autres options de support, adressez-vous à votre contact Mi
 
 #### <a name="system-status-page"></a>Page de l’état du système 
 
-Pour afficher l’état du système pour Azure ATP, visitez la page [**État du système**](https://health.atp.azure.com/). Cette page vous indique si le portail de gestion Espace de travail est opérationnel et actif, s’il existe des problèmes avec les détections et si la sonde est en mesure d’envoyer du trafic vers le cloud. Vous pouvez accéder à l’**État du système** dans la barre de menus Azure ATP.
+Pour afficher l’état du système pour Azure ATP, visitez la page [**État du système**](https://health.atp.azure.com/). Cette page vous indique si le portail Azure ATP est opérationnel et actif, s’il existe des problèmes avec les détections et si la sonde est en mesure d’envoyer du trafic vers le cloud. Vous pouvez accéder à l’**État du système** dans la barre de menus Azure ATP.
 
 #### <a name="on-demand-videos"></a>Vidéos à la demande
 
@@ -72,12 +72,12 @@ Résolution des problèmes :
 
 - Si vous avez une question sur un point spécifique, consultez le [forum aux questions](atp-technical-faq.md).
 
-- Si vous avez une question concernant un prérequis pour Azure ATP, consultez [Prérequis d’ATP](atp-prerequisites.md).
+- Si vous avez une question concernant un prérequis d’Azure Advanced Threat Protection, consultez [Prérequis d’ATP](atp-prerequisites.md).
 
-- Si Windows Defender ATP est déployé dans votre environnement et que vous voulez l’intégrer à Azure ATP, consultez [Intégration d’Azure ATP à Windows Defender ATP](integrate-wd-atp.md).
+- Si Windows Defender ATP est déployé dans votre environnement et que vous voulez l’intégrer à Azure Advanced Threat Protection, consultez [Intégration d’Azure ATP à Windows Defender ATP](integrate-wd-atp.md).
 
 - Pour plus d’informations sur les investigations à mener pour une alerte de sécurité, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Ressources de la communauté
 
-Nous recommandons le [Groupe Yammer pour Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Vous pouvez y obtenir des réponses directement de l’équipe Azure - Protection avancée contre les menaces, tout en bénéficiant de l’expérience partagée et des connaissances d’autres administrateurs et consultants.
+Nous recommandons le [Groupe Yammer pour Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Vous pouvez y obtenir des réponses directement de l’équipe Azure Advanced Threat Protection, tout en bénéficiant de l’expérience partagée et des connaissances d’autres administrateurs et consultants.

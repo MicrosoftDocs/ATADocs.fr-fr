@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 931ea6e4c122ad159e16450546d241c67249b321
+ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848522"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963333"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -63,7 +63,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(Par exemple Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` *(Par exemple Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -72,22 +72,23 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 
 **Étape 3 : effectuer les opérations suivantes sur le capteur autonome Azure ATP** 
 
-1.  Ouvrez une invite de commandes avec élévation de privilèges et tapez *wecutil qc*.
-2.  Ouvrez l’**Observateur d’événements**. 
-3.  Cliquez avec le bouton droit sur **Abonnements** et sélectionnez **Créer un abonnement**. 
-
-   1.   Entrez un nom et une description pour l’abonnement. 
-   2.   Pour **Journal de destination**, vérifiez que **Événements transférés** est sélectionné. Pour qu’Azure ATP lise les événements, le journal de destination doit être **Événements transférés**. 
-   3.   Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
-        1.  Cliquez sur **Ajouter un ordinateur de domaine**.
-        2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
-        3.  Cliquez sur **OK**.
+1. Ouvrez une invite de commandes avec élévation de privilèges et tapez *wecutil qc*.
+2. Ouvrez l’**Observateur d’événements**. 
+3. Cliquez avec le bouton droit sur **Abonnements** et sélectionnez **Créer un abonnement**. 
+    
+    1. Entrez un nom et une description pour l’abonnement. 
+    2. Pour **Journal de destination**, vérifiez que **Événements transférés** est sélectionné. Pour qu’Azure ATP lise les événements, le journal de destination doit être **Événements transférés**. 
+    3. Sélectionnez **Initialisation par l’ordinateur source** et cliquez sur **Sélectionner les groupes d’ordinateurs**.
+        1. Cliquez sur **Ajouter un ordinateur de domaine**.
+        2. Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**. 
+        3. Cliquez sur **OK**.
         ![Image de l’Observateur d’événements](media/wef3%20event%20viewer.png)     
-   4.   Cliquez sur **Sélectionner des événements**.
+    4. Cliquez sur **Sélectionner des événements**.
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
-        2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant : ![Image de filtre de requête](media/wef-4-query-filter.png)
-   5.   Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
-   6.   Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
+        2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant :<br/>
+        ![Image de filtre de requête](media/wef-4-query-filter.png)
+   5. Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
+   6. Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
 
 
 Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403214"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132603"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -63,13 +63,13 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
     3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
-    
-        *(Par exemple : Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)*
- 
-    ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Cliquez sur **OK**.
-    6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
+      
+         *(Par exemple : Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)*
+      
+         ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
+      
+    4.  Cliquez sur **OK**.
+    5.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
 
 **Étape 3 : effectuer les opérations suivantes sur la passerelle ATA** 
 

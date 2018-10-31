@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/7/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
+ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848539"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401910"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -46,7 +46,7 @@ Ce guide des prérequis comprend les sections suivantes qui vous permettent de v
 [Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : liste le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
 
 ## <a name="before-you-start"></a>Avant de commencer
-Cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
+Cette section liste les informations que vous devez rassembler ainsi que les comptes et les informations d’entité réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
 
 - Vous pouvez acquérir une licence pour Enterprise Mobility + Security 5 (EMS E5) directement via le [portail Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence CSP (Cloud Solution Partner).  
 
