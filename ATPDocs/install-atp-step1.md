@@ -1,5 +1,5 @@
 ---
-title: Installer Azure Advanced Threat Protection | Microsoft Docs
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
 description: La première étape pour installer Azure ATP implique la création de l’instance pour votre déploiement Azure ATP.
 keywords: ''
 author: mlottner
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97cce3de3a1cbe049523c54901ecbc9228aaee53
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 7a7bdd045a0964c4ed4ccc4ebe2315b3c3465be2
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783010"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208100"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -69,10 +69,9 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
 - Conservation des données : les espaces de travail qui ont été supprimés auparavant n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité des données Azure ATP et confidentialité](atp-privacy-compliance.md).
 
-
->[!div class="step-by-step"]
-[« Préinstallation](atp-prerequisites.md)
-[Étape 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Préinstallation](atp-prerequisites.md)
+> [Étape 2 »](install-atp-step2.md)
 
 
 

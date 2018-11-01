@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41d685916c667a467edd307fac71933366019fea
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
+ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411644"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -148,7 +148,6 @@ Si à cause de cela la passerelle légère ATA manque de ressources, le trafic e
 
 Le tableau suivant présente un exemple de contrôleur de domaine qui dispose de suffisamment de ressources de calcul pour autoriser un quota plus élevé que ce qui est nécessaire actuellement. Ainsi, tout le trafic est analysé :
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|Passerelle légère ATA (Microsoft.Tri.Gateway.exe)|Divers (autres processus) |Quota de passerelle légère ATA|Trafic ignoré par la passerelle|
@@ -156,7 +155,6 @@ Le tableau suivant présente un exemple de contrôleur de domaine qui dispose de
 
 Si Active Directory a besoin de davantage de puissance de calcul, le quota requis par la passerelle légère ATA est réduit. Dans l’exemple suivant, la passerelle légère ATA a besoin de davantage que le quota alloué et ignore une partie du trafic (analyse partielle du trafic) :
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|Passerelle légère ATA (Microsoft.Tri.Gateway.exe)|Divers (autres processus) |Quota de passerelle légère ATA|Trafic ignoré par la passerelle|

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0973554e0fba448bc48526d1499768b2a2c864b1
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 1ce4673b6fa071ebd74bf1d15cbbaa88ec9c0872
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453848"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208117"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -59,7 +59,7 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
     > [!NOTE] 
     > Si le contrôleur de domaine ou le serveur dédié ne dispose pas de la configuration matérielle minimale requise pour l’installation, un avertissement s’affiche. Il ne vous empêche pas de cliquer sur **Suivant** et de procéder à l’installation. Cela peut être le bon choix pour l’installation d’ATA dans un petit environnement de test de laboratoire dans lequel vous n’avez pas besoin d’autant de place pour le stockage des données. Pour les environnements de production, nous vous recommandons fortement de respecter le guide de [planification de la capacité](ata-capacity-planning.md) ATA pour vous assurer que vos contrôleurs de domaine ou serveurs dédiés répondent aux conditions requises.
 
-4.  Sous **Configurer la passerelle**, entrez les informations suivantes en fonction de votre environnement :
+5.  Sous **Configurer la passerelle**, entrez les informations suivantes en fonction de votre environnement :
 
     ![Image de la configuration de la passerelle ATA](media/ata-gw-configure.png)
 
@@ -70,7 +70,7 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
 
    - Chemin d’installation : Il s’agit de l’emplacement où la passerelle ATA doit être installée. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
     
-5. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
+6. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
 
     -   KB 3047154 (pour Windows Server 2012 R2 uniquement)
 
@@ -82,7 +82,7 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Jeu d’éléments de collecte de données de l’Analyseur de performances personnalisé
 
-6.  Une fois l’installation terminée : pour la passerelle ATA, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter à la console ATA ; pour la passerelle légère ATA, cliquez sur **Terminer**.
+7.  Une fois l’installation terminée : pour la passerelle ATA, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter à la console ATA ; pour la passerelle légère ATA, cliquez sur **Terminer**.
 
 
 > [!div class="step-by-step"]
