@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,23 +13,23 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9e35761c229e011cc1c48b705daa196e1e61ed58
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783183"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202369"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="azure-atp-reports"></a>Rapports Azure ATP
 
-La section Rapports d’Azure ATP dans le portail Azure ATP vous permet de générer des rapports contenant des informations sur l’état du système, sur l’intégrité du système et sur les activités suspectes détectées dans votre environnement.
+La section Rapports Azure ATP sur le portail Azure ATP vous permet de planifier ou de générer puis télécharger immédiatement des rapports qui fournissent des informations sur l’état du système. La fonctionnalité de rapports vous permet de créer des rapports sur l’intégrité du système et sur les activités suspectes détectées dans votre environnement.
 
 
 Pour accéder à la page Rapports, cliquez sur l’icône de rapport dans la barre de menus : ![icône de rapport](./media/atp-report-icon.png).
-Les rapports disponibles sont : 
+Les rapports disponibles sont les suivants : 
 
 - **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **résumé** de ce qui a été détecté sur votre réseau, un pour les **activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité Azure ATP nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
 
@@ -55,7 +55,7 @@ Pour définir un rapport planifié :
    ![Planification de rapports](./media/atp-sched-reports.png)
  
  > [!NOTE]
- > Les rapports quotidiens sont conçus pour être envoyés quelques instants après minuit, heure UTC.
+ > Par défaut, les rapports quotidiens sont conçus pour être envoyés quelques instants après minuit, heure UTC. Choisissez votre heure via l’option prévue à cet effet. 
 
 2. Cliquez sur **Planifier** en regard de votre type de rapport sélectionné pour définir la fréquence et l’adresse e-mail de remise des rapports, puis cliquez sur le signe plus en regard des adresses e-mail pour les ajouter et cliquez sur **Enregistrer**.
 

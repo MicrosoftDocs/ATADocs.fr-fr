@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/21/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,37 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480665"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202386"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+### <a name="azure-atp-release-252"></a>Azure ATP version 2.5.2
+Publiée le 8 octobre 2018
+
+
+- **Amélioration d’alerte de sécurité : Tentative d’exécution de code à distance**<br>
+L’[alerte de sécurité Tentative d’exécution de code à distance](suspicious-activity-guide.md) d’Azure ATP englobe désormais la supervision des tentatives suspectes d’exécution de code PowerShell à distance sur vos contrôleurs de domaine. Remote PowerShell est une méthode courante d’exécution de commandes d’administration valides, mais elle est souvent utilisée à des fins malveillantes pour tenter d’exécuter des scripts sur des points de terminaison distants. 
+
+- **Amélioration de fonctionnalité : Définir une planification de rapport**
+<br>Vous pouvez désormais définir une heure de planification spécifique pour vos rapports Azure ATP à l’aide de la fonction [rapports](reports.md#). 
+
+- **Ajout de configuration : Contrôle d’accès en fonction du rôle de locataire (RBAC)**
+<br>Configurez les rôles de sécurité de votre locataire dans le Centre d’administration Azure Active Directory (AAD) directement à partir du nouveau lien Administrateur du portail Azure ATP. 
+
+- **Révision de la structure et du contenu de la documentation**
+<br>Le contenu de la documentation Azure ATP a fait récemment l’objet de modifications avec l’ajout de nouveaux articles listant toutes les activités supervisées dans Azure ATP, des instructions pour filtrer les activités, ainsi qu’une remise à plat de la structure du site de la documentation pour l’utiliser plus facilement :
+  - [Activités supervisées par Azure ATP](monitored-activities.md) 
+  - [Filtrage des activités dans Azure ATP](atp-activities-search.md) 
+  - [Documentation Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/)  
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-251"></a>Azure ATP version 2.5.1
 Publiée le 21 octobre 2018
@@ -77,7 +98,7 @@ Publication : 2 septembre 2018
 
 - **Vérification des stratégies d’audit avancées d’Azure ATP**
  
-Azure Advanced Threat Protection vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
+Azure - Protection avancée contre les menaces (Azure ATP) vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
 
 **Cette nouvelle vérification vous permet de :**
   -  Identifier les événements manquants dans vos journaux des événements Windows, qui sont actuellement exclus de votre couverture Azure ATP.
@@ -165,7 +186,7 @@ Publication : 15 juillet 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
 
 Publication : 5 juillet 2018
--   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide des activités suspectes Azure Advanced Threat Protection](suspicious-activity-guide.md#golden-ticket)
+-   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md#golden-ticket)
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -318,7 +339,7 @@ Date de publication : 11 mars 2018
  -  L’infrastructure des capteurs Azure ATP a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 
 ## <a name="see-also"></a>Voir aussi
-- [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
+- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
 - [Forum Aux Questions](atp-technical-faq.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
