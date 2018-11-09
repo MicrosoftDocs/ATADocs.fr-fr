@@ -1,5 +1,5 @@
 ---
-title: Configurer les transferts d’événements Windows dans Azure Advanced Threat Protection | Microsoft Docs
+title: Configurer les transferts d’événements Windows dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit les options de configuration des transferts d’événements Windows avec Azure ATP
 keywords: ''
 author: mlottner
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 931ea6e4c122ad159e16450546d241c67249b321
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: d8b1730da0f5ab74dff39b8331fb78c293d57db3
+ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963333"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265711"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -87,8 +87,8 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
         2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant :<br/>
         ![Image de filtre de requête](media/wef-4-query-filter.png)
-   5. Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
-   6. Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
+    5. Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état. 
+    6. Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
 
 
 Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)
