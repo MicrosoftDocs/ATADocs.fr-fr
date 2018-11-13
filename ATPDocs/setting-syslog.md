@@ -1,11 +1,11 @@
 ---
-title: Définition des paramètres de notification par e-mail dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Définition des paramètres Syslog dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit le mode de notification d’Azure ATP (par e-mail ou transfert d’événements Azure ATP) quand il détecte des activités suspectes
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783540"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983087"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -58,6 +58,9 @@ Azure ATP peut vous informer quand il détecte des activités suspectes et émet
  ![Image des paramètres du serveur Syslog Azure ATP](media/atp-syslog.png)
 
 6. Vous pouvez sélectionner les événements à envoyer à votre serveur Syslog. Sous **Notifications Syslog**, spécifiez quelles notifications doivent être envoyées à votre serveur Syslog : nouvelles alertes de sécurité, alertes de sécurité mises à jour et nouveaux problèmes d’intégrité.
+
+> [!NOTE]
+> Si vous envisagez de créer l’automatisation ou des scripts pour les journaux Azure ATP SIEM, nous vous recommandons d’utiliser le champ **externalId** afin d’identifier le type d’alerte au lieu d’utiliser le nom de l’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’**externalId** de chaque alerte est définitif. Pour en savoir plus, consultez [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md). 
 
 
 ## <a name="see-also"></a>Voir aussi

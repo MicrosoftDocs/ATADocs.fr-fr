@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,34 +13,39 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 143002db7b45868e5b78c7da1cdc77c569d3a3dd
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: 574606cfd172b9885534095be5ebbc266b1c8004
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963316"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748984"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
 
-Azure ATP peut transférer les événements d’activité suspecte et d’alerte de surveillance à votre serveur SIEM. Les événements d’activité suspecte sont au format CEF. Cet article de référence fournit des exemples des journaux d’activités suspectes envoyés à votre serveur SIEM.
+Azure ATP peut transférer les événements d’alerte de sécurité et d’alerte de surveillance à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
 
-## <a name="sample-azure-atp-suspicious-activities-in-cef-format"></a>Exemples d’activités suspectes Azure ATP au format CEF
+## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Exemples d’alertes de sécurité Azure ATP au format CEF
 Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 
--   start – heure de début de l’alerte
--   suser – compte (généralement le compte d’utilisateur) impliqué dans l’alerte
--   shost – machine source de l’alerte
--   outcome – le cas échéant, réussite ou échec de l’activité suspecte dans l’alerte  
--   msg – description de l’alerte
--   cnt – pour les alertes qui ont le compte du nombre de fois où l’activité s’est produite (par exemple une attaque par force brute a une certaine quantité de mots de passe devinés)
--   app – protocole utilisé dans cette alerte
--   externalId – ID de type d’événement écrit par Azure ATP dans le journal des événements correspondant à chaque type d’alerte
--   cs#label & cs# – chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ et cs# est sa valeur. Par exemple : cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+|Détail|Explication|
+|---------|---------------|
+|start|heure de début de l’alerte|
+|suser|compte (généralement le compte d’utilisateur) impliqué dans l’alerte|
+|shost|compte (généralement le compte d’utilisateur) impliqué dans l’alerte|
+|outcome|le cas échéant, réussite ou échec de l’activité suspecte dans l’alerte|
+|msg|description de l'alerte|
+|cnt|pour les alertes qui ont le compte du nombre de fois où l’activité s’est produite (par exemple une attaque par force brute a une certaine quantité de mots de passe devinés)|
+|app |protocole utilisé dans cette alerte|
+|externalId|ID de type d’événement écrit par Azure ATP dans le journal des événements correspondant à chaque type d’alerte|
+|cs#label|chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ |
+|cs#|chaînes du client autorisés par CEF, où cs# est sa valeur.|
+|
 
-    Dans cet exemple, cs1 est un champ qui a une URL vers l’alerte.
+Par exemple : cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+<br> Dans cet exemple, le champ cs1 est l’URL de l’alerte. 
 
 > [!NOTE]
 > Si vous envisagez de créer l’automatisation ou des scripts pour les journaux Azure ATP SIEM, nous vous recommandons d’utiliser le champ **externalId** afin d’identifier le type d’alerte au lieu d’utiliser le nom de l’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’**externalId** de chaque alerte est définitif.  

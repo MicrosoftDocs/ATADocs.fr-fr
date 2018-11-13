@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47adb120cebe068f974d61891b843e276a0f52c0
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: daeb998f6e97bc4ebdf290d4430fec8fcef40313
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208168"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983155"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -81,18 +81,18 @@ Lisez d’abord la description de l’alerte pour déterminer de quel type de d�
 
 1.  Skeleton Key : déterminez si Skeleton Key a affecté vos contrôleurs de domaine à l’aide du [scanneur écrit par l’équipe Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Si l’analyseur détecte la présence d’un logiciel malveillant sur un ou plusieurs de vos contrôleurs de domaine, l’alerte est un vrai positif.
 
-2.  Golden Ticket – Dans la feuille de calcul Excel, accédez à l’onglet relatif à l’activité réseau. Vous voyez que le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement renforcé.
+2.  Golden Ticket : dans la feuille de calcul Excel, ouvrez l’onglet Activité réseau. Le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et le champ des **types de chiffrement pris en charge par les ordinateurs sources** affiche des méthodes de chiffrement plus poussé.
 
-  a. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
+  1. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
   
-  b. Vérifiez le compte et l’ordinateur source ; s’il y en a plusieurs, regardez s’ils ont un point commun. Il se peut par exemple que tout le personnel marketing utilise une même application, qui serait à l’origine du déclenchement de l’alerte. Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
+  2. Vérifiez le compte et l’ordinateur source ; s’il y en a plusieurs, regardez s’ils ont un point commun. Il se peut par exemple que tout le personnel marketing utilise une même application, qui serait à l’origine du déclenchement de l’alerte. Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
   
 
 
 3.  Overpass-the-Hash – Dans la feuille de calcul Excel, accédez à l’onglet relatif à l’activité réseau. Vous voyez que le champ qui a changé de version concerne le **type de chiffrement d’horodateur chiffré** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement renforcé.
 
-  a. Dans certains cas, cette alerte peut se déclencher quand des utilisateurs se connectent à l’aide de cartes à puce dont la configuration a récemment été modifiée. Vérifiez si des changements de ce type ont été apportés pour les comptes concernés. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
-  b. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
+  1. Dans certains cas, cette alerte peut se déclencher quand des utilisateurs se connectent à l’aide de cartes à puce dont la configuration a récemment été modifiée. Vérifiez si des changements de ce type ont été apportés pour les comptes concernés. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité et peut être supprimée.
+  2. Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut msDS-SupportedEncryptionTypes du compte de service de la ressource.
 
 **Correction**
 
@@ -134,7 +134,7 @@ Pass-the-Hash est une technique de mouvement latéral par laquelle les attaquant
 
 **Examen**
 
-Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement utilisé par l’utilisateur ciblé ? Si c’est le cas, il s’agit d’un faux positif. Si ce n’est pas le cas, il s’agit probablement d’un vrai positif.
+Vérifiez si le hachage provient d’un ordinateur que l’utilisateur ciblé possède ou utilise régulièrement. Si oui, l’alerte est un faux positif ; sinon, il s’agit probablement d’un vrai positif.
 
 **Correction**
 
@@ -187,10 +187,10 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
 
 2.  Tous les utilisateurs connectés à l’ordinateur sont-ils censés l’être ? Quels sont leurs privilèges ? 
 
-3.  Ces utilisateurs sont-ils censés avoir accès à ces ressources ?<br>
-Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge WD](./media/wd-badge.png).
+3.  Les utilisateurs connectés sont-ils censés avoir accès à ces ressources ?<br>
+Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP.
  
- 4. Pour un examen approfondi de l’ordinateur, dans Windows Defender ATP, vérifiez quels processus et quelles alertes se sont produits au moment de l’alerte.
+ 4. Pour un examen approfondi de l’ordinateur, vérifiez quels processus et quelles alertes se sont produits au moment de l’alerte dans Windows Defender ATP.
 
 **Correction**
 
@@ -256,7 +256,7 @@ Vous pouvez utiliser l’ [analyseur AD ACL](https://blogs.technet.microsoft.co
 
 **Description**
 
-Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants d’obtenir des privilèges supplémentaires par le biais du certificat PAC (Privileged Attribute Certificate), un champ dans le ticket Kerberos qui contient les données d’autorisation de l’utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe).
+Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants de manipuler le certificat PAC (Privileged Attribute Certificate). PAC est un champ du ticket Kerberos qui contient des données d’autorisation utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe) et accorde des privilèges supplémentaires aux attaquants.
 
 **Examen**
 
@@ -409,25 +409,28 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 > [!NOTE]
 > Les alertes de tentative d’exécution de code à distance sont prises en charge par les capteurs ATP uniquement. 
 
-## <a name="suspicious-authentication-failures"></a>Échecs d’authentification suspects
+## <a name="suspicious-authentication-failures--enhanced"></a>Échecs d’authentification suspects - amélioré
 
 **Description**
 
-Dans une attaque par force brute, un attaquant tente de s’authentifier en essayant plusieurs mots de passe pour différents comptes jusqu’à ce qu’il trouve le bon mot de passe de l’un des comptes. Une fois qu’il a deviné le mot de passe d’un compte, l’attaquant utilise ce compte pour se connecter au réseau.
+Dans une attaque par force brute, l’attaquant tente de s’authentifier avec plusieurs mots de passe auprès de différents comptes jusqu'à ce qu’un mot de passe correct soit trouvé, ou à l’aide d’un mot de passe dans une attaque par pulvérisation de mots de passe à grande échelle qui fonctionne au moins pour un compte. Lorsqu’un mot de passe est trouvé, l’attaquant se connecte en utilisant le compte authentifié.
 
-Dans cette détection, une alerte est déclenchée après l’échec de nombreuses tentatives d’authentification utilisant Kerberos ou NTLM. L’attaque peut être horizontale avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, verticale avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou à la fois horizontale et verticale. La période minimale avant le déclenchement d’une alerte est d’une semaine.
+Dans cette détection, une alerte est déclenchée lorsque de nombre d’échecs d’authentification se produisent à l’aide de la méthode Kerberos ou NTLM, ou lorsque une pulvérisation de mots de passe est détectée. Avec Kerberos ou NTLM, cette attaque peut être généralement horizontale, avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, verticale, avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou à la fois horizontale et verticale. Dans une pulvérisation de mots de passe, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Si la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. 
+
+**Période d’apprentissage** : le délai minimal avant le déclenchement d’une alerte est d’une semaine.
 
 **Examen**
 
-1.  Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
+1.  Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Les informations suivantes sont disponibles : 
    -    Liste des comptes attaqués
    -    Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
    -    Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
    -    Activités réseau associées si les tentatives d’authentification ont été effectuées à l’aide de Kerberos
+   -  Activités réseau associées si les tentatives d’authentification ont été effectuées à l’aide d’une pulvérisation de mots de passe
 
 2.  Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. Si vous avez activé l’intégration Windows Defender ATP, cliquez sur le badge Windows Defender ATP ![badge Windows Defender ATP](./media/wd-badge.png) pour examiner davantage l’ordinateur. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte. 
 
-3.  Si l’authentification a été effectuée à l’aide de NTLM, que vous voyez que l’alerte se produit de nombreuses fois et il n’y a pas suffisamment d’informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder, vous devez activer l’**audit NTLM** sur les contrôleurs de domaine concernés. Pour cela, activez l’événement 8004. Il s’agit de l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le **serveur** auquel l’ordinateur source a essayé d’accéder. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, vous devez examiner le serveur en vérifiant ses événements tels que 4624 pour mieux comprendre le processus d’authentification. 
+3.  Si l’authentification a été effectuée à l’aide de NTLM, que vous voyez que l’alerte se produit de nombreuses fois et il n’y a pas suffisamment d’informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder, activez l’**audit NTLM** sur les contrôleurs de domaine concernés. Pour cela, activez l’événement 8004. Il s’agit de l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le **serveur** auquel l’ordinateur source a essayé d’accéder. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez le serveur en vérifiant ses événements tels que 4624 pour mieux comprendre le processus d’authentification. 
 
 **Correction**
 

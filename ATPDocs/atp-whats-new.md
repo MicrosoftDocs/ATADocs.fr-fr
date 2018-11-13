@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202386"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983138"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
 
-### <a name="azure-atp-release-252"></a>Azure ATP version 2.5.2
-Publiée le 8 octobre 2018
+
+## <a name="azure-atp-release-253"></a>Azure ATP version 2.5.3
+Publiée le 4 novembre 2018
+
+- **Amélioration d’alerte de sécurité : échec d’authentification suspecte**<br>
+L’[alerte de sécurité d’échec d’authentification suspecte](suspicious-activity-guide.md) d’Azure ATP inclut désormais la surveillance pour la détection des attaques en force par pulvérisation de mots de passe.
+Dans une attaque par **pulvérisation de mots de passe** classique, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Lorsque la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. 
+
+- **Amélioration de fonctionnalité : Envoyer un message test Syslog**<br>   Nouvelle possibilité d’envoyer un message test Syslog pendant le processus de configuration SIEM. Consultez [Intégrer à Syslog](setting-syslog.md) pour en savoir plus. 
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-252"></a>Azure ATP version 2.5.2
+Publiée le 28 octobre 2018
 
 
 - **Amélioration d’alerte de sécurité : Tentative d’exécution de code à distance**<br>

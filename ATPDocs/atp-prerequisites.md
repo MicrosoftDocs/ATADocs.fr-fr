@@ -1,5 +1,5 @@
 ---
-title: Prérequis pour Azure Advanced Threat Protection | Microsoft Docs
+title: Prérequis pour Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement
 keywords: ''
 author: mlottner
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
-ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
+ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49401910"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50749001"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 
@@ -114,7 +114,7 @@ L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est in
 ### <a name="network-adapters"></a>Cartes réseau
 
 Le capteur Azure ATP surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
-Après le déploiement, vous pouvez utiliser le portail de l’espace de travail Azure ATP si vous voulez changer les cartes réseau surveillées.
+Après le déploiement, vous pouvez utiliser le portail Azure ATP si vous voulez changer les cartes réseau surveillées.
 
 Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f5caf3ef7c0c986404cfe90a6f8cc40aa9462b4
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089370"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983104"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -55,7 +55,7 @@ Effectuez les étapes suivantes sur votre serveur RRAS.
 
     ![Configuration de RADIUS](./media/radius-setup.png)
 
-4.  Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **nom du serveur** du capteur Azure ATP ou du capteur autonome Azure ATP le plus proche. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques que vous pouvez mémoriser. Vous devez la fournir plus loin dans votre configuration Azure ATP. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
+4.  Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **nom du serveur** du capteur Azure ATP le plus proche (disposant d’une connectivité réseau). Pour une disponibilité élevée, vous pouvez ajouter d’autres capteurs Azure ATP en tant que serveurs RADIUS. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques que vous pouvez mémoriser. Vous devez la fournir plus loin dans votre configuration Azure ATP. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
  
      ![Configuration du VPN](./media/vpn-set-accounting.png)
      
