@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 7f96971f3d7d11f49c025ddf88c1ced5e4fc8cb6
+ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132603"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609671"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -84,8 +84,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
         2.  Entrez le nom du contrôleur de domaine dans le champ **Entrer le nom de l’objet à sélectionner**. Ensuite, cliquez sur **Vérifier les noms**, puis sur **OK**.  
           ![Image de l’Observateur d’événements](media/wef3%20event%20viewer.png)  
         3.  Cliquez sur **OK**.
-     4. Cliquez sur **Sélectionner des événements**.
-
+    4.  Cliquez sur **Sélectionner des événements**.
         1. Cliquez sur **Par journal** et sélectionnez **Sécurité**.
         2. Dans le champ **Inclut/exclut l’ID d’événement**, tapez le numéro d’événement puis cliquez sur **OK**. Par exemple, tapez 4776, comme dans l’exemple suivant.
 

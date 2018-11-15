@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2d7027a53d6bbc26d037ceeef4c5083865bb7e7
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d812673ed387bcd6a14e6b316cb2224819c503e3
+ms.sourcegitcommit: 46b6a5088ed975bcfb36e7f9a3b5c00ecd5e185a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783098"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645274"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -57,7 +57,7 @@ La stratégie d’audit de sécurité avancée peut être activée via l’objet
     ![Auditer la gestion des groupes de sécurité](media/atp-advanced-audit-policy-check-step-4.png)
 
 > [!NOTE]
-> - Si vous choisissez d’utiliser une stratégie locale, ajoutez les journaux d’audit **Connexion de compte** et **Gestion de compte** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+> Si vous choisissez d’utiliser une stratégie locale, ajoutez les journaux d’audit **Connexion de compte** et **Gestion de compte** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Après application au moyen d’un objet GPO, les nouveaux événements sont visibles sous vos **journaux d’événements Windows**.
 
@@ -65,4 +65,4 @@ La stratégie d’audit de sécurité avancée peut être activée via l’objet
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
