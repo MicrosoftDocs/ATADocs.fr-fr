@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,20 +13,28 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983138"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560743"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
 
+## <a name="azure-atp-release-254"></a>Azure ATP version 2.5.4
+Publication : 11 novembre 2018
+
+- **Amélioration de fonctionnalité : Des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte sur DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
+
+- **Améliorations de la documentation : Mise à jour sur les journaux SIEM et conseils pour les problèmes connus**<br>    Un mappage des externalId ainsi que des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md). <br>Un article a été ajouté pour fournir des conseils au sujet de problèmes connus non encore résolus. Pour en savoir plus, consultez [Problèmes connus dans Azure ATP](known-issues.md).  
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-253"></a>Azure ATP version 2.5.3
-Publiée le 4 novembre 2018
+Publication : 4 novembre 2018
 
 - **Amélioration d’alerte de sécurité : échec d’authentification suspecte**<br>
 L’[alerte de sécurité d’échec d’authentification suspecte](suspicious-activity-guide.md) d’Azure ATP inclut désormais la surveillance pour la détection des attaques en force par pulvérisation de mots de passe.
@@ -37,7 +45,7 @@ Dans une attaque par **pulvérisation de mots de passe** classique, après avoir
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-252"></a>Azure ATP version 2.5.2
-Publiée le 28 octobre 2018
+Publication : 28 octobre 2018
 
 
 - **Amélioration d’alerte de sécurité : Tentative d’exécution de code à distance**<br>
@@ -46,7 +54,7 @@ L’[alerte de sécurité Tentative d’exécution de code à distance](suspicio
 - **Amélioration de fonctionnalité : Définir une planification de rapport**
 <br>Vous pouvez désormais définir une heure de planification spécifique pour vos rapports Azure ATP à l’aide de la fonction [rapports](reports.md#). 
 
-- **Ajout de configuration : Contrôle d’accès en fonction du rôle de locataire (RBAC)**
+- **Ajout de configuration : Contrôle d’accès en fonction du rôle de locataire (RBAC)**
 <br>Configurez les rôles de sécurité de votre locataire dans le Centre d’administration Azure Active Directory (AAD) directement à partir du nouveau lien Administrateur du portail Azure ATP. 
 
 - **Révision de la structure et du contenu de la documentation**
@@ -58,22 +66,22 @@ L’[alerte de sécurité Tentative d’exécution de code à distance](suspicio
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-251"></a>Azure ATP version 2.5.1
-Publiée le 21 octobre 2018
+Publication : 21 octobre 2018
 
 - Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-250"></a>Azure ATP version 2.50
-Publiée le 14 octobre 2018
+Publication : 14 octobre 2018
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes.
 
 
 ## <a name="azure-atp-release-249"></a>Azure ATP version 2.49
-Publiée le 7 octobre 2018
--   **Nouvelles détections : Communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour aider à protéger contre les attaques de communication DNS suspecte :
+Publication : 7 octobre 2018
+-   **Nouvelles détections : Communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour renforcer la protection contre les attaques de communication suspecte sur le DNS :
 
-    -   Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Ceci permet à un attaquant sur une machine compromise d’abuser le protocole DNS. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
+    -   Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Un attaquant peut alors accéder à une machine compromise afin d’utiliser le protocole DNS de manière abusive. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
 
 - **Nouvelle fonctionnalité** <br>**Rôle d’utilisateur** Azure ATP amélioré avec les fonctionnalités suivantes :
   - Changer l’état des alertes de sécurité (rouvrir, fermer, exclure, supprimer)
@@ -84,13 +92,13 @@ Publiée le 7 octobre 2018
   - Définir des notifications via e-mail ou Syslog
 
 
-- Une augmentation temporaire des alertes de sécurité **Reconnaissance à l’aide de requêtes de services d’annuaire** qui s’est produite le 16/09/2018 a été identifiée et résolue. 
+- Une augmentation temporaire des alertes de sécurité **Reconnaissance à l’aide de requêtes de services d’annuaire** qui s’est produite le 16 septembre 2018 a été identifiée et résolue. 
 
 - Cette version comprend aussi des correctifs et des améliorations visant plusieurs problèmes.
 
 
 ## <a name="azure-atp-release-248"></a>Azure ATP version 2.48
-Publiée le 16 septembre 2018
+Publication : 16 septembre 2018
 - **Alerte de sécurité :** Reconnaissance à l’aide de requêtes de services d’annuaire
 
   Cette alerte de sécurité a désormais une infographie et des preuves améliorées. 
@@ -106,7 +114,7 @@ Publiée le 16 septembre 2018
 
 
 ## <a name="azure-atp-release-247"></a>Azure ATP version 2.47
-Publication : 2 septembre 2018
+Publication : 2 septembre 2018
 
 - **Vérification des stratégies d’audit avancées d’Azure ATP**
  
@@ -122,13 +130,13 @@ Examinez comment [configurer les stratégies d’audit avancées](atp-advanced-a
 
 ## <a name="azure-atp-release-246"></a>Azure ATP version 2.46
 
-Publication : 26 août 2018
+Publication : 26 août 2018
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes.
 
 ## <a name="azure-atp-release-245"></a>Azure ATP version 2.45
 
-Publication : 19 août 2018
+Publication : 19 août 2018
 
 - **Azure ATP ajoute le Suivi d’événements pour Windows (ETW) comme source de données supplémentaires**  <br> Suivi d’événements pour Windows (ETW) ajouté en tant que source de données supplémentaire en plus du trafic réseau existant et des événements Windows. ETW fournit des détections d’activité suspecte supplémentaires, notamment : les promotions du contrôleur de domaine suspect et les demandes de réplication de contrôleur de domaine suspectes (deux attaques DCShadow potentielles). <br>
 Seuls les capteurs ATP installés sur les contrôleurs de domaine prennent en charge les détections basées sur ETW. Les détections ETW ne sont pas prises en charge par les capteurs autonomes ATP. <br>  

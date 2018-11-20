@@ -1,11 +1,11 @@
 ---
-title: Exclusion d’entités des détections dans Azure Advanced Threat Protection | Microsoft Docs
+title: Exclusion d’entités des détections dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Explique comment empêcher Azure ATP de détecter comme suspectes les activités d’entités spécifiques
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,39 +13,45 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782928"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560675"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
-Cet article explique comment exclure des entités pour les empêcher de déclencher des alertes, afin de minimiser les vrais positifs sans gravité, tout en vous assurant d’intercepter les vrais positifs. Pour empêcher Azure ATP de déclencher des alertes sur des activités qui peuvent faire partie de l’activité professionnelle normale d’utilisateurs spécifiques, vous pouvez empêcher des entités spécifiques de déclencher des alertes.
+Cet article explique comment exclure des entités du processus de déclenchement des alertes. Certaines entités sont exclues afin de limiter les vrais positifs sans gravité tout en garantissant la détection des vrais positifs. Pour supprimer le bruit qu’Azure ATP génère à propos d’activités effectuées par des utilisateurs dans le cadre de leur activité professionnelle normale, vous pouvez désactiver, ou exclure, des entités spécifiques du processus de déclenchement des alertes. Par ailleurs, certaines entités courantes sont exclues par défaut. 
 
-Par exemple, si vous disposez d’un scanneur de sécurité qui effectue le rapprochement DNS ou un administrateur qui exécute à distance des scripts sur le contrôleur de domaine et qu’il s’agit d’activités approuvées faisant partie des opérations informatiques normales de votre organisation. Afin d’obtenir plus d’informations sur les détections Azure ATP pour mieux déterminer les entités à exclure, consultez le [guide des activités suspectes](suspicious-activity-guide.md).
+Par exemple, les activités approuvées dans le cadre des opérations informatiques normales dans votre organisation, comme la reconnaissance DNS effectuée par un scanneur de sécurité ou l’exécution de scripts à distance sur le contrôleur de domaine par un administrateur, peuvent être exclues. Pour plus d’informations sur chaque détection Azure ATP et le choix des entités à exclure, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
-Pour empêcher des entités de déclencher des alertes dans Azure ATP :
+## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entités exclues par défaut du processus de déclenchement des alertes
+ Pour certaines alertes, comme **Communication suspecte sur DNS**, des exclusions de domaine automatiques sont ajoutées par Azure ATP sur la base des recherches et des commentaires des clients. 
+ 
+![Exclusions automatiques des alertes Communication suspecte sur DNS](./media/dns-auto-exclusions.png) 
 
-Il existe deux façons d’exclure des entités : à partir de l’activité suspecte elle-même ou à partir de l’onglet **Exclusions** de la page **Configuration**.
+## <a name="exclude-entities-from-raising-alerts"></a>Exclure des entités du processus de déclenchement des alertes
 
-- **À partir de l’activité suspecte** : dans la chronologie des activités suspectes, lorsque vous recevez une alerte sur une activité pour un utilisateur, un ordinateur ou une adresse IP qui est autorisé(e) à effectuer l’activité spécifique et qui peut l’exécuter fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte pour cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Elle ferme également l’activité suspecte qui n'est plus répertoriée dans la liste d’événements **ouverts** dans la **chronologie de l’activité suspecte**.
+Il y a deux façons d’exclure manuellement des entités : soit directement à partir de l’alerte de sécurité, soit à partir de l’onglet **Exclusions** de la page **Configuration**. 
+
+- **À partir de l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur une activité associée à un utilisateur, un ordinateur ou une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, effectuez les étapes suivantes :
+  - Cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’alerte de sécurité pour cette entité, puis sélectionnez **Fermer et exclure**. Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions définies pour cette alerte de sécurité. Elle ferme l’alerte de sécurité et la retire de la liste des événements **Ouvert** dans la **chronologie des alertes**.
 
     ![Exclure une entité](./media/exclude-in-sa.png)
 
-- **À partir de la page Configuration** : pour vérifier ou modifier les exclusions : sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’activité suspecte, comme **Reconnaissance DNS**.
+- **À partir de la page Configuration** : pour revoir ou changer des exclusions, sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’alerte de sécurité à laquelle appliquer l’exclusion, comme **Reconnaissance DNS**.
 
     ![Configuration d’exclusion](./media/exclusions.png)
 
-Pour ajouter une entité à partir de la configuration **Exclusions** : entrez le nom de l’entité, cliquez sur le signe plus, puis cliquez sur **Enregistrer** au bas de la page.
+Pour ajouter une entité à partir de la configuration **Exclusions** : entrez le nom de l’entité, cliquez sur le signe plus, puis cliquez sur **Enregistrer** en bas de la page.
 
-Pour supprimer une entité de la configuration **Exclusions** : cliquez sur le signe moins en regard du nom de l’entité, puis cliquez sur **Enregistrer** au bas de la page.
+Pour supprimer une entité de la configuration **Exclusions** : cliquez sur le signe moins à côté du nom de l’entité, puis cliquez sur **Enregistrer** en bas de la page.
 
-Nous vous recommandons d’ajouter des exclusions aux détections seulement après avoir reçu des alertes et déterminé qu’il s’agit de vrais positifs sans gravité. 
+Nous vous recommandons d’ajouter des exclusions aux détections seulement après avoir reçu des alertes du type en question *et* vérifié qu’il s’agit de vrais positifs sans gravité. 
 
 > [!NOTE]
 > Pour votre protection, toutes les détections n’offrent pas la possibilité de définir des exclusions. 
@@ -57,10 +63,11 @@ Chaque exclusion dépend du contexte. Pour certaines exclusions, vous pouvez dé
 Lorsque vous avez la possibilité d’exclure une adresse IP ou un ordinateur, vous pouvez exclure l’un ou l’autre. Il n’est pas nécessaire de fournir les deux.
 
 > [!NOTE]
-> Les pages de configuration peuvent être modifiées seulement par des administrateurs Azure ATP.
+> Les pages de configuration sont modifiables uniquement par les administrateurs Azure ATP.
 
 
 ## <a name="see-also"></a>Voir aussi
 
+- [Guide des alertes de sécurité d’Azure ATP](suspicious-activity-guide.md)
 - [Intégration à Windows Defender ATP](integrate-wd-atp.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
