@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8707d34f22c358936bd6158311a78a45d783483c
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b3fb06733a2ba1c38aeb682cd6f8cc57a2ba1a3b
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133325"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157520"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -41,7 +41,6 @@ La procédure par défaut et la plus simple pour interroger la base de données 
 |Rechercher des collections dans la base de données.|`show collections`|Utile en tant que test de bout en bout pour constater que le trafic est écrit dans la base de données et que l’événement 4776 est reçu par ATA.|
 |Obtenir les détails d’un utilisateur/ordinateur/groupe (UniqueEntity), par exemple un ID d’utilisateur.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
 |Rechercher le trafic d’authentification Kerberos provenant d’un ordinateur donné lors d’une journée spécifique.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|Pour obtenir l’&lt;ID de l’ordinateur source&gt;, vous pouvez interroger les collections UniqueEntity, comme illustré dans l’exemple.<br /><br />Chaque type d’activité réseau, par exemple les authentifications Kerberos, possède sa propre collection par date UTC.|
-|Rechercher le trafic NTLM provenant d’un ordinateur donné associé à un compte indiqué lors d’une journée spécifique.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|Pour obtenir l’&lt;ID de l’ordinateur source&gt; et l’&lt;ID du compte&gt;, vous pouvez interroger les collections UniqueEntity, comme illustré dans l’exemple.<br /><br />Chaque type d’activité réseau, par exemple les authentifications NTLM, possède sa propre collection par date UTC.|
 |Apporter des modifications de configuration avancée. Dans cet exemple, affectons la valeur 10 000 à la taille de la file d’attente d’envoi pour toutes les passerelles ATA.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 Voici un exemple de code qui utilise la syntaxe fournie précédemment. Si vous étudiez une activité suspecte qui s’est produite le 20/10/2015 et que vous souhaitez en savoir plus sur les activités NTLM effectuées par « John Doe » ce jour-là :<br /><br />Tout d’abord, recherchez l’ID de « John Doe »
