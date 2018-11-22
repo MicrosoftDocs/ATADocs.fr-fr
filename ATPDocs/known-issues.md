@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1c5aa0359ac0d24d2bf3fc3033986657c3fc897
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: cab7dad8187c79ff1e5068594b972f58bb19040c
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561426"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157554"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -28,11 +28,11 @@ Azure ATP présente parfois des limitations de conception ou de fonctionnalité 
 
 Pour voir les problèmes connus dans Azure ATP et les solutions de contournement existantes, consultez [Dépannage des problèmes connus d’Azure ATP](troubleshooting-atp-known-issues.md). Pour vérifier l’état de votre locataire Azure ATP, accédez au [Centre d’intégrité Azure ATP](atp-health-center.md). 
 
-## <a name="winrm-not-supported-using-windows-server-2016"></a>WinRM ne prend pas en charge Windows Server 2016
+## <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016"></a>Les tentatives d’exécution de code à distance avec des scripts ou des commandes PowerShell à distance ne sont pas détectées quand vous utilisez Windows Server 2016
 > [!div class="mx-tableFixed"]  
 |Problème|État|
 |----|----|
-|WinRM ne prend pas en charge Windows Server 2016. La détection connexe et les alertes qui en résultent (tentatives d’exécution de code à distance) ne sont pas disponibles pour les machines exécutant Windows Server 2016.|Les ingénieurs cherchent actuellement une solution à ce problème pour ajouter la prise en charge de Windows Server 2016.|
+|Actuellement, les tentatives d’exécution de code à distance avec des commandes PowerShell à distance ne sont pas détectées sur les machines de capteur exécutant Windows Server 2016. Les détections associées et les alertes résultantes ne sont pas disponibles.|Les ingénieurs cherchent actuellement une solution à ce problème pour ajouter la prise en charge de Windows Server 2016.|
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Les groupes AD contenant plus de 1 000 membres limitent la synchronisation des détails
 > [!div class="mx-tableFixed"]  
