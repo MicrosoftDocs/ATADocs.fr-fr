@@ -44,7 +44,8 @@
 ## [Gestion des alertes de sécurité](working-with-suspicious-activities.md)
 # Alertes de sécurité Azure ATP
 ## [Guide sur les alertes de sécurité](suspicious-activity-guide.md)
-## [Examiner les chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
+## [Chemins de mouvement latéral](use-case-lateral-movement-path.md)
+### [Examiner les chemins de mouvement latéral](investigate-lateral-movement-path.md)
 ## [Examiner les entités](investigate-entity.md)
 # Dépannage
 ## [Centre d’intégrité Azure ATP](atp-health-center.md)
