@@ -1,11 +1,11 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: La quatrième étape de la procédure d’installation d’Azure ATP vous permet d’installer le capteur Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501104"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -33,7 +33,7 @@ ms.locfileid: "48783727"
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Étape 4. Installer le capteur Azure ATP
 
 > [!IMPORTANT]
->Vérifiez que .NET Framework 4.7 est installé sur l'ordinateur. Si .NET Framework 4.7 n’est pas installé, le package d’installation de capteur Azure ATP l’installe, ce qui nécessite un redémarrage du serveur.
+>Vérifiez que .NET Framework 4.7 est installé sur l'ordinateur. Si .NET Framework 4.7 n’est pas installé, le package d’installation de capteur Azure ATP l’installe, ce qui peut nécessiter un redémarrage du serveur.
 
 Effectuez les opérations suivantes sur le contrôleur de domaine.
 
@@ -99,4 +99,4 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

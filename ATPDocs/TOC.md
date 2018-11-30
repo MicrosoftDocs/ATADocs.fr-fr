@@ -8,7 +8,7 @@
 ## [Prérequis d’Azure ATP](atp-prerequisites.md)
 ## [Planifier la capacité Azure ATP](atp-capacity-planning.md)
 # Démarrage rapide
-## [Créer un espace de travail dans le portail Azure ATP](install-atp-step1.md)
+## [Créer votre instance Azure ATP](install-atp-step1.md)
 ## [Se connecter à Active Directory](install-atp-step2.md)
 ### [Prise en charge de plusieurs forêts Azure ATP](atp-multi-forest.md)
 ## [Télécharger le package du capteur Azure ATP](install-atp-step3.md)
