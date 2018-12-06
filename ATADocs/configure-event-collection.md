@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c49b71ea5fb67e57d505fb0b7c2e69314de4f9
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 8fffdfa2269139cee5b06b8824bfce35034ab9ba
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501120"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950354"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -62,6 +62,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    
     1.  Sélectionnez **Activé**.
     2.  Sous **Options**, cliquez sur **Afficher**.
+
     3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
          *(Par exemple : Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
