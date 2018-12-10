@@ -1,11 +1,11 @@
 ---
-title: Changer le mot de passe de connectivité de domaine dans la configuration d’Azure Advanced Threat Protection | Microsoft Docs
+title: Modifier le mot de passe de connectivité de domaine dans la configuration d’Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit comment modifier le mot de passe de connectivité de domaine sur le capteur autonome Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783115"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744300"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure Advanced Threat Protection*
 
 
 
-# <a name="change-azure-atp-workspace-portal-configuration---domain-connectivity-password"></a>Modifier le mot de passe de connectivité de domaine dans la configuration du portail d’espace de travail Azure ATP
+# <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Modifier le mot de passe de connectivité de domaine dans la configuration du portail Azure ATP
 
 
 
@@ -38,7 +38,7 @@ Suivez la procédure ci-dessous pour mettre à jour le mot de passe de connectiv
 > [!NOTE]
 > Il s’agit du nom d’utilisateur et du mot de passe du déploiement local d’Active Directory et non d’Azure AD.
 
-1.  Ouvrez le portail Azure ATP en accédant à l’URL de l’espace de travail.
+1.  Ouvrez le portail Azure ATP en accédant à l’URL du portail.
 
 2.  Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 
@@ -62,4 +62,4 @@ Suivez la procédure ci-dessous pour mettre à jour le mot de passe de connectiv
 ## <a name="see-also"></a>Voir aussi
 
 - [Intégration à Windows Defender ATP](integrate-wd-atp.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

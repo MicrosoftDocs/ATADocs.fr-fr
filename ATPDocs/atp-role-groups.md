@@ -1,11 +1,11 @@
 ---
-title: Groupes de rôles Azure Advanced Threat Protection pour la gestion des accès | Microsoft Docs
+title: Groupes de rôles Azure - Protection avancée contre les menaces pour la gestion des accès | Microsoft Docs
 description: Explique comment utiliser des groupes de rôles Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848611"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744329"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 
@@ -38,17 +38,17 @@ Les groupes de rôles permettent de gérer les accès pour Azure ATP. À l’aid
 
 ## <a name="accessing-the-azure-atp-portal"></a>Accès au portail Azure ATP
 
-L’accès au portail Azure ATP (portal.atp.azure.com) est possible seulement par un utilisateur Azure AD qui a le rôle d’annuaire d’administrateur général ou de sécurité. Après avoir passé le portail, vous pouvez créer votre espace de travail. Le service Azure ATP crée trois groupes de sécurité dans votre locataire Azure Active Directory : Administrateurs, Utilisateurs, Observateurs. 
+L’accès au portail Azure ATP (portal.atp.azure.com) est possible seulement par un utilisateur Azure AD qui a le rôle d’annuaire d’administrateur général ou de sécurité. Après être entré dans le portail avec le rôle requis, vous pouvez créer votre instance Azure ATP. Le service Azure ATP crée trois groupes de sécurité dans votre locataire Azure Active Directory : Administrateurs, Utilisateurs, Observateurs. 
 
 > [!NOTE]
-> L’accès au portail Azure ATP est accordé seulement aux utilisateurs des groupes de sécurité de votre annuaire Azure Active Directory, ainsi qu’aux administrateurs généraux et de sécurité du locataire.
+> L’accès au portail Azure ATP est accordé uniquement aux utilisateurs appartenant aux groupes de sécurité Azure ATP, à votre annuaire Azure Active Directory ainsi qu’aux administrateurs généraux et de sécurité du locataire.
 
 
 ## <a name="types-of-azure-atp-security-groups"></a>Types de groupes de sécurité Azure ATP 
 
-Azure ATP fournit trois types de groupes de sécurité : Administrateurs *(nom de l’espace de travail)* Azure ATP, Utilisateurs *(nom de l’espace de travail)* Azure ATP et Observateurs *(nom de l’espace de travail)* Azure ATP. Le tableau suivant décrit le type d’accès dans le portail Azure ATP disponible pour chaque rôle. En fonction du rôle que vous affectez, différents écrans et options de menu ne sont pas disponibles dans le portail Azure ATP, comme suit :
+Azure ATP propose trois types de groupe de sécurité : Administrateurs *(nom de l’instance)* Azure ATP, Utilisateurs *(nom de l’instance)* Azure ATP et Observateurs *(nom de l’instance)* Azure ATP. Le tableau suivant décrit le type d’accès dans le portail Azure ATP disponible pour chaque rôle. En fonction du rôle que vous affectez, différents écrans et options de menu ne sont pas disponibles dans le portail Azure ATP, comme suit :
 
-|Activité |Administrateurs *(nom de l’espace de travail)* Azure ATP|Utilisateurs *(nom de l’espace de travail)* Azure ATP|Observateurs *(nom de l’espace de travail)* Azure ATP|
+|Activité |Administrateurs *(nom de l’instance)* Azure ATP|Utilisateurs *(nom de l’instance)* Azure ATP|Observateurs *(nom de l’instance)* Azure ATP|
 |----|----|----|----|
 |Se connecter|Disponible|Disponible|Disponible|
 |Changer l’état des alertes de sécurité (rouvrir, fermer, exclure, supprimer)|Disponible|Disponible|Non disponible|

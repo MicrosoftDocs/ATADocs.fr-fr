@@ -1,11 +1,11 @@
 ---
-title: Surveiller les événements et l’intégrité système d’Azure Advanced Threat Protection | Microsoft Docs
+title: Surveiller les événements et l’intégrité système d’Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Le centre d’intégrité d’espace de travail Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 100964d904c7cda48e75cb5401fbba8a3ec0718e
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782894"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744657"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="working-with-azure-atp-workspace-health-and-events"></a>Utilisation des événements et de l’intégrité d’espace de travail Azure ATP
@@ -47,11 +47,11 @@ Pour vérifier l’intégrité globale de votre espace de travail, cliquez sur l
     > [!NOTE]
     > Azure ATP peut rouvrir une activité fermée si celle-ci est détectée à nouveau peu de temps après.
     
--   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
+-   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes de nouveau averti.
 
--   **Rouvrir** : vous pouvez rouvrir un problème fermé ou supprimé afin qu’il figure de nouveau à l’état Ouvert dans la chronologie.
+-   **Rouvrir** : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
 
--   **Supprimer** : dans la chronologie des activités suspectes, vous avez également la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, elle est supprimée de l’espace de travail et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
+-   **Supprimer** : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
 
 
@@ -65,4 +65,4 @@ Pour vérifier l’intégrité globale de votre espace de travail, cliquez sur l
 ## <a name="see-also"></a>Voir aussi
 
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

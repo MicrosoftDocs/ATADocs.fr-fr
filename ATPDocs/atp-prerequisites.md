@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
-ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
+ms.openlocfilehash: ad2a7e86b2280e1b30a7605bc832ede1e19cb7a2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50749001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52744946"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -37,7 +37,7 @@ Pour créer votre instance d’Azure ATP, vous avez besoin d’un locataire AAD 
 
 Ce guide des prérequis comprend les sections suivantes qui vous permettent de vérifier que vous avez tout ce qu’il faut pour déployer Azure ATP. 
 
-[Avant de commencer](#before-you-start) : liste les informations à rassembler, ainsi que les comptes et les entités réseau dont vous devez disposer avant de procéder à l’installation.
+[Avant de commencer](#before-you-start) : liste les informations à rassembler ainsi que les comptes et les entités réseau dont vous devez disposer avant de commencer l’installation.
 
 [Portail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : décrit la configuration requise pour le navigateur du portail Azure ATP.
 

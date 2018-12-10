@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/29/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3336189338b16a58a4e8bf67490948a163e9d56
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208151"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744776"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -34,7 +34,7 @@ Cet article fournit une liste de questions fréquemment posées sur Azure ATP et
 
 ### <a name="what-can-azure-atp-detect"></a>Que peut détecter Azure ATP ?
 
-Azure ATP détecte les techniques et attaques malveillantes connues, les problèmes de sécurité et les risques.
+Azure ATP détecte les techniques et attaques malveillantes connues, les problèmes de sécurité et les risques qui menacent votre réseau.
 Pour obtenir la liste complète des détections fournies par Azure ATP, consultez [Quelles sont les détections effectuées par Azure ATP ?](suspicious-activity-guide.md).
 
 ### <a name="what-data-does-azure-atp-collect"></a>Quelles sont les données collectées par Azure ATP ? 
@@ -63,15 +63,15 @@ Oui. Étant donné que les comptes d’ordinateurs (de même que toute autre ent
 Azure ATP est disponible dans le cadre de la suite Enterprise Mobility + Security 5 (EMS E5) et sous forme de licence autonome. Vous pouvez acquérir une licence directement sur le [portail Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence de fournisseur de solutions cloud (CSP).
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Cette offre va-t-elle faire partie d’Azure Active Directory ou du service Active Directory local ?
-Cette solution est pour l’instant une offre autonome. Elle ne fait partie ni d’Azure Active Directory, ni du service Active Directory local.
+La solution Azure ATP est pour l’instant une offre autonome. Elle ne fait partie ni d’Azure Active Directory, ni du service Active Directory local.
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Est-ce que mes données sont isolées des données des autres clients ? 
 
-Oui, vos données sont isolées par l’authentification de l’accès et la répartition logique basées sur l’ID client. Chaque client peut uniquement accéder aux données collectées dans sa propre organisation et aux données génériques fournies par Microsoft.
+Oui, vos données sont isolées par l’authentification de l’accès et la séparation logique basée sur les identificateurs client. Chaque client peut uniquement accéder aux données collectées dans sa propre organisation et aux données génériques fournies par Microsoft.
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Ai-je la possibilité de sélectionner l’emplacement où stocker mes données ? 
 
-Lors de la création de l’espace de travail Azure ATP, vous pouvez choisir de stocker vos données dans des centres de données Microsoft Azure aux États-Unis ou en Europe. Une fois configuré, vous ne pouvez pas modifier l’emplacement où sont stockées vos données. Microsoft ne transférera pas les données à partir de l’emplacement spécifié.                
+Non. Une fois créée, votre instance Azure ATP est automatiquement stockée dans le centre de données du pays le plus proche de l’emplacement géographique de votre locataire AAD. Après avoir créé votre instance Azure ATP, vous ne pouvez pas déplacer les données Azure ATP dans un autre centre de données.                
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Comment est-ce que Microsoft empêche les activités internes malveillantes et les abus de rôles dotés de privilèges élevés ? 
 
@@ -107,14 +107,14 @@ Si un contrôleur de domaine virtuel ne peut pas être couvert par le capteur Az
 
 Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com. Pour obtenir des instructions sur la façon de procéder, consultez [Configurer votre proxy ou pare-feu pour permettre la communication avec les capteurs Azure ATP](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Azure ATP peut-il surveiller les contrôleurs de domaine virtualisés sur votre solution IaaS ?
+### <a name="can-azure-atp-monitored-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Les contrôleurs de domaine supervisés par Azure ATP peuvent-ils être virtualisés dans votre solution IaaS ?
 Oui, vous pouvez utiliser le capteur Azure ATP pour surveiller les contrôleurs de domaine qui se trouvent dans n’importe quelle solution IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Azure ATP peut-il prendre en charge plusieurs domaines et plusieurs forêts ?
 Azure - Protection avancée contre les menaces prend en charge les environnements à plusieurs domaines et plusieurs forêts. Cette fonctionnalité est actuellement en préversion publique. Pour plus d’informations et les limitations connues, consultez [Prise en charge de plusieurs forêts](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Puis-je examiner l’intégrité globale du déploiement ?
-Oui. Vous pouvez consulter l’intégrité globale du déploiement ainsi que les problèmes spécifiques liés à la configuration, à la connectivité, etc. Dès qu’un problème se produit, vous êtes averti.
+Oui. Vous pouvez examiner l’intégrité globale du déploiement ainsi que les problèmes spécifiques liés à la configuration, à la connectivité, etc. Dès qu’un problème se produit, vous êtes averti par des alertes Azure ATP.
 
 ## <a name="operation"></a>Opération
 
@@ -124,10 +124,10 @@ Vous pouvez configurer Azure ATP de façon à envoyer une alerte Syslog à n’i
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
 Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs du domaine »).
 
-Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez également [marquer des comptes comme sensibles manuellement](sensitive-accounts.md).
+Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](sensitive-accounts.md).
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Est-ce que je dois écrire mes propres règles et créer un seuil/une ligne de base ?
-Avec Azure - Protection avancée contre les menaces, il est inutile de créer et d’ajuster des règles, des seuils ou des lignes de base. Azure ATP analyse les comportements des utilisateurs, appareils et ressources, ainsi que leurs relations entre eux, et détecte rapidement les activités suspectes et les attaques connues. Trois semaines après son déploiement, Azure ATP commence à détecter les activités comportementales suspectes. En revanche, la détection des attaques malveillantes et des problèmes de sécurité connus est opérationnelle immédiatement après le déploiement.
+Avec Azure - Protection avancée contre les menaces, il est inutile de créer et d’ajuster des règles, des seuils ou des lignes de base. Azure ATP analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations mutuelles, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après son déploiement, Azure ATP commence à détecter les activités comportementales suspectes. En revanche, la détection des attaques malveillantes et des problèmes de sécurité connus est opérationnelle immédiatement après le déploiement.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Que dois-je faire si le capteur autonome ou le capteur Azure ATP ne démarre pas ?

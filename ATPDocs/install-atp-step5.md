@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: 2bdfd0fe41ed6dc5f489784c2095cefd2032d135
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800036"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744350"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -75,7 +75,7 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
  >[!NOTE]
  > La version d’Azure ATP est fréquemment mise à jour. Pour vérifier la version, dans le portail Azure ATP, accédez à **Configuration**, puis à **À propos**. 
 
-3.  Accédez à l’URL de votre espace de travail. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, tel qu’un utilisateur ou un groupe de votre domaine.
+3.  Accédez à l’URL de votre instance Azure ATP. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, tel qu’un utilisateur ou un groupe de votre domaine.
 
 
 

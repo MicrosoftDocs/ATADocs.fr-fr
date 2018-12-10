@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: da38cef088dcd255c264792fd70bfebf1c42a34b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783319"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744929"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -70,9 +70,9 @@ Si un proxy ou pare-feu bloque tout le trafic par défaut et autorise uniquement
 |Asie|triprd1wcasse1sensorapi.atp.azure.com|
 
 
-Vous pouvez également renforcer les règles du pare-feu ou du proxy pour un espace de travail que vous avez créé, en définissant une règle pour les enregistrements DNS suivants :
-- \<nom-espace de travail>.atp.azure.com : pour la connectivité de la console. Par exemple, « Contoso-corp.atp.azure.com »
-- \<nom-espace de travail>sensorapi.atp.azure.com : pour la connectivité des capteurs. Par exemple, « contoso-corpsensorapi.atp.azure.com »
+Vous pouvez aussi renforcer les règles de pare-feu ou de proxy pour une instance spécifique que vous avez créée en définissant une règle pour les enregistrements DNS suivants :
+- \<<nom-instance>.atp.azure.com (pour la connectivité de la console). Par exemple, « Contoso-corp.atp.azure.com »
+- \<<nom-instance>sensorapi.atp.azure.com (pour la connectivité des capteurs). Par exemple, « contoso-corpsensorapi.atp.azure.com »
 
  
 > [!NOTE]
@@ -81,4 +81,4 @@ Vous pouvez également renforcer les règles du pare-feu ou du proxy pour un esp
 
 ## <a name="see-also"></a>Voir aussi
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

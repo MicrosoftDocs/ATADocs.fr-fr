@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 23d92b207c9bcfeb38afa67bdd5e4911b1a16aa4
-ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
+ms.openlocfilehash: fec3ccbf44b4637132d769e35c4c83f7a4b5e5f5
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876577"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950320"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -42,11 +42,10 @@ Quand vous utilisez l’installation sans assistance d’Azure ATP, le programme
 Pour suivre la progression du déploiement, surveillez les journaux d’installation d’Azure ATP, qui se trouvent dans **%AppData%\Local\Temp**.
 
 
-
 ## <a name="azure-atp-sensor-silent-installation"></a>Installation sans assistance du capteur Azure ATP
 
 > [!NOTE]
-> En cas de déploiement sans assistance du capteur Azure ATP avec System Center Configuration Manager ou un autre système de déploiement de logiciels, il est recommandé de créer deux packages de déploiement :</br>- .NET Framework 4.7, avec redémarrage du contrôleur de domaine</br>- Capteur Azure ATP </br>Rendez le package du capteur Azure ATP dépendant du déploiement du package .NET Framework. </br>Obtenez le [package de déploiement hors connexion .NET Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
+> En cas de déploiement sans assistance du capteur Azure ATP avec System Center Configuration Manager ou un autre système de déploiement de logiciels, il est recommandé de créer deux packages de déploiement :</br>- .NET Framework 4.7, en prévoyant éventuellement le redémarrage du contrôleur de domaine</br>- Capteur Azure ATP </br>Rendez le package du capteur Azure ATP dépendant du déploiement du package .NET Framework. </br>Obtenez le [package de déploiement hors connexion .NET Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Utilisez la commande suivante pour effectuer une installation sans assistance complète du capteur Azure ATP :
@@ -75,9 +74,9 @@ Utilisez la commande suivante pour effectuer une installation sans assistance co
 > [!div class="mx-tableFixed"]
 |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Oui|Définit la clé d’accès servant à inscrire le capteur Azure ATP avec l’espace de travail Azure ATP.|
+|AccessKey|AccessKey="\*\*"|Oui|Définit la clé d’accès utilisée pour inscrire le capteur Azure ATP auprès de l’instance Azure ATP.|
 
-**Exemples**: Pour installer sans assistance le capteur Azure ATP, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administrateur d’Azure ATP pour ne pas avoir à spécifier d’informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le avec le service cloud Azure ATP en utilisant les informations d’identification spécifiées :
+**Exemples** : utilisez la commande suivante pour installer en mode silencieux le capteur Azure ATP :
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 

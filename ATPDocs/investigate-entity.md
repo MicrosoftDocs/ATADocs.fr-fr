@@ -1,11 +1,11 @@
 ---
 title: Guide pratique pour investiguer des utilisateurs et des ordinateurs avec Azure ATP | Microsoft Docs
-description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Azure Advanced Threat Protection (ATP)
+description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Azure - Protection avancée contre les menaces (ATP, Advanced Threat Protection)
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 379feeef63776e71375a789daf4c9608a863e37b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783302"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744470"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -34,7 +34,7 @@ Le profil d’entité fournit une page complète sur l’entité, qui permet une
 
 Pour accéder à une page de profil d’entité, cliquez sur le nom de l’entité, par exemple sur son nom d’utilisateur, dans la chronologie des alertes de sécurité. Vous pouvez également voir une version abrégée du profil de l’entité dans la page de l’alerte de sécurité, en pointant sur le nom de l’entité.
 
-Le profil de l’entité vous permet de voir les activités de l’entité, les données de l’annuaire et les chemins de mouvement latéral pour cette entité. Pour plus d’informations, voir [Présentation des profils d’entité](entity-profiles.md).
+Le profil de l’entité vous permet de voir les activités de l’entité, les données de l’annuaire et les [chemins de mouvement latéral](use-case-lateral-movement-path.md) pour cette entité. Pour plus d’informations sur les entités, consultez [Présentation des profils d’entité](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Vérifier les étiquettes des entités
 
@@ -111,5 +111,5 @@ Avant de procéder à votre investigation, il est important de savoir si l’ent
     
 ## <a name="see-also"></a>Voir aussi
 
-- [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

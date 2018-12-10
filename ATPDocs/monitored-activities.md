@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963299"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950337"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -75,14 +75,17 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 
 |Activité supervisée|Description|
 |---------------------|------------------|
+|Réplication du service d’annuaire  |L’utilisateur a tenté de répliquer le service d’annuaire.|
+|Requête DNS  |L’utilisateur a exécuté une requête AXFR sur le contrôleur de domaine.|
 |Exécution WMI  |L’utilisateur a tenté d’exécuter à distance une méthode WMI.|
 |Création de service   |L’utilisateur a tenté de créer un service sur un ordinateur distant.|
 |Énumération des sessions SMB   |L’utilisateur a tenté d’énumérer tous les utilisateurs ayant une session SMB ouverte sur les contrôleurs de domaine.|
+|Copie de fichiers SMB| Fichiers copiés par l’utilisateur à l’aide de SMB|
 |Planification des tâches  |L’utilisateur a tenté de planifier la tâche X sur un ordinateur distant.|
 |Requête SAMR   |L’utilisateur a exécuté une requête SAMR.|
 |Extraction de données privées  |L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
-|Réplication du service d’annuaire  |L’utilisateur a tenté de répliquer le service d’annuaire.|
-|Requête DNS  |L’utilisateur a exécuté une requête AXFR sur le contrôleur de domaine.|
+
+
 
 
 ## <a name="monitored-user-activities-login-operations"></a>Activités utilisateur supervisées : opérations de connexion
@@ -109,4 +112,4 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 - [Gestion des alertes de sécurité](working-with-suspicious-activities.md)
 - [Guide sur les alertes de sécurité](suspicious-activity-guide.md)
 - [Examiner les entités](investigate-entity.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

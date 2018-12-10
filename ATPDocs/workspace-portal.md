@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 3968973bf4ddbc66dc66789239382ad5c9056aae
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783795"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744878"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comm
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Connexion au portail Azure ATP
 
-1. Vous pouvez entrer dans le portail Azure ATP en vous connectant au portail [https://portal.atp.azure.com](https://portal.atp.azure.com), puis en sélectionnant l’espace de travail approprié ou en accédant à l’URL de l’espace de travail : [https://*nom_espace_de_travail*.atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Vous pouvez entrer dans le portail Azure ATP soit en vous connectant au portail [https://portal.atp.azure.com](https://portal.atp.azure.com) et en sélectionnant votre instance, soit en accédant à l’URL de l’instance : [https://*nom_instance*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
 2.  Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
@@ -51,7 +51,7 @@ Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comm
 
 ### <a name="attack-time-line"></a>Chronologie des attaques
 
-Chronologie des attaques : il s’agit de la page d’accueil qui s’affiche par défaut quand vous vous connectez au portail d’espace de travail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez filtrer la chronologie des attaques de manière à tout afficher ou à afficher uniquement les activités suspectes dont l’état est Ouvert, Masqué ou Ignoré. Vous pouvez également voir le niveau de gravité attribué à chaque activité.
+La chronologie des attaques est la page d’accueil qui s’affiche par défaut quand vous vous connectez au portail Azure ATP. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez filtrer la chronologie des attaques de manière à tout afficher ou à afficher uniquement les activités suspectes dont l’état est Ouvert, Masqué ou Ignoré. Vous pouvez également voir le niveau de gravité attribué à chaque activité.
 
 ![Image de la chronologie des attaques Azure ATP](media/atp-sa-timeline.png)
 
@@ -77,7 +77,7 @@ Si vous cliquez sur ce nombre, vous pouvez accéder à la page des résultats de
 
 ### <a name="health-center"></a>Centre d’intégrité
 
-Le centre d’intégrité envoie des alertes quand un élément de votre espace de travail Azure ATP ne fonctionne pas correctement.
+Le centre d’intégrité envoie des alertes quand quelque chose ne fonctionne pas correctement dans votre instance Azure ATP.
 
 ![Image du centre d’intégrité Azure ATP](media/atp-health-issue.png)
 
@@ -91,7 +91,7 @@ Pour obtenir des informations sur les groupes sensibles dans Azure ATP, consulte
 
 ### <a name="mini-profile"></a>Mini-profil
 
-Si vous pointez votre souris sur une entité, n'importe où dans le portail d’espace de travail, où une entité unique est présentée, par exemple un utilisateur ou un ordinateur, un mini-profil s’ouvre automatiquement et affiche les informations suivantes si elles sont disponibles et appropriées :
+Si vous pointez votre souris sur une entité, n’importe où sur le portail Azure ATP où est présentée une entité unique, par exemple un utilisateur ou un ordinateur, un mini-profil s’ouvre automatiquement et affiche les informations suivantes, si elles sont disponibles et appropriées :
 
 ![Image du mini-profil dans Azure ATP](media/atp-mini-profile.png)
 
@@ -114,5 +114,5 @@ Si vous pointez votre souris sur une entité, n'importe où dans le portail d’
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d’espaces de travail Azure ATP](install-atp-step1.md)
+- [Création d’instances Azure ATP](install-atp-step1.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

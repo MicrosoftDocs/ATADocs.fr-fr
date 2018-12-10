@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 5d3eb4dbc714e7de4d586e686cd26ead83fceda8
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983087"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744674"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -38,7 +38,7 @@ Azure ATP peut vous informer quand il détecte des activités suspectes et émet
 
     -   Format sous lequel envoyer les données, RFC 3164 ou 5424
 
-2.  Entrer l’URL de l’espace de travail
+2.  Entrez l’URL de l’instance.
 
 3.  Entrez votre nom d’utilisateur et votre mot de passe Azure Active Directory, puis cliquez sur **Se connecter**.
 

@@ -1,11 +1,11 @@
 ---
-title: Installer Azure Advanced Threat Protections | Microsoft Docs
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
 description: La troisième étape de la procédure d’installation d’Azure ATP vous permet de télécharger le package d’installation du capteur Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a9eea9550af90577ad1763384a134f5889edc5f
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9e397d669ba4df7fe9f1ea6b497368b730abc938
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783778"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744895"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -42,8 +42,8 @@ Cliquez sur **Télécharger** dans la liste des étapes en haut de la page pour 
 
 1.  Cliquez sur **capteur**.
 2.  Enregistrez le package localement.
-3.  Copiez la **clé** **d’accès**. La clé d’accès est nécessaire à la connexion du capteur Azure ATP à votre espace de travail Azure ATP. La clé d’accès est un mot de passe à usage unique pour le déploiement du capteur, après quoi toutes les communications sont effectuées à l’aide de certificats pour l’authentification et le chiffrement TLS. Utilisez le bouton **Régénérer** si vous avez besoin de regénérer la clé d’accès. Vous pouvez le faire sans que cela n’affecte les capteurs déjà déployés, car elle est utilisée uniquement pour l’inscription initiale du capteur.
-4.  Copiez le package sur le serveur dédié ou le contrôleur de domaine sur lequel vous installez le capteur Azure ATP. Vous pouvez également ouvrir le portail d’espace de travail Azure ATP à partir du serveur dédié ou du contrôleur de domaine et ignorer cette étape.
+3.  Copiez la **clé** **d’accès**. Le capteur Azure ATP a besoin de la clé d’accès pour se connecter à votre instance Azure ATP. La clé d’accès est un mot de passe à usage unique pour le déploiement du capteur, après quoi toutes les communications sont effectuées à l’aide de certificats pour l’authentification et le chiffrement TLS. Utilisez le bouton **Régénérer** si vous avez besoin de regénérer la clé d’accès. Vous pouvez le faire sans que cela n’affecte les capteurs déjà déployés, car elle est utilisée uniquement pour l’inscription initiale du capteur.
+4.  Copiez le package sur le serveur dédié ou le contrôleur de domaine sur lequel vous installez le capteur Azure ATP. Vous pouvez aussi ouvrir le portail Azure ATP à partir du serveur dédié ou du contrôleur de domaine et ignorer cette étape.
 
 Le fichier zip comprend les fichiers suivants :
 

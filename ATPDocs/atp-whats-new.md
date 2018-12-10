@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,53 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca178eaa1b0ef1b631ebe2ab02f00fd5a9c26de5
-ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
+ms.openlocfilehash: e960e93470462acaf77c2033153af23725fe5e91
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52157588"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744504"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
 
-## <a name="azure-atp-release-255"></a>Azure ATP version 2.5.5
+## <a name="azure-atp-release-257"></a>Azure ATP version 2.57
+Publication : 2 décembre 2018
+
+- **Nouvelle alerte de sécurité : Suspicion d’utilisation de golden ticket - anomalie de ticket (préversion)**<br>
+L’alerte de sécurité d’Azure ATP [Suspicion d’utilisation de golden ticket - anomalie de ticket](suspicious-activity-guide.md) est désormais disponible dans la préversion publique. <br> Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le compte KRBTGT. Avec le compte KRBTGT, les attaquants peuvent créer un ticket TGT Kerberos qui fournit une autorisation sur n’importe quelle ressource. 
+<br>Ce ticket TGT falsifié est appelé « golden ticket », car il permet aux attaquants d’obtenir une persistance réseau durable. Les golden tickets falsifiées de ce type ont des caractéristiques uniques que cette nouvelle détection est capable d’identifier. 
+
+
+- **Amélioration de fonctionnalité : Création automatisée d’instance (espace de travail) Azure ATP** <br>
+À compter de ce jour, les *espaces de travail* Azure ATP sont renommés *instances* Azure ATP. Azure ATP prend désormais en charge une instance Azure ATP par compte Azure ATP. Les nouveaux clients créent leurs instances à l’aide de l’Assistant Création d’instance du [portail Azure ATP](https://portal.atp.azure.com). Les espaces de travail Azure ATP existants sont convertis automatiquement en instances Azure ATP avec la mise à jour.  
+
+  - Création d’instance simplifiée pour un déploiement et une protection plus rapides en utilisant la procédure [Création de votre instance Azure ATP](install-atp-step1.md). 
+  - Toutes les garanties de [conformité et de confidentialité des données](atp-privacy-compliance.md) sont inchangées. 
+
+  Pour plus d’informations, consultez [Créer votre instance Azure ATP](install-atp-step1.md). 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-256"></a>Azure ATP version 2.56
+Publication : 25 novembre 2018
+
+
+- **Amélioration de fonctionnalité : Chemins de mouvement latéral** <br>
+Deux fonctionnalités supplémentaires ont été ajoutées pour améliorer les capacités de chemin de mouvement latéral d’Azure ATP :
+
+  - L’historique des chemins de mouvement latéral est maintenant enregistré et détectable par entité et en cas d’utilisation de rapports Chemins de mouvement latéral. 
+  - Vous pouvez suivre une entité dans un chemin de mouvement latéral via la chronologie des activités et investiguer en utilisant une preuve supplémentaire fournie pour la détection de chemins d’attaque potentiels. 
+
+  Consultez [Chemins de mouvement latéral d’Azure ATP](use-case-lateral-movement-path.md) pour savoir comment tirer parti des chemins de mouvement latéral améliorés dans vos investigations. 
+
+- **Améliorations de la documentation : Chemins de mouvement latéral, noms des alertes de sécurité**<br> Les articles Azure ATP décrivant les caractéristiques de la fonctionnalité des chemins de mouvement latéral ont été mis à jour et complétés, et une correspondance entre les anciens et les nouveaux noms d’alertes de sécurité et les externalIds a été ajoutée. 
+  - Pour plus d’informations, consultez [Chemins de mouvement latéral d’Azure ATP](use-case-lateral-movement-path.md), [Utilisation des chemins de mouvement latéral](investigate-lateral-movement-path.md) et [Guide des alertes de sécurité](suspicious-activity-guide.md).   
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-255"></a>Azure ATP version 2.55
 Publication : 18 novembre 2018
 
 - **Alerte de sécurité : Communications suspectes sur DNS - disponibilité générale**<br>
@@ -32,7 +67,7 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="azure-atp-release-254"></a>Azure ATP version 2.5.4
+## <a name="azure-atp-release-254"></a>Azure ATP version 2.54
 Publication : 11 novembre 2018
 
 - **Amélioration de fonctionnalité : Des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte sur DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
@@ -41,7 +76,7 @@ Publication : 11 novembre 2018
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="azure-atp-release-253"></a>Azure ATP version 2.5.3
+## <a name="azure-atp-release-253"></a>Azure ATP version 2.53
 Publication : 4 novembre 2018
 
 - **Amélioration d’alerte de sécurité : échec d’authentification suspecte**<br>
@@ -52,7 +87,7 @@ Dans une attaque par **pulvérisation de mots de passe** classique, après avoir
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="azure-atp-release-252"></a>Azure ATP version 2.5.2
+## <a name="azure-atp-release-252"></a>Azure ATP version 2.52
 Publication : 28 octobre 2018
 
 
@@ -73,7 +108,7 @@ L’[alerte de sécurité Tentative d’exécution de code à distance](suspicio
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="azure-atp-release-251"></a>Azure ATP version 2.5.1
+## <a name="azure-atp-release-251"></a>Azure ATP version 2.51
 Publication : 21 octobre 2018
 
 - Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
@@ -202,7 +237,6 @@ Publication : 22 juillet 2018
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
 
-
 ## <a name="azure-atp-release-240"></a>Azure ATP version 2.40
 
 Publication : 15 juillet 2018
@@ -281,7 +315,6 @@ Publication : 27 mai 2018
     - Chinois (Taïwan)
 
 
-
 ## <a name="azure-atp-release-232"></a>Azure ATP version 2.32
 
 Publication : 13 mai 2018
@@ -303,7 +336,6 @@ Publication : 29 avril 2018
 -   Azure ATP utilise désormais Azure E-mail Orchestrator pour tous les e-mails envoyés à partir de Azure ATP, y compris les activités suspectes, alertes et rapports de surveillance. Vous verrez que ces notifications par e-mail désormais suivent un format cohérent pour la facilité d’utilisation et les fichiers Excel seront liés par e-mail pour être téléchargés à partir de la console.
  
  
-
 ## <a name="azure-atp-release-229"></a>Azure ATP version 2.29
 
 Publication : 22 avril 2018

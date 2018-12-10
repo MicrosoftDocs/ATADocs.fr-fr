@@ -12,12 +12,12 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b1b8b1fb9c1bf5a11c8a05daf3567f4a25c35c3f
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 7875c6b0f6be62277f80881edbefe36b910bb4c9
+ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132688"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52298134"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -55,7 +55,6 @@ L’URL est utilisée dans les scénarios suivants :
 
 4. Une fois que toutes les passerelles ATA sont synchronisées avec la configuration mise à jour, dans la page de configuration du Centre, cliquez sur le bouton **Activer** pour activer la nouvelle URL. Lorsque vous activez la nouvelle URL, les passerelles ATA utilisent la nouvelle URL pour accéder au centre ATA. Après la connexion au service du centre ATA, la passerelle ATA télécharge la configuration la plus récente et dispose uniquement de la nouvelle URL pour la console ATA. 
 
-5. 
  ![Activer le certificat](media/center-activation.png)
 
 > [!NOTE]

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783761"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744436"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -60,11 +60,11 @@ En règle générale, les capteurs se mettent à jour automatiquement lorsque le
 Cela vous permet de sélectionner des capteurs spécifiques sur lesquels la mise à jour est déployée automatiquement et de mettre à jour le reste de vos capteurs plus tard, uniquement après avoir vu que la mise à jour initiale s’est bien passée.
 
 > [!NOTE]
-> Si une erreur se produit et qu’un capteur ne se met pas à jour, ouvrez un ticket de support. Pour renforcer votre proxy en ne communiquant qu’avec votre espace de travail, consultez [Configuration du proxy](configure-proxy.md)
+> Si une erreur se produit et qu’un capteur ne se met pas à jour, ouvrez un ticket de support. Pour renforcer votre proxy en ne communiquant qu’avec votre instance, consultez [Configuration du proxy](configure-proxy.md)
 
 Pour définir un capteur sur une mise à jour différée :
 
-1. À partir du portail d’espace de travail Azure ATP, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
+1. Dans le portail Azure ATP, cliquez sur l’icône des paramètres, puis sélectionnez **Configuration**.
 2. Cliquez sur l’onglet **Mises à jour**.
 3. Dans la ligne du tableau, à côté de chaque capteur que vous voulez différer, positionnez le curseur **Mise à jour différée** sur **Activé**.
 4. Cliquez sur **Save**.
@@ -101,4 +101,4 @@ En cas de défaillance, si le capteur n’a pas terminé le processus de mise à
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

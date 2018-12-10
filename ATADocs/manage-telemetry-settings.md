@@ -2,33 +2,35 @@
 title: Gérer les journaux générés par le système Advanced Threat Analytics | Microsoft Docs
 description: Décrit les données collectées par ATA et explique comment désactiver la collecte de données.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
-ms.topic: conceptual
-ms.prod: advanced-threat-analytics
-ms.service: ''
+ms.date: 8/19/2018
+ms.topic: article
+ms.prod: ''
+ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0db1054f47d462251577a4d5251c07e8cd6283e8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a0b856ced72ad91a046f1116f96648baba7f7cba
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133400"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950303"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 
 
-# <a name="manage-system-generated-logs-note"></a>Gérer les journaux générés par le système>[!NOTE]
+# <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système> 
+
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-ATA (Advanced Threat Analytics) collecte des données de journaux générés par le système rendues anonymes sur ATA et les transmet via une connexion HTTPS aux serveurs Microsoft.  Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA.
+ > [!NOTE]
+ > ATA (Advanced Threat Analytics) collecte des données de journaux générés par le système rendues anonymes sur ATA et les transmet via une connexion HTTPS aux serveurs Microsoft. Ces données sont utilisées par Microsoft pour améliorer les futures versions d’ATA.
 
 ## <a name="data-collected"></a>Données collectées
 Les données rendues anonymes collectées incluent les paramètres suivants :

@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9485e3dd70708caf6e3ebbe60d9c006fac0b0163
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783455"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744725"
 ---
 *S’applique à : Azure - Protection avancée contre les menaces*
 
@@ -30,16 +30,16 @@ Cet article vous aide à déterminer le nombre de capteurs autonomes et de capte
 La manière recommandée la plus simple de déterminer la capacité pour votre déploiement Azure ATP est d’utiliser [l’outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool). Exécutez l’outil de dimensionnement Azure ATP et, dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la mémoire et le processeur utilisés par le capteur :
 
 > [!NOTE] 
-> L’outil de dimensionnement présente deux feuilles : une pour ATA et une pour Azure ATP. Vérifiez que vous utilisez la bonne feuille.
+> L’outil de dimensionnement présente deux feuilles : une pour Azure ATP et une pour ATA. Vérifiez que vous utilisez la bonne feuille.
 
-- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing) ou le [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing), selon le [type de capteur que vous choisissez](#choosing-the-right-sensor-type-for-your-deployment).
+- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing) ou le [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing), selon le [type de capteur que vous choisissez](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
 
 
-Si, pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimensionnement Azure ATP, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, vous devez calculer la moyenne quotidienne et la moyenne des périodes les plus occupées (15 minutes).
-Les sections suivantes expliquent comment collecter le compteur paquets/s dans un contrôleur de domaine.
+Si, pour une raison quelconque, vous ne pouvez pas utiliser l’outil de dimensionnement Azure ATP, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, vous devez calculer la moyenne quotidienne et la moyenne des périodes les plus actives (15 minutes).
+Les sections suivantes expliquent comment collecter le compteur de paquets/s dans un contrôleur de domaine.
 
 ## Choix du type de capteur approprié pour votre déploiement<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 Dans un déploiement Azure ATP, toutes les combinaisons de types de capteurs Azure ATP sont prises en charge :
@@ -52,13 +52,14 @@ Quand vous choisissez le type de déploiement de capteur, prenez en compte les a
 
 |Type de capteur|Avantages|Coût|Topologie de déploiement|Utilisation des contrôleurs de domaine|
 |----|----|----|----|-----|
-|Capteur autonome Azure ATP|Avec un déploiement hors bande, il est plus difficile pour les attaquants de découvrir la présence d’Azure ATP|Plus élevé|Installée en même temps que le contrôleur de domaine (hors bande)|Prend en charge jusqu’à 100 000 paquets par seconde|
 |Capteur Azure ATP|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Plus faible|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 100 000 paquets par seconde|
+|Capteur autonome Azure ATP|Avec un déploiement hors bande, il est plus difficile pour les attaquants de découvrir la présence d’Azure ATP|Plus élevé|Installée en même temps que le contrôleur de domaine (hors bande)|Prend en charge jusqu’à 100 000 paquets par seconde|
+
 
 Prenez en compte les problèmes suivants quand vous choisissez le nombre de capteurs autonomes Azure ATP à déployer.
 
 -   **Forêts et domaines Active Directory**<br>
-    Pour chaque espace de travail que vous créez, Azure ATP peut superviser le trafic provenant de plusieurs domaines appartenant à plusieurs forêts Active Directory. 
+    Pour chaque instance que vous créez, Azure ATP peut superviser le trafic provenant de plusieurs domaines au sein de plusieurs forêts Active Directory. 
 
 -   **Mise en miroir des ports**<br>
     Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs capteurs autonomes Azure ATP par site de succursale ou centre de données.
@@ -149,4 +150,4 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Architecture Azure ATP](atp-architecture.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

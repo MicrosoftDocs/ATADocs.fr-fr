@@ -1,11 +1,11 @@
 ---
-title: Utilisation des profils utilisateur dans le portail d’espace de travail Azure - Protection avancée contre les menaces | Microsoft Docs
-description: Décrit comment enquêter sur les utilisateurs à partir de l’écran des profils utilisateur dans le portail d’espace de travail Azure ATP
+title: Utilisation des profils utilisateur dans le portail Azure - Protection avancée contre les menaces | Microsoft Docs
+description: Explique comment enquêter sur les utilisateurs à partir de l’écran des profils utilisateur du portail Azure ATP
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783506"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744368"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 
 # <a name="understanding-entity-profiles"></a>Présentation des profils d’entité
 
-Le profil d’entité fournit une page complète sur l’entité, qui permet une enquête approfondie sur les utilisateurs, les ordinateurs, les périphériques et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
+Le profil d’entité fournit une page complète sur l’entité, qui permet de mener des investigations approfondies sur les utilisateurs, les ordinateurs, les appareils, les ressources auxquelles ils ont accès et sur leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 
 Pour accéder à une page de profil d’entité, cliquez sur le nom de l’entité, par exemple sur son nom d’utilisateur, dans la chronologie des activités suspectes.
 
@@ -59,7 +59,7 @@ En cliquant sur l’onglet Chemins d'accès de mouvement latéral, vous pouvez a
 
 Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés.
 
-Si l’activité n’est pas détectée au cours des deux derniers jours, le graphe n’apparaît plus. Toutefois, le [rapport des chemins de mouvement latéral](reports.md) vous fournit des informations sur les chemins de mouvement latéral qui ont été détectés au cours des 60 derniers jours. 
+Si aucun chemin de mouvement latéral potentiel n’a été détecté pour l’entité au cours des deux derniers jours, le graphique n’affiche pas. Sélectionnez une autre date via l’option **Afficher une autre date** pour afficher les graphiques de chemins de mouvement latéral précédemment découverts pour cette entité. Vous pouvez à tout moment accéder au [rapport Chemins de mouvement latéral](reports.md) pour obtenir des informations sur les chemins de mouvement latéral potentiels qui ont été détectés, et vous pouvez le personnaliser en fonction du moment.  
 
 Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 
@@ -69,4 +69,4 @@ Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-l
 ## <a name="see-also"></a>Voir aussi
 
 - [Examiner les chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
-- [Consulter le forum Azure ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983104"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744861"
 ---
 *S’applique à : Azure Advanced Threat Protection*
 
@@ -55,7 +55,7 @@ Effectuez les étapes suivantes sur votre serveur RRAS.
 
     ![Configuration de RADIUS](./media/radius-setup.png)
 
-4.  Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **nom du serveur** du capteur Azure ATP le plus proche (disposant d’une connectivité réseau). Pour une disponibilité élevée, vous pouvez ajouter d’autres capteurs Azure ATP en tant que serveurs RADIUS. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques que vous pouvez mémoriser. Vous devez la fournir plus loin dans votre configuration Azure ATP. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
+4.  Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **nom du serveur** du capteur Azure ATP le plus proche (disposant d’une connectivité réseau). Pour une disponibilité élevée, vous pouvez ajouter d’autres capteurs Azure ATP en tant que serveurs RADIUS. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques. Notez la nouvelle chaîne secrète partagée, car vous en aurez besoin par la suite pour configurer Azure ATP. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
  
      ![Configuration du VPN](./media/vpn-set-accounting.png)
      
@@ -74,7 +74,7 @@ Pour configurer les données VPN dans ATP :
   ![Configurer le VPN Azure ATP](./media/atp-vpn-radius.png)
 
 
-Une fois l’activation effectuée, tous les capteurs et capteurs autonomes Azure ATP sont à l’écoute sur le port 1813 pour les événements de gestion de comptes RADIUS : votre configuration est alors terminée. 
+Une fois l’activation effectuée, tous les capteurs Azure ATP sont à l’écoute des événements de gestion de comptes RADIUS sur le port 1813 : la configuration de votre est terminée. 
 
  Une fois que le capteur Azure ATP a reçu les événements VPN et les envoie au service cloud Azure ATP en vue de leur traitement, le profil d’entité indique différents emplacements VPN d’accès et les activités figurant dans le profil indiquent les emplacements.
 
