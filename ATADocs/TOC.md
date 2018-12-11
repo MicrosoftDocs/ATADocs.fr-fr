@@ -3,6 +3,7 @@
 ## [Quelles sont les menaces détectées par ATA ?](ata-threats.md)
 ## Nouveautés dans ATA?
 ### [Nouveautés d’ATA version 1.9](whats-new-version-1.9.md)
+#### [Mise à jour vers ATA 1.9.1 : guide de migration](ata-update-1.9.1-migration-guide.md)
 #### [Mise à jour vers ATA 1.9 : guide de migration](ata-update-1.9-migration-guide.md)
 ### [Nouveautés d’ATA version 1.8](whats-new-version-1.8.md)
 #### [Mise à jour vers ATA 1.8 : guide de migration](ata-update-1.8-migration-guide.md)
