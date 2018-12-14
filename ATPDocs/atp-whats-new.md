@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/26/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,42 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e960e93470462acaf77c2033153af23725fe5e91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744504"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125045"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S'applique à : Azure - Protection avancée contre les menaces*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+
+## <a name="azure-atp-release-258"></a>Azure ATP version 2.58
+
+Date de publication : 9 décembre 2018
+
+- **Amélioration de l’alerte de sécurité : Fractionnement d’alerte d’implémentation de protocole inhabituelle**<br>
+La série d'alertes de sécurité d'Azure ATP pour l'implémentation de protocoles inhabituels qui partageaient jusqu'à présent 1 externalId (2002) est maintenant divisée en 4 alertes distinctes, avec un externalId unique chacune. 
+
+### <a name="new-alert-externalids"></a>Nouvelles externalId d’alerte
+> [!div class="mx-tableFixed"] 
+
+|Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ExternalId unique|
+|---------|----------|---------|
+|Suspicion d’attaque par force brute (SMB)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033
+|Suspicion d’attaque over-pass-the-hash (Kerberos)|Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)|2002|
+|Suspicion d’utilisation du framework de piratage Metasploit|Implémentation de protocole inhabituelle (utilisation potentielle d’outils de piratage Metasploit)|2034
+|Suspicion d’attaque de ransomware WannaCry|Implémentation de protocole inhabituelle (attaque ransomware WannaCry potentielle)|2035
+|
+
+- **Nouvelle activité supervisée : Copie des fichiers via SMB**<br>
+La copie des fichiers à l’aide de SMB est maintenant une activité surveillée et filtrable. En savoir plus sur les [activités surveillées par Azure ATP](monitored-activities.md)et la manière de [filtrer et de rechercher des activités surveillées](atp-activities-search.md) dans le portail. 
+
+- **Amélioration de l’image des chemins de mouvement latéral**<br>
+Lors de l'affichage de grands chemins de mouvement latéral, Azure ATP ne met désormais en surbrillance que les nœuds connectés à une entité sélectionnée au lieu d'estomper les autres nœuds. Ce changement introduit une amélioration significative de la vitesse de rendu des chemins de mouvement latéral volumineux. 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-257"></a>Azure ATP version 2.57
 Publication : 2 décembre 2018
@@ -32,8 +58,8 @@ L’alerte de sécurité d’Azure ATP [Suspicion d’utilisation de golden tick
 <br>Ce ticket TGT falsifié est appelé « golden ticket », car il permet aux attaquants d’obtenir une persistance réseau durable. Les golden tickets falsifiées de ce type ont des caractéristiques uniques que cette nouvelle détection est capable d’identifier. 
 
 
-- **Amélioration de fonctionnalité : Création automatisée d’instance (espace de travail) Azure ATP** <br>
-À compter de ce jour, les *espaces de travail* Azure ATP sont renommés *instances* Azure ATP. Azure ATP prend désormais en charge une instance Azure ATP par compte Azure ATP. Les nouveaux clients créent leurs instances à l’aide de l’Assistant Création d’instance du [portail Azure ATP](https://portal.atp.azure.com). Les espaces de travail Azure ATP existants sont convertis automatiquement en instances Azure ATP avec la mise à jour.  
+- **Amélioration de fonctionnalité : création automatisée d’instance (espace de travail) Azure ATP** <br>
+À compter de ce jour, les *espaces de travail* Azure ATP sont renommés *instances* Azure ATP. Azure ATP prend désormais en charge une instance Azure ATP par compte Azure ATP. Les nouveaux clients créent leurs instances à l’aide de l’Assistant Création d’instance du [portail Azure ATP](https://portal.atp.azure.com). Les espaces de travail Azure ATP existants sont convertis automatiquement en instances Azure ATP avec cette mise à jour.  
 
   - Création d’instance simplifiée pour un déploiement et une protection plus rapides en utilisant la procédure [Création de votre instance Azure ATP](install-atp-step1.md). 
   - Toutes les garanties de [conformité et de confidentialité des données](atp-privacy-compliance.md) sont inchangées. 
@@ -54,7 +80,7 @@ Deux fonctionnalités supplémentaires ont été ajoutées pour améliorer les c
 
   Consultez [Chemins de mouvement latéral d’Azure ATP](use-case-lateral-movement-path.md) pour savoir comment tirer parti des chemins de mouvement latéral améliorés dans vos investigations. 
 
-- **Améliorations de la documentation : Chemins de mouvement latéral, noms des alertes de sécurité**<br> Les articles Azure ATP décrivant les caractéristiques de la fonctionnalité des chemins de mouvement latéral ont été mis à jour et complétés, et une correspondance entre les anciens et les nouveaux noms d’alertes de sécurité et les externalIds a été ajoutée. 
+- **Améliorations de la documentation : chemins de mouvement latéral, noms des alertes de sécurité**<br> Les articles Azure ATP décrivant les caractéristiques de la fonctionnalité des chemins de mouvement latéral ont été mis à jour et complétés, et une correspondance entre les anciens et les nouveaux noms d’alertes de sécurité et les externalIds a été ajoutée. 
   - Pour plus d’informations, consultez [Chemins de mouvement latéral d’Azure ATP](use-case-lateral-movement-path.md), [Utilisation des chemins de mouvement latéral](investigate-lateral-movement-path.md) et [Guide des alertes de sécurité](suspicious-activity-guide.md).   
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
@@ -62,7 +88,7 @@ Deux fonctionnalités supplémentaires ont été ajoutées pour améliorer les c
 ## <a name="azure-atp-release-255"></a>Azure ATP version 2.55
 Publication : 18 novembre 2018
 
-- **Alerte de sécurité : Communications suspectes sur DNS - disponibilité générale**<br>
+- **Alerte de sécurité : communications suspectes via DNS - disponibilité générale**<br>
 L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) est maintenant en disponibilité générale. <br> Généralement dans la plupart des organisations, le protocole DNS n’est pas surveillé et les activités malveillantes sont rarement bloquées. Ceci permet à un attaquant sur une machine compromise d’abuser le protocole DNS. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
@@ -70,20 +96,20 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 ## <a name="azure-atp-release-254"></a>Azure ATP version 2.54
 Publication : 11 novembre 2018
 
-- **Amélioration de fonctionnalité : Des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte sur DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
+- **Amélioration de fonctionnalité : des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte via DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
 
-- **Améliorations de la documentation : Mise à jour sur les journaux SIEM et conseils pour les problèmes connus**<br>    Un mappage des externalId ainsi que des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md). <br>Un article a été ajouté pour fournir des conseils au sujet de problèmes connus non encore résolus. Pour en savoir plus, consultez [Problèmes connus dans Azure ATP](known-issues.md).  
+- **Améliorations de la documentation : mise à jour des journaux SIEM, conseils de problèmes connus**<br>    Un mappage des externalId ainsi que des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md). <br>Un article a été ajouté pour fournir des conseils au sujet de problèmes connus non encore résolus. Pour en savoir plus, consultez [Problèmes connus dans Azure ATP](known-issues.md).  
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-253"></a>Azure ATP version 2.53
 Publication : 4 novembre 2018
 
-- **Amélioration d’alerte de sécurité : échec d’authentification suspecte**<br>
+- **Amélioration de l’alerte de sécurité : échecs d’authentification suspects**<br>
 L’[alerte de sécurité d’échec d’authentification suspecte](suspicious-activity-guide.md) d’Azure ATP inclut désormais la surveillance pour la détection des attaques en force par pulvérisation de mots de passe.
 Dans une attaque par **pulvérisation de mots de passe** classique, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Lorsque la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. 
 
-- **Amélioration de fonctionnalité : Envoyer un message test Syslog**<br>   Nouvelle possibilité d’envoyer un message test Syslog pendant le processus de configuration SIEM. Consultez [Intégrer à Syslog](setting-syslog.md) pour en savoir plus. 
+- **Amélioration de fonctionnalité : envoyer un message de test Syslog**<br>   Nouvelle possibilité d’envoyer un message test Syslog pendant le processus de configuration SIEM. Consultez [Intégrer à Syslog](setting-syslog.md) pour en savoir plus. 
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -91,13 +117,13 @@ Dans une attaque par **pulvérisation de mots de passe** classique, après avoir
 Publication : 28 octobre 2018
 
 
-- **Amélioration d’alerte de sécurité : Tentative d’exécution de code à distance**<br>
+- **Amélioration de l’alerte de sécurité : tentative d’exécution de code à distance**<br>
 L’[alerte de sécurité Tentative d’exécution de code à distance](suspicious-activity-guide.md) d’Azure ATP englobe désormais la supervision des tentatives suspectes d’exécution de code PowerShell à distance sur vos contrôleurs de domaine. Remote PowerShell est une méthode courante d’exécution de commandes d’administration valides, mais elle est souvent utilisée à des fins malveillantes pour tenter d’exécuter des scripts sur des points de terminaison distants. 
 
-- **Amélioration de fonctionnalité : Définir une planification de rapport**
+- **Amélioration de fonctionnalité : définir la planification des rapports**
 <br>Vous pouvez désormais définir une heure de planification spécifique pour vos rapports Azure ATP à l’aide de la fonction [rapports](reports.md#). 
 
-- **Ajout de configuration : Contrôle d’accès en fonction du rôle de locataire (RBAC)**
+- **Ajout de la configuration : contrôle d’accès en fonction du rôle (RBAC)**
 <br>Configurez les rôles de sécurité de votre locataire dans le Centre d’administration Azure Active Directory (AAD) directement à partir du nouveau lien Administrateur du portail Azure ATP. 
 
 - **Révision de la structure et du contenu de la documentation**
@@ -122,7 +148,7 @@ Publication : 14 octobre 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP version 2.49
 Publication : 7 octobre 2018
--   **Nouvelles détections : Communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour renforcer la protection contre les attaques de communication suspecte sur le DNS :
+-   **Nouvelles détections : communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour renforcer la protection contre les attaques de communication suspecte sur le DNS :
 
     -   Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Un attaquant peut alors accéder à une machine compromise afin d’utiliser le protocole DNS de manière abusive. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
 
@@ -142,7 +168,7 @@ Publication : 7 octobre 2018
 
 ## <a name="azure-atp-release-248"></a>Azure ATP version 2.48
 Publication : 16 septembre 2018
-- **Alerte de sécurité :** Reconnaissance à l’aide de requêtes de services d’annuaire
+- **Alerte de sécurité :** Reconnaissance à l’aide de requêtes de services d’annuaire
 
   Cette alerte de sécurité a désormais une infographie et des preuves améliorées. 
 
@@ -227,7 +253,7 @@ Publication : 22 juillet 2018
   - fournit de meilleures alertes de monitoring et fonctionnalités de création de rapports pour une couverture interorganisationnelle.
 
 
--   **Nouvelles détections : DCShadow**<br>Deux nouvelles détections ont été ajoutées pour vous protéger contre les attaques DCShadow (« Domain Controller Shadow ») :
+-   **Nouvelles détections : DCShadow**<br>Deux nouvelles détections ont été ajoutées pour vous protéger contre les attaques DCShadow (« Domain Controller Shadow ») :
 
     -   Promotion des contrôleurs de domaine suspects (attaque potentielle DCShadow) : cette détection permet de détecter les attaques selon lesquelles un ordinateur emprunte l’identité d’un contrôleur de domaine, puis essaie d’utiliser la réplication pour propager les modifications à d’autres contrôleurs de domaine dans votre domaine.
 
@@ -248,7 +274,7 @@ Publication : 15 juillet 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
 
 Publication : 5 juillet 2018
--   **Ajout d’une nouvelle détection : golden ticket Kerberos - compte non existant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md#golden-ticket)
+-   **Nouvelle détection ajoutée : golden ticket Kerberos - compte inexistant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md#golden-ticket)
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -299,7 +325,7 @@ Publication : 3 juin 2018
 
 Publication : 27 mai 2018
 
-- Fonctionnalité en préversion : Azure ATP prend désormais en charge de nouvelles langues et 13 nouveaux paramètres régionaux :
+- Fonctionnalité d’évaluation : Azure ATP prend désormais en charge de nouvelles langues et 13 nouveaux paramètres régionaux :
     - Tchèque
     - Hongrois
     - Italien
@@ -364,7 +390,7 @@ Publication : 8 avril 2018
 
 Date de publication : 25 mars 2018
 
-- Quand Azure ATP vous avertit d’une activité suspecte que vous identifiez comme activité positive sans gravité (une action légitime qui n’est pas une activité suspecte) vous avez la possibilité d’exclure des ordinateurs et des adresses IP pour plus de détections, notamment : rétrogradation de chiffrement, LDAP force brute, PAC falsifié, Force brute et Pass-the-hash.
+- Quand Azure ATP vous avertit d’une activité suspecte que vous identifiez comme activité positive sans gravité (une action légitime qui n’est pas une activité suspecte), vous avez la possibilité d’exclure des ordinateurs et des adresses IP pour plus de détections, notamment : Déclassement de chiffrement, LDAP force brute, PAC falsifié, force brute et Pass-the-hash.
 -   Les performances du capteur Azure ATP ont été améliorées.
 -   Une nouvelle région a été ajoutée pour le déploiement de l’espace de travail, vous pouvez désormais déployer un espace de travail en Asie. 
 

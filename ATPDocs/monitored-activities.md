@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125028"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S'applique à : Azure - Protection avancée contre les menaces*
 
 
 
@@ -37,14 +37,10 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 >- Les activités supervisées par Azure ATP s’affichent à la fois dans la page de profil de l’utilisateur et dans celle de la machine. 
  
 
-## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités utilisateur supervisées : changement des attributs AD du compte d’utilisateur
+## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités surveillées des utilisateurs : Changements d’attributs AD du compte d’utilisateur
 
 |Activité supervisée|Description|
 |---------------------|------------------|
-|Changement de la messagerie de l’utilisateur|L’attribut Messagerie de l’utilisateur a été changé.|
-|Changement du responsable de l’utilisateur|L’attribut Responsable de l’utilisateur a été changé.|
-|Changement du numéro de téléphone de l’utilisateur|L’attribut Numéro de téléphone de l’utilisateur a été changé.|
-|Changement du poste de l’utilisateur |L’attribut Poste de l’utilisateur a été changé.|
 |Changement de l’état de délégation contrainte du compte |La délégation a été activée ou désactivée pour le compte.|
 |Changement des SPN de délégation contrainte du compte | La délégation contrainte restreint les services sur lesquels le serveur spécifié peut agir pour le compte d’un utilisateur.|
 |Changement de l’état d’activation du compte |Indique si un compte est activé ou désactivé.|
@@ -56,11 +52,15 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Activation de l’option Le mot de passe n’expire jamais pour le compte |Le mot de passe de l’utilisateur a été configuré pour ne jamais expirer.|
 |Activation de l’option Mot de passe non nécessaire pour le compte |Le compte d’utilisateur a été configuré pour permettre la connexion avec un mot de passe vide.|
 |Changement du compte pour exiger une carte à puce  |Le compte a été configuré pour exiger que les utilisateurs se connectent à un appareil à l’aide d’une carte à puce.|
-|Changement des types de chiffrement pris en charge dans le compte |Les types de chiffrement Kerberos pris en charge ont été modifiés (Des, AES 129, AES 256)|
-|Changement de l’appartenance au groupe  |L’utilisateur a été ajouté à un groupe ou supprimé d’un groupe par un autre utilisateur ou par lui-même.|
+|Changement des types de chiffrement pris en charge dans le compte |Les types de chiffrement pris en charge par Kerberos ont été modifiés (types : Des, AES 129, AES 256)|
 |Changement du nom UPN du compte  |Le nom de principal de l’utilisateur a été changé.|
+|Changement de l’appartenance au groupe  |L’utilisateur a été ajouté à un groupe ou supprimé d’un groupe par un autre utilisateur ou par lui-même.|
+|Changement de la messagerie de l’utilisateur|L’attribut Messagerie de l’utilisateur a été changé.|
+|Changement du responsable de l’utilisateur|L’attribut Responsable de l’utilisateur a été changé.|
+|Changement du numéro de téléphone de l’utilisateur|L’attribut Numéro de téléphone de l’utilisateur a été changé.|
+|Changement du poste de l’utilisateur |L’attribut Poste de l’utilisateur a été changé.|
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Activités utilisateur supervisées : opérations sur le principal de sécurité AD
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Activités surveillées des utilisateurs : Opérations de principal de sécurité AD
 
 |Activité supervisée|Description|
 |---------------------|------------------|
@@ -71,24 +71,21 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Changement du chemin du principal de sécurité  |Le nom unique X du compte a été remplacé par Y.|
 |Changement du nom SAM du principal de sécurité |Le nom SAM a été changé (SAM est le nom d’ouverture de session utilisé pour les clients et les serveurs exécutant des versions antérieures du système d’exploitation).|
 
-## <a name="monitored-user-activities-domain-controller-based-user-operations"></a>Activités utilisateur supervisées : opérations de l’utilisateur concernant le contrôleur de domaine
+## <a name="monitored-user-activities-domain-controller-based-user-operations"></a>Activités surveillées des utilisateurs : Opérations de l’utilisateur basées sur le contrôleur de domaine
 
 |Activité supervisée|Description|
 |---------------------|------------------|
 |Réplication du service d’annuaire  |L’utilisateur a tenté de répliquer le service d’annuaire.|
 |Requête DNS  |L’utilisateur a exécuté une requête AXFR sur le contrôleur de domaine.|
-|Exécution WMI  |L’utilisateur a tenté d’exécuter à distance une méthode WMI.|
+|Extraction de données privées  |L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
 |Création de service   |L’utilisateur a tenté de créer un service sur un ordinateur distant.|
 |Énumération des sessions SMB   |L’utilisateur a tenté d’énumérer tous les utilisateurs ayant une session SMB ouverte sur les contrôleurs de domaine.|
 |Copie de fichiers SMB| Fichiers copiés par l’utilisateur à l’aide de SMB|
-|Planification des tâches  |L’utilisateur a tenté de planifier la tâche X sur un ordinateur distant.|
 |Requête SAMR   |L’utilisateur a exécuté une requête SAMR.|
-|Extraction de données privées  |L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
+|Planification des tâches  |L’utilisateur a tenté de planifier la tâche X sur un ordinateur distant.|
+|Exécution WMI  |L’utilisateur a tenté d’exécuter à distance une méthode WMI.|
 
-
-
-
-## <a name="monitored-user-activities-login-operations"></a>Activités utilisateur supervisées : opérations de connexion
+## <a name="monitored-user-activities-login-operations"></a>Activités surveillées des utilisateurs : Opérations de connexion
 
 |Type d’ouverture de session|Activité supervisée|Description|
 |---------------------|---------------------|------------------|
@@ -101,7 +98,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 | --- |Échec de l’ouverture de session |La tentative d’authentification du compte de domaine (via NTLM et Kerberos) a échoué pour l’une des raisons suivantes : le compte a été désactivé ou verrouillé, il a expiré ou il a utilisé un certificat non approuvé, ou une tentative d’ouverture de session non valide a été effectuée (heure d’ouverture de session non valide, utilisation d’un ancien mot de passe, expiration du mot de passe ou mot de passe incorrect).|
 
 
-## <a name="monitored-machine-activities-machine-account"></a>Activités ordinateur supervisées : compte d’ordinateur
+## <a name="monitored-machine-activities-machine-account"></a>Activités surveillées des machines : Compte d’ordinateur
 
 |Activité supervisée|Description|
 |---------------------|------------------|

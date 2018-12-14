@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d812673ed387bcd6a14e6b316cb2224819c503e3
-ms.sourcegitcommit: 46b6a5088ed975bcfb36e7f9a3b5c00ecd5e185a
+ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
+ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645274"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52981936"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S'applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="azure-atp-advanced-audit-policy-check"></a>Vérification de la stratégie d’audit avancée Azure ATP
@@ -56,8 +56,8 @@ La stratégie d’audit de sécurité avancée peut être activée via l’objet
 
     ![Auditer la gestion des groupes de sécurité](media/atp-advanced-audit-policy-check-step-4.png)
 
-> [!NOTE]
-> Si vous choisissez d’utiliser une stratégie locale, ajoutez les journaux d’audit **Connexion de compte** et **Gestion de compte** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > [!NOTE]
+    > Si vous choisissez d’utiliser une stratégie locale, ajoutez les journaux d’audit **Connexion de compte** et **Gestion de compte** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Après application au moyen d’un objet GPO, les nouveaux événements sont visibles sous vos **journaux d’événements Windows**.
 

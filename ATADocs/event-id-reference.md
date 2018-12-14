@@ -2,10 +2,10 @@
 title: Informations de référence sur les ID d’événement ATA | Microsoft Docs
 description: Fournit une liste des ID d’événement ATA et leurs descriptions.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 38610c6b8f94dbe1a31e218e064750bf2bde2c49
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
+ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133138"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53022422"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -89,7 +89,13 @@ Vous trouverez les événements ici :
 
 2007 – Activité suspecte de reconnaissance DNS 
 
-2008 – Activité suspecte de déclassement du chiffrement 
+2008 – Activité suspecte de déclassement du chiffrement (pas de sous-type)
+
+2009 – Activité suspecte de déclassement du chiffrement (suspicion de GoldenTicket)
+       
+2010 – Activité suspecte de déclassement du chiffrement (suspicion d’Overpass-The-Hash)
+
+2011 – Activité suspecte de déclassement du chiffrement (suspicion de Skeleton-Key)
 
 2012 – Activité suspecte d’énumération de sessions 
 
@@ -113,7 +119,11 @@ Vous trouverez les événements ici :
 
 2023 – Activité suspecte d’attaque par force brute 
 
-2024 – Activité suspecte de changement d’appartenance à un groupe sensible anormal  
+2024 – Activité suspecte de changement anormal d’appartenance à un groupe sensible 
+
+2025 – Activité suspecte de VPN anormal
+
+2026 – Activité suspecte de création de service malveillant
 
 ## <a name="ata-auditing-events"></a>Événements d’audit ATA
 

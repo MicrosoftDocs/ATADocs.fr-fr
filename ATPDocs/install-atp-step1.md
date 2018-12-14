@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3fb857308d945fcae04e7dc3d501404a2334382e
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: e027e57e3f23be61139217b532b3b4a721dc9cdd
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744691"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125147"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Création de votre instance Azure ATP sur le portail Azure ATP - Étape 1
@@ -57,8 +57,8 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
     ![Instance Azure créée](media/instance-created.png)
 
-> [!NOTE]
- > Pour vous connecter à Azure ATP, vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle Azure ATP doté de droits d’accès au portail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
+    > [!NOTE]
+    > Pour vous connecter à Azure ATP, vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle Azure ATP doté de droits d’accès au portail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
  
 3. Cliquez sur **Configuration**, sur **Gérer les groupes de rôles**, puis utilisez le lien [Centre d’administration Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles. .
 
