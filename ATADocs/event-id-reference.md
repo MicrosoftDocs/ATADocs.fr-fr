@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
-ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
+ms.openlocfilehash: e21e2b984db3d58703cf6503817401f1bab0fda1
+ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53022422"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709912"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -33,114 +33,69 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-health-events"></a>Événements d’intégrité ATA
 
-1001 – Alerte d’intégrité sur l’espace disponible du lecteur de données de base de données du centre ATA 
-
-1003 – Alerte d’intégrité sur la surcharge du centre ATA 
-
-1004 – Alerte d’intégrité sur l’expiration des certificats 
-
-1005 – Alerte d’intégrité sur la déconnexion de base de données du centre 
-
-1006 – Alerte d’intégrité sur l’expiration de mots de passe de comptes client des services d’annuaire dans la passerelle ATA 
-
-1007 – Alerte d’intégrité sur la non-affectation du synchronisateur de domaine dans la passerelle ATA 
-
-1008 – Alerte d’intégrité sur l’échec de l’adaptateur de réseau de capture dans la passerelle ATA 
-
-1009 – Alerte d’intégrité sur l’absence de l’adaptateur de réseau de capture dans la passerelle ATA 
-
-1010 – Alerte d’intégrité sur la connectivité des clients des services d’annuaire dans la passerelle ATA 
-
-1011 – Alerte d’intégrité sur la déconnexion de la passerelle ATA 
-
-1012 – Alerte d’intégrité sur la surcharge des activités d’événement dans la passerelle ATA 
-
-1013 – Alerte d’intégrité sur la surcharge des activités réseau dans la passerelle ATA 
-
-1014 – Alerte d’intégrité sur la messagerie du centre 
-
-1015 – Alerte d’intégrité sur le fichier Syslog du centre 
-
-1016 – Alerte d’intégrité sur les passerelles ATA obsolètes 
-
-1017 – Alerte d’intégrité sur la non-réception du trafic du centre 
-
-1018 – Alerte d’intégrité sur l’échec de démarrage de la passerelle ATA 
-
-1019 – Alerte d’intégrité sur la mémoire insuffisante de la passerelle ATA 
-
-1020 – Alerte d’intégrité sur l’écouteur des événements RADIUS dans la passerelle ATA 
-
-1021 – Alerte d’intégrité sur l’écouteur des événements Syslog dans la passerelle ATA 
-
-1022 – Alerte d’intégrité sur l’échec de la résolution des adresses IP externes du centre ATA 
+|ID d’événement de surveillance| Nom de l’alerte de surveillance|
+|---------|---------------|
+|1001|Espace disque du centre insuffisant|
+|1003|Centre surchargé|
+|1004|Le certificat du centre va expirer / Le certificat du centre a expiré|
+|1005|MongoDB en panne|
+|1006|Le mot de passe utilisateur en lecture seule va expirer / Le mot de passe utilisateur en lecture seule a expiré|
+|1007|Synchronisateur de domaine non affecté|
+|1008|Tout ou partie des cartes réseau de capture sur une passerelle ne sont pas disponibles|
+|1009|Un adaptateur de réseau de capture sur une passerelle n’existe plus|
+|1010|Certains contrôleurs de domaine ne sont pas accessibles par une passerelle / Tous les contrôleurs de domaine ne sont pas accessibles par une passerelle|
+|1011|La passerelle a cessé de communiquer|
+|1012|Certains événements transférés ne sont pas analysés|
+|1013|Une partie du trafic réseau n’est pas analysé|
+|1014|Échec de l’envoi des e-mails|
+|1015|Échec de la connexion au serveur SIEM à l’aide de Syslog|
+|1016|Version de la passerelle obsolète|
+|1017|Aucun trafic reçu du contrôleur de domaine|
+|1018|Échec du démarrage du service de passerelle|
+|1019|La passerelle légère a atteint la limite des ressources mémoire|
+|1020|La passerelle ne traite pas les événements Radius|
+|1021|La passerelle ne traite pas les événements Syslog|
+|1022|Le service de géolocalisation n'est pas disponible|
  
-## <a name="ata-suspicious-activity-events"></a>Événements d’activités suspectes ATA
+## <a name="ata-security-alert-events"></a>Événements d'alerte de sécurité ATA
 
-2001 – Activité suspecte de comportement anormal 
-
-2002 – Activité suspecte de protocole anormal 
-
-2003 – Activité suspecte d’énumération de comptes 
-
-2004 – Activité suspecte d’attaque par force brute LDAP 
-
-2006 – Activité suspecte de réplication des services d’annuaire 
-
-2007 – Activité suspecte de reconnaissance DNS 
-
-2008 – Activité suspecte de déclassement du chiffrement (pas de sous-type)
-
-2009 – Activité suspecte de déclassement du chiffrement (suspicion de GoldenTicket)
-       
-2010 – Activité suspecte de déclassement du chiffrement (suspicion d’Overpass-The-Hash)
-
-2011 – Activité suspecte de déclassement du chiffrement (suspicion de Skeleton-Key)
-
-2012 – Activité suspecte d’énumération de sessions 
-
-2013 – Activité suspecte de faux PAC 
-
-2014 – Activité suspecte des activités Honeytoken 
-
-2016 – Activité suspecte de suppression massive d’objets 
-
-2017 – Activité suspecte de Pass the hash 
-
-2018 – Activité suspecte de Pass the ticket 
-
-2019 – Activité suspecte d’exécution à distance 
-
-2020 – Activité suspecte de récupération de clé de sauvegarde de protection des données 
-
-2021 – Activité suspecte de reconnaissance SAMR 
-
-2022 – Activité suspecte de Golden ticket 
-
-2023 – Activité suspecte d’attaque par force brute 
-
-2024 – Activité suspecte de changement anormal d’appartenance à un groupe sensible 
-
-2025 – Activité suspecte de VPN anormal
-
-2026 – Activité suspecte de création de service malveillant
+|Noms des alertes|ID des événements d’alerte|
+|---------|---------------|
+|2001|Suspicion d’usurpation d’identité basée sur un comportement inhabituel|
+|2002|Implémentation de protocole inhabituelle|
+|2003|Reconnaissance à l’aide de l’énumération de compte|
+|2004|Attaque par force brute par le biais d’une liaison simple LDAP|
+|2006|Réplication malveillante de services d’annuaire|
+|2007|Reconnaissance à l’aide de DNS|
+|2008|Passage à une version antérieure du chiffrement|
+|2009|Activité de passage à une version antérieure du chiffrement (golden ticket potentielle)|
+|2010|Activité de passage à une version antérieure du chiffrement (Overpass-the-Hash potentielle)|
+|2011|Activité de passage à une version antérieure du chiffrement (Skeleton Key potentielle)|
+|2012|Reconnaissance à l’aide de l’énumération de sessions SMB|
+|2013|Réaffectation de privilèges à l’aide de données d’autorisation falsifiées|
+|2014|Activité Honeytoken|
+|2016|Suppression massive d’objets|
+|2017|Usurpation d’identité par attaque Pass-the-Hash|
+|2018|Usurpation d’identité par attaque Pass-the-Ticket|
+|2019|Tentative d’exécution à distance détectée|
+|2020|Demande d’information privée de protection contre les données malveillantes|
+|2021|Reconnaissance à l’aide de requêtes de services d’annuaire|
+|2022|Activité de Golden Ticket Kerberos|
+|2023|Échecs d’authentification suspects|
+|2024|Modification anormale de groupes sensibles|
+|2026|Création de service malveillant|
 
 ## <a name="ata-auditing-events"></a>Événements d’audit ATA
 
-3001 – Changement de configuration ATA 
-
-3002 – Passerelle ATA ajoutée
-
-3003 – Passerelle ATA supprimée
-
-3004 - Licence ATA activée
-
-3005 – Connexion à la console ATA
-
-3006 – Changement manuel de l’état d’activité d’intégrité 
-
-3007 – Changement manuel de l’état d’activité suspect 
-
+|Noms des alertes|ID des événements d’alerte|
+|---------|---------------|
+|3001|Changement de configuration ATA|
+|3002|Passerelle ATA ajoutée|
+|3003|Passerelle ATA supprimée|
+|3004|Licence ATA activée|
+|3005|Connexion à la console ATA|
+|3006|Changement manuel de l’état d’activité d’intégrité|
+|3007|Changement manuel de l’état d’activité suspect|
 
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)

@@ -13,20 +13,19 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b645522c26f42b4864a68f3793cb9474e98d2149
-ms.sourcegitcommit: ec5dc294d9c6cd5693b13a7c5e7cf1bdd6fb47d7
+ms.openlocfilehash: 80d6b2744c3299bf92d0c4082085dbd872403cc0
+ms.sourcegitcommit: 9acf035f6f2ce32290e00d2e45385ae7993bb63a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334985"
 ---
 # <a name="ata-version-191"></a>ATA version 1.9.1
 
-## <a name="introduction"></a>Introduction
 
 Cet article décrit les problèmes résolus dans la mise à jour 1 de Microsoft Advanced Threat Analytics (ATA) version 1.9. Le numéro de build de cette mise à jour est 1.9.7412.
 
-## <a name="fixed-issues-included-in-this-update"></a>Problèmes résolus dans cette mise à jour :
+## <a name="fixed-issues-included-in-this-update"></a>Problèmes résolus dans cette mise à jour
 
 - Possibilité de défaillances de la migration entre les versions 1.8 et 1.9 d’ATA pour les bases de données volumineuses.
 - Lorsque vous utilisez la dernière version du navigateur Microsoft Edge et que vous changez d’utilisateur, le navigateur peut se bloquer.
@@ -37,11 +36,11 @@ Cet article décrit les problèmes résolus dans la mise à jour 1 de Microsoft 
 - Exportations incohérentes d’activités suspectes vers Microsoft Excel. Défaillance occasionnelle avec génération d’erreurs.  
 
 
-## <a name="improvements-included-in-this-update"></a>Améliorations incluses dans cette mise à jour : 
+## <a name="improvements-included-in-this-update"></a>Améliorations incluses dans cette mise à jour
 - Modifications requises pour la certification de normes d’accessibilité de Microsoft (MAS).
 - Inclut des correctifs de performance et de sécurité supplémentaires.
 
-## <a name="get-this-update"></a>Obtenir cette mise à jour :
+## <a name="get-this-update"></a>Obtenir cette mise à jour
 
 Les mises à jour pour Microsoft Advanced Threat Analytics version 1.9 sont disponibles sur le site web Microsoft Update ou par téléchargement manuel.
 

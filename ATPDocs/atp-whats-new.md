@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
+ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125045"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737047"
 ---
 *S'applique à : Azure - Protection avancée contre les menaces*
 
-# <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP 
+# <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-260"></a>Azure ATP version 2.60
+La mise en production d’Azure ATP version 2.60 devrait intervenir pendant la première semaine de 2019. Dans cette période, si des problèmes critiques nécessitent une mise à jour temporaire, des mises à jour seront effectuées selon les besoins.
+
+## <a name="azure-atp-release-259"></a>Azure ATP version 2.59
+Publication : 16 décembre 2018
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
 
 ## <a name="azure-atp-release-258"></a>Azure ATP version 2.58
 
@@ -32,6 +41,7 @@ Date de publication : 9 décembre 2018
 La série d'alertes de sécurité d'Azure ATP pour l'implémentation de protocoles inhabituels qui partageaient jusqu'à présent 1 externalId (2002) est maintenant divisée en 4 alertes distinctes, avec un externalId unique chacune. 
 
 ### <a name="new-alert-externalids"></a>Nouvelles externalId d’alerte
+
 > [!div class="mx-tableFixed"] 
 
 |Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ExternalId unique|

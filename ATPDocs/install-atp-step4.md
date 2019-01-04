@@ -1,11 +1,11 @@
 ---
-title: Installer Azure Advanced Threat Protection | Microsoft Docs
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
 description: La quatrième étape de la procédure d’installation d’Azure ATP vous permet d’installer le capteur Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
+ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501104"
+ms.lasthandoff: 12/16/2018
+ms.locfileid: "53450386"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 
 
@@ -38,9 +38,9 @@ ms.locfileid: "52501104"
 Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 1. Vérifiez que l’ordinateur dispose d’une connectivité au point de terminaison du service cloud Azure ATP approprié :
-  - https://triprd1wceuw1sensorapi.atp.azure.com (pour l’Europe)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (pour les États-Unis)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (pour l’Asie)
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (pour l’Europe)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (pour les États-Unis)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (pour l’Asie)
 
 2. Extrayez les fichiers d’installation à partir du fichier zip. 
 > [!NOTE] 
@@ -68,9 +68,9 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
     ![Image de configuration du capteur autonome Azure ATP](media/sensor-install-config.png)
 
-      - Chemin d’installation : il s’agit de l’emplacement où le capteur autonome Azure ATP est installé. Par défaut, il s’agit de %programfiles%\Azure Advanced Threat Protection sensor. Conservez la valeur par défaut.
+      - Chemin d’installation : Il s’agit de l’emplacement où le capteur autonome Azure ATP est installé. Par défaut, il s’agit de %programfiles%\Azure Advanced Threat Protection sensor. Conservez la valeur par défaut.
 
-      - Clé d’accès : valeur extraite du portail Azure ATP à l’étape précédente.
+      - Clé d’accès : Valeur extraite du portail Azure ATP à l’étape précédente.
     
 7. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
 
