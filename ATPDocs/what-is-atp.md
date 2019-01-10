@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/23/2018
+ms.date: 1/3/2019
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11e0e75c8c7fd4a0be592ad45b961f7046ec5e2
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: f4138a8649bbb278453114f606d034a0123cbdd7
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800064"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996874"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
 # <a name="what-is-azure-advanced-threat-protection"></a>Qu’est-ce qu’Advanced Threat Protection ?
 Azure Advanced Threat Protection (ATP) est une solution de sécurité cloud qui identifie, détecte et vous aide à examiner les menaces avancées, les identités compromises et les actions des utilisateurs internes malveillants dirigées contre votre entreprise. Azure ATP permet aux analystes SecOp et aux professionnels de la sécurité chargés de détecter les attaques avancées dans les environnements hybrides de :  
@@ -39,14 +39,14 @@ Azure ATP vous fournit des insights précieux sur les configurations des identit
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques : 
 ### <a name="reconnaissance"></a>Reconnaissance 
 Identifiez les utilisateurs non autorisés et les tentatives des attaquants pour obtenir des informations. Les attaquants recherchent des informations sur les noms d’utilisateur, l’appartenance des utilisateurs à des groupes, les adresses IP affectées à des appareils, les ressources et plus encore, selon différentes méthodes.  
-### <a name="compromised-users"></a>Utilisateurs compromis
+### <a name="compromised-credentials"></a>Informations d’identification compromises
 Identifiez les tentatives de compromission des informations d’identification des utilisateurs avec des attaques par force brute, les échecs d’authentification, les changements d’appartenance à des groupes d’utilisateurs et d’autres méthodes.  
 
 ### <a name="lateral-movements"></a>Déplacements latéraux
 Détectez les tentatives de mouvement latéral au sein du réseau pour obtenir plus de contrôle des utilisateurs sensibles, en utilisant des méthodes comme Pass-the-Ticket, Pass-the-Hash, Overpass-the-Hash, etc.  
 
 ### <a name="domain-dominance"></a>Contrôle du domaine
-Mise en évidence du comportement des attaquants si la prise de contrôle du domaine est effective, via l’exécution de code à distance sur le contrôleur de domaine et des méthodes comme la mise en mémoire fantôme du contrôleur de domaine, la réplication du contrôleur de domaine malveillant, les activités de Golden Ticket, etc.   
+Mise en évidence du comportement des attaquants si la prise de contrôle du domaine est effective, via l’exécution de code à distance sur le contrôleur de domaine et des méthodes comme la mise en mémoire fantôme du contrôleur de domaine, la réplication du contrôleur de domaine malveillant, les activités de Golden Ticket, etc.
 
 ## <a name="investigate-alerts-and-user-activities"></a>Examiner les alertes et les activités des utilisateurs  
 Azure ATP est conçu pour réduire le bruit général des alertes et fournit seulement des alertes de sécurité pertinentes importantes, selon une chronologie simple et en temps réel des attaques de l’organisation. La vue de la chronologie des attaques d’Azure ATP vous permet de vous concentrer sur ce qui est important, en tirant parti de l’analytique intelligente. Les professionnels de la sécurité utilisant Azure ATP peuvent examiner rapidement les menaces et obtenir des insights sur l’organisation pour les utilisateurs, les appareils et les recours au réseau. L’intégration fluide avec Windows Defender ATP fournit une autre couche de sécurité renforcée via une détection et une protection supplémentaires contre les menaces persistantes avancées sur le système d’exploitation.  
@@ -87,7 +87,7 @@ Nous vous recommandons de déployer Azure ATP en trois phases :
 ### <a name="phase-1"></a>Phase 1
 
 1. Configurez Azure ATP pour protéger vos environnements principaux. Le modèle de déploiement rapide d’Azure ATP vous permet de protéger votre organisation dès aujourd’hui. [Installer Azure ATP](install-atp-step1.md)  
-2. Définissez les [comptes sensibles](sensitive-accounts.md) et les [comptes honeytoken](install-atp-step7.md).   
+2. Définissez les [comptes sensibles](sensitive-accounts.md) et les [comptes honeytoken](install-atp-step7.md).
 3. Passez en revue les rapports et [chemins de mouvement latéral](use-case-lateral-movement-path.md).  
 
 
@@ -95,12 +95,12 @@ Nous vous recommandons de déployer Azure ATP en trois phases :
 
 1. Protégez tous les contrôleurs de domaine et les [forêts](atp-multi-forest.md) de votre organisation.  
 2.  Surveillez toutes les [alertes](working-with-suspicious-activities.md) : examinez les alertes de mouvement latéral et de prise de contrôle de domaine.  
-3. Utilisez le [Guide des alertes de sécurité](suspicious-activity-guide.md) pour comprendre les menaces et trier les attaques potentielles.   
+3. Utilisez le [Guide des alertes de sécurité](suspicious-activity-guide.md) pour comprendre les menaces et trier les attaques potentielles.
 
 
 ### <a name="phase-3"></a>Phase 3
 
-1. Intégrez les alertes Azure ATP dans votre flux de travail SecOp. 
+1. Intégrez les alertes Azure ATP dans votre flux de travail SecOp.
 
 ## <a name="see-also"></a>Voir aussi
 - [Forum aux questions Azure ATP](atp-technical-faq.md)
