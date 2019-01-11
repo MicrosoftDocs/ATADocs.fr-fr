@@ -5,41 +5,48 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/25/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bb460b699e0052f917ffcd6899d5cc1baa71182f
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298268"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996908"
 ---
-*S’applique à : Azure Advanced Threat Protection*
+*S’applique à : Azure - Protection avancée contre les menaces*
 
-# <a name="using-azure-atp-lateral-movement-paths-lmps"></a>Utilisation des chemins de mouvement latéral d’Azure ATP
+# <a name="tutorial-use-lateral-movement-paths-lmps"></a>Didacticiel : Utiliser des chemins de mouvement latéral
 
-Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont les attaques par [vol d’informations d’identification](suspicious-activity-guide.md#) et par [Pass-the-Ticket](suspicious-activity-guide.md). Dans les deux méthodes, des comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs. 
+Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont les attaques par [vol d’informations d’identification](suspicious-activity-guide.md#) et par [Pass-the-Ticket](suspicious-activity-guide.md). Dans les deux méthodes, des comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs.
 
-Utilisez les chemins de mouvement latéral d’Azure ATP pour [examiner](#investigate) les chemins de mouvement latéral potentiels et, en combinaison avec les alertes de sécurité d’Azure ATP, pour obtenir une meilleure compréhension de ce qui s’est passé dans votre réseau et de quelle manière. Utilisez le [rapport des chemins de mouvement latéral vers les comptes sensibles](#discover-your-at-risk-sensitive-accounts) pour découvrir tous les comptes sensibles avec des chemins de mouvement latéral potentiels détectés dans votre réseau sur une période de temps donnée.  
+Dans ce tutoriel, vous allez apprendre à utiliser les chemins de mouvement latéral d’Azure ATP pour [examiner](#investigate) les chemins de mouvement latéral potentiels et, en combinaison avec les alertes de sécurité d’Azure ATP, pour obtenir une meilleure compréhension de ce qui s’est passé dans votre réseau et de quelle manière. Vous allez également apprendre à utiliser le [rapport des chemins de mouvement latéral pour les comptes sensibles](#discover-your-at-risk-sensitive-accounts) pour découvrir tous les comptes sensibles avec des chemins de mouvement latéral potentiels détectés dans votre réseau sur une période de temps donnée.
 
-## <a name="investigate"></a>Investiguer
-Il existe plusieurs façons d’utiliser et d’investiguer les chemins de mouvement latéral. Dans le portail Azure ATP, effectuez une recherche par entité, puis explorez par chemin ou par activité. 
+> [!div class="checklist"]
+> * Examiner les chemins de mouvement latéral
+> * Découvrir vos comptes sensibles à risque
+> * Accéder au rapport **Chemins d’accès de mouvement latéral pour les comptes sensibles**
+
+
+## <a name="investigate"></a>Étudier
+
+Il existe plusieurs façons d’utiliser et d’investiguer les chemins de mouvement latéral. Dans le portail Azure ATP, effectuez une recherche par entité, puis explorez par chemin ou par activité.
 
 1. Dans le portail, recherchez un utilisateur ou un ordinateur. Regardez si un badge de mouvement latéral a été ajouté à un profil d’entité. Les badges apparaissent seulement quand une entité est détectée dans un chemin de mouvement latéral potentiel au cours des dernières 48 heures.  
 
-   ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou ![icône de chemin d’accès](./media/paths-icon.png). 
+   ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou ![icône de chemin d’accès](./media/paths-icon.png).
 
-2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**. 
+2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**.
 
    ![Onglet Chemin de mouvement latéral d’Azure ATP](./media/lateral-movement-path-tab.png)
 
-3. Le graphe qui s’affiche montre une carte des chemins possibles vers l’utilisateur sensible au cours des dernières 48 heures. Si aucune activité n’a été détectée sur cette période, il n’apparaîtra pas. Utilisez l’option **Afficher une autre date** pour afficher le graphe avec les détections antérieures de chemin de mouvement latéral pour l’entité. 
+3. Le graphe qui s’affiche montre une carte des chemins possibles vers l’utilisateur sensible au cours des dernières 48 heures. Si aucune activité n’a été détectée sur cette période, il n’apparaîtra pas. Utilisez l’option **Afficher une autre date** pour afficher le graphe avec les détections antérieures de chemin de mouvement latéral pour l’entité.
 
    ![Chemin de mouvement latéral - Afficher une autre date](./media/atp-view-different-date.png)
 
@@ -59,13 +66,21 @@ Pour détecter tous les comptes sensibles de votre réseau qui sont exposés en 
 
 3. Cliquez sur **Télécharger**.
 
-4. Un fichier Excel est créé. Il donne des détails sur les chemins potentiels de mouvement latéral et sur l’exposition des comptes sensibles aux dates sélectionnées. L’onglet **Résumé** présente des graphiques qui décrivent en détail le nombre d’ordinateurs et de comptes sensibles, ainsi que les moyennes pour l’accès à risque. L’onglet **Détails** indique la liste des comptes sensibles à examiner. 
+4. Un fichier Excel est créé. Il donne des détails sur les chemins potentiels de mouvement latéral et sur l’exposition des comptes sensibles aux dates sélectionnées. L’onglet **Résumé** présente des graphiques qui décrivent en détail le nombre d’ordinateurs et de comptes sensibles, ainsi que les moyennes pour l’accès à risque. L’onglet **Détails** indique la liste des comptes sensibles à examiner.
 
-Le rapport des mouvements latéraux vers les comptes sensibles peut également être planifié avec la fonctionnalité de définition de rapports planifiés. 
+## <a name="schedule-report"></a>Planifier un rapport
 
-Notez que les chemins de mouvement latéral détaillés dans le rapport téléchargeable peuvent ne plus être disponibles, car ils ont été détectés antérieurement et avoir été changés, modifiés ou corrigés depuis leur détection. 
+Le rapport des mouvements latéraux vers les comptes sensibles peut également être planifié avec la fonctionnalité de définition de rapports planifiés.
 
-Pour passer en revue l’historique des chemins de mouvement latéral, sélectionnez d’autres dates disponibles dans la sélection du calendrier lors de la création d’un rapport. 
+Notez que les chemins de mouvement latéral détaillés dans le rapport téléchargeable peuvent ne plus être disponibles, car ils ont été détectés antérieurement et avoir été changés, modifiés ou corrigés depuis leur détection.
+
+Pour passer en revue l’historique des chemins de mouvement latéral, sélectionnez d’autres dates disponibles dans la sélection du calendrier lors de la création d’un rapport.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Dans ce tutoriel, vous avez appris à utiliser des chemins de mouvement latéral pour examiner des activités suspectes. Pour en savoir plus sur les entités impliquées dans les chemins de mouvement latéral, passez au tutoriel sur l’examen des entités.
+> [!div class="nextstepaction"]
+> [Examiner les entités](investigate-entity.md)
 
 ## <a name="see-also"></a>Voir aussi
 

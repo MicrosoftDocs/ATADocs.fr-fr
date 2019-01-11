@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/9/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411627"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142435"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -66,7 +66,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
     |Champ|Description|Commentaires|
     |---------|---------------|------------|
-    |Chemin d’installation|Il s’agit de l’emplacement où est installé le centre ATA. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center.|Conservez la valeur par défaut.|
+    |Chemin d’installation|Il s’agit de l’emplacement où est installé le centre ATA. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center|Conservez la valeur par défaut.|
     |Chemin d’accès des données de la base de données|Il s’agit de l’emplacement dans lequel les fichiers de la base de données MongoDB sont enregistrés. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Modifiez cette valeur pour pointer vers un emplacement capable de prendre en charge l’évolution de vos besoins en matière de redimensionnement. **Remarque :** <ul><li>Dans les environnements de production, vous devez utiliser un lecteur avec suffisamment d'espace (tel que déterminé par la planification de la capacité).</li><li>Pour les déploiements volumineux, la base de données doit figurer sur un disque physique distinct.</li></ul>Pour plus d’informations sur le redimensionnement, consultez [Planification de la capacité ATA](ata-capacity-planning.md).|
     |Certificat SSL du service du centre|Il s’agit du certificat utilisé par le service du centre ATA et de la console ATA.|Cliquez sur l’icône en forme de clé pour sélectionner un certificat installé ou cochez la case Créer un certificat auto-signé lors du déploiement dans un environnement lab. Vous avez la possibilité de créer un certificat auto-signé.|
         
@@ -94,9 +94,16 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
 ### <a name="set-anti-virus-exclusions"></a>Définir des exclusions d’antivirus
 
-Après avoir installé le Centre ATA, vous devez exclure le répertoire de base de données MongoDB de l’analyse continue de votre application antivirus. L’emplacement par défaut dans la base de données est : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Après avoir installé le Centre ATA, vous devez exclure le répertoire de base de données MongoDB de l’analyse continue de votre application antivirus. L’emplacement par défaut dans la base de données est le suivant : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Veillez également à exclure ces dossiers de l’analyse antivirus :
 
+C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+Si vous avez installé ATA dans un répertoire différent, veillez à changer les chemins des dossiers en fonction de votre installation. 
 
 > [!div class="step-by-step"]
 > [« Préinstallation](configure-port-mirroring.md)

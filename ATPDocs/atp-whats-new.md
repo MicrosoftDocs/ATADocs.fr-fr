@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/21/2018
+ms.date: 1/6/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
-ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
+ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
+ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737047"
+ms.lasthandoff: 01/06/2019
+ms.locfileid: "54058852"
 ---
 *S'applique à : Azure - Protection avancée contre les menaces*
 
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
 
 ## <a name="azure-atp-release-260"></a>Azure ATP version 2.60
-La mise en production d’Azure ATP version 2.60 devrait intervenir pendant la première semaine de 2019. Dans cette période, si des problèmes critiques nécessitent une mise à jour temporaire, des mises à jour seront effectuées selon les besoins.
+Publication : 6 janvier 2019
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-259"></a>Azure ATP version 2.59
 Publication : 16 décembre 2018
@@ -38,13 +40,13 @@ Publication : 16 décembre 2018
 Date de publication : 9 décembre 2018
 
 - **Amélioration de l’alerte de sécurité : Fractionnement d’alerte d’implémentation de protocole inhabituelle**<br>
-La série d'alertes de sécurité d'Azure ATP pour l'implémentation de protocoles inhabituels qui partageaient jusqu'à présent 1 externalId (2002) est maintenant divisée en 4 alertes distinctes, avec un externalId unique chacune. 
+La série d’alertes de sécurité d’Azure ATP pour l’implémentation de protocoles inhabituels qui partageaient jusqu’à présent 1 ID externe (2002) est maintenant divisée en 4 alertes distinctes, avec un ID externe unique chacune. 
 
 ### <a name="new-alert-externalids"></a>Nouvelles externalId d’alerte
 
 > [!div class="mx-tableFixed"] 
 
-|Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ExternalId unique|
+|Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ID externe unique|
 |---------|----------|---------|
 |Suspicion d’attaque par force brute (SMB)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033
 |Suspicion d’attaque over-pass-the-hash (Kerberos)|Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)|2002|
