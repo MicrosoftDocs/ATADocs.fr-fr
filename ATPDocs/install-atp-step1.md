@@ -33,7 +33,7 @@ Cette procédure d’installation fournit des instructions pour créer et gérer
 Dans Azure ATP, vous disposez d’une seule instance pour gérer plusieurs forêts dans un même volet. 
 
 > [!NOTE]
-> Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Caraïbes et en Asie. Votre instance est créée automatiquement dans le centre de données le plus proche géographiquement de votre annuaire AAD. Une fois créées, les instances Azure ATP ne peuvent plus être déplacées. 
+> Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Les Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données le plus proche géographiquement de votre annuaire AAD. Une fois créées, les instances Azure ATP ne peuvent plus être déplacées. 
 
 ## <a name="step-1-enter-the-azure-atp-portal"></a>Étape 1. Accédez au portail Azure ATP.
 
