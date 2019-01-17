@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: d108974a930aa8aad737e9348dc228f384858eb1
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996908"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249910"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Didacticiel : Utiliser des chemins de mouvement latéral
 
 Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont les attaques par [vol d’informations d’identification](suspicious-activity-guide.md#) et par [Pass-the-Ticket](suspicious-activity-guide.md). Dans les deux méthodes, des comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs.
