@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 929b0db30632e737e6371d473639f1e22532f75f
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 2cc450a50b35101b768d521d867850946e207dc5
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454544"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249995"
 ---
 *S'applique à : Azure - Protection avancée contre les menaces*
 
@@ -57,14 +57,17 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 
 > [!div class="mx-tableFixed"] 
 
-|Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ExternalId unique|
+|Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ID externe unique|
 |---------|----------|---------|
 |Reconnaissance d’énumération de compte|Reconnaissance à l’aide de l’énumération de compte|2003|
+|Exfiltration de données sur SMB| NA| 2030|
 |Activité Honeytoken|Activité Honeytoken|2014|
 |Demande malveillante de la clé principale de l’API de protection des données|Demande d’information privée de protection contre les données malveillantes|2020|
 |Reconnaissance de mappage de réseau (DNS)|Reconnaissance à l’aide de DNS|2007|
 |Tentative d’exécution de code à distance|Tentative d’exécution de code à distance|2019|
 |Suspicion d’attaque par force brute (LDAP)|Attaque par force brute par le biais d’une liaison simple LDAP|2004|
+|Suspicion d’attaque par force brute (Kerberos, NTLM)|Échecs d’authentification suspects|2023|
+|Suspicion d’attaque par force brute (SMB)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033|
 |Suspicion d’attaque DCShadow (promotion du contrôleur de domaine)|Promotion du contrôleur de domaine suspect (attaque DcShadow potentielle)|2028|
 |Suspicion d’attaque DCShadow (demande de réplication du contrôleur de domaine)|Demande de réplication suspecte du contrôleur de domaine (attaque DcShadow potentielle)|2029|
 |Suspicion d’attaque DCSync (réplication de services d’annuaire)|Réplication malveillante de services d’annuaire|2006|
@@ -75,8 +78,6 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 |Suspicion d’utilisation de golden ticket (anomalie de ticket) - préversion|NA|2032|
 |Suspicion d'usurpation d’identité (pass-the-hash)|Usurpation d’identité par attaque Pass-the-Hash|2017|
 |Suspicion d’usurpation d’identité (pass-the-ticket)|Usurpation d’identité par attaque Pass-the-Ticket|2018|
-|Suspicion d’attaque par force brute (SMB)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033|
-|Suspicion d’attaque par force brute (Kerberos, NTLM)|Échecs d’authentification suspects|2023|
 |Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement)|Activité de passage à une version antérieure du chiffrement (attaque Overpass-the-Hash potentielle)|2008|
 |Suspicion d’attaque over-pass-the-hash (Kerberos)|Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)|2002|
 |Suspicion d’utilisation du framework de piratage Metasploit|Implémentation de protocole inhabituelle (utilisation potentielle d’outils de piratage Metasploit)|2034|
@@ -101,6 +102,9 @@ Priorités :
 
 ### <a name="account-enumeration-reconnaissance"></a>Reconnaissance d’énumération de compte 
 21-02-2018  16:19:35    Auth.Warning    192.168.0.220   1 2018-02-21T14:19:27.540731+00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AccountEnumerationSecurityAlert|Reconnaissance à l’aide de l’énumération de compte|5|start=2018-02-21T14:19:02.6045416Z app=Kerberos shost=CLIENT1 suser=LMaldonado msg=Une activité d’énumération de compte suspecte utilisant le protocole Kerberos, provenant de CLIENT1, a été observée et a deviné avec succès Lamon Maldonado (Software Engineer). externalId=2003 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d cs2Label=trigger cs2=new
+
+### <a name="data-exfiltration-over-smb"></a>Exfiltration de données sur SMB
+12-19-2018  14:17:46    Auth.Error     127.0.0.1      1 2018-12-19T12:17:34.645993+00:00 DC1 CEF 3288 SmbDataExfiltrationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.60.0.0|SmbDataExfiltrationSecurityAlert|[PRÉVERSION] Exfiltration de données sur SMB|10|start=2018-12-19T12:14:12.4932821Z app=Smb shost=CLIENT1 msg=Eugene Jenkins (Software Engineer) sur DC2 a copié des fichiers suspects sur CLIENT1. externalId=2030 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/3ca2ec9d-2c67-44cc-a2d6-391716611bb6 cs2Label=trigger cs2=new
 
 ### <a name="honeytoken-activity"></a>Activité Honeytoken
 02-21-2018  16:20:36    Auth.Warning  192.168.0.220 1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=Les activités suivantes ont été exécutées par honey :\r\nConnecté à CLIENT2 par le biais de DC1. externalId=2014 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c cs2Label=trigger cs2=new

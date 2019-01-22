@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/10/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: 00bce1b381b32e1fe3fe9a2bb2c11016b33699f7
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142435"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249927"
 ---
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -96,12 +96,17 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
 Après avoir installé le Centre ATA, vous devez exclure le répertoire de base de données MongoDB de l’analyse continue de votre application antivirus. L’emplacement par défaut dans la base de données est le suivant : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
-Veillez également à exclure ces dossiers de l’analyse antivirus :
+Veillez à également exclure les dossiers et les processus suivants de l’analyse antivirus :
 
-C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+**Dossiers** C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+**Processus**
+<br>mongod.exe
+<br>Microsoft.Tri.Center.exe
+
 
 Si vous avez installé ATA dans un répertoire différent, veillez à changer les chemins des dossiers en fonction de votre installation. 
 

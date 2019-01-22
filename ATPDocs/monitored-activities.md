@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 16951313f18be44a3c42a0f6b2281963d867c7b4
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125028"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249893"
 ---
 *S'applique à : Azure - Protection avancée contre les menaces*
 
@@ -76,7 +76,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Activité supervisée|Description|
 |---------------------|------------------|
 |Réplication du service d’annuaire  |L’utilisateur a tenté de répliquer le service d’annuaire.|
-|Requête DNS  |L’utilisateur a exécuté une requête AXFR sur le contrôleur de domaine.|
+|Requête DNS  |Type de requête effectuée par l’utilisateur sur le contrôleur de domaine (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Extraction de données privées  |L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
 |Création de service   |L’utilisateur a tenté de créer un service sur un ordinateur distant.|
 |Énumération des sessions SMB   |L’utilisateur a tenté d’énumérer tous les utilisateurs ayant une session SMB ouverte sur les contrôleurs de domaine.|
