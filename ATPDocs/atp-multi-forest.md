@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0628b59457f7932757cde04be5472c5510ff0d9d
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: a742cb7c64211d47a53a15b3906283ce523a938c
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458986"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
 

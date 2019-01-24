@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d247671c43e4c62f740eca263f2e0e680c7d319
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b6aaaf1a93fe635f4e159f88e7d55a110bcef0d2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133954"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840486"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
 # <a name="investigating-lateral-movement-paths-with-ata"></a>Investigation des chemins de mouvement latéral avec ATA
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Même si vous faites de votre mieux pour protéger vos utilisateurs sensibles, que les administrateurs ont des mots de passe complexes qu’ils changent fréquemment, que leurs ordinateurs sont renforcés et que le stockage de leurs données est sécurisé, des attaquants peuvent malgré tout utiliser des chemins de mouvement latéral pour accéder aux comptes sensibles. Dans les attaques par mouvement latéral, l’attaquant tire parti d’instances quand les utilisateurs sensibles se connectent à une machine où un utilisateur non sensible a des droits locaux. Les attaquants peuvent ensuite se déplacer latéralement, accéder à l’utilisateur moins sensible, puis se déplacer au sein de l’ordinateur pour se procurer les informations d’identification de l’utilisateur sensible. 
 
@@ -40,11 +41,11 @@ Pour détecter les comptes sensibles de votre réseau qui ont été vulnérables
 
 2. Sous **Chemins d’accès de mouvement latéral pour les comptes sensibles**, en l’absence de chemins de mouvement latéral, le rapport est grisé. S’il existe des chemins de mouvement latéral, les dates du rapport sélectionnent automatiquement la première date avec des données pertinentes. 
 
- ![rapports](./media/reports.png)
+   ![rapports](./media/reports.png)
 
 3. Cliquez sur **Télécharger**.
 
-3. Le fichier Excel qui est créé vous fournit plus d’informations sur les comptes sensibles qui présentent des risques. L’onglet **Résumé** propose des graphes qui décrivent en détail le nombre de comptes sensibles, les ordinateurs et les moyennes pour les ressources à risque. L’onglet **Détails** présente une liste des comptes sensibles dont vous devez vous soucier. Notez que les chemins sont des chemins qui existaient auparavant et qui peuvent ne pas être disponibles aujourd’hui.
+4. Le fichier Excel qui est créé vous fournit plus d’informations sur les comptes sensibles qui présentent des risques. L’onglet **Résumé** propose des graphes qui décrivent en détail le nombre de comptes sensibles, les ordinateurs et les moyennes pour les ressources à risque. L’onglet **Détails** présente une liste des comptes sensibles dont vous devez vous soucier. Notez que les chemins sont des chemins qui existaient auparavant et qui peuvent ne pas être disponibles aujourd’hui.
 
 
 ## <a name="investigate"></a>Étudier
@@ -59,7 +60,7 @@ Maintenant que vous avez identifié les comptes sensibles qui présentent des ri
 
 4. Examinez le graphe pour voir si vous pouvez en savoir plus sur l’exposition aux risques des informations d’identification de l’utilisateur sensible. Par exemple, sur cette carte, vous pouvez suivre les flèches grises **Connecté par** pour voir où Samira s’est connectée avec ses informations d’identification privilégiées. Dans ce cas, les informations d’identification sensibles de Samira ont été enregistrées sur l’ordinateur REDMOND-WA-DEV. Ensuite, identifiez quels autres utilisateurs connectés à quels ordinateurs ont généré le plus de risques et de vulnérabilité. Pour ce faire, examinez les flèches noires **Administrateur de** afin de savoir qui possède des privilèges d’administrateur sur la ressource. Dans cet exemple, chaque membre du groupe **Contoso All** a la possibilité d’accéder aux informations d’identification des utilisateurs à partir de cette ressource.  
 
- ![chemins de mouvement latéral du profil utilisateur](media/user-profile-lateral-movement-paths.png)
+   ![chemins de mouvement latéral du profil utilisateur](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="preventative-best-practices"></a>Bonnes pratiques de prévention

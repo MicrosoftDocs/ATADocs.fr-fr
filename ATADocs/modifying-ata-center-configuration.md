@@ -12,19 +12,18 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7875c6b0f6be62277f80881edbefe36b910bb4c9
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: ffc46e3d74928cc071215da9bafd5989e4448a65
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298134"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840554"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="modifying-the-ata-center-configuration"></a>Modification de la configuration du centre ATA
 
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Après le déploiement initial, les modifications doivent être apportées avec soin au centre ATA. Utilisez les procédures suivantes lors de la mise à jour de l’URL de la console et du certificat.
 
@@ -46,16 +45,16 @@ L’URL est utilisée dans les scénarios suivants :
 
 2. Dans les paramètres ATA, sous **Centre**, entrez la nouvelle URL. À ce stade, le service du centre ATA utilise toujours l’URL d’origine. 
 
- ![Modifier la configuration ATA](media/change-center-config.png)
+   ![Modifier la configuration ATA](media/change-center-config.png)
 
-  > [!NOTE]
-  > Si vous avez entré une adresse IP personnalisée, vous ne pouvez pas cliquer sur **Activer** tant que vous n’avez pas installé l’adresse IP sur le centre ATA.
+   > [!NOTE]
+   > Si vous avez entré une adresse IP personnalisée, vous ne pouvez pas cliquer sur **Activer** tant que vous n’avez pas installé l’adresse IP sur le centre ATA.
     
 3. Attendez que les passerelles ATA se synchronisent. Elles disposent désormais de deux URL potentielles permettant d’accéder à la console ATA. Tant que la passerelle ATA peut se connecter avec l’URL d’origine, elle n’essaie pas la nouvelle.
 
 4. Une fois que toutes les passerelles ATA sont synchronisées avec la configuration mise à jour, dans la page de configuration du Centre, cliquez sur le bouton **Activer** pour activer la nouvelle URL. Lorsque vous activez la nouvelle URL, les passerelles ATA utilisent la nouvelle URL pour accéder au centre ATA. Après la connexion au service du centre ATA, la passerelle ATA télécharge la configuration la plus récente et dispose uniquement de la nouvelle URL pour la console ATA. 
 
- ![Activer le certificat](media/center-activation.png)
+   ![Activer le certificat](media/center-activation.png)
 
 > [!NOTE]
 > -   Si une passerelle ATA était hors connexion lorsque vous avez activé la nouvelle URL et n’a jamais reçu la configuration mise à jour, vous devez manuellement mettre à jour le fichier JSON de configuration sur la passerelle ATA.
@@ -74,7 +73,7 @@ Procédez comme suit pour remplacer le certificat :
 
 2. Dans les paramètres ATA, sous **Centre**, sélectionnez ce certificat nouvellement créé. À ce stade, le service du centre ATA est toujours lié au certificat d’origine. 
 
- ![Modifier la configuration ATA](media/change-center-config.png)
+   ![Modifier la configuration ATA](media/change-center-config.png)
 
 3. Attendez que les passerelles ATA se synchronisent. Elles disposent désormais de deux certificats potentiels valides pour l’authentification mutuelle. Tant que la passerelle ATA peut se connecter avec le certificat d’origine, elle n’essaie pas le nouveau.
 

@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
-ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
+ms.openlocfilehash: 8d7d8bc8ce6c1aefb95b5770a103859fed74efe1
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52981936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458629"
 ---
-*S'applique à : Azure - Protection avancée contre les menaces*
-
-
 # <a name="azure-atp-advanced-audit-policy-check"></a>Vérification de la stratégie d’audit avancée Azure ATP
 
 La détection Azure ATP s’appuie sur des journaux d’événements Windows spécifiques pour bénéficier d’une visibilité dans certains scénarios, notamment les ouvertures de session NTLM, les modifications du groupe de sécurité et les événements similaires. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Une configuration incorrecte exclurait certains événements critiques de vos journaux, entraînant une couverture Azure ATP incomplète.
@@ -46,7 +43,7 @@ La stratégie d’audit de sécurité avancée peut être activée via l’objet
 
 4. Dans la fenêtre qui s’ouvre, accédez à **Configuration ordinateur** > **Stratégies** > **Paramètres Windows** > **Paramètres de sécurité** > **Configuration avancée de la stratégie d’audit**.
 
-    ![Configuration avancée de la stratégie d’audit](media/atp-advanced-audit-policy-check-step-2.png)
+    ![Configuration de la stratégie d’audit avancée](media/atp-advanced-audit-policy-check-step-2.png)
 
 5. Accédez au compte d’ouverture de session, double-cliquez sur **Validation des informations d’identification d’audit**, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements de réussite et d’échec. 
 
@@ -64,5 +61,5 @@ La stratégie d’audit de sécurité avancée peut être activée via l’objet
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

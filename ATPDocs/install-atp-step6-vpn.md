@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 947f816d30dbc8e8de817eccf8213d25c026f833
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458783"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
 # <a name="integrate-vpn"></a>Intégrer le VPN
 
 Azure Advanced Threat Protection (ATP) peut collecter des informations de gestion de comptes dans les solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs, ainsi qu’une nouvelle détection pour les connexions VPN anormales. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.

@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
-ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
+ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335419"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840724"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
 
@@ -69,13 +65,13 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
--   Microsoft Edge
--   Internet Explorer 10 et versions ultérieures
--   Google Chrome 4.0 et versions ultérieures
--   Largeur d’écran d’une résolution minimale de 1 700 pixels
--   Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
+- Microsoft Edge
+- Internet Explorer 10 et versions ultérieures
+- Google Chrome 4.0 et versions ultérieures
+- Largeur d’écran d’une résolution minimale de 1 700 pixels
+- Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
- ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
+  ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]

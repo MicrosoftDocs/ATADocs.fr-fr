@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8c80529c5111c909bd5e2b1b0ff17933e4f30b18
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458646"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="understanding-entity-profiles"></a>Présentation des profils d’entité
 
 Le profil d’entité fournit une page complète sur l’entité, qui permet de mener des investigations approfondies sur les utilisateurs, les ordinateurs, les appareils, les ressources auxquelles ils ont accès et sur leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.

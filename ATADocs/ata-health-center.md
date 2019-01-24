@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 12d1a3f10cc3b9d99a20a2562ae4f81425ec9578
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 9d043ac8c780505f6e3443c354e02b89d3040b4c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133492"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839972"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
 # <a name="working-with-ata-system-health-and-events"></a>Utilisation de l’intégrité et des événements système d’ATA
 
+*S’applique à : Advanced Threat Analytics version 1.9*
+
 ## <a name="ata-health-center"></a>Centre d’intégrité ATA
+
 Le centre d’intégrité ATA vous permet d’évaluer les performances de votre service ATA et vous prévient en cas de problèmes.
 
 ## <a name="working-with-the-ata-health-center"></a>Utilisation du centre d’intégrité ATA
@@ -38,16 +38,16 @@ Pour vérifier l’intégrité globale de votre système, cliquez sur l’icône
 
 -   Il est possible de gérer toutes les alertes actives et de leur appliquer l’opération **Fermer**, **Ignorer** ou **Supprimer** en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
--   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
+-   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
 
--   **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
+-   **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
 
     > [!NOTE]
     > ATA peut rouvrir une activité fermée si celle-ci est détectée à nouveau peu de temps après.
 
--   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, ATA ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
+-   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, ATA ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
 
-- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
+- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
 
 
 

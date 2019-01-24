@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 92768392fffb2485a3043ca49fa0c7d494a26df7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634747"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840996"
 ---
+# <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-# <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
 Cet article fournit un guide de préparation qui vous aide à bien démarrer avec Advanced Threat Analytics.
 
 ## <a name="understanding-ata"></a>Présentation d’ATA
@@ -77,7 +78,7 @@ Les paramètres nécessaires de base dans ATA sont configurés dans l’Assistan
 
 Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des attaques. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez à la console ATA. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’ATA :
 
-[Manuel des activités suspectes d’ATA](http://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
+[Manuel des activités suspectes d’ATA](http://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
 
 [Guide des activités suspectes d’ATA](suspicious-activity-guide.md)
 

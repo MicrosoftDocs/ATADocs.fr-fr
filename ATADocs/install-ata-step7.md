@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b45012f82a2457d09a616c2bd9e7e8866d0f5cdc
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 76c149c351400c57d8d70274d152d23ca6f729df
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453933"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839892"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="install-ata---step-8"></a>Installer ATA - Étape 8
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Étape 7](vpn-integration-install-step.md)
 > [Étape 9 »](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Étape 8. Configurer des exclusions d’adresses IP et un utilisateur Honeytoken
+
 ATA permet d’exclure des adresses IP ou utilisateurs spécifiques d’un certain nombre de détections. 
 
 Par exemple, une **exclusion DNS Reconnaissance** peut être un analyseur de sécurité qui utilise DNS comme mécanisme d’analyse. L’exclusion aide ATA à ignorer ces analyseurs. Un appareil NAT constitue un exemple d’exclusion *Pass-the-Ticket*.    

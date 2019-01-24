@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d49770f435985027690ddfc05a9359e84841c0ff
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: b73a82b2dc301de0d464f9f0dc936cce17a2fb10
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454035"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841115"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="install-ata---step-3"></a>Installer ATA - Étape 3
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Étape 2](install-ata-step2.md)
 > [Étape 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Étape 3. Télécharger le package d’installation de la passerelle ATA
+
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA. Elle peut être installée sur un serveur dédié ou sur un contrôleur de domaine. Si vous l’installez sur un contrôleur de domaine, elle est installée en tant que passerelle légère ATA. Pour plus d’informations sur la passerelle légère ATA, consultez [Architecture ATA](ata-architecture.md). 
 
 Cliquez sur **Télécharger l’installation de la passerelle** dans la liste des étapes en haut de la page pour accéder à la page **Passerelles**.

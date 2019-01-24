@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0dd00f3d4aa2cbbfe7d4e830bc66901c60b5f52
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 2287fb0a71fc7c11ae271ce7236fb7c86e3d1a4f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133376"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840263"
 ---
 # <a name="updating-ata-to-version-18"></a>Mise à jour d’ATA vers la version 1.8
 
@@ -42,36 +42,36 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
 
-1.  Sauvegardez votre base de données (facultatif) :
+1. Sauvegardez votre base de données (facultatif) :
 
-    -   Si le centre ATA s’exécute en tant que machine virtuelle et que vous souhaitez effectuer un point de contrôle, commencez par arrêter la machine virtuelle.
+   -   Si le centre ATA s’exécute en tant que machine virtuelle et que vous souhaitez effectuer un point de contrôle, commencez par arrêter la machine virtuelle.
 
-    -   Si le centre ATA est en cours d’exécution sur un serveur physique, consultez l’article [Récupération d’urgence](disaster-recovery.md) pour plus d’informations sur la sauvegarde de la base de données.
+   -   Si le centre ATA est en cours d’exécution sur un serveur physique, consultez l’article [Récupération d’urgence](disaster-recovery.md) pour plus d’informations sur la sauvegarde de la base de données.
 
-2.  Exécutez le fichier d’installation, **Microsoft ATA Center Setup.exe**, puis suivez les instructions à l’écran pour installer la mise à jour.
+2. Exécutez le fichier d’installation, **Microsoft ATA Center Setup.exe**, puis suivez les instructions à l’écran pour installer la mise à jour.
 
-    -  Dans la page **Bienvenue**, choisissez votre langue et cliquez sur **Suivant**.
+   - Dans la page **Bienvenue**, choisissez votre langue et cliquez sur **Suivant**.
 
-    -  Si vous n’avez pas activé les mises à jour automatiques dans la version 1.7, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
-    ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png)
+   - Si vous n’avez pas activé les mises à jour automatiques dans la version 1.7, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
+     ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png)
      
      Ceci ajuste les paramètres Windows pour activer les mises à jour pour ATA. 
     
-    -  Dans l’écran **Migration des données**, indiquez si vous souhaitez migrer tout ou une partie des données. Si vous choisissez de migrer uniquement des données partielles, toutes les détections fonctionnent immédiatement à l’exception de la détection de comportement anormal, qui prend trois semaines pour générer un profil complet.  
+   - Dans l’écran **Migration des données**, indiquez si vous souhaitez migrer tout ou une partie des données. Si vous choisissez de migrer uniquement des données partielles, toutes les détections fonctionnent immédiatement à l’exception de la détection de comportement anormal, qui prend trois semaines pour générer un profil complet.  
     
-    L’installation de la migration de données **Partielle** prend beaucoup moins de temps. Si vous sélectionnez la migration des données **Complète**, l’installation peut prendre beaucoup plus de temps. Vérifiez l’estimation de la quantité de temps et l’espace disque nécessaire, qui sont répertoriés dans l’écran **Migration des données**. Ces chiffres dépendent de la quantité de trafic réseau capturé précédemment que vous avez enregistrée dans les versions précédentes d’ATA. Par exemple, dans l’écran ci-dessous, vous pouvez voir une migration de données à partir d’une base de données volumineuse :
+   L’installation de la migration de données **Partielle** prend beaucoup moins de temps. Si vous sélectionnez la migration des données **Complète**, l’installation peut prendre beaucoup plus de temps. Vérifiez l’estimation de la quantité de temps et l’espace disque nécessaire, qui sont répertoriés dans l’écran **Migration des données**. Ces chiffres dépendent de la quantité de trafic réseau capturé précédemment que vous avez enregistrée dans les versions précédentes d’ATA. Par exemple, dans l’écran ci-dessous, vous pouvez voir une migration de données à partir d’une base de données volumineuse :
          
-    ![Migration des données ATA](media/migration-data-migration.png)
+   ![Migration des données ATA](media/migration-data-migration.png)
 
-    -  Cliquez sur **Mettre à jour**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
+   -  Cliquez sur **Mettre à jour**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
 
-4.  Une fois la mise à jour du centre ATA terminée, cliquez sur **Lancer** pour afficher l’écran **Mettre à jour** dans la console ATA pour les passerelles ATA.
+3. Une fois la mise à jour du centre ATA terminée, cliquez sur **Lancer** pour afficher l’écran **Mettre à jour** dans la console ATA pour les passerelles ATA.
 
-    ![Écran de réussite de mise à jour](media/migration-center-success.png)
+   ![Écran de réussite de mise à jour](media/migration-center-success.png)
 
-5.  Dans l’écran **Mises à jour**, si vous avez déjà configuré vos passerelles ATA pour une mise à jour automatique, elles sont mises à jour à ce stade. Sinon, cliquez sur **Mettre à jour** en regard de chaque passerelle ATA.
+4. Dans l’écran **Mises à jour**, si vous avez déjà configuré vos passerelles ATA pour une mise à jour automatique, elles sont mises à jour à ce stade. Sinon, cliquez sur **Mettre à jour** en regard de chaque passerelle ATA.
   
 ![Image de mise à jour des passerelles](media/migration-update-gw.png)
 

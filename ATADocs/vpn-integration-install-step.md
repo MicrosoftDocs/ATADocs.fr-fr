@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8a651e177d37361ccbca178075fb2ac33a434a90
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: c45436c78af1f6d44073f88fb042ab9c9f1acfb0
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453916"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840894"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Étape 5](install-ata-step5.md)
@@ -72,11 +70,11 @@ ATA collecte les données VPN et identifie quand et où les informations d’ide
 
 Pour configurer les données VPN dans ATA :
 
-1.  Dans la console ATA, ouvrez la page Configuration d’ATA et accédez à **VPN**.
+1. Dans la console ATA, ouvrez la page Configuration d’ATA et accédez à **VPN**.
  
-  ![Menu de configuration ATA](./media/config-menu.png)
+   ![Menu de configuration ATA](./media/config-menu.png)
 
-2.  Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Cliquez ensuite sur **Enregistrer**.
+2. Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Cliquez ensuite sur **Enregistrer**.
  
 
   ![Configurer le VPN ATA](./media/vpn.png)

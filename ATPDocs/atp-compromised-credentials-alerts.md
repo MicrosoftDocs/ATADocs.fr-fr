@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afd113d68a15d376e7665d66915a423e54bb170a
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 6df7a945771fed8640eac773e46d2b886758d011
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314361"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841183"
 ---
-# <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises  
+# <a name="tutorial-compromised-credential-alerts"></a>Didacticiel : Alertes indiquant des informations d’identification compromises  
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des
 
 1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 
 ## <a name="suspected-brute-force-attack-kerberos-ntlm-external-id-2023"></a>Suspicion d’attaque par force brute (Kerberos, NTLM) (ID externe 2023)
 
@@ -90,10 +90,10 @@ Dans une pulvérisation de mots de passe, après avoir correctement dressé la l
 Il est important de vérifier si des tentatives de connexion ont abouti à une authentification réussie.
 
 1. Si des tentatives de connexion ont abouti, vérifiez si les  **comptes devinés** sont normalement utilisés à partir de cet ordinateur source.
-    - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
-    - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi). 
+   - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
+   - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi). 
 
-    Si la réponse aux questions ci-dessus est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+     Si la réponse aux questions ci-dessus est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
 2. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
     - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
@@ -114,7 +114,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez MFA.
 2. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 3. Réinitialisez les mots de passe de l’utilisateur source et activez MFA.
 4. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
 
@@ -132,15 +132,15 @@ Dans cette détection, une alerte est déclenchée quand Azure ATP détecte un n
 Il est important de vérifier si des tentatives de connexion ont abouti à une authentification réussie.
 
 1. Si des tentatives de connexion ont abouti, les  **comptes devinés**  sont-ils normalement utilisés à partir de cet ordinateur source ?
-    - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
-    - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi).
+   - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
+   - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi).
 
-    Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+     Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
 2. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
-    - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
+   - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
 
-    Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+     Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
 **Comprendre l’étendue de la violation**
 
@@ -152,7 +152,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez MFA.
 2. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 3. Réinitialisez les mots de passe de l’utilisateur source et activez MFA.
 4. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
 5. Empêchez l’utilisation du protocole de texte clair LDAP dans votre organisation.

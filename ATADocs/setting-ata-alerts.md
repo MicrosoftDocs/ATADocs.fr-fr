@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00601746ffabc8f0d8c798b09a6c2d989630f736
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 1b932d85321e11d85284ef325268ae57b98173b3
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132637"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840018"
 ---
+# <a name="set-ata-notifications"></a>Définir des notifications ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-
-# <a name="set-ata-notifications"></a>Définir des notifications ATA
 ATA peut vous avertir quand il détecte une activité suspecte par e-mail ou en utilisant le transfert d’événements ATA et en transférant l’événement à votre serveur SIEM/syslog. Avant de sélectionner les notifications à recevoir, vous devez [configurer votre serveur de messagerie et votre serveur Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]

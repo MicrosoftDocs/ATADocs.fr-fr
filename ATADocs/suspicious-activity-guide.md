@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0102e8a19f5f5bd303c00c4ebdb6190bcc5eb3
-ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
+ms.openlocfilehash: 033333fe332f879e5f5c34bdf487e7893db586e4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615288"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841047"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Après avoir examiné une activité suspecte, vous pouvez la classer comme :
 
@@ -349,11 +349,11 @@ Dans cette détection, aucune alerte n’est déclenchée durant le premier mois
 
 5. Si vous avez des informations sur le compte impliqué : de telles requêtes sont-elles censées être effectuées par ce compte ou ce compte se connecte-t-il normalement à l’ordinateur source ?
 
- - Si c’est le cas et que l’alerte a été mise à jour, **supprimez** l’activité suspecte.
+   - Si c’est le cas et que l’alerte a été mise à jour, **supprimez** l’activité suspecte.
 
- - Si c’est le cas, mais que cela ne devrait plus se produire, **fermez** l’activité suspecte.
+   - Si c’est le cas, mais que cela ne devrait plus se produire, **fermez** l’activité suspecte.
 
- - Si vous avez répondu non à toutes les questions ci-dessus, considérez l’alerte comme une attaque malveillante.
+   - Si vous avez répondu non à toutes les questions ci-dessus, considérez l’alerte comme une attaque malveillante.
 
 6. En l’absence d’informations sur le compte impliqué, vous pouvez accéder au point de terminaison et vérifier quel compte était connecté au moment de l’alerte.
 
@@ -397,7 +397,7 @@ Dans cette détection, une alerte est déclenchée quand une énumération de se
 
 1. Cliquez sur l’alerte pour accéder à la page de détails correspondante. Déterminez le ou les comptes qui ont effectué l’opération et ceux qui ont été exposés, le cas échéant.
 
- - L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **fermez et excluez** l’activité suspecte.
+   - L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **fermez et excluez** l’activité suspecte.
 
 2. Déterminez quels utilisateurs ont effectué l’opération. Sont-ils des utilisateurs qui se connectent normalement à l’ordinateur source ou des administrateurs autorisés à effectuer des actions de ce type ?  
 
@@ -420,10 +420,10 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 **Examen**
 
 1. Cette situation est fréquente pour les stations de travail d’administration, ainsi que pour les membres des équipes informatiques et les comptes de service qui effectuent des tâches d’administration sur des contrôleurs de domaine. Si c’est le cas et que l’alerte a été mise à jour parce que le même administrateur ou ordinateur effectue la tâche, **supprimez** l’alerte.
-2.  L’ordinateur en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
-  - Le compte en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
-  - Si la réponse à ces deux questions est oui, **fermez** l’alerte.
-3.  Si la réponse à l’une de ces questions est non, considérez cette activité comme un vrai positif. Essayez de rechercher la source de la tentative en vérifiant les profils d’ordinateur et de compte. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
+2. L’ordinateur en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
+   - Le compte en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
+   - Si la réponse à ces deux questions est oui, **fermez** l’alerte.
+3. Si la réponse à l’une de ces questions est non, considérez cette activité comme un vrai positif. Essayez de rechercher la source de la tentative en vérifiant les profils d’ordinateur et de compte. Cliquez sur l’ordinateur source ou le compte pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
 
 
 **Correction**
@@ -461,13 +461,13 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 **Examen**
 
-1.  Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
-  - Liste des comptes attaqués
-  - Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
-  - Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
-  - Activités réseau associées si les tentatives d’authentification ont été effectuées à l’aide de Kerberos
-2.  Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. 
-3.  Si l’authentification a été effectuée à l’aide de NTLM, que vous voyez que l’alerte se produit de nombreuses fois et qu’il n’y a pas suffisamment d’informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder, vous devez activer l’**audit NTLM** sur les contrôleurs de domaine concernés. Pour cela, activez l’événement 8004. Il s’agit de l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le **serveur** auquel l’ordinateur source a essayé d’accéder. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, vous devez examiner le serveur en vérifiant ses événements tels que 4624 pour mieux comprendre le processus d’authentification. 
+1. Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
+   - Liste des comptes attaqués
+   - Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
+   - Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
+   - Activités réseau associées si les tentatives d’authentification ont été effectuées à l’aide de Kerberos
+2. Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que ces tentatives, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources. 
+3. Si l’authentification a été effectuée à l’aide de NTLM, que vous voyez que l’alerte se produit de nombreuses fois et qu’il n’y a pas suffisamment d’informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder, vous devez activer l’**audit NTLM** sur les contrôleurs de domaine concernés. Pour cela, activez l’événement 8004. Il s’agit de l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le **serveur** auquel l’ordinateur source a essayé d’accéder. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, vous devez examiner le serveur en vérifiant ses événements tels que 4624 pour mieux comprendre le processus d’authentification. 
 
 
 **Correction**
@@ -486,9 +486,9 @@ Les attaquants tentent d’exécuter des services suspects sur votre réseau. AT
 
 2. Reconnaissez-vous ce service sur cet ordinateur ?
 
- - Le **compte** en question est-il autorisé à installer ce service ?
+   - Le **compte** en question est-il autorisé à installer ce service ?
 
- - Si la réponse à ces deux questions est *oui*, **fermez** l’alerte ou ajoutez-la à la liste des exclusions.
+   - Si la réponse à ces deux questions est *oui*, **fermez** l’alerte ou ajoutez-la à la liste des exclusions.
 
 3. Si la réponse à l’une de ces questions est *non*, considérez l’attaque comme un vrai positif.
 

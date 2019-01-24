@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 16951313f18be44a3c42a0f6b2281963d867c7b4
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 0b12e2d40e8a2f5f1ed15adf357093035485e96c
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459126"
 ---
-*S'applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="azure-atp-monitored-activities"></a>Activités supervisées par Azure ATP
 
 Azure Advanced Threat Protection supervise les informations générées par l’annuaire Active Directory de votre organisation, ainsi que les activités réseau et les activités d’événement, dans le but de détecter les activités suspectes. Les informations relatives aux activités supervisées permettent à Azure ATP de déterminer la validité de chaque menace potentielle, mais également de les trier correctement et d’y répondre. 

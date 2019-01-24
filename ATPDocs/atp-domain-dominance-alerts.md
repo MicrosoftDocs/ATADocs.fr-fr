@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2a8eb9ada18e14bbe88cdd6c0081c86e5733648
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314412"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840845"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
 
@@ -26,7 +26,7 @@ En général, les cyberattaques sont lancées contre des entités accessibles, p
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Informations d’identification compromises](atp-compromised-credentials-alerts.md)
-3. [Déplacements latéraux](atp-lateral-movement-alerts.md)
+3. [Mouvements latéraux](atp-lateral-movement-alerts.md)
 4. **Dominance du domaine**
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
@@ -77,7 +77,7 @@ Les scanners de sécurité avancés peuvent générer légitimement ce type d’
 1. Réinitialisez le mot de passe de l’utilisateur source et activez MFA.
 2. Incluez l’ordinateur source. 
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 3. La clé privée volée n’est jamais modifiée. Ce qui signifie que l’acteur peut toujours utiliser la clé volée pour déchiffrer les données protégées dans le domaine cible. Il n’existe pas de moyen méthodologique pour changer cette clé privée. 
     - Pour créer une clé, utilisez la clé privée actuelle, créez une clé et rechiffrez chaque clé principale de domaine avec la nouvelle clé privée.
 
@@ -169,7 +169,7 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. <br>Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. <br>Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 
 **Prévention :**
 
@@ -220,7 +220,7 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. 
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. 
     <br>Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 2. Corrigez les données qui ont été répliquées sur les contrôleurs de domaine.
 
@@ -278,7 +278,7 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 1. Réinitialisez le mot de passe des utilisateurs sources et activez MFA.
 2. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure où l’activité s’est produite, car ceux-ci peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 
 **Prévention :**
 
@@ -299,22 +299,23 @@ Dans une alerte Golden Ticket, la méthode de chiffrement du champ TGT du messag
 **TP, B-TP ou FP**
 <br>Certaines ressources légitimes ne prennent pas en charge les codes de chiffrement fort et peuvent déclencher cette alerte. 
 
-2. Les utilisateurs sources partagent-ils tous quelque chose en commun ? 
-    1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
-    2. Vérifiez les ressources auxquelles ces tickets ont accédé. 
-        - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
-    3. Si une seule ressource fait actuellement l’objet d’un accès, vérifiez qu’il s’agit d’une ressource valide à laquelle ces utilisateurs sont censés accéder.  
 
-    Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+1. Les utilisateurs sources partagent-ils tous quelque chose en commun ? 
+   1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
+   2. Vérifiez les ressources auxquelles ces tickets ont accédé. 
+       - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
+   3. Si une seule ressource fait actuellement l’objet d’un accès, vérifiez qu’il s’agit d’une ressource valide à laquelle ces utilisateurs sont censés accéder.  
+
+      Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
 
 Les applications peuvent s’authentifier avec un code de chiffrement plus faible. Certaines s’authentifient pour le compte d’utilisateurs, comme les serveurs IIS et SQL. 
 
 1. Vérifiez si les utilisateurs sources partagent quelque chose en commun.         
-    - Par exemple, les membres du personnel de vente utilisent-ils tous une application spécifique qui risque déclencher l’alerte ?
-    - Vérifiez s’il existe des applications de ce type sur l’ordinateur source. 
-    - Vérifiez les rôles de l’ordinateur. <br>Des serveurs fonctionnent-ils avec ces types d’applications ? 
+   - Par exemple, les membres du personnel de vente utilisent-ils tous une application spécifique qui risque déclencher l’alerte ?
+   - Vérifiez s’il existe des applications de ce type sur l’ordinateur source. 
+   - Vérifiez les rôles de l’ordinateur. <br>Des serveurs fonctionnent-ils avec ces types d’applications ? 
 
-    Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+     Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
 
 
 **Comprendre l’étendue de la violation**
@@ -420,9 +421,9 @@ Les services de fédération peuvent générer des tickets qui déclencheront ce
     - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés. 
+   - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés. 
 
-    **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
+     **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Suspicion d’utilisation de golden ticket (anomalie de temps) (ID externe 2022) 
 
@@ -448,11 +449,11 @@ Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
     - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
-3. Incluez les ressources auxquelles a accédé ce ticket.
-4. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés. 
+2. Incluez les ressources auxquelles a accédé ce ticket.
+3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+   - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés. 
 
-    **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
+     **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
 
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement) (ID externe 2010) 
 

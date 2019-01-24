@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 55712dfcb74e8779c2e06137ac3ea08f132a4f0f
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 630045525ce344920032ef0245692ed9ca5e5ef1
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133427"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839520"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
 # <a name="working-with-ata-audit-logs"></a>Utilisation des journaux d’audit ATA
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Les journaux d’audit ATA sont conservés dans les journaux des événements Windows sous **Applications et services** et **Microsoft ATA** dans les ordinateurs du centre ATA et les passerelles ATA.
 

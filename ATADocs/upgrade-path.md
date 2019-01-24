@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 38600b4e537f583c106462bce26690c7bc14bfe8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 318e14a4313b80aec92516829b70314008acb8c5
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133540"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840156"
 ---
+# <a name="recommended-upgrade-path-for-ata"></a>Chemin de mise à niveau recommandé pour ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-# <a name="recommended-upgrade-path-for-ata"></a>Chemin de mise à niveau recommandé pour ATA
 Cet article fournit des informations sur les versions d’ATA (Advanced Threat Analytics) disponibles et sur le processus de mise à niveau d’ATA en fonction de la version que vous utilisez.
 
 
@@ -50,6 +51,6 @@ Cet article fournit des informations sur les versions d’ATA (Advanced Threat A
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

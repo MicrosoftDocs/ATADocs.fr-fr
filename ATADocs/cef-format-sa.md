@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: f96bd9222a803a21efee5def935ecbe3244e0611
-ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
+ms.openlocfilehash: 357f3517a864114c0aaa83a074c0b061d21259c2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709929"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840933"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
 # <a name="ata-siem-log-reference"></a>Informations de référence sur le journal SIEM ATA
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 ATA peut transférer les événements d’alerte de sécurité et d’alerte de surveillance à votre serveur SIEM. Les alertes sont transférées au format CEF. Vous trouverez ci-dessous un exemple de chaque type de journal d’alertes de sécurité à envoyer à votre serveur SIEM.
 
@@ -155,5 +155,5 @@ Priorités : 3=Faible 5=Moyenne 10=Élevée
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

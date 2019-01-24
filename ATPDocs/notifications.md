@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 79368731bcfef923466d566f06fe775ebf1caeac
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: 27c6aea24162fa8b7dd564bdb65eb7c4bf602504
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800035"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839652"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
 # <a name="set-azure-atp-notifications"></a>Définir des notifications Azure ATP
 
 Azure ATP peut vous notifier par e-mail quand il détecte une activité suspecte, et qu’il émet une alerte de sécurité ou d’intégrité via un e-mail. 
@@ -32,17 +29,17 @@ Pour recevoir des notifications à une adresse e-mail spécifique, définissez l
 
 1. Dans le portail Azure ATP, sélectionnez l’option Paramètres dans la barre d’outils, puis **Configuration**.
 
- ![Icône de paramètres de configuration d’Azure ATP](media/atp-config-menu.png)
+   ![Icône de paramètres de configuration d’Azure ATP](media/atp-config-menu.png)
 
 2. Cliquez sur **Notifications**.
 3. Sous **Notifications par e-mail**, spécifiez quelles notifications doivent être envoyées par e-mail. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité. 
  
- > [!NOTE]
- > Les alertes par e-mail pour les activités suspectes sont envoyées uniquement lors de la création de l’activité suspecte.
+   > [!NOTE]
+   > Les alertes par e-mail pour les activités suspectes sont envoyées uniquement lors de la création de l’activité suspecte.
  
 4. Cliquez sur **Save**.
 
- ![Notifications Azure ATP](media/atp-notifications.png)
+   ![Notifications Azure ATP](media/atp-notifications.png)
 
 
 

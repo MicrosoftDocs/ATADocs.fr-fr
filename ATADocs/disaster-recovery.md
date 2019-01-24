@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 072abaef05432184653d260c43470e86a38d29db
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 09d471710a987db332a84f0e38a761a3b1e4ed16
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133560"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839955"
 ---
+# <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-
-# <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
 Cet article décrit comment récupérer rapidement votre centre ATA et restaurer les fonctionnalités ATA quand le centre ATA a cessé de fonctionner, mais que les passerelles ATA fonctionnent encore. 
 
 >[!NOTE]
@@ -40,8 +39,8 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
     3. Suivez les instructions pour exporter le certificat, en veillant à exporter également la clé privée.
     4. Sauvegardez le fichier de certificat exporté sur un ordinateur distinct.
 
-  > [!NOTE] 
-  > Si vous ne pouvez pas exporter la clé privée, vous devez créer un nouveau certificat et le déployer sur ATA, comme décrit dans [Changer le certificat du centre ATA](modifying-ata-center-configuration.md), puis l’exporter. 
+   > [!NOTE] 
+   > Si vous ne pouvez pas exporter la clé privée, vous devez créer un nouveau certificat et le déployer sur ATA, comme décrit dans [Changer le certificat du centre ATA](modifying-ata-center-configuration.md), puis l’exporter. 
 
 ## <a name="recover-your-ata-center"></a>Récupérer votre centre ATA
 

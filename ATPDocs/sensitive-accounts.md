@@ -13,42 +13,38 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 75a450b9ddea9c47d12f9c14da2ee6c3089775ea
-ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
+ms.openlocfilehash: 0e95caae500effb8bd5c34c3da44a713088c7585
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53654873"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840280"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="working-with-sensitive-accounts"></a>Utilisation de comptes sensibles
 
 ## <a name="sensitive-groups"></a>Groupes sensibles
 
 Les groupes de la liste suivante sont considérés comme sensibles par Azure ATP. Une entité qui est membre de ces groupes est considérée comme sensible :
 
--   Administrateurs
--   Utilisateurs avec pouvoir
--   Opérateurs de compte
--   Opérateurs de serveur
--   Opérateurs d'impression
--   Opérateurs de sauvegarde
--   Duplicateurs
--   Opérateurs de configuration réseau 
--   Générateurs d’approbation de forêt entrante
--   Administrateurs du domaine
--   Contrôleurs de domaine
--   Propriétaires créateurs de la stratégie de groupe 
--   Contrôleurs de domaine en lecture seule 
--   Contrôleurs de domaine d’entreprise en lecture seule 
--   Administrateurs du schéma 
--   Administrateurs de l’entreprise
+- Administrateurs
+- Utilisateurs avec pouvoir
+- Opérateurs de compte
+- Opérateurs de serveur
+- Opérateurs d'impression
+- Opérateurs de sauvegarde
+- Duplicateurs
+- Opérateurs de configuration réseau 
+- Générateurs d’approbation de forêt entrante
+- Administrateurs du domaine
+- Contrôleurs de domaine
+- Propriétaires créateurs de la stratégie de groupe 
+- Contrôleurs de domaine en lecture seule 
+- Contrôleurs de domaine d’entreprise en lecture seule 
+- Administrateurs du schéma 
+- Administrateurs de l’entreprise
 
- > [!NOTE]
- > Jusqu’à septembre 2018, les utilisateurs du Bureau à distance étaient aussi considérés automatiquement comme sensibles par Azure ATP. Les entités ou les groupes Bureau à distance ajoutés après cette date ne sont plus automatiquement marqués comme sensibles, contrairement aux entités ou groupes Bureau à distance ajoutés avant cette date, qui peuvent rester marqués comme sensibles. Ce paramètre Sensible peut désormais être modifié manuellement.  
+  > [!NOTE]
+  > Jusqu’à septembre 2018, les utilisateurs du Bureau à distance étaient aussi considérés automatiquement comme sensibles par Azure ATP. Les entités ou les groupes Bureau à distance ajoutés après cette date ne sont plus automatiquement marqués comme sensibles, contrairement aux entités ou groupes Bureau à distance ajoutés avant cette date, qui peuvent rester marqués comme sensibles. Ce paramètre Sensible peut désormais être modifié manuellement.  
 
 ## <a name="tagging-sensitive-accounts"></a>Identification des comptes sensibles
 

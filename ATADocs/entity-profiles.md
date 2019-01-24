@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a34d25e59183e496350216f5d3043430cd65bca6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: bc5eda18d9b126fbde8e79c0b65aa04bdc42e90c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133449"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839814"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Le profil d’entité vous fournit un tableau de bord conçu pour des investigations approfondies sur les utilisateurs, les ordinateurs, les appareils et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique ATA qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 

@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e61fb5c54dc17baf0005ea6137f7d21096e1c520
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: caf64977da89c88f3640430bf4aa68a76a51026e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314344"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841149"
 ---
-# <a name="tutorial-reconnaissance-alerts"></a>Tutorial : Alertes de reconnaissance  
+# <a name="tutorial-reconnaissance-alerts"></a>Didacticiel : Alertes de reconnaissance  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -62,28 +62,28 @@ Pour déterminer si cette requête était un **FP**, **BTP** ou **FP**, cliquez 
 1. Vérifiez si l’ordinateur source était censé effectuer ce type de requête. Dans ce cas, un **B-TP** pourrait être dû à des systèmes de ressources humaines ou à des serveurs Microsoft Exchange.
 
 2. Vérifiez les domaines des comptes.
-    - Voyez-vous des utilisateurs supplémentaires qui appartiennent à un autre domaine ? 
-    <br>Une erreur de configuration de serveur (par exemple dans Exchange/Skype ou ADSF) peut faire apparaître des utilisateurs supplémentaires qui appartiennent à différents domaines.
-    - Examinez la configuration du service à problème afin de corriger l’erreur de configuration.
+   - Voyez-vous des utilisateurs supplémentaires qui appartiennent à un autre domaine ? 
+     <br>Une erreur de configuration de serveur (par exemple dans Exchange/Skype ou ADSF) peut faire apparaître des utilisateurs supplémentaires qui appartiennent à différents domaines.
+   - Examinez la configuration du service à problème afin de corriger l’erreur de configuration.
 
-    Si vous avez répondu **oui** aux questions ci-dessus, il s’agit d’une activité **B-TP**. *Fermez* l’alerte de sécurité.<br>
+     Si vous avez répondu **oui** aux questions ci-dessus, il s’agit d’une activité **B-TP**. *Fermez* l’alerte de sécurité.<br>
 
 En guise d’étape suivante, examinez l’ordinateur source : 
 
 1. Est-ce qu’un script ou une application s’exécutant sur l’ordinateur source pourrait générer ce comportement ?  
-    - S’agit-il d’un ancien script exécuté avec d’anciennes informations d’identification ? <br>Si oui, arrêtez et modifiez ou supprimez le script. 
-    - S’agit-il d’un script ou d’une application d’administration ou de sécurité censé(e) s’exécuter dans l’environnement ?
+   - S’agit-il d’un ancien script exécuté avec d’anciennes informations d’identification ? <br>Si oui, arrêtez et modifiez ou supprimez le script. 
+   - S’agit-il d’un script ou d’une application d’administration ou de sécurité censé(e) s’exécuter dans l’environnement ?
  
-    Si vous avez répondu **oui** à la question précédente, *fermez* l’alerte de sécurité et excluez cet ordinateur. Il s’agit probablement d’une activité **B-TP**.
+     Si vous avez répondu **oui** à la question précédente, *fermez* l’alerte de sécurité et excluez cet ordinateur. Il s’agit probablement d’une activité **B-TP**.
 
 À présent, examinez les comptes :<br>
 <br>Les attaquants utilisent généralement un dictionnaire de noms de comptes aléatoires pour rechercher des noms de comptes existants dans une organisation.
 
 1. Les comptes inexistants vous disent-ils quelque chose ?  
-    - Si les comptes inexistants vous semblent familiers, il s’agit peut-être de comptes désactivés ou appartenant à des employés ayant quitté l’entreprise.
-    - Recherchez une application ou un script qui vérifie quels comptes existent toujours dans Active Directory.
+   - Si les comptes inexistants vous semblent familiers, il s’agit peut-être de comptes désactivés ou appartenant à des employés ayant quitté l’entreprise.
+   - Recherchez une application ou un script qui vérifie quels comptes existent toujours dans Active Directory.
 
-    Si vous avez répondu **oui** à l’une des questions précédentes, *fermez* l’alerte de sécurité. Il s’agit probablement d’une activité **B-TP**.
+     Si vous avez répondu **oui** à l’une des questions précédentes, *fermez* l’alerte de sécurité. Il s’agit probablement d’une activité **B-TP**.
 
 2. Si des tentatives correspondent à des noms de compte existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut essayer d’utiliser des attaques par force brute pour accéder à votre domaine en utilisant les noms d’utilisateur découverts. 
     - Vérifiez les noms de compte trouvés en recherchant d’autres activités suspectes. 
@@ -187,13 +187,13 @@ Quatre semaines par contrôleur de domaine à partir de la première activité r
 **TP, B-TP ou FP** 
 
 1. Cliquez sur l’ordinateur source pour accéder à sa page de profil.        
-    - L’ordinateur source est-il censé générer des activités de ce type ?
-      - Si oui, *fermez* l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**. 
-    - Vérifiez l’identité des utilisateurs qui ont effectué l’opération.
-      - Ces utilisateurs se connectent-ils normalement à cet ordinateur source, ou s’agit-il d’administrateurs autorisés à effectuer ces actions spécifiques ?   
-      - Vérifiez le profil des utilisateurs et leurs activités. Identifiez leur comportement d’utilisateur normal et recherchez d’autres activités suspectes à l’aide du [guide d’investigation sur les utilisateurs](investigate-a-user.md). 
+   - L’ordinateur source est-il censé générer des activités de ce type ?
+     - Si oui, *fermez* l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**. 
+   - Vérifiez l’identité des utilisateurs qui ont effectué l’opération.
+     - Ces utilisateurs se connectent-ils normalement à cet ordinateur source, ou s’agit-il d’administrateurs autorisés à effectuer ces actions spécifiques ?   
+     - Vérifiez le profil des utilisateurs et leurs activités. Identifiez leur comportement d’utilisateur normal et recherchez d’autres activités suspectes à l’aide du [guide d’investigation sur les utilisateurs](investigate-a-user.md). 
     
-    Si vous avez répondu **oui** à la question ci-dessus, *fermez* l’alerte comme s’agissant d’une activité **B-TP**. 
+     Si vous avez répondu **oui** à la question ci-dessus, *fermez* l’alerte comme s’agissant d’une activité **B-TP**. 
   
 **Comprendre l’étendue de la violation**
 
