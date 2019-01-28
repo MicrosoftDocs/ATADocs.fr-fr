@@ -44,6 +44,7 @@
 ## [Gérer des comptes sensibles](sensitive-accounts.md)
 ## [Rechercher et filtrer des activités supervisées](atp-activities-search.md)
 ## [Utiliser des exclusions et des comptes honeytoken](install-atp-step7.md)
+## [Superviser les contrôleurs de domaine](atp-sensor-monitoring.md)
 ## [Modifier le mot de passe de connectivité de domaine](modifying-atp-config-dcpassword.md)
 ## [Définir des notifications Azure ATP](notifications.md)
 ## [Utiliser le centre d’intégrité Azure ATP](atp-health-center.md)
