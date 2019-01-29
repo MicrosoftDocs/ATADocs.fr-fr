@@ -11,18 +11,17 @@ ms.service: ''
 ms.prod: advanced-threat-analytics
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7fd0ea627807b89a604ac32276bb43aa00262dd2
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 330d3cbc59c211eaa44ce3273c49bb7994c6bcec
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403180"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840384"
 ---
+# <a name="ata-capacity-planning"></a>Planification de la capacité ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-
-# <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide également à déterminer le nombre de passerelles ATA et/ou passerelles légères ATA dont vous avez besoin, et la capacité du serveur pour votre centre ATA et les passerelles ATA.
 
 > [!NOTE] 
@@ -31,10 +30,10 @@ Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour
 ## <a name="using-the-sizing-tool"></a>Utilisation de l’outil de dimensionnement
 La manière recommandée la plus simple de déterminer la capacité pour votre déploiement ATA est d’utiliser l’[outil de dimensionnement ATA](http://aka.ms/atasizingtool). Exécutez l’outil de dimensionnement ATA, puis dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la capacité ATA dont vous avez besoin :
 
-- Processeur et mémoire du centre ATA : Faites correspondre le champ **Paquets occupés/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
+- Processeur et mémoire du centre ATA : faites correspondre le champ **Paquets occupés/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau du centre ATA](#ata-center-sizing).
 
-- Stockage du centre ATA : Faites correspondre le champ **Paquets moyens/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
-- Passerelle ATA : Faites correspondre le champ **Paquets occupés/s** dans le tableau de la passerelle ATA du fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau de la passerelle ATA](#ata-gateway-sizing) ou le [tableau de la passerelle légère ATA](#ata-lightweight-gateway-sizing) en fonction du [type de passerelle que vous choisissez](#choosing-the-right-gateway-type-for-your-deployment).
+- Stockage du centre ATA : faites correspondre le champ **Moyenne de paquets/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau du centre ATA](#ata-center-sizing).
+- Passerelle ATA : faites correspondre le champ **Paquets occupés/s** du tableau de la passerelle ATA du fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau de la passerelle ATA](#ata-gateway-sizing) ou du [tableau de la passerelle légère ATA](#ata-lightweight-gateway-sizing) en fonction du [type de passerelle choisi](#choosing-the-right-gateway-type-for-your-deployment).
 
 
 ![Exemple d’outil de planification des capacités](media/capacity tool.png)
@@ -69,14 +68,14 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 
 &#42;&#42;Nombres moyens (pic)
 > [!NOTE]
-> -   Le centre ATA peut gérer un maximum agrégé de 1 million de paquets par seconde provenant de l’ensemble des contrôleurs de domaine surveillés. Dans certains environnements, le même centre ATA peut gérer un trafic global supérieur à 1 million. Contactez askcesec@microsoft.com pour obtenir de l’assistance sur ce type d’environnements.
-> -   Si l’espace libre atteint la valeur minimale de 20 % ou 200 Go, la collecte de données la plus ancienne est supprimée. S’il n’est pas possible de réduire la collecte de données à ce niveau, une alerte est consignée.  ATA continue de fonctionner jusqu’à ce que le seuil de 5 % ou de 50 Go d’espace disponible soit atteint.  S’il est atteint, ATA arrête de remplir la base de données et une nouvelle alerte est émise.
+> - Le centre ATA peut gérer un maximum agrégé de 1 million de paquets par seconde provenant de l’ensemble des contrôleurs de domaine surveillés. Dans certains environnements, le même centre ATA peut gérer un trafic global supérieur à 1 million. Contactez askcesec@microsoft.com pour obtenir de l’assistance sur ce type d’environnements.
+> - Si l’espace libre atteint la valeur minimale de 20 % ou 200 Go, la collecte de données la plus ancienne est supprimée. S’il n’est pas possible de réduire la collecte de données à ce niveau, une alerte est consignée.  ATA continue de fonctionner jusqu’à ce que le seuil de 5 % ou de 50 Go d’espace disponible soit atteint.  S’il est atteint, ATA arrête de remplir la base de données et une nouvelle alerte est émise.
 > - Il vous est possible de déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance qui sont décrits dans cet article.
-> -   La latence de stockage pour les activités de lecture et d’écriture doit être inférieure à 10 ms.
-> -   Le rapport entre les activités de lecture et d’écriture est d’environ 1 pour 3 en dessous de 100 000 paquets par seconde et de 1 pour 6 au-dessus de 100 000 paquets par seconde.
-> -   En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
-> -   Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
-> -   Sur un serveur physique, la base de données ATA nécessite la **désactivation** de l’accès mémoire non uniforme (NUMA) dans le BIOS. Votre système peut utiliser l’entrelacement de nœuds pour faire référence à NUMA, auquel cas vous devez **activer** l’entrelacement de nœuds pour désactiver NUMA. Pour plus d’informations, consultez la documentation du BIOS. Notez que cela ne s’applique pas quand le centre ATA s’exécute sur un serveur virtuel.
+> - La latence de stockage pour les activités de lecture et d’écriture doit être inférieure à 10 ms.
+> - Le rapport entre les activités de lecture et d’écriture est d’environ 1 pour 3 en dessous de 100 000 paquets par seconde et de 1 pour 6 au-dessus de 100 000 paquets par seconde.
+> - En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
+> - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
+> - Sur un serveur physique, la base de données ATA nécessite la **désactivation** de l’accès mémoire non uniforme (NUMA) dans le BIOS. Votre système peut utiliser l’entrelacement de nœuds pour faire référence à NUMA, auquel cas vous devez **activer** l’entrelacement de nœuds pour désactiver NUMA. Pour plus d’informations, consultez la documentation du BIOS. Notez que cela ne s’applique pas quand le centre ATA s’exécute sur un serveur virtuel.
 
 
 ## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Choix du type de passerelle appropriée pour votre déploiement

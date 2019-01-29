@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459173"
 ---
-*S'applique à : Azure - Protection avancée contre les menaces*
-
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-262"></a>Azure ATP version 2.62
+Publiée le 20 janvier 2019
+
+- **Nouvelle alerte de sécurité : Exécution de code à distance sur DNS – préversion**<br>
+L’alerte de sécurité [Exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) d’Azure ATP est maintenant disponible en préversion publique. <br> Avec ce système de détection, une alerte de sécurité Azure ATP est déclenchée lorsque des requêtes DNS suspectées d’exploiter la faille de sécurité [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sont effectuées sur un contrôleur de domaine dans le réseau.
+
+- **Amélioration de fonctionnalité : Mise à jour des capteurs différée de 72 heures** <br> L’option permettant de différer la mise à jour de certains capteurs après chaque nouvelle version d’Azure ATP a été modifiée (72 heures au lieu de 24 heures). Pour connaître les instructions de configuration, voir [Mise à jour des capteurs Azure ATP](sensor-update.md). 
+
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-261"></a>Azure ATP version 2.61
 Publiée le 13 janvier 2019

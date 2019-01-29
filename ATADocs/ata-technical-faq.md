@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e31f7552bed4d794ee24131557342105eb2ced43
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 2806bdd4c457628d9202e494ac1a064365cf61db
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133818"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840001"
 ---
+# <a name="ata-frequently-asked-questions"></a>Forum aux questions sur ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-# <a name="ata-frequently-asked-questions"></a>Forum aux questions sur ATA
 Cet article fournit des éléments d’informations et des réponses aux questions les plus fréquemment posées sur ATA.
 
 
@@ -86,7 +87,7 @@ Pour chaque journée complète produisant en moyenne 1 000 paquets/s, il vous 
 
 
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
-Cela arrive quand un compte est membre de certains groupes désignés comme sensibles (par exemple : « Administrateurs du domaine »).
+Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
 
 Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. 
 
@@ -162,6 +163,6 @@ Oui. Vous pouvez consulter l’intégrité globale du déploiement ainsi que les
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

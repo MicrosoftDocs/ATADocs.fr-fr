@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d8cbbba3f034dac7679d77a645545374bfad643c
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: b40cdeb52f26e3fae32185c3168c5e3073bf5929
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250132"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840852"
 ---
-# <a name="tutorial-understanding-security-alerts"></a>Tutoriel : Présentation des alertes de sécurité
+# <a name="tutorial-understanding-security-alerts"></a>Didacticiel : Présentation des alertes de sécurité
 
 Les alertes de sécurité Azure ATP expliquent en langage clair et à l’aide de graphismes les activités suspectes qui ont été identifiées sur votre réseau ainsi que les ordinateurs et les acteurs impliqués dans les menaces. Les alertes sont classées par gravité, colorées afin de faciliter le filtrage visuel et organisées par phase de menace. Chaque alerte est conçue pour vous aider à comprendre rapidement et précisément ce qui se passe sur votre réseau. Des listes de preuves d’alertes contiennent des liens directs vers les ordinateurs et les utilisateurs impliqués, afin de rendre vos recherches plus faciles et plus directes.
 
@@ -119,7 +119,7 @@ Dans chaque alerte, le dernier onglet présente les **entités connexes**. Les e
  
 **Json d’entité unique**
  
-Inclut les données qu’Azure ATP a apprises à partir d’Active Directory concernant le compte. Cela comprend tous les attributs tels que *Distinguished Name*, *SID*, *LockoutTime et *PasswordExpiryTime*. Pour les comptes d’utilisateur, inclut les données telles que *Department*, *Mail* et *PhoneNumber*. Pour les comptes d’ordinateur, inclut les données telles que *OperatingSystem*, *IsDomainController et *DnsName*.
+Inclut les données qu’Azure ATP a apprises à partir d’Active Directory concernant le compte. Cela comprend tous les attributs, comme *Distinguished Name*, *SID*, <em>LockoutTime et *PasswordExpiryTime</em>. Pour les comptes d’utilisateur, inclut les données telles que *Department*, *Mail* et *PhoneNumber*. Pour les comptes d’ordinateur, inclut les données comme *OperatingSystem*, <em>IsDomainController et *DnsName</em>.
 
 **Json de profil d’entité unique**
 

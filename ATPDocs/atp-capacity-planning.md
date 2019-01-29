@@ -12,17 +12,13 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9485e3dd70708caf6e3ebbe60d9c006fac0b0163
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459088"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="azure-atp-capacity-planning"></a>Planification de la capacité Azure ATP
 Cet article vous aide à déterminer le nombre de capteurs autonomes et de capteurs Azure ATP dont vous avez besoin.
 
@@ -32,7 +28,7 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 > [!NOTE] 
 > L’outil de dimensionnement présente deux feuilles : une pour Azure ATP et une pour ATA. Vérifiez que vous utilisez la bonne feuille.
 
-- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing) ou le [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing), selon le [type de capteur que vous choisissez](#choosing-the-right-sensor-type-for-your-deployment).
+- Capteur Azure ATP : faites correspondre le champ **Paquets occupés/s** du tableau du capteur Azure ATP dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau du capteur Azure ATP](#azure-atp-standalone-sensor-sizing) ou du [tableau du capteur autonome Azure ATP](#azure-atp-sensor-sizing), selon le [type de capteur choisi](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Exemple d’outil de planification des capacités](media/capacity-tool.png)

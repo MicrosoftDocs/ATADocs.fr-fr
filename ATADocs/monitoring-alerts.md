@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cf3090ae1248125c9ff4d55bc1db7540ae532720
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1ce2fde6e459aa11f3d61d8331ece53469ee3e21
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133900"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841132"
 ---
+# <a name="understanding-ata-monitoring-alerts"></a>Présentation des alertes de surveillance d’ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-# <a name="understanding-ata-monitoring-alerts"></a>Présentation des alertes de surveillance d’ATA
 Le centre d’intégrité ATA vous permet de savoir s’il existe un problème avec le déploiement d’ATA en déclenchant une alerte de surveillance.
 Cet article décrit toutes les alertes de surveillance pour chaque composant, en indiquant la cause et les étapes nécessaires pour résoudre le problème.
 ## <a name="ata-center-issues"></a>Problèmes du centre ATA
@@ -48,11 +48,11 @@ Cet article décrit toutes les alertes de surveillance pour chaque composant, en
 ### <a name="center-certificate-is-about-to-expire"></a>Le certificat du centre est sur le point d’expirer
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le certificat du centre ATA expire dans moins de 3 semaines.|Après l’expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Remplacez le certificat du centre ATA](modifying-ata-center-configuration.md)|Moyenne|
+|Le certificat du centre ATA expire dans moins de 3 semaines.|Après l'expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Remplacez le certificat du centre ATA](modifying-ata-center-configuration.md)|Moyenne|
 ### <a name="ata-center-certificate-expired"></a>Le certificat du centre ATA a expiré
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le certificat du centre ATA a expiré.|Après l’expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Remplacez le certificat du centre ATA](modifying-ata-center-configuration.md)|Importante|
+|Le certificat du centre ATA a expiré.|Après l'expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Remplacez le certificat du centre ATA](modifying-ata-center-configuration.md)|Importante|
 ## <a name="ata-gateway-issues"></a>Problèmes de la passerelle ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Le mot de passe de l’utilisateur en lecture seule est sur le point d’expirer
 |Alerte|Description|Résolution|Gravité|
@@ -123,5 +123,5 @@ Cet article décrit toutes les alertes de surveillance pour chaque composant, en
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

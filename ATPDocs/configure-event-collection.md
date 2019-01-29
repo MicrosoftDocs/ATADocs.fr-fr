@@ -1,5 +1,5 @@
 ---
-title: Installer Azure Advanced Threat Protection | Microsoft Docs
+title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Dans cette étape d’installation d’ATP, vous configurez des sources de données.
 keywords: ''
 author: mlottner
@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 640ea2ab75d4388381f9789dcac5399fa1327d05
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783591"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840639"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
 Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant les transferts d’événements Windows](configure-event-forwarding.md).
@@ -36,12 +32,12 @@ Outre la collecte et l’analyse du trafic réseau à destination et en provenan
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Pour qu’Azure ATP puisse consommer des données provenant d’un serveur Syslog, vous devez effectuer les étapes suivantes :
 
--   Configurez vos serveurs de capteur Azure ATP pour écouter et accepter les événements transférés à partir du serveur SIEM/Syslog.
+- Configurez vos serveurs de capteur Azure ATP pour écouter et accepter les événements transférés à partir du serveur SIEM/Syslog.
 
- > [!NOTE]
- > Azure ATP écoute uniquement sur IPv4 et non sur IPv6. 
+  > [!NOTE]
+  > Azure ATP écoute uniquement sur IPv4 et non sur IPv6. 
 
--   Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques au capteur Azure ATP.
+- Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques au capteur Azure ATP.
 
 > [!IMPORTANT]
 > -   Ne transférez pas toutes les données Syslog au capteur Azure ATP.
@@ -127,13 +123,13 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
 
 L’ordinateur a tenté de valider les informations d’identification d’un compte.
 
-Package d’authentification : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Package d’authentification :              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Compte d’ouverture de session : Administrateur
+Compte d’ouverture de session : Administrateur
 
-Station de travail source : SIEM
+Station de travail source :       SIEM
 
-Code d’erreur : 0x0
+Error Code:         0x0
 
 -   L’en-tête syslog est facultatif.
 
@@ -160,7 +156,7 @@ Code d’erreur : 0x0
 -   L’ordre n’est pas important pour les paires clé=valeur.
 
 ## <a name="qradar"></a>QRadar
-QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. Azure ATP nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements Windows sans agent. Pour plus d’informations, consultez [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. Azure ATP nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements Windows sans agent. Pour plus d'informations, voir [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

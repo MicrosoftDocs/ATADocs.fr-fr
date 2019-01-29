@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 0abf415dd896d62e0308f4b236d92bcb327a0a5d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403197"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840877"
 ---
+# <a name="ata-prerequisites"></a>Prérequis pour ATA
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-
-# <a name="ata-prerequisites"></a>Prérequis pour ATA
 Cet article décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement.
 
 > [!NOTE]
@@ -36,15 +35,15 @@ Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou l
 Le système ATA fonctionne sur la limite de forêt Active Directory et prend en charge le niveau fonctionnel de forêt Windows 2003 et versions ultérieures.
 
 
-[Avant de commencer](#before-you-start) : cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’ATA.
+[Avant de commencer](#before-you-start) : Cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’ATA.
 
-[Centre ATA](#ata-center-requirements) : cette section répertorie le matériel du centre ATA, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur le serveur de votre centre ATA.
+[Centre ATA](#ata-center-requirements) : cette section présente la configuration matérielle et logicielle requise du centre ATA, ainsi que les paramètres à configurer sur le serveur du centre ATA.
 
-[Passerelle ATA](#ata-gateway-requirements) : cette section répertorie le matériel de la passerelle ATA, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur les serveurs de votre passerelle ATA.
+[Passerelle ATA](#ata-gateway-requirements) : cette section présente la configuration matérielle et logicielle requise de la passerelle ATA, ainsi que les paramètres à configurer sur les serveurs de passerelle ATA.
 
-[Passerelle légère ATA](#ata-lightweight-gateway-requirements) : cette section répertorie le matériel de la passerelle légère ATA et la configuration logicielle requise.
+[Passerelle légère ATA](#ata-lightweight-gateway-requirements) : cette section présente la configuration matérielle et logicielle requise de la passerelle légère ATA.
 
-[Console ATA](#ata-console) : cette section répertorie la configuration requise du navigateur pour exécuter la console ATA.
+[Console ATA](#ata-console) : cette section présente la configuration requise du navigateur pour exécuter la console ATA.
 
 ![Diagramme de l’architecture ATA](media/ATA-architecture-topology.jpg)
 
@@ -61,9 +60,9 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 
 -    Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. ATA peut ainsi détecter la suppression en bloc d’objets du domaine. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Facultatif : un compte d’un utilisateur sans activités réseau. Ce compte est configurable comme utilisateur Honeytoken ATA. Pour configurer un compte comme utilisateur Honeytoken, seul le nom d’utilisateur est nécessaire. Pour plus d’informations sur la configuration de Honeytoken, consultez [Configurer des exclusions d’adresses IP et un utilisateur Honeytoken](install-ata-step7.md).
+-   Facultatif : le compte d’un utilisateur sans activités réseau. Ce compte est configurable comme utilisateur Honeytoken ATA. Pour configurer un compte comme utilisateur Honeytoken, seul le nom d’utilisateur est nécessaire. Pour plus d’informations sur la configuration de Honeytoken, consultez [Configurer des exclusions d’adresses IP et un utilisateur Honeytoken](install-ata-step7.md).
 
--   Facultatif : Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, ATA peut utiliser les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 pour améliorer la détection de l’attaque Pass-the-Hash, de l’attaque par force brute, de la modification des groupes sensibles et des comptes Honeytoken. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à ATA des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+-   Facultatif : outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, ATA peut utiliser les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 pour améliorer sa détection des attaques Pass-the-hash, par force brute, par modification des groupes sensibles et honeytoken. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à ATA des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 
 ## <a name="ata-center-requirements"></a>Configuration requise pour le centre ATA
@@ -238,7 +237,7 @@ La passerelle légère ATA prend en charge l’installation sur un contrôleur d
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
-Avant d’installer la passerelle légère ATA sur un contrôleur de domaine exécutant Windows Server 2012 R2, vérifiez que la mise à jour suivante a été installée : [KB2919355](https://support.microsoft.com/kb/2919355/).
+Avant d’installer la passerelle légère ATA sur un contrôleur de domaine sous Windows Server 2012 R2, vérifiez que la mise à jour suivante a été installée : [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Pour vous en assurer, exécutez l’applet de commande Windows PowerShell suivante : `[Get-HotFix -Id kb2919355]`
 

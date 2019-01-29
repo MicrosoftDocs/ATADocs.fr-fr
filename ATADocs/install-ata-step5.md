@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dbc89fc060fb10408edc5137ae0179d8711e7517
-ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
+ms.openlocfilehash: 75f75173fd8776b89781698bb5f64d7186f938f7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609654"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840452"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="install-ata---step-5"></a>Installer ATA - Étape 5
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Étape 4](install-ata-step4.md)
@@ -32,36 +30,37 @@ ms.locfileid: "51609654"
 
 
 ## <a name="step-5-configure-the-ata-gateway-settings"></a>Étape 5. Configurer les paramètres de la passerelle ATA
+
 Une fois la passerelle ATA installée, procédez comme suit pour configurer ses paramètres.
 
-1.  Dans la console ATA, accédez à **Configuration**, puis sous **Système**, sélectionnez **Passerelles**.
+1. Dans la console ATA, accédez à **Configuration**, puis sous **Système**, sélectionnez **Passerelles**.
    
-     ![Image de la configuration des paramètres de la passerelle](media/ata-gw-config-1.png)
+    ![Image de la configuration des paramètres de la passerelle](media/ata-gw-config-1.png)
 
 
-2.  Cliquez sur la passerelle que vous voulez configurer et entrez les informations suivantes :
+2. Cliquez sur la passerelle que vous voulez configurer et entrez les informations suivantes :
 
-    ![Image de la configuration des paramètres de la passerelle](media/ATA-Gateways-config-2.png)
+   ![Image de la configuration des paramètres de la passerelle](media/ATA-Gateways-config-2.png)
 
-  - **Description** : entrez une description pour la passerelle ATA (facultatif).
-  - **Contrôleurs de domaine de port d’écoute (FQDN)** (obligatoire pour la passerelle ATA : ne peut pas être modifié pour la passerelle légère ATA) : entrez le nom de domaine complet de votre contrôleur de domaine et cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
+   - **Description** : entrez une description de la passerelle ATA (facultatif).
+   - **Contrôleurs de domaine avec mise en miroir de port (FQDN)** (requis pour la passerelle ATA, non modifiable pour la passerelle légère ATA) : Entrez le nom de domaine complet de votre contrôleur de domaine et cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
 
-  Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine** :  
+   Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine** :  
 
-  - Tous les contrôleurs de domaine dont le trafic est surveillé par l’intermédiaire de la mise en miroir des ports par la passerelle ATA doivent figurer dans la liste **Contrôleurs de domaine**. Si un contrôleur de domaine n’est pas répertorié dans la liste **Contrôleurs de domaine**, il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.  
+   - Tous les contrôleurs de domaine dont le trafic est surveillé par l’intermédiaire de la mise en miroir des ports par la passerelle ATA doivent figurer dans la liste **Contrôleurs de domaine**. Si un contrôleur de domaine n’est pas répertorié dans la liste **Contrôleurs de domaine**, il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.  
    - Au moins un contrôleur de domaine figurant dans la liste doit être un catalogue général. ATA peut ainsi résoudre les objets ordinateur et utilisateur dans d’autres domaines de la forêt.
 
-  - **Adaptateurs de réseau de capture** (obligatoire) :
-    - Dans le cas d’une passerelle ATA sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Elles reçoivent le trafic du contrôleur de domaine mis en miroir.
-    - Dans le cas d’une passerelle légère ATA, il doit s’agir de toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
+   - **Adaptateurs de réseau de capture** (obligatoire) :
+   - Dans le cas d’une passerelle ATA sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Elles reçoivent le trafic du contrôleur de domaine mis en miroir.
+   - Dans le cas d’une passerelle légère ATA, il doit s’agir de toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
   
-  - **Candidat synchronisateur de domaine** : toute passerelle ATA définie comme candidat synchronisateur de domaine peut être responsable de la synchronisation entre ATA et votre domaine Active Directory. Suivant la taille du domaine, la synchronisation initiale peut prendre un certain temps et consommer beaucoup de ressources. Par défaut, seules les passerelles ATA sont définies comme candidats synchronisateurs de domaine.
+   - **Candidat synchronisateur de domaine** : Toute passerelle ATA définie comme candidat synchronisateur de domaine peut être responsable de la synchronisation entre ATA et votre domaine Active Directory. Suivant la taille du domaine, la synchronisation initiale peut prendre un certain temps et consommer beaucoup de ressources. Par défaut, seules les passerelles ATA sont définies comme candidats synchronisateurs de domaine.
    Dans la mesure du possible, évitez qu’une passerelle ATA de site distant soit candidat synchronisateur de domaine.
    Si votre contrôleur de domaine est en lecture seule, ne le définissez pas comme candidat synchronisateur de domaine. Pour plus d’informations, consultez [Architecture d’ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
-  > [!NOTE] 
-  > Le démarrage initial du service de la passerelle ATA après l’installation prend quelques minutes, car il construit le cache des analyseurs de capture réseau.
-  > Les modifications de configuration sont appliquées à la passerelle ATA lors de la prochaine synchronisation planifiée entre la passerelle ATA et le centre ATA.
+   > [!NOTE] 
+   > Le démarrage initial du service de la passerelle ATA après l’installation prend quelques minutes, car il construit le cache des analyseurs de capture réseau.
+   > Les modifications de configuration sont appliquées à la passerelle ATA lors de la prochaine synchronisation planifiée entre la passerelle ATA et le centre ATA.
 
 3. Si vous le souhaitez, vous pouvez définir le [détecteur Syslog et la collecte des transferts d’événements Windows](configure-event-collection.md). 
 4. Activez **Mettre la passerelle ATA à jour automatiquement** pour que cette passerelle ATA soit automatiquement mise à jour si vous mettez à jour le centre ATA à l’occasion de futures publications de version.

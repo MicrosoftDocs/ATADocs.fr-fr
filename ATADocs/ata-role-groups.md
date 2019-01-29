@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed4d112cda614053aa20a6a486cb29baa1fed58a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1e5818e4e37b7d22669721341f3f31a94cd78baa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133631"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841030"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
-
 # <a name="ata-role-groups"></a>Groupes de rôles ATA
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 Les groupes de rôles permettent de gérer l’accès pour ATA. À l’aide des groupes de rôles, vous pouvez séparer les tâches au sein de votre équipe de sécurité et accorder uniquement le nombre d’accès dont les utilisateurs ont besoin pour effectuer leur travail. Cet article explique ce qu’est la gestion des accès et l’autorisation de rôle ATA, puis vous aide à configurer des groupes de rôles dans ATA.
 
@@ -34,7 +32,7 @@ Les groupes de rôles permettent de gérer l’accès pour ATA. À l’aide des 
 
 ## <a name="types-of-ata-role-groups"></a>Types de groupes de rôles ATA 
 
-ATA présente trois types de groupe de rôles : ATA Administrators, ATA Users et ATA Viewers. Le tableau suivant décrit le type d’accès dans ATA disponible par rôle. En fonction du rôle que vous attribuez, différents écrans et options de menu dans ATA ne sont pas disponibles, comme suit :
+ATA présente trois types de groupes de rôles : Administrateurs ATA, Utilisateurs ATA et Observateurs ATA. Le tableau suivant décrit le type d’accès dans ATA disponible par rôle. En fonction du rôle que vous attribuez, différents écrans et options de menu dans ATA ne sont pas disponibles, comme suit :
 
 |Activité |Administrateurs Microsoft Advanced Threat Analytics|Utilisateurs Microsoft Advanced Threat Analytics|Observateurs Microsoft Advanced Threat Analytics|
 |----|----|----|----|

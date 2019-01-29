@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 20e11445548e121b09931399a13077c0c5931446
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1cbb690fd65a4d8f2b721527b501b47646a66f4f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133450"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839853"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
 # <a name="what-threats-does-ata-look-for"></a>Quelles sont les menaces que recherche ATA ?
+
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 ATA fournit une fonctionnalité de détection pour les différentes phases d’une attaque avancée : reconnaissance, compromission des informations d’identification, mouvement latéral, élévation des privilèges, contrôle du domaine, etc. Les attaques avancées et les menaces internes peuvent ainsi être détectées avant de pouvoir causer des dommages pour votre entreprise.
 Chaque type de détection correspond à un ensemble d’activités suspectes liées à la phase en question, chacune de ces activités correspondant elle-même à différents types d’attaques possibles.
@@ -36,9 +37,9 @@ Pour plus d’informations, consultez [Gestion des activités suspectes](working
 
 ## <a name="whats-next"></a>Étapes suivantes
 
--   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, consultez [Architecture ATA](ata-architecture.md).
+-   Pour plus d’informations sur l’intégration d’ATA au réseau : [Architecture d’ATA](ata-architecture.md)
 
--   Pour commencer le déploiement d’ATA, consultez [Installer ATA](install-ata-step1.md).
+-   Pour commencer le déploiement d’ATA : [Installer ATA](install-ata-step1.md)
 
 
 ## <a name="see-also"></a>Voir aussi

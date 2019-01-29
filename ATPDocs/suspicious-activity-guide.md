@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0834bebfd1f9428995c8c1c4dd19d95fe0ffa279
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 974a67fbc105714acc73c4b489fe5b5a2ee6e74d
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314378"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417199"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertes de sécurité Azure ATP
 
@@ -47,6 +47,7 @@ Dans la version 2.56, toutes les alertes de sécurité Azure ATP existantes ont 
 |[Demande malveillante de la clé principale de l’API de protection des données](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Demande d’information privée de protection contre les données malveillantes|2020|
 |[Reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance à l’aide de DNS|2007|
 |[Tentative d’exécution de code à distance](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Tentative d’exécution de code à distance|2019|
+|[Exécution de code à distance sur DNS – préversion](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|NA|2036|
 |[Suspicion d’attaque par force brute (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Attaque par force brute par le biais d’une liaison simple LDAP|2004|
 |[Suspicion d’attaque par force brute (Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Échecs d’authentification suspects|2023|
 |[Suspicion d’attaque par force brute (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033|

@@ -13,22 +13,18 @@ ms.technology: ''
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2cd1d7b070818044e74838178b0fab5838ab46ef
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: cc8008f79758f314321c59f170e9099610824e54
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458501"
 ---
-*S’applique à : Advanced Threat Protection*
-
-
-
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Résolution des problèmes du capteur Azure Advanced Threat Protection (ATP) à l’aide des journaux ATP
 Les journaux ATP donnent des informations sur ce que fait chaque composant du capteur Azure ATP à n’importe quel moment.
 
 
-Les journaux Azure ATP se trouvent dans le sous-dossier nommé **Logs** où ATP est installé ; l’emplacement par défaut est : **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. Dans l’emplacement de l’installation par défaut, il se trouve ici : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
+Les journaux d’Azure ATP se trouvent dans le sous-dossier nommé **Logs** où ATP est installé ; l’emplacement par défaut est : **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
 
 Le capteur Azure ATP dispose des journaux suivants :
 
@@ -45,7 +41,7 @@ Le capteur Azure ATP dispose des journaux suivants :
 > Les trois premiers fichiers journaux ont une taille maximale de 50 Mo. Quand cette taille est atteinte, un nouveau fichier journal est ouvert et le précédent est renommé en « &lt;nom_fichier_origine&gt;-Archive-00000 » où le nombre augmente chaque fois qu’il est renommé. Par défaut, s’il existe déjà plus de 10 fichiers du même type, les plus anciens sont supprimés.
 
 ## <a name="azure-atp-deployment-logs"></a>Journaux de déploiement Azure ATP
-Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l’emplacement de l’installation par défaut, il se trouve ici : **C:\Users\Administrator\AppData\Local\Temp** (ou un répertoire au-dessus de %temp%).
+Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Users\Administrator\AppData\Local\Temp** (ou d’un répertoire au-dessus de %temp%).
 
 Journaux de déploiement du capteur Azure ATP :
 
@@ -62,5 +58,5 @@ Journaux de déploiement du capteur Azure ATP :
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

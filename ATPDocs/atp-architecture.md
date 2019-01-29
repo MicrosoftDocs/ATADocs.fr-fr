@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d41eac8700e334989594639880a0f85d5c725578
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 10cbb1fcb30f40a41d17a9995e4e132c4afbf332
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459003"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
 
 Azure ATP supervise vos contrôleurs de domaine en capturant et en analysant le trafic réseau, ainsi qu’en utilisant les événements Windows provenant directement de vos contrôleurs de domaine. Ensuite, il analyse les données relatives aux attaques et aux menaces. Azure ATP utilise le profilage, la détection déterministe, le machine learning et les algorithmes comportementaux pour en savoir plus sur votre réseau, pour détecter les anomalies et pour vous avertir des activités suspectes.
@@ -89,7 +86,7 @@ Le capteur Azure ATP lit les événements localement, ce qui évite les frais li
 
 -  Événements Windows
 
-    Pour améliorer la détection des différents types d’attaque que sont l’usurpation d’identité suspecte (pass-the-hash), les échecs d’authentification suspects, les modifications apportées aux groupes sensibles, la création de services suspects et les activités de jeton honeytoken, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757 et 7045. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les [paramètres de stratégie d’audit avancés](atp-advanced-audit-policy.md) adaptés. 
+    Pour améliorer sa capacité de détection des différents types d’attaque que sont les suspicions d’usurpation d’identité (Pass-the-hash), les échecs d’authentification suspects, les modifications apportées aux groupes sensibles, la création de services suspects et les activités honeytoken, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757 et 7045. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les [paramètres de stratégie d’audit avancés](atp-advanced-audit-policy.md) adaptés. 
 
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis d’Azure ATP](atp-prerequisites.md)

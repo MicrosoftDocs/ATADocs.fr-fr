@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7816dba02c2fea07afc080c7aed5ede073c88fac
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314310"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840775"
 ---
-# <a name="tutorial-lateral-movement-alerts"></a>Tutorial : Alertes de mouvement latéral  
+# <a name="tutorial-lateral-movement-alerts"></a>Didacticiel : Alertes de mouvement latéral  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -35,10 +35,48 @@ Pour en savoir plus sur la structure et les composants courants de toutes les al
 Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Mouvement latéral** détectées par Azure ATP sur votre réseau. Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et empêcher les types d’attaques suivants :
 
 > [!div class="checklist"]
+> * Exécution de code à distance sur DNS – préversion (ID externe 2036)
 > * Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
 > * Suspicion d’usurpation d’identité (pass-the-ticket) (ID externe 2018)
 > * Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement) (ID externe 2008)
 > * Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
+
+## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Exécution de code à distance sur DNS – préversion (ID externe 2036)
+
+**Description**
+
+Le 11 décembre 2018, Microsoft a publié [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), qui annonce qu’une vulnérabilité de l’exécution de code à distance a été découverte dans les serveurs DNS (Domain Name System) Windows. À cause d’elle, les serveurs ne parviennent pas à gérer correctement les demandes. Un attaquant qui parviendrait à exploiter cette faille pourrait exécuter du code dans le contexte du compte système Local. Les serveurs Windows actuellement configurés comme serveurs DNS y sont exposés.
+
+Avec ce système de détection, une alerte de sécurité Azure ATP est déclenchée lorsque des requêtes DNS suspectées d’exploiter la faille de sécurité CVE-2018-8626 sont effectuées sur un contrôleur de domaine dans le réseau.
+
+**TP, B-TP ou FP**
+
+1. Les ordinateurs de destination sont-ils à jour et possèdent-ils les correctifs nécessaires contre CVE-2018-8626 ? 
+    - Si c’est le cas, **fermez** l’alerte de sécurité comme **FP**.
+2. Un service a-t-il été créé ou un processus inconnu exécuté au moment de l’attaque ?
+    - Si vous ne trouvez aucun nouveau service ou processus inconnu, **fermez** l’alerte de sécurité comme **FP**. 
+3. Ce type d’attaque peut bloquer le service DNS avant de provoquer l’exécution de code.
+    - Regardez si le service DNS a été redémarré plusieurs fois au moment de l’attaque.
+    - Si c’est le cas, il s’agit probablement d’une tentative d’attaque CVE-2018-8626. Considérez cette alerte comme **TP** et suivez les instructions présentées dans **Comprendre l’étendue de la violation**. 
+
+**Comprendre l’étendue de la violation**
+
+- Examinez les [ordinateurs sources et de destination](investigate-a-computer.md).
+
+**Suggestions de correction et étapes préventives**
+
+**Correction**
+
+1. Incluez les contrôleurs de domaine. 
+    1. Empêchez la tentative d’exécution du code à distance.
+    2. Recherchez les utilisateurs connectés au moment de l’activité suspecte, car ils risquent d’être également compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur. 
+2. Incluez l’ordinateur source.
+    1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    2. Recherchez les utilisateurs connectés au moment de l’activité suspecte, car ils risquent d’être également compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+
+**Prévention**
+
+- Vérifiez que tous les serveurs DNS de l’environnement sont à jour et possèdent les correctifs nécessaires contre [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
 
@@ -114,19 +152,19 @@ Dans une attaque over-pass-the-hash, un attaquant peut utiliser un code de hacha
 
 **TP, B-TP ou FP ?**
 1. Déterminez si la configuration de carte à puce a changé récemment. 
-    - Les comptes impliqués ont-ils récemment subi des changements de configuration de carte à puce ?  
+   - Les comptes impliqués ont-ils récemment subi des changements de configuration de carte à puce ?  
     
-    Si la réponse est oui, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**. 
+     Si la réponse est oui, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**. 
 
 Certaines ressources légitimes ne prennent pas en charge les codes de chiffrement fort et peuvent déclencher cette alerte. 
 
 2. Tous les utilisateurs sources partagent-ils quelque chose ? 
-    1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
-    2. Vérifiez les ressources auxquelles ces tickets ont accédé. 
-        - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
-    3. Si une seule ressource est sollicitée, vérifiez s’il s’agit d’une ressource à laquelle ces utilisateurs sont autorisés à accéder.   
+   1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
+   2. Vérifiez les ressources auxquelles ces tickets ont accédé. 
+       - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
+   3. Si une seule ressource est sollicitée, vérifiez s’il s’agit d’une ressource à laquelle ces utilisateurs sont autorisés à accéder.   
 
-    Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+      Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
 
 **Comprendre l’étendue de la violation**
 

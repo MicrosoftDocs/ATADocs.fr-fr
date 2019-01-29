@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c17fbe10bea696711bd3dc011893bdcd3dbc87f4
-ms.sourcegitcommit: eb144ce1331ec3404fd2f75025cdbe802a73890b
+ms.openlocfilehash: cad1cff6b9e46676a2f92b3304dbc55440bfa1d9
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52620844"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840435"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
 > [!NOTE]
@@ -39,7 +35,7 @@ Pour améliorer les capacités de détection, Azure ATP a besoin des événement
 
 Une fois que vous avez configuré la mise en miroir des ports des contrôleurs de domaine sur le capteur autonome Azure ATP, suivez les instructions ci-dessous pour configurer les transferts d’événements Windows à l’aide de la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding. 
 
-**Étape 1 : ajouter le compte service réseau au groupe Lecteurs des journaux d’événements du domaine** 
+**Étape 1 : Ajouter le compte de service réseau au groupe Lecteurs du journal des événements de domaine** 
 
 Dans ce scénario, nous partons du principe que le capteur autonome Azure ATP est un membre du domaine.
 
@@ -49,28 +45,28 @@ Dans ce scénario, nous partons du principe que le capteur autonome Azure ATP es
 
 Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d’événements**, redémarrez les contrôleurs de domaine pour que la modification prenne effet.
 
-**Étape 2 : créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le Gestionnaire d’abonnements cible.** 
+**Étape 2 : Créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le gestionnaire d’abonnements cible** 
 > [!Note] 
 > Vous pouvez créer une stratégie de groupe pour ces paramètres et appliquer la stratégie de groupe à chaque contrôleur de domaine surveillé par le capteur autonome Azure ATP. Les étapes suivantes modifient la stratégie locale du contrôleur de domaine.     
 
-1.  Exécutez la commande suivante sur chaque contrôleur de domaine : *winrm quickconfig*
-2.  Sur la ligne de commande, tapez *gpedit.msc*.
-3.  Développez **Configuration ordinateur > Modèles d’administration > Composants Windows > Transfert d’événements**.
+1. Exécutez la commande suivante sur chaque contrôleur de domaine : *winrm quickconfig*
+2. Sur la ligne de commande, tapez *gpedit.msc*.
+3. Développez **Configuration ordinateur > Modèles d’administration > Composants Windows > Transfert d’événements**.
 
- ![Image de l’éditeur de groupe de stratégie locale](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Image de l’éditeur de groupe de stratégie locale](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Double-cliquez sur **Configurer le Gestionnaire d’abonnements cible**.
+4. Double-cliquez sur **Configurer le Gestionnaire d’abonnements cible**.
    
-    1.  Sélectionnez **Activé**.
-    2.  Sous **Options**, cliquez sur **Afficher**.
-    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (par exemple : Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+   1.  Sélectionnez **Activé**.
+   2.  Sous **Options**, cliquez sur **Afficher**.
+   3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (par exemple : Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
     
-    ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
+   ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
     
-5.  Cliquez sur **OK**.
-6.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
+5. Cliquez sur **OK**.
+6. À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
 
-**Étape 3 : effectuer les opérations suivantes sur le capteur autonome Azure ATP** 
+**Étape 3 : Effectuer les opérations suivantes sur le capteur autonome Azure ATP** 
 
 1. Ouvrez une invite de commandes avec élévation de privilèges et tapez *wecutil qc*.
 2. Ouvrez l’**Observateur d’événements**. 
@@ -91,7 +87,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     6. Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
 
 
-Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)
+Pour plus d'informations, voir : [Configurer les ordinateurs de façon à transférer et à recueillir les événements](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Voir aussi
 

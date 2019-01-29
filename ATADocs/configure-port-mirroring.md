@@ -13,21 +13,20 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 31bb8affe271ec51f922cf67632988dfc1265ba3
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480648"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840235"
 ---
+# <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-
-# <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
 > [!NOTE] 
 > Cet article ne vous concerne que si vous déployez des passerelles ATA au lieu de passerelles légères ATA. Pour déterminer si vous devez utiliser des passerelles ATA, consultez [Choix des passerelles appropriées pour votre déploiement](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
- 
+
 La principale source de données utilisée par ATA est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’ATA puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports ou utiliser un TAP réseau.
 
 Pour la **mise en miroir des ports**, configurez-la pour chaque contrôleur de domaine à surveiller en tant que **source** du trafic réseau. En règle générale, vous devez collaborer avec l’équipe de virtualisation ou de mise en réseau pour configurer la mise en miroir des ports.
@@ -68,7 +67,7 @@ Vos contrôleurs de domaine et vos passerelles ATA peuvent être physiques ou vi
 > [!NOTE]
 > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
 
--   Pour vérifier que les passerelles ATA sont correctement dimensionnées pour gérer elles-mêmes la surveillance de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et installez une passerelle ATA sur chaque hôte. Configurez chaque passerelle ATA de façon à surveiller tous les contrôleurs de domaine qui s’exécutent sur le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
+-   Pour faire en sorte que les passerelles ATA soient correctement dimensionnées pour gérer par elles-mêmes le monitoring de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et une passerelle ATA sur chaque hôte. Configurez chaque passerelle ATA de façon à surveiller tous les contrôleurs de domaine qui s’exécutent sur le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
 
 Après avoir configuré la mise en miroir des ports, validez son fonctionnement avant d’installer la passerelle ATA.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2018
+ms.date: 1/20/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2cc450a50b35101b768d521d867850946e207dc5
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 2c957f90215b6c251eadff67f3e66fc450711373
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459190"
 ---
-*S'applique à : Azure - Protection avancée contre les menaces*
-
-
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
 
 Azure ATP peut transférer les événements d’alerte de sécurité et d’alerte de surveillance à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
@@ -59,36 +56,37 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 
 |Nouveau nom de l’alerte de sécurité|Ancien nom de l’alerte de sécurité|ID externe unique|
 |---------|----------|---------|
-|Reconnaissance d’énumération de compte|Reconnaissance à l’aide de l’énumération de compte|2003|
-|Exfiltration de données sur SMB| NA| 2030|
-|Activité Honeytoken|Activité Honeytoken|2014|
-|Demande malveillante de la clé principale de l’API de protection des données|Demande d’information privée de protection contre les données malveillantes|2020|
-|Reconnaissance de mappage de réseau (DNS)|Reconnaissance à l’aide de DNS|2007|
-|Tentative d’exécution de code à distance|Tentative d’exécution de code à distance|2019|
-|Suspicion d’attaque par force brute (LDAP)|Attaque par force brute par le biais d’une liaison simple LDAP|2004|
-|Suspicion d’attaque par force brute (Kerberos, NTLM)|Échecs d’authentification suspects|2023|
-|Suspicion d’attaque par force brute (SMB)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033|
-|Suspicion d’attaque DCShadow (promotion du contrôleur de domaine)|Promotion du contrôleur de domaine suspect (attaque DcShadow potentielle)|2028|
-|Suspicion d’attaque DCShadow (demande de réplication du contrôleur de domaine)|Demande de réplication suspecte du contrôleur de domaine (attaque DcShadow potentielle)|2029|
-|Suspicion d’attaque DCSync (réplication de services d’annuaire)|Réplication malveillante de services d’annuaire|2006|
-|Suspicion d’utilisation de golden ticket (passage à une version antérieure du chiffrement)|Activité de passage à une version antérieure du chiffrement (attaque golden ticket potentielle)|2009|
-|Suspicion d’utilisation de golden ticket (données d’autorisation falsifiées) |Réaffectation de privilèges à l’aide de données d’autorisation falsifiées|2013|
-|Suspicion d'utilisation de golden ticket (compte inexistant)|Golden ticket Kerberos - compte inexistant|2027|
-|Suspicion d’utilisation de golden ticket (anomalie de temps) |Golden ticket Kerberos - anomalie de temps|2022|
-|Suspicion d’utilisation de golden ticket (anomalie de ticket) - préversion|NA|2032|
-|Suspicion d'usurpation d’identité (pass-the-hash)|Usurpation d’identité par attaque Pass-the-Hash|2017|
-|Suspicion d’usurpation d’identité (pass-the-ticket)|Usurpation d’identité par attaque Pass-the-Ticket|2018|
-|Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement)|Activité de passage à une version antérieure du chiffrement (attaque Overpass-the-Hash potentielle)|2008|
-|Suspicion d’attaque over-pass-the-hash (Kerberos)|Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)|2002|
-|Suspicion d’utilisation du framework de piratage Metasploit|Implémentation de protocole inhabituelle (utilisation potentielle d’outils de piratage Metasploit)|2034|
-|Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement)|Activité de passage à une version antérieure du chiffrement (attaque Skeleton Key potentielle)|2010|
-|Suspicion d’attaque de ransomware WannaCry|Implémentation de protocole inhabituelle (attaque ransomware WannaCry potentielle)|2035|
-|Communication suspecte sur DNS|Communication suspecte sur DNS|2031|
-|Modification suspecte de groupes sensibles|Modification suspecte de groupes sensibles|2024|
-|Création de service malveillant|Création de service malveillant|2026|
-|Connexion VPN suspecte|Connexion VPN suspecte|2025|
-|Reconnaissance des utilisateurs et des membres d’un groupe (SAMR)|Reconnaissance à l’aide de requêtes de services d’annuaire|2021|
-|Reconnaissance des utilisateurs et des adresses IP (SMB) |Reconnaissance à l’aide de l’énumération de sessions SMB|2012|
+|[Reconnaissance d’énumération de compte](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconnaissance à l’aide de l’énumération de compte|2003|
+|[Exfiltration de données sur SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb---preview-external-id-2030)| NA| 2030|
+|[Activité Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Activité Honeytoken|2014|
+|[Demande malveillante de la clé principale de l’API de protection des données](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Demande d’information privée de protection contre les données malveillantes|2020|
+|[Reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance à l’aide de DNS|2007|
+|[Tentative d’exécution de code à distance](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Tentative d’exécution de code à distance|2019|
+|[Exécution de code à distance sur DNS – préversion](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|NA|2036|
+|[Suspicion d’attaque par force brute (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Attaque par force brute par le biais d’une liaison simple LDAP|2004|
+|[Suspicion d’attaque par force brute (Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Échecs d’authentification suspects|2023|
+|[Suspicion d’attaque par force brute (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils malveillants comme Hydra)|2033|
+|[Suspicion d’attaque DCShadow (promotion du contrôleur de domaine)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Promotion du contrôleur de domaine suspect (attaque DcShadow potentielle)|2028|
+|[Suspicion d’attaque DCShadow (demande de réplication du contrôleur de domaine)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Demande de réplication suspecte du contrôleur de domaine (attaque DcShadow potentielle)|2029|
+|[Suspicion d’attaque DCSync (réplication de services d’annuaire)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Réplication malveillante de services d’annuaire|2006|
+|[Suspicion d’utilisation de golden ticket (passage à une version antérieure du chiffrement)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Activité de passage à une version antérieure du chiffrement (attaque golden ticket potentielle)|2009|
+|[Suspicion d’utilisation de golden ticket (données d’autorisation falsifiées)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Réaffectation de privilèges à l’aide de données d’autorisation falsifiées|2013|
+|[Suspicion d’utilisation de golden ticket (compte inexistant)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Golden ticket Kerberos - compte inexistant|2027|
+|[Suspicion d’utilisation de golden ticket (anomalie de ticket) - Préversion](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|NA|2032|
+|[Suspicion d’utilisation de golden ticket (anomalie de temps)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden ticket Kerberos - anomalie de temps|2022|
+|[Suspicion d’usurpation d’identité (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Usurpation d’identité par attaque Pass-the-Hash|2017|
+|[Suspicion d’usurpation d’identité (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Usurpation d’identité par attaque Pass-the-Ticket|2018|
+|[Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Activité de passage à une version antérieure du chiffrement (attaque Overpass-the-Hash potentielle)|2008|
+|[Suspicion d’attaque over-pass-the-hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)|2002|
+|[Suspicion d’utilisation du framework de piratage Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Implémentation de protocole inhabituelle (utilisation potentielle d’outils de piratage Metasploit)|2034|
+|[Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Activité de passage à une version antérieure du chiffrement (attaque Skeleton Key potentielle)|2010|
+|[Suspicion d’attaque de ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implémentation de protocole inhabituelle (attaque ransomware WannaCry potentielle)|2035|
+|[Communication suspecte sur DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Communication suspecte sur DNS|2031|
+|[Modification suspecte de groupes sensibles](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Modification suspecte de groupes sensibles|2024|
+|[Création de service malveillant](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Création de service malveillant|2026|
+|[Connexion VPN suspecte](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Connexion VPN suspecte|2025|
+|[Reconnaissance des utilisateurs et des membres d’un groupe (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance à l’aide de requêtes de services d’annuaire|2021|
+|[Reconnaissance des utilisateurs et des adresses IP (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance à l’aide de l’énumération de sessions SMB|2012|
 
 ## <a name="sample-logs"></a>Exemples de journaux
 
@@ -121,6 +119,9 @@ Priorités :
 ### <a name="remote-code-execution-attempt"></a>Tentative d’exécution de code à distance
 10-29-2018  11:22:04    Auth.Warning    192.168.0.202   1 2018-10-29T09:22:00.100856+00:00 DC3 CEF 3908 RemoteExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|RemoteExecutionSecurityAlert|Tentative d’exécution de code à distance|5|start=2018-10-29T09:19:45.0552367Z shost=CLIENT1 msg=Les tentatives d’exécution de code à distance suivantes ont été effectuées sur DC1 à partir de CLIENT1 :\r\nPlanification à distance réussie d’une ou plusieurs tâches par user1.\r\nÉchec de la planification à distance d’une ou plusieurs tâches par user1.\r\nExécution à distance réussie d’une ou plusieurs méthodes WMI par user1. externalId=2019 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/f063c778-830c-4e9f-98d1-bc6c11c94e11 cs2Label=trigger cs2=new
 
+### <a name="remote-code-execution-over-dns---preview"></a>Exécution de code à distance sur DNS – préversion
+1-17-2019   08:24:54    Auth.Warning    192.168.0.202   1 2019-01-17T08:24:54.100856+00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.63.0.0|DnsRemoteCodeExecutionSecurityAlert|[PREVIEW] Remote code execution over DNS|5|start=2019-01-17T08:24:54.5293800Z app=Dns shost=CLIENT1 msg=An actor attempted to run commands remotely on CLIENT1 from DC1, over DNS protocol. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
+
 ### <a name="suspected-brute-force-attack-ldap"></a>Suspicion d’attaque par force brute (LDAP)
 21-02-2018  16:20:21    Auth.Warning    192.168.0.220   1 2018-02-21T14:20:06.156238+00:00 CENTER CEF 6076 LdapBruteForceSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|LdapBruteForceSecurityAlert|Attaque par force brute à l’aide d’une liaison simple LDAP|5|start=2018-02-21T14:19:41.7422810Z app=Ldap suser=Wofford Thurston shost=CLIENT1 msg=Une attaque en force brute utilisant le protocole Ldap a été tentée sur Wofford Thurston (Software Engineer) à partir de CLIENT1 (100 tentatives de deviner le mot de passe). cnt=100 externalId=2004 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/57b8ac96-7907-4971-9b27-ec77ad8c029a cs2Label=trigger cs2=update
 
@@ -133,7 +134,7 @@ Priorités :
 ### <a name="suspected-golden-ticket-usage-non-existent-account"></a>Suspicion d’utilisation de golden ticket (compte inexistant)
 07-01-2018  14:28:49    Auth.Error  192.168.0.100   1 2018-07-01T11:28:35.546638+00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï»¿0|Microsoft|Azure ATP|2.39.0.0|ForgedPrincipalSecurityAlert|Golden Ticket Kerberos - compte inexistant|10|start=2018-07-01T09:48:31.2567987Z app=Kerberos suser=domain1.test.local\fake msg=domain1.test.local\faux, qui n’existe pas dans Active Directory, a utilisé un ticket Kerberos. Le ticket a été détecté sur 2 ordinateurs pour accéder à 3 ressources. Cela peut indiquer une attaque potentielle de Golden Ticket. externalId=2027 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4 cs2Label=trigger cs2=update
 
-### <a name="suspected-golden-ticket-usage-ticket-anomaly--preview"></a>Suspicion d’utilisation de golden ticket (anomalie de ticket) - préversion
+### <a name="suspected-golden-ticket-usage-ticket-anomaly---preview"></a>Suspicion d’utilisation de golden ticket (anomalie de ticket) - préversion
 1 2018-11-18T10:46:23.346946+00:00 MAXIMG-7050 CEF 24284 GoldenTicketSizeAnomalySecurityA 0|Microsoft|Azure ATP|2.56.0.0|GoldenTicketSizeAnomalySecurityAlert|[PREVIEW] Suspicion d’utilisation de golden ticket (anomalie de ticket)|10|start=2018-11-18T10:44:12.9317797Z app=Kerberos shost=CLIENT2 suser=RFosdyke msg=Renzo Fosdyke (ingénieur logiciel) a utilisé un ticket Kerberos suspect à partir de CLIENT2 pour accéder à ldap/domain1.test.local. externalId=2032 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/63600e03-f423-49bf-a92d-4010e1d52b9f cs2Label=trigger cs2=update
 
 ### <a name="suspected-golden-ticket-usage-time-anomaly"></a>Suspicion d’utilisation de golden ticket (anomalie de temps) 
@@ -200,5 +201,5 @@ Priorités :
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

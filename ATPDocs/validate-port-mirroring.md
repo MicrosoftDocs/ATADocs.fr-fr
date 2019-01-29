@@ -1,5 +1,5 @@
 ---
-title: Valider la mise en miroir des ports dans Azure Advanced Threat Protection | Microsoft Docs
+title: Valider la mise en miroir des ports dans Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Explique comment vérifier que la mise en miroir des ports est configurée correctement dans Azure ATP
 keywords: ''
 author: mlottner
@@ -12,17 +12,13 @@ ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: f11a80edae80eb12c8973965ee9f55fcad6d3da6
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458391"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
 > [!NOTE] 
 > Cet article s’applique uniquement si vous déployez le capteur autonome Azure ATP à la place du capteur Azure ATP. Pour déterminer si vous devez utiliser le capteur Azure ATP, consultez [Choix des capteurs appropriés pour votre déploiement](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).

@@ -13,49 +13,45 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d3eb4dbc714e7de4d586e686cd26ead83fceda8
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 0243a477bd3d2991282df98722ffb7e719fd9729
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744674"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839836"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
-
-
 # <a name="integrate-with-syslog"></a>Intégrer à Syslog
 
 Azure ATP peut vous informer quand il détecte des activités suspectes et émet des alertes de sécurité ou des alertes d’intégrité, en envoyant la notification à votre serveur Syslog. Si vous activez les notifications Syslog, vous pouvez définir les éléments suivants :
 
-1.  Avant de configurer les notifications Syslog, collaborez avec votre administrateur SIEM pour connaître les informations suivantes :
+1. Avant de configurer les notifications Syslog, collaborez avec votre administrateur SIEM pour connaître les informations suivantes :
 
-    -   Nom de domaine complet ou adresse IP du serveur SIEM
+   -   Nom de domaine complet ou adresse IP du serveur SIEM
 
-    -   Port sur lequel écoute le serveur SIEM
+   -   Port sur lequel écoute le serveur SIEM
 
-    -   Mode de transport à utiliser : UDP, TCP ou TLS (Syslog sécurisé)
+   -   Mode de transport à utiliser : UDP, TCP ou TLS (Syslog sécurisé)
 
-    -   Format sous lequel envoyer les données, RFC 3164 ou 5424
+   -   Format sous lequel envoyer les données, RFC 3164 ou 5424
 
-2.  Entrez l’URL de l’instance.
+2. Entrez l’URL de l’instance.
 
-3.  Entrez votre nom d’utilisateur et votre mot de passe Azure Active Directory, puis cliquez sur **Se connecter**.
+3. Entrez votre nom d’utilisateur et votre mot de passe Azure Active Directory, puis cliquez sur **Se connecter**.
 
-4.  Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
+4. Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 
-    ![Icône de paramètres de configuration d’Azure ATP](media/ATP-config-menu.png)
+   ![Icône de paramètres de configuration d’Azure ATP](media/ATP-config-menu.png)
 
-5.  Cliquez sur **Notifications**, puis, sous **Notifications Syslog**, cliquez sur **Configurer** et entrez les informations suivantes :
+5. Cliquez sur **Notifications**, puis, sous **Notifications Syslog**, cliquez sur **Configurer** et entrez les informations suivantes :
 
-    |Champ|Description|
-    |---------|---------------|
-    |capteur|Sélectionnez un capteur désigné comme responsable de l’agrégation de tous les événements Syslog et de leur transfert vers votre serveur SIEM.|
-    |Point de terminaison de service|Nom de domaine complet du serveur Syslog et modifiez éventuellement le numéro de port (par défaut, 514)|
-    |Transport|Peut être UDP, TCP ou TLS (Syslog sécurisé)|
-    |Format|Il s’agit du format utilisé par Azure ATP pour envoyer des événements au serveur SIEM : RFC 5424 ou 3164.|
+   |Champ|Description|
+   |---------|---------------|
+   |capteur|Sélectionnez un capteur désigné comme responsable de l’agrégation de tous les événements Syslog et de leur transfert vers votre serveur SIEM.|
+   |Point de terminaison de service|Nom de domaine complet du serveur Syslog et modifiez éventuellement le numéro de port (par défaut, 514)|
+   |Transport|Peut être UDP, TCP ou TLS (Syslog sécurisé)|
+   |Format|Il s’agit du format utilisé par Azure ATP pour envoyer des événements au serveur SIEM : RFC 5424 ou 3164.|
 
- ![Image des paramètres du serveur Syslog Azure ATP](media/atp-syslog.png)
+   ![Image des paramètres du serveur Syslog Azure ATP](media/atp-syslog.png)
 
 6. Vous pouvez sélectionner les événements à envoyer à votre serveur Syslog. Sous **Notifications Syslog**, spécifiez quelles notifications doivent être envoyées à votre serveur Syslog : nouvelles alertes de sécurité, alertes de sécurité mises à jour et nouveaux problèmes d’intégrité.
 

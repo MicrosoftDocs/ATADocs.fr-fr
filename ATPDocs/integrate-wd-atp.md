@@ -1,6 +1,6 @@
 ---
-title: Intégration d’Azure Advanced Threat Protection et de Windows Defender ATP | Microsoft Docs
-description: Guide pratique pour intégrer Azure Advanced Threat Protection et Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces
+title: Intégration d’Azure - Protection avancée contre les menaces et de Windows Defender ATP | Microsoft Docs
+description: Guide pratique pour intégrer Azure - Protection avancée contre les menaces et Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces
 keywords: ''
 author: mlottner
 ms.author: mlottner
@@ -13,28 +13,26 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 2ff18759e23462a2b01a10f45729b5a282495347
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458816"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Intégrer Azure ATP à Windows Defender ATP
 
-Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows Defender ATP pour obtenir une solution encore plus complète de protection contre les menaces. Azure ATP surveille le trafic sur vos contrôleurs de domaine alors que Windows Defender ATP surveille vos points de terminaison, offrant ainsi ensemble une interface unique pour protéger votre environnement.
+Azure - Protection avancée contre les menaces vous permet d’intégrer Azure ATP et Windows Defender ATP pour obtenir une solution encore plus complète de protection contre les menaces. Azure ATP surveille le trafic sur vos contrôleurs de domaine alors que Windows Defender ATP surveille vos points de terminaison, offrant ainsi ensemble une interface unique pour protéger votre environnement.
 
 En intégrant Windows Defender ATP et Azure ATP, vous pouvez tirer parti de toute la puissance des deux services et sécuriser votre environnement, notamment :
 
-- Les capteurs Azure ATP et les capteurs autonomes : Peuvent être installés directement sur vos contrôleurs de domaine ou mettre en miroir les ports de vos contrôleurs de domaine, pour capturer et analyser le trafic réseau de plusieurs protocoles (tels que Kerberos, DNS, RPC, NTLM, etc.) à des fins d’authentification, d’autorisation et de collecte d’informations. 
+- Capteurs et capteurs autonomes Azure ATP : ils peuvent être installés directement sur vos contrôleurs de domaine ou mettre en miroir les ports de vos contrôleurs de domaine sur ATP, pour capturer et analyser le trafic réseau de plusieurs protocoles (par exemple, Kerberos, DNS, RPC ou NTLM) à des fins d’authentification, d’autorisation et de collecte d’informations. 
 
--   Les capteurs comportementaux de point de terminaison : Intégrés dans Windows 10, ces capteurs collectent et traitent les signaux comportementaux du système d’exploitation (par exemple, les processus, le Registre, les fichiers et les communications réseau) et envoient ces données de capteurs à votre instance cloud, privée et isolée de Windows Defender ATP.
+-   Capteurs comportementaux de point de terminaison : intégrés à Windows 10, ils collectent et traitent les signaux comportementaux du système d’exploitation (par exemple, les processus, le Registre, les fichiers et les communications réseau) et envoient ces données de capteurs à votre instance cloud, isolée et privée de Windows Defender ATP.
 
-- L’analytique de la sécurité cloud : Tirant parti du Big Data, de l’apprentissage automatique, de la vision unique de Microsoft sur l’écosystème Windows (tel que l’[outil de suppression de logiciels malveillants Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), des produits cloud d’entreprise (tels qu’Office 365) et des ressources en ligne (telles que la réputation des URL SmartScreen et Bing), les signaux comportementaux sont convertis en insights, détections et réponses recommandées aux menaces avancées.
+- Analyse de la sécurité cloud : grâce au Big Data, au Machine Learning et à la vision unique de Microsoft sur l’écosystème Windows (par exemple, [l’Outil de suppression de logiciels malveillants Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), les produits cloud d’entreprise (par exemple, Office 365) et les ressources en ligne (par exemple, Bing et la réputation d’URL SmartScreen), les signaux comportementaux sont convertis en insights, détections et réponses recommandées aux menaces avancées.
 
-- Les renseignements sur les menaces : Générés par les chasseurs et les équipes de sécurité de Microsoft, et complétés par les renseignements fournis par les partenaires, les renseignements sur les menaces permettent à Windows Defender ATP d’identifier les procédures, les techniques et les outils utilisés par les attaquants, ainsi que de générer des alertes quand ces activités sont observées dans les données collectées par les capteurs.
+- Veille des menaces : générée par les chasseurs et les équipes de sécurité de Microsoft, et complétée par les renseignements fournis par les partenaires, la veille des menaces permet à Windows Defender ATP d’identifier les procédures, les techniques et les outils utilisés par les attaquants, et de générer des alertes quand ces activités sont observées dans les données collectées par les capteurs.
 
 La technologie Azure ATP détecte des activités suspectes multiples en se focalisant sur plusieurs phases de la chaîne de cyberattaque, notamment :
 

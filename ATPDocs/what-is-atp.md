@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f4138a8649bbb278453114f606d034a0123cbdd7
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: 345b6285dbef34d0a72e789fc3d884214be4b79d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996874"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840934"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
 # <a name="what-is-azure-advanced-threat-protection"></a>Qu’est-ce qu’Advanced Threat Protection ?
 Azure Advanced Threat Protection (ATP) est une solution de sécurité cloud qui identifie, détecte et vous aide à examiner les menaces avancées, les identités compromises et les actions des utilisateurs internes malveillants dirigées contre votre entreprise. Azure ATP permet aux analystes SecOp et aux professionnels de la sécurité chargés de détecter les attaques avancées dans les environnements hybrides de :  
 - Surveiller les utilisateurs, ainsi que le comportement et les activités des entités avec une analytique basée sur l’apprentissage  
@@ -35,10 +33,13 @@ Azure ATP surveille et analyse les activités et les informations des utilisateu
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Protéger les identités des utilisateurs et réduire la surface d’attaque   
 Azure ATP vous fournit des insights précieux sur les configurations des identités et suggère les bonnes pratiques de sécurité. Avec des rapports de sécurité et une analytique des profils utilisateur, Azure ATP vous permet de réduire considérablement la surface d’attaque de l’organisation, rendant plus difficile de compromettre les informations d’identification des utilisateurs et la mise en œuvre d’une attaque. Les chemins de mouvement latéral visuels d’Azure ATP vous aident à comprendre rapidement et exactement comment un attaquant peut se déplacer latéralement au sein de votre organisation pour compromettre des comptes sensibles et vous assistent pour éviter préventivement ces risques. Les rapports de sécurité d’Azure ATP vous aident à identifier les utilisateurs et les appareils qui s’authentifient avec des mots de passe en texte clair, et fournissent des insights supplémentaires pour améliorer la prise en compte et les stratégies de sécurité.  
  
-## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Identifier les activités suspectes et les attaques avancées sur la chaîne d’annihilation des attaques 
-En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques : 
+## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-cyber-attack-kill-chain"></a>Identifier les activités suspectes et les attaques avancées sur toute la chaîne cybercriminelle 
+
+En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source sur toute la chaîne cybercriminelle : 
+
 ### <a name="reconnaissance"></a>Reconnaissance 
-Identifiez les utilisateurs non autorisés et les tentatives des attaquants pour obtenir des informations. Les attaquants recherchent des informations sur les noms d’utilisateur, l’appartenance des utilisateurs à des groupes, les adresses IP affectées à des appareils, les ressources et plus encore, selon différentes méthodes.  
+Identifiez les utilisateurs non autorisés et les tentatives des attaquants pour obtenir des informations. Les attaquants recherchent des informations sur les noms d’utilisateur, l’appartenance des utilisateurs à des groupes, les adresses IP affectées aux appareils, les ressources, etc., selon différentes méthodes.  
+
 ### <a name="compromised-credentials"></a>Informations d’identification compromises
 Identifiez les tentatives de compromission des informations d’identification des utilisateurs avec des attaques par force brute, les échecs d’authentification, les changements d’appartenance à des groupes d’utilisateurs et d’autres méthodes.  
 
@@ -49,7 +50,7 @@ Détectez les tentatives de mouvement latéral au sein du réseau pour obtenir p
 Mise en évidence du comportement des attaquants si la prise de contrôle du domaine est effective, via l’exécution de code à distance sur le contrôleur de domaine et des méthodes comme la mise en mémoire fantôme du contrôleur de domaine, la réplication du contrôleur de domaine malveillant, les activités de Golden Ticket, etc.
 
 ## <a name="investigate-alerts-and-user-activities"></a>Examiner les alertes et les activités des utilisateurs  
-Azure ATP est conçu pour réduire le bruit général des alertes et fournit seulement des alertes de sécurité pertinentes importantes, selon une chronologie simple et en temps réel des attaques de l’organisation. La vue de la chronologie des attaques d’Azure ATP vous permet de vous concentrer sur ce qui est important, en tirant parti de l’analytique intelligente. Les professionnels de la sécurité utilisant Azure ATP peuvent examiner rapidement les menaces et obtenir des insights sur l’organisation pour les utilisateurs, les appareils et les recours au réseau. L’intégration fluide avec Windows Defender ATP fournit une autre couche de sécurité renforcée via une détection et une protection supplémentaires contre les menaces persistantes avancées sur le système d’exploitation.  
+Azure ATP est conçu pour réduire le bruit général des alertes et fournit seulement des alertes de sécurité pertinentes importantes, selon une chronologie simple et en temps réel des attaques de l’organisation. La vue de la chronologie des attaques d’Azure ATP vous permet de vous concentrer sur ce qui est important, en tirant parti de l’analytique intelligente. Utilisez Azure ATP pour détecter rapidement les menaces et obtenir des insights sur l’organisation pour les utilisateurs, les appareils et les ressources réseau. L’intégration fluide avec Windows Defender ATP fournit une autre couche de sécurité renforcée via une détection et une protection supplémentaires contre les menaces persistantes avancées sur le système d’exploitation.  
 
 ## <a name="additional-resources-for-azure-atp"></a>Ressources supplémentaires pour Azure ATP  
 ### <a name="start-a-free-trial"></a>Démarrer une version d’évaluation gratuite  
@@ -62,7 +63,7 @@ Azure ATP est conçu pour réduire le bruit général des alertes et fournit seu
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Communauté Yammer Azure ATP")
  
 ### <a name="visit-the-azure-atp-product-page"></a>Visitez la page produit d’Azure ATP.  
-[https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Page produit d’Azure ATP")
+[https://azure.microsoft.com/features/azure-advanced-threat-protection/](https://azure.microsoft.com/features/azure-advanced-threat-protection/ "Page produit d’Azure ATP")
 
 ### <a name="learn-more-about-azure-atp-architecture"></a>En savoir plus sur l’architecture Azure ATP
  [Architecture Azure ATP](atp-architecture.md)

@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744776"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840571"
 ---
-*S’applique à : Azure - Protection avancée contre les menaces*
-
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes : 
 - [Qu’est-ce qu’Azure ATP ?](#what-is-azure-atp)
@@ -122,7 +120,7 @@ Oui. Vous pouvez examiner l’intégrité globale du déploiement ainsi que les 
 Vous pouvez configurer Azure ATP de façon à envoyer une alerte Syslog à n’importe quel serveur SIEM avec le format CEF, dans le cadre des alertes d’intégrité et quand une alerte de sécurité est détectée. Pour plus d’informations, consultez [Informations de référence sur le journal SIEM](cef-format-sa.md).
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
-Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs du domaine »).
+Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
 
 Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](sensitive-accounts.md).
 
@@ -136,18 +134,18 @@ Examinez l’erreur la plus récente dans le [journal](troubleshooting-atp-using
 ### <a name="how-can-i-test-azure-atp"></a>Comment puis-je tester Azure ATP ?
 Vous pouvez simuler des activités suspectes comme test de bout en bout. Dans le scénario suivant, la reconnaissance DNS est simulée :
 
-1.  Vérifiez que les capteurs Azure ATP sont installés et configurés sur les contrôleurs de domaine (ou que les capteurs autonomes et la mise en miroir de port correspondante sont installés et configurés)
-2.  Ouvrez CMD
-3.  Exécutez la commande suivante : nslookup - <DC iP address>
-    -   Appuyez sur Entrée
-    -   Tapez : Is -d <FQDN>
-    -   Selon la configuration de votre environnement, les réponses peuvent varier entre « Requête refusée » et une liste de vos enregistrements DNS. 
+1. Vérifiez que les capteurs Azure ATP sont installés et configurés sur les contrôleurs de domaine (ou que les capteurs autonomes et la mise en miroir de port correspondante sont installés et configurés)
+2. Ouvrez CMD
+3. Exécutez la commande suivante : nslookup - <DC iP address>
+   - Appuyez sur Entrée
+   - Tapez : Is -d <FQDN>
+   - Selon la configuration de votre environnement, les réponses peuvent varier entre « Requête refusée » et une liste de vos enregistrements DNS. 
 4. Affichez l’alerte relative à la reconnaissance DNS simulée dans le portail Azure ATP. 
 
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Résolution des problèmes](troubleshooting-atp-known-issues.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

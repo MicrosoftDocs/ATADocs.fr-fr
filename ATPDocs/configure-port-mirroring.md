@@ -1,5 +1,5 @@
 ---
-title: Configurer la mise en miroir des ports lors du déploiement d’Azure Advanced Threat Protection | Microsoft Docs
+title: Configurer la mise en miroir des ports lors du déploiement d’Azure - Protection avancée contre les menaces | Microsoft Docs
 description: Décrit les options de mise en miroir des ports et comment les configurer pour Azure ATP
 keywords: ''
 author: mlottner
@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a9b69db461dc322010fcb8aa446a95151b7a276f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783574"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840537"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
 > [!NOTE] 
 > Cet article s’applique seulement si vous déployez des capteurs autonomes Azure ATP à la place de capteurs Azure ATP. Pour déterminer si vous devez utiliser des capteurs autonomes Azure ATP, consultez [Choix des capteurs appropriés pour votre déploiement](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
@@ -63,12 +59,12 @@ Vos contrôleurs de domaine et votre capteur autonome Azure ATP peuvent être ph
 
 **Si vous travaillez avec des clusters de virtualisation :**
 
--   Pour chaque contrôleur de domaine qui s’exécute dans le cluster de virtualisation sur une machine virtuelle avec le capteur autonome Azure ATP, configurez l’affinité entre le contrôleur de domaine et le capteur autonome Azure ATP. De cette manière, quand le contrôleur de domaine passe à un autre hôte dans le cluster, le capteur autonome Azure ATP le suit. Cela fonctionne bien quand il y a quelques contrôleurs de domaine.
+- Pour chaque contrôleur de domaine qui s’exécute dans le cluster de virtualisation sur une machine virtuelle avec le capteur autonome Azure ATP, configurez l’affinité entre le contrôleur de domaine et le capteur autonome Azure ATP. De cette manière, quand le contrôleur de domaine passe à un autre hôte dans le cluster, le capteur autonome Azure ATP le suit. Cela fonctionne bien quand il y a quelques contrôleurs de domaine.
 
- > [!NOTE]
- > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
+  > [!NOTE]
+  > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
  
--   Pour s’assurer que les capteurs autonomes Azure ATP sont correctement dimensionnés pour gérer eux-mêmes la surveillance de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et installez un capteur autonome Azure ATP sur chaque hôte. Configurez chaque capteur autonome Azure ATP de façon à surveiller tous les contrôleurs de domaine qui s’exécutent dans le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
+- Pour faire en sorte que le capteur autonome Azure ATP soit correctement dimensionné pour gérer par lui-même le monitoring de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et un capteur autonome Azure ATP sur chaque hôte. Configurez chaque capteur autonome Azure ATP de façon à surveiller tous les contrôleurs de domaine qui s’exécutent dans le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
 
 Après avoir configuré la mise en miroir des ports, validez son fonctionnement avant d’installer le capteur autonome Azure ATP.
 

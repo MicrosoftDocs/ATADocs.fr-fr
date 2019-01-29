@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4083975599985abe5540becb8a8ce580980f1f14
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 35577c9001d522f1c227731ab0953a0c8425724d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134056"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841166"
 ---
+# <a name="ata-silent-installation"></a>Installation d’ATA sans assistance
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-# <a name="ata-silent-installation"></a>Installation d’ATA sans assistance
 Cet article fournit des instructions pour installer ATA sans assistance.
 
 ## <a name="prerequisites"></a>Prérequis
@@ -47,29 +47,31 @@ Utilisez la commande suivante pour installer le centre ATA :
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
-    
+
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Oui|Indique que la licence a été lue et approuvée. Doit être définie sur installation sans assistance.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
+> |LicenseAccepted|--LicenseAccepted|Oui|Indique que la licence a été lue et approuvée. Doit être définie sur installation sans assistance.|
 
 **Paramètres d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|InstallationPath|InstallationPath="<InstallPath>"|Non|Définit le chemin de l’installation des fichiers binaires ATA. Chemin par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Non|Définit le chemin du dossier des données de la base de données ATA. Chemin par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Oui|Définit l’adresse IP du service du centre ATA|
-|CenterPort|CenterPort=<CenterPort>|Oui|Définit le port réseau du service du centre ATA|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Non|Définit l’empreinte numérique du certificat pour le service du centre ATA. Ce certificat est utilisé pour sécuriser la communication entre le centre ATA et la passerelle ATA. Si ce paramètre n’est pas défini, l’installation génère un certificat auto-signé.|
-|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Oui|Définit l’adresse IP de la console ATA|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Non|Spécifie l’empreinte numérique du certificat pour la console ATA. Ce certificat est utilisé pour valider l’identité du site web de la console ATA. Si ce paramètre n’est pas défini, l’installation génère un certificat auto-signé|
+> 
+> |             Nom             |                      Syntaxe                      | Obligatoire pour une installation sans assistance ? |                                                                                                        Description                                                                                                         |
+> |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 Non                 |                                               Définit le chemin de l’installation des fichiers binaires ATA. Chemin d’accès par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center                                                |
+> |       DatabaseDataPath       |           DatabaseDataPath= "<DBPath>"           |                 Non                 |                                         Définit le chemin du dossier des données de la base de données ATA. Chemin d’accès par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
+> |       CenterIpAddress        |        CenterIpAddress=<CenterIPAddress>         |                Oui                 |                                                                                       Définit l’adresse IP du service du centre ATA                                                                                        |
+> |          CenterPort          |             CenterPort=<CenterPort>              |                Oui                 |                                                                                      Définit le port réseau du service du centre ATA                                                                                       |
+> | CenterCertificateThumbprint  |  CenterCertificateThumbprint="<CertThumbprint>"  |                 Non                 | Définit l’empreinte numérique du certificat pour le service du centre ATA. Ce certificat est utilisé pour sécuriser la communication entre le centre ATA et la passerelle ATA. Si ce paramètre n’est pas défini, l’installation génère un certificat auto-signé. |
+> |       ConsoleIpAddress       |       ConsoleIpAddress=<ConsoleIPAddress>        |                Oui                 |                                                                                           Définit l’adresse IP de la console ATA                                                                                           |
+> | ConsoleCertificateThumbprint | ConsoleCertificateThumbprint="<CertThumbprint >" |                 Non                 |       Spécifie l’empreinte numérique du certificat pour la console ATA. Ce certificat est utilisé pour valider l’identité du site web de la console ATA. Si ce paramètre n’est pas défini, l’installation génère un certificat auto-signé       |
 
 **Exemples** : Pour installer le centre ATA avec les chemins d’installation par défaut et une seule adresse IP :
 
@@ -93,11 +95,12 @@ Utilisez la commande suivante pour mettre à jour le centre ATA :
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 
 Pendant la mise à jour d’ATA, le programme d’installation détecte automatiquement qu’ATA est déjà installé sur le serveur, et aucune option d’installation de mise à jour n’est requise.
@@ -116,18 +119,20 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
-|Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance du centre ATA du serveur.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
+> |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance du centre ATA du serveur.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
 **Paramètres d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|DeleteExistingDatabaseData|Non|Supprime tous les fichiers de la base de données existante.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Non|Supprime tous les fichiers de la base de données existante.|
 
 **Exemples** : Pour désinstaller sans assistance le centre ATA du serveur, en supprimant toutes les données de base de données existantes :
 
@@ -155,25 +160,27 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 **Paramètres d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Oui|Définit le nom du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.|
-|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Oui|Définit le mot de passe du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.|
+> 
+> |          Nom          |                   Syntaxe                   | Obligatoire pour une installation sans assistance ? |                                                      Description                                                       |
+> |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |   ConsoleAccountName   |     ConsoleAccountName="<AccountName>"     |                Oui                 |   Définit le nom du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.    |
+> | ConsoleAccountPassword | ConsoleAccountPassword="<AccountPassword>" |                Oui                 | Définit le mot de passe du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA. |
 
-**Exemples** : Pour installer en mode silencieux la passerelle ATA, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administrateur ATA, ce qui évite de spécifier les informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le auprès du centre ATA en utilisant les informations d’identification spécifiées :
+**Exemples** : pour installer la passerelle ATA sans assistance, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administration ATA, pour éviter d’avoir à spécifier les informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le auprès du centre ATA en utilisant les informations d’identification spécifiées :
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
-    
+
 
 ## <a name="update-the-ata-gateway"></a>Mettre à jour la passerelle ATA
 
@@ -187,11 +194,12 @@ Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assista
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 
 **Exemples** : Pour mettre à jour la passerelle ATA sans assistance :
@@ -203,21 +211,22 @@ Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assista
 Utilisez la commande suivante pour effectuer une désinstallation sans assistance de la passerelle ATA : **Syntaxe** :
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Options d’installation** :
 
 > [!div class="mx-tableFixed"]
-|Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
-|Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance de la passerelle ATA du serveur.|
-|Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> 
+> |Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
+> |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance de la passerelle ATA du serveur.|
+> |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
 **Exemples** : Pour désinstaller sans assistance la passerelle ATA du serveur :
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
-    
+
 
 
 

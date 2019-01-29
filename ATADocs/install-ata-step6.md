@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ef2d163ae96e5bf8f893367095eacd9a44c3411
-ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
+ms.openlocfilehash: d7c1a2cb171caf732ba4b49ddf50b7eaa2daaa1a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265677"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840196"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Étape 5](install-ata-step5.md)
@@ -32,6 +30,7 @@ ms.locfileid: "51265677"
 
 ## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collecte d’événements
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
+
 Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA pour l’écoute des événements SIEM ou en [configurant le transfert d’événements Windows](configure-event-collection.md). 
 
 > [!NOTE]
@@ -46,9 +45,8 @@ Pour qu’ATA puisse consommer des données provenant d’un serveur Syslog, vou
 
 > [!NOTE]
 > ATA écoute uniquement sur IPv4 et non sur IPv6. 
-
--   Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques à la passerelle ATA.
-
+> -   Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques à la passerelle ATA.
+> 
 > [!IMPORTANT]
 > -   Ne transférez pas toutes les données Syslog vers la passerelle ATA.
 > -   ATA prend en charge le trafic UDP provenant du serveur SIEM/Syslog.
@@ -133,13 +131,13 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
 
 L’ordinateur a tenté de valider les informations d’identification d’un compte.
 
-Package d’authentification : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Package d’authentification :              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Compte d’ouverture de session : Administrateur
+Compte d’ouverture de session : Administrateur
 
-Station de travail source : SIEM
+Station de travail source :       SIEM
 
-Code d’erreur : 0x0
+Error Code:         0x0
 
 -   L’en-tête syslog est facultatif.
 
@@ -166,7 +164,7 @@ Code d’erreur : 0x0
 -   L’ordre n’est pas important pour les paires clé=valeur.
 
 #### <a name="qradar"></a>QRadar
-QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. ATA nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements de Windows sans agent. Pour plus d’informations, consultez [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. ATA nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements de Windows sans agent. Pour plus d'informations, voir [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

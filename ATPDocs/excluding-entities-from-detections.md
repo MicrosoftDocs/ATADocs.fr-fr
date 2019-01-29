@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: 8ca74bdf85cc48a1d2175b6f67e9e83fd6528f83
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458801"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
 Cet article explique comment exclure des entités du processus de déclenchement des alertes. Certaines entités sont exclues afin de limiter les vrais positifs sans gravité tout en garantissant la détection des vrais positifs. Pour supprimer le bruit qu’Azure ATP génère à propos d’activités effectuées par des utilisateurs dans le cadre de leur activité professionnelle normale, vous pouvez désactiver, ou exclure, des entités spécifiques du processus de déclenchement des alertes. Par ailleurs, certaines entités courantes sont exclues par défaut. 
 
@@ -38,12 +34,12 @@ Par exemple, les activités approuvées dans le cadre des opérations informatiq
 
 Il y a deux façons d’exclure manuellement des entités : soit directement à partir de l’alerte de sécurité, soit à partir de l’onglet **Exclusions** de la page **Configuration**. 
 
-- **À partir de l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur une activité associée à un utilisateur, un ordinateur ou une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, effectuez les étapes suivantes :
+- **Dans l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur l’activité d’un utilisateur, d’un ordinateur ou d’une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, suivez les étapes ci-dessous :
   - Cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’alerte de sécurité pour cette entité, puis sélectionnez **Fermer et exclure**. Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions définies pour cette alerte de sécurité. Elle ferme l’alerte de sécurité et la retire de la liste des événements **Ouvert** dans la **chronologie des alertes**.
 
     ![Exclure une entité](./media/exclude-in-sa.png)
 
-- **À partir de la page Configuration** : pour revoir ou changer des exclusions, sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’alerte de sécurité à laquelle appliquer l’exclusion, comme **Reconnaissance DNS**.
+- **Sur la page de configuration** :  pour vérifier ou modifier des exclusions, cliquez sur **Exclusions** sous **Configuration**, puis sélectionnez l’alerte de sécurité à laquelle l’exclusion sera appliquée, comme **Reconnaissance DNS**.
 
     ![Configuration d’exclusion](./media/exclusions.png)
 

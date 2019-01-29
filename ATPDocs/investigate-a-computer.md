@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 64424c6c2b2b0f627099ab479831f4b289eb9605
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 3c707376635facd0fe9ba8e3c3f32f36f5a71c25
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253382"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839544"
 ---
-# <a name="tutorial-investigate-a-computer"></a>Tutoriel : Procéder à une investigation sur un ordinateur
+# <a name="tutorial-investigate-a-computer"></a>Didacticiel : Procéder à une investigation sur un ordinateur
 
 Les preuves d’alertes Azure ATP fournissent des indications claires quand des ordinateurs ont été impliqués dans des activités suspectes ou quand il existe des indications suggérant qu’un ordinateur est compromis. Utilisez les suggestions d’investigation afin d’aider à déterminer les risques pour votre organisation, à choisir le mode de remédiation et à déterminer la meilleure façon de prévenir toute attaque similaire à l’avenir.  
 
@@ -31,13 +31,12 @@ Pour accéder à la page de profil d’ordinateur, cliquez sur l’ordinateur me
 Examinez les informations et les activités suivantes dans le profil d’ordinateur :
 
 - Que s’est-il passé au moment de l’activité suspecte ?  
-    1. Qui était l’[utilisateur](investigate-a-user.md) connecté à l’ordinateur ?
-    2. Cet utilisateur a-t-il l’habitude de se connecter ou d’accéder à l’ordinateur source ou de destination ?
-    3. Quelles sont les ressources qui ont été sollicitées ? Par quels utilisateurs ?
-            - Si des ressources ont été sollicitées, s’agissait-il de ressources très importantes ?
-    4. L’utilisateur était-il supposé accéder à ces ressources ?
-    5. L’[utilisateur](investigate-a-user.md) qui a accédé à l’ordinateur a-t-il effectué d’autres activités suspectes ?
-
+  1. Qui était l’[utilisateur](investigate-a-user.md) connecté à l’ordinateur ?
+  2. Cet utilisateur a-t-il l’habitude de se connecter ou d’accéder à l’ordinateur source ou de destination ?
+  3. Quelles sont les ressources qui ont été sollicitées ? Par quels utilisateurs ?
+      - S’agissait-il de ressources très importantes ?
+  4. L’utilisateur était-il supposé accéder à ces ressources ?
+  5. L’[utilisateur](investigate-a-user.md) qui a accédé à l’ordinateur a-t-il effectué d’autres activités suspectes ?
 
 - Activités suspectes supplémentaires à examiner :
     1. D’autres alertes ont-elles été ouvertes au même moment que celle-ci dans Azure ATP, ou dans d’autres outils de sécurité tels que Windows Defender ATP, Azure Security Center et/ou Microsoft CAS ?

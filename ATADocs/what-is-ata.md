@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1aa60326ed3c26e29d2188acb5b766fe34b474ba
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ab2b6fa569f0c639b63ceb0317ecf0ae7a53411d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133121"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840911"
 ---
+# <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
+
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-
-# <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
 Advanced Threat Analytics (ATA) est une plateforme locale qui aide à protéger votre entreprise contre plusieurs types d’attaques informatiques ciblées et de menaces internes avancées.
 
 ## <a name="how-ata-works"></a>Fonctionnement d’ATA
@@ -52,7 +52,7 @@ La technologie ATA détecte plusieurs activités suspectes, en se focalisant sur
 -   Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne avec différentes séries de points d’entrée, d’informations d’identification et de techniques. 
 
 Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
-ATA recherche trois principaux types d’attaques : les attaques malveillantes, le comportement anormal, et les risques et problèmes de sécurité.
+ATA recherche trois principaux types d’attaques : les attaques malveillantes, les comportements anormaux et les risques et problèmes de sécurité.
 
 Les **attaques malveillantes** sont détectées de manière déterministe, en recherchant la liste complète des types d’attaques connus, notamment :
 
@@ -105,9 +105,9 @@ Vous pouvez afficher les activités suspectes de ce type dans le tableau de bord
 
 ## <a name="whats-next"></a>Étapes suivantes
 
--   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, consultez [Architecture ATA](ata-architecture.md).
+-   Pour plus d’informations sur l’intégration d’ATA au réseau : [Architecture d’ATA](ata-architecture.md)
 
--   Pour commencer le déploiement d’ATA, consultez [Installer ATA](install-ata-step1.md).
+-   Pour commencer le déploiement d’ATA : [Installer ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Vidéos connexes
 - [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

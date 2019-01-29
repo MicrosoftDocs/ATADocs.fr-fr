@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 21afd487fbf15b3fc1f5d618e0e6b98d50d07cae
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133342"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839561"
 ---
-*S’applique à : Advanced Threat Analytics version 1.9*
-
-
-
 # <a name="troubleshooting-service-startup"></a>Résolution des problèmes de démarrage du service
+
+*S’applique à : Advanced Threat Analytics version 1.9*
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Résolution des problèmes de démarrage du service Centre ATA
 
@@ -51,7 +49,7 @@ S’il peut démarrer, la plateforme est probablement opérationnelle. Sinon, il
 **Symptôme**
 
 Votre passerelle ATA ne démarre pas et vous obtenez cette erreur :<br></br>
-*System.Net.Http.HttpRequestException : Le code d’état de la réponse n’indique pas de réussite : 500 (Erreur interne du serveur)*
+*System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
 
 **Description**
 
@@ -69,5 +67,5 @@ Cela se produit parce que, dans le cadre du processus d’installation de la pas
 - [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration du transfert d’événements Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
