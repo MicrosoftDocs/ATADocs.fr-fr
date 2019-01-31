@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840367"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085212"
 ---
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Création de votre instance Azure ATP sur le portail Azure ATP - Étape 1
 
@@ -32,7 +32,7 @@ Dans Azure ATP, vous disposez d’une seule instance pour gérer plusieurs forê
 > [!NOTE]
 > Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Les Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données le plus proche géographiquement de votre annuaire AAD. Une fois créées, les instances Azure ATP ne peuvent plus être déplacées. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Étape 1. Accédez au portail Azure ATP.
+## <a name="enter-the-azure-atp-portal"></a>Accédez au portail Azure ATP.
 
 Après avoir vérifié que votre réseau est conforme aux exigences du capteur, passez à la création de votre instance Azure ATP.
 
@@ -44,7 +44,7 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
 2.  Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
 
-## <a name="step-2-create-your-instance"></a>Étape 2. Créer votre instance
+## <a name="create-your-instance"></a>Créer votre instance
 
 1. Cliquez sur **Créer une instance**. 
 

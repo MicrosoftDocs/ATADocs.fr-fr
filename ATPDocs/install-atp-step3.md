@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dae89e22e7d5e331af3ec6d82455581396289486
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4816fe56b8a28d349c970be5a304d025875de748
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458969"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085229"
 ---
 # <a name="install-azure-atp---step-3"></a>Installer Azure ATP – Étape 3
 
@@ -26,7 +26,7 @@ ms.locfileid: "54458969"
 > [« Étape 2](install-atp-step2.md)
 > [Étape 4 »](install-atp-step4.md)
 
-## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Étape 3. Télécharger le package d’installation de capteur Azure ATP
+## <a name="download-the-azure-atp-sensor-setup-package"></a>Télécharger le package d’installation de capteur Azure ATP
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de capteur Azure ATP. Le package d’installation de capteur Azure ATP peut être installé sur un serveur dédié ou sur un contrôleur de domaine. Lorsque vous l’installez directement sur un contrôleur de domaine, il est installé en tant que capteur Azure ATP. Si vous l’installez sur un serveur dédié et utilisez la mise en miroir de port, il est installé en tant que capteur autonome Azure ATP. Pour plus d’informations sur le capteur Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md). 
 
 Cliquez sur **Télécharger** dans la liste des étapes en haut de la page pour accéder à la page **Capteur**.
