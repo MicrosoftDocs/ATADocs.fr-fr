@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,40 +13,42 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: cdcba87d16c357205becdeb5683e655f6ca801a0
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459042"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085280"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
 
-Cet article est un guide de préparation qui met à votre disposition une liste de ressources pour vous aider à bien démarrer avec Azure - Protection avancée contre les menaces. 
+Cet article liste des ressources utiles qui vous aideront à vous préparer et à bien démarrer avec Azure Advanced Threat Protection. 
 
 ## <a name="understanding-azure-atp"></a>Présentation d’Azure ATP
 
-Azure - Protection avancée contre les menaces (ATP) est un service cloud qui vous aide à identifier et protéger votre entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes. Pour en savoir plus sur Azure ATP : 
+Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à identifier et protéger votre entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
+ 
+Pour en savoir plus sur Azure ATP : 
 - [Vue d’ensemble d’Azure ATP](what-is-atp.md)
 - [Vidéo : Introduction à Azure ATP (25 minutes) - Version longue](https://www.youtube.com/watch?v=EGY2m8yU_KE)
 - [Vidéo : Présentation approfondie d’Azure ATP (75 minutes) - Version longue](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
 
 ## <a name="deployment-decisions"></a>Décisions de déploiement
 
-Azure ATP se compose d’un service cloud résidant dans Azure et de capteurs intégrés qui peuvent être installés sur un contrôleur de domaine ou des capteurs autonomes sur des serveurs dédiés. Avant de commencer à utiliser Azure ATP, il est important de choisir le type de capteurs qui conviennent le mieux à votre déploiement et vos besoins. Par rapport aux capteurs Azure ATP autonomes, les capteurs intégrés Azure ATP (les capteurs Azure ATP) permettent d’obtenir une sécurité renforcée, des coûts opérationnels réduits et un déploiement plus facile. Les capteurs autonomes Azure ATP nécessitent un matériel physique, des étapes de configuration supplémentaires et des coûts opérationnels plus lourds. <br>Si vous utilisez des serveurs physiques, il est essentiel de planifier la capacité. Aidez-vous de l’outil de dimensionnement pour allouer de l’espace à vos capteurs : 
+Azure ATP se compose d’un service cloud résidant dans Azure et de capteurs intégrés qui peuvent être installés sur des contrôleurs de domaine ou des capteurs autonomes sur des serveurs dédiés. Avant de commencer à utiliser Azure ATP, il est important de choisir le type de capteurs qui conviennent le mieux à votre déploiement et vos besoins. Par rapport aux capteurs Azure ATP autonomes, les capteurs intégrés Azure ATP (les capteurs Azure ATP) permettent d’obtenir une sécurité renforcée, des coûts opérationnels réduits et un déploiement plus facile. Les capteurs autonomes Azure ATP nécessitent un matériel physique, des étapes de configuration supplémentaires et des coûts opérationnels plus lourds. <br>Si vous utilisez des serveurs physiques, il est essentiel de planifier la capacité. Aidez-vous de l’outil de dimensionnement pour allouer de l’espace à vos capteurs : 
 - [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool) - L’outil de dimensionnement automatise la collecte de la somme de trafic surveillé par Azure ATP. Il fournit automatiquement des recommandations de prise en charge et de ressource pour les capteurs. 
 - [Guide de planification de la capacité ATP](atp-capacity-planning.md)
 
 ## <a name="deploy-azure-atp"></a>Déployer Azure ATP
 
-Ces ressources vous permettent de configurer Azure ATP, de vous connecter à Active Directory, de télécharger le package de capteurs, de configurer la collecte d’événements et éventuellement de procéder à l’intégration avec votre VPN, puis de configurer les exclusions et les comptes honeytoken. 
+Aidez-vous de ces ressources pour configurer Azure ATP, vous connecter à Active Directory, télécharger le package de capteurs, configurer la collecte d’événements, et éventuellement intégrer votre VPN, ainsi que configurer les exclusions et les comptes honeytoken. 
 - [Essayez Azure ATP (compris dans EMS E5)](http://aka.ms/aatptrial)  L’essai est valide pendant 90 jours.
-- [Installation d’Azure ATP](install-atp-step1.md) : déployez Azure ATP dans votre environnement en suivant ces étapes.
+- [Installation d’Azure ATP](install-atp-step1.md) Suivez ces étapes pour déployer Azure ATP dans votre environnement.
 - [Intégrer Azure ATP et Windows Defender ATP](integrate-wd-atp.md)
 
 ## <a name="azure-atp-settings"></a>Paramètres Azure ATP
 
-Les paramètres de base nécessaires dans Azure ATP sont configurés automatiquement pendant que vous créez votre instance. Vous pouvez configurer plusieurs autres paramètres dans Azure ATP pour améliorer la précision de détection et d’alerte pour votre environnement, comme l’intégration VPN, les autorisations SAM et les paramètres avancés de stratégie d’audit. 
+Quand vous créez votre instance Azure ATP, les paramètres de base nécessaires sont configurés automatiquement. Vous pouvez configurer plusieurs autres paramètres dans Azure ATP pour améliorer la précision de détection et d’alerte pour votre environnement, comme l’intégration VPN, les autorisations SAM et les paramètres avancés de stratégie d’audit. 
 
 - [Intégration VPN](install-atp-step6-vpn.md)
 - [Autorisations SAM-R](install-atp-step8-samr.md)
@@ -54,7 +56,7 @@ Les paramètres de base nécessaires dans Azure ATP sont configurés automatique
 
 ## <a name="work-with-azure-atp"></a>Utiliser Azure ATP
 
-Dès lors qu’Azure ATP est opérationnel, vous pouvez examiner les alertes de sécurité dans la chronologie des activités du portail Azure ATP. La chronologie des activités est la page d’accueil par défaut qui s’affiche après vous être connecté au portail Azure ATP. Par défaut, toutes les alertes de sécurité ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque alerte. Examinez chaque alerte en explorant les entités (ordinateurs, appareils, utilisateurs) et en ouvrant leurs pages de profil qui contiennent des informations supplémentaires. Les chemins de mouvement latéral montrent les possibles mouvements dans votre réseau ainsi que les utilisateurs sensibles à risque. Évaluez l’exposition et prenez des mesures correctives en vous aidant des graphiques de détection des chemins de mouvement latéral. Les ressources qui suivent expliquent comment utiliser les alertes de sécurité Azure ATP : 
+Dès lors qu’Azure ATP est opérationnel, vous pouvez examiner les alertes de sécurité dans la chronologie des activités du portail Azure ATP. La chronologie des activités est la page d’accueil par défaut qui s’affiche après vous être connecté au portail Azure ATP. Par défaut, toutes les alertes de sécurité ouvertes sont affichées dans la chronologie des activités. Vous pouvez également voir le niveau de gravité attribué à chaque alerte. Examinez chaque alerte en explorant les entités (ordinateurs, appareils, utilisateurs) et en ouvrant leurs pages de profil qui contiennent des informations supplémentaires. Les chemins de mouvement latéral montrent les possibles mouvements dans votre réseau ainsi que les utilisateurs sensibles à risque. Évaluez l’exposition et prenez des mesures correctives en vous aidant des graphiques de détection des chemins de mouvement latéral. Les ressources qui suivent expliquent comment utiliser les alertes de sécurité Azure ATP : 
 
 - [Guide relatif aux alertes de sécurité Azure ATP](suspicious-activity-guide.md) Apprenez à trier les alertes pour des détections Azure ATP plus efficaces.
 - [Chemins de mouvement latéral d’Azure ATP](use-case-lateral-movement-path.md)

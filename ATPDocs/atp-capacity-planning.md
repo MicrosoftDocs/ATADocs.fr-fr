@@ -1,23 +1,23 @@
 ---
-title: Planification de votre déploiement Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Planification de votre déploiement Azure Advanced Threat Protection | Microsoft Docs
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: c53fb85570a053fa6414855b2ababa0b8e75cdee
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459088"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085195"
 ---
 # <a name="azure-atp-capacity-planning"></a>Planification de la capacité Azure ATP
 Cet article vous aide à déterminer le nombre de capteurs autonomes et de capteurs Azure ATP dont vous avez besoin.
@@ -55,7 +55,7 @@ Quand vous choisissez le type de déploiement de capteur, prenez en compte les a
 Prenez en compte les problèmes suivants quand vous choisissez le nombre de capteurs autonomes Azure ATP à déployer.
 
 -   **Forêts et domaines Active Directory**<br>
-    Pour chaque instance que vous créez, Azure ATP peut superviser le trafic provenant de plusieurs domaines au sein de plusieurs forêts Active Directory. 
+    Pour chaque instance Azure ATP que vous créez, Azure ATP peut superviser le trafic provenant de plusieurs domaines au sein de plusieurs forêts Active Directory. 
 
 -   **Mise en miroir des ports**<br>
     Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs capteurs autonomes Azure ATP par site de succursale ou centre de données.

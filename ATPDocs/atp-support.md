@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/7/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e9ffb02c515c34dfa2847c9b93f55c3fa38fa44
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 8c294c20efeac4fae17df84c6a3d6d8d656c9554
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459207"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085467"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure - Protection avancée contre les menaces 
 
@@ -27,7 +27,7 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure - Pr
 
 |Pour effectuer cette opération...|procédez ainsi :|
 |----|----|
-|Consulter notre documentation la plus lue|Lire les cinq pages les plus consultées :<br>- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>- [Création d’une instance](install-atp-step1.md)|
+|Consulter notre documentation la plus lue|Lisez les dix pages les plus consultées :<br>- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)<br>- [Prérequis d’Azure ATP](atp-prerequisites.md)<br>- [Architecture Azure ATP](atp-architecture.md)<br>- [Planification de la capacité Azure ATP](atp-capacity-planning.md)<br>-[Création d’une instance](install-atp-step1.md)<br>-[Présentation des alertes de sécurité](understanding-security-alerts.md)<br>-[Alertes de sécurité Azure ATP](suspicious-activity-guide.md)<br>-[Procéder à une investigation sur un ordinateur](investigate-a-computer.md)<br>-[Procéder à une investigation sur un utilisateur](investigate-a-user.md)<br>-[Examiner les chemins de mouvement latéral](investigate-lateral-movement-path.md)
 |Prendre contact avec l’équipe du produit et vos collègues|Visitez la  [Communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)  pour Azure - Protection avancée contre les menaces.|
 |Vérifier les informations d’abonnement et obtenir la liste des fonctionnalités prises en charge|Consultez les [informations d’abonnement](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) sur le site web Azure - Protection avancée contre les menaces.|
 
@@ -36,11 +36,11 @@ Utilisez les ressources suivantes pour en savoir plus sur le service Azure - Pr
 L’équipe en charge du produit Azure - Protection avancée contre les menaces poste des annonces sur les nouvelles versions et les mises à jour sur le  [blog Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
 Ces billets de blog complètent la documentation du produit et les informations de support technique.
 
-Pour obtenir une liste à jour des nouvelles fonctionnalités et modifications d’Azure ATP, consultez [Nouveautés d’Azure - Protection avancée contre les menaces](atp-whats-new.md).
+Pour obtenir une liste à jour des nouvelles fonctionnalités et des changements récents dans Azure ATP, consultez [Nouveautés d’Azure Advanced Threat Protection](atp-whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Options de support technique et ressources de la communauté
 
-La section suivante fournit des informations sur le support et les options de résolution des problème, ainsi que des ressources de la communauté.
+La section suivante fournit des informations sur le support et les options de résolution des problèmes, ainsi que des ressources de la communauté.
 
 Pour contacter le support Microsoft :
 

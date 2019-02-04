@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840724"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085382"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
@@ -110,7 +110,7 @@ L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est in
 ### <a name="network-adapters"></a>Cartes réseau
 
 Le capteur Azure ATP surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
-Après le déploiement, vous pouvez utiliser le portail Azure ATP si vous voulez changer les cartes réseau surveillées.
+Après le déploiement, utilisez le portail Azure ATP pour changer les cartes réseau qui font l’objet d’une supervision.
 
 Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant Windows 2008 R2 avec l’association de carte réseau Broadcom activée.
 

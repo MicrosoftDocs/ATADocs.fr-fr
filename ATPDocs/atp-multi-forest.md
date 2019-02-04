@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,46 +13,45 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a742cb7c64211d47a53a15b3906283ce523a938c
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 7eccccc520d97e38c001f509d851912126d8fc17
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458986"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085399"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
 
 ## <a name="multi-forest-support-set-up"></a>Configuration de la prise en charge de plusieurs forêts 
 
-Azure ATP peut prendre en charge les organisations qui ont plusieurs forêts, ce qui vous permet de superviser facilement les activités et les profils des utilisateurs dans les différentes forêts à partir d’un même volet. 
+Azure ATP prend en charge les organisations avec plusieurs forêts, ce qui vous permet de superviser facilement les activités et les profils des utilisateurs dans les différentes forêts. 
 
-Les organisations peuvent avoir généralement plusieurs forêts Active Directory, souvent utilisées à des fins différentes : infrastructure héritée de fusions et d’acquisitions d’entreprises, répartition géographique et limites de sécurité (forêts rouges), par exemple. Vous pouvez protéger plusieurs forêts à l’aide d’Azure ATP, ce qui vous offre la possibilité de surveiller et d’investiguer à partir d’un volet unique.
+Les organisations peuvent avoir généralement plusieurs forêts Active Directory, souvent utilisées à des fins différentes : infrastructure héritée de fusions et d’acquisitions d’entreprises, répartition géographique et limites de sécurité (forêts rouges), par exemple. Vous pouvez protéger plusieurs forêts à l’aide d’Azure ATP, et ainsi superviser et examiner votre réseau entier à partir d’un volet unique.
 
-Avec la prise en charge de plusieurs forêts Active Directory :
--   permet de voir et d’examiner les activités effectuées par les utilisateurs dans différentes forêts sur un seul écran ; 
+La prise en charge de plusieurs forêts Active Directory :
+-   vous permet de voir et de superviser les activités effectuées par les utilisateurs dans plusieurs forêts à partir d’un seul volet ; 
 -   améliore la détection et réduit les faux positifs grâce à l’intégration Active Directory avancée et à la résolution de comptes ; 
 -   améliore le contrôle et facilite le déploiement ; améliore les alertes de supervision et la création de rapports pour la couverture interorganisationnelle lorsque vos contrôleurs de domaine sont supervisés à partir d’une seule console Azure ATP.
 
 
-## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Comment Azure ATP détecte les activités sur plusieurs forêts 
+## <a name="azure-atp-detection-activity-across-multiple-forests"></a>Détection par Azure ATP des activités dans plusieurs forêts 
 
 Pour détecter les activités inter-forêts, les capteurs Azure ATP interrogent les contrôleurs de domaine dans des forêts distantes pour créer des profils pour toutes les entités impliquées, notamment les utilisateurs et les ordinateurs de forêts distantes. 
 
-> [!NOTE]
-> - Les capteurs Azure ATP peuvent être installés sur toutes les forêts (à condition qu’il existe une relation d’approbation à sens unique minimale).
-> - L’utilisateur que vous configurez dans la console Azure ATP sous **Services d’annuaire** doit être approuvé dans toutes les autres forêts.
+- Les capteurs Azure ATP peuvent être installés dans toutes les forêts, même celles qui n’ont pas de relation d’approbation.
+- Ajoutez les informations d’identification dans la page Services d’annuaire pour toutes les forêts dans votre environnement. 
+    - Vous devez fournir une information d’identification pour chaque forêt avec une relation d’approbation bidirectionnelle, 
+    - mais fournir des informations d'identification supplémentaires pour chaque forêt avec une relation d’approbation non Kerberos ou sans aucune relation d’approbation. 
 
+![Étape 1 de bienvenue Azure ATP](media/directory-services-add-no-trust-forests.png)
 
-Si vous avez des forêts sur lesquelles aucun capteur Azure ATP n’est installé, Azure ATP peut quand même afficher et surveiller les activités provenant de ces forêts. Les capteurs ATP installés peuvent interroger tous les contrôleurs de domaine de forêt distante connectés pour résoudre les utilisateurs et les ordinateurs, et créer des profils pour chacun d’eux. 
+### <a name="requirements"></a>Configuration requise 
 
-## <a name="installation-requirements"></a>Conditions d’installation requises 
+- L’utilisateur que vous configurez dans la console Azure ATP sous **Services d’annuaire** doit être approuvé dans toutes les autres forêts et doit avoir au moins des autorisations en lecture seule pour effectuer les requêtes LDAP sur les contrôleurs de domaine.
+- Si les capteurs autonomes Azure ATP sont installés sur des ordinateurs autonomes, plutôt que directement sur les contrôleurs de domaine, assurez-vous que les ordinateurs sont autorisés à communiquer avec tous les contrôleurs de domaine de forêt distante à l’aide de LDAP. 
 
--   Si les capteurs autonomes Azure ATP sont installés sur des ordinateurs autonomes, plutôt que directement sur les contrôleurs de domaine, assurez-vous que les ordinateurs sont autorisés à communiquer avec tous les contrôleurs de domaine de forêt distante à l’aide de LDAP. 
-- L’utilisateur que vous configurez dans la console Azure ATP sous **Services d’annuaire** doit être approuvé dans toutes les autres forêts et doit avoir au moins des autorisations en lecture seule pour effectuer les requêtes LDAP des contrôleurs de domaine.
-
-- Pour qu’Azure ATP communique avec les capteurs Azure ATP et les capteurs autonomes Azure ATP, ouvrez les ports suivants sur chaque machine sur laquelle est installée le capteur Azure ATP :
-
+- Pour qu’Azure ATP communique avec les capteurs Azure ATP et les capteurs autonomes Azure ATP, ouvrez les ports suivants sur chaque machine sur laquelle est installée le capteur Azure ATP :
  
   |Protocole|Transport|Port|Vers/À partir de|Sens|
   |----|----|----|----|----|
@@ -65,7 +64,7 @@ Si vous avez des forêts sur lesquelles aucun capteur Azure ATP n’est install�
   |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
 
 
-## <a name="multi-forest-support-network-traffic-impact"></a>Impact de la prise en charge multi-forêt sur le trafic réseau 
+## <a name="multi-forest-support-network-traffic-impact"></a>Impact de la prise en charge de plusieurs forêts sur le trafic réseau 
 
 Quand Azure ATP mappe vos forêts, il utilise un processus qui impacte les éléments suivants :
 

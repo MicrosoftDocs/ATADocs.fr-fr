@@ -1,11 +1,11 @@
 ---
-title: Nouveautés d’Azure ATP | Microsoft Docs
+title: Nouveautés d’Azure ATP (Azure Advanced Threat Protection) | Microsoft Docs
 description: Décrit les dernières versions release d’Azure ATP et fournit des informations sur les nouveautés de chaque version.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,43 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459173"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085433"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+### <a name="azure-atp-release-263"></a>Azure ATP version 2.63
+Date de publication : 27 janvier 2019
+
+- **Nouvelle fonctionnalité : Prise en charge des forêts non approuvées (préversion)**<br>
+La prise en charge des capteurs Azure ATP dans des forêts non approuvées est désormais disponible en préversion publique. À partir de la page **Services d’annuaire** du portail Azure ATP, configurez les informations d’identification supplémentaires requises pour permettre aux capteurs Azure ATP de se connecter à plusieurs forêts Active Directory et à envoyer des rapports au service Azure ATP. Pour en savoir plus, consultez [Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection](atp-multi-forest.md). 
+
+- **Nouvelle fonctionnalité : Couverture des contrôleurs de domaine**<br>
+Azure ATP fournit maintenant des informations de couverture pour les contrôleurs de domaine Azure ATP qui sont supervisés.  
+À partir de la page **Capteurs** du portail Azure ATP, vérifiez le nombre de contrôleurs de domaine supervisés et non supervisés qu’Azure ATP a détectés dans votre environnement. Téléchargez la liste des contrôleurs de domaine supervisés pour effectuer une analyse plus approfondie et établir un plan d’action. Pour en savoir plus, consultez le guide pratique [Supervision des contrôleurs de domaine](atp-sensor-monitoring.md). 
+
+- **Amélioration de fonctionnalité : Reconnaissance d’énumération de compte**<br>
+La détection de reconnaissance d’énumération de compte Azure ATP émet désormais des alertes quand elle détecte des tentatives d’énumération à l’aide de Kerberos ou de NTLM. Avant, la détection fonctionnait uniquement pour les tentatives à l’aide de Kerberos. Pour en savoir plus, consultez [Alertes de reconnaissance d’Azure ATP](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003). 
+
+- **Amélioration de fonctionnalité : Alerte de tentative d’exécution de code à distance**<br>
+    - Toutes les activités d’exécution à distance, telles que la création de service, l’exécution de WMI et l’exécution du nouveau **PowerShell**, ont été ajoutées à la chronologie des profils de la machine de destination. La machine de destination est le contrôleur de domaine sur lequel la commande a été exécutée. 
+    - L’exécution de **PowerShell** a été ajoutée à la liste des activités d’exécution de code à distance listées dans la chronologie des alertes des profils d’entités.
+    - Pour en savoir plus, consultez [Tentative d’exécution de code à distance](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019).  
+
+- **Problème avec le service LSASS Windows Server 2019 et Azure ATP**<br>
+En réponse aux commentaires de clients concernant l’utilisation d’Azure ATP avec des contrôleurs de domaine exécutant Windows Server 2019, cette mise à jour inclut une logique supplémentaire visant à éviter le déclenchement du comportement signalé sur les machines Windows Server 2019. La prise en charge complète du capteur Azure ATP sur Windows Server 2019 sera introduite dans une mise à jour ultérieure d’Azure ATP. L’installation et l’exécution d’Azure ATP sur des machines Windows Server 2019 ne sont **pas** actuellement prises en charge. Pour en savoir plus, consultez [Configuration requise pour le capteur Azure ATP](atp-prerequisites.md#azure-atp-sensor-requirements). 
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
 
 ## <a name="azure-atp-release-262"></a>Azure ATP version 2.62
 Publiée le 20 janvier 2019
 
-- **Nouvelle alerte de sécurité : Exécution de code à distance sur DNS – préversion**<br>
+- **Nouvelle alerte de sécurité : Exécution de code à distance sur DNS (préversion)**<br>
 L’alerte de sécurité [Exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) d’Azure ATP est maintenant disponible en préversion publique. <br> Avec ce système de détection, une alerte de sécurité Azure ATP est déclenchée lorsque des requêtes DNS suspectées d’exploiter la faille de sécurité [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sont effectuées sur un contrôleur de domaine dans le réseau.
 
 - **Amélioration de fonctionnalité : Mise à jour des capteurs différée de 72 heures** <br> L’option permettant de différer la mise à jour de certains capteurs après chaque nouvelle version d’Azure ATP a été modifiée (72 heures au lieu de 24 heures). Pour connaître les instructions de configuration, voir [Mise à jour des capteurs Azure ATP](sensor-update.md). 
