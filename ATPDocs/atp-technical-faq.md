@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 2e8405f46e404ef6d08ac2ce2517259ad20828b1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840571"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689317"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes : 
@@ -131,16 +131,6 @@ Avec Azure - Protection avancée contre les menaces, il est inutile de créer et
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Que dois-je faire si le capteur autonome ou le capteur Azure ATP ne démarre pas ?
 Examinez l’erreur la plus récente dans le [journal](troubleshooting-atp-using-logs.md) des erreurs actuel (où Azure ATP est installé, sous le dossier « Logs »).
 
-### <a name="how-can-i-test-azure-atp"></a>Comment puis-je tester Azure ATP ?
-Vous pouvez simuler des activités suspectes comme test de bout en bout. Dans le scénario suivant, la reconnaissance DNS est simulée :
-
-1. Vérifiez que les capteurs Azure ATP sont installés et configurés sur les contrôleurs de domaine (ou que les capteurs autonomes et la mise en miroir de port correspondante sont installés et configurés)
-2. Ouvrez CMD
-3. Exécutez la commande suivante : nslookup - <DC iP address>
-   - Appuyez sur Entrée
-   - Tapez : Is -d <FQDN>
-   - Selon la configuration de votre environnement, les réponses peuvent varier entre « Requête refusée » et une liste de vos enregistrements DNS. 
-4. Affichez l’alerte relative à la reconnaissance DNS simulée dans le portail Azure ATP. 
 
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
