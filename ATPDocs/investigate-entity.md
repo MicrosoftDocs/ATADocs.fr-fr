@@ -1,6 +1,6 @@
 ---
 title: Guide pratique pour investiguer des utilisateurs et des ordinateurs avec Azure ATP | Microsoft Docs
-description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Azure - Protection avancée contre les menaces (ATP, Advanced Threat Protection)
+description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Azure Advanced Threat Protection (ATP, Advanced Threat Protection)
 keywords: ''
 author: mlottner
 ms.author: mlottner

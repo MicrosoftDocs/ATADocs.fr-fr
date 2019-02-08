@@ -22,7 +22,7 @@ ms.locfileid: "54840809"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
-Il est essentiel de maintenir Azure – Protection avancée contre les menaces à jour pour bénéficier de la meilleure protection possible dans votre organisation.
+Il est essentiel de maintenir Azure Advanced Threat Protection à jour pour bénéficier de la meilleure protection possible dans votre organisation.
 
 Le service Azure ATP est en général mis à jour plusieurs fois par mois : nouvelles détections, nouvelles fonctionnalités et améliorations des performances. Elles s’accompagnent souvent d’une mise à jour mineure des capteurs. Les capteurs Azure ATP et les mises à jour correspondantes n’ont jamais d’autorisations d’accès en écriture à vos contrôleurs de domaine. Les mises à jour contrôlent seulement les capteurs Azure ATP et leurs fonctionnalités de détection. 
 

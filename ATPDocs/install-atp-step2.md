@@ -1,5 +1,5 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: La deuxième étape de la procédure d’installation d’Azure ATP vous permet de configurer les paramètres de connectivité du domaine sur votre service cloud Azure ATP
 keywords: ''
 author: mlottner

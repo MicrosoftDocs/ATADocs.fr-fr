@@ -1,5 +1,5 @@
 ---
-title: Configurer la mise en miroir des ports lors du déploiement d’Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Configurer la mise en miroir des ports lors du déploiement d’Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit les options de mise en miroir des ports et comment les configurer pour Azure ATP
 keywords: ''
 author: mlottner

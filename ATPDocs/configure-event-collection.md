@@ -1,5 +1,5 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: Dans cette étape d’installation d’ATP, vous configurez des sources de données.
 keywords: ''
 author: mlottner

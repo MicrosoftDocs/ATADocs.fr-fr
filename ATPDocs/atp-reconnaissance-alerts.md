@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 02/04/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 016388807b2e5d027e3fc113c7e34ebaa546e9d5
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c8e4d9fbc094e5bd1b58253b771cb5d693b7361c
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085348"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689300"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Didacticiel : Alertes de reconnaissance  
 
@@ -115,7 +115,11 @@ En guise d’étape suivante, examinez l’ordinateur source :
 
 Votre serveur DNS contient une carte de l’ensemble des ordinateurs, adresses IP et services de votre réseau. Ces informations sont utilisées par les attaquants pour mapper la structure de votre réseau et cibler les ordinateurs intéressants pour les étapes suivantes de l’attaque. 
  
-Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité Azure ATP détecte les requêtes (transferts) AXFR provenant de serveurs autres que DNS.
+Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité Azure ATP détecte les requêtes (transferts) AXFR suspectes provenant de serveurs autres que DNS.
+
+**Période d’apprentissage**
+
+Cette alerte a une période d’apprentissage de 8 jours à partir du début de l’analyse du contrôleur de domaine. 
 
 **TP, B-TP ou FP**
 

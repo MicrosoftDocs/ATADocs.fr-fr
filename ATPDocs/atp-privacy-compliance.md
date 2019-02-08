@@ -1,5 +1,5 @@
 ---
-title: Stratégie relative aux données personnelles Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Stratégie relative aux données personnelles Azure Advanced Threat Protection | Microsoft Docs
 description: Fournit des liens vers des informations sur la suppression des informations personnelles et des données personnelles à partir d’Azure ATP.
 keywords: ''
 author: mlottner
@@ -26,7 +26,7 @@ ms.locfileid: "54458514"
 
 ## <a name="search-for-and-identify-personal-data"></a>Rechercher et identifier les données personnelles 
 
-Dans Azure - Protection avancée contre les menaces, vous pouvez afficher les données personnelles identifiables à partir du [portail Azure ATP](workspace-portal.md) à l’aide de la [barre de recherche](workspace-portal.md#search-bar). 
+Dans Azure Advanced Threat Protection, vous pouvez afficher les données personnelles identifiables à partir du [portail Azure ATP](workspace-portal.md) à l’aide de la [barre de recherche](workspace-portal.md#search-bar). 
 
 Recherchez un utilisateur ou un ordinateur spécifique et cliquez sur l’entité pour accéder à la [page de profil](entity-profiles.md) de l’utilisateur ou de l’ordinateur. Le profil vous fournit des informations détaillées sur l’entité à partir d’Active Directory, notamment l’activité réseau liée à cette entité et son historique.
 

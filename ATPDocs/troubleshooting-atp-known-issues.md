@@ -66,7 +66,7 @@ Si vous avez déjà installé le capteur :
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problème d’intégration Windows Defender ATP
 
-Azure - Protection avancée contre les menaces vous permet d’intégrer Azure ATP et Windows Defender ATP. Pour plus d’informations, consultez [Intégration d’Azure ATP et de Windows Defender ATP](integrate-wd-atp.md). 
+Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows Defender ATP. Pour plus d’informations, consultez [Intégration d’Azure ATP et de Windows Defender ATP](integrate-wd-atp.md). 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problème de capteur pour la machine virtuelle VMware
 

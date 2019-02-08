@@ -1,5 +1,5 @@
 ---
-title: Groupes de rôles Azure - Protection avancée contre les menaces pour la gestion des accès | Microsoft Docs
+title: Groupes de rôles Azure Advanced Threat Protection pour la gestion des accès | Microsoft Docs
 description: Explique comment utiliser des groupes de rôles Azure ATP.
 keywords: ''
 author: mlottner

@@ -1,5 +1,5 @@
 ---
-title: Valider la mise en miroir des ports dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Valider la mise en miroir des ports dans Azure Advanced Threat Protection | Microsoft Docs
 description: Explique comment vérifier que la mise en miroir des ports est configurée correctement dans Azure ATP
 keywords: ''
 author: mlottner

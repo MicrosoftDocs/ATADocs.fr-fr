@@ -1,5 +1,5 @@
 ---
-title: Configurer les transferts d’événements Windows dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Configurer les transferts d’événements Windows dans Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit les options de configuration des transferts d’événements Windows avec Azure ATP
 keywords: ''
 author: mlottner

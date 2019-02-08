@@ -68,7 +68,7 @@ Une fois le capteur Azure ATP installé, effectuez les étapes suivantes pour co
 ## <a name="validate-installations"></a>Valider les installations
 Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effectuez les étapes suivantes :
 
-1. Vérifiez que le service nommé **Capteur Azure - Protection avancée contre les menaces** est en cours d’exécution. Après avoir enregistré les paramètres du capteur Azure ATP, vous devrez peut-être patienter quelques secondes avant le démarrage du service.
+1. Vérifiez que le service nommé **Capteur Azure Advanced Threat Protection** est en cours d’exécution. Après avoir enregistré les paramètres du capteur Azure ATP, vous devrez peut-être patienter quelques secondes avant le démarrage du service.
 
 2. Si le service ne démarre pas, examinez le fichier Microsoft.Tri.sensor-Errors.log situé dans le dossier par défaut suivant : %programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs.
  

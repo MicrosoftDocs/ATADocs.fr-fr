@@ -1,5 +1,5 @@
 ---
-title: Définition des paramètres Syslog dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Définition des paramètres Syslog dans Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit le mode de notification d’Azure ATP (par e-mail ou transfert d’événements Azure ATP) quand il détecte des activités suspectes
 keywords: ''
 author: mlottner

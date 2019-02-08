@@ -1,5 +1,5 @@
 ---
-title: Liste de ressources utiles pour Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Liste de ressources utiles pour Azure Advanced Threat Protection | Microsoft Docs
 description: Cet article fournit une liste de ressources utiles pour Azure ATP
 keywords: ''
 author: mlottner

@@ -1,5 +1,5 @@
 ---
-title: Architecture Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Architecture Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit l’architecture Azure - Protection avancée contre les menaces (ATP)
 keywords: ''
 author: mlottner
@@ -24,7 +24,7 @@ ms.locfileid: "55085314"
 
 Azure ATP supervise vos contrôleurs de domaine en capturant et en analysant le trafic réseau, ainsi qu’en utilisant les événements Windows provenant directement de vos contrôleurs de domaine. Ensuite, il analyse les données relatives aux attaques et aux menaces. Azure ATP utilise le profilage, la détection déterministe, le machine learning et les algorithmes comportementaux pour en savoir plus sur votre réseau, pour détecter les anomalies et pour vous avertir des activités suspectes.
 
-Architecture Azure - Protection avancée contre les menaces :
+Architecture Azure Advanced Threat Protection :
 
 ![Diagramme de la topologie de l’architecture Azure ATP](media/atp-architecture-topology.png)
 

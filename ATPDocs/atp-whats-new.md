@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/27/2019
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,39 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: ef2aa85c8695b86ba47d0c42c0a82208b188b893
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085433"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689419"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
 
-### <a name="azure-atp-release-263"></a>Azure ATP version 2.63
+## <a name="azure-atp-release-264"></a>Azure ATP version 2.64
+Date de publication : 4 février 2019
+
+
+- **Disponibilité générale : Suspicion d’utilisation de golden ticket (anomalie de ticket)**<br>
+Cette alerte est maintenant en disponibilité générale. Consultez la [page de description de l’alerte d’utilisation de golden ticket (anomalie de ticket)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) pour obtenir plus de détails et connaître les fonctionnalités de l’alerte. 
+
+- **Amélioration de fonctionnalité : Reconnaissance de mappage de réseau (DNS)**<br>
+Logique de détection d’alerte améliorée déployée pour cette alerte afin de minimiser les faux positifs et réduire le bruit des alertes. Cette alerte a maintenant une période d’apprentissage de huit jours avant que l’alerte ne soit éventuellement déclenchée pour la première fois. Pour plus d’informations sur cette alerte, consultez la [page de description de l’alerte de reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
+
+    **En raison de l’amélioration de cette alerte, la méthode nslookup ne doit plus être utilisée pour tester la connectivité d’Azure ATP lors de la configuration initiale.** 
+
+- **Amélioration de fonctionnalité :**<br>
+Cette version inclut des pages d’alerte repensées et de nouveaux éléments de preuve, offrant une meilleure investigation des alertes. 
+    - [Suspicion d’attaque par force brute (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)
+    - [Page de description de l’alerte Suspicion d’utilisation de golden ticket (anomalie de temps)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)
+    - [Suspicion d’attaque over-pass-the-hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)
+    - [Suspicion d’utilisation du framework de piratage Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+    - [Suspicion d’attaque de ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
+
+## <a name="azure-atp-release-263"></a>Azure ATP version 2.63
 Date de publication : 27 janvier 2019
 
 - **Nouvelle fonctionnalité : Prise en charge des forêts non approuvées (préversion)**<br>
@@ -262,7 +285,7 @@ Publication : 2 septembre 2018
 
 - **Vérification des stratégies d’audit avancées d’Azure ATP**
  
-Azure - Protection avancée contre les menaces (Azure ATP) vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
+Azure Advanced Threat Protection vérifie maintenant les stratégies d’audit avancées existantes de votre contrôleur de domaine et recommande des modifications à apporter aux stratégies, de façon à fournir une couverture maximale du service Azure ATP pour votre organisation. 
 
 **Cette nouvelle vérification vous permet de :**
   -  Identifier les événements manquants dans vos journaux des événements Windows, qui sont actuellement exclus de votre couverture Azure ATP.
@@ -296,7 +319,7 @@ Seuls les capteurs ATP installés sur les contrôleurs de domaine prennent en ch
 
 ## <a name="azure-atp-release-244"></a>Azure ATP version 2.44
 
-Publication : 12 août 2018
+Publication : 12 août 2018
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes.
 - Les fichiers journaux créés sur l’ordinateur du capteur n’incluent plus le journal « Exception Statistic ».
@@ -304,7 +327,7 @@ Publication : 12 août 2018
 
 ## <a name="azure-atp-release-243"></a>Azure ATP version 2.43
 
-Publication : 5 août 2018
+Publication : 5 août 2018
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes.
 
@@ -349,7 +372,7 @@ Publication : 15 juillet 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
 
 Publication : 5 juillet 2018
--   **Nouvelle détection ajoutée : golden ticket Kerberos - compte inexistant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure - Protection avancée contre les menaces (ATP) des activités suspectes](suspicious-activity-guide.md)
+-   **Nouvelle détection ajoutée : golden ticket Kerberos - compte inexistant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure Advanced Threat Protection (ATP) des activités suspectes](suspicious-activity-guide.md)
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -456,7 +479,7 @@ Publication : 15 avril 2018
 
 Publication : 8 avril 2018
 
-- Vous avez maintenant la possibilité de fournir des commentaires utilisateur à partir de la barre de navigation supérieure. Cliquez sur l’émoticône dans la barre de menus pour envoyer un e-mail contenant vos commentaires à l’équipe Azure ATP.
+- Vous avez maintenant la possibilité de fournir des commentaires utilisateur à partir de la barre de navigation supérieure. Cliquez sur l’émoticône dans la barre de menus pour envoyer un e-mail contenant vos commentaires à l’équipe Azure Advanced Threat Protection.
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
  

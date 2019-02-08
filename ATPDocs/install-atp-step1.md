@@ -1,5 +1,5 @@
 ---
-title: Installer Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Installer Azure Advanced Threat Protection | Microsoft Docs
 description: La première étape pour installer Azure ATP implique la création de l’instance pour votre déploiement Azure ATP.
 keywords: ''
 author: mlottner

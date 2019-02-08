@@ -48,7 +48,7 @@ Pour la configuration, procédez comme suit :
 6.  Cliquez sur **Save**.
 
 
-Félicitations, vous avez correctement déployé Azure - Protection avancée contre les menaces !
+Félicitations, vous avez correctement déployé Azure Advanced Threat Protection !
 
 Vérifiez la chronologie des attaques pour afficher les alertes de sécurité détectées et rechercher des utilisateurs ou des ordinateurs et afficher leurs profils.
 

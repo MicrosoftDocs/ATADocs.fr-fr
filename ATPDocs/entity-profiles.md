@@ -1,5 +1,5 @@
 ---
-title: Utilisation des profils utilisateur dans le portail Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Utilisation des profils utilisateur dans le portail Azure Advanced Threat Protection | Microsoft Docs
 description: Explique comment enquêter sur les utilisateurs à partir de l’écran des profils utilisateur du portail Azure ATP
 keywords: ''
 author: mlottner

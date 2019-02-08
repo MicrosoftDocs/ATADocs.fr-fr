@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/03/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: ae0d59748a4caaecd7c9f4e3cc1276c042a875c1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840845"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689436"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
 
@@ -43,7 +43,7 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > * Suspicion d’utilisation de golden ticket (passage à une version antérieure du chiffrement) (ID externe 2009)
 > * Suspicion d’utilisation de golden ticket (données d’autorisation falsifiées) (ID externe 2013)
 > * Suspicion d’utilisation de golden ticket (compte inexistant) (ID externe 2027)
-> * Suspicion d’utilisation de golden ticket (anomalie de ticket) - préversion (ID externe 2032)
+> * Suspicion d’utilisation de golden ticket (anomalie de ticket) (ID externe 2032)
 > * Suspicion d’utilisation de golden ticket (anomalie de temps) (ID externe 2022)
 > * Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement) (ID externe)
 > * Modification suspecte de groupes sensibles (ID externe 2024)
@@ -399,7 +399,7 @@ Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte co
     - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
 
  
-## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview"></a>Suspicion d’utilisation de golden ticket (anomalie de ticket) (ID externe 2032) - Préversion 
+## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Suspicion d’utilisation de golden ticket (anomalie de ticket) (ID externe 2032) 
 
 **Description** Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le compte KRBTGT. Ils utilisent ensuite ce compte KRBTGT pour créer un ticket TGT (Ticket Granting Ticket) Kerberos qui fournit une autorisation d’accès à toutes les ressources du réseau, et définir l’heure d’expiration du ticket à la valeur de leur choix. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir une persistance réseau. Les golden tickets falsifiés de ce type ont des caractéristiques uniques et cette détection est spécialement conçue pour les identifier.  
  

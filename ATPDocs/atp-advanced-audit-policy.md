@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d7d8bc8ce6c1aefb95b5770a103859fed74efe1
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 86d8583600edc642d177ff327d602a9bc61cf3de
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458629"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085178"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Vérification de la stratégie d’audit avancée Azure ATP
 
@@ -31,9 +31,9 @@ Pour faciliter la vérification de l’état actuel de chacune des stratégies d
 
 La stratégie d’audit de sécurité avancée peut être activée via l’objet de stratégie de groupe **Contrôleurs de domaine par défaut**. Ces événements d’audit sont enregistrés dans les événements Windows du contrôleur de domaine. 
 
+## <a name="modify-audit-policies"></a>Modifier les stratégies d’audit 
 
-
-<br>Suivez les instructions ci-après pour modifier les stratégies d’audit avancées de votre contrôleur de domaine :
+Suivez les instructions ci-après pour modifier les stratégies d’audit avancées de votre contrôleur de domaine :
 
 1. Connectez-vous au serveur en tant **qu’administrateur de domaine**.
 2. Chargez l’Éditeur de gestion des stratégies de groupe. Pour cela, accédez à **Gestionnaire de serveur** > **Outils** > **Gestion des stratégies de groupe**. 

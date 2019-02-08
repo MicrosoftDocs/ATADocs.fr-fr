@@ -6,9 +6,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/31/2019
 ms.locfileid: "55479471"
 documentType: LandingData
-title: Documentation Azure - Protection avancée contre les menaces
+title: Documentation Azure Advanced Threat Protection
 metadata:
-  title: Documentation Azure - Protection avancée contre les menaces
+  title: Documentation Azure Advanced Threat Protection
   description: Protégez vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et de menaces internes.
   services: azure-advanced-threat-protection
   author: msmbaldwin
@@ -29,7 +29,7 @@ sections:
     style: cards
     className: cardsFTitle
     items:
-    - title: En savoir plus sur Azure – Protection avancée contre les menaces
+    - title: En savoir plus sur Azure Advanced Threat Protection
       href: what-is-atp.md
       image:
         src: https://docs.microsoft.com/media/common/i_learn-about.svg
@@ -52,7 +52,7 @@ sections:
 - title: Guides de démarrage rapide de 5 minutes
   items:
   - type: paragraph
-    text: Découvrez les principes fondamentaux d’Azure – Protection avancée contre les menaces avec ces Démarrages rapides.
+    text: Découvrez les principes fondamentaux d’Azure Advanced Threat Protection avec ces Démarrages rapides.
   - type: list
     style: icon48
     items:

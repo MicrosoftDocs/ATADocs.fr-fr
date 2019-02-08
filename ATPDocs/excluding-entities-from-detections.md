@@ -1,5 +1,5 @@
 ---
-title: Exclusion d’entités des détections dans Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Exclusion d’entités des détections dans Azure Advanced Threat Protection | Microsoft Docs
 description: Explique comment empêcher Azure ATP de détecter comme suspectes les activités d’entités spécifiques
 keywords: ''
 author: mlottner

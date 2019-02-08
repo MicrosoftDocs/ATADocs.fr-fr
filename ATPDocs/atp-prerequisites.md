@@ -1,11 +1,11 @@
 ---
-title: Prérequis pour Azure - Protection avancée contre les menaces | Microsoft Docs
+title: Prérequis pour Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,13 +13,17 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085382"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689368"
 ---
+*S’applique à : Azure Advanced Threat Protection*
+
+
+
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
 
@@ -53,7 +57,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
     > [!NOTE]
     > Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
--   Si vous exécutez Wireshark sur le capteur autonome Azure ATP, vous devez redémarrer le service de capteur Azure - Protection avancée contre les menaces après avoir arrêté la capture Wireshark. Sinon, le capteur arrête la capture du trafic.
+-   Si vous exécutez Wireshark sur le capteur autonome Azure ATP, redémarrez le service de capteur Azure - Protection avancée contre les menaces après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -65,13 +69,13 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
-- Microsoft Edge
-- Internet Explorer 10 et versions ultérieures
-- Google Chrome 4.0 et versions ultérieures
-- Largeur d’écran d’une résolution minimale de 1 700 pixels
-- Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
+-   Microsoft Edge
+-   Internet Explorer 10 et versions ultérieures
+-   Google Chrome 4.0 et versions ultérieures
+-   Largeur d’écran d’une résolution minimale de 1 700 pixels
+-   Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
-  ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
+ ![Diagramme d’architecture Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -79,6 +83,7 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 
 ## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
 Cette section décrit la configuration requise pour le capteur Azure ATP.
+
 ### <a name="general"></a>Général
 Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus, mais pas Nano).
 
@@ -96,7 +101,7 @@ Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter 
 
 Le capteur Azure ATP nécessite au minimum deux cœurs et 6 Go de RAM sur le contrôleur de domaine.
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
-Vous pouvez déployer le capteur Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées sur ce contrôleur de domaine.
+Vous pouvez déployer les capteurs Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées.
 
 >[!NOTE] 
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
@@ -143,6 +148,7 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows que
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Configuration requise pour le capteur autonome Azure ATP
 Cette section décrit la configuration requise pour le capteur autonome Azure ATP.
+
 ### <a name="general"></a>Général
 L’installation du capteur autonome Azure ATP sur un serveur Windows Server 2012 R2 ou Windows Server 2016 (dont Server Core) est prise en charge.
 Le capteur autonome Azure ATP peut être installé sur un serveur membre d’un domaine ou d’un groupe de travail.
@@ -158,7 +164,7 @@ Pour plus d’informations sur l’utilisation de machines virtuelles avec le ca
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur autonome Azure ATP.<br>
-Un capteur autonome Azure ATP peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau à destination et en provenance des contrôleurs de domaine.
+Les capteurs autonomes Azure ATP peuvent prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau à destination et en provenance des contrôleurs de domaine.
 
 >[!NOTE] 
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.

@@ -1,6 +1,6 @@
 ---
-title: Intégration d’Azure - Protection avancée contre les menaces et de Windows Defender ATP | Microsoft Docs
-description: Guide pratique pour intégrer Azure - Protection avancée contre les menaces et Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces
+title: Intégration d’Azure Advanced Threat Protection et de Windows Defender ATP | Microsoft Docs
+description: Guide pratique pour intégrer Azure Advanced Threat Protection Windows Defender ATP afin de bénéficier d’une couverture complète de la détection des menaces
 keywords: ''
 author: mlottner
 ms.author: mlottner
@@ -22,7 +22,7 @@ ms.locfileid: "54458816"
 ---
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Intégrer Azure ATP à Windows Defender ATP
 
-Azure - Protection avancée contre les menaces vous permet d’intégrer Azure ATP et Windows Defender ATP pour obtenir une solution encore plus complète de protection contre les menaces. Azure ATP surveille le trafic sur vos contrôleurs de domaine alors que Windows Defender ATP surveille vos points de terminaison, offrant ainsi ensemble une interface unique pour protéger votre environnement.
+Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows Defender ATP pour obtenir une solution encore plus complète de protection contre les menaces. Azure ATP surveille le trafic sur vos contrôleurs de domaine alors que Windows Defender ATP surveille vos points de terminaison, offrant ainsi ensemble une interface unique pour protéger votre environnement.
 
 En intégrant Windows Defender ATP et Azure ATP, vous pouvez tirer parti de toute la puissance des deux services et sécuriser votre environnement, notamment :
 
