@@ -4,7 +4,7 @@ description: Dans cette étape d’installation d’ATP, vous configurez des sou
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/04/2018
 ms.topic: get-started-article
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 640ea2ab75d4388381f9789dcac5399fa1327d05
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 1480e9ba1a441153a92400dd931cbe9de307d7b5
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840639"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077488"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 

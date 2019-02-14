@@ -4,7 +4,7 @@ description: Explique comment vous pouvez générer des rapports dans ATA pour s
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea63b6966cc933fcb0a4c748e5b4de511895c483
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 2f25df9545fb4c7b0c269679d92b1a08d2330666
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840333"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076213"
 ---
 # <a name="ata-reports"></a>Rapports ATA
 

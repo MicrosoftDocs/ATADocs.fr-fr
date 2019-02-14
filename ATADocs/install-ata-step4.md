@@ -4,7 +4,7 @@ description: La quatrième étape de la procédure d’installation d’ATA vous
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c0139842094d42c2f7273e9f669267ca4fb092f
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 3cd5f8dd7334d93277d29a63817a061fc6fdf820
+ms.sourcegitcommit: 143ee5c3bf381eaba7d0530c88722e959bc47a18
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839371"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56227928"
 ---
 # <a name="install-ata---step-4"></a>Installer ATA - Étape 4
 
@@ -63,11 +63,11 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
     
    > [!NOTE]
    > Quand vous déployez la passerelle ATA, vous ne devez pas fournir les informations d’identification. Si l’installation de la passerelle ATA ne parvient pas à récupérer vos informations d’identification à l’aide de l’authentification unique (par exemple, cela peut se produire si le centre ATA n’est pas dans le domaine, si la passerelle ATA n’est pas dans le domaine ou si vous n’avez pas les informations d’identification de l’administrateur d’ATA), vous devez fournir les informations d’identification, comme dans l’écran suivant : 
-    
-   ![Fournir les informations d’identification de la passerelle ATA](media/ata-install-credentials.png)
-    
-   - Chemin d’installation : il s’agit de l’emplacement où est installée la passerelle ATA. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
-    
+   
+    ![Fournir les informations d’identification de la passerelle ATA](media/ata-install-credentials.png)
+   
+    - Chemin d’installation : il s’agit de l’emplacement où est installée la passerelle ATA. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
+   
 6. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
     
     -   KB 3047154 (pour Windows Server 2012 R2 uniquement)

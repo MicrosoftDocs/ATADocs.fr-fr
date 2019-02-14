@@ -4,7 +4,7 @@ description: Procédures pour mettre à jour ATA vers la version 1.6
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b32e8db898df1cea25e3d8dbb61a7c2293128aeb
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1d3e0cd545a932daae71fa4242abb43b4dc15bae
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133987"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077692"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Mise à jour d’ATA vers la version 1.6 : guide de migration
 La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
@@ -62,7 +62,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
 
 1.  Sauvegardez votre base de données (facultatif) :
 
@@ -118,7 +118,7 @@ Le fichier zip comprend les fichiers suivants :
 
 -   Fichier de paramètres de configuration avec les informations requises pour se connecter au centre ATA
 
-### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : mettre à jour les passerelles ATA
+### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : Mettez à jour les passerelles ATA.
 
 1.  Sur chaque passerelle ATA, extrayez les fichiers du package de passerelle ATA et exécutez le fichier **Microsoft ATA Gateway Setup.exe**.
 

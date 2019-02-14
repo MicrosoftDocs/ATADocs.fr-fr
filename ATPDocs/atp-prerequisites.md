@@ -4,7 +4,7 @@ description: Décrit la configuration requise pour réussir le déploiement d’
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,18 +13,15 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: 71d3b67012c6c9fe0623c5fbb8e37777c547e188
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689368"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077794"
 ---
-*S’applique à : Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
+
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
 
 >[!NOTE]

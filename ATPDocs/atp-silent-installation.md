@@ -4,7 +4,7 @@ description: Cet article décrit comment installer sans assistance Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1710b5f2f96814f2dbe3229473b06c8a963fd380
-ms.sourcegitcommit: cc5017770583042ef8bf90c9c0ece020a0166b91
+ms.openlocfilehash: 76076a643b5edac6e2393b9c23045e89aee275a3
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480979"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077702"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Commutateurs et installation sans assistance d’Azure ATP
 Cet article fournit des instructions pour les commutateurs et l’installation sans assistance d’Azure ATP.

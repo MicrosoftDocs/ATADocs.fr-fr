@@ -1,22 +1,17 @@
 ---
 title: Planification de votre déploiement Azure - Protection avancée contre les menaces - Démarrage rapide | Microsoft Docs
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
-keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
 ms.date: 1/24/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.prod: ''
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
-ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
+ms.openlocfilehash: d161b9655a5be09567fb50a837f7d2063d11ee11
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703331"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831512"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -154,7 +149,7 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 Ce démarrage rapide vous a aidé à déterminer le nombre de capteurs autonomes et de capteurs Azure ATP dont vous avez besoin. Vous avez également déterminé de dimensionnement des capteurs. Pour créer une instance Azure ATP, passez au démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Tutoriels pour machine virtuelle Windows Azure](install-atp-step1.md)
+> [Créer votre instance Azure ATP](install-atp-step1.md)
 
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
