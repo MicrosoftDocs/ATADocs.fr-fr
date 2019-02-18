@@ -1,48 +1,42 @@
 ---
-title: Installer Azure Advanced Threat Protection | Microsoft Docs
-description: La première étape pour installer Azure ATP implique la création de l’instance pour votre déploiement Azure ATP.
+title: 'Démarrage rapide : Créer votre instance Azure ATP | Microsoft Docs'
+description: Guide de démarrage rapide pour créer l’instance pour votre déploiement d’Azure ATP, qui est la première étape de l’installation d’Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/02/2018
-ms.topic: conceptual
-ms.prod: ''
+ms.date: 02/05/2019
+ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 6a8c8458274243d254198914cb7339893a8d890b
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085212"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831495"
 ---
-# <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Création de votre instance Azure ATP sur le portail Azure ATP - Étape 1
+# <a name="quickstart-create-your-azure-atp-instance"></a>Démarrage rapide : Créer votre instance Azure ATP
 
-> [!div class="step-by-step"]
-> [Étape 2 »](install-atp-step2.md)
+Dans ce guide de démarrage rapide, vous allez créer votre instance Azure ATP dans le portail Azure ATP. Dans Azure ATP, vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
 
-Cette procédure d’installation fournit des instructions pour créer et gérer votre instance Azure ATP (appelée précédemment espace de travail). Pour obtenir des informations sur l’architecture Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
+> [!IMPORTANT]
+> Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Les Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données géographiquement le plus proche de votre annuaire Azure Active Directory (Azure AD). Une fois créées, les instances Azure ATP ne peuvent pas être déplacées.
 
-Dans Azure ATP, vous disposez d’une seule instance pour gérer plusieurs forêts dans un même volet. 
+## <a name="prerequisites"></a>Prérequis
 
-> [!NOTE]
-> Actuellement, les centres de données Azure ATP sont déployés en Europe, en Amérique du Nord/Amérique centrale/Les Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données le plus proche géographiquement de votre annuaire AAD. Une fois créées, les instances Azure ATP ne peuvent plus être déplacées. 
+- Une [licence Azure ATP](atp-technical-faq.md#licensing-and-privacy).
+- Pour pouvoir accéder au portail Azure ATP, vous devez être [administrateur général ou administrateur de sécurité sur le locataire](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+- Examinez l’article [Architecture Azure ATP](atp-architecture.md).
+- Examinez l’article [Prérequis d’Azure ATP](atp-prerequisites.md). 
 
-## <a name="enter-the-azure-atp-portal"></a>Accédez au portail Azure ATP.
+## <a name="sign-in-to-the-azure-atp-portal"></a>Se connecter au portail Azure ATP
 
-Après avoir vérifié que votre réseau est conforme aux exigences du capteur, passez à la création de votre instance Azure ATP.
+Après avoir vérifié que votre réseau est conforme aux exigences du capteur, commencez la création de votre instance Azure ATP.
 
-> [!NOTE]
->Pour pouvoir accéder au portail Azure ATP, vous devez être administrateur général ou administrateur de sécurité de ce locataire.
+1. Accédez au [portail Azure ATP](https://portal.atp.azure.com).
 
-
-1.  Accédez au [portail Azure ATP](https://portal.atp.azure.com).
-
-2.  Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
+2. Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
 
 ## <a name="create-your-instance"></a>Créer votre instance
 
@@ -50,28 +44,26 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
     ![Créer une instance Azure ATP](media/create-instance.png)
 
-2. Votre instance Azure ATP prend automatiquement le nom de domaine initial AAD et est allouée au centre de données situé le plus près de votre annuaire AAD avant d’être créée. 
+2. Votre instance Azure ATP prend automatiquement le nom de domaine initial Azure AD et est créée dans le centre de données le plus proche de votre annuaire Azure AD. 
 
     ![Instance Azure créée](media/instance-created.png)
 
     > [!NOTE]
     > Pour vous connecter à Azure ATP, vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle Azure ATP doté de droits d’accès au portail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
  
-3. Cliquez sur **Configuration**, sur **Gérer les groupes de rôles**, puis utilisez le lien [Centre d’administration Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles. .
+3. Cliquez sur **Configuration**, sur **Gérer les groupes de rôles**, puis utilisez le lien [Centre d’administration Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles.
 
     ![Gérer les groupes de rôles](media/creation-manage-role-groups.png)
 
-- Conservation des données : les instances Azure ATP supprimées précédemment ne figurent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité des données Azure ATP et confidentialité](atp-privacy-compliance.md).
+- Conservation des données : les instances Azure ATP supprimées précédemment n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité des données Azure ATP et confidentialité](atp-privacy-compliance.md).
 
+## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="step-by-step"]
-> [« Préinstallation](atp-prerequisites.md)
-> [Étape 2 »](install-atp-step2.md)
+> [« Prérequis](atp-prerequisites.md)
+> [Étape 2 : Se connecter à Active Directory »](install-atp-step2.md)
 
+## <a name="join-the-community"></a>Rejoindre la communauté
 
+Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://aka.ms/azureatpcommunity) dès aujourd’hui !
 
-## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
-- [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

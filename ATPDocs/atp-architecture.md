@@ -4,7 +4,7 @@ description: Décrit l’architecture Azure - Protection avancée contre les men
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/27/2019
 ms.topic: article
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6988b41b64dc3d8afef5f7af614f78b41501e2af
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 6f50f186d777e8f6da3b0620b0bc384427eb3ff6
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085314"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078066"
 ---
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
 
@@ -36,7 +36,7 @@ Directement installé sur vos contrôleurs de domaine, le capteur Azure ATP acc�
 Azure ATP est constitué des composants suivants :
 
 -   **Portail Azure ATP** <br>
-Le portail Azure ATP vous permet de créer votre instance Azure ATP, présente les données provenant des capteurs Azure ATP et vous permet de superviser, gérer et examiner les menaces dans votre environnement réseau.  
+Le portail Azure ATP vous permet de créer votre instance Azure ATP, montre les données provenant des capteurs Azure ATP, et vous permet de superviser, gérer et examiner les menaces dans votre environnement réseau.  
 -   **Capteur Azure ATP**<br>
 Les capteurs Azure ATP sont installés directement sur vos contrôleurs de domaine. Le capteur supervise directement le trafic des contrôleurs de domaine, sans recourir à un serveur dédié, ou à une configuration de mise en miroir de ports.
 
@@ -66,31 +66,33 @@ Les fonctionnalités principales du capteur Azure ATP sont les suivantes :
 
  
 ## <a name="azure-atp-sensor-features"></a>Fonctionnalités du capteur Azure ATP
+
 Le capteur Azure ATP lit les événements localement, ce qui évite les frais liés à l’achat et à la maintenance de matériel et de configurations supplémentaires. Le capteur Azure ATP prend également en charge le suivi d’événements pour Windows (ETW) qui fournit des informations de journaux pour plusieurs détections. Les détections ETW reconnaissent notamment les suspicions d’attaques DCShadow tentées via des demandes de réplication de contrôleur de domaine et la promotion de contrôleur de domaine.
 
 ### <a name="domain-synchronizer-candidate"></a>Candidat synchronisateur de domaine
 
-    The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
+Le candidat synchronisateur de domaine est responsable de la synchronisation proactive de toutes les entités d’un domaine Active Directory spécifique (semblable au mécanisme utilisé par les contrôleurs de domaine eux-mêmes pour la réplication). Un capteur est choisi au hasard, dans la liste des candidats, comme synchronisateur de domaine. 
 
-    If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP proactively synchronizes entities and their changes, however Azure ATP retrieves new entities as they are detected in the monitored traffic. 
+Si le synchronisateur est hors connexion pendant plus de 30 minutes, un autre candidat est choisi à la place. Si aucun synchronisateur de domaine n’est disponible pour un domaine spécifique, Azure ATP ne peut pas synchroniser de manière proactive les entités et leurs modifications, mais il récupère les nouvelles entités à mesure qu’elles sont détectées dans le trafic surveillé.
     
-    If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.
+Si aucun synchronisateur de domaine n’est disponible et que vous recherchez une entité avec laquelle aucun trafic n’était associé, aucun résultat de recherche ne s’affiche.
 
-    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#configure-azure-atp-sensor-settings).
+Par défaut, les capteurs Azure ATP ne sont pas des candidats synchronisateurs. Pour définir manuellement un capteur Azure ATP comme un synchronisateur de domaine potentiel, suivez les étapes du [flux de travail d’installation d’Azure ATP](install-atp-step5.md).
 
 ### <a name="resource-limitations"></a>Limitations des ressources
 
-    The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
+Le capteur Azure ATP inclut un composant de surveillance qui évalue la capacité de calcul et de mémoire disponible sur le contrôleur de domaine où il s’exécute. Le processus de supervision s’exécute toutes les 10 secondes, et met à jour dynamiquement le quota d’utilisation du processeur et de la mémoire dans le processus du capteur Azure ATP. Le processus de supervision permet de garantir que le contrôleur de domaine dispose toujours d’au moins 15 % de ressources de calcul et de mémoire disponibles.
 
-    No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
+Quoi qu’il se passe sur le contrôleur de domaine, le processus de supervision libère continuellement des ressources pour que les fonctionnalités principales du contrôleur de domaine ne soient pas affectées.
 
-    If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
+Si en raison du processus de supervision, le capteur Azure ATP vient à manquer de ressources, le trafic n’est que partiellement supervisé et l’alerte de supervision « Dropped port mirrored network traffic » (Le trafic réseau du port en miroir a été supprimé) s’affiche dans la page Intégrité du portail Azure ATP.
 
 ### <a name="windows-events"></a>Événements Windows
 
-    To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures,modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
+Pour améliorer sa capacité de détection des différents types d’attaque que sont les suspicions d’usurpation d’identité (Pass-the-hash), les échecs d’authentification suspects, les modifications apportées aux groupes sensibles, la création de services suspects et les activités honeytoken, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757 et 7045. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les [paramètres de stratégie d’audit avancés](atp-advanced-audit-policy.md) adaptés. 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="next-steps"></a>Étapes suivantes
+
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Outil de dimensionnement Azure ATP](http://aka.ms/trisizingtool)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)

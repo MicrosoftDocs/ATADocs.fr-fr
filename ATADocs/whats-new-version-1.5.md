@@ -4,7 +4,7 @@ description: Répertorie les nouveautés d’ATA version 1.5, ainsi que les pro
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 987d73a4ad3fc970d6e4f03a19f9ef5f9a8fd59e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133240"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076655"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nouveautés d’ATA version 1.5
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
@@ -44,11 +44,11 @@ ATA 1.5 comporte les améliorations suivantes :
 Les problèmes connus de cette version sont les suivants :
 
 ### <a name="new-ata-gateway-installation-fails"></a>Échec des nouvelles installations de la passerelle ATA
-Après la mise à jour vers ATA version 1.5, vous obtenez l’erreur suivante lors de l’installation d’une nouvelle passerelle ATA : « La passerelle Microsoft Advanced Threat Analytics n’est pas installée ».
+Après la mise à jour vers ATA version 1.5, vous obtenez l’erreur suivante lors de l’installation d’une nouvelle passerelle ATA : La passerelle Microsoft Advanced Threat Analytics n’est pas installée.
 
 ![Erreur de passerelle ATA](media/ata-install-error.png)
 
-<b>Solution de contournement :</b> envoyez un e-mail à l’adresse <ataeval@microsoft.com> pour demander la procédure de contournement.
+<b>Solution de contournement :</b> Envoyez un e-mail à <ataeval@microsoft.com> pour demander les étapes de la solution de contournement.
 ### <a name="deployment"></a>Déploiement
 Le dossier spécifié pour « Chemin d’accès des données de la base de données » et « Chemin d’accès du journal de base de données » doit être vide (aucun fichier ou ni sous-dossier).
 S’il n’est pas vide, le déploiement ne peut pas progresser.

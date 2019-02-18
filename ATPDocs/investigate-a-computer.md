@@ -4,25 +4,28 @@ d|Description: This article explains how to use Azure ATP security alerts to inv
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c707376635facd0fe9ba8e3c3f32f36f5a71c25
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 92364369e26356f514927d9dafc9a31c9468d663
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839544"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889888"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Didacticiel : Procéder à une investigation sur un ordinateur
 
-Les preuves d’alertes Azure ATP fournissent des indications claires quand des ordinateurs ont été impliqués dans des activités suspectes ou quand il existe des indications suggérant qu’un ordinateur est compromis. Utilisez les suggestions d’investigation afin d’aider à déterminer les risques pour votre organisation, à choisir le mode de remédiation et à déterminer la meilleure façon de prévenir toute attaque similaire à l’avenir.  
+Les preuves d’alertes Azure ATP fournissent des indications claires quand des ordinateurs ont été impliqués dans des activités suspectes ou quand il existe des indications suggérant qu’un ordinateur est compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.  
+
+> [!div class="checklist"]
+> * Vérifiez l’ordinateur pour l’utilisateur connecté.
+> * Vérifiez si l’utilisateur accède à normalement aux ordinateurs.
+> * Examinez les activités suspectes provenant de l’ordinateur.
+> * Y a-t-il eu d’autres alertes au même moment ?
+
 
 ## <a name="investigation-steps-for-suspicious-computers"></a>Étapes d’investigation pour les ordinateurs suspects
 
@@ -46,7 +49,7 @@ Examinez les informations et les activités suivantes dans le profil d’ordinat
 - Si l’intégration Windows Defender ATP est activée, cliquez sur le badge Windows Defender ATP pour explorer l’ordinateur plus en détail. Dans Windows Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
     1. De nouveaux programmes ont-ils été déployés ou installés ?
 
-## <a name="see-also"></a>Voir aussi
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Examiner un utilisateur](investigate-a-user.md)
 - [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)

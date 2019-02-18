@@ -4,25 +4,27 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 126653dd2831e0e3dbd9c777d84d32b1c2e74bd9
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 99ebcfeb4220e547be06e8161636b12c843f292c
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253399"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889871"
 ---
-# <a name="tutorial-investigate-a-user"></a>Tutoriel : Procéder à une investigation sur un utilisateur
+# <a name="tutorial-investigate-a-user"></a>Didacticiel : Procéder à une investigation sur un utilisateur
 
-Les preuves d’alertes et les chemins de mouvement latéral ATP Azure fournissent des indications claires quand des utilisateurs ont effectué des activités suspectes ou quand il existe des indications suggérant que leur compte a été compromis. Utilisez les suggestions d’investigation afin d’aider à déterminer les risques pour votre organisation, à choisir le mode de remédiation et à déterminer la meilleure façon de prévenir toute attaque ultérieure similaire.  
+Les preuves d’alertes et les chemins de mouvement latéral ATP Azure fournissent des indications claires quand des utilisateurs ont effectué des activités suspectes ou quand il existe des indications suggérant que leur compte a été compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.  
+
+> [!div class="checklist"]
+> * Rassemblez des informations sur l’utilisateur.
+> * Examinez les activités effectuées par l’utilisateur.
+> * Examinez les ressources auxquelles l’utilisateur a accédé.
+> * Examinez les chemins de mouvement latéral.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Étapes d’investigation recommandées pour les utilisateurs suspects
 

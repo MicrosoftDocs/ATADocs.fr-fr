@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/15/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,21 +13,21 @@ ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67ba3c285577b683bc820ab272a498443b02c493
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 214e3e10979f3508fad5f2b674d5d39b08a5715f
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314293"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56075839"
 ---
-# <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration  
+# <a name="tutorial-exfiltration-alerts"></a>Didacticiel : Alertes d’exfiltration  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Informations d’identification compromises](atp-compromised-credentials-alerts.md)
 3. [Mouvements latéraux](atp-lateral-movement-alerts.md)
-4. [Contrôle du domaine](atp-domain-dominance-alerts.md)
+4. [Dominance du domaine](atp-domain-dominance-alerts.md)
 5. **Exfiltration**
 
 Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md).
@@ -72,7 +72,7 @@ Certaines entreprises utilisent DNS de manière légitime pour les communication
 > [!NOTE]
 > Les alertes de sécurité *Communications suspectes via DNS* indiquent le domaine suspecté. Les nouveaux domaines, ou les domaines récemment ajoutés qui ne sont pas encore connus ou reconnus par Azure ATP, mais qui sont connus de votre organisation ou en font partie, peuvent être fermés.
 
-## <a name="data-exfiltration-over-smb---preview-external-id-2030"></a>Exfiltration de données sur SMB (ID externe 2030)
+## <a name="data-exfiltration-over-smb-external-id-2030"></a>Exfiltration de données sur SMB (ID externe 2030)
 
 **Description** Les contrôleurs de domaine contiennent les données les plus sensibles de l’organisation. Pour la plupart des attaquants, l’une des priorités consiste à accéder au contrôleur de domaine afin de dérober vos données les plus sensibles. Par exemple, l’exfiltration du fichier Ntds.dit, stocké sur le contrôleur de domaine, permet à un attaquant de falsifier des tickets TGT (Ticket Granting Ticket) Kerberos fournissant une autorisation d’accès à n’importe quelle ressource. Les tickets TGT Kerberos falsifiés permettent à l’attaquant d’affecter au délai d’expiration du ticket n’importe quelle valeur arbitraire. Une alerte Azure ATP d’**exfiltration de données sur SMB** se déclenche quand des transferts de données suspects sont observés à partir de vos contrôleurs de domaine supervisés.
 

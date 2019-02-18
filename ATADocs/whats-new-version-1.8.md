@@ -4,7 +4,7 @@ description: Liste les nouveautés de la version 1.8 d’ATA ainsi que les probl
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b8c9d879014934f681ae1dce3d7d3e0de3f0b2b0
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: c787db603f8a6dc0e531d5c27b4b582b2d86753c
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133886"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077063"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nouveautés de la version 1.8 d’ATA
 
@@ -86,21 +86,21 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ### <a name="ata-gateway-on-windows-server-core"></a>Passerelle ATA sur Windows Server Core
 
-**Symptômes**: La mise à niveau d’une passerelle ATA vers la version 1.8 sur Windows Server 2012 R2 Core avec .Net Framework 4.7 peut échouer avec l’erreur :  *La passerelle Microsoft Advanced Threat Analytics a cessé de fonctionner*. 
+**Symptômes :** La mise à niveau d’une passerelle ATA vers la version 1.8 sur Windows Server 2012 R2 Core avec .NET Framework 4.7 peut échouer avec l’erreur : *La passerelle Microsoft Advanced Threat Analytics a cessé de fonctionner*. 
 
 ![Erreur de base de passerelle](./media/gateway-core-error.png)
 
 Sur Windows Server 2016 Core, vous ne verrez peut-être pas l’erreur mais le processus échouera quand vous essaierez d’effectuer l’installation. Les événements 1000 et 1001 (blocage du processus) seront consignés dans le journal des événements d’application sur le serveur.
 
-**Description** : Un problème s’est produit avec le .NET Framework 4.7qui entraîne l’échec du chargement des applications qui utilisent la technologie WPF (comme ATA). Pour plus d’informations, consultez [l’article KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
+**Description** : Un problème s’est produit avec .NET Framework 4.7, provoquant l’échec du chargement des applications qui utilisent la technologie WPF (comme ATA). Pour plus d’informations, consultez [l’article KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
 
-**Solution de contournement** : Désinstallez .NET 4.7 [Consultez l’article KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) pour revenir à la version 4.6.2 de .NET et mettre à jour votre passerelle ATA avec la version 1.8. Après la mise à niveau d’ATA, vous pouvez réinstaller .NET 4.7.  Pour corriger ce problème, une mise à jour sera publiée dans une prochaine version.
+**Solution de contournement** : Désinstallez .NET 4.7 [Consultez l’article KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) pour revenir à la version 4.6.2 de .NET, puis mettez à jour votre passerelle ATA vers la version 1.8. Après la mise à niveau d’ATA, vous pouvez réinstaller .NET 4.7.  Pour corriger ce problème, une mise à jour sera publiée dans une prochaine version.
 
 ### <a name="lightweight-gateway-event-log-permissions"></a>Autorisations du journal des événements de la passerelle légère
 
-**Symptômes** : Quand vous mettez à niveau ATA vers la version 1.8, les applications ou les services qui avaient déjà des autorisations d’accès au journal des événements de sécurité peuvent perdre ces autorisations. 
+**Symptômes :** Quand vous mettez à niveau ATA vers la version 1.8, les applications ou les services qui avaient déjà des autorisations d’accès au journal des événements de sécurité peuvent perdre ces autorisations. 
 
-**Description** : Afin de faciliter le déploiement d’ATA, ATA 1.8 accède à votre journal des événements de sécurité directement, sans avoir à configurer le transfert des événements Windows. En même temps, ATA s’exécute comme un service local avec un faible niveau d’autorisation pour maintenir une sécurité plus stricte. Afin de fournir l’accès pour qu’ATA puisse lire les événements, le service ATA s’accorde lui-même des autorisations dans le journal des événements de sécurité. Quand ce cas se produit, les autorisations précédemment définies pour d’autres services peuvent être désactivées.
+**Description** : Afin de faciliter le déploiement d’ATA, ATA 1.8 accède à votre journal des événements de sécurité directement, sans nécessiter la configuration du transfert des événements Windows. En même temps, ATA s’exécute comme un service local avec un faible niveau d’autorisation pour maintenir une sécurité plus stricte. Afin de fournir l’accès pour qu’ATA puisse lire les événements, le service ATA s’accorde lui-même des autorisations dans le journal des événements de sécurité. Quand ce cas se produit, les autorisations précédemment définies pour d’autres services peuvent être désactivées.
 
 **Solution de contournement** : Exécutez le script Windows PowerShell suivant. Cette action supprime les autorisations qui n’ont pas été correctement ajoutées dans le Registre à partir d’ATA et les ajoute par le biais d’une autre API. Cela peut restaurer les autorisations pour d’autres applications. Si ce n’est pas le cas, elles devront être restaurées manuellement. Pour corriger ce problème, une mise à jour sera publiée dans une prochaine version. 
 
@@ -122,19 +122,19 @@ Sur Windows Server 2016 Core, vous ne verrez peut-être pas l’erreur mais le 
 
 ### <a name="proxy-interference"></a>Interférence de proxy
 
-**Symptômes** : Après la mise à niveau vers ATA 1.8, le service de passerelle ATA risque de ne pas démarrer. Dans le journal des erreurs ATA, vous verrez peut-être l’exception suivante :   *: une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
+**Symptômes :** Après la mise à niveau vers ATA 1.8, le service de passerelle ATA peut ne pas démarrer. L’exception suivante peut être présente dans le journal des erreurs ATA : *System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
 
-**Description** : Depuis ATA 1.8, la passerelle ATA communique avec le centre ATA à l’aide du protocole HTTP. Si l’ordinateur sur lequel vous avez installé la passerelle ATA utilise un serveur proxy pour se connecter au centre ATA, il peut rompre cette communication. 
+**Description** : À compter d’ATA 1.8, la passerelle ATA communique avec le centre ATA via le protocole HTTP. Si l’ordinateur sur lequel vous avez installé la passerelle ATA utilise un serveur proxy pour se connecter au centre ATA, il peut rompre cette communication. 
 
-**Solution de contournement**: Désactivez l’utilisation d’un serveur proxy sur le compte du service de passerelle ATA. Pour corriger ce problème, une mise à jour sera publiée dans une prochaine version.
+**Solution de contournement** : Désactivez l’utilisation d’un serveur proxy sur le compte du service de passerelle ATA. Pour corriger ce problème, une mise à jour sera publiée dans une prochaine version.
 
 ### <a name="report-settings-reset"></a>Réinitialisation des paramètres des rapports
 
-**Symptômes** : Tous les paramètres qui ont été définis pour les rapports planifiés sont réinitialisés quand vous effectuez la mise à jour vers la version 1.8 Update 1.
+**Symptômes :** Tous les paramètres qui ont été définis pour les rapports planifiés sont réinitialisés quand vous effectuez la mise à jour vers la version 1.8 Update 1.
 
 **Description** : La mise à jour de la version 1.8 vers la version 1.8 Update 1 entraîne la réinitialisation des paramètres des rapports planifiés.
 
-**Solution de contournement** : Avant d’effectuer la mise à jour vers la version 1.8 Update 1, faites une copie des paramètres des rapports pour pouvoir ensuite les entrer à nouveau. Pour ce faire, vous pouvez également utiliser un script. Pour plus d’informations, consultez [Exporter et importer la configuration d’ATA](ata-configuration-file.md).
+**Solution de contournement** : Avant d’effectuer la mise à jour vers la version 1.8 Update 1, faites une copie des paramètres des rapports pour pouvoir ensuite les entrer à nouveau. Vous pouvez aussi le faire via un script. Pour plus d’informations, consultez [Exporter et importer la configuration d’ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Voir aussi

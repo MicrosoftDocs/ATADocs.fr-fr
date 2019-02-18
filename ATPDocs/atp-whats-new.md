@@ -4,7 +4,7 @@ description: Décrit les dernières versions release d’Azure ATP et fournit d
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,18 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ef2aa85c8695b86ba47d0c42c0a82208b188b893
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: c12cb4836e401fbfb788cc243bdc6d29622552bb
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689419"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077930"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
 
+## <a name="azure-atp-release-265"></a>Azure ATP version 2.65
+Date de publication : 10 février 2019
+
+- **Nouvelle alerte de sécurité : Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)**<br>
+L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) d’Azure ATP est maintenant en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. Découvrez plus d’informations sur la technique **ExchangePriv** dans l’[Avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019, et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+
+- **Disponibilité générale : Exécution de code à distance sur DNS**<br>
+Cette alerte est maintenant en disponibilité générale. Pour obtenir plus d’informations et les caractéristiques de l’alerte, consultez la [page de description de l’exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
+
+- **Disponibilité générale : Exfiltration de données sur SMB**<br>
+Cette alerte est maintenant en disponibilité générale. Pour plus d’informations sur l’alerte et ses caractéristiques, consultez la [page de description de l’exécution de code à distance sur SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
+
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
 ## <a name="azure-atp-release-264"></a>Azure ATP version 2.64
 Date de publication : 4 février 2019
-
 
 - **Disponibilité générale : Suspicion d’utilisation de golden ticket (anomalie de ticket)**<br>
 Cette alerte est maintenant en disponibilité générale. Consultez la [page de description de l’alerte d’utilisation de golden ticket (anomalie de ticket)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) pour obtenir plus de détails et connaître les fonctionnalités de l’alerte. 
@@ -73,7 +87,7 @@ En réponse aux commentaires de clients concernant l’utilisation d’Azure ATP
 Publiée le 20 janvier 2019
 
 - **Nouvelle alerte de sécurité : Exécution de code à distance sur DNS (préversion)**<br>
-L’alerte de sécurité [Exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) d’Azure ATP est maintenant disponible en préversion publique. <br> Avec ce système de détection, une alerte de sécurité Azure ATP est déclenchée lorsque des requêtes DNS suspectées d’exploiter la faille de sécurité [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sont effectuées sur un contrôleur de domaine dans le réseau.
+L’alerte de sécurité [Exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) d’Azure ATP est maintenant disponible en préversion publique. <br> Avec ce système de détection, une alerte de sécurité Azure ATP est déclenchée lorsque des requêtes DNS suspectées d’exploiter la faille de sécurité [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sont effectuées sur un contrôleur de domaine dans le réseau.
 
 - **Amélioration de fonctionnalité : Mise à jour des capteurs différée de 72 heures** <br> L’option permettant de différer la mise à jour de certains capteurs après chaque nouvelle version d’Azure ATP a été modifiée (72 heures au lieu de 24 heures). Pour connaître les instructions de configuration, voir [Mise à jour des capteurs Azure ATP](sensor-update.md). 
 
@@ -523,7 +537,7 @@ Date de publication : 11 mars 2018
  -  L’infrastructure des capteurs Azure ATP a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 
 ## <a name="see-also"></a>Voir aussi
-- [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
+- [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
 - [Forum Aux Questions](atp-technical-faq.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
