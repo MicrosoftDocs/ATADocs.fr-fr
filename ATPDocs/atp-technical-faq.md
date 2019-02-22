@@ -5,20 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a45773df74bb4effb5b89e3e1bd9d6fb969dfda
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: db9792192c1f56d13327d57747622e79c72a1c3e
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077675"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334457"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes : 
@@ -109,7 +110,7 @@ Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous de
 Oui, vous pouvez utiliser le capteur Azure ATP pour surveiller les contrôleurs de domaine qui se trouvent dans n’importe quelle solution IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Azure ATP peut-il prendre en charge plusieurs domaines et plusieurs forêts ?
-Azure Advanced Threat Protection prend en charge les environnements à plusieurs domaines et plusieurs forêts. Cette fonctionnalité est actuellement en préversion publique. Pour plus d’informations et les limitations connues, consultez [Prise en charge de plusieurs forêts](atp-multi-forest.md).
+Azure Advanced Threat Protection prend en charge les environnements à plusieurs domaines et plusieurs forêts. Pour plus d’informations et les exigences de confiance, consultez [Prise en charge de plusieurs forêts](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Puis-je examiner l’intégrité globale du déploiement ?
 Oui. Vous pouvez examiner l’intégrité globale du déploiement ainsi que les problèmes spécifiques liés à la configuration, à la connectivité, etc. Dès qu’un problème se produit, vous êtes averti par des alertes Azure ATP.

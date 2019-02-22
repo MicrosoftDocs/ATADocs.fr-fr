@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 1/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a8dfd4852b5a6bf5414876547212a3c5b0a07034
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: e35cb4cc277253543bf24eaccfe67d9808b64af4
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077301"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334440"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
@@ -43,6 +44,7 @@ Pour détecter les activités inter-forêts, les capteurs Azure ATP interrogent 
 - Ajoutez les informations d’identification dans la page Services d’annuaire pour toutes les forêts dans votre environnement. 
     - Vous devez fournir une information d’identification pour chaque forêt avec une relation d’approbation bidirectionnelle, 
     - mais fournir des informations d'identification supplémentaires pour chaque forêt avec une relation d’approbation non Kerberos ou sans aucune relation d’approbation. 
+    - Limite de 10 forêts par instance Azure ATP. Si votre organisation possède plus de 10 forêts, contactez le support. 
 
 ![Étape 1 de bienvenue Azure ATP](media/directory-services-add-no-trust-forests.png)
 

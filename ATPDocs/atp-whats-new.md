@@ -5,34 +5,43 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/17/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c12cb4836e401fbfb788cc243bdc6d29622552bb
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077930"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334525"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-266"></a>Azure ATP version 2.66
+Date de publication : 17 février 2019
+
+- **Amélioration de fonctionnalité : Suspicion d’attaque DCSync (réplication de services d’annuaire)**<br>
+Des améliorations ont été apportées à la convivialité de cette alerte de sécurité, y compris une description révisée, la fourniture d'informations supplémentaires sur les sources, de nouvelles données infographiques et d'autres preuves. En savoir plus sur les alertes de sécurité relatives à la [Suspicion d’attaque DCSync (réplication de services d’annuaire)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006). 
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-265"></a>Azure ATP version 2.65
 Date de publication : 10 février 2019
 
 - **Nouvelle alerte de sécurité : Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)**<br>
-L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) d’Azure ATP est maintenant en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. Découvrez plus d’informations sur la technique **ExchangePriv** dans l’[Avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019, et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) d’Azure ATP est maintenant en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. En savoir plus sur la technique **ExchangePriv** dans l’[avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019 et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Disponibilité générale : Exécution de code à distance sur DNS**<br>
-Cette alerte est maintenant en disponibilité générale. Pour obtenir plus d’informations et les caractéristiques de l’alerte, consultez la [page de description de l’exécution de code à distance sur DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
+Cette alerte est maintenant en disponibilité générale. Pour plus d’informations et de caractéristiques d’alerte, consultez la [page de description de l’alerte de l’exécution de code à distance via DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
 
 - **Disponibilité générale : Exfiltration de données sur SMB**<br>
-Cette alerte est maintenant en disponibilité générale. Pour plus d’informations sur l’alerte et ses caractéristiques, consultez la [page de description de l’exécution de code à distance sur SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
+Cette alerte est maintenant en disponibilité générale. Pour plus d’informations et de caractéristiques d’alerte, consultez la [page de description de l’alerte de l’exfiltration de données via SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
@@ -41,7 +50,7 @@ Cette alerte est maintenant en disponibilité générale. Pour plus d’informat
 Date de publication : 4 février 2019
 
 - **Disponibilité générale : Suspicion d’utilisation de golden ticket (anomalie de ticket)**<br>
-Cette alerte est maintenant en disponibilité générale. Consultez la [page de description de l’alerte d’utilisation de golden ticket (anomalie de ticket)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) pour obtenir plus de détails et connaître les fonctionnalités de l’alerte. 
+Cette alerte est maintenant en disponibilité générale. Pour plus d’informations et de caractéristiques d’alerte, consultez la [page de description de l’alerte d’utilisation du golden ticket (anomalie de ticket)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
 
 - **Amélioration de fonctionnalité : Reconnaissance de mappage de réseau (DNS)**<br>
 Logique de détection d’alerte améliorée déployée pour cette alerte afin de minimiser les faux positifs et réduire le bruit des alertes. Cette alerte a maintenant une période d’apprentissage de huit jours avant que l’alerte ne soit éventuellement déclenchée pour la première fois. Pour plus d’informations sur cette alerte, consultez la [page de description de l’alerte de reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 

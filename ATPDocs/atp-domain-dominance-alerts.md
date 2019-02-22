@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 04c0bebbb017441b7494535a7c970478e8de12f8
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077777"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334508"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
 
@@ -45,7 +46,7 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > * Suspicion d’utilisation de golden ticket (compte inexistant) (ID externe 2027)
 > * Suspicion d’utilisation de golden ticket (anomalie de ticket) (ID externe 2032)
 > * Suspicion d’utilisation de golden ticket (anomalie de temps) (ID externe 2022)
-> * Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement) (ID externe)
+> * Suspicion d’attaque Skeleton Key (passage à une version antérieure du chiffrement) (ID externe 2010)
 > * Modification suspecte de groupes sensibles (ID externe 2024)
 > * Création de service malveillant (ID externe 2026)
 
@@ -354,7 +355,7 @@ Description : Des vulnérabilités connues dans les versions antérieures de Wi
 Certains systèmes d’exploitation ou applications sont connus pour modifier les données d’autorisation. Par exemple, les services Linux et Unix ont leur propre mécanisme d’autorisation qui peut déclencher l’alerte. 
 
 1. L’ordinateur source exécute-t-il un système d’exploitation ou une application qui a son propre mécanisme d’autorisation ?  
-    - Si l’ordinateur source exécute ce type d’ordinateur, mettez à niveau le système d’exploitation ou corrigez la configuration de l’application. **Fermez** l’alerte comme s’agissant d’une activité **B-TP**. 
+    - Si l’ordinateur source exécute ce type de mécanisme d’autorisation, mettez à niveau le système d’exploitation ou corrigez la configuration de l’application. **Fermez** l’alerte comme s’agissant d’une activité **B-TP**. 
   
 **Comprendre l’étendue de la violation**
 1. Examinez l’[ordinateur source](investigate-a-computer.md). 

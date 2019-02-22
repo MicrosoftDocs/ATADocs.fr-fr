@@ -5,26 +5,27 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/27/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e4e33e79a5ed4dbb80214e50dbccee0f067670fd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: b371cb5f2bfeef9ddc14ee11623b609c3f49dbfb
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077913"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334423"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
-Dès que vous avez installé et configuré votre premier capteur Azure ATP sur l’un des contrôleurs de domaine dans votre réseau, Azure ATP démarre la supervision des contrôleurs de domaine de votre environnement. 
+Dès que vous avez installé et configuré le premier capteur Azure ATP sur l’un des contrôleurs de domaine dans votre réseau, Azure ATP démarre la supervision des contrôleurs de domaine de votre environnement. 
 
-Lors de la configuration, il est recommandé de désigner au moins un contrôleur de domaine supervisé par le capteur Azure ATP comme candidat synchronisateur de domaine dans chaque domaine. L’un des rôles du capteur synchronisateur de domaine est de garantir que les contrôleurs de domaine sont activement recherchés par ce capteur spécifique. Après la configuration initiale, il est possible d’activer ou de désactiver l’état de candidat synchronisateur de domaine pour chaque contrôleur de domaine. Consultez [Configurer le capteur Azure ATP](install-atp-step5.md) pour obtenir plus d’informations sur la configuration d’un capteur Azure et sa désignation comme **candidat synchronisateur de domaine**. 
+Lors de la configuration, il est recommandé de désigner au moins un contrôleur de domaine supervisé par le capteur Azure ATP comme candidat synchronisateur de domaine dans chaque domaine. L’un des rôles du capteur synchronisateur de domaine est de garantir que les contrôleurs de domaine sont activement recherchés par ce capteur spécifique. Après la configuration initiale, il est possible d’activer ou de désactiver l’état de candidat synchronisateur de domaine pour chaque contrôleur de domaine. Lorsqu’aucun contrôleur de domaine n’est sélectionné en tant que le candidat synchronisateur de domaine, il y a uniquement une surveillance passive de l’activité réseau sur vos contrôleurs de domaine. Consultez [Configurer le capteur Azure ATP](install-atp-step5.md) pour obtenir plus d’informations sur la configuration d’un capteur Azure et sa désignation comme **candidat synchronisateur de domaine**. 
 
 Une fois qu’un capteur Azure ATP est installé et configuré sur un contrôleur de domaine de votre réseau, il communique en permanence avec le service Azure ATP en lui envoyant des informations d’état, des informations sur l’intégrité et la version ainsi que les événements et changements collectés à partir d’Active Directory.  
 

@@ -2,23 +2,24 @@
 title: Présentation des alertes de surveillance d’ATA | Microsoft Docs
 description: Décrit comment utiliser les journaux ATA pour résoudre des problèmes
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 3/21/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: advanced-threat-analytics
 ms.service: ''
 ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
-ms.reviewer: bennyl
+ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: b62ee7b8b3ab4ee93f05d81efbac983824d9adcd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 736951f8f74f9493bb07a75e68601c9814793ed3
+ms.sourcegitcommit: c59d67fc58e759b5597917f96089d67e28e4cce8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078372"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443468"
 ---
 # <a name="understanding-ata-monitoring-alerts"></a>Présentation des alertes de surveillance d’ATA
 
@@ -52,7 +53,7 @@ Cet article décrit toutes les alertes de surveillance pour chaque composant, en
 ### <a name="ata-center-certificate-expired"></a>Le certificat du centre ATA a expiré
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le certificat du centre ATA a expiré.|Après l'expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Remplacez le certificat du centre ATA](modifying-ata-center-configuration.md)|Importante|
+|Le certificat du centre ATA a expiré.|Après l'expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Redéployez le centre ATA](install-ata-step1.md)|Importante|
 ## <a name="ata-gateway-issues"></a>Problèmes de la passerelle ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Le mot de passe de l’utilisateur en lecture seule est sur le point d’expirer
 |Alerte|Description|Résolution|Gravité|
