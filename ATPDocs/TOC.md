@@ -1,7 +1,7 @@
 
-# [Documentation Azure - Protection avancée contre les menaces](index.yml)
+# [Documentation Azure Advanced Threat Protection](index.yml)
 # Vue d’ensemble
-## [Présentation d’Azure - Protection avancée contre les menaces](what-is-atp.md)
+## [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
 ## [Architecture Azure ATP](atp-architecture.md)
 ## [Prérequis d’Azure ATP](atp-prerequisites.md)
 ## [Nouveautés dans Azure ATP](atp-whats-new.md)
@@ -13,7 +13,6 @@
 ## [Installer le capteur Azure ATP](install-atp-step4.md)
 ## [Configurer le capteur Azure ATP](install-atp-step5.md)
 # Didacticiels
-## [Comprendre les alertes de sécurité](understanding-security-alerts.md)
 ## [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
 ## [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
 ## [Alertes de mouvement latéral](atp-lateral-movement-alerts.md)
@@ -59,6 +58,13 @@
 ### [Valider la mise en miroir des ports](validate-port-mirroring.md)
 ### [Configurer la collecte d’événements](configure-event-collection.md)
 ### [Configurer les transferts d’événements Windows](configure-event-forwarding.md)
+## [Comprendre les alertes de sécurité](understanding-security-alerts.md)
+## Laboratoire des alertes de sécurité
+### [Vue d’ensemble du laboratoire](atp-playbook-lab-overview.md)
+### [1 - Configuration du laboratoire](atp-playbook-setup-lab.md)
+### [2 - Playbook de reconnaissance](atp-playbook-reconnaissance.md)
+### [3 - Playbook de mouvement latéral](atp-playbook-lateral-movement.md)
+### [4 - Playbook de dominance du domaine](atp-playbook-domain-dominance.md)
 # Référence
 ## [Informations de référence sur le journal SIEM](cef-format-sa.md)
 ## [Problèmes connus liés à Azure ATP](known-issues.md)
