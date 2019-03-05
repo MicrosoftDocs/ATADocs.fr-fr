@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09649f57041ca53ae7cdd183e60584ff37be9c9f
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 36f7d273273e11d57c681e75cc762e853a127616
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264030"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754410"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Didacticiel : Alertes de reconnaissance  
 
@@ -40,8 +40,10 @@ Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et p
 > [!div class="checklist"]
 > * Reconnaissance d’énumération de compte (ID externe 2003)
 > * Reconnaissance de mappage de réseau (DNS) (ID externe 2007)
+> * Reconnaissance de principal de sécurité (LDAP) (ID externe 2038) – préversion
 > * Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
 > * Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
+> * 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Reconnaissance d’énumération de compte (ID externe 2003) 
 
@@ -109,14 +111,13 @@ En guise d’étape suivante, examinez l’ordinateur source :
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance de mappage de réseau (DNS) (ID externe 2007) 
 
-
 *Nom précédent :* Reconnaissance à l’aide de DNS
 
 **Description**
 
 Votre serveur DNS contient une carte de l’ensemble des ordinateurs, adresses IP et services de votre réseau. Ces informations sont utilisées par les attaquants pour mapper la structure de votre réseau et cibler les ordinateurs intéressants pour les étapes suivantes de l’attaque. 
  
-Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité Azure ATP détecte les requêtes (transferts) AXFR suspectes provenant de serveurs autres que DNS.
+Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité Azure ATP détecte les requêtes suspectes, soit les requêtes utilisant un AXFR (transfert) provenant de serveurs non DNS, soit les requêtes utilisant un nombre excessif de requêtes.
 
 **Période d’apprentissage**
 
@@ -142,16 +143,43 @@ Les scanners de sécurité et les applications légitimes peuvent générer des 
 **Suggestions de correction et étapes préventives**
 
 **Correction :**
-1. Incluez l’ordinateur source. 
+- Incluez l’ordinateur source. 
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 
-**Prévention :** Il est important de prévenir toute attaque ultérieure à l’aide de requêtes AXFR en sécurisant votre serveur DNS interne.
+**Prévention :**<br>
+Il est important de prévenir toute attaque ultérieure à l’aide de requêtes AXFR en sécurisant votre serveur DNS interne.
 
-1. Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+
+## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconnaissance de principal de sécurité (LDAP) (ID externe 2038) – préversion
+
+**Description** La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory.  La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
+
+Afin de permettre à Azure ATP de dresser avec précision le profil et d’apprendre les utilisateurs légitimes, aucune alerte de ce type n’est déclenchée dans les 10 premiers jours suivant le déploiement d’Azure ATP. Une fois que la phase d’apprentissage initiale d’Azure ATP est terminée, les alertes sont générées sur les ordinateurs qui effectuent des requêtes d’énumération LDAP suspectes ou des requêtes ciblant des groupes sensibles à l’aide de méthodes jamais observées auparavant.  
+
+**Période d’apprentissage** 10 jours par ordinateur, à partir du jour du premier événement, observé à partir de l’ordinateur. 
+
+**TP, B-TP ou FP**
+1.  Cliquez sur l’ordinateur source pour accéder à sa page de profil. 
+    1. Cet ordinateur source est-il censé générer cette activité ? 
+    2. Si l’ordinateur et l’activité sont tels qu’attendus, **fermez** l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**. 
+
+**Comprendre l’étendue de la violation**
+
+1.  Vérifiez les requêtes qui ont été effectuées (par exemple, Administrateurs du domaine ou tous les utilisateurs d’un domaine) et déterminez si les requêtes ont réussi. Examinez chaque groupe exposé, recherchez les activités suspectes effectuées sur le groupe, ou par des utilisateurs membres du groupe.
+2. Examinez l’[ordinateur source](investigate-a-computer.md). 
+    - Les requêtes LDAP vous permettent de vérifier si une activité d’accès à une ressource s’est produite sur l’un des noms SPN exposés.
+
+**Suggestions de correction et étapes préventives**
+
+1.  Incluez l’ordinateur source.
+    1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    2. L’ordinateur exécute-t-il un outil d’analyse qui effectue une variété de requêtes LDAP ?
+    3. Recherchez les utilisateurs connectés à peu près au même moment que l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+2.  Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012) 
-
 
 *Nom précédent :* Reconnaissance à l’aide de l’énumération de sessions SMB
 

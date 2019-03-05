@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/17/2018
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,25 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1689d2d2bd4becd42812010dc8fd6e13f0483ef5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 916a7a2b8f9782b66867860cdb7575e0069a30d4
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263928"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754359"
 ---
 # <a name="azure-atp-known-issues"></a>Problèmes connus dans Azure ATP
 
 Azure ATP présente parfois des limitations de conception ou de fonctionnalité qui peuvent restreindre ou changer la façon dont votre organisation utilise les services Azure ATP. Cet article décrit les problèmes connus de limitations qui n’ont pas encore de solution de contournement connue, ou dont la résolution en cours n’a pas de date de mise à jour déterminée. 
 
 Pour voir les problèmes connus dans Azure ATP et les solutions de contournement existantes, consultez [Dépannage des problèmes connus d’Azure ATP](troubleshooting-atp-known-issues.md). Pour vérifier l’état de votre locataire Azure ATP, accédez au [Centre d’intégrité Azure ATP](atp-health-center.md). 
+
+## <a name="dns-reconnaissance-alert"></a>Alerte Reconnaissance DNS
+> [!div class="mx-tableFixed"] 
+
+|Problème|État|
+|----|----|
+Le problème de l’alerte de sécurité *Reconnaissance DNS* affecte les clients en émettant des **alertes de reconnaissance DNS** faux positifs à répétition à partir d’un seul ordinateur. Si un pic **d’alertes de reconnaissance DNS** est généré à partir d’un seul ordinateur, fermez ou supprimez ces alertes jusqu’à ce que la mise à jour 2.67 soit déployée afin de résoudre ce problème. | La mise à jour 2.67 résout ce problème.|
 
 ## <a name="suspected-brute-force-attack-ldap-security-alert-display"></a>Affichage de l’alerte de sécurité Suspicion d’attaque par force brute (LDAP)
 > [!div class="mx-tableFixed"] 

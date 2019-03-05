@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 1c3e4fbf435c22ec57a90653d7a1e8133d9acbf3
+ms.sourcegitcommit: 478878e685d1e4d52b5cd0429b9bf7304e5d8552
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334508"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852695"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
 
@@ -433,11 +433,11 @@ Nom précédent : golden ticket Kerberos
 **Description** Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le compte KRBTGT. Ils utilisent ensuite ce compte KRBTGT pour créer un ticket TGT (Ticket Granting Ticket) Kerberos qui fournit une autorisation d’accès à toutes les ressources du réseau, et définir l’heure d’expiration du ticket à la valeur de leur choix. Ce faux ticket TGT appelé « Golden Ticket » permet aux attaquants d’obtenir une persistance réseau. Cette alerte est déclenchée quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée telle qu’elle est spécifiée dans Durée de vie maximale du ticket utilisateur. 
  
 **TP, B-TP ou FP**
-1. Au cours des dernières heures, le paramètre  **Durée de vie maximale du ticket utilisateur**  de la stratégie de sécurité a-t-il fait l’objet de modifications susceptibles d’affecter l’alerte ?  
+1. Au cours des dernières heures, le paramètre **Durée de vie maximale du ticket utilisateur** de la stratégie de sécurité a-t-il fait l’objet de modifications susceptibles d’affecter l’alerte ?  
 2. Le capteur autonome Azure ATP impliqué dans cette alerte est-il une machine virtuelle ? 
     - Si le capteur autonome Azure ATP est impliqué, a-t-il été récemment repris à partir d’un état enregistré ?  
 3. Le réseau présente-t-il un problème de synchronisation d’heure, où les ordinateurs ne sont pas tous synchronisés ? 
-    - Cliquez sur le bouton  **Télécharger les détails** pour voir le fichier Excel du rapport de l’alerte de sécurité, voir les activités réseau associées et vérifier s’il existe une différence entre « StartTime » et « DomainControllerStartTime ».
+    - Cliquez sur le bouton **Télécharger les détails** pour voir le fichier Excel du rapport de l’alerte de sécurité, voir les activités réseau associées et vérifier s’il existe une différence entre « StartTime » et « DomainControllerStartTime ».
 
 Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**. 
  

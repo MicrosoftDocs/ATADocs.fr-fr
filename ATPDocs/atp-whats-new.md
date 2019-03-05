@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/17/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334525"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754444"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-267"></a>Azure ATP version 2.67
+Date de publication : 24 février 2019
+
+- **Nouvelle alerte de sécurité : Reconnaissance de principal de sécurité (LMP) – (préversion)**<br>
+
+    L’alerte de sécurité [Reconnaissance de principal de sécurité (LDAP) : préversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) d’Azure ATP est désormais disponible en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsque la reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Ces informations aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. 
+
+    Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory. La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
+
+- **Amélioration de fonctionnalité : Alerte Reconnaissance d’énumération de compte (NTLM)** <br> 
+    Amélioration de l’alerte **Reconnaissance d’énumération de compte (NTLM)** à l’aide d’une analyse supplémentaire et logique de détection améliorée pour réduire les résultats de l’alerte **B-TP** et **FP**. 
+ 
+- **Amélioration de fonctionnalité : Alerte Reconnaissance de mappage de réseau (DNS)** <br>
+    Nouveaux types de détections ajoutés aux alertes Reconnaissance de mappage de réseau (DNS). Outre la détection des requêtes AXFR suspectes, Azure ATP détecte désormais les types suspects de requêtes provenant de serveurs non DNS utilisant un nombre excessif de requêtes.
+
+ - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-266"></a>Azure ATP version 2.66
 Date de publication : 17 février 2019
