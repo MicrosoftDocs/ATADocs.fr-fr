@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 80cc0a73712d12f3d4f2722f8756c1b403f90c44
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
+ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264013"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017300"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Didacticiel : Alertes indiquant des informations d’identification compromises  
 
@@ -132,7 +132,7 @@ Dans cette détection, une alerte est déclenchée quand Azure ATP détecte un n
 
 Il est important de vérifier si des tentatives de connexion ont abouti à une authentification réussie.
 
-1. Si des tentatives de connexion ont abouti, les  **comptes devinés**  sont-ils normalement utilisés à partir de cet ordinateur source ?
+1. Si des tentatives de connexion ont abouti, les **comptes devinés** sont-ils normalement utilisés à partir de cet ordinateur source ?
    - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
    - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi).
 

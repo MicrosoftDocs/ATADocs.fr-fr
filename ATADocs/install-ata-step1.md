@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a2f880c4e0df1647f99b0847a8eec71c6b8428bc
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
+ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077998"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007481"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -71,6 +71,9 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
    |Certificat SSL du service du centre|Il s’agit du certificat utilisé par le service du centre ATA et de la console ATA.|Cliquez sur l’icône en forme de clé pour sélectionner un certificat installé ou utilisez la case à cocher pour créer un certificat auto-signé.|
         
    ![Image de la configuration du centre ATA](media/ATA-Center-Configuration.png)
+
+> [!NOTE]   
+> Faites bien attention aux alertes de surveillance relatives à l’état du certificat SSL Center Service et aux avertissements relatifs à l’expiration. Si le certificat expire, vous devrez redéployer complètement ATA. 
 
 10. Cliquez sur **Installer** pour installer le centre ATA et ses composants.
    Les composants suivants sont installés et configurés pendant l’installation du centre ATA :

@@ -3,18 +3,18 @@ title: 'Démarrage rapide : Configurer les paramètres du capteur Azure ATP | M
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2018
+ms.date: 03/03/2018
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 381cf39f29edb36c704ce2de7f6c2aca31d4f19d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253944"
 ---
 # <a name="quickstart-configure-azure-atp-sensor-settings"></a>Démarrage rapide : Configurer les paramètres du capteur Azure ATP
 
@@ -27,14 +27,16 @@ Dans ce guide de démarrage rapide, vous allez configurer les paramètres du cap
 
 ## <a name="configure-sensor-settings"></a>Configurer les paramètres du capteur
 
-Une fois le capteur Azure ATP installé, effectuez les étapes suivantes pour configurer ses paramètres.
+Une fois le capteur Azure ATP installé, procédez comme suit pour configurer ses paramètres.
 
-1.  Dans le portail Azure ATP, accédez à **Configuration** et, sous la section **Système**, sélectionnez **Capteurs**.
+1. Cliquez sur **Lancer** pour ouvrir votre navigateur et connectez-vous au portail Azure ATP.
+
+2.  Dans le portail Azure ATP, accédez à **Configuration** et, sous la section **Système**, sélectionnez **Capteurs**.
    
     ![Image de la configuration des paramètres du capteur](media/atp-sensor-config.png)
 
 
-2. Cliquez sur le capteur que vous voulez configurer et entrez les informations suivantes :
+3. Cliquez sur le capteur que vous voulez configurer et entrez les informations suivantes :
 
    ![Image de la configuration des paramètres du capteur](media/atp-sensor-config-2.png)
 
@@ -64,7 +66,7 @@ Une fois le capteur Azure ATP installé, effectuez les étapes suivantes pour co
 
 
 ## <a name="validate-installations"></a>Valider les installations
-Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effectuez les étapes suivantes :
+Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effectuez les vérifications suivantes :
 
 1. Vérifiez que le service nommé **Capteur Azure Advanced Threat Protection** est en cours d’exécution. Après avoir enregistré les paramètres du capteur Azure ATP, vous devrez peut-être patienter quelques secondes avant le démarrage du service.
 
@@ -74,6 +76,19 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
    > La version d’Azure ATP est fréquemment mise à jour. Pour vérifier la version, dans le portail Azure ATP, accédez à **Configuration**, puis à **À propos**. 
 
 3. Accédez à l’URL de votre instance Azure ATP. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, comme un utilisateur ou un groupe de votre domaine.
+
+4. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
+    1. Ouvrez une invite de commandes
+    2. Type ```nslookup```
+    3. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```.
+        - Veillez à remplacer contosodc.contoso.azure et contoso.azure par le nom de domaine complet de votre capteur Azure ATP et le nom de domaine respectivement.
+    4. Type ```ls -d contoso.azure```
+    5. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.  
+    6. À partir de la console Azure ATP, ouvrez le profil d’entité pour l’ordinateur à partir duquel vous avez exécuté le test de connectivité. 
+    7. Vérifiez l’activité logique associée et confirmez la. 
+
+    > [!NOTE] 
+    >Si le contrôleur de domaine que vous souhaitez tester est votre premier capteur déployé, attendez au moins 15 minutes pour autoriser la base de données principale à terminer le déploiement initial des microservices nécessaires avant d’essayer de vérifier l’activité logique associée pour ce contrôleur de domaine.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
