@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/1/2019
+ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6782a5096349974a5810b5fe9f816f6762f5c4d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: e37bc18c93d8dad04d0e51c1bdb07b2147bcd2bc
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264081"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725592"
 ---
 # <a name="working-with-security-alerts"></a>Utilisation des alertes de sécurité
 
@@ -46,8 +46,8 @@ Une alerte de sécurité comprend les informations suivantes :
     - Télécharger l’alerte de sécurité au format Excel.
 
 > [!NOTE]
-> - Quand vous pointez votre souris sur un utilisateur ou un ordinateur, un mini-profil d’entité s’affiche avec des informations complémentaires sur l’entité, notamment le nombre d’alertes de sécurité auxquelles est liée l’entité.
-> - Quand vous cliquez sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
+> - Lorsque vous pointez votre souris sur un utilisateur ou un ordinateur, un mini-profil d’entité s’affiche. Il fournit des informations complémentaires sur l’entité, notamment le nombre d’alertes de sécurité auxquelles est liée l’entité.
+> - En cliquant sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
 
 ![Image de la chronologie des alertes de sécurité Azure ATP](media/atp-sa-timeline.png)
 
@@ -55,11 +55,11 @@ Une alerte de sécurité comprend les informations suivantes :
 
 Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases (voir ci-dessous), comme les phases d’une chaîne de destruction de cyberattaque standard. 
 
-- Alertes de reconnaissance
-- Alertes indiquant des informations d’identification compromises
-- Alertes de mouvement latéral
-- Alertes de dominance du domaine
-- Alertes d’exfiltration
+- [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
+- [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
+- [Alertes de mouvement latéral](atp-lateral-movement-alerts.md)
+- [Alertes de dominance du domaine](atp-domain-dominance-alerts.md)
+- [Alertes d’exfiltration](atp-exfiltration-alerts.md)
 
 ## Détections en préversion <a name="preview-detections"></a>
 

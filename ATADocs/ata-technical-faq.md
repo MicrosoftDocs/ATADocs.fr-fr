@@ -2,10 +2,10 @@
 title: Forum aux questions sur Advanced Threat Analytics | Microsoft Docs
 description: Fournit des réponses aux questions les plus fréquentes sur ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 5/6/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b69d78bc5af42b8775c30f49838ba8c7754fe313
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 3db8a52c87e45635d632ad5b2d2f1ba7a82d2706
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077862"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562276"
 ---
 # <a name="ata-frequently-asked-questions"></a>Forum aux questions sur ATA
 
@@ -31,7 +31,7 @@ Cet article fournit des éléments d’informations et des réponses aux questio
 
 Si vous disposez d’un Contrat Entreprise actif, vous pouvez télécharger le logiciel à partir du Centre de gestion des licences en volume Microsoft.
 
-Si vous avez acquis une licence pour Enterprise Mobility + Security (EMS) directement sur le portail Office 365 ou par le modèle CSP (Cloud Solution Partner) et que vous n’avez pas d’accès à ATA via le Centre de gestion des licences en volume Microsoft, contactez le service client Microsoft pour obtenir la procédure permettant d’activer ATA (Advanced Threat Analytique).
+Si vous avez acquis une licence pour Enterprise Mobility + Security (EMS) directement sur le portail Microsoft 365 ou par le modèle CSP (Cloud Solution Partner) et que vous n’avez pas d’accès à ATA via le Centre de gestion des licences en volume Microsoft, contactez le service client Microsoft pour obtenir la procédure permettant d’activer ATA (Advanced Threat Analytics).
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Que dois-je faire si la passerelle ATA ne démarre pas ?
 Examinez l’erreur la plus récente dans le journal des erreurs actuel (où ATA est installé, sous le dossier « Logs »).
