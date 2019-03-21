@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc4e207a636d6c6641ccb8c6ac4e1695d82ec0d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 5490688653edddae020a8b63191a1c9a7b6e9f8a
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263750"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136805"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
@@ -58,18 +58,19 @@ Le proxy statique est configurable par le biais du Registre. Vous devez copier l
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Activer l’accès aux URL du service Azure ATP dans le serveur proxy
 
-Si un proxy ou pare-feu bloque tout le trafic par défaut et autorise uniquement des domaines spécifiques ou que l’analyse HTTPS (inspection SSL) est activée, vérifiez que les URL suivantes sont autorisées pour permettre la communication avec le service Azure ATP dans le port 443 :
+Pour activer l’accès à Azure ATP, autorisez le trafic vers les URL suivantes :
 
-|Emplacement du service|Enregistrement DNS .Atp.Azure.com|
+- \<<nom-instance>.atp.azure.com (pour la connectivité de la console). Par exemple, « Contoso-corp.atp.azure.com »
+
+- \<<nom-instance>sensorapi.atp.azure.com (pour la connectivité des capteurs). Par exemple, « contoso-corpsensorapi.atp.azure.com »
+
+Les URL précédentes mappent automatiquement vers l’emplacement de service correspondant à votre instance Azure ATP. Si vous avez besoin d’un contrôle plus précis, autorisez le trafic vers les points de terminaison appropriés dans le tableau suivant :
+
+|Emplacement du service|Enregistrement DNS *.atp.azure.com|
 |----|----|
 |FR |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
 |Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asie|triprd1wcasse1sensorapi.atp.azure.com|
-
-
-Vous pouvez aussi renforcer les règles de pare-feu ou de proxy pour une instance spécifique que vous avez créée en définissant une règle pour les enregistrements DNS suivants :
-- \<<nom-instance>.atp.azure.com (pour la connectivité de la console). Par exemple, « Contoso-corp.atp.azure.com »
-- \<<nom-instance>sensorapi.atp.azure.com (pour la connectivité des capteurs). Par exemple, « contoso-corpsensorapi.atp.azure.com »
 
  
 > [!NOTE]

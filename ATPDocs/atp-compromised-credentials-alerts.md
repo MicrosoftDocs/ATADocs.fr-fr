@@ -14,14 +14,14 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
-ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
+ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017300"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981202"
 ---
-# <a name="tutorial-compromised-credential-alerts"></a>Didacticiel : Alertes indiquant des informations d’identification compromises  
+# <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises  
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -90,7 +90,7 @@ Dans une pulvérisation de mots de passe, après avoir correctement dressé la l
 
 Il est important de vérifier si des tentatives de connexion ont abouti à une authentification réussie.
 
-1. Si des tentatives de connexion ont abouti, vérifiez si les  **comptes devinés** sont normalement utilisés à partir de cet ordinateur source.
+1. Si des tentatives de connexion ont abouti, vérifiez si les **comptes devinés** sont normalement utilisés à partir de cet ordinateur source.
    - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?  
    - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi). 
 

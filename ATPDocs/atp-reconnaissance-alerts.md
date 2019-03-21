@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/24/2019
+ms.date: 03/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,14 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee5daa580b37db15fde0e4b276e49f4688c7189b
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 8d61fb120179ee8e53aa42e50d2a0841197b8032
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725591"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136862"
 ---
-# <a name="tutorial-reconnaissance-alerts"></a>Didacticiel : Alertes de reconnaissance  
+# <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -143,24 +143,31 @@ Les scanners de sécurité et les applications légitimes peuvent générer des 
 **Suggestions de correction et étapes préventives**
 
 **Correction :**
+
 - Incluez l’ordinateur source. 
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 
 **Prévention :**<br>
+
 Il est important de prévenir toute attaque ultérieure à l’aide de requêtes AXFR en sécurisant votre serveur DNS interne.
 
 - Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
 ## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconnaissance de principal de sécurité (LDAP) (ID externe 2038) – préversion
 
-**Description** La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory.  La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
+**Description**
+
+La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory.  La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
 
 Afin de permettre à Azure ATP de dresser avec précision le profil et d’apprendre les utilisateurs légitimes, aucune alerte de ce type n’est déclenchée dans les 10 premiers jours suivant le déploiement d’Azure ATP. Une fois que la phase d’apprentissage initiale d’Azure ATP est terminée, les alertes sont générées sur les ordinateurs qui effectuent des requêtes d’énumération LDAP suspectes ou des requêtes ciblant des groupes sensibles à l’aide de méthodes jamais observées auparavant.  
 
-**Période d’apprentissage** 10 jours par ordinateur, à partir du jour du premier événement, observé à partir de l’ordinateur. 
+**Période d’apprentissage**
+
+10 jours par ordinateur, à partir du jour du premier événement, observé à partir de l’ordinateur. 
 
 **TP, B-TP ou FP**
+
 1.  Cliquez sur l’ordinateur source pour accéder à sa page de profil. 
     1. Cet ordinateur source est-il censé générer cette activité ? 
     2. Si l’ordinateur et l’activité sont tels qu’attendus, **fermez** l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**. 
@@ -214,7 +221,9 @@ Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-B
 
 *Nom précédent :* Reconnaissance à l’aide de requêtes de services d’annuaire 
 
-**Description** La reconnaissance des utilisateurs et des membres d’un groupe permet aux attaquants de mapper la structure d’annuaire et de cibler des comptes privilégiés pour les étapes suivantes de leur attaque. Le protocole SAM-R (Security Account Manager Remote) est l’une des méthodes utilisées pour interroger l’annuaire et effectuer ce type de mappage.  
+**Description**
+ 
+La reconnaissance des utilisateurs et des membres d’un groupe permet aux attaquants de mapper la structure d’annuaire et de cibler des comptes privilégiés pour les étapes suivantes de leur attaque. Le protocole SAM-R (Security Account Manager Remote) est l’une des méthodes utilisées pour interroger l’annuaire et effectuer ce type de mappage.  
 Dans le cadre de cette détection, aucune alerte n’est déclenchée durant le premier mois après le déploiement d’Azure ATP (période d’apprentissage). Pendant cette période d’apprentissage, Azure ATP effectue un profilage des requêtes SAM-R effectuées à partir des ordinateurs, qu’il s’agisse de requêtes d’énumération ou de requêtes individuelles sur des comptes sensibles. 
 
 **Période d’apprentissage**

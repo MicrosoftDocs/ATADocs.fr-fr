@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,14 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58c8445fc47a7dfb45730c96b4c438f32d539ee5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 3e2dffff3d9c2c784709c323877ec74601781a05
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263197"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136861"
 ---
-# <a name="tutorial-lateral-movement-alerts"></a>Didacticiel : Alertes de mouvement latéral  
+# <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -121,6 +121,12 @@ La résolution correcte des adresses IP aux ordinateurs de l’organisation est 
 3. Le capteur ne résout-il pas une ou plusieurs des adresses IP de destination ? Si une adresse IP de destination n’est pas résolue, cela peut indiquer que les ports appropriés entre le capteur et les appareils ne sont pas ouverts correctement. 
 
     Si la réponse à l’une des questions précédentes est **oui**, vérifiez si les ordinateurs sources et de destination sont identiques. S’ils sont identiques, il s’agit d’un **FP** et il n’y a eu aucune tentative réelle d’attaque **pass-the-ticket**. 
+
+La fonctionnalité [Credential Guard à distance](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) des connexions RDP, quand elle est utilisée avec Windows 10 sur Windows Server 2016 et ultérieur, peut déclencher des alertes **B-TP**. Utilisez la preuve d’alerte pour vérifier si l’utilisateur a établi une connexion Bureau à distance de l’ordinateur source à l’ordinateur de destination.
+
+1. Recherchez la preuve de corrélation.
+2. Si une preuve de corrélation existe, vérifiez si la connexion RDP a été établie avec Credential Guard à distance. 
+3. Si la réponse est oui, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**. 
 
 Il existe des applications personnalisées qui transfèrent des tickets pour le compte d’utilisateurs. Ces applications ont des droits de délégation pour les tickets de l’utilisateur.
 
