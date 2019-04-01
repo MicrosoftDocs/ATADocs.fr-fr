@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1142277f54178c7954b6b442102c5189705abda8
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: 7619c0bf7f1e8a6cf90956124c683400bc5c686d
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58136839"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406601"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -37,11 +37,11 @@ Ce guide des prérequis comprend les sections suivantes qui vous permettent de v
 
 [Avant de commencer](#before-you-start) : Liste les informations à rassembler ainsi que les comptes et les entités réseau dont vous devez disposer avant de commencer l’installation.
 
-[Portail Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements) : Décrit la configuration requise pour le navigateur du portail Azure ATP.
+[Portail Azure ATP](#azure-atp-portal-requirements) : Décrit la configuration requise pour le navigateur du portail Azure ATP.
 
-[Capteur Azure ATP](#azure-atp-lightweight-sensor-requirements) : Liste le matériel du capteur Azure ATP, ainsi que la configuration logicielle requise.
+[Capteur Azure ATP](#azure-atp-sensor-requirements) : Liste le matériel du capteur Azure ATP, ainsi que la configuration logicielle requise.
 
-[Capteur autonome Azure ATP](#azure-atp-sensor-requirements) : Liste le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
+[Capteur autonome Azure ATP](#azure-atp-standalone-sensor-requirements) : Liste le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
 
 ## <a name="before-you-start"></a>Avant de commencer
 Cette section liste les informations que vous devez rassembler ainsi que les comptes et les informations d’entité réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
@@ -59,11 +59,11 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Ceci permet à Azure ATP de détecter la suppression d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Ceci permet à Azure ATP de détecter la suppression d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
+- Facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
--   Facultatif : Quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honey Tokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+- Facultatif : Quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honey Tokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
@@ -83,7 +83,11 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 Cette section décrit la configuration requise pour le capteur Azure ATP.
 
 ### <a name="general"></a>Général
-Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus, mais pas Nano). Windows Server 2019 n’est pas pris en charge actuellement. 
+
+> [!NOTE]
+> Vérifiez que KB4487044 est installé si vous utilisez Server 2019. Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans KB4487044 seront automatiquement arrêtés.
+ 
+Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Core inclus, mais pas Nano) et Windows Server 2019 (Core inclus, mais pas Nano).
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
@@ -131,7 +135,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDP|1813|RADIUS|Entrant|
-|TLS vers le port RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
+|
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 La détection Azure ATP s’appuie sur des journaux d’événements Windows que le capteur peut analyser à partir du contrôleur de domaine. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations, consultez [Vérification de la stratégie d’audit avancée](atp-advanced-audit-policy.md).

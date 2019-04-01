@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,30 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0da5dd11c8d342b6342c06631a73e8c5f119c42c
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981219"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406635"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-271"></a>Azure ATP version 2.71
+Date de publication : 24 mars 2019
+
+- **Amélioration de fonctionnalité : Alertes de monitoring de résolution de noms réseau (NNR)**<br>
+Des alertes de monitoring ont été ajoutées pour les niveaux de confiance associés à des alertes de sécurité Azure ATP qui reposent sur la résolution NNR. Chacune comprend des recommandations actionnables et détaillées aidant à résoudre les faibles taux de réussite NNR. 
+
+    Pour plus d’informations sur la façon dont Azure ATP utilise la résolution NNR et sur son importance pour l’exactitude des alertes, voir [Présentation de la résolution de noms réseau](atp-nnr-policy.md). 
+
+- **Prise en charge serveur : ajout de Server 2019 avec KB4487044**<br>
+Windows Server 2019 est maintenant pris en charge, avec le niveau de correctif KB4487044. L’utilisation de Server 2019 sans le correctif, non prise en charge, est bloquée à partir de cette mise à jour. 
+
+- **Amélioration de fonctionnalité : Exclusion d’alertes en fonction des utilisateurs**<br>
+Les options d’exclusion d’alertes étendues permettent à présent d’exclure certains utilisateurs de certaines alertes. Les exclusions sont utiles pour éviter les situations dans lesquelles l’utilisation ou la configuration de certains types de logiciels internes déclenche régulièrement des alertes de sécurité sans gravité.
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-270"></a>Azure ATP version 2.70
 Date de publication : 17 mars 2019
@@ -31,12 +47,10 @@ Date de publication : 17 mars 2019
     Une preuve de niveau de confiance NNR a été ajoutée aux alertes suivantes :
   - [Reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
   - [Suspicion d’usurpation d’identité (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
-
   - [Suspicion d’attaque de relais NTLM (compte Exchange) - préversion](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
   - [Suspicion d’attaque DCSync (réplication de services d’annuaire)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
 
 - **Scénario d’alerte d’intégrité supplémentaire : Échec du démarrage du service de capteur Azure ATP**<br>Dans les instances où le capteur Azure ATP n’a pas réussi à démarrer en raison d’un problème de pilote de capture réseau, une alerte d’intégrité de capteur est désormais déclenchée. [Résolution des problèmes de capteur Azure ATP avec les journaux Azure ATP](troubleshooting-atp-using-logs.md) pour plus d’informations sur les journaux Azure ATP et comment les utiliser. 
-
   
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
