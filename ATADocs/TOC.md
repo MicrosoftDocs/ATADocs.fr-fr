@@ -3,6 +3,7 @@
 ## [Quelles sont les menaces détectées par ATA ?](ata-threats.md)
 ## Nouveautés dans ATA?
 ### [Nouveautés d’ATA version 1.9](whats-new-version-1.9.md)
+#### [Mise à jour vers ATA 1.9.2 : guide de migration](ata-update-1.9.2-migration-guide.md)
 #### [Mise à jour vers ATA 1.9.1 : guide de migration](ata-update-1.9.1-migration-guide.md)
 #### [Mise à jour vers ATA 1.9 : guide de migration](ata-update-1.9-migration-guide.md)
 ### [Nouveautés d’ATA version 1.8](whats-new-version-1.8.md)
@@ -52,7 +53,7 @@
 ## [Gestion des activités suspectes](working-with-suspicious-activities.md)
 ## [Utilisation de la console ATA](working-with-ata-console.md)
 ### [Profils d’entité](entity-profiles.md)
-##[Empêcher les chemins de mouvement latéral](use-case-lateral-movement-path.md)
+## [Empêcher les chemins de mouvement latéral](use-case-lateral-movement-path.md)
 ## ATA Informations de référence
 ### [Informations de référence sur le journal SIEM](cef-format-sa.md)
 ### [Référence de ID de l'événement](event-id-reference.md)
