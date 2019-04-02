@@ -7,14 +7,14 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 2bfbbc994ea4ec9aea57541f8f5a35590c397f84
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007464"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808255"
 ---
-# <a name="tutorial-domain-dominance-playbook"></a>Didacticiel : Playbook de contrôle du domaine
+# <a name="tutorial-domain-dominance-playbook"></a>Tutoriel : Playbook de contrôle du domaine
 
 Le dernier tutoriel de cette série en quatre parties sur les alertes de sécurité Azure ATP est un playbook de contrôle du domaine. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des attaques potentielles contre votre réseau. Le labo explique comment tester certaines détections *discrètes* d’Azure ATP à l’aide des fonctionnalités d’Azure ATP *basées sur la signature*. Les tutoriels n’incluent ni le Machine Learning avancé Azure ATP, ni les détections et les alertes de comportement d’utilisateurs ou basées sur des entités. Ces types de détections et d’alertes ne sont pas inclus dans le test, car ils nécessitent une période d’apprentissage et un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](atp-playbook-lab-overview.md).
 
@@ -194,7 +194,7 @@ Azure ATP a pu détecter la méthode de chiffrement suspecte de l’authentifica
 
 ### <a name="golden-ticket---existing-user"></a>Golden ticket – utilisateur existant
 
-Après avoir volé le « Golden Ticket », (compte « krbtgt ») comme c’est expliqué [ici par le biais de la réplication malveillante](#Malicious-Replication), un attaquant est en mesure de signer des tickets *comme s’il était le contrôleur de domaine*. **Mimikatz**, le SID de domaine et le compte « krbtgt » volé sont tous nécessaires pour accomplir cette attaque. Non seulement nous pouvons générer des tickets pour un utilisateur, mais encore nous pouvons générer des tickets pour des utilisateurs qui n’existent même pas.
+Après avoir volé le « Golden Ticket », (compte « krbtgt ») comme c’est expliqué [ici par le biais de la réplication malveillante](#malicious-replication), un attaquant est en mesure de signer des tickets *comme s’il était le contrôleur de domaine*. **Mimikatz**, le SID de domaine et le compte « krbtgt » volé sont tous nécessaires pour accomplir cette attaque. Non seulement nous pouvons générer des tickets pour un utilisateur, mais encore nous pouvons générer des tickets pour des utilisateurs qui n’existent même pas.
 
 1. En tant que JeffL, exécutez la commande sur ci-dessous sur **VictimPC** pour acquérir le SID du domaine :
 

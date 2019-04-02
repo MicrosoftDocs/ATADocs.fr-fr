@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 02/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b371cb5f2bfeef9ddc14ee11623b609c3f49dbfb
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 4bab4db1735d84a568e300bdeb57436f230edbb5
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334423"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674297"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
@@ -43,7 +41,7 @@ Le fichier Excel téléchargé contient les informations de couverture suivantes
 
 |Titre|Description|
 |----|----|
-|Nom d'hôte|Nom de l'ordinateur|
+|Hostname|Nom de l'ordinateur|
 |Nom du domaine|Nom du domaine|
 |Supervisé|État de la supervision Azure ATP|
 |Type de capteur|Capteur Azure ATP ou capteur autonome Azure ATP|

@@ -8,20 +8,18 @@ manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c3e4fbf435c22ec57a90653d7a1e8133d9acbf3
-ms.sourcegitcommit: 478878e685d1e4d52b5cd0429b9bf7304e5d8552
+ms.openlocfilehash: 40d74431d4175512bce15dcfdec8bb3b80973e30
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852695"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675283"
 ---
-# <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
+# <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine  
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 

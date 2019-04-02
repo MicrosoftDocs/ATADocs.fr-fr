@@ -7,14 +7,14 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 30b0fcb47ae735d4e9090a38f14f9658c64864f5
-ms.sourcegitcommit: 4711f0ff4331e0bcc84663f46054216b7db9f98e
+ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56988661"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808272"
 ---
-# <a name="tutorial-setup-an-atp-security-alert-lab"></a>Didacticiel : Configurer un labo d’alertes de sécurité ATP 
+# <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
 
  L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Ce premier tutoriel d’une série en quatre parties vous explique comment créer un environnement de labo de tests de détections *discrètes* d’Azure ATP. Ce labo d’alertes de sécurité se concentre sur les fonctionnalités d’Azure ATP basées sur la *signature*. Ce labo n’inclut pas le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](atp-playbook-lab-overview.md). 
 
@@ -30,7 +30,7 @@ Dans ce tutoriel vous allez :
 
 ## <a name="prerequisites"></a>Prérequis
 
-1. [Un contrôleur de domaine du labo et deux stations de travail de labo](#Server-and-Computers).
+1. [Un contrôleur de domaine du labo et deux stations de travail de labo](#servers-and-computers).
    - Continuez et [alimentez Active Directory (AD) avec des utilisateurs](#bkmk_hydrate).
 1. Une [instance Azure ATP](install-atp-step1.md) qui est [connectée à AD](install-atp-step2.md).
 1. [Téléchargez](install-atp-step3.md) et [installez la dernière version du capteur Azure ATP](install-atp-step4.md) sur le contrôleur de domaine de votre labo.

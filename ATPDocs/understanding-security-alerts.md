@@ -8,20 +8,18 @@ manager: barbkess
 ms.date: 1/13/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 89cece7c0ab11537e7b08f57e5c899e86977fce1
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 490fb20e1fc6e71031c3e3dbf55c3fa13dde4eeb
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263596"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674688"
 ---
-# <a name="tutorial-understanding-security-alerts"></a>Didacticiel : Présentation des alertes de sécurité
+# <a name="tutorial-understanding-security-alerts"></a>Tutoriel : Présentation des alertes de sécurité
 
 Les alertes de sécurité Azure ATP expliquent en langage clair et à l’aide de graphismes les activités suspectes qui ont été identifiées sur votre réseau ainsi que les ordinateurs et les acteurs impliqués dans les menaces. Les alertes sont classées par gravité, colorées afin de faciliter le filtrage visuel et organisées par phase de menace. Chaque alerte est conçue pour vous aider à comprendre rapidement et précisément ce qui se passe sur votre réseau. Des listes de preuves d’alertes contiennent des liens directs vers les ordinateurs et les utilisateurs impliqués, afin de rendre vos recherches plus faciles et plus directes.
 

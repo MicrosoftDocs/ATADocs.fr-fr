@@ -8,20 +8,18 @@ manager: barbkess
 ms.date: 02/11/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 94e73ecb2980c851aec6ff391c49fff88e4961c8
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 54e2e6df751dab47772c20d2c3cbe30665d4840b
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263639"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674807"
 ---
-# <a name="tutorial-exfiltration-alerts"></a>Didacticiel : Alertes d’exfiltration  
+# <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
