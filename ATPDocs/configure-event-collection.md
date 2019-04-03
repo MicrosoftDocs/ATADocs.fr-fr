@@ -6,20 +6,18 @@ author: mlottner
 ms.author: mlottner
 manager: barbkess
 ms.date: 10/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cea4825734294d01516fd5a8f3fddf986605cb57
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 40eef8bde4caa76fccef29667f178c3a31b03c30
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263616"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808170"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -130,7 +128,7 @@ Compte d’ouverture de session : Administrateur
 
 Station de travail source :       SIEM
 
-Error Code:         0x0
+Code d’erreur :         0x0
 
 -   L’en-tête syslog est facultatif.
 

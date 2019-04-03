@@ -5,23 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: ec0a64b0b4467ae27642dd59281b150fc6953f64
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406635"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764067"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-272"></a>Azure ATP version 2.72
+Date de publication : 31 mars 2019
+
+- **Amélioration de fonctionnalité : Profondeur de l’étendue du chemin de mouvement latéral (LMP)**<br>
+Les chemins de mouvement latéral (LMP) constituent une méthode clé pour la détection des menaces et des risques dans Azure ATP. Pour mieux cibler les risques critiques pouvant affecter vos utilisateurs les plus sensibles, cette mise à jour permet d’analyser et de corriger plus rapidement et facilement ces risques au niveau de chaque LMP, en limitant l’étendue et la profondeur de chaque graphique affiché.   
+
+    Consultez la section [Chemins de mouvement latéral](use-case-lateral-movement-path.md) pour en savoir plus sur la façon dont Azure ATP utilise les LMP pour atténuer les risques d’accès à chaque entité dans votre environnement.   
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-271"></a>Azure ATP version 2.71
 Date de publication : 24 mars 2019

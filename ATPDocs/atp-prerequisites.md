@@ -5,21 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7619c0bf7f1e8a6cf90956124c683400bc5c686d
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406601"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764033"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -30,6 +28,8 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 
 
 Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
+
+Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 Pour créer votre instance d’Azure ATP, vous avez besoin d’un locataire AAD au moins un administrateur général/de sécurité. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures. 
 
@@ -77,7 +77,7 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 
 
 > [!NOTE]
-> Par défaut, Azure ATP prend en charge jusqu’à 100 capteurs. Si vous voulez en installer plus, contactez le support Azure ATP.
+> Par défaut, Azure ATP prend en charge jusqu’à 200 capteurs. Si vous voulez en installer plus, contactez le support Azure ATP.
 
 ## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
 Cette section décrit la configuration requise pour le capteur Azure ATP.
@@ -85,9 +85,9 @@ Cette section décrit la configuration requise pour le capteur Azure ATP.
 ### <a name="general"></a>Général
 
 > [!NOTE]
-> Vérifiez que KB4487044 est installé si vous utilisez Server 2019. Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans KB4487044 seront automatiquement arrêtés.
+> Assurez-vous que le correctif [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) est installé lorsque vous utilisez un serveur 2019 ou une base de connaissances incluant l’article KB4487044, par exemple [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans cette mise à jour seront automatiquement arrêtés.
  
-Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Core inclus, mais pas Nano) et Windows Server 2019 (Core inclus, mais pas Nano).
+Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019 (Windows Core inclus mais pas Windows Nano Server).
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 

@@ -5,34 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d3f6b3fda2dbfca0250069ba08d027b1b16d5659
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 7dd41fea1a2a7f8c4a2e122ec75d8735fb49c37d
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406653"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763948"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
 
 La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité Azure ATP. Azure ATP capture les activités en fonction du trafic réseau, des événements Windows et d’ETW ; or, ces activités contiennent normalement des données d’adresses IP.  
 
 Avec la résolution de noms réseau, Azure ATP peut corréler les activités brutes (contenant des adresses IP) aux ordinateurs concernés impliqués dans chaque activité. À partir des activités brutes, Azure ATP profile les entités, notamment les ordinateurs, et génère des alertes en cas d’activité suspecte.
-
-Les données NNR sont cruciales pour détecter les alertes suivantes :
-
-- Suspicion d’usurpation d’identité (pass-the-ticket)
-- Suspicion d’attaque DCSync (réplication de services d’annuaire)
-- Reconnaissance de mappage de réseau (DNS)
-- Suspicion d’attaque par relais NTLM (compte Exchange)
 
 Pour relier les adresses IP au nom des ordinateurs, les capteurs ATP envoient une requête à l’adresse IP afin de connaître le nom d’ordinateur « sous-jacent » suivant différentes méthodes :
 
@@ -45,6 +36,25 @@ Pour relier les adresses IP au nom des ordinateurs, les capteurs ATP envoient un
 >Aucune authentification n’est effectuée sur aucun des ports.
 
 Après avoir récupéré le nom d’ordinateur, le capteur Azure ATP regarde dans Active Directory s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si le capteur détecte la corrélation, il associe l’adresse IP à l’objet ordinateur.
+
+Les données NNR sont cruciales pour détecter les alertes suivantes :
+
+- Suspicion d’usurpation d’identité (pass-the-ticket)
+- Suspicion d’attaque DCSync (réplication de services d’annuaire)
+- Reconnaissance de mappage de réseau (DNS)
+
+Pour améliorer votre capacité à déterminer si une alerte est un **vrai positif (TP)** ou un **faux positif (FP)**, Azure ATP inclut le degré de certitude de résolution du nom de l’ordinateur dans la preuve de chaque alerte de sécurité. 
+ 
+Par exemple, si des noms d’ordinateurs sont résolus avec une **certitude élevée**, cela augmente la confiance que l’alerte de sécurité qui en résulte est un **vrai positif** ou **TP**. 
+
+La preuve inclut l’heure, l’adresse IP et le nom de l’ordinateur qui ont permis la résolution de l’adresse IP. Lorsque la certitude de résolution est **faible**, utilisez ces informations pour identifier l’appareil qui était la source réelle de l’adresse IP à cet instant. Après avoir confirmé l’appareil, vous pouvez déterminer si l’alerte est un **faux positif** ou **FP**, comme dans les exemples suivants :
+
+- Suspicion d’usurpation d’identité (pass-the-ticket) : l’alerte a été déclenchée pour le même ordinateur.
+- Suspicion d’attaque DCSync (réplication de services d’annuaire) : l’alerte a été déclenchée à partir d’un contrôleur de domaine.
+- Reconnaissance de mappage réseau (DNS) : l’alerte réseau a été déclenchée à partir d’un serveur DNS.
+
+    ![Certitude de la preuve](media/nnr-high-certainty.png)
+
 
 ### <a name="prerequisites"></a>Prérequis
 |Protocole|  Transport|  Port|   Appareil| Sens|
@@ -70,7 +80,7 @@ Chaque alerte de monitoring fournit les détails de la méthode, des capteurs et
     - Vérifiez que le port 135 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.
     - Vérifiez toute la configuration réseau, et notamment les pare-feu qui risquent d’empêcher la communication vers les ports concernés.
 
-NetBIOS :
+- NetBIOS :
     - Vérifiez que le port 137 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.
     - Vérifiez toute la configuration réseau, et notamment les pare-feu qui risquent d’empêcher la communication vers les ports concernés.
 - DNS inversé :

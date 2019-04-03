@@ -5,20 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 7/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: bf014e43711d45b74d5bb5efa7a93d7c3e1532d7
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077726"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763999"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
@@ -50,7 +49,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 > |System.IO.IOException: Authentication failed because the remote party has closed the transport stream.|TLS 1.0 est désactivé sur la passerelle ATA, tandis que .Net est configuré pour utiliser TLS 1.2|Utilisez l’une des options suivantes : </br> Activer TLS 1.0 sur la passerelle ATA </br>Activer TLS 1.2 sur .Net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit : </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|Échec du chargement par la passerelle ATA des fichiers d’analyse nécessaires.|Vérifiez si Microsoft Message Analyzer est installé. L’installation de Message Analyzer avec la passerelle / passerelle légère ATA n’est pas prise en charge. Désinstallez Message Analyzer et redémarrez le service de passerelle.|
 > |System.Net.WebException : Le serveur distant a retourné une erreur : (407) Proxy Authentication Required|La communication de la passerelle ATA avec le centre ATA est interrompue par un serveur proxy.|Désactivez le proxy sur l’ordinateur de la passerelle ATA. <br></br>Notez que les paramètres de proxy sont peut-être définis par compte.|
-> |System.IO.DirectoryNotFoundException : Le système ne peut pas trouver le chemin spécifié. (Exception de HRESULT : 0x80070003)|Un ou plusieurs services nécessaires pour exécuter ATA n’ont pas démarré.|Démarrez les services suivants : <br></br>Journaux et alertes de performance (PLA), Planificateur de tâches (Schedule).|
+> |System.IO.DirectoryNotFoundException: Le système ne peut pas trouver le chemin spécifié. (Exception de HRESULT : 0x80070003)|Un ou plusieurs services nécessaires pour exécuter ATA n’ont pas démarré.|Démarrez les services suivants : <br></br>Journaux et alertes de performance (PLA), Planificateur de tâches (Schedule).|
 > |System.Net.WebException : Le serveur distant a retourné une erreur : (403) Forbidden|Il a été interdit à la passerelle ATA ou la passerelle légère d’établir une connexion HTTP, car le centre ATA n’est pas approuvé.|Ajoutez le nom NetBIOS et le nom de domaine complet du centre ATA à la liste des sites web approuvés et effacez le cache Interne Explorer (ou le nom du centre ATA tel qu’il est spécifié dans la configuration si le nom configuré est différent du nom de domaine complet/NetBIOS).|
 > |System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|La passerelle ATA ou la passerelle légère ATA ne peuvent pas arrêter et démarrer la session ETW qui collecte le trafic réseau en raison d’un problème WMI|Pour résoudre le problème WMI, suivez les instructions de [WMI : reconstruire le référentiel WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/).|
 > |System.Net.Sockets.SocketException: An attempt was made to access a socket in a way forbidden by its access permissions|Une autre application utilise le port 514 sur la passerelle ATA|Utilisez `netstat -o` pour établir quel processus utilise ce port.|
@@ -65,6 +64,8 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 > |System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Le serveur distant a retourné une erreur : (407) Proxy Authentication Required|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu atteindre le centre ATA en raison d’une configuration incorrecte du proxy.|Désactivez la configuration du proxy avant le déploiement puis réactivez la configuration du proxy. Vous pouvez aussi configurer une exception dans le proxy.|
 > |System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host||Utilisez l’une des options suivantes : </br>Activer TLS 1.0 sur la passerelle ATA </br>Activer TLS 1.2 sur .Net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit :</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |Error [\[]DeploymentModel[\]] Failed management authentication [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>configuration du proxy ;</br>problèmes de mise en réseau ;</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
+> | Erreur [\[]DeploymentModel[\]] Échec de l’authentification de gestion|Échec de l’authentification du certificat du centre|La validation du certificat du centre nécessite une connexion Internet. Vérifiez que votre service de passerelle affiche la configuration de proxy appropriée pour permettre la connexion et la validation.|
+
 
 
 ## <a name="ata-center-errors"></a>Erreurs du centre ATA

@@ -1,25 +1,23 @@
 ---
-title: Présentation des chemins de mouvement latéral avec Azure ATP | Microsoft Docs
+title: Comprendre et utiliser des chemins de mouvement latéral avec Azure ATP | Microsoft Docs
 description: Cet article décrit les chemins de mouvement latéral d’Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 11/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c115584dd4898e7453325125888667a1bb9a53d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 4a24f542576a716ff7a9ffdcde542e6317d394c0
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764016"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral d’Azure ATP 
 
@@ -50,12 +48,11 @@ Découvrez quand des chemins de mouvement latéral potentiels ont été identifi
 ## <a name="lmp-discovery"></a>Découverte de chemins de mouvement latéral
 
 Sous l’onglet Activités, une indication est donnée quand un nouveau chemin de mouvement latéral potentiel a été identifié :
-- Utilisateurs sensibles : quand un nouveau chemin vers un utilisateur sensible a été identifié
+- Utilisateurs sensibles : quand un nouveau chemin vers un utilisateur sensible est identifié
 
 ![Chemin de mouvement latéral d’Azure ATP : utilisateur sensible identifié](./media/atp-lmp-activities.png)
 
-
-- Utilisateurs et ordinateurs non sensibles : quand cette entité a été identifiée dans un chemin de mouvement latéral potentiel conduisant à un utilisateur sensible.
+- Utilisateurs et ordinateurs non sensibles : quand cette entité est identifiée dans un chemin de mouvement latéral potentiel conduisant à un utilisateur sensible.
 
 ![Chemin de mouvement latéral d’Azure ATP : utilisateur non sensible identifié](./media/atp-lateral-non-sensitive.png)
 
