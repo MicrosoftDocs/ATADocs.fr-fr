@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7dd41fea1a2a7f8c4a2e122ec75d8735fb49c37d
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: c985dfc4a7d847113838befb3040931434603a7f
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58763948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233171"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
 
@@ -71,7 +71,7 @@ Pour vérifier le fonctionnement d’Azure ATP et la bonne configuration de l’
 
 Chaque alerte de monitoring fournit les détails de la méthode, des capteurs et de la stratégie problématique, ainsi que des recommandations de configuration.
 
-![Alerte de résolution de noms réseau (NNR) à faible taux de réussite](media/atp-health-alert-audit-policy.png)
+![Alerte de résolution de noms réseau (NNR) à faible taux de réussite](media/atp-nnr-success-rate.png)
 
 
 ### <a name="configuration-recommendations"></a>Recommandations de configuration
