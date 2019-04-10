@@ -5,23 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec0a64b0b4467ae27642dd59281b150fc6953f64
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: 5b2af0b89f2a6cef149a206d110d9f9455e9c43f
+ms.sourcegitcommit: a52e0332fc1df15d062c6ad7b7c3db977a509341
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289364"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
 
+## <a name="azure-atp-release-273"></a>Azure ATP version 2.73
+
+Publication le 10 avril 2019
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
 ## <a name="azure-atp-release-272"></a>Azure ATP version 2.72
+
 Date de publication : 31 mars 2019
 
 - **Amélioration de fonctionnalité : Profondeur de l’étendue du chemin de mouvement latéral (LMP)**<br>
@@ -32,6 +39,7 @@ Les chemins de mouvement latéral (LMP) constituent une méthode clé pour la d�
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-271"></a>Azure ATP version 2.71
+
 Date de publication : 24 mars 2019
 
 - **Amélioration de fonctionnalité : Alertes de monitoring de résolution de noms réseau (NNR)**<br>

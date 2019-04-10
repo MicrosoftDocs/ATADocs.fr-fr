@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/24/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2dbd84cf771e86a5615a081b6e8500247ee2026
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 4d3bac024e94f0aec2fb01f827fb5456527c5356
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233324"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Vérification de la stratégie d’audit avancée Azure ATP
 
@@ -25,7 +25,7 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows sp�
 
 Pour faciliter la vérification de l’état actuel de chacune des stratégies d’audit d’avancées de votre contrôleur de domaine, Azure ATP vérifie automatiquement vos stratégies d’audit avancées existantes et émet des alertes d’intégrité si des paramètres de stratégie doivent être modifiés. Chaque alerte d’intégrité fournit des détails spécifiques du contrôleur de domaine, la stratégie problématique ainsi que des suggestions de correction.
 
-![Alerte d’intégrité relative à la stratégie d’audit avancée](media/atp-health-alert-audit-policy.png)
+![Alerte d’intégrité relative à la stratégie d’audit avancée](media/atp-health-alert-audit.png)
 
 
 La stratégie d’audit de sécurité avancée peut être activée via l’objet de stratégie de groupe **Contrôleurs de domaine par défaut**. Ces événements d’audit sont enregistrés dans les événements Windows du contrôleur de domaine. 
@@ -42,7 +42,7 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
 
 4. Dans la fenêtre qui s’ouvre, accédez à **Configuration ordinateur** > **Stratégies** > **Paramètres Windows** > **Paramètres de sécurité** > **Configuration avancée de la stratégie d’audit**.
 
-    ![Configuration de la stratégie d’audit avancée](media/atp-advanced-audit-policy-check-step-2.png)
+    ![Configuration avancée de la stratégie d'audit](media/atp-advanced-audit-policy-check-step-2.png)
 
 5. Accédez au compte d’ouverture de session, double-cliquez sur **Validation des informations d’identification d’audit**, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements de réussite et d’échec. 
 
@@ -54,6 +54,9 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
 
     > [!NOTE]
     > Si vous choisissez d’utiliser une stratégie locale, ajoutez les journaux d’audit **Connexion de compte** et **Gestion de compte** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    
+    > [!NOTE] 
+    > Si vous utilisez une stratégie autre que par la stratégie de contrôleur de domaine par défaut pour appliquer les paramètres de stratégie d’audit avancée, l’alerte d’intégrité Azure ATP qui en résulte peut être ignorée. 
 
 7. Après application au moyen d’un objet GPO, les nouveaux événements sont visibles sous vos **journaux d’événements Windows**.
 

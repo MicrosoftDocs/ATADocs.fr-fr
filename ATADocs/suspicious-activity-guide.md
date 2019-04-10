@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 10/14/2018
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ffdeb9e50b7b92fef140b59cb105ac8bd17432a
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: abbb382514807741403447ca69343134dae1b21e
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233256"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
@@ -169,7 +169,7 @@ Pass-the-Hash est une technique de mouvement latéral par laquelle les attaquant
 
 **Examen**
 
-Vérifier si le hachage est utilisé sur un ordinateur qui appartient à l’utilisateur ciblé ou utilisé régulièrement ? Si oui, l’alerte est un faux positif, si non, c’est probablement un vrai positif.
+Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement utilisé par l’utilisateur ciblé ? Si oui, l’alerte est un faux positif, si non, c’est probablement un vrai positif.
 
 **Correction**
 

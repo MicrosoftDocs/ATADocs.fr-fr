@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764033"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872883"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -85,7 +85,7 @@ Cette section décrit la configuration requise pour le capteur Azure ATP.
 ### <a name="general"></a>Général
 
 > [!NOTE]
-> Assurez-vous que le correctif [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) est installé lorsque vous utilisez un serveur 2019 ou une base de connaissances incluant l’article KB4487044, par exemple [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans cette mise à jour seront automatiquement arrêtés.
+> Vérifiez que [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) est installé si vous utilisez Server 2019. Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans cette mise à jour seront automatiquement arrêtés.
  
 Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019 (Windows Core inclus mais pas Windows Nano Server).
 
@@ -176,7 +176,6 @@ Pour plus d’informations sur la configuration matérielle requise pour le capt
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est installé doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
-
 
 ### <a name="network-adapters"></a>Cartes réseau
 Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moins une carte de capture :

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0e35654a5fdfd09a4b2fe7849f58bd1c26253a7e
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 677dec4468fa272b55d5f9c20c3163fea5770f20
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233341"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes : 
@@ -35,6 +35,7 @@ Azure ATP détecte les techniques et attaques malveillantes connues, les problè
 Pour obtenir la liste complète des détections fournies par Azure ATP, consultez [Quelles sont les détections effectuées par Azure ATP ?](suspicious-activity-guide.md).
 
 ### <a name="what-data-does-azure-atp-collect"></a>Quelles sont les données collectées par Azure ATP ? 
+
 Azure ATP collecte et stocke des informations provenant de vos serveurs configurés (contrôleurs de domaine, serveurs membres, etc.) dans une base de données spécifique au service à des fins d’administration, de suivi et de création de rapports. Les informations collectées comprennent le trafic réseau vers et depuis des contrôleurs de domaine (par exemple, l’authentification Kerberos, l’authentification NTLM, les requêtes DNS), les journaux de sécurité (par exemple, les événements de sécurité Windows), les informations Active Directory (structure, sous-réseaux, sites) et les informations sur les entités (par exemple, les noms, les adresses e-mail et les numéros de téléphone). 
 
 Microsoft utilise ces données pour : 
@@ -46,6 +47,7 @@ Microsoft utilise ces données pour :
 Microsoft n’exploite pas vos données à des fins publicitaires ni autres que la fourniture du service. 
 
 ### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>Azure ATP analyse-t-il seulement le trafic provenant d’Active Directory ?
+
 En plus d’analyser le trafic Active Directory avec une technologie d’inspection approfondie des paquets, Azure ATP collecte également les événements Windows pertinents de votre contrôleur de domaine et crée des profils d’entité selon les informations d’Active Directory Domain Services. Azure ATP prend également en charge la réception de la gestion des comptes RADIUS des journaux VPN provenant de divers fournisseurs (Microsoft, Cisco, F5 et Checkpoint).
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Azure ATP surveille-t-il uniquement les appareils joints à un domaine ?
@@ -55,6 +57,7 @@ Non. Azure ATP surveille tous les appareils du réseau qui effectuent des demand
 Oui. Étant donné que les comptes d’ordinateurs (de même que toute autre entité) peuvent être utilisés pour effectuer des activités malveillantes, Azure ATP surveille le comportement de tous les comptes d’ordinateurs et de toutes les autres entités dans l’environnement.
 
 ## <a name="licensing-and-privacy"></a>Gestion des licences et confidentialité 
+
 ### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Où puis-je obtenir une licence pour Azure Advanced Threat Protection (ATP) ?
 
 Azure ATP est disponible dans le cadre de la suite Enterprise Mobility + Security 5 (EMS E5) et sous forme de licence autonome. Vous pouvez acquérir une licence directement sur le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence de fournisseur de solutions cloud (CSP).
@@ -81,6 +84,7 @@ Les développeurs et administrateurs Microsoft, par conception, ont reçu des pr
 En outre, Microsoft effectue des vérifications des antécédents sur certains membres du personnel d’exploitation et limite l’accès aux applications, aux systèmes et à l’infrastructure réseau par rapport au niveau de ces vérifications. Le personnel d’exploitation suit un processus formel quand il doit accéder au compte d’un client ou à des informations associées dans l’exercice de ses fonctions. 
 
 ## <a name="deployment"></a>Déploiement
+
 ### <a name="how-many-azure-atp-sensors-do-i-need"></a>De combien de capteurs Azure ATP ai-je besoin ?
 
 Chaque contrôleur de domaine dans l’environnement doit être couvert par un capteur autonome ou capteur ATP. Pour plus d’informations, consultez [Dimensionnement du capteur Azure ATP](atp-capacity-planning.md#sizing). 
@@ -126,7 +130,39 @@ Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appart
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Est-ce que je dois écrire mes propres règles et créer un seuil/une ligne de base ?
 Avec Azure Advanced Threat Protection, il est inutile de créer et d’ajuster des règles, des seuils ou des lignes de base. Azure ATP analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations mutuelles, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après son déploiement, Azure ATP commence à détecter les activités comportementales suspectes. En revanche, la détection des attaques malveillantes et des problèmes de sécurité connus est opérationnelle immédiatement après le déploiement.
 
+### <a name="which-traffic-does-azure-atp-generate-in-the-network-from-domain-controllers-and-why"></a>Quel trafic Azure ATP génère-t-il dans le réseau à partir des contrôleurs de domaine, et pourquoi ? 
+
+Azure ATP génère le trafic à partir des contrôleurs de domaine sur les ordinateurs de l’organisation dans l’un de trois scénarios :
+1. **Résolution de nom réseau**<br>
+   Azure ATP capture le trafic et les événements, pour apprendre et dresser le profil des utilisateurs et des activités de l’ordinateur sur le réseau. Pour apprendre et dresser le profil des activités en fonction des ordinateurs de l’organisation, Azure ATP a besoin relier les adresses IP aux comptes d’ordinateurs. Pour relier les adresses IP au nom des ordinateurs, les capteurs Azure ATP demandent l’adresse IP pour le nom d’ordinateur *sous-jacent* à l’adresse IP. <br>
+ 
+   Les requêtes sont effectuées à l’aide d’une des quatre méthodes : 
+    - NTLM sur RPC (port TCP 135)
+    - NetBIOS (port UDP 137)
+    - RDP (port TCP 3389)
+    - Interroger le serveur DNS à l’aide de la recherche DNS inversée de l’adresse IP (UDP 53)
+    
+    Après avoir récupéré le nom d’ordinateur, les capteurs Azure ATP vérifient les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
+2. **Chemin de mouvement latéral (LMP)**<br>
+    Pour générer des chemins de mouvement latéral potentiels pour les utilisateurs sensibles, Azure ATP requiert des informations sur les administrateurs locaux des ordinateurs. Dans ce scénario, le capteur Azure ATP utilise SAM-R (TCP 445) pour interroger l’adresse IP identifiée dans le trafic réseau, afin de déterminer les administrateurs locaux de l’ordinateur. Pour en savoir plus sur Azure ATP et SAM-R, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md). 
+
+3. **Interrogation d’Active Directory à l’aide de LDAP** pour les données d’entité<br>
+    Les capteurs Azure ATP interrogent le contrôleur de domaine à partir du domaine auquel l’entité appartient. Il peut s’agir du même capteur ou d’un autre contrôleur de domaine de ce domaine. 
+
+|Protocole|Service|Port|Source| Sens|
+|---------|---------|---------|---------|--------|
+|LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
+|LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
+|LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
+|LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
+|
+
+### <a name="why-dont-activities-always-show-both-the-source-user-and-computer"></a>Pourquoi les activités n’affichent-elles pas toujours l’utilisateur source et l’ordinateur source ?
+
+Azure ATP capture les activités sur de nombreux protocoles différents. Dans certains cas, Azure ATP ne reçoit pas les données de l’utilisateur source dans le trafic. Azure ATP tente de mettre en corrélation la session de l’utilisateur et l’activité, et lorsque la tentative réussit, l’utilisateur source de l’activité est affiché. Lorsque la tentative de corrélation de l’utilisateur échoue, seul l’ordinateur source s’affiche. 
+
 ## <a name="troubleshooting"></a>Résolution des problèmes
+
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Que dois-je faire si le capteur autonome ou le capteur Azure ATP ne démarre pas ?
 Examinez l’erreur la plus récente dans le [journal](troubleshooting-atp-using-logs.md) des erreurs actuel (où Azure ATP est installé, sous le dossier « Logs »).
 
