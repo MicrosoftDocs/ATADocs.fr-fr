@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72c5a0de163e53ed60fb3871e3a70cb691513806
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2b2d78f7f9f6191f13a9a187ce7e1e7f60dfcaf7
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675198"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59577260"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance  
 
@@ -178,11 +178,18 @@ Afin de permettre à Azure ATP de dresser avec précision le profil et d’appre
 
 **Suggestions de correction et étapes préventives**
 
-1.  Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     2. L’ordinateur exécute-t-il un outil d’analyse qui effectue une variété de requêtes LDAP ?
     3. Recherchez les utilisateurs connectés à peu près au même moment que l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
-2.  Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
+2. Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
+
+**Suggestions d’étapes Kerberoasting spécifiques pour la prévention et la correction**
+
+1. Forcer une réinitialisation du mot de passe sur le compte compromis  
+2. Exiger l’utilisation de [mots de passe longs et complexes pour les utilisateurs disposant d’un compte de principal du service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
+3. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012) 
 
