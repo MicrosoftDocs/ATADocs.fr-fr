@@ -13,11 +13,11 @@ ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5e4d4fd205efaf1336793cbf99ce7ff07020f36d
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233154"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745537"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Présentation des alertes de surveillance du capteur autonome et du capteur Azure ATP
 

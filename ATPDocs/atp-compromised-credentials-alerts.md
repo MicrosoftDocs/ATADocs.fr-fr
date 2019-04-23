@@ -13,11 +13,11 @@ ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 23de55308ffe48f73b7db06a1a15790c14ecc8a0
-ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58808238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745753"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises  
 
@@ -82,7 +82,7 @@ Dans cette détection, une alerte est déclenchée quand de nombreux échecs d�
 Dans une pulvérisation de mots de passe, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Si la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. La période minimale avant le déclenchement d’une alerte est d’une semaine.
 
 **Période d’apprentissage**
- <br>1 semaine
+ <br>1 semaine
 
 **TP, B-TP ou FP**
 
