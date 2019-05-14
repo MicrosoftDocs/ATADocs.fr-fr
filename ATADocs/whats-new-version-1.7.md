@@ -4,7 +4,7 @@ description: Répertorie les nouveautés d’ATA version 1.7, ainsi que les pro
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 34c96fd2a9f517749655d27aba553b5aa6d94e25
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674824"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195953"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nouveautés d’ATA version 1.7
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
@@ -89,7 +89,7 @@ Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, 
 
 Quand vous mettez à jour ATA 1.7 vers ATA 1.7 Update 1, le processus de mise à jour automatique de la passerelle ATA et l’installation manuelle des passerelles à l’aide du package de passerelle peuvent ne pas fonctionner comme prévu.
 Ce problème se produit si le certificat utilisé par le centre ATA a été modifié avant la mise à jour d’ATA.
-Pour vérifier ce problème, recherchez les exceptions suivantes dans **Microsoft.Tri.Gateway.Updater.log** sur la passerelle ATA : **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: La connexion sous-jacente a été fermée : An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+Pour vérifier ce problème, recherchez les exceptions suivantes dans **Microsoft.Tri.Gateway.Updater.log** sur la passerelle ATA : **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: La connexion sous-jacente a été fermée : An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
 
 ![Bogue au niveau de la passerelle lors de la mise à jour d’ATA](media/17update_gatewaybug.png)
 

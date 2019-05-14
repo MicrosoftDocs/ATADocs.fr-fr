@@ -4,7 +4,7 @@ description: Répertorie les nouveautés d’ATA version 1.4, ainsi que les pro
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 380ad2bcc5327f2157db6396921ac638dbbab091
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: e35ab552dfbe8adf17e408cda8c94178d08c1f93
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674093"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196985"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Nouveautés d’ATA version 1.4
 Ces notes de publication fournissent des informations sur les problèmes connus de la version 1.4 d’Advanced Threat Analytics.

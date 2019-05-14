@@ -4,22 +4,38 @@ description: Décrit les dernières versions release d’Azure ATP et fournit d
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/14/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 426f89a61d2cdcd5b52d12e8c7a9c2cfede69940
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59577278"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226781"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-276"></a>Azure ATP version 2.76
+
+Publication le 6 mai 2019
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-275"></a>Azure ATP version 2.75
+
+Publication le 28 avril 2019
+
+- **Amélioration de fonctionnalité : entités sensibles**<br> À partir de cette version (2.75), les ordinateurs identifiés comme serveurs Exchange par Azure ATP sont désormais automatiquement marqués comme **Sensibles**.  
+
+    Les entités qui sont automatiquement marquées comme étant **Sensibles** parce qu’elles fonctionnent en tant que serveurs Exchange indiquent cette classification comme raison. 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-274"></a>Azure ATP version 2.74
 

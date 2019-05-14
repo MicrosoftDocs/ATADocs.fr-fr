@@ -4,19 +4,19 @@ description: Décrit les données collectées par ATA et explique comment désac
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 8/19/2018
 ms.topic: article
 ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e5766e409a1e2bb3f463e10459045f5a233c1fe1
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: d39fef746d27871a5c45877edb33d64c2a3e4f19
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745430"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195901"
 ---
 # <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système
 

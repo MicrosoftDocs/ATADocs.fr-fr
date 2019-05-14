@@ -4,7 +4,7 @@ description: Le centre d’intégrité ATA vous permet de vérifier le bon fonct
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fd38d7c9f0a64b07dbb5ee497a7030e830816117
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: b425e4cbd923cfe75269eb22e47da3128fbf4d78
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58638672"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196260"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Utilisation de l’intégrité et des événements système d’ATA
 

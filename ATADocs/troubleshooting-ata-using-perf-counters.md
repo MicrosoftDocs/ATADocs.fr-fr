@@ -4,7 +4,7 @@ description: Explique comment utiliser les compteurs de performances pour résou
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dbff8de84cd960ccd849a8b582cee0d81d1ce94a
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 7d7dedf5e6f24c322cd81ed8a3ecb23f96bdc43c
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675045"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195970"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Résolution des problèmes liés à ATA à l’aide des compteurs de performances
 

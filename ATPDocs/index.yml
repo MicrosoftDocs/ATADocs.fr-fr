@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 135fc9fb96bb71ebb7025de9b3353a247f61ee0f
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077233"
 documentType: LandingData
 title: Documentation Azure Advanced Threat Protection
 metadata:
@@ -12,7 +6,7 @@ metadata:
   description: Protégez vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et de menaces internes.
   services: azure-advanced-threat-protection
   author: msmbaldwin
-  manager: barbkess
+  manager: rkarlin
   ms.prod: azure-advanced-threat-protection
   ms.tgt_pltfrm: na
   ms.devlang: na
@@ -23,58 +17,58 @@ metadata:
 abstract:
   description: Le service Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
 sections:
-- title: En savoir plus
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
+  - title: En savoir plus
     items:
-    - title: En savoir plus sur Azure Advanced Threat Protection
-      href: what-is-atp.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-atp.md
-    - title: Architecture Azure ATP
-      href: atp-architecture.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-        href: atp-architecture.md
-    - title: Nouveautés d’Azure ATP
-      href: atp-whats-new.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-        href: atp-whats-new.md
-    - title: Explorez Microsoft 365, solution complète qui inclut Azure Advanced Threat Protection
-      href: https://docs.microsoft.com/microsoft-365/
-      image:
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: Guides de démarrage rapide de 5 minutes
-  items:
-  - type: paragraph
-    text: Découvrez les principes fondamentaux d’Azure Advanced Threat Protection avec ces Démarrages rapides.
-  - type: list
-    style: icon48
+      - type: list
+        style: cards
+        className: cardsFTitle
+        items:
+          - title: En savoir plus sur Azure Advanced Threat Protection
+            href: what-is-atp.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: what-is-atp.md
+          - title: Architecture Azure ATP
+            href: atp-architecture.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: atp-architecture.md
+          - title: Nouveautés d’Azure ATP
+            href: atp-whats-new.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
+              href: atp-whats-new.md
+          - title: "Explorez Microsoft\_365, solution complète qui inclut Azure Advanced Threat Protection"
+            href: 'https://docs.microsoft.com/microsoft-365/'
+            image:
+              src: /office/media/icons/caret-right-blue.svg
+              href: 'https://docs.microsoft.com/microsoft-365/'
+  - title: Guides de démarrage rapide de 5 minutes
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_design.svg
-      text: Planifier la capacité
-      href: atp-capacity-planning.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_event.svg
-      text: Créer une instance d’Azure ATP
-      href: install-atp-step1.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: Se connecter à Active Directory
-      href: install-atp-step2
-- title: Didacticiels pas à pas
-  items:
-  - type: paragraph
-    text: Apprenez à comprendre les alertes et à procéder à des investigations avec ces tutoriels.
-  - type: list
-    style: unordered
+      - type: paragraph
+        text: Découvrez les principes fondamentaux d’Azure Advanced Threat Protection avec ces Démarrages rapides.
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_design.svg'
+            text: Planifier la capacité
+            href: atp-capacity-planning.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_event.svg'
+            text: Créer une instance d’Azure ATP
+            href: install-atp-step1.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            text: Se connecter à Active Directory
+            href: install-atp-step2
+  - title: Didacticiels pas à pas
     items:
-    - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Comprendre les alertes de sécurité</a>
-    - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Examiner un utilisateur</a>
-    - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Examiner un ordinateur</a>
+      - type: paragraph
+        text: Apprenez à comprendre les alertes et à procéder à des investigations avec ces tutoriels.
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Comprendre les alertes de sécurité</a>
+          - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Examiner un utilisateur</a>
+          - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Examiner un ordinateur</a>

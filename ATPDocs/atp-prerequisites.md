@@ -4,20 +4,20 @@ description: Décrit la configuration requise pour réussir le déploiement d’
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 03/31/2019
+manager: rkarlin
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40caca1ff6ac2648b3f7c3d4921cfb35a5f5ba39
-ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
+ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164710"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195564"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -63,7 +63,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
-- Facultatif : Quand vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honey Tokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+- Facultatif : lorsque vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honeytokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
@@ -143,7 +143,7 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows que
 
 > [!NOTE]
 > - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
-> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
+> - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs Azure ATP :
 >   -   NTLM sur RPC (port TCP 135) à des fins de résolution
 >   -   NetBIOS (port UDP 137) à des fins de résolution
 >   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
