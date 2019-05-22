@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa4f9c18e0695092ddbaa9ef8505b403e206cb8c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196857"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933630"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises  
 
@@ -103,10 +103,13 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 1. Examinez l’ordinateur source.  
 2. Dans la page de l’alerte, vérifiez si des utilisateurs ont été devinés, le cas échéant.
     - Pour chaque utilisateur qui a été deviné, [consultez leur profil](investigate-a-user.md) afin d’en savoir plus.
-3. Si une alerte se produit de nombreuses fois et que l’authentification a été effectuée avec NTLM, il arrive parfois que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder ne suffisent pas.
-    1. Pour obtenir des informations plus complètes, veillez à activer l’audit NTLM sur les contrôleurs de domaine concernés.  
-    2. Pour activer l’audit NTLM, activez l’événement 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
-    3. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement 4624, pour mieux comprendre le processus d’authentification.
+1. Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source.
+
+    Pour obtenir le nom de l’ordinateur source, activez l’audit NTLM sur les contrôleurs de domaine nécessaires.
+    
+    Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
+    
+    Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. Regardez si ce serveur est exposé à Internet avec des ports ouverts. Par exemple, est-il ouvert à Internet avec le protocole RDP ?
 
 **Suggestions de correction et étapes préventives**
 
@@ -124,6 +127,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 **Description**
 
 Dans une attaque par force brute, l’attaquant tente de s’authentifier en essayant plusieurs mots de passe pour différents comptes jusqu’à ce qu’il trouve le bon mot de passe de l’un des comptes. Une fois qu’il a deviné le mot de passe d’un compte, l’attaquant utilise ce compte pour se connecter au réseau.  
+
 Dans cette détection, une alerte est déclenchée quand Azure ATP détecte un nombre massif d’authentifications de liaison simple. Cette alerte détecte les attaques par force brute *horizontales* avec un petit nombre de mots de passe pour de nombreux utilisateurs, *verticales* avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou un mélange des deux options.
 
 **TP, B-TP ou FP**

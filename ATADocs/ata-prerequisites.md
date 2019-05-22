@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 9/27/2018
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ec1e15804aed63209b1cd675c902fc91dab376bd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
+ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196704"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65760330"
 ---
 # <a name="ata-prerequisites"></a>Prérequis pour ATA
 
@@ -34,7 +34,7 @@ Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou l
 Le système ATA fonctionne sur la limite de forêt Active Directory et prend en charge le niveau fonctionnel de forêt Windows 2003 et versions ultérieures.
 
 
-[Avant de commencer](#before-you-start) : Cette section répertorie les informations que vous devez rassembler ainsi que les comptes et entités réseau dont vous devez disposer avant de procéder à l’installation d’ATA.
+[Avant de commencer](#before-you-start) : cette section présente les informations à rassembler ainsi que les comptes et les entités réseau nécessaires pour commencer l’installation d’ATA.
 
 [Centre ATA](#ata-center-requirements) : cette section présente la configuration matérielle et logicielle requise du centre ATA, ainsi que les paramètres à configurer sur le serveur du centre ATA.
 
@@ -67,7 +67,7 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 ## <a name="ata-center-requirements"></a>Configuration requise pour le centre ATA
 Cette section décrit la configuration requise pour le centre ATA.
 ### <a name="general"></a>Général
-L’installation du centre ATA sur un serveur Windows Server 2012 R2 ou Windows Server 2016 est prise en charge. 
+L’installation du centre ATA sur un serveur Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 est prise en charge. 
 
  > [!NOTE]
  > Le centre ATA ne prend pas en charge Windows Server Core.
@@ -152,7 +152,7 @@ Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ord
 ## <a name="ata-gateway-requirements"></a>Configuration requise pour la passerelle ATA
 Cette section décrit la configuration requise pour la passerelle ATA.
 ### <a name="general"></a>Général
-L’installation de la passerelle ATA sur un serveur Windows Server 2012 R2 ou Windows Server 2016 est prise en charge (y compris Server Core).
+L’installation de la passerelle ATA sur un serveur Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 est prise en charge (Server Core inclus).
 La passerelle ATA peut être installée sur un serveur membre d’un domaine ou d’un groupe de travail.
 La passerelle ATA peut servir à analyser les contrôleurs de domaine avec le niveau fonctionnel de domaine Windows 2003 et versions ultérieures.
 
@@ -232,7 +232,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 ## <a name="ata-lightweight-gateway-requirements"></a>Configuration requise pour la passerelle légère ATA
 Cette section décrit la configuration requise pour la passerelle légère ATA.
 ### <a name="general"></a>Général
-La passerelle légère ATA prend en charge l’installation sur un contrôleur de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus, mais pas Nano).
+L’installation de la passerelle légère ATA sur un contrôleur de domaine Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 (Core inclus, mais pas Nano) est prise en charge.
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 

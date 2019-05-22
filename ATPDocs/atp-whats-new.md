@@ -5,21 +5,44 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/07/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
-ms.reviewer: itargoet
+ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226781"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933666"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-278"></a>Azure ATP version 2.78
+
+Publication : le 19 mai 2019
+
+- **Amélioration de fonctionnalité : entités sensibles**<br> Marquage sensible manuel pour les serveurs Exchange
+
+    Il est maintenant possible de marquer manuellement des entités comme serveurs Exchange lors de la configuration.
+
+    Pour marquer manuellement une entité comme serveur Exchange :
+    1. Sur le portail Azure ATP, accédez au menu **Configuration**.
+    2. Sous **Détection**, sélectionnez **Étiquettes d’entité**, puis **Sensible**.
+    3. Sélectionnez **Serveurs Exchange**, puis ajoutez l’entité à marquer.
+
+    Un ordinateur marqué comme serveur Exchange s’affiche comme tel. Il porte l’étiquette Sensible,  qui apparaît dans son profil d’entité. Il est pris en compte dans toutes les détections liées aux comptes sensibles et aux chemins de mouvement latéral.
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-277"></a>Azure ATP version 2.77
+
+Publication le 12 mai 2019
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-276"></a>Azure ATP version 2.76
 
