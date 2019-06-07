@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 6e55ebfaeac540d15a8539ee2c5b1450ee0c3f10
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933630"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403556"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises  
 
@@ -63,6 +63,11 @@ Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des
 1. Examinez l’[utilisateur source](investigate-a-user.md).
 2. Examinez l’[ordinateur source](investigate-a-computer.md).
 
+> [!NOTE]
+    > Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur.
+    > À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source de ces informations est parfois remplacé par l’appareil ou le logiciel pour afficher uniquement Poste de travail ou MSTSC. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine appropriés pour obtenir le vrai nom de l’ordinateur source.    
+    > Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
+
 **Suggestions de correction et étapes préventives**
 
 1. Incluez l’ordinateur source.
@@ -101,15 +106,17 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’ordinateur source.  
-2. Dans la page de l’alerte, vérifiez si des utilisateurs ont été devinés, le cas échéant.
+1. Dans la page de l’alerte, vérifiez si des utilisateurs ont été devinés, le cas échéant.
     - Pour chaque utilisateur qui a été deviné, [consultez leur profil](investigate-a-user.md) afin d’en savoir plus.
-1. Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source.
 
-    Pour obtenir le nom de l’ordinateur source, activez l’audit NTLM sur les contrôleurs de domaine nécessaires.
+    > [!NOTE]
+    > Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur.
+    > À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source de ces informations est parfois remplacé par l’appareil ou le logiciel pour afficher uniquement Poste de travail ou MSTSC. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine appropriés pour obtenir le vrai nom de l’ordinateur source.    
+    > Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
     
-    Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
-    
-    Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. Regardez si ce serveur est exposé à Internet avec des ports ouverts. Par exemple, est-il ouvert à Internet avec le protocole RDP ?
+1. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. 
+1. Regardez si ce serveur est exposé à Internet avec des ports ouverts. 
+    Par exemple, est-il ouvert à Internet avec le protocole RDP ?
 
 **Suggestions de correction et étapes préventives**
 

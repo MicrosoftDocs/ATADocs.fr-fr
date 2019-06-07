@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 95b34c65c0f13c58034e29acb662c77d65253c70
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 848922f0fb7d31a72d3dc2f8371a39be3b125ad0
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933686"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403579"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance  
 
@@ -38,7 +38,7 @@ Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et p
 > [!div class="checklist"]
 > * Reconnaissance d’énumération de compte (ID externe 2003)
 > * Reconnaissance de mappage de réseau (DNS) (ID externe 2007)
-> * Reconnaissance de principal de sécurité (LDAP) (ID externe 2038) – préversion
+> * Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)
 > * Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
 > * Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
  
@@ -54,7 +54,7 @@ Lors d’une reconnaissance à l’aide de l’énumération de comptes, un atta
 
 **Kerberos** : L’attaquant effectue des requêtes Kerberos avec ces noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient la **Pré-authentification requise** au lieu de l’erreur Kerberos **Principal de sécurité inconnu**.
 
-**NTLM** : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)**.
+**NTLM** : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
 
 Dans le cadre de cette détection d’alerte, Azure ATP détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, Azure ATP détecte cela comme une activité suspecte.
 
@@ -98,15 +98,14 @@ En guise d’étape suivante, examinez l’ordinateur source :
 
 1. Examinez l’ordinateur source
 1. Si des tentatives correspondent à des noms de comptes existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut utiliser des attaques par force brute pour essayer d’accéder à votre domaine en utilisant les noms d’utilisateur découverts. Examinez les comptes existants en suivant le [guide d’investigation sur les utilisateurs](investigate-a-user.md).
-1. Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source.
+    > [!NOTE]
+    > Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur.
+    > À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source de ces informations est parfois remplacé par l’appareil ou le logiciel pour afficher uniquement Poste de travail ou MSTSC. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine appropriés pour obtenir le vrai nom de l’ordinateur source.    
+    > Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
 
-    Pour obtenir le nom de l’ordinateur source, activez l’audit NTLM sur les contrôleurs de domaine nécessaires.
+1. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. 
 
-    Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
-
-    Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. 
-
-    Regardez si ce serveur est exposé à Internet avec des ports ouverts. Par exemple, est-il ouvert à Internet avec le protocole RDP ? 
+1. Regardez si ce serveur est exposé à Internet avec des ports ouverts. Par exemple, est-il ouvert à Internet avec le protocole RDP ? 
 
 ### <a name="suggested-remediation-and-steps-for-prevention"></a>Suggestions de correction et étapes préventives
 
@@ -161,7 +160,7 @@ Il est important de prévenir toute attaque ultérieure à l’aide de requêtes
 
 - Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconnaissance de principal de sécurité (LDAP) (ID externe 2038) – préversion
+## <a name="security-principal-reconnaissance-ldap-external-id-2038"></a>Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)
 
 **Description**
 

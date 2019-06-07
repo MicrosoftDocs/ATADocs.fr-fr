@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933666"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264925"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-279"></a>Azure ATP version 2.79
+Publication : le 26 mai 2019
+
+- **Disponibilité générale : Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)**
+
+    Cette alerte est maintenant en disponibilité générale. Pour plus d’informations sur l’alerte, les fonctionnalités d’alerte et les suggestions de correction et la prévention, consultez [Description de l’alerte Reconnaissance de principal de sécurité (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+
+- Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-278"></a>Azure ATP version 2.78
 
@@ -147,7 +156,7 @@ Date de publication : 24 février 2019
 
 - **Nouvelle alerte de sécurité : Reconnaissance de principal de sécurité (LDAP) – (préversion)**<br>
 
-    L’alerte de sécurité [Reconnaissance de principal de sécurité (LDAP) : préversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) d’Azure ATP est désormais disponible en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsque la reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Ces informations aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. 
+    L’alerte de sécurité [Reconnaissance de principal de sécurité (LDAP) : préversion](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) d’Azure ATP est désormais disponible en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsque la reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Ces informations aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. 
 
     Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory. La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
 

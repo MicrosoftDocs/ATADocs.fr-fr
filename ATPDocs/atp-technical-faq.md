@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c844aa445378643200997d4389a3bee1aae45099
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 297df34b92ebbe1be93667d54eedd51a605e5bf1
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195517"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403520"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes : 
@@ -90,7 +90,7 @@ En outre, Microsoft effectue des vérifications des antécédents sur certains m
 Chaque contrôleur de domaine dans l’environnement doit être couvert par un capteur autonome ou capteur ATP. Pour plus d’informations, consultez [Dimensionnement du capteur Azure ATP](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Azure ATP prend-il en charge le trafic chiffré ?
-Les protocoles réseau avec le trafic chiffré (par exemple LDAPS et IPSEC) ne sont pas chiffrés, mais ils sont analysés par les capteurs.
+Les protocoles réseau avec le trafic chiffré (par exemple AtSvc et WMI) ne sont pas chiffrés, mais ils sont analysés par les capteurs.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Azure ATP fonctionne-t-il avec le blindage Kerberos ?
 L’activation du blindage Kerberos, également appelé FAST (Flexible Authentication Secure Tunneling), est prise en charge par Azure ATP, à l’exception de la détection d’attaques de type « Overpass-the-Hash » qui ne fonctionne pas avec le blindage Kerberos.
@@ -142,7 +142,7 @@ Azure ATP génère le trafic à partir des contrôleurs de domaine sur les ordin
     - RDP (port TCP 3389)
     - Interroger le serveur DNS à l’aide de la recherche DNS inversée de l’adresse IP (UDP 53)
     
-    Après avoir récupéré le nom d’ordinateur, les capteurs Azure ATP vérifient les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
+    Après avoir obtenu le nom d’ordinateur, les capteurs Azure ATP vérifient les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
 2. **Chemin de mouvement latéral (LMP)**<br>
     Pour générer des chemins de mouvement latéral potentiels pour les utilisateurs sensibles, Azure ATP requiert des informations sur les administrateurs locaux des ordinateurs. Dans ce scénario, le capteur Azure ATP utilise SAM-R (TCP 445) pour interroger l’adresse IP identifiée dans le trafic réseau, afin de déterminer les administrateurs locaux de l’ordinateur. Pour en savoir plus sur Azure ATP et SAM-R, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md). 
 
