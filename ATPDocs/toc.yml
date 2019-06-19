@@ -47,8 +47,6 @@
       href: investigate-entity.md
 - name: Concepts
   items:
-    - name: Prise en charge multiforêt Azure ATP
-      href: atp-multi-forest.md
     - name: Portail Azure ATP
       href: workspace-portal.md
     - name: Alertes de sécurité Azure ATP
@@ -65,8 +63,16 @@
       href: reports.md
     - name: Rôles d'utilisateur
       href: atp-role-groups.md
+    - name: Prise en charge multiforêt Azure ATP
+      href: atp-multi-forest.md
 - name: Guides pratiques
   items:
+    - name: Azure ATP avec Microsoft Cloud App Security
+      items:
+        - name: Utiliser Azure ATP avec Cloud App Security
+          href: atp-mcas-integration.md
+        - name: Filtrer des activités et définir des stratégies
+          href: atp-activities-filtering-mcas.md
     - name: Laboratoire des alertes de sécurité
       items:
         - name: Vue d’ensemble du laboratoire
