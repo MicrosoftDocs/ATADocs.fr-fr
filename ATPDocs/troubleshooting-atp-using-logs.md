@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196573"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155898"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Résolution des problèmes du capteur Azure Advanced Threat Protection (ATP) à l’aide des journaux ATP
 Les journaux ATP donnent des informations sur ce que fait chaque composant du capteur Azure ATP à n’importe quel moment.
 
 
-Les journaux d’Azure ATP se trouvent dans le sous-dossier nommé **Logs** où ATP est installé ; l’emplacement par défaut est : **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
+Les journaux d’Azure ATP se trouvent dans le sous-dossier nommé **Logs** où ATP est installé ; l’emplacement par défaut est : **C:\Program Files\Azure Advanced Threat Protection Sensor\\** . Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
 
 Le capteur Azure ATP dispose des journaux suivants :
 
@@ -43,6 +43,8 @@ Le capteur Azure ATP dispose des journaux suivants :
 Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Users\Administrator\AppData\Local\Temp** (ou d’un répertoire au-dessus de %temp%).
 
 Journaux de déploiement du capteur Azure ATP :
+
+-  **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - Ce fichier journal indique le processus complet de déploiement du capteur et se trouve dans le dossier temporaire mentionné précédemment, ou dans le dossier C:\Windows\Temp. 
 
 -   **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** : ce journal liste les étapes du processus de déploiement du capteur Azure ATP. Son utilisation principale consiste à suivre le processus de déploiement du capteur Azure ATP.
 

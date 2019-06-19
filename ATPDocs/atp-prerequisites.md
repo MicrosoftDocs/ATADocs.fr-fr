@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/01/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
+ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195564"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830404"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -29,7 +29,7 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 
 Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
 
-Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
+Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 Pour créer votre instance d’Azure ATP, vous avez besoin d’un locataire AAD au moins un administrateur général/de sécurité. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures. 
 
