@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
+ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830404"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486382"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -146,7 +146,7 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows que
 > - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs Azure ATP :
 >   -   NTLM sur RPC (port TCP 135) à des fins de résolution
 >   -   NetBIOS (port UDP 137) à des fins de résolution
->   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
+<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Configuration requise pour le capteur autonome Azure ATP
 Cette section décrit la configuration requise pour le capteur autonome Azure ATP.
@@ -219,14 +219,14 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
 |RADIUS|UDP|1813|RADIUS|Entrant|
-|TLS vers RDP|TCP|3389|Tous les appareils sur le réseau|Les deux|
+|
 
 > [!NOTE]
 > - À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-atp-step8-samr.md).
 > - Les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des capteurs autonome Azure ATP :
 >   -   NTLM sur RPC (port TCP 135) à des fins de résolution
 >   -   NetBIOS (port UDP 137) à des fins de résolution
->   -   RDP (port TCP 3389), seulement le premier paquet de *Client hello*, à des fins de résolution<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
+<br> Notez qu’aucune authentification n’est effectuée sur aucun des ports.
 
 
 
