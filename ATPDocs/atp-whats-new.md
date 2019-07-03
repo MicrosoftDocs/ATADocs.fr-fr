@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/10/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: faf89ddb152e002a818d79a83b5447c65a143b32
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
+ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830376"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67192787"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+## <a name="azure-atp-release-282"></a>Azure ATP version 2.82
+
+Publication : 18 juin 2019
+
+- **Nouvelle préversion publique**<br>
+L’expérience d’examen des menaces d’identité d’Azure ATP est désormais en **préversion publique** et disponible sur tous les locataires Azure ATP protégés. Consultez [Expérience d’examen d’Azure ATP avec Microsoft Cloud App Security](atp-mcas-integration.md) pour en savoir plus. 
+
+- **Disponibilité générale**<br>
+La prise en charge d’Azure ATP pour les forêts non approuvées est maintenant disponible de façon générale. Pour en savoir plus, consultez [Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection](atp-multi-forest.md). 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-281"></a>Azure ATP version 2.81
 
