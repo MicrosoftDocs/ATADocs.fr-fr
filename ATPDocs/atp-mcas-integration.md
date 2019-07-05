@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1e64ccfd3f559f59b0091e49a51e2016ef3f8745
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
+ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193494"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396617"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Utilisation d’Azure ATP avec Microsoft Cloud App Security 
 
@@ -43,7 +43,7 @@ Intégré dans Azure ATP, le portail Cloud App Security émet des alertes et fou
 
 ## <a name="access-azure-atp"></a>Accéder à Azure ATP
 
-Vous pouvez désormais choisir de continuer à utiliser Azure ATP dans le portail Azure ATP ou d’accéder aux alertes Azure ATP et aux indices d’identité à l’aide du portail Microsoft Cloud App Security. Dans les deux cas, les tâches de paramétrage et de configuration d’Azure ATP continuent à être gérées dans le portail Azure ATP. 
+Vous pouvez choisir de continuer à utiliser Azure ATP dans le portail Azure ATP, ou d’accéder aux alertes Azure ATP et aux indices d’identité à l’aide du portail Microsoft Cloud App Security. Dans les deux cas, les tâches de paramétrage et de configuration d’Azure ATP continuent à être gérées dans le portail Azure ATP. 
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -54,7 +54,7 @@ Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur da
 >[!NOTE]
 >Si vous n’avez pas d’abonnement à Cloud App Security, vous pourrez continuer à utiliser le portail Cloud App Security pour examiner les alertes Azure ATP et explorer les utilisateurs et leurs activités managées locales, mais vous ne recevrez pas d’informations connexes de vos applications cloud.
 
-Consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection) pour apprendre à activer rapidement Azure ATP dans Cloud App Security.  
+Consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration) pour apprendre à activer rapidement Azure ATP dans Cloud App Security.  
  
 ## <a name="azure-atp-in-cloud-app-security"></a>Azure ATP dans Cloud App Security 
 
