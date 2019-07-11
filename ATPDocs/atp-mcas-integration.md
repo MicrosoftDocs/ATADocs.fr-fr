@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/25/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
-ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
+ms.openlocfilehash: b66b2f0a087bbaacc09eda54958824da693209b3
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67396617"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506511"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Utilisation d’Azure ATP avec Microsoft Cloud App Security 
 
@@ -45,6 +45,8 @@ Intégré dans Azure ATP, le portail Cloud App Security émet des alertes et fou
 
 Vous pouvez choisir de continuer à utiliser Azure ATP dans le portail Azure ATP, ou d’accéder aux alertes Azure ATP et aux indices d’identité à l’aide du portail Microsoft Cloud App Security. Dans les deux cas, les tâches de paramétrage et de configuration d’Azure ATP continuent à être gérées dans le portail Azure ATP. 
 
+ 
+
 ## <a name="prerequisites"></a>Prérequis
 
 Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur dans l’environnement hybride, les éléments suivants sont nécessaires :
@@ -64,8 +66,14 @@ Accédez à vos données Azure ATP et à de nouvelles fonctionnalités hybrides 
 
 ## <a name="alerts"></a>Alertes
 
-Les alertes Azure ATP sont affichées dans la file d'attente **Alertes** de Cloud App Security. Des options de filtrage d’alertes supplémentaires sont disponibles uniquement lorsque les alertes sont affichées avec Cloud App Security. Les alertes Azure ATP sont filtrées avec le filtre d’application d’Azure ATP. 
+Les alertes Azure ATP sont affichées dans la file d'attente **Alertes** de Cloud App Security. Des options de filtrage d’alertes supplémentaires sont disponibles uniquement lorsque les alertes sont affichées avec Cloud App Security. Les alertes Azure ATP sont filtrées avec le filtre d’application pour **Active Directory**. 
 
+## <a name="alert-management"></a>Gestion des alertes
+Quand vous utilisez Azure ATP avec Cloud App Security, le fait de fermer des alertes dans un service ne les ferme pas automatiquement dans l’autre service. Décidez où gérer et corriger les alertes pour éviter la duplication des efforts. 
+
+## <a name="siem-notification"></a>Notification SIEM
+
+Si vos deux services (Azure ATP et Cloud App Security) sont actuellement configurés pour envoyer des notifications d’alerte à un SIEM, vous commencerez à recevoir des notifications SIEM en double pour la même alerte une fois l’intégration d’Azure ATP activée dans Cloud App Security. Chaque service émet une alerte avec un ID d’alerte différent. Pour éviter la duplication et la confusion, décidez où vous souhaitez gérer les alertes, puis configurez l’autre service pour ne plus envoyer de notifications SIEM.  
 
 ## <a name="activities"></a>Activités
 

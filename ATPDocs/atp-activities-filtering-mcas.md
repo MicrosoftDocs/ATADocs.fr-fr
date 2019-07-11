@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ad66219c1eb6dcfcec99d0bf995b71bb2d81577
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: 1508cb558f16adf54f80cec0c13631059dbf45bf
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193484"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506516"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Utiliser des filtres d’activité et créer des stratégies d’action avec Azure ATP dans Microsoft Cloud App Security 
 
@@ -51,19 +51,21 @@ Pour accéder aux activités d’Azure ATP par utilisateur :
 
 ## <a name="create-activity-policies-in-cloud-app-security"></a>Créer des stratégies d’activité dans Cloud App Security
 
-Après avoir filtré des activités et identifié des stratégies d’activité que vous souhaitez peut-être mettre en œuvre, ou une non-conformité au sein de votre organisation, utilisez l’option **Créer une stratégie activité** dans le menu de filtre pour créer immédiatement une stratégie personnalisée pour chaque utilisateur, appareil ou locataire. 
+Après avoir filtré des activités et identifié des stratégies d’activité que vous souhaitez peut-être mettre en œuvre, ou une non-conformité au sein de votre organisation, utilisez l’option **Créer une stratégie d’activité** dans le menu de filtre pour créer immédiatement une stratégie personnalisée pour chaque utilisateur, appareil ou locataire. 
 
 Pour créer une stratégie d’activité :
 
-1. À partir de n’importe quelle page du journal d’activité, cliquez sur le bouton **Nouvelle stratégie à partir de la recherche**.  
-    ![Créez une stratégie d’activité](media/atp-mcas-activity-log.png)
+1. À partir d’une page **Journal d’activité** quelconque, appliquez un filtre (application, nom d’utilisateur, type d’activité, etc.). 
+    - Pour filtrer les activités d’Azure ATP, sélectionnez l’option **Active Directory** dans le filtre d’application. 
+    ![Créez une stratégie d’activité](media/atp-mcas-create-new-policy.png)
+1. Cliquez sur le bouton **Nouvelle stratégie à partir de la recherche**.    
 1. Ajoutez un **Nom de stratégie**. 
     ![Créez une stratégie d’activité -étape 2](media/atp-mcas-create-policy.png)
 1. Ajoutez une **Description** de la stratégie.  
-1. Attribuez la gravité de la stratégie.
-1. Sélectionnez une catégorie pour la stratégie.
-1. Choisissez les filtres à créer pour la stratégie.
-1. Affinez ou ajoutez des filtres. 
+1. Affectez la **gravité** de la stratégie.
+1. Sélectionnez une **catégorie** pour la stratégie.
+1. Choisissez ou modifiez des filtres pour créer et affecter la stratégie.
+1. Affinez ou ajoutez d’autres filtres. 
 1. Enregistrez et appliquez la nouvelle stratégie.  
 
 
