@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/03/2019
+ms.date: 07/07/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
-ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
+ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
+ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67786395"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine  
 
@@ -478,9 +478,9 @@ Skeleton Key est un programme malveillant qui s’exécute sur les contrôleurs 
 
 **Description** Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Le but d’ajouter des utilisateurs est d’accéder à davantage de ressources et d’obtenir un accès persistant. Cette détection s’appuie sur le profilage des activités de modification des utilisateurs d’un groupe et déclenche une alerte quand un ajout anormal à un groupe sensible est observé. Azure ATP effectue un profilage en continu.  
  
-Pour une définition des groupes sensibles dans Azure ATP, consultez Utilisation des comptes sensibles.
+Pour obtenir la définition des groupes sensibles dans Azure ATP, consultez [Gestion des comptes sensibles](sensitive-accounts.md).
  
-La détection s’appuie sur les événements audités sur les contrôleurs de domaine. Assurez-vous que vos contrôleurs de domaine auditent les événements nécessaires à l’audit des événements.
+La détection s’appuie sur les événements audités sur les contrôleurs de domaine. Assurez-vous que vos contrôleurs de domaine [auditent les événements nécessaires](atp-advanced-audit-policy.md).
  
 **Période d’apprentissage**
 <br>Quatre semaines par contrôleur de domaine, à partir du premier événement.
