@@ -73,20 +73,22 @@
           href: atp-mcas-integration.md
         - name: Filtrer des activités et définir des stratégies
           href: atp-activities-filtering-mcas.md
-        - name: Évaluations de la posture de sécurité des identités Azure ATP
-          href: atp-ispm-overview.md
-        - name: Empêcher l’évaluation de l’exposition d’informations d’identification en texte clair
-          href: atp-mcas-ispm-clear-text.md
-        - name: Supprimer les entités dormantes de l’évaluation des groupes sensibles
-          href: atp-mcas-ispm-dormant-entities.md
-        - name: Empêcher l’évaluation de la communication des protocoles hérités
-          href: atp-mcas-ispm-legacy-protocols.md
-        - name: Désactiver le service Spouleur d’impression lors de l’évaluation de contrôleurs de domaine
-          href: atp-mcas-ispm-print-spooler.md
-        - name: Empêcher l’évaluation de l’utilisation d’un chiffrement faible
-          href: atp-mcas-ispm-weak-cipher.md
-        - name: Empêcher l’évaluation d’une délégation Kerberos sans contrainte
-          href: atp-mcas-ispm-unconstrained-kerberos.md
+        - name: Évaluations de la posture de sécurité des identités
+          items:
+            - name: Présentation de la posture de sécurité des identités
+              href: atp-isp-overview.md
+            - name: Évaluation pour empêcher l’exposition d’informations d’identification en texte clair
+              href: atp-cas-isp-clear-text.md
+            - name: Évaluation pour supprimer les entités dormantes des groupes sensibles
+              href: atp-cas-isp-dormant-entities.md
+            - name: Évaluation pour empêcher la communication des protocoles hérités
+              href: atp-cas-isp-legacy-protocols.md
+            - name: Évaluation pour désactiver le service Spouleur d’impression sur les contrôleurs de domaine
+              href: atp-cas-isp-print-spooler.md
+            - name: Évaluation pour empêcher l’utilisation de chiffrements faibles
+              href: atp-cas-isp-weak-cipher.md
+            - name: Évaluation pour empêcher les délégations Kerberos sans contrainte
+              href: atp-cas-isp-unconstrained-kerberos.md
     - name: Laboratoire des alertes de sécurité
       items:
         - name: Vue d’ensemble du laboratoire
