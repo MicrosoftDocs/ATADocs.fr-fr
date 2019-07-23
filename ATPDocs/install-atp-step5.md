@@ -3,20 +3,20 @@ title: 'Démarrage rapide : Configurer les paramètres du capteur Azure ATP | M
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2018
+ms.date: 07/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253944"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298907"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Démarrage rapide : Configurer les paramètres du capteur Azure ATP
+# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Démarrage rapide : Configurer les paramètres du capteur Azure ATP
 
 Dans ce guide de démarrage rapide, vous allez configurer les paramètres du capteur Azure ATP pour commencer à voir des données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti des fonctionnalités Azure ATP.  
 
@@ -31,12 +31,12 @@ Une fois le capteur Azure ATP installé, procédez comme suit pour configurer se
 
 1. Cliquez sur **Lancer** pour ouvrir votre navigateur et connectez-vous au portail Azure ATP.
 
-2.  Dans le portail Azure ATP, accédez à **Configuration** et, sous la section **Système**, sélectionnez **Capteurs**.
+1.  Dans le portail Azure ATP, accédez à **Configuration** et, sous la section **Système**, sélectionnez **Capteurs**.
    
     ![Image de la configuration des paramètres du capteur](media/atp-sensor-config.png)
 
 
-3. Cliquez sur le capteur que vous voulez configurer et entrez les informations suivantes :
+1. Cliquez sur le capteur que vous voulez configurer et entrez les informations suivantes :
 
    ![Image de la configuration des paramètres du capteur](media/atp-sensor-config-2.png)
 
@@ -52,17 +52,8 @@ Une fois le capteur Azure ATP installé, procédez comme suit pour configurer se
     - Dans le cas des capteurs Azure ATP, il s’agit de toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
     - Dans le cas d’un capteur autonome Azure ATP sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Ces cartes réseau reçoivent le trafic du contrôleur de domaine mis en miroir.
 
-  - **Candidat synchronisateur de domaine** : 
-    
-    - Le candidat synchronisateur de domaine est responsable de la synchronisation entre Azure ATP et votre domaine Active Directory. Selon la taille du domaine, la synchronisation initiale peut prendre du temps et consommer beaucoup de ressources. Azure ATP vous recommande de désigner au moins un contrôleur de domaine comme candidat synchronisateur de domaine dans chaque domaine. Si vous ne le faites pas, Azure ATP effectuera seulement une analyse passive de votre réseau et ne collectera donc peut-être pas toutes les informations sur les valeurs des entités et les changements détectés dans Active Directory. Le fait de désigner au moins un **candidat synchronisateur de domaine** par domaine garantit qu’Azure ATP pourra analyser activement votre réseau en permanence et collecter l’ensemble de ces informations.
-  
-    - Par défaut, les capteurs Azure ATP ne sont pas des candidats synchronisateurs de domaine, contrairement aux capteurs autonomes Azure ATP. Pour désigner manuellement un capteur Azure ATP comme candidat synchronisateur de domaine, définissez l’option **Candidat synchronisateur de domaine** sur **Activé** dans l’écran de configuration.
-        
-    - Il est recommandé de désactiver les capteurs Azure ATP de site distant comme candidats synchronisateurs de domaine.
-   
-    - Ne désignez pas des contrôleurs de domaine en lecture seule comme candidats synchronisateurs de domaine. Pour plus d’informations sur la synchronisation de domaine Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md#azure-atp-sensor-features).
-  
-3. Cliquez sur **Save**.
+ 
+1. Cliquez sur **Enregistrer**.
 
 
 ## <a name="validate-installations"></a>Valider les installations
@@ -70,22 +61,22 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 
 1. Vérifiez que le service nommé **Capteur Azure Advanced Threat Protection** est en cours d’exécution. Après avoir enregistré les paramètres du capteur Azure ATP, vous devrez peut-être patienter quelques secondes avant le démarrage du service.
 
-2. Si le service ne démarre pas, examinez le fichier « Microsoft.Tri.sensor-Errors.log » qui se trouve dans le dossier par défaut suivant : « %programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs ».
+1. Si le service ne démarre pas, examinez le fichier « Microsoft.Tri.sensor-Errors.log » qui se trouve dans le dossier par défaut suivant : « %programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs ».
  
    >[!NOTE]
    > La version d’Azure ATP est fréquemment mise à jour. Pour vérifier la version, dans le portail Azure ATP, accédez à **Configuration**, puis à **À propos**. 
 
-3. Accédez à l’URL de votre instance Azure ATP. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, comme un utilisateur ou un groupe de votre domaine.
+1. Accédez à l’URL de votre instance Azure ATP. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, comme un utilisateur ou un groupe de votre domaine.
 
-4. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
+1. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
-    2. Type ```nslookup```
-    3. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```.
+    1. Type ```nslookup```
+    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```
         - Veillez à remplacer contosodc.contoso.azure et contoso.azure par le nom de domaine complet de votre capteur Azure ATP et le nom de domaine respectivement.
-    4. Type ```ls -d contoso.azure```
-    5. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.  
-    6. À partir de la console Azure ATP, ouvrez le profil d’entité pour l’ordinateur à partir duquel vous avez exécuté le test de connectivité. 
-    7. Vérifiez l’activité logique associée et confirmez la. 
+    1. Type ```ls -d contoso.azure```
+    1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.  
+    1. À partir de la console Azure ATP, ouvrez le profil d’entité pour l’ordinateur à partir duquel vous avez exécuté le test de connectivité. 
+    1. Vérifiez l’activité logique associée et confirmez la. 
 
     > [!NOTE] 
     >Si le contrôleur de domaine que vous souhaitez tester est votre premier capteur déployé, attendez au moins 15 minutes pour autoriser la base de données principale à terminer le déploiement initial des microservices nécessaires avant d’essayer de vérifier l’activité logique associée pour ce contrôleur de domaine.

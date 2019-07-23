@@ -5,29 +5,23 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403575"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298753"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Présentation des alertes de surveillance du capteur autonome et du capteur Azure ATP
 
 Le centre d’intégrité Azure ATP vous informe de l’existence d’un problème dans votre instance Azure ATP en déclenchant une alerte de supervision. Cet article décrit toutes les alertes de surveillance pour chaque composant, en indiquant la cause et les étapes nécessaires pour résoudre le problème.
-
-## <a name="domain-synchronizer-not-assigned"></a>Synchronisateur de domaine non affecté
-
-|Alerte|Description|Résolution|Gravité|
-|----|----|----|----|
-|Aucun synchronisateur de domaine n’est affecté aux capteurs Azure ATP. Cela peut se produire si aucun capteur Azure ATP n’est configuré en tant que candidat synchronisateur de domaine.|Quand le domaine n’est pas synchronisé, les modifications apportées aux entités peuvent entraîner l’obsolescence ou l’absence des informations des entités dans Azure ATP, mais elles n’impactent pas la détection.|Vérifiez qu’au moins un capteur Azure ATP est défini comme [synchronisateur de domaine](install-atp-step5.md).|Faible|
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Tous les contrôleurs de domaine ne sont pas accessibles par un capteur
 
@@ -57,7 +51,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Tous les capteurs Azure ATP cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-atp-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Importante|
+|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Tous les capteurs Azure ATP cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-atp-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Haute|
 
 ## <a name="sensor-outdated"></a>Capteur obsolète
 
@@ -75,7 +69,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le démarrage du service de capteur Azure ATP échoue pendant au moins 30 minutes.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Surveillez les journaux du capteur Azure ATP pour comprendre la cause principale de l’échec du service de capteur Azure ATP.|Importante|
+|Le démarrage du service de capteur Azure ATP échoue pendant au moins 30 minutes.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Surveillez les journaux du capteur Azure ATP pour comprendre la cause principale de l’échec du service de capteur Azure ATP.|Haute|
 
 ## <a name="sensor-stopped-communicating"></a>Le capteur a cessé de communiquer
 
@@ -102,7 +96,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’est pas analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](atp-capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
 
 ## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Événements Windows absents de la stratégie d’audit du contrôleur de domaine
-|Alerte|Description|Résolution|Gravité|
+|Alerte|Description|Résolution|Niveau de gravité|
 |----|----|----|----|
 | Événements Windows absents de la stratégie d’audit du contrôleur de domaine|Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Une configuration incorrecte exclurait certains événements critiques de vos journaux, entraînant une couverture Azure ATP incomplète.|Examinez votre [stratégie d’audit avancée](atp-advanced-audit-policy.md) et modifiez-la si nécessaire. | Moyenne|
 
