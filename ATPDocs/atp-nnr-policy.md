@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
-ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
+ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155856"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298944"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
 
@@ -35,11 +35,12 @@ Pour relier les adresses IP au nom des ordinateurs, les capteurs Azure ATP inter
 > [!NOTE]
 >Aucune authentification n’est effectuée sur aucun des ports.
 
+Azure ATP évalue et détermine le système d’exploitation de l’appareil en fonction du trafic réseau. Après avoir récupéré le nom d’ordinateur, le capteur Azure ATP regarde dans Active Directory et utilise les empreintes TCP pour rechercher s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. L’utilisation d’empreintes TCP permet d’identifier les appareils non inscrits et non-Windows, facilitant ainsi vos processus d’investigation. Quand le capteur ATP trouve la corrélation, il associe l’adresse IP à l’objet ordinateur. 
+
 Dans les cas où aucun nom n’est récupéré, un **profil d’ordinateur non résolu par adresse IP** est créé, contenant l’adresse IP et l’activité détectée correspondante.
 
-Après avoir récupéré le nom d’ordinateur, le capteur Azure ATP regarde dans Active Directory s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si le capteur trouve une corrélation, il associe l’adresse IP à l’objet ordinateur. Dans les cas où aucun objet d’ordinateur portant ce nom n’est trouvé, un **profil d’ordinateur non résolu par nom** est créé, contenant ce nom et l’activité détectée correspondante. 
-
 ![Profil d’ordinateur non résolu](media/unresolved-computer-profile.png)
+
 
 Les données NNR sont cruciales pour détecter les alertes suivantes :
 
@@ -61,7 +62,7 @@ La preuve inclut l’heure, l’adresse IP et le nom de l’ordinateur qui ont p
 
 
 ### <a name="prerequisites"></a>Prérequis
-|Protocole|  Transport|  Port|   Appareil| Sens|
+|Protocole|  Transport|  Port|   Appareil| Direction|
 |--------|--------|------|-------|------|
 |NTLM sur RPC| TCP |135|   Tous les appareils sur le réseau| Entrant|
 |NetBIOS|   UDP|    137|    Tous les appareils sur le réseau| Entrant|

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a15129852315fa958b8f5bed810c9f69e185e73e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195477"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298817"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Commutateurs et installation sans assistance d’Azure ATP
 Cet article fournit des instructions pour les commutateurs et l’installation sans assistance d’Azure ATP.
@@ -47,7 +47,7 @@ Pour suivre la progression du déploiement, surveillez les journaux d’installa
 Utilisez la commande suivante pour effectuer une installation sans assistance complète du capteur Azure ATP :
 
 
-**Syntaxe** :
+**Syntaxe**:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
@@ -77,6 +77,20 @@ Utilisez la commande suivante pour effectuer une installation sans assistance co
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
+## <a name="proxy-authentication"></a>Authentification du proxy
+
+Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
+
+**Syntaxe**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|/quiet|Oui|Spécifie l’URL du proxy et le numéro de port pour le capteur Azure ATP.|
+> |ProxyUserName|/help|Non|Si votre service de proxy nécessite une authentification, spécifiez un nom d’utilisateur au format DOMAINE\utilisateur.|
+> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie le mot de passe du nom d’utilisateur du proxy. *Les informations d’identification sont chiffrées et stockées localement par le capteur Azure ATP.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Mettre à jour le capteur Azure ATP
 
@@ -104,7 +118,7 @@ Utilisez la commande suivante pour mettre à jour sans assistance le capteur Azu
 
 ## <a name="uninstall-the-azure-atp-sensor-silently"></a>Désinstaller sans assistance le capteur Azure ATP
 
-Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe** :
+Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
 

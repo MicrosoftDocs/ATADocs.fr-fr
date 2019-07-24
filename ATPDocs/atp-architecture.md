@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/27/2019
+ms.date: 07/17/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c80fe761b9e54b2031e6385bcc32d845ccf52872
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197189"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298893"
 ---
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
 
@@ -68,16 +68,12 @@ Les fonctionnalités principales du capteur Azure ATP sont les suivantes :
 
 Le capteur Azure ATP lit les événements localement, ce qui évite les frais liés à l’achat et à la maintenance de matériel et de configurations supplémentaires. Le capteur Azure ATP prend également en charge le suivi d’événements pour Windows (ETW) qui fournit des informations de journaux pour plusieurs détections. Les détections ETW reconnaissent notamment les suspicions d’attaques DCShadow tentées via des demandes de réplication de contrôleur de domaine et la promotion de contrôleur de domaine.
 
-### <a name="domain-synchronizer-candidate"></a>Candidat synchronisateur de domaine
+### <a name="domain-synchronizer-process"></a>Processus de synchronisateur de domaine
 
-Le candidat synchronisateur de domaine est responsable de la synchronisation proactive de toutes les entités d’un domaine Active Directory spécifique (semblable au mécanisme utilisé par les contrôleurs de domaine eux-mêmes pour la réplication). Un capteur est choisi au hasard, dans la liste des candidats, comme synchronisateur de domaine. 
+Le processus de synchronisateur de domaine est responsable de la synchronisation proactive de toutes les entités d’un domaine Active Directory spécifique (il est similaire au mécanisme utilisé par les contrôleurs de domaine eux-mêmes pour la réplication). Un capteur est automatiquement choisi de façon aléatoire parmi tous les capteurs éligibles comme synchronisateur de domaine. 
 
-Si le synchronisateur est hors connexion pendant plus de 30 minutes, un autre candidat est choisi à la place. Si aucun synchronisateur de domaine n’est disponible pour un domaine spécifique, Azure ATP ne peut pas synchroniser de manière proactive les entités et leurs modifications, mais il récupère les nouvelles entités à mesure qu’elles sont détectées dans le trafic surveillé.
+Si le synchronisateur de domaine est hors connexion pendant plus de 30 minutes, un autre capteur est automatiquement choisi à la place. 
     
-Si aucun synchronisateur de domaine n’est disponible et que vous recherchez une entité avec laquelle aucun trafic n’était associé, aucun résultat de recherche ne s’affiche.
-
-Par défaut, les capteurs Azure ATP ne sont pas des candidats synchronisateurs. Pour définir manuellement un capteur Azure ATP comme un synchronisateur de domaine potentiel, suivez les étapes du [flux de travail d’installation d’Azure ATP](install-atp-step5.md).
-
 ### <a name="resource-limitations"></a>Limitations des ressources
 
 Le capteur Azure ATP inclut un composant de surveillance qui évalue la capacité de calcul et de mémoire disponible sur le contrôleur de domaine où il s’exécute. Le processus de supervision s’exécute toutes les 10 secondes, et met à jour dynamiquement le quota d’utilisation du processeur et de la mémoire dans le processus du capteur Azure ATP. Le processus de supervision permet de garantir que le contrôleur de domaine dispose toujours d’au moins 15 % de ressources de calcul et de mémoire disponibles.
