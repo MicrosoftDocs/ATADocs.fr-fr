@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fe56aac6dae4b5f54134a3542c18495dbb44aacf
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: 1148e4644ac49da31f2ba62e7bb972f3f9cfbbdf
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226772"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484961"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Qu’est-ce qu’Azure Advanced Threat Protection ?
 Azure Advanced Threat Protection (ATP) est une solution de sécurité cloud qui s’appuie sur vos signaux Active Directory locaux pour identifier, détecter et investiguer les menaces avancées, les identités compromises et les actions des utilisateurs internes malveillants dirigées contre votre entreprise. Azure ATP permet aux analystes SecOp et aux professionnels de la sécurité chargés de détecter les attaques avancées dans les environnements hybrides de :  
@@ -94,7 +94,7 @@ Nous vous recommandons de déployer Azure ATP en trois phases :
 ### <a name="phase-2"></a>Phase 2
 
 1. Protégez tous les contrôleurs de domaine et les [forêts](atp-multi-forest.md) de votre organisation.  
-2.  Surveillez toutes les [alertes](working-with-suspicious-activities.md) : examinez les alertes de mouvement latéral et de prise de contrôle de domaine.  
+2. Surveillez toutes les [alertes](working-with-suspicious-activities.md) : examinez les alertes de mouvement latéral et de prise de contrôle de domaine.  
 3. Utilisez le [Guide des alertes de sécurité](suspicious-activity-guide.md) pour comprendre les menaces et trier les attaques potentielles.
 
 
