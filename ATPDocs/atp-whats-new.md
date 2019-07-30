@@ -5,21 +5,36 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/14/2019
+ms.date: 07/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b445d44aa64e2b4d0811029d4eed7e87046c52d0
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 6f96afa04a3f9179246caddb82dfca1115e20164
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298879"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604417"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+
+Publication : 28 juillet 2019
+
+## <a name="azure-atp-release-288"></a>Azure ATP version 2.88 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+Publication : 21 juillet 2019
+
+## <a name="azure-atp-release-287"></a>Azure ATP version 2.87 
+
+- **Amélioration de fonctionnalité : Collecte automatisée d’événements Syslog pour les capteurs autonomes Azure ATP**<br> Les connexions Syslog entrantes pour les capteurs autonomes Azure ATP sont maintenant entièrement automatisées, tout en supprimant le bouton bascule de l’écran de configuration. Ces modifications n’ont aucun effet sur les connexions Syslog sortantes. 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-286"></a>Azure ATP version 2.86 
 
@@ -28,11 +43,11 @@ Publication : 14 juillet 2019
 - **Nouvelle alerte de sécurité : Falsification de l’authentification NTLM suspectée (ID externe 2039) – préversion**<br>
 La nouvelle alerte de sécurité [Falsification de l’authentification NTLM suspectée](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) d’Azure ATP est désormais en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand l’utilisation d’une attaque de l’intercepteur (« man in the middle ») est suspectée, avec contournement de la vérification de l’intégrité des messages (MIC) NTLM, une faille de sécurité détaillée dans Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Ces types d’attaques tentent de rétrograder les fonctionnalités de sécurité de NTLM et de s’authentifier, avec l’objectif ultime d’effectuer des mouvements transversaux réussis. 
 
-- **Amélioration de fonctionnalité : Empreinte digitale TCP**<br> Jusqu’à présent, Azure ATP fournissait des informations sur le système d’exploitation de l’appareil pour l’entité en fonction de l’attribut disponible dans Active Directory. Avant, si les informations du système d’exploitation n’étaient pas disponibles dans Active Directory, elles ne l’étaient pas non plus dans les pages des entités Azure ATP. À compter de cette version, Azure ATP fournit ces informations pour les appareils où Active Directory ne dispose pas des informations ou qui ne sont pas inscrits dans Active Directory, en utilisant des empreintes TCP. 
+- **Amélioration de fonctionnalité : Identification complète du système d'exploitation d'un appareil**<br> Jusqu’à présent, Azure ATP fournissait des informations sur le système d’exploitation de l’appareil pour l’entité en fonction de l’attribut disponible dans Active Directory. Avant, si les informations du système d’exploitation n’étaient pas disponibles dans Active Directory, elles ne l’étaient pas non plus dans les pages des entités Azure ATP. À compter de cette version, Azure ATP fournit ces informations pour les appareils où Active Directory ne dispose pas des informations ou qui ne sont pas inscrits dans Active Directory, en utilisant des méthodes complètes d'identification du système d'exploitation de l’appareil. 
  
-    L’ajout de données d’empreinte TCP permet d’identifier les appareils non inscrits et non-Windows, tout en facilitant vos processus d’investigation. Pour plus d’informations sur la résolution de noms réseau dans Azure ATP, consultez [Comprendre la résolution de noms réseau (NNR)](atp-nnr-policy.md).  
+    L’ajout d’informations complètes sur le système d'exploitation de l’appareil permet d’identifier les appareils non inscrits et non-Windows, tout en facilitant vos processus d’investigation. Pour plus d’informations sur la résolution de noms réseau dans Azure ATP, consultez [Comprendre la résolution de noms réseau (NNR)](atp-nnr-policy.md).  
 
-- **Nouvelle fonctionnalité : Proxy authentifié - préversion**<br> Azure ATP prend désormais en charge les proxys authentifiés. Spécifiez l’URL du proxy en utilisant la ligne de commande du capteur et spécifiez le nom d’utilisateur/mot de passe pour utiliser des proxys qui nécessitent une authentification. Pour plus d’informations sur l’utilisation des proxys authentifiés, consultez [Installation sans assistance d’Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authetication).
+- **Nouvelle fonctionnalité : Proxy authentifié - préversion**<br> Azure ATP prend désormais en charge les proxys authentifiés. Spécifiez l’URL du proxy en utilisant la ligne de commande du capteur et spécifiez le nom d’utilisateur/mot de passe pour utiliser des proxys qui nécessitent une authentification. Pour plus d’informations sur l’utilisation des proxys authentifiés, consultez [Configurer le proxy](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
 
 - **Amélioration de fonctionnalité : Processus de synchronisateur de domaine automatisé**<br> Le processus de désignation et d’étiquetage des contrôleurs de domaine en tant que candidats synchronisateurs de domaine lors de l’installation et de la configuration continue est désormais entièrement automatisé. L’option permettant de sélectionner/désélectionner manuellement les contrôleurs de domaine en tant que candidats synchronisateur de domaine est supprimée. 
 
@@ -195,7 +210,7 @@ Date de publication : 17 mars 2019
     Une preuve de niveau de confiance NNR a été ajoutée aux alertes suivantes :
   - [Reconnaissance de mappage de réseau (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
   - [Suspicion d’usurpation d’identité (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
-  - [Suspicion d’attaque de relais NTLM (compte Exchange) - préversion](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
+  - [Suspicion d’attaque de relais NTLM (compte Exchange) - préversion](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)
   - [Suspicion d’attaque DCSync (réplication de services d’annuaire)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
 
 - **Scénario d’alerte d’intégrité supplémentaire : Échec du démarrage du service de capteur Azure ATP**<br>Dans les instances où le capteur Azure ATP n’a pas réussi à démarrer en raison d’un problème de pilote de capture réseau, une alerte d’intégrité de capteur est désormais déclenchée. [Résolution des problèmes de capteur Azure ATP avec les journaux Azure ATP](troubleshooting-atp-using-logs.md) pour plus d’informations sur les journaux Azure ATP et comment les utiliser. 
@@ -258,7 +273,7 @@ Des améliorations ont été apportées à la convivialité de cette alerte de s
 Date de publication : 10 février 2019
 
 - **Nouvelle alerte de sécurité : Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)**<br>
-L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) d’Azure ATP est maintenant en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. En savoir plus sur la technique **ExchangePriv** dans l’[avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019 et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) d’Azure ATP est maintenant en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. En savoir plus sur la technique **ExchangePriv** dans l’[avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019 et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Disponibilité générale : Exécution de code à distance sur DNS**<br>
 Cette alerte est maintenant en disponibilité générale. Pour plus d’informations et de caractéristiques d’alerte, consultez la [page de description de l’alerte de l’exécution de code à distance via DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
@@ -413,7 +428,7 @@ L’alerte de sécurité d’Azure ATP [Suspicion d’utilisation de golden tick
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-256"></a>Azure ATP version 2.56
-Publiée le 25 novembre 2018
+Publication : 25 novembre 2018
 
 
 - **Amélioration de fonctionnalité : Chemins de mouvement latéral** <br>
@@ -438,7 +453,7 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-254"></a>Azure ATP version 2.54
-Publiée le 11 novembre 2018
+Publication : 11 novembre 2018
 
 - **Amélioration de fonctionnalité : des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte via DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
 

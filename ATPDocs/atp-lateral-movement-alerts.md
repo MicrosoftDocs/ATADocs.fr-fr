@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 07/25/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e791dafcd8c3e05a7e05d5d50e82fae05aa5c89
-ms.sourcegitcommit: c1368baac1fa4e54eb9eb4e34a7b471e56b22ac2
+ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299371"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485007"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral  
 
@@ -38,7 +38,7 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > * Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
 > * Suspicion d’usurpation d’identité (pass-the-ticket) (ID externe 2018)
 > * Falsification de l’authentification NTLM suspectée (ID externe 2039) – préversion
-> * Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037) - préversion
+> * Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
 > * Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement) (ID externe 2008)
 > * Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
 
@@ -173,7 +173,7 @@ Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand
  
 **Prévention** •   Vérifiez que tous les appareils de l’environnement sont à jour et ont les correctifs nécessaires contre [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
-## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037) - préversion
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
 
 **Description**
 
