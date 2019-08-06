@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
-ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
+ms.openlocfilehash: 0105630931c6cbebfe2b919946f305ba031bb755
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155898"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781924"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Résolution des problèmes du capteur Azure Advanced Threat Protection (ATP) à l’aide des journaux ATP
 Les journaux ATP donnent des informations sur ce que fait chaque composant du capteur Azure ATP à n’importe quel moment.
@@ -28,8 +28,6 @@ Les journaux d’Azure ATP se trouvent dans le sous-dossier nommé **Logs** où 
 Le capteur Azure ATP dispose des journaux suivants :
 
 -   **Microsoft.Tri.Sensor.log** : ce journal contient tout ce qui se produit dans le capteur Azure ATP (y compris les erreurs et la résolution). Son utilisation principale consiste à obtenir l’état général de toutes les opérations dans l’ordre chronologique dans lequel elles se sont produites.
-
--   **Microsoft.Tri.Sensor-Resolution.log** : ce journal contient les détails de la résolution des entités visibles dans le trafic par le capteur ATP. Son utilisation principale consiste à examiner les problèmes de résolution des entités.
 
 -   **Microsoft.Tri.Sensor-Errors.log** : ce journal contient uniquement les erreurs interceptées par le capteur ATP. Son utilisation principale consiste à exécuter des vérifications d’intégrité et à examiner les problèmes qui doivent être mis en corrélation avec des heures spécifiques.
 
