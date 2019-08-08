@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 6f96afa04a3f9179246caddb82dfca1115e20164
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604417"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781897"
 ---
 # <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+
+Publication : 4 août 2019
+
+## <a name="azure-atp-release-289"></a>Azure ATP version 2.89
+
+- **Améliorations de la méthode de détection**<br>Afin d'éviter la génération d'un trafic NTLM excessif lors de la création d'évaluations précises d’un chemin de mouvement latéral (Lateral Movement Path ou LMP), des améliorations ont été apportées à la logique des capteurs Azure ATP pour réduire l'utilisation de NTLM et utiliser Kerberos de manière plus significative.  
+
+- **Amélioration de l’alerte : Suspicion d’utilisation de golden ticket (compte inexistant)**<br>Des changements du nom SAM ont été ajoutés aux types de preuves énumérés dans ce type d'alerte. Pour en savoir plus sur l'alerte, notamment comment prévenir ce type d'activité et y remédier, voir [Suspicion d'utilisation de golden ticket (compte inexistant)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
+
+- **Disponibilité générale : Falsification de l’authentification NTLM suspectée**<br> L'alerte [Falsification de l’authentification NTLM suspectée](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) n'est plus en mode préversion et est maintenant généralement disponible. 
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 
 Publication : 28 juillet 2019
@@ -40,8 +52,8 @@ Publication : 21 juillet 2019
 
 Publication : 14 juillet 2019
 
-- **Nouvelle alerte de sécurité : Falsification de l’authentification NTLM suspectée (ID externe 2039) – préversion**<br>
-La nouvelle alerte de sécurité [Falsification de l’authentification NTLM suspectée](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) d’Azure ATP est désormais en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand l’utilisation d’une attaque de l’intercepteur (« man in the middle ») est suspectée, avec contournement de la vérification de l’intégrité des messages (MIC) NTLM, une faille de sécurité détaillée dans Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Ces types d’attaques tentent de rétrograder les fonctionnalités de sécurité de NTLM et de s’authentifier, avec l’objectif ultime d’effectuer des mouvements transversaux réussis. 
+- **Nouvelle alerte de sécurité : Falsification de l’authentification NTLM suspectée (ID externe 2039)**<br>
+La nouvelle alerte de sécurité [Falsification de l’authentification NTLM suspectée](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) d’Azure ATP est désormais en préversion publique. <br> Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand l’utilisation d’une attaque de l’intercepteur (« man in the middle ») est suspectée, avec contournement de la vérification de l’intégrité des messages (MIC) NTLM, une faille de sécurité détaillée dans Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Ces types d’attaques tentent de rétrograder les fonctionnalités de sécurité de NTLM et de s’authentifier, avec l’objectif ultime d’effectuer des mouvements transversaux réussis. 
 
 - **Amélioration de fonctionnalité : Identification complète du système d'exploitation d'un appareil**<br> Jusqu’à présent, Azure ATP fournissait des informations sur le système d’exploitation de l’appareil pour l’entité en fonction de l’attribut disponible dans Active Directory. Avant, si les informations du système d’exploitation n’étaient pas disponibles dans Active Directory, elles ne l’étaient pas non plus dans les pages des entités Azure ATP. À compter de cette version, Azure ATP fournit ces informations pour les appareils où Active Directory ne dispose pas des informations ou qui ne sont pas inscrits dans Active Directory, en utilisant des méthodes complètes d'identification du système d'exploitation de l’appareil. 
  

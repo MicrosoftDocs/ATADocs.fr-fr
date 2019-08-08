@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485007"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781838"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral  
 
@@ -37,7 +37,7 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > * Exécution de code à distance sur DNS (ID externe 2036)
 > * Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
 > * Suspicion d’usurpation d’identité (pass-the-ticket) (ID externe 2018)
-> * Falsification de l’authentification NTLM suspectée (ID externe 2039) – préversion
+> * Falsification de l’authentification NTLM suspectée (ID externe 2039) 
 > * Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
 > * Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement) (ID externe 2008)
 > * Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
@@ -147,7 +147,7 @@ Il existe des applications personnalisées qui transfèrent des tickets pour le 
 4. Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
 5. Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 
-## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Falsification de l’authentification NTLM suspectée (ID externe 2039) – préversion
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Falsification de l’authentification NTLM suspectée (ID externe 2039)
 
 En juin 2019, Microsoft a publié la [vulnérabilité de sécurité CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), annonçant la découverte d’une nouvelle vulnérabilité de falsification dans Microsoft Windows, quand une attaque de l’intercepteur (« man in the middle ») est en mesure de contourner la protection de la vérification de l’intégrité des messages (MIC) NTLM.
 
