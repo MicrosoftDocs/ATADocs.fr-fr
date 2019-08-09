@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781844"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862566"
 ---
 # <a name="ata-prerequisites"></a>Prérequis pour ATA
 
@@ -89,7 +89,7 @@ L’installation du centre ATA en tant que machine virtuelle est prise en charge
 |Machine virtuelle en cours d’exécution sur|Description|
 |------------|-------------|
 |Hyper-V|Vérifiez que l’option **activer la mémoire dynamique** n’est pas activée pour la machine virtuelle.|
-|VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **réserver toute la mémoire invitée (toutes verrouillées**.|
+|VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **réserver toute la mémoire invitée (tout verrouillé)** .|
 |Autre hôte de virtualisation|Reportez-vous à la documentation fournie par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
 |
 
@@ -180,7 +180,7 @@ Pour plus d’informations sur l’utilisation de machines virtuelles avec la pa
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.<br>
 Une passerelle ATA peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau à destination et en provenance des contrôleurs de domaine.
 
-Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de bulles de mémoire, consultez [mémoire dynamique](#dynamic-memory).
+Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de gestion de la mémoire de l’ordinateur virtuel, consultez [mémoire dynamique](#dynamic-memory).
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
@@ -266,7 +266,7 @@ La passerelle légère ATA nécessite au minimum deux cœurs et 6 Go de RAM sur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle légère ATA.
 Vous pouvez déployer la passerelle légère ATA sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et à partir des contrôleurs de domaine et de la quantité de ressources installées sur ce contrôleur de domaine.
 
-Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de bulles de mémoire, consultez [mémoire dynamique](#dynamic-memory).
+Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de gestion de la mémoire de l’ordinateur virtuel, consultez [mémoire dynamique](#dynamic-memory).
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 

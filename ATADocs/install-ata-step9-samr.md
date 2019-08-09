@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 7/30/2018
+ms.date: 08/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 623e5b3623238ec8a1e12c1154a76e0aeb6b57bb
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195888"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862581"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
@@ -25,6 +25,9 @@ ms.locfileid: "65195888"
 
 > [!div class="step-by-step"]
 > [« Étape 8](install-ata-step7.md)
+
+> [!NOTE]
+> Avant d’appliquer une nouvelle stratégie, assurez-vous toujours que votre environnement reste sécurisé, sans impact sur la compatibilité des applications en activant et en vérifiant vos modifications proposées en mode audit. 
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9. Configurer les autorisations requises SAM-R
 
@@ -44,9 +47,6 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
    ![Ajoutez le service](./media/samr-add-service.png)
 
 3. Le **service ATA** (service ATA créé pendant l’installation) a désormais les privilèges appropriés pour exécuter SAM-R dans l’environnement.
-
-> [!NOTE]
-> Avant d’appliquer de nouvelles stratégies, assurez-vous que votre environnement reste sécurisé, sans affecter la compatibilité de votre application en activant et en vérifiant vos modifications proposées en mode audit. 
 
  Pour plus d’informations sur SAM-R et la stratégie de groupe, voir [Accès réseau : Restreindre les clients autorisés à effectuer des appels distants à SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
