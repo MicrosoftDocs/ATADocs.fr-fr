@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 6758527b61e2b1ab440898ed23aa7d507d8f3b3c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: af8481be19535903ca1e992a62a813acb473fcf0
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196808"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951253"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sécurité et confidentialité des données Azure ATP
 
@@ -38,7 +38,9 @@ Les données utilisateur personnelles d’Azure ATP sont dérivées de l’objet
 
 ## <a name="delete-personal-data"></a>Supprimer les données personnelles 
 
-Si un utilisateur est supprimé de l’annuaire Active Directory de l’organisation, Azure ATP supprime automatiquement le profil utilisateur et toute activité réseau associée pour une période d’une année. Vous pouvez également [supprimer](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) les alertes de sécurité qui contiennent des données personnelles. 
+- Si un utilisateur est supprimé de l’annuaire Active Directory de l’organisation, Azure ATP supprime automatiquement le profil utilisateur et toute activité réseau associée pour une période d’une année. Vous pouvez également [supprimer](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) les alertes de sécurité qui contiennent des données personnelles. 
+
+- Des autorisations en **lecture seule** sur le conteneur **Objets supprimés** sont recommandées. Pour en savoir plus sur la façon dont l’autorisation de conteneur Objets supprimés est utilisée par le service Azure ATP, consultez la recommandation relative au conteneur Objets supprimés dans [Prérequis pour Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
 
 ## <a name="export-personal-data"></a>Exporter les données personnelles 
 

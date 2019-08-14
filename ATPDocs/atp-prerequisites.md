@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/11/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
-ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
+ms.openlocfilehash: b4e9b7af867693dd41740fcf54dd0cdb47b06e34
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486382"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951270"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
 
@@ -46,7 +46,7 @@ Ce guide des prérequis comprend les sections suivantes qui vous permettent de v
 ## <a name="before-you-start"></a>Avant de commencer
 Cette section liste les informations que vous devez rassembler ainsi que les comptes et les informations d’entité réseau dont vous devez disposer avant de procéder à l’installation d’Azure ATP.
 
-- Vous pouvez acquérir une licence pour Enterprise Mobility + Security 5 (EMS E5) directement via le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence CSP (Cloud Solution Partner).  
+- Vous pouvez acquérir une licence pour EMS E5 (Enterprise Mobility + Security 5) directement via le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou utiliser le modèle de licence CSP (Cloud Solution Partner). Des licences Azure ATP autonomes sont également disponibles.  
 
 - Vérifiez que le ou les contrôleurs de domaine sur lesquels vous prévoyez d’installer des capteurs Azure ATP ont une connectivité Internet au service cloud Azure ATP. Le capteur Azure ATP prend en charge l’utilisation d’un proxy. Pour plus d’informations sur la configuration du proxy, consultez [Configuration d’un proxy pour Azure ATP](configure-proxy.md).  
 
@@ -59,9 +59,9 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Ceci permet à Azure ATP de détecter la suppression d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à Azure ATP de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
-- Facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
+- **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
 - Facultatif : lorsque vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045 à Azure ATP pour qu’il puisse mieux détecter les attaques Pass-The-Hash, Force brute, Modification de groupes sensibles et Honeytokens, ainsi que la création de services malveillants. Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 

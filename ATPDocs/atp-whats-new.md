@@ -1,31 +1,41 @@
 ---
 title: Nouveautés d’Azure ATP (Azure Advanced Threat Protection) | Microsoft Docs
-description: Décrit les dernières versions release d’Azure ATP et fournit des informations sur les nouveautés de chaque version.
+description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP (Azure Advanced Threat Protection).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: b190258096e7e3ea0d42c52931f02c148a725f21
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781897"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951229"
 ---
-# <a name="whats-new-in-azure-atp"></a>Nouveautés d’Azure ATP
+# <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
+
+Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP.
+
+Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Publication : 11 août 2019
+
+## <a name="azure-atp-release-290"></a>Azure ATP version 2.90
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 Publication : 4 août 2019
 
 ## <a name="azure-atp-release-289"></a>Azure ATP version 2.89
 
-- **Améliorations de la méthode de détection**<br>Afin d'éviter la génération d'un trafic NTLM excessif lors de la création d'évaluations précises d’un chemin de mouvement latéral (Lateral Movement Path ou LMP), des améliorations ont été apportées à la logique des capteurs Azure ATP pour réduire l'utilisation de NTLM et utiliser Kerberos de manière plus significative.  
+- **Améliorations des méthodes des capteurs**<br>Afin d’éviter la génération d’un trafic NTLM excessif lors de la création d’évaluations précises d’un chemin de mouvement latéral (Lateral Movement Path ou LMP), des améliorations ont été apportées aux méthodes des capteurs Azure ATP pour réduire l’utilisation de NTLM et utiliser Kerberos de manière plus significative.  
 
 - **Amélioration de l’alerte : Suspicion d’utilisation de golden ticket (compte inexistant)**<br>Des changements du nom SAM ont été ajoutés aux types de preuves énumérés dans ce type d'alerte. Pour en savoir plus sur l'alerte, notamment comment prévenir ce type d'activité et y remédier, voir [Suspicion d'utilisation de golden ticket (compte inexistant)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
 
