@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e6a286b4468476cd0b2ac9a350c018e4c04a265e
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: d20aecfd55dd5b348c459373cb69c37bba91d458
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403610"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629276"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
@@ -30,7 +30,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Erreur|Description|Résolution|
+> |Error|Description|Résolution :|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: A local error occurred|La passerelle ATA n’a pas pu s’authentifier auprès du contrôleur de domaine.|1. Vérifiez que l’enregistrement DNS du contrôleur de domaine est correctement configuré sur le serveur DNS. <br>2. Vérifiez que l’heure de la passerelle ATA est synchronisée avec l’heure du contrôleur de domaine.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate chain|La passerelle ATA n’a pas pu valider le certificat du centre ATA.|1. Vérifiez que le certificat de l’autorité de certification racine est installé dans le magasin de certificats d’autorité de certification de confiance sur la passerelle ATA. <br>2. Vérifiez que la liste de révocation de certificats est disponible et que la validation de la révocation de certificats peut être effectuée.|
@@ -46,7 +46,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 > |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' does not exist in the specified Category|Les PID ont été activés pour traiter les noms dans la passerelle ATA|Utilisez [KB281884](https://support.microsoft.com/kb/281884) pour désactiver les PID dans les noms de processus.|
 > |System.InvalidOperationException: Category does not exist|Il est possible que les compteurs soient désactivés dans le Registre.|Utilisez [KB2554336](https://support.microsoft.com/kb/2554336) pour reconstruire les compteurs de performance.|
 > |System.ApplicationException: Unable to start ETW session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Il existe une entrée d’hôte dans le fichier HOSTS qui pointe vers le nom court de l’ordinateur.|Supprimez l’entrée d’hôte du fichier C:\Windows\System32\drivers\etc\HOSTS ou remplacez-la par un nom de domaine complet.|
-> |System.IO.IOException: L’authentification a échoué car le tiers distant a fermé le flux de transport ou ne pouvez pas créer un canal sécurisé SSL/TLS|TLS 1.0 est désactivé sur la passerelle ATA, tandis que .Net est configuré pour utiliser TLS 1.2|Utilisez l’une des options suivantes : </br> Activer TLS 1.0 sur la passerelle ATA </br>Activer TLS 1.2 sur .Net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit : </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+> |System.IO.IOException: L’authentification a échoué car le tiers distant a fermé le flux de transport ou n’a pas pu créer un canal sécurisé SSL/TLS|TLS 1.0 est désactivé sur la passerelle ATA, tandis que .Net est configuré pour utiliser TLS 1.2|Utilisez l’une des options suivantes : </br> Activer TLS 1.0 sur la passerelle ATA </br>Activer TLS 1.2 sur .Net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit : </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|Échec du chargement par la passerelle ATA des fichiers d’analyse nécessaires.|Vérifiez si Microsoft Message Analyzer est installé. L’installation de Message Analyzer avec la passerelle / passerelle légère ATA n’est pas prise en charge. Désinstallez Message Analyzer et redémarrez le service de passerelle.|
 > |System.Net.WebException : Le serveur distant a retourné une erreur : (407) Proxy Authentication Required|La communication de la passerelle ATA avec le centre ATA est interrompue par un serveur proxy.|Désactivez le proxy sur l’ordinateur de la passerelle ATA. <br></br>Notez que les paramètres de proxy sont peut-être définis par compte.|
 > |System.IO.DirectoryNotFoundException: Le système ne peut pas trouver le chemin spécifié. (Exception de HRESULT : 0x80070003)|Un ou plusieurs services nécessaires pour exécuter ATA n’ont pas démarré.|Démarrez les services suivants : <br></br>Journaux et alertes de performance (PLA), Planificateur de tâches (Schedule).|
@@ -57,7 +57,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 ## <a name="deployment-errors"></a>Erreurs liées au déploiement
 > [!div class="mx-tableFixed"]
 > 
-> |Erreur|Description|Résolution|
+> |Error|Description|Résolution|
 > |-------------|----------|---------|
 > |L’installation de .Net Framework 4.6.1 échoue avec l’erreur 0x800713ec.|Les composants requis pour .Net Framework 4.6.1 ne sont pas installés sur le serveur. |Avant d’installer ATA, vérifiez que les mises à jour Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) et [KB2919355](https://support.microsoft.com/kb/2919355) sont installées sur le serveur.|
 > |System.Threading.Tasks.TaskCanceledException: A task was canceled|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu accéder au centre ATA.|1.    Vérifiez la connectivité réseau au centre ATA en y accédant avec son adresse IP. <br></br>2.    Vérifiez la configuration du proxy ou du pare-feu.|
@@ -70,7 +70,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 ## <a name="ata-center-errors"></a>Erreurs du centre ATA
 > [!div class="mx-tableFixed"]
 > 
-> |Erreur|Description|Résolution|
+> |Error|Description|Résolution :|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1.    Arrêtez le service du centre ATA. <br></br>2.     Supprimez le certificat du centre ATA de son magasin de certificats. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3.    Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil -importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Démarrez le service du centre ATA. <br></br>5.     Vérifiez que tout fonctionne maintenant comme prévu.|
 
@@ -79,12 +79,18 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Problème|Description|Résolution|
+> |Problème|Description|Résolution :|
 > |-------------|----------|---------|
 > |Aucun trafic reçu du contrôleur de domaine, mais des alertes de surveillance sont observées|    Aucun trafic n’a été reçu d’un contrôleur de domaine utilisant la mise en miroir de ports via une passerelle ATA|Sur la carte réseau de capture de la passerelle ATA, désactivez ces fonctionnalités dans **Paramètres avancés** :<br></br>RSC (Receive Segment Coalescing) (IPv4)<br></br>RSC (Receive Segment Coalescing) (IPv6)|
 > |Cette alerte de monitoring s’affiche : Une partie du trafic réseau n’est pas analysé|Si vous avez une passerelle ATA ou une passerelle légère sur les machines virtuelles VMware, vous pouvez recevoir cette alerte de surveillance. Ce scénario se produit à cause d’une différence de configuration dans VMware.|Définissez les paramètres suivants sur 0 ou Désactivé dans la configuration de carte réseau de la machine virtuelle : TsoEnable, LargeSendOffload, TSO Offload et Giant TSO Offload. TLS 1.0 est désactivé sur la passerelle ATA, mais .NET est configuré de façon à utiliser TLS 1.2.|
 
+## <a name="multi-processor-group-mode"></a>Mode groupe multiprocesseur 
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle ATA n’est pas prise en charge en mode groupe multiprocesseur.
 
+Suggestions de solutions possibles:
+- Si l’Hyper-Threading est activé, désactivez-le. Cela peut réduire le nombre de cœurs logiques suffisants pour éviter d’avoir à exécuter en mode **groupe multiprocesseur** . 
+
+- Si votre ordinateur dispose de moins de 64 cœurs logiques et s’exécute sur un hôte HP, vous pouvez peut-être modifier le paramètre BIOS de l’optimisation de la **taille du groupe NUMA** de la valeur par défaut **Clustered** à **Flat**. 
 
 
 

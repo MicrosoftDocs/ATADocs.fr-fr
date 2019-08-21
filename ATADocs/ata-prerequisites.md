@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: e08668199056c59093caa202123cf01a4ed303cc
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862566"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629354"
 ---
-# <a name="ata-prerequisites"></a>Prérequis pour ATA
+# <a name="ata-prerequisites"></a>Conditions préalables au déploiement d’ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -102,6 +102,7 @@ Sur un serveur physique, la base de données ATA nécessite la **désactivation*
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode groupe de plusieurs processeurs, consultez [résolution des problèmes](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
