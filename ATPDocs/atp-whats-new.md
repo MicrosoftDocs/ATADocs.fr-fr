@@ -5,25 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 08/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b190258096e7e3ea0d42c52931f02c148a725f21
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: c4bee40662a363203f47c641ed5ab207aa8e88a7
+ms.sourcegitcommit: 9ad639b3f39b80576721a6541b12040880141b4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68951229"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69577096"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
 Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP.
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Publication : 18 août 2019
+
+## <a name="azure-atp-release-291"></a>Azure ATP version 2.91
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 Publication : 11 août 2019
 
