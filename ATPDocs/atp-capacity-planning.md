@@ -1,5 +1,5 @@
 ---
-title: Planification de votre déploiement Azure - Protection avancée contre les menaces - Démarrage rapide | Microsoft Docs
+title: Planification de votre déploiement Azure Advanced Threat Protection - Démarrage rapide | Microsoft Docs
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 author: mlottner
 ms.author: mlottner
@@ -110,15 +110,15 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 
     ![Image du nouvel ensemble de collecteurs de données](media/atp-traffic-estimation-3.png)
 
-4.  Entrez un nom pour l’ensemble de collecteurs, puis sélectionnez **Créer manuellement (avancé)**.
+4.  Entrez un nom pour l’ensemble de collecteurs, puis sélectionnez **Créer manuellement (avancé)** .
 
-5.  Sous **Quel type de données inclure ?**, sélectionnez **Créer des journaux de données et Compteur de performances**.
+5.  Sous **Quel type de données inclure ?** , sélectionnez **Créer des journaux de données et Compteur de performances**.
 
     ![Image du type de données pour le nouvel ensemble de collecteurs de données](media/atp-traffic-estimation-5.png)
 
-6.  Sous **Quels compteurs de performance enregistrer dans un journal ?**, cliquez sur **Ajouter**.
+6.  Sous **Quels compteurs de performance enregistrer dans un journal ?** , cliquez sur **Ajouter**.
 
-7.  Développez **Carte réseau**. Sélectionnez **Paquets/s**, puis l’instance appropriée. Si vous n’êtes pas sûr, vous pouvez sélectionner **&lt;Toutes les instances&gt;**, puis cliquer sur **Ajouter** et **OK**.
+7.  Développez **Carte réseau**. Sélectionnez **Paquets/s**, puis l’instance appropriée. Si vous n’êtes pas sûr, vous pouvez sélectionner **&lt;Toutes les instances&gt;** , puis cliquer sur **Ajouter** et **OK**.
 
     > [!NOTE]
     > Pour effectuer cette opération dans une ligne de commande, exécutez `ipconfig /all` pour afficher le nom de la carte réseau et sa configuration.

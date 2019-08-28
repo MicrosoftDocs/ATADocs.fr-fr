@@ -55,7 +55,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
     > [!NOTE]
     > Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
--   Si vous exécutez Wireshark sur le capteur autonome Azure ATP, redémarrez le service de capteur Azure - Protection avancée contre les menaces après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
+-   Si vous exécutez Wireshark sur le capteur autonome Azure ATP, redémarrez le service de capteur Azure Advanced Threat Protection après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
