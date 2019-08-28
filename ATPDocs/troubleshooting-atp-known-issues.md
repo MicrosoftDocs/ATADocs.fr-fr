@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 639dc38eeb9f4944cdd011074463953a13a49966
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "65196661"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629306"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP 
 
@@ -62,6 +62,14 @@ Si vous avez déjà installé le capteur :
 3.  Désinstallez WinPcap.
 4.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
 5.  Réinstallez le package du capteur.
+
+## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur 
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode Groupe multiprocesseur.
+
+Solutions de contournement possibles :
+- Si l’hyperthreading est activé, désactivez-le. Cela peut suffisamment réduire le nombre de cœurs logiques pour éviter d’avoir à exécuter en mode **Groupe multiprocesseur**. 
+
+- Si votre ordinateur dispose de moins de 64 cœurs logiques et s’exécute sur un hôte HP, vous pourrez peut-être modifier le paramètre BIOS **Optimisation de la taille du groupe NUMA** de la valeur par défaut **En cluster** à la valeur **Plat**. 
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problème d’intégration Windows Defender ATP
 

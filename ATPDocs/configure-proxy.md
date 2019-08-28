@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 347f46b51267762760783fdc44b689e213ba29d8
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485036"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629295"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
@@ -73,7 +73,8 @@ Les URL précédentes mappent automatiquement vers l’emplacement de service co
 
  
 > [!NOTE]
-> Lors de l’inspection SSL sur le trafic réseau Azure ATP (entre le capteur et le service Azure ATP), l’inspection SSL doit prendre en charge une inspection mutuelle.
+> Pour garantir la sécurité maximale et la confidentialité des données, Azure ATP utilise l’authentification mutuelle basée sur les certificats entre chaque capteur Azure ATP et le back-end cloud Azure ATP. Si l’inspection SSL est utilisée dans votre environnement, assurez-vous que l’inspection est configurée pour l’authentification mutuelle, de sorte qu’elle n’interfère pas dans le processus d’authentification.
+
 
 
 ## <a name="see-also"></a>Voir aussi
