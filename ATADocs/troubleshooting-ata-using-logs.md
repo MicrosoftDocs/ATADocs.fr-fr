@@ -5,19 +5,19 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 307e7ff1e41b166088cb31822070116f134b36e3
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: cd4af40af83b060093b0b5822d0e9110a4ada4f0
+ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195618"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076635"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Résolution des problèmes liés à ATA à l’aide des journaux ATA
 
@@ -28,7 +28,7 @@ Les journaux ATA offrent un aperçu de ce que fait chaque composant ATA à un mo
 ## <a name="ata-gateway-logs"></a>Journaux de la passerelle ATA
 Dans cette section, chaque référence à la passerelle ATA concerne également la passerelle légère ATA. 
 
-Les journaux de la passerelle ATA se trouvent dans le sous-dossier nommé **Logs** où ATA est installé ; l’emplacement par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\\**. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Les journaux de la passerelle ATA se trouvent dans le sous-dossier nommé **Logs** où ATA est installé ; l’emplacement par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\\** . Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 La passerelle ATA dispose des journaux suivants :
 
@@ -67,7 +67,7 @@ Le centre ATA dispose des journaux suivants :
 
 
 ## <a name="ata-deployment-logs"></a>Journaux de déploiement ATA
-Les journaux de déploiement ATA sont situés dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : **C:\Users\Administrator\AppData\Local\Temp** (ou d’un répertoire au-dessus de %temp%).
+Les journaux de déploiement ATA sont situés dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : C:\Users connecté à l' **utilisateur > \AppData\Local\Temp (ou un répertoire au-dessus de% temp%).\<**
 
 Journaux de déploiement du centre ATA :
 

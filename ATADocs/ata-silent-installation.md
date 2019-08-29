@@ -5,19 +5,19 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b94c6812038399420deaea96f2427897ebff384a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: 9778cfa171ca6f5bc9b7597af935d15456504c62
+ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196246"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076682"
 ---
 # <a name="ata-silent-installation"></a>Installation d’ATA sans assistance
 
@@ -148,7 +148,7 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 
 **Syntaxe** :
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] 
     [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
