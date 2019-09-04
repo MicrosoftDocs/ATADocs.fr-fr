@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485061"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209183"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Commutateurs et installation sans assistance d’Azure ATP
 Cet article fournit des instructions pour les commutateurs et l’installation sans assistance d’Azure ATP.
@@ -46,10 +46,16 @@ Pour suivre la progression du déploiement, surveillez les journaux d’installa
 
 Utilisez la commande suivante pour effectuer une installation sans assistance complète du capteur Azure ATP :
 
-
-**Syntaxe** :
+**Syntaxe cmd.exe** :
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+**Syntaxe Powershell** :
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+> [!NOTE]
+> Lorsque vous utilisez la syntaxe PowerShell, l’omission du préfixe **./** génère une erreur qui empêche l’installation sans assistance.
 
 > [!NOTE]
 > Copiez la clé d’accès à partir de la section **Configuration**, page **Capteur** du portail Azure ATP.
@@ -81,7 +87,7 @@ Utilisez la commande suivante pour effectuer une installation sans assistance co
 
 Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
-**Syntaxe** :
+**Syntaxe**:
 
 
 > [!div class="mx-tableFixed"]
@@ -118,7 +124,7 @@ Utilisez la commande suivante pour mettre à jour sans assistance le capteur Azu
 
 ## <a name="uninstall-the-azure-atp-sensor-silently"></a>Désinstaller sans assistance le capteur Azure ATP
 
-Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe** :
+Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
 

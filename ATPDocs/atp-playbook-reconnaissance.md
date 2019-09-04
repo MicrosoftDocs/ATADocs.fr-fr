@@ -5,14 +5,14 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 20e91bc710dc184fa710cf7fd59cb9bd9d625d20
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253961"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209231"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Didacticiel : Playbook de reconnaissance
 
@@ -46,11 +46,13 @@ Méthodes de test d’attaque de reconnaissance :
 
 Une des premières choses que fait un attaquant est d’essayer d’obtenir une copie de toutes les informations DNS. En cas de succès, l’attaquant obtient des informations détaillées sur votre environnement, qui peuvent éventuellement inclure des informations similaires sur vos autres environnements ou réseaux.
 
+Azure ATP supprime l’activité de reconnaissance de mappage réseau de votre **chronologie d’activités suspectes** jusqu'à ce qu'une période d'apprentissage de 8 jours soit terminée. Pendant la période d’apprentissage, Azure ATP apprend ce qui est normal et anormal pour votre réseau. Après la période d’apprentissage de 8 jours, les événements anormaux de reconnaissance de mappage réseau appellent l’alerte de sécurité associée. 
+
 ### <a name="run-nslookup-from-victimpc"></a>Exécuter nslookup à partir de VictimPC
 
 Pour tester la reconnaissance DNS, nous utilisons l’outil de ligne de commande natif, *nslookup*, pour lancer un transfert de zone DNS. Les serveurs DNS avec une configuration correcte refusent les requêtes de ce type et n’autorisent pas la tentative de transfert de zone.  
 
-Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
+Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
 
 ``` cmd
 nslookup
@@ -76,14 +78,14 @@ Si **ContsoDC** est votre premier capteur déployé, attendez 15 minutes pour pe
 
 ### <a name="network-mapping-reconnaissance-dns-detected-in-azure-atp"></a>Reconnaissance de mappage de réseau (DNS) détectée dans Azure ATP
 
-La visibilité de ce type de tentative (réussie ou non) est essentielle pour la protection contre les menaces de domaine. Étant donné que nous venons d’installer l’environnement, nous devons accéder à la chronologie des activités logiques pour voir l’activité. 
+La visibilité de ce type de tentative (réussie ou non) est essentielle pour la protection contre les menaces de domaine. Après l’installation récente de l’environnement, vous devez accéder à la **chronologie des activités logiques** pour voir l’activité détectée. 
 
 Dans la recherche Azure ATP, tapez **VictimPC**, puis cliquez dessus pour afficher la chronologie.
 
 ![Reconnaissance DNS détectée par Azure ATP, vue de haut niveau](media/playbook-recon-nslookupdetection1.png)
 
 Recherchez l’activité « Requête AXFR ». Azure ATP détecte ce type de reconnaissance sur votre serveur DNS. 
-  - Si vous avez un grand nombre d’activités, cliquez sur **Filtrer par** et décochez tous les types à l’exception de « Requête DNS ».
+  - Si vous avez un grand nombre d’activités, cliquez sur **Filtrer par** et désélectionnez tous les types à l’exception de **Requête DNS**.
 
 ![Vue détaillée de la détection de reconnaissance DNS dans Azure ATP](media/playbook-recon-nslookupdetection2.png)
 

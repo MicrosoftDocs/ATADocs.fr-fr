@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/07/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
-ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
+ms.openlocfilehash: 1bfed94e29200a52eba6de8758e1241b14084264
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67786395"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052387"
 ---
-# <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine  
+# <a name="tutorial-domain-dominance-alerts"></a>Didacticiel : Alertes de dominance du domaine  
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -339,9 +339,9 @@ Les applications peuvent s’authentifier avec un code de chiffrement plus faibl
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Suspicion d’utilisation de golden ticket (données d’autorisation falsifiées) (ID externe 2013)
 
-*Nom précédent :* Réaffectation de privilèges à l’aide de données d’autorisation falsifiées
+Nom précédent : Réaffectation de privilèges à l’aide de données d’autorisation falsifiées
 
-Description : Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants d’obtenir des privilèges supplémentaires par le biais du certificat PAC (Privileged Attribute Certificate), champ dans le ticket Kerberos qui contient les données d’autorisation de l’utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe). 
+**Description** Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants d’obtenir des privilèges supplémentaires par le biais du certificat PAC (Privileged Attribute Certificate), champ dans le ticket Kerberos qui contient les données d’autorisation de l’utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe). 
  
 **TP, B-TP ou FP**
 <br>Pour les ordinateurs qui sont corrigés avec MS14-068 (contrôleur de domaine) ou MS11-013 (serveur), les tentatives d’attaque ne réussissent pas et génèrent une erreur Kerberos. 

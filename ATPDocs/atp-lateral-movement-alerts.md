@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: a20c26d45f8cc0ddda05b103e03fa16f9de569b8
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781838"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052450"
 ---
-# <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral  
+# <a name="tutorial-lateral-movement-alerts"></a>Didacticiel : Alertes de mouvement latéral  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -177,7 +177,7 @@ Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand
 
 **Description**
 
-Un serveur Exchange peut être configuré pour l’authentification NTLM déclenchée avec le compte Exchange Server auprès d’un serveur HTTP distant exécuté par un attaquant. Ce serveur attend que la communication du serveur Exchange relaie sa propre authentification sensible auprès de n’importe quel autre serveur ou, plus intéressant encore, auprès de l’annuaire Active Directory via LDAP, et s’empare des informations d’authentification.
+Un serveur Exchange peut être configuré pour déclencher l’authentification NTLM avec le compte Exchange Server auprès d’un serveur HTTP distant exécuté par un attaquant. Le serveur attend que la communication du serveur Exchange relaie sa propre authentification sensible auprès de n’importe quel autre serveur ou, plus intéressant encore, auprès de l’annuaire Active Directory via LDAP, et s’empare des informations d’authentification.
 
 Une fois que le serveur relais reçoit l’authentification NTLM, il fournit une demande qui a été créée à l’origine par le serveur cible. Le client répond à la demande, empêchant un attaquant de prendre la réponse et de l’utiliser pour continuer la demande NTLM avec le contrôleur de domaine cible. 
 
