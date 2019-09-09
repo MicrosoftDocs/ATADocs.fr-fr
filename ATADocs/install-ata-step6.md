@@ -2,22 +2,22 @@
 title: Installer Advanced Threat Analytics - Étape 6 | Microsoft Docs
 description: Dans cette étape d’installation d’ATA, vous configurez des sources de données.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd6cc7021a024755a931fd9a56db27c0825d10a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195941"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803170"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
@@ -30,10 +30,10 @@ ms.locfileid: "65195941"
 ## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collecte d’événements
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
-Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA pour l’écoute des événements SIEM ou en [configurant le transfert d’événements Windows](configure-event-collection.md). 
+Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ces événements Windows sont lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières, soit en configurant la passerelle ATA pour écouter les événements SIEM, soit en [ Configuration du transfert d’événements Windows](configure-event-collection.md).  
 
 > [!NOTE]
-> Pour les versions 1.8 et ultérieures d’ATA, la configuration de la collecte d’événements n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA peut désormais lire les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
+> Pour les versions ATA 1,8 et ultérieures, la configuration de la collecte d’événements Windows n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA lit désormais les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
 
 Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, ATA peut utiliser des événements Windows pour améliorer les détections. Il utilise l’événement 4776 pour NTLM, qui améliore plusieurs détections et les événements 4732, 4733, 4728, 4729, 4756 et 4757 pour améliorer la détection des modifications de groupes sensibles. Vous pouvez soit recevoir cet événement de votre serveur SIEM, soit définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à ATA des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/08/2019
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: 5d266de0344a699ed3c3934246311f21b1b00c09
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862581"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803202"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
@@ -33,7 +33,7 @@ ms.locfileid: "68862581"
 
 La détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur des requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont effectuées à l’aide du protocole SAM-R, via le compte du service ATA créé à l’[étape 2. Se connecter à AD](install-ata-step2.md).
  
-Pour vous assurer que les clients et serveurs Windows autorisent le compte de service ATA à effectuer cette opération SAM-R, vous devez modifier votre **stratégie de groupe** de manière à ajouter le compte de service ATA en plus des comptes configurés listés dans la stratégie **Accès réseau**.
+Pour vous assurer que les clients et serveurs Windows autorisent le compte de service ATA à effectuer cette opération SAM-R, vous devez modifier votre **stratégie de groupe** de manière à ajouter le compte de service ATA en plus des comptes configurés listés dans la stratégie **Accès réseau**. Cette stratégie de groupe doit être appliquée à tous les appareils de votre organisation. 
 
 1. Recherchez la stratégie :
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 8/26/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e774ad3775fa01ae79c2eb1a82e3111cd2cb214f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196593"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803112"
 ---
 # <a name="ata-architecture"></a>Architecture d’ATA
 
@@ -57,8 +57,6 @@ Le déploiement ATA ne peut contenir que des passerelles légères ATA : les pa
 Votre déploiement ATA comprend des passerelles ATA et des passerelles légères ATA. Les passerelles légères ATA sont installées sur certains de vos contrôleurs de domaine (par exemple, tous les contrôleurs de domaine de vos sites de succursale). En même temps, d’autres contrôleurs de domaine sont surveillés par des passerelles ATA (par exemple, les plus grands contrôleurs de domaine de vos principaux centres de données).
 
 Dans tous ces scénarios, toutes les passerelles envoient leurs données au centre ATA.
-
-
 
 
 ## <a name="ata-center"></a>Centre ATA
@@ -132,10 +130,10 @@ Les fonctionnalités suivantes fonctionnent différemment selon que vous exécut
 
 -   **Candidat synchronisateur de domaine**<br>
 La passerelle synchronisatrice de domaine est responsable de la synchronisation proactive de toutes les entités d’un domaine Active Directory spécifique (semblable au mécanisme utilisé par les contrôleurs de domaine eux-mêmes pour la réplication). Une passerelle est choisie au hasard comme synchronisateur de domaine dans la liste des candidats. <br><br>
-Si le synchronisateur est hors connexion pendant plus de 30 minutes, un autre candidat est choisi à la place. Si aucun synchronisateur de domaine n’est disponible pour un domaine spécifique, ATA ne peut pas synchroniser de manière proactive les entités et leurs modifications, mais il récupère de manière réactive les nouvelles entités à mesure qu’elles sont détectées dans le trafic analysé. 
-<br>Si aucun synchronisateur de domaine n’est disponible et que vous recherchez une entité avec laquelle aucun trafic n’était associé, aucun résultat de recherche ne s’affiche.<br><br>
-Par défaut, toutes les passerelles ATA sont des candidats synchronisateurs.<br><br>
-Comme il est plus probable que toutes les passerelles légères ATA soient déployées dans des sites de succursale et sur des contrôleurs de domaine de petite taille, par défaut elles ne sont pas candidats synchronisateurs.
+Si le synchronisateur est hors connexion pendant plus de 30 minutes, un autre candidat est choisi à la place. Si aucun candidat synchronisateur de domaine n’est disponible pour un domaine spécifique, ATA synchronise de manière proactive les entités et leurs modifications. Toutefois, ATA récupère de manière réactive les nouvelles entités à mesure qu’elles sont détectées dans le trafic analysé. 
+<br>Quand aucun synchronisateur de domaine n’est disponible, la recherche d’une entité sans trafic associé n’affiche aucun résultat.<br><br>
+Par défaut, toutes les passerelles ATA sont des candidats de synchronisateur de domaine.<br><br>
+Comme il est plus probable que toutes les passerelles légères ATA soient déployées dans des sites de succursale et sur des contrôleurs de domaine de petite taille, par défaut elles ne sont pas candidats synchronisateurs. <br><br>Dans un environnement avec uniquement des passerelles légères, il est recommandé d’attribuer deux des passerelles en tant que candidats de synchronisateur, où une passerelle légère est le candidat du synchronisateur par défaut et l’autre la sauvegarde si la valeur par défaut est hors connexion pendant plus de 30 maximum. 
 
 
 -   **Limitations des ressources**<br>
@@ -169,7 +167,7 @@ Même si tout le trafic réseau des contrôleurs de domaine est mis en miroir ve
 Les contrôleurs de domaine et les passerelles ATA peuvent être physiques ou virtuels. Pour plus d’informations, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
 
 
-### <a name="events"></a>Événements
+### <a name="events"></a>Events
 Pour améliorer sa détection des attaques Pass-the-hash, par force brute, par modification des groupes sensibles et honeytoken, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756 et 4757. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA pour l’écoute des événements SIEM ou en [configurant le transfert d’événements Windows](configure-event-collection.md).
 
 -   Configuration de la passerelle ATA pour écouter les événements SIEM <br>Configurez votre serveur SIEM de manière à transférer des événements Windows spécifiques vers ATA. ATA prend en charge plusieurs fournisseurs SIEM. Pour plus d’informations, consultez [Configurer la collecte d’événements](configure-event-collection.md).
