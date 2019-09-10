@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 0d2befa95ca0bc8fd87cb5fa2dc6563646892945
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298794"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803216"
 ---
 # <a name="integrate-with-syslog"></a>Intégrer à Syslog
 
-Azure ATP peut vous informer quand il détecte des activités suspectes, et émettre des alertes de sécurité ou d’intégrité en envoyant la notification à votre serveur Syslog. Si vous activez les notifications Syslog, vous pouvez définir les éléments suivants :
+Azure ATP peut vous informer quand il détecte des activités suspectes, et émettre des alertes de sécurité ou d’intégrité en envoyant la notification depuis le capteur sélectionné à votre serveur Syslog. Si vous activez les notifications Syslog, vous pouvez définir les éléments suivants :
 
    |Champ|Description|
    |---------|---------------|
@@ -49,7 +49,7 @@ Azure ATP peut vous informer quand il détecte des activités suspectes, et éme
 1. Sélectionnez le protocole de **Transport** (TCP ou UDP). 
 1. Sélectionnez le format (RFC 3164 ou RFC 5424). 
 1. Sélectionnez **Envoyer un message de test à syslog**, puis vérifiez que le message est reçu dans votre solution d’infrastructure Syslog. 
-1. Cliquez sur **Enregistrer**. 
+1. Cliquez sur **Save**. 
 
 Pour passer en revue ou modifier vos paramètres Syslog.  
 

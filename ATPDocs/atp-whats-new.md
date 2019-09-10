@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 0d3d1dcc2fddf493331473b4ef98e1a1dc721e5e
-ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
+ms.openlocfilehash: 946cfdeafd6f2ef0cba5c16d290ac922ccf68f4b
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209203"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803159"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -25,14 +25,23 @@ Cet article est mis à jour fréquemment pour vous informer des nouveautés de l
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-Publication : 1 septembre 2019
+Publication : 8 septembre 2019
+
+# <a name="azure-atp-release-294"></a>Azure ATP version 2.94
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+
+Publication : 1er septembre 2019
 
 ## <a name="azure-atp-release-293"></a>Azure ATP version 2.93
+
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 Publication : 25 août 2019
 
 ## <a name="azure-atp-release-292"></a>Azure ATP version 2.92
+
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 Publication : 18 août 2019
@@ -466,7 +475,7 @@ L’alerte de sécurité d’Azure ATP [Suspicion d’utilisation de golden tick
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-256"></a>Azure ATP version 2.56
-Publiée le 25 novembre 2018
+Publication : 25 novembre 2018
 
 
 - **Amélioration de fonctionnalité : Chemins de mouvement latéral** <br>
@@ -491,7 +500,7 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-254"></a>Azure ATP version 2.54
-Publiée le 11 novembre 2018
+Publication : 11 novembre 2018
 
 - **Amélioration de fonctionnalité : des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte via DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
 
