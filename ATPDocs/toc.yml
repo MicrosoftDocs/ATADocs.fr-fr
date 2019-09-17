@@ -13,8 +13,6 @@
 - name: Guides de démarrage rapide
   expanded: true
   items:
-    - name: Planifier votre capacité Azure ATP
-      href: atp-capacity-planning.md
     - name: Créer votre instance Azure ATP
       href: install-atp-step1.md
     - name: Se connecter à Active Directory
@@ -23,8 +21,6 @@
       href: install-atp-step3.md
     - name: Installer le capteur Azure ATP
       href: install-atp-step4.md
-    - name: Configurer le capteur Azure ATP
-      href: install-atp-step5.md
 - name: Didacticiels
   items:
     - name: Alertes de reconnaissance
@@ -87,7 +83,7 @@
               href: atp-cas-isp-print-spooler.md
             - name: Évaluation pour empêcher l’utilisation de chiffrements faibles
               href: atp-cas-isp-weak-cipher.md
-            - name: Évaluation pour empêcher les délégations Kerberos sans contrainte
+            - name: Évaluation pour empêcher les délégations Kerberos non sécurisées
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Laboratoire des alertes de sécurité
       items:
@@ -103,6 +99,8 @@
           href: atp-playbook-domain-dominance.md
     - name: Présentation des alertes de sécurité
       href: understanding-security-alerts.md
+    - name: Planifier votre capacité Azure ATP
+      href: atp-capacity-planning.md
     - name: Gérer les alertes de sécurité
       href: working-with-suspicious-activities.md
     - name: Exclure des entités des détections
@@ -141,6 +139,8 @@
       href: ATP-silent-installation.md
     - name: Configurer des capteurs Azure ATP
       items:
+        - name: Configurer le capteur Azure ATP
+          href: install-atp-step5.md
         - name: configuration du proxy ;
           href: configure-proxy.md
         - name: Vérification de la stratégie d’audit avancée
