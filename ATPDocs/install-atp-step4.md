@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 99045c4d8982c34d3defa681417a3b3963c563ac
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: f3af1034b73d1fc058a966c5d90eaf24dd282140
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253927"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004872"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Démarrage rapide : Installer le capteur Azure ATP
 
@@ -83,9 +83,8 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-> [!div class="step-by-step"]
-> [« Étape 3 : Télécharger le programme d’installation du capteur](install-atp-step3.md)
-> [Étape 5 : Configurer les paramètres du capteur »](install-atp-step5.md)
+Le capteur Azure ATP est conçu pour avoir un impact minimal sur les ressources de votre contrôleur de domaine et sur l’activité réseau. Pour créer une évaluation des performances, consultez [Planifier la capacité de votre solution Azure ATP](install-atp-step5.md).
+
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 

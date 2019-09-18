@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 437339467e76cb60edd49bee179392eb152fe458
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 0bff9c9081951c234d2d0076d154a984898a0a31
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195182"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004495"
 ---
 # <a name="understanding-entity-profiles"></a>Présentation des profils d’entité
+
+> [!NOTE]
+> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
 
 Le profil d’entité fournit une page complète sur l’entité, qui permet de mener des investigations approfondies sur les utilisateurs, les ordinateurs, les appareils, les ressources auxquelles ils ont accès et sur leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 

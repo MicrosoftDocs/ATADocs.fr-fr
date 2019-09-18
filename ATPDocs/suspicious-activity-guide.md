@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 371a1227552d1d7dd8635e0a41492c69e66fe87c
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 0ad92d350d64da918bb5914ad36a884e9e4c7efe
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781936"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004809"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertes de sécurité Azure ATP
+
+> [!NOTE]
+> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
 
 Les alertes de sécurité Azure ATP expliquent les activités suspectes détectées par des capteurs Azure ATP sur votre réseau, et présentent les acteurs et les ordinateurs impliqués dans chaque menace. Des listes de preuves d’alertes contiennent des liens directs vers les ordinateurs et les utilisateurs impliqués, afin de rendre vos recherches plus faciles et plus directes.
 

@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11362c25d0d61925101db2f3f7f896f233931ca
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 3428a95fd77252bf7384c8e733842134bc8141d2
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196749"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004729"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutoriel : Utiliser des chemins de mouvement latéral
+
+> [!NOTE]
+> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
 
 Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont les attaques par [vol d’informations d’identification](suspicious-activity-guide.md#) et par [Pass-the-Ticket](suspicious-activity-guide.md). Dans les deux méthodes, des comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs.
 

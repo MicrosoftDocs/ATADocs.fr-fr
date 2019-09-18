@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4868282aaf5dc45c5f25740e26d6c3c7f0403952
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6144f9f35e8ee3b7cec4b7522fe03a6a3e8673b0
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65193554"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004747"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutoriel : Examiner une entité
+
+> [!NOTE]
+> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
 
 Dans ce tutoriel, vous allez apprendre à investiguer les entités connectées à des activités suspectes détectées par Azure Advanced Threat Protection (ATP). Après avoir consulté une alerte de sécurité dans la chronologie, vous découvrirez comment explorer l’entité impliquée dans l’alerte, puis comment utiliser les paramètres et détails suivants pour en savoir plus sur ce qui est arrivé et sur ce que vous devez faire pour réduire les risques.
 

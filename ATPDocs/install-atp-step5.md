@@ -1,24 +1,24 @@
 ---
-title: 'Démarrage rapide : Configurer les paramètres du capteur Azure ATP | Microsoft Docs'
+title: Configurer les paramètres du capteur Azure ATP - concepts | Microsoft Docs
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 07/17/2019
-ms.topic: quickstart
+ms.date: 09/15/2019
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298907"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004854"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Démarrage rapide : Configurer les paramètres du capteur Azure ATP
+# <a name="configure-azure-atp-sensor-settings"></a>Configurer les paramètres du capteur Azure ATP
 
-Dans ce guide de démarrage rapide, vous allez configurer les paramètres du capteur Azure ATP pour commencer à voir des données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti des fonctionnalités Azure ATP.  
+Dans cet article, vous allez apprendre à configurer correctement les paramètres du capteur Azure ATP pour commencer à voir des données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti de toutes les fonctionnalités Azure ATP.  
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -53,7 +53,7 @@ Une fois le capteur Azure ATP installé, procédez comme suit pour configurer se
     - Dans le cas d’un capteur autonome Azure ATP sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Ces cartes réseau reçoivent le trafic du contrôleur de domaine mis en miroir.
 
  
-1. Cliquez sur **Enregistrer**.
+1. Cliquez sur **Save**.
 
 
 ## <a name="validate-installations"></a>Valider les installations
@@ -71,7 +71,7 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 1. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
     1. Type ```nslookup```
-    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```
+    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```.
         - Veillez à remplacer contosodc.contoso.azure et contoso.azure par le nom de domaine complet de votre capteur Azure ATP et le nom de domaine respectivement.
     1. Type ```ls -d contoso.azure```
     1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.  

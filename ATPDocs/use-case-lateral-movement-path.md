@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/22/2019
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad82a095d62de0c1d48abfa9d36fcf909dd68cd9
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: f7823fee5828df51b336428d810905e2672cc5a4
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264994"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004912"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral d’Azure ATP 
+
+> [!NOTE]
+> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
 
 On parle de mouvement latéral quand un attaquant utilise des comptes non sensibles pour obtenir l’accès à des comptes sensibles dans votre réseau. Les attaquants utilisent le mouvement latéral pour identifier et obtenir l’accès à des ordinateurs et des comptes sensibles de votre réseau, qui partagent des informations d’identification stockées dans des comptes, des groupes et des ordinateurs. Une fois qu’un attaquant réussit à faire des mouvements latéraux jusqu’à vos cibles clés, il peut également tirer parti de vos contrôleurs de domaine et y accéder. Les attaques par mouvements latéraux sont effectuées selon la plupart des méthodes décrites dans le [Guide des activités suspectes](suspicious-activity-guide.md).
 
