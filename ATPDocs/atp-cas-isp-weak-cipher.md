@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 784f381ef8209bef885bb2e8944a60a23d21ec8c
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 97ea6d080d2aae84bcf0675da853f503fd10b314
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007413"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185521"
 ---
 # <a name="security-assessment-weak-cipher-usage---preview"></a>Évaluation de la sécurité : Utilisation de chiffrements faibles - Préversion
 
 
 ## <a name="what-are-weak-ciphers"></a>Qu’entend-on par « chiffrements faibles » ? 
 
-Le chiffrement s’appuie sur des algorithmes de chiffrement (« ciphers ») pour chiffrer nos données. Citons par exemple RC4 (Rivest Cipher 4, également connu sous le nom de ARC4 ou ARCFOUR qui signifie Alleged RC4).   Bien que RC4 soit remarquable en termes de simplicité et de rapidité, sa sécurité peut être compromise en raison de multiples vulnérabilités qui ont été découvertes depuis la version originale. RC4 est particulièrement vulnérable quand le début du flux de clés de sortie n’est pas supprimé ou quand des clés non aléatoires ou associées sont utilisées. 
+Le chiffrement s’appuie sur des algorithmes de chiffrement (« ciphers ») pour chiffrer nos données. Citons par exemple RC4 (Rivest Cipher 4, également connu sous le nom de ARC4 ou ARCFOUR qui signifie Alleged RC4). Bien que RC4 soit remarquable en termes de simplicité et de rapidité, sa sécurité peut être compromise en raison de multiples vulnérabilités qui ont été découvertes depuis la version originale. RC4 est particulièrement vulnérable quand le début du flux de clés de sortie n’est pas supprimé ou quand des clés non aléatoires ou associées sont utilisées. 
 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Comment faire pour utiliser cette évaluation de la sécurité afin d’améliorer la sécurité de mon organisation ? 
 

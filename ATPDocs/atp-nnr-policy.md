@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 9cef9a1eb7035f1db61ab6c3c0b90d4e73278d36
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298944"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185644"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
 
-La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité Azure ATP. Azure ATP capture les activités en fonction du trafic réseau, des événements Windows et d’ETW ; or, ces activités contiennent normalement des données d’adresses IP.  
+La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité Azure ATP. Azure ATP capture les activités en fonction du trafic réseau, des événements Windows et d’ETW ; or, ces activités contiennent normalement des données d’adresses IP. 
 
 Avec la résolution de noms réseau, Azure ATP peut corréler les activités brutes (contenant des adresses IP) aux ordinateurs concernés impliqués dans chaque activité. À partir des activités brutes, Azure ATP profile les entités, notamment les ordinateurs, et génère des alertes en cas d’activité suspecte.
 
@@ -62,7 +62,7 @@ La preuve inclut l’heure, l’adresse IP et le nom de l’ordinateur qui ont p
 
 
 ### <a name="prerequisites"></a>Prérequis
-|Protocole|  Transport|  Port|   Appareil| Direction|
+|Protocole|  Transport|  Port|   Appareil| Sens|
 |--------|--------|------|-------|------|
 |NTLM sur RPC| TCP |135|   Tous les appareils sur le réseau| Entrant|
 |NetBIOS|   UDP|    137|    Tous les appareils sur le réseau| Entrant|

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: 27630e93db4e103454e6d0fec7756824988ec4a2
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629295"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185506"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
@@ -31,6 +31,21 @@ Quand vous configurez le proxy, vous devez savoir que le service de capteur Azur
 ## <a name="configure-the-proxy"></a>Configurer le proxy 
 
 Vous pouvez configurer vos paramètres proxy pendant l'installation du capteur en utilisant les paramètres définis dans [Installation silencieuse, paramètres d'authentification proxy](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
+
+### <a name="proxy-authentication"></a>Authentification du proxy
+
+Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
+
+**Syntaxe** :
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port pour le capteur Azure ATP.|
+> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Non|Si votre service de proxy nécessite une authentification, spécifiez un nom d’utilisateur au format DOMAINE\utilisateur.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. *Les informations d’identification sont chiffrées et stockées localement par le capteur Azure ATP.|
 
 Vous pouvez également configurer votre serveur proxy manuellement à l’aide d’un proxy statique basé sur le Registre pour permettre au capteur Azure ATP de signaler des données de diagnostic et de communiquer avec le service cloud Azure ATP quand un ordinateur n’est pas autorisé à se connecter à Internet.
 
