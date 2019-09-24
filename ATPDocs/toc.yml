@@ -73,17 +73,17 @@
           items:
             - name: Présentation de la posture de sécurité des identités
               href: atp-isp-overview.md
-            - name: Évaluation pour empêcher l’exposition d’informations d’identification en texte clair
+            - name: Évaluation des entités exposant les informations d’identification en texte clair
               href: atp-cas-isp-clear-text.md
-            - name: Évaluation pour supprimer les entités dormantes des groupes sensibles
+            - name: Évaluation des entités dormantes dans des groupes sensibles
               href: atp-cas-isp-dormant-entities.md
-            - name: Évaluation pour empêcher la communication des protocoles hérités
+            - name: Évaluation de l’utilisation des protocoles hérités
               href: atp-cas-isp-legacy-protocols.md
-            - name: Évaluation pour désactiver le service Spouleur d’impression sur les contrôleurs de domaine
+            - name: Évaluation des contrôleurs de domaine avec le service Spouleur d’impression disponible
               href: atp-cas-isp-print-spooler.md
-            - name: Évaluation pour empêcher l’utilisation de chiffrements faibles
+            - name: Évaluation de l’utilisation du chiffrement faible
               href: atp-cas-isp-weak-cipher.md
-            - name: Évaluation pour empêcher les délégations Kerberos non sécurisées
+            - name: Évaluation de la délégation Kerberos non sécurisée
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Laboratoire des alertes de sécurité
       items:
