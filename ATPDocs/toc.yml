@@ -137,14 +137,16 @@
       href: setting-syslog.md
     - name: Installation sans assistance
       href: ATP-silent-installation.md
-    - name: Configurer des capteurs Azure ATP
+    - name: Configurer le capteur Azure ATP
       items:
         - name: Configurer le capteur Azure ATP
           href: install-atp-step5.md
-        - name: configuration du proxy ;
-          href: configure-proxy.md
         - name: Vérification de la stratégie d’audit avancée
           href: atp-advanced-audit-policy.md
+        - name: Configurer la collecte d’événements Windows
+          href: configure-windows-event-collection.md
+        - name: configuration du proxy ;
+          href: configure-proxy.md
         - name: Configurer Azure ATP pour effectuer des appels distants vers SAM
           href: install-atp-step8-samr.md
     - name: Configuration du capteur autonome Azure ATP
