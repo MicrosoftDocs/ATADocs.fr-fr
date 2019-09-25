@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/13/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b3c8e978f16893d70c44c0fd3d04ce381c1bb5d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6970908b95fe31ecd24b4cdc1005180e39495913
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196763"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185612"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
@@ -33,7 +33,7 @@ Azure ATP supervise en continu votre environnement afin de détecter l’ajout d
 
 1. Pour vérifier l’état des contrôleurs de domaine supervisés et non supervisés qui ont été détectés, accédez à la zone **Configuration** dans le portail Azure ATP et, sous la section **Système**, sélectionnez **Capteurs**.
    
-     ![Supervision de l’état par le capteur Azure ATP](media/atp-sensors-status-monitoring.png)
+    ![Supervision de l’état par le capteur Azure ATP](media/atp-sensors-status-monitoring.png)
 
 2. Tous les contrôleurs de domaine supervisés et non supervisés détectés sont listés en haut de l’écran. Pour télécharger les détails de l’état de supervision des contrôleurs de domaine, sélectionnez **Téléchargement des détails**. 
 
@@ -49,6 +49,15 @@ Le fichier Excel téléchargé contient les informations de couverture suivantes
 |Version du système d'exploitation| Version du système d’exploitation détecté|
 |Adresse IP|Adresse IP détectée| 
 
+### <a name="search-domain-controllers"></a>Rechercher les contrôleurs de domaine
+
+La gestion de votre flotte de capteurs et de contrôleurs de domaine peut constituer un défi. Pour faciliter la recherche et l’identification, les contrôleurs de domaine peuvent être recherchés à l’aide de la fonctionnalité de recherche de la liste de capteurs Azure ATP. 
+
+1. Pour rechercher vos contrôleurs de domaine, accédez à la zone **Configuration** du portail Azure ATP et, sous la section **système**, sélectionnez **Capteurs**.
+1. Sélectionnez l’option de filtre sur la colonne **contrôleur de domaine** dans la liste de tables du contrôleur de domaine. 
+1. Entrez le nom que vous souhaitez rechercher. Les caractères génériques ne sont actuellement pas pris en charge dans le champ de recherche. 
+
+    ![Recherche de contrôleur de domaine Azure ATP](media/search-sensor.png)
 
 > [!NOTE]
 > Les pages de configuration dans le portail Azure ATP sont modifiables uniquement par les administrateurs Azure ATP.

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2b795d7bb7973e24a5457237ff98a4bd1315f5
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: da5a9429e802f3597942abc5e21e6c5ae6fed0fb
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005014"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185550"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available---preview"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible - Préversion
 
@@ -25,7 +25,7 @@ ms.locfileid: "71005014"
  
 ## <a name="what-is-the-print-spooler-service"></a>Qu’est-ce que le service **Spouleur d’impression** ? 
 
-Le Spouleur d’impression est un service logiciel qui gère les processus d’impression. Il accepte les travaux d’impression des ordinateurs et vérifie que les ressources de l’imprimante sont disponibles. Il planifie également l’ordre dans lequel les travaux d’impression sont envoyés à la file d’attente à l’impression. Au début des ordinateurs personnels, les utilisateurs devaient attendre que les fichiers soient imprimés avant d’effectuer d’autres opérations. Grâce aux spouleurs d’impression modernes, l’impression a désormais un impact minime sur la productivité des utilisateurs.
+Le Spouleur d’impression est un service logiciel qui gère les processus d’impression. Il accepte les travaux d’impression des ordinateurs et vérifie que les ressources de l’imprimante sont disponibles. Il planifie également l’ordre dans lequel les travaux d’impression sont envoyés à la file d’attente à l’impression. Au début des ordinateurs personnels, les utilisateurs devaient attendre que les fichiers soient imprimés avant d’effectuer d’autres opérations. Grâce aux spouleurs d’impression modernes, l’impression a désormais un impact minime sur la productivité globale des utilisateurs.
 
 ## <a name="what-risks-does-the-print-spooler-service-on-domain-controllers-introduce"></a>Quels sont les risques qu’introduit le service **Spouleur d’impression** sur les contrôleurs de domaine ? 
 
@@ -35,6 +35,9 @@ En raison du risque d’exposition, les contrôleurs de domaine et les systèmes
 
 Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de domaine, tous les serveurs sont potentiellement exposés à ce type d’attaque.
 
+   > [!NOTE]
+   > Veillez à examiner vos paramètres de **Spouleur d’impression**, configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
+
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ? 
 1. Utilisez le tableau du rapport pour découvrir les contrôleurs de domaine sur lesquels le service **Spouleur d’impression** est activé.   
     <br>![Évaluation de la sécurité pour désactiver le service Spouleur d’impression](media/atp-cas-isp-print-spooler-2.png)
@@ -42,7 +45,7 @@ Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de
 
 ## <a name="remediation"></a>Mise à jour
 
-Corrigez ce problème spécifique en désactivant le service Spouleur d’impression sur tous les serveurs qui n’en ont pas besoin et vérifiez qu’aucun compte avec une délégation sans contrainte n’est configuré.
+Résolvez ce problème spécifique en désactivant le service de spouleur d’impression sur tous les serveurs qui n’en ont pas besoin.
   
 
 ## <a name="next-steps"></a>Étapes suivantes
