@@ -1,74 +1,107 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Documentation Azure Advanced Threat Protection
+summary: Le service Azure Advanced Threat Protection (ATP) vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
 metadata:
   title: Documentation Azure Advanced Threat Protection
-  description: Protégez vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et de menaces internes.
-  services: azure-advanced-threat-protection
-  author: msmbaldwin
-  manager: rkarlin
-  ms.prod: azure-advanced-threat-protection
-  ms.tgt_pltfrm: na
-  ms.devlang: na
+  description: Le service Azure Advanced Threat Protection (ATP) vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
+  services: service
+  ms.service: azure-advanced-threat-protection
+  ms.subservice: subservice
   ms.topic: landing-page
-  ms.date: 01/30/2019
-  ms.author: mbaldwin
-  layout: LandingPage
-abstract:
-  description: Le service Azure Advanced Threat Protection (ATP) est un service cloud qui vous aide à protéger vos environnements hybrides d’entreprise contre de nombreux types de cyberattaques ciblées avancées et contre les menaces internes.
-sections:
-  - title: En savoir plus
-    items:
-      - type: list
-        style: cards
-        className: cardsFTitle
-        items:
-          - title: En savoir plus sur Azure Advanced Threat Protection
-            href: what-is-atp.md
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-              href: what-is-atp.md
-          - title: Architecture Azure ATP
-            href: atp-architecture.md
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-              href: atp-architecture.md
-          - title: Nouveautés d’Azure ATP
-            href: atp-whats-new.md
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-              href: atp-whats-new.md
-          - title: "Explorez Microsoft\_365, solution complète qui inclut Azure Advanced Threat Protection"
-            href: 'https://docs.microsoft.com/microsoft-365/'
-            image:
-              src: /office/media/icons/caret-right-blue.svg
-              href: 'https://docs.microsoft.com/microsoft-365/'
-  - title: Guides de démarrage rapide de 5 minutes
-    items:
-      - type: paragraph
-        text: Découvrez les principes fondamentaux d’Azure Advanced Threat Protection avec ces Démarrages rapides.
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_design.svg'
-            text: Planifier la capacité
-            href: atp-capacity-planning.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_event.svg'
-            text: Créer une instance d’Azure ATP
-            href: install-atp-step1.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-            text: Se connecter à Active Directory
-            href: install-atp-step2
-  - title: Didacticiels pas à pas
-    items:
-      - type: paragraph
-        text: Apprenez à comprendre les alertes et à procéder à des investigations avec ces tutoriels.
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Comprendre les alertes de sécurité</a>
-          - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Examiner un utilisateur</a>
-          - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Examiner un ordinateur</a>
+  ms.collection: M365-security-compliance
+  author: mlottner
+  ms.author: mlottner
+  ms.date: 09/23/2019
+  ms.openlocfilehash: 7a21cc57174fcc3342f9349c23a918b7a8cf3b07
+  ms.sourcegitcommit: ecf2d5e83f550a73dabed135d27b34edc15d57db
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 09/30/2019
+  ms.locfileid: "71682207"
+landingContent:
+- title: À propos d’Azure Advanced Threat Protection (Azure ATP)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Qu’est-ce qu’Azure Advanced Threat Protection ?
+      url: what-is-atp.md
+  - linkListType: architecture
+    links:
+    - text: Architecture Azure ATP
+      url: atp-architecture.md
+    - text: Azure ATP avec Cloud App Security
+      url: atp-mcas-integration.md
+  - linkListType: video
+    links:
+    - text: Présentation d’Azure ATP
+      url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
+    - text: Fonctionnalités de base d’Azure ATP
+      url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
+- title: Extraire les alertes Azure ATP
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Alertes de sécurité
+      url: understanding-security-alerts.md
+    - text: Alertes d’intégrité
+      url: atp-health-center.md
+    - text: Superviser vos contrôleurs de domaine
+      url: atp-sensor-monitoring.md
+- title: Explorer les différentes façons d’utiliser Azure ATP
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Évaluations de la posture de sécurité des identités
+      url: atp-isp-overview.md
+    - text: Lab des alertes de sécurité d’Azure ATP
+      url: atp-playbook-lab-overview.md
+    - text: Exclure des entités des détections
+      url: excluding-entities-from-detections.md
+    - text: Rechercher et filtrer dans des activités supervisées
+      url: atp-activities-search.md
+    - text: Utiliser des exclusions et des comptes honeytoken
+      url: install-atp-step7.md
+    - text: Passage d’ATA (Advanced Threat Analytics) à Azure ATP
+      url: ata-atp-move-overview.md
+- title: Gérer et corriger les alertes de sécurité
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Examiner les alertes d’Azure ATP
+      url: suspicious-activity-guide.md
+    - text: Gérer les alertes de sécurité
+      url: working-with-suspicious-activities.md
+    - text: Définir des notifications Azure ATP
+      url: notifications.md
+- title: Examiner les menaces
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Procéder à une investigation sur un utilisateur
+      url: investigate-a-user.md
+    - text: Procéder à une investigation sur un ordinateur
+      url: investigate-a-computer.md
+    - text: Examiner les chemins de mouvement latéral
+      url: investigate-lateral-movement-path.md
+    - text: Examiner les entités
+      url: investigate-entity.md
+- title: Azure ATP avec Microsoft Cloud App Security
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Utiliser Azure ATP avec Cloud App Security
+      url: atp-mcas-integration.md
+    - text: Filtrer des activités et définir des stratégies
+      url: atp-activities-filtering-mcas.md
+- title: Ressources et support
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Forum aux questions
+      url: atp-technical-faq.md
+    - text: Support et informations
+      url: atp-support.md
+    - text: Guide de préparation à ATP
+      url: atp-resources.md
+    - text: Sécurité et confidentialité des données Azure ATP
+      url: atp-privacy-compliance.md
