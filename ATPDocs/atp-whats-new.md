@@ -12,18 +12,24 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3b88aeca4d86ad527da6d966e766ee37126bf079
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: d322c9b0352319e8511414e042d340acbbccd371
+ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217691"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997556"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
 Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP.
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Publication : 6 octobre 2019
+## <a name="azure-atp-release-297"></a>Azure ATP version 2.97
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
 
 Publication : 22 septembre 2019
 ## <a name="azure-atp-release-296"></a>Azure ATP version 2.96
