@@ -1,33 +1,33 @@
 ---
-title: Installer Advanced Threat Analytics sans assistance | Microsoft Docs
-description: Cet article décrit comment installer ATA sans assistance.
+title: Installer Advanced Threat Analytics en mode silencieux | Microsoft Docs
+description: Cet article explique comment installer ATA en mode silencieux.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9778cfa171ca6f5bc9b7597af935d15456504c62
-ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
+ms.openlocfilehash: 51234265f30cb71c0421a9aa80a9288fe7a77b2e
+ms.sourcegitcommit: 91ab82b0813a5e7c6ec94f1766f909ef9a524d32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076682"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72442161"
 ---
-# <a name="ata-silent-installation"></a>Installation d’ATA sans assistance
+# <a name="ata-silent-installation"></a>Installation en mode silencieux ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 Cet article fournit des instructions pour installer ATA sans assistance.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
-ATA version 1.8 nécessite l’installation du Microsoft .NET Framework 4.6.1. 
+ATA version 1,9 nécessite l’installation de Microsoft .NET Framework 4.6.1. 
 
 Quand vous installez ou mettez à jour ATA, .Net Framework 4.6.1 est automatiquement installé dans le cadre du déploiement de Microsoft ATA.
 
@@ -42,7 +42,7 @@ Pour suivre la progression du déploiement, surveillez les journaux d’installa
 
 Utilisez la commande suivante pour installer le centre ATA :
 
-**Syntaxe** :
+**Syntaxe**:
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
@@ -64,8 +64,8 @@ Utilisez la commande suivante pour installer le centre ATA :
 > 
 > |             Nom             |                      Syntaxe                      | Obligatoire pour une installation sans assistance ? |                                                                                                        Description                                                                                                         |
 > |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 Non                 |                                               Définit le chemin de l’installation des fichiers binaires ATA. Chemin d’accès par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center                                                |
-> |       DatabaseDataPath       |           DatabaseDataPath= "<DBPath>"           |                 Non                 |                                         Définit le chemin du dossier des données de la base de données ATA. Chemin d’accès par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
+> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 Non                 |                                               Définit le chemin de l’installation des fichiers binaires ATA. Chemin par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center                                                |
+> |       DatabaseDataPath       |           DatabaseDataPath= "<DBPath>"           |                 Non                 |                                         Définit le chemin du dossier des données de la base de données ATA. Chemin par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
 > |       CenterIpAddress        |        CenterIpAddress=<CenterIPAddress>         |                Oui                 |                                                                                       Définit l’adresse IP du service du centre ATA                                                                                        |
 > |          CenterPort          |             CenterPort=<CenterPort>              |                Oui                 |                                                                                      Définit le port réseau du service du centre ATA                                                                                       |
 > | CenterCertificateThumbprint  |  CenterCertificateThumbprint="<CertThumbprint>"  |                 Non                 | Définit l’empreinte numérique du certificat pour le service du centre ATA. Ce certificat est utilisé pour sécuriser la communication entre le centre ATA et la passerelle ATA. Si ce paramètre n’est pas défini, l’installation génère un certificat auto-signé. |
@@ -86,7 +86,7 @@ Pour installer le centre ATA avec les chemins d’installation par défaut, deux
 
 Utilisez la commande suivante pour mettre à jour le centre ATA :
 
-**Syntaxe** :
+**Syntaxe**:
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
@@ -138,7 +138,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## <a name="ata-gateway-silent-installation"></a>Installation de la passerelle ATA sans assistance
+## <a name="ata-gateway-silent-installation"></a>Installation sans assistance de la passerelle ATA
 
 > [!NOTE]
 > En cas de déploiement sans assistance de la passerelle légère ATA avec System Center Configuration Manager ou un autre système de déploiement de logiciels, il est recommandé de créer deux packages de déploiement :</br>- .NET Framework 4.6.1, avec redémarrage du contrôleur de domaine ;</br>- la passerelle ATA. </br>Faites en sorte que le package de la passerelle ATA dépende du déploiement du package .NET Framework. </br>Obtenir le [package de déploiement hors connexion .NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49982). 
@@ -146,7 +146,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 
 Utilisez la commande suivante pour installer la passerelle ATA sans assistance :
 
-**Syntaxe** :
+**Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] 
     [ConsoleAccountName="<AccountName>"] 
@@ -172,10 +172,11 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 > 
 > |          Nom          |                   Syntaxe                   | Obligatoire pour une installation sans assistance ? |                                                      Description                                                       |
 > |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 Non                 |                                               Définit le chemin de l’installation des fichiers binaires ATA. Chemin par défaut : C:\Program Files\Microsoft Advanced Threat Analytics\Center
 > |   ConsoleAccountName   |     ConsoleAccountName="<AccountName>"     |                Oui                 |   Définit le nom du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.    |
 > | ConsoleAccountPassword | ConsoleAccountPassword="<AccountPassword>" |                Oui                 | Définit le mot de passe du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA. |
 
-**Exemples** : pour installer la passerelle ATA sans assistance, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administration ATA, pour éviter d’avoir à spécifier les informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le auprès du centre ATA en utilisant les informations d’identification spécifiées :
+**Exemples** : Pour installer en mode silencieux la passerelle ATA, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administrateur ATA, ce qui évite de spécifier les informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le auprès du centre ATA en utilisant les informations d’identification spécifiées :
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
@@ -185,7 +186,7 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 
 Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assistance :
 
-**Syntaxe** :
+**Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
@@ -207,7 +208,10 @@ Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assista
 
 ## <a name="uninstall-the-ata-gateway-silently"></a>Désinstaller la passerelle ATA sans assistance
 
-Utilisez la commande suivante pour effectuer une désinstallation sans assistance de la passerelle ATA : **Syntaxe** :
+Utilisez la commande suivante pour effectuer une désinstallation sans assistance de la passerelle ATA :
+
+
+**Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
 
