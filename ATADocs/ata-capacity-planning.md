@@ -5,24 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f5e493993acfb6bbb440691f11053d46bf5e1ba
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
+ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781819"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690227"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide également à déterminer le nombre de passerelles ATA et/ou passerelles légères ATA dont vous avez besoin, et la capacité du serveur pour votre centre ATA et les passerelles ATA.
+Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide à estimer le nombre de passerelles ATA et/ou de passerelles légères ATA dont vous avez besoin, ainsi que la capacité du serveur pour votre centre ATA et vos passerelles ATA.
 
 > [!NOTE] 
 > Vous pouvez déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance décrits dans cet article.
@@ -30,10 +30,10 @@ Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour
 ## <a name="using-the-sizing-tool"></a>Utilisation de l’outil de dimensionnement
 La manière recommandée la plus simple de déterminer la capacité pour votre déploiement ATA est d’utiliser l’[outil de dimensionnement ATA](http://aka.ms/atasizingtool). Exécutez l’outil de dimensionnement ATA, puis dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la capacité ATA dont vous avez besoin :
 
-- Processeur et mémoire du centre ATA : faites correspondre le champ **Paquets occupés/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau du centre ATA](#ata-center-sizing).
+- Processeur et mémoire du centre ATA : Faites correspondre le champ **Paquets occupés/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
 
-- Stockage du centre ATA : faites correspondre le champ **Moyenne de paquets/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau du centre ATA](#ata-center-sizing).
-- Passerelle ATA : faites correspondre le champ **Paquets occupés/s** du tableau de la passerelle ATA du fichier de résultats avec le champ **PAQUETS PAR SECONDE** du [tableau de la passerelle ATA](#ata-gateway-sizing) ou du [tableau de la passerelle légère ATA](#ata-lightweight-gateway-sizing) en fonction du [type de passerelle choisi](#choosing-the-right-gateway-type-for-your-deployment).
+- Stockage du centre ATA : Faites correspondre le champ **Paquets moyens/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
+- Passerelle ATA : Faites correspondre le champ **Paquets occupés/s** dans le tableau de la passerelle ATA du fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau de la passerelle ATA](#ata-gateway-sizing) ou le [tableau de la passerelle légère ATA](#ata-lightweight-gateway-sizing) en fonction du [type de passerelle que vous choisissez](#choosing-the-right-gateway-type-for-your-deployment).
 
 
 ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
@@ -43,8 +43,8 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 > Étant donné que les différents environnements varient et présentent plusieurs caractéristiques de trafic réseau particulières et imprévisibles, une fois que vous déployez initialement ATA et exécuter l’outil de dimensionnement, vous devrez peut-être ajuster et adapter votre déploiement au niveau de la capacité.
 
 
-Si pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimensionnement ATA, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, vous devez calculer la moyenne quotidienne et la moyenne des périodes les plus occupées (15 minutes).
-Les sections suivantes expliquent comment collecter le compteur paquets/s dans un contrôleur de domaine.
+Si pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimensionnement ATA, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, calculez la moyenne quotidienne et la période la plus chargée (15 minutes).
+Les sections suivantes fournissent des instructions sur la collecte du compteur Paquets/s d’un contrôleur de domaine.
 
 
 > [!NOTE]
@@ -57,10 +57,10 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 
 |Paquets par seconde pour tous les contrôleurs de domaine|Processeur (cores&#42;)|Mémoire (Go)|Stockage de la base de données par jour (Go)|Stockage de la base de données par mois (Go)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1 000|2|32|0.3|9|30 (100)
-|40 000|4|48|12|360|500 (750)
-|200 000|8|64|60|1 800|1 000 (1 500)
-|400,000|12|96|120|3,600|2 000 (2 500)
+|1 000|2|32|0.3|9|30 (100)
+|40 000|4|48|12|360|500 (750)
+|200 000|8|64|60|1 800|1 000 (1 500)
+|400 000|12|96|120|3,600|2 000 (2 500)
 |750,000|24|112|225|6,750|2,500 (3,000)
 |1,000,000|40|128|300|9 000|4,000 (5,000)
 
@@ -68,7 +68,8 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 
 &#42;&#42;Nombres moyens (pic)
 > [!NOTE]
-> - Le centre ATA peut gérer un maximum agrégé de 1 million de paquets par seconde provenant de l’ensemble des contrôleurs de domaine surveillés. Dans certains environnements, le même centre ATA peut gérer un trafic global supérieur à 1 million. Contactez askcesec@microsoft.com pour obtenir de l’assistance sur ce type d’environnements.
+> - Le centre ATA peut gérer un maximum agrégé de 1 million de paquets par seconde à partir de tous les contrôleurs de domaine analysés. Dans certains environnements, le même centre ATA peut gérer le trafic global supérieur à 1 million et certains environnements peuvent dépasser la capacité ATA. Contactez-nous à l' azureatpfeedback@microsoft.com pour obtenir de l’aide pour la planification et l’estimation des environnements de grande taille.
+
 > - Si l’espace libre atteint la valeur minimale de 20 % ou 200 Go, la collecte de données la plus ancienne est supprimée. S’il n’est pas possible de réduire la collecte de données à ce niveau, une alerte est consignée.  ATA continue de fonctionner jusqu’à ce que le seuil de 5 % ou de 50 Go d’espace disponible soit atteint.  S’il est atteint, ATA arrête de remplir la base de données et une nouvelle alerte est émise.
 > - Il vous est possible de déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance qui sont décrits dans cet article.
 > - La latence de stockage pour les activités de lecture et d’écriture doit être inférieure à 10 ms.
@@ -113,8 +114,8 @@ Une passerelle légère ATA peut prendre en charge la surveillance d’un contr�
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
-|1 000|2|6\.|
-|5 000|6\.|16|
+|1 000|2|6|
+|5 000|6|16|
     |10 000|10|24|
 
 &#42;Nombre total de paquets par seconde sur le contrôleur de domaine surveillé par une passerelle légère ATA donnée.
@@ -148,10 +149,10 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)|
 |---------------------------|-------------------------|---------------|
-|1 000|1|6\.|
+|1 000|1|6|
 |5 000|2|10|
 |10 000|3|12|
-|20 000|6\.|24|
+|20,000|6|24|
 |50 000|16|48|
 
 &#42;Nombre total moyen de paquets par seconde provenant de l’ensemble des contrôleurs de domaine surveillés par une passerelle ATA donnée durant leur heure de la journée la plus occupée.
@@ -173,6 +174,6 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Architecture d’ATA](ata-architecture.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
