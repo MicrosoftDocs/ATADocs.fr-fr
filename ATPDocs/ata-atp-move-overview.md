@@ -5,24 +5,26 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/02/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dbc177aea1c237150542684885bc58d23382bf5f
-ms.sourcegitcommit: 37299ed90b4bc7bf81f7065d0969bb8fb92622f0
+ms.openlocfilehash: f54c60f97c9489934f0ac0a40b3b27780e6a60d9
+ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67518134"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690246"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP) 
 
 
 Utilisez ce guide pour faire passer une installation ATA existante au service Azure Advanced Threat Protection (Azure ATP). Ce guide explique les prérequis et les exigences d’Azure ATP. Il décrit également comment planifier et mener à bien votre transfert. Vous trouverez également des étapes de validation et des conseils pour tirer parti des solutions de sécurité et de protection contre les menaces les plus récentes avec Azure ATP après l’installation. 
+
+Pour en savoir plus sur les différences entre ATA et Azure ATP, consultez le [Forum aux questions Azure ATP] (https://docs.microsoft.com/en-us/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
 
 Dans ce guide, vous allez : 
 
