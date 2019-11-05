@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/26/2019
+ms.date: 10/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a20c26d45f8cc0ddda05b103e03fa16f9de569b8
-ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
+ms.openlocfilehash: 7c74e43bffb810041049e9fc7fccf2f069535759
+ms.sourcegitcommit: 65f9249e3e49d80d872c82bf663389d04945e534
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70052450"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462359"
 ---
-# <a name="tutorial-lateral-movement-alerts"></a>Didacticiel : Alertes de mouvement latéral  
+# <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral  
 
 En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
