@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/20/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e08668199056c59093caa202123cf01a4ed303cc
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629354"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618462"
 ---
 # <a name="ata-prerequisites"></a>Conditions préalables au déploiement d’ATA
 
@@ -29,20 +29,20 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
 
-Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou la passerelle légère ATA. Pour plus d’informations sur les composants d’ATA, consultez [Architecture d’ATA](ata-architecture.md).
+Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou la passerelle légère ATA. Pour plus d’informations sur les composants ATA, consultez [Architecture ATA](ata-architecture.md).
 
 Le système ATA fonctionne sur la limite de forêt Active Directory et prend en charge le niveau fonctionnel de forêt Windows 2003 et versions ultérieures.
 
 
-[Avant de commencer](#before-you-start): cette section présente les informations à rassembler ainsi que les comptes et les entités réseau nécessaires pour commencer l’installation d’ATA.
+[Avant de commencer](#before-you-start): cette section répertorie les informations que vous devez rassembler et les comptes et entités réseau dont vous devez disposer, avant de démarrer l’installation d’ATA.
 
-[Centre ATA](#ata-center-requirements) : cette section présente la configuration matérielle et logicielle requise du centre ATA, ainsi que les paramètres à configurer sur le serveur du centre ATA.
+[Centre ATA](#ata-center-requirements): cette section répertorie le matériel du centre ATA, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur votre serveur du centre ATA.
 
-[Passerelle ATA](#ata-gateway-requirements) : cette section présente la configuration matérielle et logicielle requise de la passerelle ATA, ainsi que les paramètres à configurer sur les serveurs de passerelle ATA.
+[Passerelle ATA](#ata-gateway-requirements) : cette section répertorie le matériel de la passerelle ATA, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur les serveurs de votre passerelle ATA.
 
-[Passerelle légère ATA](#ata-lightweight-gateway-requirements) : cette section présente la configuration matérielle et logicielle requise de la passerelle légère ATA.
+[Passerelle légère ATA](#ata-lightweight-gateway-requirements) : cette section répertorie le matériel de la passerelle légère ATA et la configuration logicielle requise.
 
-[Console ATA](#ata-console) : cette section présente la configuration requise du navigateur pour exécuter la console ATA.
+[Console ATA](#ata-console) : cette section répertorie la configuration requise du navigateur pour exécuter la console ATA.
 
 ![Diagramme de l’architecture ATA](media/ATA-architecture-topology.jpg)
 
@@ -59,15 +59,15 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 
 -    Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. ATA peut ainsi détecter la suppression en bloc d’objets du domaine. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Facultatif : le compte d’un utilisateur sans activités réseau. Ce compte est configurable comme utilisateur Honeytoken ATA. Pour configurer un compte comme utilisateur Honeytoken, seul le nom d’utilisateur est nécessaire. Pour plus d’informations sur la configuration de Honeytoken, consultez [Configurer des exclusions d’adresses IP et un utilisateur Honeytoken](install-ata-step7.md).
+-   Facultatif : un compte d’un utilisateur sans activités réseau. Ce compte est configurable comme utilisateur Honeytoken ATA. Pour configurer un compte comme utilisateur Honeytoken, seul le nom d’utilisateur est nécessaire. Pour plus d’informations sur la configuration de Honeytoken, consultez [Configurer des exclusions d’adresses IP et un utilisateur Honeytoken](install-ata-step7.md).
 
--   Facultatif : outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, ATA peut utiliser les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 pour améliorer sa détection des attaques Pass-the-hash, par force brute, par modification des groupes sensibles et honeytoken. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à ATA des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+-   Facultatif : Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, ATA peut utiliser les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 pour améliorer la détection de l’attaque Pass-the-Hash, de l’attaque par force brute, de la modification des groupes sensibles et des comptes Honeytoken. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à ATA des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 
 ## <a name="ata-center-requirements"></a>Configuration requise pour le centre ATA
 Cette section décrit la configuration requise pour le centre ATA.
 
-### <a name="general"></a>Généralités
+### <a name="general"></a>Général
 L’installation du centre ATA sur un serveur Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 est prise en charge. 
 
  > [!NOTE]
@@ -102,14 +102,14 @@ Sur un serveur physique, la base de données ATA nécessite la **désactivation*
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode groupe de plusieurs processeurs, consultez [résolution des problèmes](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 
 Vous devez disposer des éléments suivants :
 -   Au moins une carte réseau (si vous utilisez des serveurs physiques dans un environnement de réseau local virtuel, nous vous recommandons d’utiliser deux cartes réseau)
@@ -121,17 +121,17 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 
 |Protocol|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Trafic entrant|
-|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Trafic entrant|
-|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Trafic entrant|
+|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
+|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
+|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
 |**SMTP** (facultatif)|TCP|25|Serveur SMTP|Sortant|
-|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Règle de trafic sortant|
-|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Règle de trafic sortant|
-|**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Règle de trafic sortant|
-|**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Règle de trafic sortant|
-|**DNS**|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
-|**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Règle de trafic sortant|
-|**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Règle de trafic sortant|
+|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Sortant|
+|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Sortant|
+|**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
+|**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
+|**DNS**|TCP et UDP|53|Serveurs DNS|Sortant|
+|**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Sortant|
+|**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Sortant|
 
 > [!NOTE]
 > LDAP est obligatoire pour tester les informations d’identification à utiliser entre les passerelles ATA et les contrôleurs de domaine. Le test est effectué à partir du centre ATA sur un contrôleur de domaine pour tester la validité de ces informations d’identification. Ensuite, la passerelle ATA utilise le protocole LDAP dans le cadre de son processus de résolution normal.
@@ -148,7 +148,9 @@ Le certificat doit avoir les éléments suivants :
 -   Un fournisseur de type CSP (fournisseur de services de chiffrement) ou de type KSP (fournisseur de stockage de clés)
 -   Une clé publique de 2 048 bits de longueur
 -   Des indicateurs d’utilisation KeyEncipherment et ServerAuthentication définis à une valeur
--   La valeur « KeyExchange » pour KeySpec (KeyNumber) (AT\_KEYEXCHANGE). À noter que la valeur « Signature » (AT\_SIGNATURE) n’est pas prise en charge. 
+-   La valeur « KeyExchange » pour KeySpec (KeyNumber) (AT\_KEYEXCHANGE).
+    La valeur « signature » (au niveau de la SIGNATURE\_) n’est *pas* prise en charge. 
+-   Toutes les machines de passerelle doivent être en mesure de valider et d’approuver entièrement le certificat Center sélectionné.
 
 Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ordinateur**.
 
@@ -162,7 +164,7 @@ Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ord
 
 ## <a name="ata-gateway-requirements"></a>Configuration requise pour la passerelle ATA
 Cette section décrit la configuration requise pour la passerelle ATA.
-### <a name="general"></a>Généralités
+### <a name="general"></a>Général
 L’installation de la passerelle ATA sur un serveur Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 est prise en charge (Server Core inclus).
 La passerelle ATA peut être installée sur un serveur membre d’un domaine ou d’un groupe de travail.
 La passerelle ATA peut servir à analyser les contrôleurs de domaine avec le niveau fonctionnel de domaine Windows 2003 et versions ultérieures.
@@ -188,7 +190,7 @@ Pour plus d’informations sur la configuration matérielle requise pour la pass
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 La passerelle ATA nécessite au moins une carte de gestion et au moins une carte de capture :
 
 -   **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Elle doit être configurée avec les paramètres suivants :
@@ -197,7 +199,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 
     -   Serveurs DNS préféré et auxiliaire
 
-    -   Le **Suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
+    -   Le **suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
 
         ![Configurer le suffixe DNS dans les paramètres TCP/IP avancés](media/ATA-DNS-Suffix.png)
 
@@ -213,7 +215,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences de la passerelle ATA :
 
-|Protocol|Transport|Port|Vers/À partir de|Direction|
+|Protocol|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
@@ -225,8 +227,8 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
-|SSL|TCP|443|Centre ATA|Règle de trafic sortant|
-|Syslog (facultatif)|UDP|514|Serveur SIEM|Trafic entrant|
+|SSL|TCP|443|Centre ATA|Sortant|
+|Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 
 
 > [!NOTE]
@@ -241,12 +243,12 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 
 ## <a name="ata-lightweight-gateway-requirements"></a>Configuration requise pour la passerelle légère ATA
 Cette section décrit la configuration requise pour la passerelle légère ATA.
-### <a name="general"></a>Généralités
+### <a name="general"></a>Général
 L’installation de la passerelle légère ATA sur un contrôleur de domaine Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 ou Windows Server 2019 (Core inclus, mais pas Nano) est prise en charge.
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
-Avant d’installer la passerelle légère ATA sur un contrôleur de domaine sous Windows Server 2012 R2, vérifiez que la mise à jour suivante a été installée : [KB2919355](https://support.microsoft.com/kb/2919355/).
+Avant d’installer la passerelle légère ATA sur un contrôleur de domaine exécutant Windows Server 2012 R2, vérifiez que la mise à jour suivante a été installée : [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Pour vous en assurer, exécutez l’applet de commande Windows PowerShell suivante : `[Get-HotFix -Id kb2919355]`
 
@@ -275,7 +277,7 @@ Pour plus d’informations sur la configuration matérielle requise pour la pass
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle légère ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 
 La passerelle légère ATA surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
 Après le déploiement, vous pouvez utiliser la console ATA si vous voulez changer les cartes réseau analysées.
@@ -286,14 +288,14 @@ Après le déploiement, vous pouvez utiliser la console ATA si vous voulez chang
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par la passerelle légère ATA :
 
-|Protocol|Transport|Port|Vers/À partir de|Direction|
+|Protocol|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
-|SSL|TCP|443|Centre ATA|Règle de trafic sortant|
-|Syslog (facultatif)|UDP|514|Serveur SIEM|Trafic entrant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Règle de trafic sortant|
+|SSL|TCP|443|Centre ATA|Sortant|
+|Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 
 > [!NOTE]
 > Dans le cadre du processus de résolution effectué par la passerelle légère ATA, les ports suivants doivent être ouverts en entrée sur les appareils du réseau à partir des passerelles légères ATA.
@@ -321,7 +323,7 @@ L’accès à la console ATA s’effectue au moyen d’un navigateur, avec prise
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Architecture d’ATA](ata-architecture.md)
 - [Installer ATA](install-ata-step1.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
