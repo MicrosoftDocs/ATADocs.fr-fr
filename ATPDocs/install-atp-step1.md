@@ -4,18 +4,18 @@ description: Guide de démarrage rapide pour créer l’instance pour votre dép
 keywords: ''
 author: mlottner
 ms.author: mlottner
-ms.date: 02/05/2019
+ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d1850a6b15366ab441f6a8528bf7b75dabb97aa
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 18a9feba8344ce88c4afb2ed3911b51aea0b9e07
+ms.sourcegitcommit: 65f9249e3e49d80d872c82bf663389d04945e534
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263951"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462332"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Démarrage rapide : Créer votre instance Azure ATP
 
@@ -35,9 +35,11 @@ Dans ce guide de démarrage rapide, vous allez créer votre instance Azure ATP d
 
 Après avoir vérifié que votre réseau est conforme aux exigences du capteur, commencez la création de votre instance Azure ATP.
 
-1. Accédez au [portail Azure ATP](https://portal.atp.azure.com).
+1. Accédez au [portail Azure ATP](https://portal.atp.azure.com)*.
 
 2. Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
+
+* Les clients GCC High doivent utiliser le portail [Azure ATP GCC High](http://portal.atp.azure.us).  
 
 ## <a name="create-your-instance"></a>Créer votre instance
 
