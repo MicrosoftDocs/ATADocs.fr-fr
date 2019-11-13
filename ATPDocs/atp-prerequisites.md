@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 763f27e9fb3e134f97b716306c747ecce7edf411
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: 7c1dfa8cfda0bb6fb39770a58a7cc1b54dbc2298
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217672"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618446"
 ---
-# <a name="azure-atp-prerequisites"></a>Prérequis pour Azure ATP
+# <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
 
@@ -140,6 +140,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |------------|-------------|--------|-----------|-------------|
 |**Ports Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
+|SSL(localhost)|TCP|444|localhost|Les deux|
 |**Ports internes**|||||
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
@@ -230,7 +231,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
 - [Architecture Azure ATP](atp-architecture.md)
 - [Installer Azure ATP](install-atp-step1.md)
 - [Résolution de nom réseau (NNR)](atp-nnr-policy.md)

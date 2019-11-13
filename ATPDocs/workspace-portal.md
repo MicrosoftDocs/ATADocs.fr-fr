@@ -5,24 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/15/2018
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 08bab9d934b38859221f7f89df1580b21a8b22a2
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 8cc8dccbaedbe0b87d60c041eb8001ef82cf2904
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004890"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618482"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Utilisation du portail Azure ATP
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Toutes les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail Cloud App Security](https://portal.cloudappsecurity.com).
 
 Utilisez le portail Azure ATP pour surveiller les activités suspectes détectées par ATP et y répondre.
 
@@ -44,7 +44,7 @@ Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comm
 2. Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
 
    > [!NOTE]
-   > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Exécutez également votre navigateur en tant qu’un autre utilisateur, ou fermez votre session Windows et connectez-vous avec votre utilisateur administrateur Azure ATP. 
+   > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Exécutez également votre navigateur en tant qu’un autre utilisateur, ou fermez votre session Windows et connectez-vous avec votre utilisateur administrateur Azure ATP. Contrairement au portail Azure ATP, le nouveau [portail Cloud App Security](https://portal.cloudappsecurity.com) offre une connexion multi-utilisateur et ne nécessite aucune licence supplémentaire pour une utilisation avec Azure ATP.  
 
 
 ### <a name="attack-time-line"></a>Chronologie des attaques

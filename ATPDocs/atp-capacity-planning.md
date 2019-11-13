@@ -3,16 +3,16 @@ title: Planification de votre déploiement Azure Advanced Threat Protection - D�
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 author: mlottner
 ms.author: mlottner
-ms.date: 1/24/2019
+ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 66f30b3657cc78b8ad209703746115eb75593709
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 0d149b74724ecddcce88bc932626d6bd395d4202
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263775"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618488"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -20,7 +20,7 @@ Ce démarrage rapide vous aide à déterminer le nombre de capteurs autonomes et
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Téléchargez [l’Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool).
+- Téléchargez [l’Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool).
 - Examinez l’article [Architecture Azure ATP](atp-architecture.md).
 - Examinez l’article [Prérequis d’Azure ATP](atp-prerequisites.md). 
 
@@ -67,10 +67,9 @@ Prenez en compte les problèmes suivants quand vous choisissez le nombre de capt
 
 Un capteur Azure ATP peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau qu’il génère. Le tableau suivant est une estimation. La quantité finale analysée par le capteur étant dépendante du volume et de la distribution du trafic.
 
-
 La capacité d’UC et de mémoire suivante fait référence à la **consommation propre du capteur**, et pas à la capacité du contrôleur de domaine.
 
-|Paquets par seconde*|Cœurs de processeur|Mémoire (Go)|
+|Paquets par seconde*|Processeur (cœurs)**|Mémoire (Go)|
 |----|----|-----|
 |0 à 1 000|0,25|2,50|
 |1 000 à 5 000|0,75|6,00|
@@ -79,16 +78,31 @@ La capacité d’UC et de mémoire suivante fait référence à la **consommatio
 |20 000 à 50 000|3,50|9,50|
 |50 000 à 75 000 |3,50|9,50|
 |75 000 à 100 000|3,50 |9,50|
+|
+** Cela comprend des cœurs physiques et non des cœurs hyper-thread. 
 
 Lorsque vous déterminez le dimensionnement, notez les éléments suivants : 
 
-- Nombre total de cœurs que le service de capteur va utiliser.<br>Nous vous recommandons de ne pas utiliser des cœurs hyper-thread.
+- Nombre total de cœurs que le service de capteur va utiliser.<br>Nous vous recommandons de ne pas utiliser des cœurs hyper-thread. L’utilisation de cœurs hyper-thread peut entraîner des problèmes d’intégrité du capteur Azure ATP. 
 - Quantité totale de mémoire que le service de capteur va utiliser.
 - Si le contrôleur de domaine n’a pas les ressources demandées par le capteur Azure ATP, ses performances ne sont pas affectées. Mais le capteur Azure ATP risque de ne pas fonctionner comme prévu.
-- En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
+- En cas d’exécution en tant que machine virtuelle, toute la mémoire doit être allouée à la machine virtuelle à tout moment.
 - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
 - Au moins 2 cœurs sont nécessaires. Au moins 6 Go d’espace sont nécessaires, 10 Go sont recommandés, ce qui inclut l’espace nécessaire pour les fichiers binaires et les journaux Azure ATP.
 
+### <a name="dynamic-memory"></a>Mémoire dynamique
+
+> [!NOTE] 
+> En cas d’exécution en tant que machine virtuelle, toute la mémoire doit être allouée à la machine virtuelle à tout moment. 
+
+|Machine virtuelle en cours d’exécution sur|Description|
+|------------|-------------|
+|Hyper-V|Assurez-vous que l’option **Activer la mémoire dynamique** n’est pas activée pour la machine virtuelle.|
+|VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **Réserver toute la mémoire invitée (tout verrouillé)** .|
+|Autre hôte de virtualisation|Reportez-vous à la documentation donnée par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
+|
+
+En cas d’exécution en tant que machine virtuelle, arrêtez le serveur avant de créer un point de contrôle pour éviter tout risque d’endommagement de la base de données.
 
 ## <a name="manual-sizing"></a> Estimation du trafic des contrôleurs de domaine
 
