@@ -171,6 +171,8 @@
       href: cef-format-sa.md
     - name: Problèmes connus dans Azure ATP
       href: known-issues.md
+    - name: Informations de référence sur les versions Azure ATP
+      href: atp-release-reference.md
 - name: Ressources
   items:
     - name: Support et informations
