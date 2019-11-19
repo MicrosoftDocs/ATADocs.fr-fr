@@ -7,12 +7,12 @@ ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 0d149b74724ecddcce88bc932626d6bd395d4202
-ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
+ms.openlocfilehash: b9fa681e61d7e723ca3c942e406ed61c837cfe44
+ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73618488"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153134"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -77,8 +77,9 @@ La capacité d’UC et de mémoire suivante fait référence à la **consommatio
 |10 000 à 20 000|2,00|9,00|
 |20 000 à 50 000|3,50|9,50|
 |50 000 à 75 000 |3,50|9,50|
-|75 000 à 100 000|3,50 |9,50|
+|75 000 à 100 000|3,50|9,50|
 |
+
 ** Cela comprend des cœurs physiques et non des cœurs hyper-thread. 
 
 Lorsque vous déterminez le dimensionnement, notez les éléments suivants : 
