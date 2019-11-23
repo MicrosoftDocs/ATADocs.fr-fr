@@ -29,7 +29,7 @@ ms.locfileid: "74153102"
 
 ## <a name="step-7-integrate-vpn"></a>Étape 7. Intégrer le VPN
 
-Microsoft Advanced Threat Analytics (ATA) version 1.8 and higher can collect accounting information from VPN solutions. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
+Microsoft Advanced Threat Analytics (ATA) version 1,8 et ultérieures peuvent collecter des informations de gestion de comptes à partir de solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
 
 ATA s’intègre avec votre solution VPN en écoutant les événements de gestion de comptes RADIUS transférés aux passerelles ATA. Ce mécanisme est basé sur la gestion de comptes RADIUS standard ([RFC 2866](https://tools.ietf.org/html/rfc2866)) et les fournisseurs VPN suivants sont pris en charge :
 
@@ -38,7 +38,7 @@ ATA s’intègre avec votre solution VPN en écoutant les événements de gestio
 -   Cisco ASA
 
 > [!IMPORTANT]
-> As of September 2019, the Advanced Threat Analytics VPN geo-location service responsible for detecting VPN locations now exclusively supports TLS 1.2. Make sure your ATA Center is configured to support TLS 1.2, as versions 1.1 and 1.0 are no longer be supported.   
+> À compter de septembre 2019, le service de géolocalisation VPN Advanced Threat Analytics chargé de la détection des emplacements VPN prend désormais en charge exclusivement TLS 1,2. Assurez-vous que votre centre ATA est configuré pour prendre en charge TLS 1,2, car les versions 1,1 et 1,0 ne sont plus prises en charge.   
 
 ## <a name="prerequisites"></a>Conditions préalables
 
