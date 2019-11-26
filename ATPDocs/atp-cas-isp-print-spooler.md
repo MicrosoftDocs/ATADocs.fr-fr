@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: da5a9429e802f3597942abc5e21e6c5ae6fed0fb
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: 73f876a047ed48526e26cd9b3758077331dca05d
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185550"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206241"
 ---
-# <a name="security-assessment-domain-controllers-with-print-spooler-service-available---preview"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible - Préversion
+# <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible 
 
 ![Désactiver le service Spouleur d’impression](media/atp-cas-isp-print-spooler-1.png)
  

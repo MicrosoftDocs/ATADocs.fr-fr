@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97ea6d080d2aae84bcf0675da853f503fd10b314
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: 5461b2ad5f0ddc41df3b65497f3a9b2f392babb7
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185521"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206268"
 ---
-# <a name="security-assessment-weak-cipher-usage---preview"></a>Évaluation de la sécurité : Utilisation de chiffrements faibles - Préversion
+# <a name="security-assessment-weak-cipher-usage"></a>Évaluation de la sécurité : Utilisation de chiffrements faibles
 
 
 ## <a name="what-are-weak-ciphers"></a>Qu’entend-on par « chiffrements faibles » ? 
