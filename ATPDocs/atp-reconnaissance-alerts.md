@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 442bad8e2dc7c587e665a233083859e86185d3e7
-ms.sourcegitcommit: e25979884395e7143492d604b7d195649aff410c
+ms.openlocfilehash: b19abab8774f79d18b9d82b4048625dd72b3af43
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73046920"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206227"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance  
 
@@ -99,9 +99,9 @@ En guise d’étape suivante, examinez l’ordinateur source :
 1. Examinez l’ordinateur source
 1. Si des tentatives correspondent à des noms de comptes existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut utiliser des attaques par force brute pour essayer d’accéder à votre domaine en utilisant les noms d’utilisateur découverts. Examinez les comptes existants en suivant le [guide d’investigation sur les utilisateurs](investigate-a-user.md).
     > [!NOTE]
-    > Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur.
-    > À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source de ces informations est parfois remplacé par l’appareil ou le logiciel pour afficher uniquement Poste de travail ou MSTSC. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine appropriés pour obtenir le vrai nom de l’ordinateur source.    
-    > Pour activer l’audit NTLM, activez l’événement Windows 8004 (l’événement d’authentification NTLM qui contient des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel l’ordinateur source a tenté d’accéder).
+    > Examinez les preuves pour déterminer le protocole d’authentification utilisé. Si l’authentification NTLM a été utilisée, activez l’audit NTLM de l’événement Windows 8004 sur le contrôleur de domaine pour déterminer le serveur de ressources auquel les utilisateurs ont tenté d’accéder.<br>
+    > L’événement Windows 8004 est l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel le compte d'utilisateur a essayé d’accéder. <br>
+    > Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur. À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source des informations est parfois remplacé par l’appareil ou le logiciel et affiche uniquement Poste de travail ou MSTSC comme source d’informations. En outre, l’ordinateur source n’est peut-être pas réellement présent sur votre réseau. Cela est possible, car les malfaiteurs ciblent communément les serveurs ouverts accessibles sur Internet à partir de l’extérieur du réseau, puis l’utilisent pour énumérer vos utilisateurs. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine pour obtenir le nom du serveur de ressources. Vous devez également examiner ce serveur, vérifier s’il est ouvert sur Internet et, si possible, le fermer.
 
 1. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification. 
 
@@ -111,9 +111,9 @@ En guise d’étape suivante, examinez l’ordinateur source :
 
 1. Contenez l’[ordinateur source](investigate-a-computer.md). 
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    2. Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. 
-    3. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
-2. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation. Les mots de passe longs et complexes assurent le niveau minimal de sécurité nécessaire contre les attaques par force brute. Les attaques par force brute sont généralement l’étape qui suit l’énumération dans la chaîne de destruction de cyber-attaque. 
+    1. Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. 
+    1. Réinitialisez leurs mots de passe et activez l’authentification multifacteur.
+1. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation. Les mots de passe longs et complexes assurent le niveau minimal de sécurité nécessaire contre les attaques par force brute. Les attaques par force brute sont généralement l’étape qui suit l’énumération dans la chaîne de destruction de cyber-attaque. 
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance de mappage de réseau (DNS) (ID externe 2007) 
 
