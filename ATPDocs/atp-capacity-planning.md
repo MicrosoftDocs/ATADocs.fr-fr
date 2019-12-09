@@ -7,12 +7,12 @@ ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b9fa681e61d7e723ca3c942e406ed61c837cfe44
-ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153134"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540883"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -31,7 +31,7 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 
 1. Exécutez l’outil de dimensionnement Azure ATP, **TriSizingTool.exe**, à partir du fichier zip que vous avez téléchargé. 
 2. Lorsque l’exécution de l’outil est terminée, ouvrez le fichier Excel des résultats.
-3. Dans le fichier Excel, recherchez et cliquez sur la feuille **Résumé Azure ATP**. L’autre feuille n’est pas nécessaire, car elle concerne la planification d’Azure ATA.
+3. Dans le fichier Excel, recherchez et cliquez sur la feuille **Résumé Azure ATP**. L’autre feuille n’est pas nécessaire, car elle concerne la planification d’ATA.
    ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
 
 4. Recherchez le champ **Paquets occupés/s** dans le tableau du capteur Azure ATP du fichier Excel des résultats et prenez note de celui-ci.
