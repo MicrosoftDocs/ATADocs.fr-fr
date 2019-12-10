@@ -13,10 +13,10 @@ ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
-ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70209183"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Commutateurs et installation sans assistance d’Azure ATP
@@ -87,7 +87,7 @@ Utilisez la commande suivante pour effectuer une installation sans assistance co
 
 Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
-**Syntaxe**:
+**Syntaxe** :
 
 
 > [!div class="mx-tableFixed"]
@@ -124,7 +124,7 @@ Utilisez la commande suivante pour mettre à jour sans assistance le capteur Azu
 
 ## <a name="uninstall-the-azure-atp-sensor-silently"></a>Désinstaller sans assistance le capteur Azure ATP
 
-Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe**:
+Utilisez la commande suivante pour effectuer une désinstallation sans assistance du capteur Azure ATP : **Syntaxe** :
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
 

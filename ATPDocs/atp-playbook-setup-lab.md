@@ -8,10 +8,10 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "59745588"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
@@ -110,7 +110,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 Pour autoriser le Service Azure ATP à effectuer correctement une énumération SAM-R et créer des chemins de mouvement latéral, vous devez modifier la stratégie SAM.
 
-1. Recherchez votre stratégie SAM sous : **Stratégies \> Paramètres Windows \> Paramètres de sécurité \> Stratégies locales \> Options de sécurité\> « Accès réseau : restreindre les clients autorisés à passer des appels distants à SAM »**_
+1. Recherchez votre stratégie SAM sous : **Stratégies \> Paramètres Windows \> Paramètres de sécurité \> Stratégies locales \> Options de sécurité\> « Accès réseau : restreindre les clients autorisés à passer des appels distants à SAM »** _
 
     ![Modifier la stratégie de groupe pour autoriser Azure ATP à utiliser les fonctionnalités de chemin d’accès de mouvement latéral.](media/playbook-labsetup-localgrouppolicies3.png)
 

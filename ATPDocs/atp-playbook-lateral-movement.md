@@ -8,13 +8,13 @@ ms.author: mlottner
 ms.date: 03/03/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: d7243b74c14a1782b8902473cc6f098d0e12832f
-ms.sourcegitcommit: 984d7b91b81457832aed5f23cdec698770fd92c9
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "57318051"
 ---
-# <a name="tutorial-lateral-movement-playbook"></a>Didacticiel : Playbook de mouvement latéral
+# <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
 
 Le playbook de mouvement latéral est le troisième de la série de tutoriels en quatre parties pour les alertes de sécurité Azure ATP. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Le playbook explique comment tester certaines détections *discrètes* d’Azure ATP. Ce playbook se concentre sur les capacités d’Azure ATP basée sur la *signature* et n’inclut ni le Machine Learning avancé, ni les détections de comportements basées utilisateur ou entité (qui nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours). Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](atp-playbook-lab-overview.md).
 

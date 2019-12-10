@@ -8,13 +8,13 @@ ms.author: mlottner
 ms.date: 09/01/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
-ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70209231"
 ---
-# <a name="tutorial-reconnaissance-playbook"></a>Didacticiel : Playbook de reconnaissance
+# <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 
 Le deuxième tutoriel de cette série en quatre parties sur les alertes de sécurité Azure ATP est un playbook de reconnaissance. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Le playbook explique comment tester certaines détections *discrètes* d’Azure ATP et se concentre sur les fonctionnalités d’Azure ATP *basées sur la signature*. Ce playbook n’inclut pas les alertes ou les détections basées sur le Machine Learning avancé, ni les détections de comportements basées utilisateur/entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](atp-playbook-lab-overview.md).
 
@@ -52,7 +52,7 @@ Azure ATP supprime l’activité de reconnaissance de mappage réseau de votre *
 
 Pour tester la reconnaissance DNS, nous utilisons l’outil de ligne de commande natif, *nslookup*, pour lancer un transfert de zone DNS. Les serveurs DNS avec une configuration correcte refusent les requêtes de ce type et n’autorisent pas la tentative de transfert de zone.  
 
-Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
+Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
 
 ``` cmd
 nslookup
