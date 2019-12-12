@@ -13,10 +13,10 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: b425e4cbd923cfe75269eb22e47da3128fbf4d78
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196260"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Utilisation de l’intégrité et des événements système d’ATA
@@ -37,16 +37,16 @@ Pour vérifier l’intégrité globale de votre système, cliquez sur l’icône
 
 -   Il est possible de gérer toutes les alertes actives et de leur appliquer l’opération **Fermer**, **Ignorer** ou **Supprimer** en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
--   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
+-   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
 
--   **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
+-   **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
 
     > [!NOTE]
     > ATA peut rouvrir une activité fermée si celle-ci est détectée à nouveau peu de temps après.
 
--   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, ATA ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
+-   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, ATA ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
 
-- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
+- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
 
 
 

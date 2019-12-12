@@ -13,10 +13,10 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195953"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nouveautés d’ATA version 1.7
@@ -27,7 +27,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 -   Détections nouvelles et mises à jour
 
--   Contrôle d'accès en fonction du rôle
+-   Contrôle d'accès basé sur les rôles
 
 -   Prise en charge de Windows Server 2016 et Windows Server 2016 Core
 
@@ -52,7 +52,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 ### <a name="infrastructure"></a>Infrastructure
 
-- **Contrôle d’accès en fonction du rôle** Fonctionnalité de contrôle d’accès en fonction du rôle (RBAC). ATA 1.7 comporte trois rôles : Administrateur ATA, Analyste ATA et Responsable ATA.
+- **Contrôle d’accès en fonction du rôle** Fonctionnalité de contrôle d’accès en fonction du rôle (RBAC). ATA 1.7 inclut trois rôles : ATA Administrator, ATA Analyst et ATA Executive.
 
 - **Prise en charge de Windows Server 2016 et Windows Server Core** ATA 1.7 prend en charge le déploiement de passerelles légères sur les contrôleurs de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus mais pas Nano). De plus, cette version prend en charge Windows Server 2016 pour les composants Centre ATA et Passerelle ATA.
 
@@ -63,15 +63,15 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 Les problèmes connus de cette version sont les suivants :
 
 ### <a name="gateway-automatic-update-may-fail"></a>Risque d’échec de mise à jour automatique de passerelle
-**Symptômes :** dans les environnements présentant des liaisons WAN lentes, la mise à jour de la passerelle ATA risque d’atteindre le délai d’expiration (100 secondes) et d’échouer.
+**Symptômes :** Dans les environnements avec des liaisons WAN lentes, la mise à jour de la passerelle ATA peut atteindre le délai d’expiration de mise à jour (100 secondes) et échouer.
 Dans la console ATA, la passerelle ATA a l’état « Mise à jour (téléchargement du package) » pendant un laps de temps prolongé et l’opération finit par échouer.
-**Solution de contournement :** téléchargez le dernier package de passerelle ATA sur la console ATA et mettez à jour la passerelle ATA manuellement.
+**Solution de contournement :** Pour contourner ce problème, téléchargez le package de passerelle ATA le plus récent à partir de la console ATA et mettez à jour la passerelle ATA manuellement.
 
 > [!IMPORTANT]
 >  Le renouvellement automatique des certificats utilisés par ATA n’est pas pris en charge. L’utilisation de ces certificats peut provoquer le non-fonctionnement d’ATA lors du renouvellement automatique du certificat. 
 
 ### <a name="no-browser-support-for-jis-encoding"></a>Aucune prise en charge du navigateur pour l’encodage JIS
-**Symptômes :** la console ATA risque de ne pas fonctionner comme prévu sur les navigateurs qui utilisent l’encodage JIS. **Solution de contournement :** modifiez l’encodage du navigateur et choisissez Unicode UTF-8.
+**Symptômes :** La console ATA peut ne pas fonctionner comme prévu sur les navigateurs utilisant l’encodage JIS **Solution de contournement :** Modifiez l’encodage du navigateur et choisissez Unicode UTF-8.
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Trafic avec mise en miroir de ports ignoré lors de l’utilisation de VMware
 
@@ -89,7 +89,7 @@ Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, 
 
 Quand vous mettez à jour ATA 1.7 vers ATA 1.7 Update 1, le processus de mise à jour automatique de la passerelle ATA et l’installation manuelle des passerelles à l’aide du package de passerelle peuvent ne pas fonctionner comme prévu.
 Ce problème se produit si le certificat utilisé par le centre ATA a été modifié avant la mise à jour d’ATA.
-Pour vérifier ce problème, recherchez les exceptions suivantes dans **Microsoft.Tri.Gateway.Updater.log** sur la passerelle ATA : **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: La connexion sous-jacente a été fermée : An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+Pour vérifier ce problème, passez en revue le journal **Microsoft.Tri.Gateway.Updater.log** sur la passerelle ATA et recherchez les exceptions suivantes : **System.Net.Http.HttpRequestException : Une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : La connexion sous-jacente a été fermée : Une erreur inattendue s’est produite lors de l’envoi. ---> System.IdentityModel.Tokens.SecurityTokenValidationException : Échec de la validation de l’empreinte numérique du certificat**
 
 ![Bogue au niveau de la passerelle lors de la mise à jour d’ATA](media/17update_gatewaybug.png)
 
@@ -102,7 +102,7 @@ Pour résoudre ce problème, une fois le certificat modifié, accédez à l’em
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>L’exportation des détails d’une activité suspecte dans Excel risque d’échouer
-L’opération d’exportation des détails d’une activité suspecte vers un fichier Excel échoue dans certains cas avec l’erreur suivante : *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+Lorsque vous tentez d’exporter les détails d’une activité suspecte dans un fichier Excel, l’opération peut échouer avec l’erreur suivante : *Erreur [BsonClassMapSerializer`1] System.FormatException: Une erreur s’est produite lors de la désérialisation de la propriété Activity de la classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity : L’élément 'ResourceIdentifier' ne correspond à aucun champ ou à aucune propriété de la classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException : L’élément 'ResourceIdentifier' ne correspond à aucun champ ou à aucune propriété de la classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Pour résoudre ce problème, accédez à l’emplacement suivant à partir d’une invite de commandes avec élévation de privilèges : **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. Ensuite, exécutez les commandes suivantes :
 1.  `Mongo.exe ATA` (ATA doit être noté en lettres majuscules)

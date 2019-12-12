@@ -13,10 +13,10 @@ ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 10c2cc0858ba2403fc16721437f39cdd6dd2cc7c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196160"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Mise à jour d’ATA vers la version 1.7 : guide de migration
@@ -49,7 +49,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
 
 1.  Sauvegardez votre base de données (facultatif) :
 
@@ -61,7 +61,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 
     -  Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
 
-    -  Si vous n’avez pas activé les mises à jour automatiques dans la version 1.6, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
+    -  Si vous n’avez pas activé les mises à jour automatiques dans la version 1.6, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** .
     ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png) Ainsi, Windows est configuré de manière à récupérer les mises à jour des autres produits Microsoft (notamment ATA), comme illustré ci-après. 
      ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
@@ -83,7 +83,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 > Le port d’écoute Syslog configuré sur toutes les passerelles sera modifié : il s’agira du port 514.
  
 > [!NOTE] 
-> Pour installer de nouvelles passerelles ATA, accédez à l’écran **Passerelles** et cliquez sur **Télécharger l’installation de la passerelle** pour obtenir le package d’installation ATA 1.7 et suivre les instructions d’installation de la nouvelle passerelle, comme décrit dans [Étape 4. Installer la passerelle ATA](install-ata-step4.md).
+> Pour installer de nouvelles passerelles ATA, accédez à l’écran **passerelles** et cliquez sur **Télécharger la configuration** de la passerelle pour obtenir le package d’installation ATA 1,7 et suivez les instructions pour l’installation de la nouvelle passerelle, comme décrit à l' [étape 4. Installez la passerelle ATA](install-ata-step4.md).
 
 
 

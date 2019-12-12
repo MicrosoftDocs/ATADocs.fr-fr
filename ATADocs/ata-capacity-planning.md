@@ -12,10 +12,10 @@ ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
-ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72690227"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
@@ -91,7 +91,7 @@ Quand vous choisissez le type de déploiement de passerelle, prenez en compte le
 |Type de passerelle|Avantages|Coût|Topologie de déploiement|Utilisation des contrôleurs de domaine|
 |----|----|----|----|-----|
 |Passerelle ATA|Avec un déploiement hors bande, il est plus difficile pour les agresseurs de détecter qu’ATA est présent|Plus élevé|Installée en même temps que le contrôleur de domaine (hors bande)|Prend en charge jusqu’à 50 000 paquets par seconde|
-|Passerelle légère ATA|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Minuscule|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 10 000 paquets par seconde|
+|Passerelle légère ATA|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Plus faible|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 10 000 paquets par seconde|
 
 Voici quelques exemples de scénarios dans lesquels les contrôleurs de domaine doivent être couverts par la passerelle légère ATA :
 

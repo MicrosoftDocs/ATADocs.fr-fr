@@ -13,10 +13,10 @@ ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
 ms.openlocfilehash: 27f51d2b649f1a2bc3e1b6f2a36498fd73c0d77a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196191"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
@@ -49,7 +49,7 @@ Utilisez le script de base de données RGPD d’ATA pour supprimer les entités 
 
 ### <a name="delete-entities"></a>Supprimer des entités
 
-Cette action supprime définitivement une entité dans la base de données ATA. Pour exécuter cette commande, indiquez le nom de commande `deleteAccount` et le paramètre `SamName`, `UpnName` ou `GUID` pour l’ordinateur ou le nom d’utilisateur que vous souhaitez supprimer. Par exemple : 
+Cette action supprime définitivement une entité dans la base de données ATA. Pour exécuter cette commande, indiquez le nom de commande `deleteAccount` et le paramètre `SamName`, `UpnName` ou `GUID` pour l’ordinateur ou le nom d’utilisateur que vous souhaitez supprimer. Exemple : 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
@@ -61,7 +61,7 @@ Cette action supprime définitivement les données d’activité des entités da
 
 Pour exécuter cette commande, indiquez le nom de commande `deleteOldData` et le nombre de jours de données que vous souhaitez conserver dans la base de données. 
 
-Par exemple : 
+Exemple : 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 

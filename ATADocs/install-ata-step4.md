@@ -13,10 +13,10 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 55279f066b093e975d33d9d392530dc1a3238112
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195716"
 ---
 # <a name="install-ata---step-4"></a>Installer ATA - Étape 4
@@ -27,7 +27,7 @@ ms.locfileid: "65195716"
 > [« Étape 3](install-ata-step3.md)
 > [Étape 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Étape 4. Installer la passerelle ATA
+## <a name="step-4-install-the-ata-gateway"></a>Étape 4. Installer la passerelle ATA
 
 Avant d’installer la passerelle ATA sur un serveur dédié, vérifiez que la mise en miroir des ports est correctement configurée et que la passerelle ATA peut voir le trafic à destination et en provenance des contrôleurs de domaine. Pour plus d’informations, consultez [Valider la mise en miroir des ports](validate-port-mirroring.md).
 
@@ -65,14 +65,14 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
    
     ![Fournir les informations d’identification de la passerelle ATA](media/ata-install-credentials.png)
    
-    - Chemin d’installation : il s’agit de l’emplacement où est installée la passerelle ATA. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
+    - Chemin d’installation : Il s’agit de l’emplacement où la passerelle ATA doit être installée. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
    
 6. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
     
     -   KB 3047154 (pour Windows Server 2012 R2 uniquement)
     
         > [!IMPORTANT]
-        > -   N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports. 
+        > -   N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela empêcherait le bon fonctionnement de la mise en miroir des ports. 
         > -   N’installez pas l’Analyseur de message, Wireshark ou tout autre logiciel de capture réseau sur la passerelle ATA. Si vous souhaitez capturer le trafic réseau, installez et utilisez le Moniteur réseau Microsoft version 3.4.
     
     -   Service de passerelle ATA

@@ -12,10 +12,10 @@ ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 22420ea90bc922684a4e99ad303bba831f3a45e7
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196076"
 ---
 # <a name="ata-version-192"></a>ATA version 1.9.2
@@ -45,9 +45,9 @@ Cette mise à jour inclut également des améliorations au niveau de la stabilit
 
 ## <a name="get-this-update"></a>Obtenir cette mise à jour
 
-Pour obtenir le package autonome pour cette mise à jour, accédez au site web Centre de téléchargement Microsoft : [Télécharger le package ATA 1.9.2 maintenant](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
+Pour obtenir le package autonome pour cette mise à jour, accédez au site Web du centre de téléchargement Microsoft : [Téléchargez le package ATA 1.9.2 maintenant](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 Pour installer cette mise à jour, une des versions ATA suivantes doit déjà être installée : 
 - Mise à jour 1 pour ATA 1.9 (version 1.9.7412)

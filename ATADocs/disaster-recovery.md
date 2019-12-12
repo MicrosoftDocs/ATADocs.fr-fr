@@ -13,10 +13,10 @@ ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: e42811432fe01e0eddcfe0acf5dc1c47a3f34379
-ms.sourcegitcommit: 4fdee32cea25e126db91ba89f09c40a3bbbc7b3b
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65044062"
 ---
 # <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
@@ -32,7 +32,7 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 1. La configuration du centre ATA est sauvegardée dans un fichier toutes les 4 heures. Recherchez la dernière copie de sauvegarde de la configuration du centre ATA et enregistrez-la sur un ordinateur distinct. Pour obtenir une explication complète de la localisation de ces fichiers, consultez [Exporter et importer la configuration ATA](ata-configuration-file.md). 
 2. Exportez le certificat du centre ATA.
-    1. Dans le Gestionnaire de certificats, accédez à **Certificats (ordinateur local)** -> **Personnel** ->**Certificats**, puis sélectionnez **Centre ATA**.
+    1. Dans le Gestionnaire de certificats, accédez à **Certificats (ordinateur local)**  -> **Personnel** ->**Certificats**, puis sélectionnez **Centre ATA**.
     2. Cliquez avec le bouton droit sur **Centre ATA** et sélectionnez **Toutes les tâches** puis **Exportation**. 
      ![Certificat du centre ATA](media/ata-center-cert.png)
     3. Suivez les instructions pour exporter le certificat, en veillant à exporter également la clé privée.
@@ -66,7 +66,7 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](install-ata-step6.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

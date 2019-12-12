@@ -13,10 +13,10 @@ ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: b10c2814fcac064d50bce292e86397ea5a0da21e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196062"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Nouveautés d’ATA version 1.9
@@ -27,7 +27,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ## <a name="new--updated-detections"></a>Détections nouvelles et mises à jour
 
--  **Création de service malveillant** : Les attaquants tentent d’exécuter un service suspect sur votre réseau. ATA génère désormais une alerte quand il voit qu’une personne exécute un nouveau service qui semble suspect sur un contrôleur de domaine. Cette détection est basée sur des événements (pas le trafic réseau). Pour plus d’informations, consultez le [guide des activités suspectes](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Création de service suspect** : les attaquants tentent d’exécuter un service suspect sur votre réseau. ATA génère désormais une alerte quand il voit qu’une personne exécute un nouveau service qui semble suspect sur un contrôleur de domaine. Cette détection est basée sur des événements (pas le trafic réseau). Pour plus d’informations, consultez le [guide des activités suspectes](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Nouveaux rapports pour vous aider dans votre analyse 

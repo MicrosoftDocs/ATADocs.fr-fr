@@ -13,10 +13,10 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 25ccbe5c1cd37a46e88335fc1e293b0e426ced4e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196099"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
@@ -24,7 +24,7 @@ ms.locfileid: "65196099"
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [Étape 2 »](install-ata-step2.md)
+> [tape 2 »](install-ata-step2.md)
 
 
 Cette procédure d’installation fournit des instructions pour effectuer une nouvelle installation d’ATA 1.9. Pour plus d’informations sur la mise à jour d’un déploiement d’ATA existant à partir d’une version antérieure, consultez le [guide de migration d’ATA pour la version 1.9](ata-update-1.9-migration-guide.md).
@@ -32,7 +32,7 @@ Cette procédure d’installation fournit des instructions pour effectuer une no
 > [!IMPORTANT] 
 > Si vous utilisez Windows 2012 R2, installez la mise à jour KB2934520 sur le serveur du centre ATA et sur les serveurs de passerelle ATA avant de lancer l’installation ; sinon, le programme d’installation d’ATA installe cette mise à jour qui nécessite un redémarrage pendant l’installation d’ATA.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Étape 1. Télécharger et installer le centre ATA
+## <a name="step-1-download-and-install-the-ata-center"></a>Étape 1. Télécharger et installer le centre ATA
 Après avoir vérifié que le serveur répond à la configuration requise, vous pouvez passer à l’installation du centre ATA.
     
 > [!NOTE]
@@ -57,7 +57,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 7. Nous recommandons de configurer la mise à jour automatique pour ATA. Si Windows n’est pas configuré pour se mettre à jour automatiquement sur votre ordinateur, l’écran **Utiliser Microsoft Update pour maintenir l’ordinateur à jour et sécurisé** apparaît. 
    ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png)
 
-8. Sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**. Les paramètres Windows sont modifiés de manière à récupérer les mises à jour des autres produits Microsoft (y compris ATA). 
+8. Sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** . Les paramètres Windows sont modifiés de manière à récupérer les mises à jour des autres produits Microsoft (y compris ATA). 
 
     ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
@@ -96,7 +96,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
 ### <a name="set-anti-virus-exclusions"></a>Définir des exclusions d’antivirus
 
-Après avoir installé le centre ATA, excluez le répertoire de base de données MongoDB de l’analyse continue de votre application antivirus. L’emplacement par défaut dans la base de données est le suivant : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Après avoir installé le centre ATA, excluez le répertoire de base de données MongoDB de l’analyse continue de votre application antivirus. L’emplacement par défaut dans la base de données est : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 Veillez à également exclure les dossiers et les processus suivants de l’analyse antivirus :
 

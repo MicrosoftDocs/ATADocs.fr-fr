@@ -13,14 +13,14 @@ ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 17bc38ad4af1e0e185b1607a5d0002d5bfa613ea
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196106"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Mise à jour d’ATA vers la version 1.6 : guide de migration
-La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
+ATA 1.6 comporte les améliorations suivantes :
 
 -   Nouvelles détections
 
@@ -61,7 +61,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
 
 1.  Sauvegardez votre base de données (facultatif) :
 
@@ -80,7 +80,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 
     3.  Lisez le Contrat de Licence Utilisateur Final et, si vous en acceptez les termes, cliquez sur **Suivant**.
 
-    4.  Vous pouvez désormais utiliser Microsoft Update pour qu’ATA reste à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
+    4.  Vous pouvez désormais utiliser Microsoft Update pour qu’ATA reste à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** .
     ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png) Ainsi, Windows est configuré de manière à récupérer les mises à jour des autres produits Microsoft (notamment ATA), comme illustré ci-après. 
      ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
@@ -96,7 +96,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 > [!IMPORTANT] 
 > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA.
 
 Pour télécharger le package d’installation de la passerelle ATA :
@@ -117,7 +117,7 @@ Le fichier zip comprend les fichiers suivants :
 
 -   Fichier de paramètres de configuration avec les informations requises pour se connecter au centre ATA
 
-### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : Mettez à jour les passerelles ATA.
+### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : mettre à jour les passerelles ATA
 
 1.  Sur chaque passerelle ATA, extrayez les fichiers du package de passerelle ATA et exécutez le fichier **Microsoft ATA Gateway Setup.exe**.
 

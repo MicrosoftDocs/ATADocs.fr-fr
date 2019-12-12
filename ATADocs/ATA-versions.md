@@ -12,10 +12,10 @@ ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 7ff497426d55dd9610082198257d3b393676385f
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65613417"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support des versions de Microsoft Advanced Threat Analytics (ATA)

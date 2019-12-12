@@ -13,10 +13,10 @@ ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 4630e1df24c370bc15bc2872ca8b1087f5cf42fa
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197009"
 ---
 # <a name="ata-siem-log-reference"></a>Informations de référence sur le journal SIEM ATA
@@ -151,7 +151,7 @@ Priorités : 3=Faible 5=Moyenne 10=Élevée
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

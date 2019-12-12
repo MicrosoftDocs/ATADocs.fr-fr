@@ -13,10 +13,10 @@ ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: b5e5e8c5f42f786ca869ed2a29572e4512faf26f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197234"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
@@ -28,7 +28,7 @@ Après avoir examiné une activité suspecte, vous pouvez la classer comme :
 
 -   **Vrai positif** : action malveillante détectée par ATA.
 
--   **Vrai positif bénin** : action détectée par ATA qui est réelle, mais pas malveillante, comme un test de pénétration.
+-   **Vrai positif sans gravité** : action détectée par ATA qui est réelle, mais pas malveillante, comme un test de pénétration.
 
 -   **Faux positif** : fausse alerte. L’activité n’a pas eu lieu.
 
@@ -107,7 +107,7 @@ Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device
 
 **Description**
 
-Le passage à une version antérieure du chiffrement est une méthode visant à affaiblir Kerberos en abaissant le niveau de chiffrement de différents champs du protocole qui sont normalement chiffrés à l’aide du niveau de chiffrement le plus élevé. Un champ au chiffrement affaibli peut être plus vulnérable à des attaques de force brute en mode hors connexion. Plusieurs méthodes d’attaque exploitent les codes faibles de chiffrement Kerberos. Dans cette détection, ATA examine les types de chiffrement Kerberos utilisés par les ordinateurs et les utilisateurs, et déclenche des alertes quand un chiffrement plus faible est utilisé : (1) est inhabituel pour l’ordinateur source et/ou l’utilisateur ; et (2) correspond à des techniques d’attaque connues.
+Le passage à une version antérieure du chiffrement est une méthode visant à affaiblir Kerberos en abaissant le niveau de chiffrement de différents champs du protocole qui sont normalement chiffrés à l’aide du niveau de chiffrement le plus élevé. Un champ au chiffrement affaibli peut être plus vulnérable à des attaques de force brute en mode hors connexion. Plusieurs méthodes d’attaque exploitent les codes faibles de chiffrement Kerberos. Dans cette détection, ATA apprend les types de chiffrement Kerberos utilisés par les ordinateurs et les utilisateurs, et déclenche des alertes quand un code de chiffrement plus faible utilisé : (1) est inhabituel pour l’ordinateur source et/ou l’utilisateur ; et (2) correspond à une technique d’attaque connue.
 
 Il existe trois types de détection :
 
@@ -121,10 +121,10 @@ Il existe trois types de détection :
 
 Lisez d’abord la description de l’alerte pour déterminer de quel type de détection il s’agit entre les trois types de détection ci-dessus. Pour plus d’informations, téléchargez la feuille de calcul Excel.
 1.  Skeleton Key : Déterminez si Skeleton Key a affecté vos contrôleurs de domaine à l’aide de [l’analyseur écrit par l’équipe ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Si l’analyseur détecte la présence d’un logiciel malveillant sur un ou plusieurs de vos contrôleurs de domaine, l’alerte est un vrai positif.
-2.  Golden Ticket : Dans la feuille de calcul Excel, accédez à l’onglet **Activité réseau**. Vous voyez que le champ qui a changé de version concerne la **demande du type de chiffrement du ticket** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** liste des méthodes de chiffrement plus poussé.
+2.  Golden Ticket : dans la feuille de calcul Excel, accédez à l’onglet **activité réseau** . Vous verrez que le champ mis à niveau en question est le **type de chiffrement ticket de demande**et que **types de chiffrement pris en charge par l’ordinateur source** répertorie les méthodes de chiffrement plus fortes.
   a.    Vérifiez l’ordinateur source et le compte, ou s’il en existe plusieurs, vérifiez qu’ils ont bien quelque chose en commun (par exemple, tout le personnel marketing utilise une application spécifique susceptible d’être à l’origine du déclenchement de l’alerte). Il peut arriver qu’une application personnalisée rarement utilisée s’authentifie à l’aide d’un code de chiffrement plus faible. Déterminez si de telles applications personnalisées sont installées sur l’ordinateur source. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité que vous pouvez **supprimer**.
   b.    Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut `msDS-SupportedEncryptionTypes` du compte de service de la ressource.
-3.  Overpass-the-Hash : Dans la feuille de calcul Excel, accédez à l’onglet **Activité réseau**. Vous voyez que le champ qui a changé de version concerne le **type de chiffrement d’horodateur chiffré** et que le champ des **types de chiffrement pris en charge par les ordinateurs sources** contient des méthodes de chiffrement plus poussé.
+3.  Overpass-The-hash : dans la feuille de calcul Excel, accédez à l’onglet **activité réseau** . Vous verrez que le champ de déclassement approprié est **chiffré** et que les types de chiffrement **pris en charge par l’ordinateur source** contiennent des méthodes de chiffrement plus fortes.
   a.    Dans certains cas, cette alerte peut se déclencher quand des utilisateurs se connectent à l’aide de cartes à puce dont la configuration a récemment été modifiée. Vérifiez si des changements de ce type ont été apportés pour les comptes concernés. Si c’est le cas, l’alerte est probablement un vrai positif sans gravité que vous pouvez **supprimer**.
   b.    Vérifiez la ressource accessible par ces tickets, s’il existe une seule ressource à laquelle ils accèdent tous, validez-la, vérifiez qu’il s’agit d’une ressource valide, à laquelle ils sont censés accéder. De plus, vérifiez si la ressource cible prend en charge des méthodes de chiffrement renforcé. Vous pouvez le vérifier dans Active Directory en consultant l’attribut `msDS-SupportedEncryptionTypes` du compte de service de la ressource.
 
@@ -373,7 +373,7 @@ Il existe plusieurs types de requêtes dans le protocole DNS. ATA détecte les d
 
 **Examen**
 
-1. La machine source (**En provenance de…**) est-elle un serveur DNS ? Si c’est le cas, il s’agit probablement d’un faux positif. Pour le vérifier, cliquez sur l’alerte pour accéder à la page de détails correspondante. Dans le tableau, sous **Requête**, vérifiez quels domaines ont été interrogés. S’agit-il de domaines existants ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif). De plus, vérifiez que le port UDP 53 est ouvert entre la passerelle ATA et l’ordinateur source pour éviter les futurs faux positifs.
+1. La machine source (**En provenance de…** ) est-elle un serveur DNS ? Si c’est le cas, il s’agit probablement d’un faux positif. Pour le vérifier, cliquez sur l’alerte pour accéder à la page de détails correspondante. Dans le tableau, sous **Requête**, vérifiez quels domaines ont été interrogés. S’agit-il de domaines existants ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif). De plus, vérifiez que le port UDP 53 est ouvert entre la passerelle ATA et l’ordinateur source pour éviter les futurs faux positifs.
 2.  L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **excluez les entités** dans ATA, soit directement en choisissant **Fermer et exclure**, soit via la page **Exclusion**, sous **Configuration** (disponible pour les administrateurs d’ATA).
 3.  Si la réponse à toutes les questions précédentes est non, continuez à chercher en vous concentrant sur l’ordinateur source. Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que la requête, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
 
@@ -460,7 +460,7 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 **Examen**
 
-1. Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
+1. Cliquez sur **Télécharger les détails** pour consulter toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
    - Liste des comptes attaqués
    - Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
    - Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
@@ -524,9 +524,9 @@ Les attaquants utilisent des outils qui implémentent différents protocoles (SM
 
 Identifiez le protocole inhabituel, à partir de la chronologie des activités suspectes, et cliquez sur l’activité suspecte pour accéder à la page de détails correspondante. Le protocole s’affiche au-dessus de la flèche : Kerberos ou NTLM.
 
-- **Kerberos** : Souvent déclenché si un outil de piratage comme Mimikatz a été éventuellement utilisé dans une attaque de type Overpass-the-Hash. Vérifiez si l’ordinateur source exécute une application qui implémente sa propre pile Kerberos, qui n’est pas conforme à la RFC Kerberos. Si c’est le cas, il s’agit d’un vrai positif sans gravité et l’alerte peut être **fermée**. Si l’alerte continue d’être déclenchée et que c’est toujours le cas, **supprimez** l’alerte.
+- **Kerberos** : souvent déclenché si un outil de piratage comme Mimikatz a été éventuellement utilisé dans une attaque de type Overpass-the-Hash. Vérifiez si l’ordinateur source exécute une application qui implémente sa propre pile Kerberos, qui n’est pas conforme à la RFC Kerberos. Si c’est le cas, il s’agit d’un vrai positif sans gravité et l’alerte peut être **fermée**. Si l’alerte continue d’être déclenchée et que c’est toujours le cas, **supprimez** l’alerte.
 
-- **NTLM** : Une alerte peut être déclenchée si WannaCry ou un outil comme Metasploit, Medusa ou Hydra est utilisé.  
+- **NTLM** : une alerte peut être déclenchée si WannaCry ou un outil comme Metasploit, Medusa ou Hydra est utilisé.  
 
 Pour déterminer si l’activité est une attaque WannaCry, effectuez les étapes suivantes :
 

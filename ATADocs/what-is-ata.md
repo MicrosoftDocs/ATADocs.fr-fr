@@ -13,10 +13,10 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 67e265c4785e5b2b3cc6fe267e72953e8817020f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195985"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
@@ -46,12 +46,12 @@ Pour plus d’informations sur l’architecture d’ATA, consultez [Architecture
 
 La technologie ATA détecte plusieurs activités suspectes, en se focalisant sur différentes phases de la chaîne de cyber-attaque, notamment :
 
--   Reconnaissance, au cours de laquelle les personnes malveillantes vont recueillir des informations sur la façon dont l’environnement est construit, sur les différents assets, et sur les entités qui existent. C’est en général à ce stade que les attaquants élaborent des plans pour les phases d’attaque suivantes.
+-   Les différentes ressources de reconnaissance, au cours de laquelle des personnes malveillantes recueillir des informations sur la façon dont l’environnement est construit, sont, et les entités qui existent. C’est en général à ce stade que les attaquants élaborent des plans pour les phases d’attaque suivantes.
 -   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
 -   Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne avec différentes séries de points d’entrée, d’informations d’identification et de techniques. 
 
 Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
-ATA recherche trois principaux types d’attaques : les attaques malveillantes, les comportements anormaux et les risques et problèmes de sécurité.
+ATA recherche trois principaux types d’attaques : les attaques malveillantes, le comportement anormal, et les risques et problèmes de sécurité.
 
 Les **attaques malveillantes** sont détectées de manière déterministe, en recherchant la liste complète des types d’attaques connus, notamment :
 
@@ -104,9 +104,9 @@ Vous pouvez afficher les activités suspectes de ce type dans le tableau de bord
 
 ## <a name="whats-next"></a>Étapes suivantes
 
--   Pour plus d’informations sur l’intégration d’ATA au réseau : [Architecture d’ATA](ata-architecture.md)
+-   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, voir [Architecture ATA](ata-architecture.md).
 
--   Pour commencer le déploiement d’ATA : [Installer ATA](install-ata-step1.md)
+-   Pour commencer le déploiement d’ATA, voir [Installer ATA](install-ata-step1.md).
 
 ## <a name="related-videos"></a>Vidéos connexes
 - [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

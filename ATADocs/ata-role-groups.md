@@ -13,10 +13,10 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3f4a3bed481fcd9ca789057f0b45fc25a30d01ad
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196232"
 ---
 # <a name="ata-role-groups"></a>Groupes de rôles ATA
@@ -31,7 +31,7 @@ Les groupes de rôles permettent de gérer l’accès pour ATA. À l’aide des 
 
 ## <a name="types-of-ata-role-groups"></a>Types de groupes de rôles ATA 
 
-ATA présente trois types de groupes de rôles : Administrateurs ATA, Utilisateurs ATA et Observateurs ATA. Le tableau suivant décrit le type d’accès dans ATA disponible par rôle. En fonction du rôle que vous attribuez, différents écrans et options de menu dans ATA ne sont pas disponibles, comme suit :
+ATA présente trois types de groupe de rôles : ATA Administrators, ATA Users et ATA Viewers. Le tableau suivant décrit le type d’accès dans ATA disponible par rôle. En fonction du rôle que vous attribuez, différents écrans et options de menu dans ATA ne sont pas disponibles, comme suit :
 
 |Activité |Administrateurs Microsoft Advanced Threat Analytics|Utilisateurs Microsoft Advanced Threat Analytics|Observateurs Microsoft Advanced Threat Analytics|
 |----|----|----|----|

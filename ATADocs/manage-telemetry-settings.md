@@ -12,10 +12,10 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d39fef746d27871a5c45877edb33d64c2a3e4f19
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195901"
 ---
 # <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système
@@ -63,7 +63,7 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 
     -   ID d’activité suspecte
 
-    -   État
+    -   Status
 
     -   Heures de début et de fin
 
@@ -77,7 +77,7 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 
     -   ID du problème d’intégrité
 
-    -   État
+    -   Status
 
     -   Heures de début et de fin
 

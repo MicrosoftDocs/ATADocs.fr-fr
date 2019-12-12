@@ -13,10 +13,10 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d71cfd283d89f6b1d1413f4d9832fb4302504622
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196168"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Mise à jour d’ATA vers la version 1.5 : guide de migration
@@ -58,7 +58,7 @@ Suivez ces étapes pour mettre à jour ATA vers la version 1.5 :
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
 
 1.  Sauvegardez votre base de données (facultatif) :
 
@@ -89,7 +89,7 @@ Suivez ces étapes pour mettre à jour ATA vers la version 1.5 :
 > [!IMPORTANT]
 > - Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA.
 
 Pour télécharger le package d’installation de la passerelle ATA :
@@ -110,7 +110,7 @@ Le fichier zip comprend les fichiers suivants :
 
 -   Fichier de paramètres de configuration avec les informations requises pour se connecter au centre ATA
 
-### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : Mettez à jour les passerelles ATA.
+### <a name="step-3-update-the-ata-gateways"></a>Étape 3 : mettre à jour les passerelles ATA
 
 1.  Sur chaque passerelle ATA, extrayez les fichiers du package de passerelle ATA et exécutez le fichier Microsoft ATA Gateway Setup.
 

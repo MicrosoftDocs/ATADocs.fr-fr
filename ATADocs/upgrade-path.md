@@ -13,10 +13,10 @@ ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 7168e8a073473bacd659e662d71ac7984ac2a45c
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "66264966"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Chemin de mise à niveau recommandé pour ATA
@@ -43,12 +43,12 @@ Cet article fournit des informations sur les versions d’ATA (Advanced Threat A
 
 ## <a name="upgrade-paths"></a>Chemins de mise à niveau
 
-Consultez le diagramme de mise à niveau pour déterminer le chemin de mise à niveau correct pour votre installation actuelle. 
+Reportez-vous au diagramme du chemin de mise à niveau pour déterminer le chemin de mise à niveau correct pour votre installation actuelle. 
 
-![Chemin de mise à niveau de version ATA](./media/upgrade-path-ata.png)
+![Chemin de mise à niveau de la version ATA](./media/upgrade-path-ata.png)
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

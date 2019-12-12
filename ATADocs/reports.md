@@ -13,10 +13,10 @@ ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 279c8cc8f44e0c2803966709511d3089bce5d3a8
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197089"
 ---
 # <a name="ata-reports"></a>Rapports ATA
@@ -29,13 +29,13 @@ La section Rapports ATA de la console vous permet de générer des rapports cont
 Pour accéder à la page Rapports, cliquez sur l’icône de rapport dans la barre de menus : ![icône de rapport](./media/ata-report-icon.png).
 Les rapports disponibles sont : 
 
-- **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **Résumé** de ce qui a été détecté sur votre réseau, un pour les **Activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **Problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité système ATA nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
+- **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **Résumé** de ce qui a été détecté sur votre réseau, un pour les **Activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **Problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité système ATA nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
 
-- **Modification de groupes sensibles** : ce rapport liste toutes les modifications apportées aux groupes sensibles (comme les administrateurs).
+- **Modification des groupes sensibles** : ce rapport liste toutes les modifications apportées aux groupes sensibles (comme les administrateurs).
 
-- **Mots de passe exposés en texte clair** : certains services utilisent le protocole LDAP non sécurisé pour envoyer des informations d’identification de compte en texte brut, y compris pour des comptes sensibles. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. Ce rapport liste tous les mots de passe de compte et d’ordinateur sources qu’ATA a détectés comme envoyés en texte clair. 
+- **Mots de passe exposés en texte clair** : certains services utilisent le protocole LDAP non sécurisé pour envoyer des informations d’identification de compte en texte brut, y compris pour des comptes sensibles. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. Ce rapport liste tous les mots de passe de compte et d’ordinateur sources qu’ATA a détectés comme envoyés en texte clair. 
 
-- **Chemins d’accès par mouvement latéral aux comptes sensibles** : ce rapport liste les comptes sensibles exposés au moyen de chemins d’accès par mouvement latéral. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md).
+- **Chemins d'accès de mouvement latéral pour les comptes sensibles** : ce rapport répertorie les comptes sensibles qui sont exposés via les chemins d’accès de mouvement latéral. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md).
 
 Il existe deux façons de générer un rapport : à la demande ou en planifiant un rapport à envoyer périodiquement à votre adresse e-mail.
 
@@ -65,7 +65,7 @@ Pour définir un rapport planifié :
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

@@ -13,10 +13,10 @@ ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5d266de0344a699ed3c3934246311f21b1b00c09
-ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70803202"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
@@ -29,16 +29,16 @@ ms.locfileid: "70803202"
 > [!NOTE]
 > Avant d’appliquer une nouvelle stratégie, assurez-vous toujours que votre environnement reste sécurisé, sans impact sur la compatibilité des applications en activant et en vérifiant vos modifications proposées en mode audit. 
 
-## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9. Configurer les autorisations requises SAM-R
+## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9 : Configurer les autorisations requises SAM-R
 
-La détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur des requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont effectuées à l’aide du protocole SAM-R, via le compte du service ATA créé à l’[étape 2. Se connecter à AD](install-ata-step2.md).
+La détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur des requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont effectuées à l’aide du protocole SAM-R, via le compte de service ATA créé à l' [étape 2. Connectez-vous à AD](install-ata-step2.md).
  
 Pour vous assurer que les clients et serveurs Windows autorisent le compte de service ATA à effectuer cette opération SAM-R, vous devez modifier votre **stratégie de groupe** de manière à ajouter le compte de service ATA en plus des comptes configurés listés dans la stratégie **Accès réseau**. Cette stratégie de groupe doit être appliquée à tous les appareils de votre organisation. 
 
 1. Recherchez la stratégie :
 
-   - Nom de la stratégie : Accès réseau : Restreindre les clients autorisés à effectuer des appels distants à SAM
-   - Emplacement : Configuration de l’ordinateur, Paramètres Windows, Paramètres de sécurité, Stratégies locales, Options de sécurité
+   - Nom de la stratégie : Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM
+   - Emplacement : Configuration ordinateur, Paramètres Windows, Paramètres de sécurité, Stratégies locales, Options de sécurité
   
    ![Recherchez la stratégie](./media/samr-policy-location.png)
 
@@ -48,7 +48,7 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
 
 3. Le **service ATA** (service ATA créé pendant l’installation) a désormais les privilèges appropriés pour exécuter SAM-R dans l’environnement.
 
- Pour plus d’informations sur SAM-R et la stratégie de groupe, voir [Accès réseau : Restreindre les clients autorisés à effectuer des appels distants à SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ Pour plus d’informations sur SAM-R et la stratégie de groupe, consultez [Accès réseau : restreindre les clients autorisés à effectuer des appels distants vers SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]

@@ -13,10 +13,10 @@ ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 39ad944d4517cbfe73cc7ac95f0cf7ceb6a3f213
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196044"
 ---
 # <a name="tag-sensitive-accounts"></a>Identifier des comptes sensibles

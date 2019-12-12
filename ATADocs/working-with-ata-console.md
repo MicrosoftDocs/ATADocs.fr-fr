@@ -13,10 +13,10 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197129"
 ---
 # <a name="working-with-the-ata-console"></a>Utilisation de la console ATA
@@ -132,7 +132,7 @@ Si vous pointez votre souris sur une entité, n'importe où dans la console, où
 
 -   Image
 
--   E-mail
+-   Adresse de messagerie
 
 -   Téléphone
 

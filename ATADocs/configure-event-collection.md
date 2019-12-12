@@ -13,10 +13,10 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 825185a2aaf792e6b9c1fe58e022174c2f98bb0c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196829"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
@@ -26,7 +26,7 @@ ms.locfileid: "65196829"
 > [!NOTE]
 > Pour les versions 1.8 et ultérieures d’ATA, la configuration de la collecte d’événements n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA lit désormais les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
 
-Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA afin qu’elle reste à l’écoute des événements SIEM ou en configurant le transfert d’événements Windows.
+Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Ils peuvent être lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières : en configurant la passerelle ATA afin qu’elle reste à l’écoute des événements SIEM ou en configurant le transfert d’événements Windows.
 
 > [!NOTE]
 > Si vous n’utilisez pas Server Core, [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) peut être utilisé pour créer et gérer des abonnements aux événements qui sont transférés à partir d’ordinateurs distants.
@@ -35,7 +35,7 @@ Pour améliorer les capacités de détection, ATA a besoin des événements Wind
 
 Après avoir configuré la mise en miroir des ports depuis les contrôleurs de domaine sur la passerelle ATA, utilisez les instructions ci-dessous pour configurer les transferts d’événements Windows à l’aide de la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding. 
 
-**Étape 1 : Ajouter le compte de service réseau au groupe Lecteurs du journal des événements de domaine** 
+**Étape 1 : ajouter le compte service réseau au groupe Lecteurs des journaux d’événements du domaine** 
 
 Dans ce scénario, nous partons du principe que la passerelle ATA est un membre du domaine.
 
@@ -45,7 +45,7 @@ Dans ce scénario, nous partons du principe que la passerelle ATA est un membre 
 
 Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d’événements**, redémarrez les contrôleurs de domaine pour que la modification prenne effet.
 
-**Étape 2 : Créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le gestionnaire d’abonnements cible** 
+**Étape 2 : créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le Gestionnaire d’abonnements cible.** 
 > [!Note] 
 > Vous pouvez créer une stratégie de groupe pour ces paramètres et appliquer la stratégie de groupe à chaque contrôleur de domaine surveillé par la passerelle ATA. Les étapes ci-dessous modifient la stratégie locale du contrôleur de domaine.     
 
@@ -62,14 +62,14 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 
    3.  Sous **SubscriptionManagers**, entrez la valeur suivante et cliquez sur **OK** : *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-        *(par exemple : Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
+        *(Par exemple : Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
         ![Configurer l’image d’abonnement cible](media/wef%202%20config%20target%20sub%20manager.png)
       
    4.  Cliquez sur **OK**.
    5.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
 
-**Étape 3 : Effectuer les opérations suivantes sur la passerelle ATA** 
+**Étape 3 : effectuer les opérations suivantes sur la passerelle ATA** 
 
 1.  Ouvrez une invite de commandes avec élévation de privilèges et tapez *wecutil qc*.
 2.  Ouvrez l’**Observateur d’événements**. 
@@ -92,7 +92,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     6.  Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur la passerelle ATA.
 
 
-Pour plus d'informations, voir : [Configurer les ordinateurs de façon à transférer et à recueillir les événements](https://technet.microsoft.com/library/cc748890)
+Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Voir aussi
 - [Installer ATA](install-ata-step1.md)

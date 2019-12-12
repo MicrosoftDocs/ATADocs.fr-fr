@@ -13,10 +13,10 @@ ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
-ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74153102"
 ---
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7

@@ -13,10 +13,10 @@ ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 41f7d2e17d45e931c9472df2225f46f460f03a95
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195633"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
@@ -31,11 +31,11 @@ Pour empêcher des entités de déclencher des alertes dans ATA :
 
 Il existe deux façons d’exclure des entités : à partir de l’activité suspecte elle-même ou à partir de l’onglet **Exclusions** de la page **Configuration**.
 
-- **À partir de l’activité suspecte** : dans la chronologie des activités suspectes, quand vous recevez une alerte sur l’activité d’un utilisateur, d’un ordinateur ou d’une adresse IP qui est autorisé à effectuer cette activité, même fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte de cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Elle ferme également l’activité suspecte qui n'est plus répertoriée dans la liste d’événements **ouverts** dans la **chronologie de l’activité suspecte**.
+- **À partir de l’activité suspecte** : dans la chronologie de l’activité suspecte, lorsque vous recevez une alerte sur une activité pour un utilisateur, un ordinateur ou une adresse IP qui est autorisé(e) à effectuer l’activité spécifique et qui peut l’exécuter fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte pour cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Elle ferme également l’activité suspecte qui n'est plus répertoriée dans la liste d’événements **ouverts** dans la **chronologie de l’activité suspecte**.
 
     ![Exclure une entité](./media/exclude-in-sa.png)
 
-- **Sur la page de configuration** :  pour vérifier ou modifier des exclusions, cliquez sur **Exclusions** sous **Configuration**, puis sélectionnez l’activité suspecte, par exemple **Informations d’identification de compte sensible exposées**.
+- **À partir de la page Configuration** : pour vérifier ou modifier les exclusions : sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’activité suspecte, comme **Informations d’identification de compte sensibles exposées**.
 
     ![Configuration d’exclusion](./media/exclusions-config-page.png)
 

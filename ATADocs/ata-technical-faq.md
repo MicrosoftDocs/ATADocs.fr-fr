@@ -13,10 +13,10 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 96087f0124825f1b6feb641085317ee89ac3e6ee
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196620"
 ---
 # <a name="ata-frequently-asked-questions"></a>Forum aux questions sur ATA
@@ -86,7 +86,7 @@ Pour chaque journée complète produisant en moyenne 1 000 paquets/s, il vous 
 
 
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
-Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
+Cela arrive quand un compte est membre de certains groupes désignés comme sensibles (par exemple : « Administrateurs du domaine »).
 
 Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. 
 
@@ -116,7 +116,7 @@ Pour obtenir la liste complète des détections fournies par ATA, consultez [Que
 Nous vous recommandons d’utiliser un stockage rapide (les disques 7200 tr/min ne sont pas recommandés) avec un accès disque à faible latence (inférieure à 10 ms). La configuration RAID doit accepter les charges en écriture lourdes (RAID-5/6 et leurs dérivés ne sont pas recommandés).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>De combien de cartes réseau la passerelle ATA a-t-elle besoin ?
-La passerelle ATA a besoin au minimum de deux cartes réseau :<br>1. Une carte réseau pour se connecter au réseau interne et au centre ATA.<br>2. Une carte réseau destinée à capturer le trafic réseau des contrôleurs de domaine par le biais de la mise en miroir des ports.<br>* Cela ne s’applique pas à la passerelle légère ATA, qui utilise en mode natif toutes les cartes réseau dont se sert le contrôleur de domaine.
+La passerelle ATA a besoin au minimum de deux cartes réseau :<br>1. une carte réseau pour se connecter au réseau interne et au centre ATA<br>2. une carte réseau utilisée pour capturer le trafic réseau du contrôleur de domaine via la mise en miroir des ports.<br>* Cela ne s’applique pas à la passerelle légère ATA, qui utilise en mode natif toutes les cartes réseau dont se sert le contrôleur de domaine.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>De quelle façon ATA s’intègre-t-il aux serveurs SIEM ?
 ATA bénéficie d’une intégration bidirectionnelle aux serveurs SIEM, comme suit :
@@ -159,7 +159,7 @@ Oui. Vous pouvez consulter l’intégrité globale du déploiement ainsi que les
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

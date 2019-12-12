@@ -13,10 +13,10 @@ ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 82a801785c85258da936bcaee55c4bedc83fb37d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196363"
 ---
 # <a name="updating-ata-to-version-19"></a>Mise à jour d’ATA vers la version 1.9
@@ -41,7 +41,7 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-1-update-the-ata-center"></a>Étape 1 : Mettez à jour le centre ATA.
+### <a name="step-1-update-the-ata-center"></a>Étape 1 : mettre à jour le centre ATA
 
 1. Sauvegardez votre base de données (facultatif) :
 
@@ -53,7 +53,7 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
 
    - Dans la page **Bienvenue**, choisissez votre langue et cliquez sur **Suivant**.
 
-   - Si vous n’avez pas activé les mises à jour automatiques dans la version 1.8, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
+   - Si vous n’avez pas activé les mises à jour automatiques dans la version 1.8, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** .
      ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png)
      
      Ceci ajuste les paramètres Windows pour activer les mises à jour pour ATA. 
@@ -77,7 +77,7 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
 > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
  
 > [!NOTE] 
-> Pour installer de nouvelles passerelles ATA, accédez à l’écran **Passerelles** et cliquez sur **Télécharger le programme d’installation de la passerelle** pour obtenir le package d’installation ATA 1.9 et suivre les instructions d’installation de la nouvelle passerelle, comme décrit dans [Étape 4. Installer la passerelle ATA](install-ata-step4.md).
+> Pour installer de nouvelles passerelles ATA, accédez à l’écran **passerelles** et cliquez sur **Télécharger la configuration** de la passerelle pour obtenir le package d’installation de la passerelle ATA 1,9 et suivez les instructions pour l’installation de la nouvelle passerelle, comme décrit à l' [étape 4. Installez la passerelle ATA](install-ata-step4.md).
 
 
 ## <a name="see-also"></a>Voir aussi

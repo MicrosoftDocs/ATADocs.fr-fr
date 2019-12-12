@@ -13,10 +13,10 @@ ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 42ed42e15ead2e14ed1bcf65ca449a92b0bdd12c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196141"
 ---
 # <a name="ata-version-191"></a>ATA version 1.9.1
@@ -47,9 +47,9 @@ Les mises à jour pour Microsoft Advanced Threat Analytics version 1.9 sont disp
 Cette mise à jour est disponible sur Microsoft Update. Pour plus d’informations sur la façon d’utiliser Microsoft Update, consultez [Comment obtenir une mise à jour via Windows Update](https://support.microsoft.com/help/3067639).
 
 ### <a name="manual-download"></a>Téléchargement manuel
-Pour obtenir le package autonome pour cette mise à jour, accédez au site web Centre de téléchargement Microsoft : [Télécharger le package ATA 1.9 maintenant](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
+Pour obtenir le package autonome pour cette mise à jour, accédez au site Web du centre de téléchargement Microsoft : [Téléchargez le package ATA 1,9 maintenant](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 Pour installer cette mise à jour, vous devez avoir préalablement installé ATA version 1.9 (1.9.7312), la mise à jour 1 pour ATA version 1.8 (1.8.6765) ou ATA version 1.8 (1.8.6645).
 
 ### <a name="restart-requirement"></a>Exigence de redémarrage

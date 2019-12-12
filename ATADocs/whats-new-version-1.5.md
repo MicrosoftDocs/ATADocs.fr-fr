@@ -13,17 +13,17 @@ ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c0658b0d9320116bf8a752ce360994946300947a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195755"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nouveautés d’ATA version 1.5
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-15-update"></a>Quelles sont les nouveautés d’ATA 1.5 ?
-ATA 1.5 comporte les améliorations suivantes :
+La mise à jour vers ATA 1.5 comprend des améliorations dans les domaines suivants :
 
 -   Détection plus rapide
 
@@ -43,11 +43,11 @@ ATA 1.5 comporte les améliorations suivantes :
 Les problèmes connus de cette version sont les suivants :
 
 ### <a name="new-ata-gateway-installation-fails"></a>Échec des nouvelles installations de la passerelle ATA
-Après la mise à jour vers ATA version 1.5, vous obtenez l’erreur suivante lors de l’installation d’une nouvelle passerelle ATA : La passerelle Microsoft Advanced Threat Analytics n’est pas installée.
+Après la mise à jour vers ATA version 1.5, vous obtenez l’erreur suivante lors de l’installation d’une nouvelle passerelle ATA : « La passerelle Microsoft Advanced Threat Analytics n’est pas installée ».
 
 ![Erreur de passerelle ATA](media/ata-install-error.png)
 
-<b>Solution de contournement :</b> Envoyez un e-mail à <ataeval@microsoft.com> pour demander les étapes de la solution de contournement.
+<b>Solution de contournement :</b> envoyez un e-mail à l’adresse <ataeval@microsoft.com> pour demander la procédure de contournement.
 ### <a name="deployment"></a>Déploiement
 Le dossier spécifié pour « Chemin d’accès des données de la base de données » et « Chemin d’accès du journal de base de données » doit être vide (aucun fichier ou ni sous-dossier).
 S’il n’est pas vide, le déploiement ne peut pas progresser.

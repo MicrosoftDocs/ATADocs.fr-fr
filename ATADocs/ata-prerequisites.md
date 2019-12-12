@@ -13,10 +13,10 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73618462"
 ---
 # <a name="ata-prerequisites"></a>Conditions préalables au déploiement d’ATA
@@ -88,9 +88,9 @@ L’installation du centre ATA en tant que machine virtuelle est prise en charge
 
 |Machine virtuelle en cours d’exécution sur|Description|
 |------------|-------------|
-|Hyper-V|Vérifiez que l’option **activer la mémoire dynamique** n’est pas activée pour la machine virtuelle.|
-|VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **réserver toute la mémoire invitée (tout verrouillé)** .|
-|Autre hôte de virtualisation|Reportez-vous à la documentation fournie par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
+|Hyper-V|Assurez-vous que l’option **Activer la mémoire dynamique** n’est pas activée pour la machine virtuelle.|
+|VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **Réserver toute la mémoire invitée (tout verrouillé)** .|
+|Autre hôte de virtualisation|Reportez-vous à la documentation donnée par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
 |
 
 Si vous exécutez le centre ATA en tant que machine virtuelle, arrêtez le serveur avant de créer un point de contrôle pour éviter tout risque d’endommagement de la base de données.

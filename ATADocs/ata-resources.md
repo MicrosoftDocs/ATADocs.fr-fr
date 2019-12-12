@@ -13,10 +13,10 @@ ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: f83b0e7576a1edbf3e973889cf06d5bc325ae519
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196205"
 ---
 # <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
@@ -77,7 +77,7 @@ Les paramètres nécessaires de base dans ATA sont configurés dans l’Assistan
 
 Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des attaques. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez à la console ATA. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’ATA :
 
-[Manuel des activités suspectes d’ATA](http://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
+[Manuel des activités suspectes d’ATA](http://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque étape de l’attaque, vous pouvez voir comment ATA vous aide à mieux comprendre ces menaces.
 
 [Guide des activités suspectes d’ATA](suspicious-activity-guide.md)
 

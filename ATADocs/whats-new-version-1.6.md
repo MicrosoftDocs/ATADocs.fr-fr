@@ -13,10 +13,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3ef4f8061970c1d69b9f25479d762bb4c423a4fd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196977"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nouveautés d’ATA version 1.6
@@ -99,11 +99,11 @@ Dans les déploiements dans lesquels la base de données fait l’objet d’un d
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Échec de la migration en cas de mise à jour à partir d’ATA 1.5
 Quand vous effectuez la mise à jour vers ATA 1.6, le processus peut échouer avec le code d’erreur suivant :
 
-![Erreur de mise à jour d’ATA vers 1.6](http://i.imgur.com/QrLSApr.png). Si vous voyez cette erreur, passez en revue le journal du déploiement dans : **C:\Users\<utilisateur>\AppData\Local\Temp**, puis recherchez l’exception suivante :
+![Erreur de mise à jour d’ATA vers la version 1.6](http://i.imgur.com/QrLSApr.png) Si vous recevez cette erreur, examinez le journal de déploiement qui se trouve dans **C:\Users\<utilisateur>\AppData\Local\Temp**, puis recherchez l’exception suivante :
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Vous pouvez également voir cette erreur : System.ArgumentNullException : La valeur ne peut pas être null.
+Vous pouvez également voir cette erreur : System.ArgumentNullException : La valeur ne peut pas être Null.
     
 Si vous voyez l’une de ces erreurs, effectuez la solution de contournement suivante :
 
@@ -121,9 +121,9 @@ Si vous voyez l’une de ces erreurs, effectuez la solution de contournement sui
     1.  MongoDB
     2.  Microsoft Advanced Threat Analytics Center
 7.  Passez en revue les journaux pour vérifier que le produit s’exécute sans erreur.
-8.  [Téléchargez](http://aka.ms/ataremoveduplicateprofiles "Téléchargez") l’outil « RemoveDuplicateProfiles.exe » et copiez-le dans le chemin d’installation principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
+8.  [Téléchargez](http://aka.ms/ataremoveduplicateprofiles "Télécharger") l’outil « RemoveDuplicateProfiles. exe » et copiez-le dans le chemin d’installation principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  À partir d’une invite de commandes avec élévation de privilèges, exécutez `RemoveDuplicateProfiles.exe` et attendez la fin de l’opération.
-10. À partir d’ici : répertoire …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin : **Mongo ATA**, tapez la commande suivante :
+10. À partir du répertoire …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin **Mongo ATA**, tapez la commande suivante :
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
