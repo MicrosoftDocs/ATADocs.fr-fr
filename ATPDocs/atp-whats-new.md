@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/26/2019
+ms.date: 12/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 20587f66df9e4d21e5f0860b322acaab84491d22
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 000ece8a9963af12b1de7f2a3b68641bf6640876
+ms.sourcegitcommit: 44ce78c9d7f156dd0c0798823bba53e092f5abdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540871"
+ms.lasthandoff: 12/16/2019
+ms.locfileid: "75034099"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -27,7 +27,17 @@ Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’�
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant-collant l’URL suivante dans votre lecteur de flux : <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-Publication : 22 novembre 2019
+Publication : 15 décembre 2019
+## <a name="azure-atp-release-2103"></a>Azure ATP version 2.103
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+Publication : 8 septembre 2019
+## <a name="azure-atp-release-2102"></a>Azure ATP version 2.102
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+Publication : 24 novembre 2019
 ## <a name="azure-atp-release-2101"></a>Azure ATP version 2.101
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
