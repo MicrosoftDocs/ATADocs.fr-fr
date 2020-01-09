@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f54c60f97c9489934f0ac0a40b3b27780e6a60d9
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0a5c01f665b167bb9eabc5a9e0a67b99bb6d56fa
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690246"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543129"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP) 
 
 
 Utilisez ce guide pour faire passer une installation ATA existante au service Azure Advanced Threat Protection (Azure ATP). Ce guide explique les prérequis et les exigences d’Azure ATP. Il décrit également comment planifier et mener à bien votre transfert. Vous trouverez également des étapes de validation et des conseils pour tirer parti des solutions de sécurité et de protection contre les menaces les plus récentes avec Azure ATP après l’installation. 
 
-Pour en savoir plus sur les différences entre ATA et Azure ATP, consultez le [Forum aux questions Azure ATP] (https://docs.microsoft.com/en-us/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
+Pour en savoir plus sur les différences entre ATA et Azure ATP, consultez le [Forum aux questions Azure ATP] (https://docs.microsoft.com/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
 
 Dans ce guide, vous allez : 
 
@@ -77,7 +77,7 @@ Veillez à rassembler les informations suivantes avant de commencer le transfert
 
 Pour finir de passer à Azure ATP, effectuez ces deux étapes simples :
 
-### <a name="step-1-create-and-install-azure-atp-instance-and-sensors"></a>Étape 1 : Créer et installer une instance et des capteurs Azure ATP
+### <a name="step-1-create-and-install-azure-atp-instance-and-sensors"></a>Étape 1 : Créer et installer une instance et des capteurs Azure ATP
 
 1. [Créer votre instance Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1)
 
@@ -88,7 +88,7 @@ Pour finir de passer à Azure ATP, effectuez ces deux étapes simples :
      - [Récupérez votre clé d’accès Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3#download-the-setup-package).
      - [Installez des capteurs Azure ATP sur vos contrôleurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step4). 
 
-### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Étape 2 : Configurer et valider l’instance Azure ATP  
+### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Étape 2 : Configurer et valider l’instance Azure ATP  
 
 - [Configurer le capteur](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5)
 

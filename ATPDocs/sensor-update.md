@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/20/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 408c46d620f7b7f5da21d9dcfaf17097660dcc4c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 6c8edd2b48fbc10347bd77df06ae1f7c4ecacb52
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196359"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544011"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
@@ -43,10 +43,6 @@ Les capteurs Azure ATP acceptent deux types de mises à jour :
 > [!NOTE]
 >- Contrôlez les redémarrages automatiques des capteurs (pour les mises à jour **majeures**) sur la page de configuration du portail Azure ATP. 
 > - Le capteur Azure ATP réserve toujours au moins 15 % de la mémoire et du processeur disponibles sur le contrôleur de domaine sur lequel il est installé. Si le service Azure ATP consomme trop de mémoire, il est automatiquement arrêté et redémarré par le service de mise à jour des capteurs Azure ATP.
-
-### <a name="update-requirement"></a>Obligation de mise à jour
-
-Les capteurs en retard de plus d’une mise à jour ne peuvent plus communiquer avec le service cloud Azure ATP, ce qui risque de provoquer une indisponibilité du service Azure ATP et un défaut de protection pour votre organisation.  
 
 ## <a name="delayed-sensor-update"></a>Mise à jour différée des capteurs
 

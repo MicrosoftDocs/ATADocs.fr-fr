@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 90edd77a40b6d87e37c6635ced246ae2c5540e93
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 001e3f8ee2ed5c84e445c8355e08458d9efb6d31
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71997539"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544131"
 ---
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
 
@@ -84,12 +84,12 @@ Si en raison du processus de supervision, le capteur Azure ATP vient à manquer 
 
 ### <a name="windows-events"></a>Événements Windows
 
-Pour améliorer sa détection relative aux authentifications NTLM, aux modifications de groupes sensibles et à la création de services suspects, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757,7045 et 8004. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les [paramètres de stratégie d’audit avancés](atp-advanced-audit-policy.md) adaptés. Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+Pour améliorer sa détection relative aux authentifications NTLM, aux modifications de groupes sensibles et à la création de services suspects, Azure ATP doit analyser les journaux des événements Windows suivants : 4776,4732,4733,4728,4729,4756,4757,7045 et 8004. Ces événements sont lus automatiquement par les capteurs Azure ATP avec les [paramètres de stratégie d’audit avancés](atp-advanced-audit-policy.md) adaptés. Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Outil de dimensionnement Azure ATP](http://aka.ms/trisizingtool)
+- [Outil de dimensionnement Azure ATP](https://aka.ms/trisizingtool)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d3eb36b75e9500920bdaea70864839a5de7e3de1
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7dd8b77a3952c3de35ff8c1f2b2eebf4cc4219db
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196414"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543928"
 ---
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
 > [!NOTE] 
@@ -26,7 +26,8 @@ ms.locfileid: "65196414"
 Les étapes suivantes sont conçues pour vous guider dans le processus de validation de la mise en miroir des ports. Pour qu’Azure ATP fonctionne correctement, le capteur autonome Azure ATP doit pouvoir voir le trafic entrant et sortant du contrôleur de domaine. La principale source de données utilisée par Azure ATP est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’Azure ATP puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports. La mise en miroir des ports copie le trafic d’un port (le port source) vers un autre port (le port de destination).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Valider la mise en miroir à l’aide du Moniteur réseau
-1.  Installez [Moniteur réseau Microsoft 3.4](http://www.microsoft.com/download/details.aspx?id=4865) sur le capteur autonome ATP que vous souhaitez valider.
+
+1.  Installez [Moniteur réseau Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) sur le capteur autonome ATP que vous souhaitez valider.
 
     > [!IMPORTANT]
     > Si vous choisissez d’installer Wireshark afin de valider la mise en miroir des ports, redémarrez le service du capteur autonome Azure ATP après la validation.

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 00718998299590f658f8cdd6c7e2fc21c553210c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 590977f36cae014d60ada6abe160b012bc7ebc35
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195585"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543882"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
@@ -79,7 +79,7 @@ Quand Azure ATP mappe vos forêts, il utilise un processus qui impacte les élé
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
 - [Architecture Azure ATP](atp-architecture.md)
 - [Installer Azure ATP](install-atp-step1.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

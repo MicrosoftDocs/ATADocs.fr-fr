@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 87995b9162f787a05b82507e34cf3dbdaf4a3f07
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 221ace13505bd9eab33422358abb764e7a7485ff
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196718"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544386"
 ---
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Intégrer Azure ATP à Windows Defender ATP
 
@@ -95,7 +95,7 @@ Dans le portail Windows Defender ATP, cliquez sur un point de terminaison pour v
 ## <a name="see-also"></a>Voir aussi
 
 - [Examen des chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md)
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
 - [Architecture Azure ATP](atp-architecture.md)
 - [Installer ATP](install-atp-step1.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

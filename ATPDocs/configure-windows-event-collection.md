@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34d75bfd53f9c119e685390bd933b6e642c45b6c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5ef3edfd830e7a88808dbb8ab895fde7206e9f55
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71997448"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544150"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
 
@@ -44,7 +44,7 @@ Lorsque l’événement Windows 8004 est analysé par le capteur Azure ATP, les 
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
 - [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

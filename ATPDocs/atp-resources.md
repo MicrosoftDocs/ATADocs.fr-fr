@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 205fb58cbb06e6a219aa39b92275761ad9d1304d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2249505a80eca230e9b5b54689414c445f169afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196787"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544349"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
 
@@ -35,13 +35,13 @@ Pour en savoir plus sur Azure ATP :
 ## <a name="deployment-decisions"></a>Décisions de déploiement
 
 Azure ATP se compose d’un service cloud résidant dans Azure et de capteurs intégrés qui peuvent être installés sur des contrôleurs de domaine ou des capteurs autonomes sur des serveurs dédiés. Avant de commencer à utiliser Azure ATP, il est important de choisir le type de capteurs qui conviennent le mieux à votre déploiement et vos besoins. Par rapport aux capteurs Azure ATP autonomes, les capteurs intégrés Azure ATP (les capteurs Azure ATP) permettent d’obtenir une sécurité renforcée, des coûts opérationnels réduits et un déploiement plus facile. Les capteurs autonomes Azure ATP nécessitent un matériel physique, des étapes de configuration supplémentaires et des coûts opérationnels plus lourds. <br>Si vous utilisez des serveurs physiques, il est essentiel de planifier la capacité. Aidez-vous de l’outil de dimensionnement pour allouer de l’espace à vos capteurs : 
-- [Outil de dimensionnement Azure ATP](http://aka.ms/aatpsizingtool) - L’outil de dimensionnement automatise la collecte de la somme de trafic surveillé par Azure ATP. Il fournit automatiquement des recommandations de prise en charge et de ressource pour les capteurs. 
+- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool) - L’outil de dimensionnement automatise la collecte de la somme de trafic surveillé par Azure ATP. Il fournit automatiquement des recommandations de prise en charge et de ressource pour les capteurs. 
 - [Guide de planification de la capacité ATP](atp-capacity-planning.md)
 
 ## <a name="deploy-azure-atp"></a>Déployer Azure ATP
 
 Aidez-vous de ces ressources pour configurer Azure ATP, vous connecter à Active Directory, télécharger le package de capteurs, configurer la collecte d’événements, et éventuellement intégrer votre VPN, ainsi que configurer les exclusions et les comptes honeytoken. 
-- [Essayez Azure ATP (compris dans EMS E5)](http://aka.ms/aatptrial)  L’essai est valide pendant 90 jours.
+- [Essayez Azure ATP (compris dans EMS E5)](https://aka.ms/aatptrial)  L’essai est valide pendant 90 jours.
 - [Installation d’Azure ATP](install-atp-step1.md) Suivez ces étapes pour déployer Azure ATP dans votre environnement.
 - [Intégrer Azure ATP et Windows Defender ATP](integrate-wd-atp.md)
 

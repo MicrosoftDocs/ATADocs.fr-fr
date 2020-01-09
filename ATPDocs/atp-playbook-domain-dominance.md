@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 800b72e0bb06a95e10a0c52885d78ebe276e00b7
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "59745589"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543828"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutoriel : Playbook de contrôle du domaine
 
@@ -239,7 +239,7 @@ Azure ATP utilise plusieurs méthodes pour détecter des attaques présumées de
 ![Détection du golden ticket](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
->Rappel. Tant que le KRBTGT récolté par un attaquant reste valide dans un environnement, les tickets générés avec lui le restent également. Dans ce cas, l’attaquant réussit à avoir le contrôle persistant du domaine jusqu’à ce que le [KRBTGT soit réinitialisé à deux reprises](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
+>Rappel. Tant que le KRBTGT récolté par un attaquant reste valide dans un environnement, les tickets générés avec lui le restent également. Dans ce cas, l’attaquant réussit à avoir le contrôle persistant du domaine jusqu’à ce que le [KRBTGT soit réinitialisé à deux reprises](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
