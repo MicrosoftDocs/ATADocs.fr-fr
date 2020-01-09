@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b5e5e8c5f42f786ca869ed2a29572e4512faf26f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 59fe86e50a583278880d977aa7282003de39faac
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197234"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543767"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
@@ -557,6 +557,6 @@ Appliquez les derniers correctifs à tous vos ordinateurs et vérifiez que toute
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Scénario d’activité suspecte ATA](http://aka.ms/ataplaybook)
+- [Scénario d’activité suspecte ATA](https://aka.ms/ataplaybook)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)

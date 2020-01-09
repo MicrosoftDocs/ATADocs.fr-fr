@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4725be4c0254225d6ca92e11d62c283948ccfc46
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690227"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543055"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
@@ -28,7 +28,7 @@ Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour
 > Vous pouvez déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance décrits dans cet article.
 
 ## <a name="using-the-sizing-tool"></a>Utilisation de l’outil de dimensionnement
-La manière recommandée la plus simple de déterminer la capacité pour votre déploiement ATA est d’utiliser l’[outil de dimensionnement ATA](http://aka.ms/atasizingtool). Exécutez l’outil de dimensionnement ATA, puis dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la capacité ATA dont vous avez besoin :
+La manière recommandée la plus simple de déterminer la capacité pour votre déploiement ATA est d’utiliser l’[outil de dimensionnement ATA](https://aka.ms/atasizingtool). Exécutez l’outil de dimensionnement ATA, puis dans les résultats du fichier Excel, utilisez les champs suivants pour déterminer la capacité ATA dont vous avez besoin :
 
 - Processeur et mémoire du centre ATA : Faites correspondre le champ **Paquets occupés/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
 
@@ -116,7 +116,7 @@ Une passerelle légère ATA peut prendre en charge la surveillance d’un contr�
 |---------------------------|-------------------------|---------------|
 |1 000|2|6|
 |5 000|6|16|
-    |10 000|10|24|
+    |10 000|10|24|
 
 &#42;Nombre total de paquets par seconde sur le contrôleur de domaine surveillé par une passerelle légère ATA donnée.
 
@@ -151,7 +151,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 |---------------------------|-------------------------|---------------|
 |1 000|1|6|
 |5 000|2|10|
-|10 000|3|12|
+|10 000|3|12|
 |20,000|6|24|
 |50 000|16|48|
 
@@ -173,7 +173,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Configuration requise pour ATA](ata-prerequisites.md)
 - [Architecture d’ATA](ata-architecture.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

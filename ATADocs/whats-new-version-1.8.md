@@ -12,16 +12,16 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 1f623642813c0474ddf3c7d050a91aebbd1b40b7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: deb170191a649c72eaae3d26ba34bea6358b27b0
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196911"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544290"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nouveautés de la version 1.8 d’ATA
 
-La dernière version de la mise à jour d’ATA peut être [téléchargée à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=55536) ou la version complète peut être téléchargée à partir du [centre d’évaluation](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
+La dernière version de la mise à jour d’ATA peut être [téléchargée à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=55536) ou la version complète peut être téléchargée à partir du [centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
 Ces notes de publication fournissent des informations sur les mises à jour, les nouvelles fonctionnalités, les correctifs de bogue et les problèmes connus de cette version d’Advanced Threat Analytics.
 
@@ -31,7 +31,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 - L’implémentation de protocole inhabituelle a été améliorée pour pouvoir détecter le logiciel malveillant WannaCry.
 
-- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification anormale est effectuée dans un groupe avec privilèges élevés.
+- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification est effectuée dans un groupe avec privilèges élevés.
 - NOUVEAU ! **Échecs d’authentification suspects** (comportement par force brute) : L’attaquant tente d’utiliser la force brute sur des informations d’identification pour compromettre des comptes. ATA déclenche désormais une alerte quand un comportement anormal d’authentification ayant échoué est détecté.   
 
 - **Tentative d’exécution à distance - WMI exec** : L’attaquant peut tenter de contrôler votre réseau en exécutant du code à distance sur votre contrôleur de domaine. ATA a amélioré la détection de l’exécution à distance pour inclure la détection des méthodes WMI qui permettent d’exécuter du code à distance.

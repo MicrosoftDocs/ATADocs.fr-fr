@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 3038b5064b3d8f611e970796d2962d50f604f64d
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803170"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544037"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
@@ -27,7 +27,7 @@ ms.locfileid: "70803170"
 > [« Étape 5](install-ata-step5.md)
 > [Étape 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collecte d’événements
+## <a name="step-6-configure-event-collection"></a>Étape 6 : Configurer la collecte d’événements
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
 Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ces événements Windows sont lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières, soit en configurant la passerelle ATA pour écouter les événements SIEM, soit en [configurant le transfert d’événements Windows](configure-event-collection.md).  
@@ -198,8 +198,8 @@ Assurez-vous que \t sépare les paires clé/valeur.
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Guide de déploiement ATA POC](http://aka.ms/atapoc)
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration requise pour ATA](ata-prerequisites.md)

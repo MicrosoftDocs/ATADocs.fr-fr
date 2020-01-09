@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 15d1ea65e18f8557c4d36363a381d05c0f9421a7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5d9ebf49493ec474ec1093aef66786d38db0cd57
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195867"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543858"
 ---
 # <a name="install-ata---step-3"></a>Installer ATA - Étape 3
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 2](install-ata-step2.md)
-> [Étape 4 »](install-ata-step4.md)
+> [« Étape 2](install-ata-step2.md)
+> [Étape 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Étape 3. Télécharger le package d’installation de la passerelle ATA
 
@@ -51,8 +51,8 @@ Le fichier zip comprend les fichiers suivants :
 
 
 > [!div class="step-by-step"]
-> [« Étape 2](install-ata-step2.md)
-> [Étape 4 »](install-ata-step4.md)
+> [« Étape 2](install-ata-step2.md)
+> [Étape 4 »](install-ata-step4.md)
 
 
 ## <a name="related-videos"></a>Vidéos connexes
@@ -60,8 +60,8 @@ Le fichier zip comprend les fichiers suivants :
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Voir aussi
-- [Guide de déploiement ATA POC](http://aka.ms/atapoc)
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration requise pour ATA](ata-prerequisites.md)

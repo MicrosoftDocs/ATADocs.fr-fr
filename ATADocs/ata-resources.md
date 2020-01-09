@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f83b0e7576a1edbf3e973889cf06d5bc325ae519
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196205"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543009"
 ---
 # <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
 
@@ -59,9 +59,9 @@ Si vous utilisez des serveurs physiques, vous devez planifier la capacité. Vous
 
 Ces ressources vous permettent de télécharger et d’installer le Centre ATA, de vous connecter à Active Directory, de télécharger le package des passerelles ATA, de configurer la collecte d’événements et éventuellement de procéder à l’intégration avec votre VPN, puis de configurer les exclusions et les comptes honeytoken.
 
-[Télécharger ATA](http://aka.ms/ataeval) -Avant de déployer ATA, si vous n’avez pas pris la décision d’acheter ATA, vous pouvez télécharger la version d’évaluation. 
+[Télécharger ATA](https://aka.ms/ataeval) -Avant de déployer ATA, si vous n’avez pas pris la décision d’acheter ATA, vous pouvez télécharger la version d’évaluation. 
 
-[Manuel ATA POC](http://aka.ms/atapoc) -Vous guide dans toutes les étapes nécessaires pour effectuer un déploiement POC d’ATA.
+[Manuel ATA POC](https://aka.ms/atapoc) -Vous guide dans toutes les étapes nécessaires pour effectuer un déploiement POC d’ATA.
 
 [Vidéo de déploiement d’ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) - Cette vidéo fournit une vue d’ensemble des étapes de déploiement d’ATA en moins de 10 minutes.
 
@@ -77,7 +77,7 @@ Les paramètres nécessaires de base dans ATA sont configurés dans l’Assistan
 
 Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des attaques. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez à la console ATA. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’ATA :
 
-[Manuel des activités suspectes d’ATA](http://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque étape de l’attaque, vous pouvez voir comment ATA vous aide à mieux comprendre ces menaces.
+[Manuel des activités suspectes d’ATA](https://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque étape de l’attaque, vous pouvez voir comment ATA vous aide à mieux comprendre ces menaces.
 
 [Guide des activités suspectes d’ATA](suspicious-activity-guide.md)
 

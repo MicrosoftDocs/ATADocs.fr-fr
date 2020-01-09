@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 313e0ceb9a0d49a708930dd020481262e7471404
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4e098c0da30b7a3cc38e2ba857e9297a52d2bb10
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195922"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543842"
 ---
 # <a name="install-ata---step-2"></a>Installer ATA - Étape 2
 
@@ -45,7 +45,7 @@ La première fois que vous ouvrez la console ATA, l’écran suivant apparaît 
 
     Après l’enregistrement, le message d’accueil dans la console devient : ![Étape de bienvenue ATA 1 terminée](media/ATA_1.7-welcome-provide-username-finished.png)
 
-3. Dans la console, cliquez sur **Télécharger l’installation de la passerelle et installer la première passerelle** pour continuer.
+3. Dans la console, cliquez sur **Download Gateway setup and install the first Gateway** (Télécharger le programme d’installation de passerelle et installer la première passerelle) pour continuer.
 
 
 > [!div class="step-by-step"]
@@ -60,8 +60,8 @@ La première fois que vous ouvrez la console ATA, l’écran suivant apparaît 
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Guide de déploiement ATA POC](http://aka.ms/atapoc)
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration requise pour ATA](ata-prerequisites.md)

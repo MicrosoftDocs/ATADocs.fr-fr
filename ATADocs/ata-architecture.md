@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f953a163be460184c7b585e71cd973bbdcc71e6f
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803112"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543026"
 ---
 # <a name="ata-architecture"></a>Architecture d’ATA
 
@@ -164,7 +164,7 @@ Si vous utilisez des passerelles ATA, vous devez configurer la mise en miroir de
 
 Même si tout le trafic réseau des contrôleurs de domaine est mis en miroir vers la passerelle ATA, seul un petit pourcentage de ce trafic est envoyé (compressé) au centre ATA à des fins d’analyse.
 
-Les contrôleurs de domaine et les passerelles ATA peuvent être physiques ou virtuels. Pour plus d’informations, voir [Configurer la mise en miroir des ports](configure-port-mirroring.md).
+Les contrôleurs de domaine et les passerelles ATA peuvent être physiques ou virtuels. Pour plus d’informations, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
 
 
 ### <a name="events"></a>Événements
@@ -180,7 +180,7 @@ Pour améliorer la détection ATA de l’attaque Pass-the-Hash, de l’attaque p
 
 ## <a name="see-also"></a>Voir aussi
 - [Configuration requise pour ATA](ata-prerequisites.md)
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

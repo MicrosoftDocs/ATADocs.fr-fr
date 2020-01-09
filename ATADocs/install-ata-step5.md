@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0f15942dd3888d092d8236b78261de1645e5dc0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0be6430a82752f51ed2660bb4053bb396b90e8b5
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195746"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544032"
 ---
 # <a name="install-ata---step-5"></a>Installer ATA - Étape 5
 
@@ -95,8 +95,8 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Guide de déploiement ATA POC](http://aka.ms/atapoc)
-- [Outil de dimensionnement ATA](http://aka.ms/atasizingtool)
+- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration requise pour ATA](ata-prerequisites.md)

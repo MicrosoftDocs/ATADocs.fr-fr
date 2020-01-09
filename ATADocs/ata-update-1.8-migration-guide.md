@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d35961d0ec70402fe27d0d418fd583d60b960464
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: b30527feafc7ee74f17f9f9600bbbc1e28a3dfa6
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196129"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543604"
 ---
 # <a name="updating-ata-to-version-18"></a>Mise à jour d’ATA vers la version 1.8
 
@@ -31,7 +31,7 @@ Si vous avez déjà déployé la version 1.7 d’ATA, cette procédure vous guid
 
 Suivez ces étapes pour mettre à jour ATA vers la version 1.8 :
 
-1.  [Téléchargez la version mise à jour d’ATA 1.8 à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=55536) ou la version complète à partir du [Centre d’évaluation](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
+1.  [Téléchargez la version mise à jour d’ATA 1.8 à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=55536) ou la version complète à partir du [Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Dans la version de migration, le fichier peut être utilisé uniquement pour la mise à jour d’ATA 1.7. Dans la version du Centre d’évaluation, le même fichier d’installation (Microsoft ATA Center Setup.exe) est utilisé pour l’installation d’un nouveau déploiement d’ATA et la mise à niveau des déploiements existants.
 
 2.  Mettez à jour le centre ATA.
