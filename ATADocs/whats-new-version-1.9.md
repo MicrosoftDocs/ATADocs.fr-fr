@@ -12,16 +12,16 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b10c2814fcac064d50bce292e86397ea5a0da21e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 80d8e42b98c0c4cb57beae33ce238d4b466593b5
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196062"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544323"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Nouveautés d’ATA version 1.9
 
-La dernière version de la mise à jour d’ATA peut être [téléchargée à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=56725) ou la version complète peut être téléchargée à partir du [centre d’évaluation](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
+La dernière version de la mise à jour d’ATA peut être [téléchargée à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=56725) ou la version complète peut être téléchargée à partir du [centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
 Ces notes de publication fournissent des informations sur les mises à jour, les nouvelles fonctionnalités, les correctifs de bogue et les problèmes connus de cette version d’Advanced Threat Analytics.
 
@@ -32,7 +32,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ## <a name="new-reports-to-help-you-investigate"></a>Nouveaux rapports pour vous aider dans votre analyse 
 
--   L’option [ **Mots de passe exposés en texte clair** ](reports.md) vous permet de détecter quand des comptes, sensibles ou pas, envoient des informations d’identification de compte en texte clair. Vous pouvez ainsi investiguer et limiter l’utilisation d’une liaison simple LDAP dans votre environnement pour améliorer le niveau de sécurité de votre réseau. Ce rapport remplace les alertes d’activité suspecte en texte clair de compte sensible et de service.
+-   L’option [**Mots de passe exposés en texte clair**](reports.md) vous permet de détecter quand des comptes, sensibles ou pas, envoient des informations d’identification de compte en texte clair. Vous pouvez ainsi investiguer et limiter l’utilisation d’une liaison simple LDAP dans votre environnement pour améliorer le niveau de sécurité de votre réseau. Ce rapport remplace les alertes d’activité suspecte en texte clair de compte sensible et de service.
 
 - L’option [**Chemins de mouvement latéral vers des comptes sensibles**](reports.md) liste les comptes sensibles qui sont exposés via des chemins de mouvement latéral. Il vous permet de limiter ces chemins et de renforcer votre réseau pour réduire le risque de surface d’attaque. Vous pouvez ainsi empêcher le mouvement latéral pour ne pas que les attaquants se déplacent sur votre réseau entre les utilisateurs et les ordinateurs et finissent par toucher le jackpot en termes de sécurité virtuel : vos informations d’identification de compte administrateur sensibles.
 

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e84bbb84859d316d4900d0f09e71142627df1ae8
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618462"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543171"
 ---
 # <a name="ata-prerequisites"></a>Conditions préalables au déploiement d’ATA
 
@@ -102,7 +102,7 @@ Sur un serveur physique, la base de données ATA nécessite la **désactivation*
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
@@ -119,7 +119,7 @@ Vous devez disposer des éléments suivants :
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts pour que le centre ATA fonctionne correctement.
 
-|Protocol|Transport|Port|Vers/À partir de|Sens|
+|Protocole|Transport|Port|Vers/À partir de|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
 |**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
@@ -199,7 +199,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 
     -   Serveurs DNS préféré et auxiliaire
 
-    -   Le **suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
+    -   Le **Suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
 
         ![Configurer le suffixe DNS dans les paramètres TCP/IP avancés](media/ATA-DNS-Suffix.png)
 
@@ -215,7 +215,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences de la passerelle ATA :
 
-|Protocol|Transport|Port|Vers/À partir de|Sens|
+|Protocole|Transport|Port|Vers/À partir de|Direction|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
@@ -288,7 +288,7 @@ Après le déploiement, vous pouvez utiliser la console ATA si vous voulez chang
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par la passerelle légère ATA :
 
-|Protocol|Transport|Port|Vers/À partir de|Sens|
+|Protocole|Transport|Port|Vers/À partir de|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
