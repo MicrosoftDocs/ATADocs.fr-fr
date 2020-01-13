@@ -2,8 +2,8 @@
 title: Examiner les attaques par chemin de mouvement latéral avec ATA | Microsoft Docs
 description: Cet article décrit comment détecter des attaques par chemins de mouvement latéral avec Advanced Threat Analytics (ATA).
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 06/14/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f020838d182b99b1f5f42455330b2b0ce5aa88f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 53c81575202bbccc9eacf5bb26c5fa624fb7e667
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "66500644"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908235"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Examiner les chemins de mouvement latéral avec ATA
 
@@ -51,7 +51,7 @@ Pour découvrir les comptes sensibles de votre réseau qui sont vulnérables en 
 
 Maintenant que vous avez identifié les comptes sensibles qui présentent des risques, vous pouvez vous plonger dans ATA pour en savoir plus et prendre des mesures préventives.
 
-1. Dans la console ATA, recherchez le badge Mouvement latéral qui est ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral. ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou de ![icône de chemin d’accès](./media/paths-icon.png). Cette opération est possible si un chemin de mouvement latéral a existé au cours des deux derniers jours.
+1. Dans la console ATA, recherchez le badge Mouvement latéral qui est ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral. ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou de la ![icône de chemin d’accès](./media/paths-icon.png). Cette opération est possible si un chemin de mouvement latéral a existé au cours des deux derniers jours.
 
 2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**.
 

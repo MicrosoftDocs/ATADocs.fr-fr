@@ -2,8 +2,8 @@
 title: Installer Advanced Threat Analytics en mode silencieux | Microsoft Docs
 description: Cet article explique comment installer ATA en mode silencieux.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/15/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 51234265f30cb71c0421a9aa80a9288fe7a77b2e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a757371dd23dd7692b6ce09fd27c8711d43ce306
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72442161"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905628"
 ---
 # <a name="ata-silent-installation"></a>Installation en mode silencieux ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "72442161"
 
 Cet article fournit des instructions pour installer ATA sans assistance.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 ATA version 1,9 nécessite l’installation de Microsoft .NET Framework 4.6.1. 
 

@@ -2,8 +2,8 @@
 title: Informations de référence sur les ID d’événement ATA | Microsoft Docs
 description: Fournit une liste des ID d’événement ATA et leurs descriptions.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/20/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a54c68f333cfc3eb47d47c66f1ded701fb855a80
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a5e417911afdc64a7e0693dc354eedeed517b316
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196280"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907733"
 ---
 # <a name="ata-event-id-reference"></a>Informations de référence sur les ID d’événement ATA
 

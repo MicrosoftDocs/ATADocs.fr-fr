@@ -2,8 +2,8 @@
 title: Résolution des problèmes d’Advanced Threat Analytics avec les compteurs de performances | Microsoft Docs
 description: Explique comment utiliser les compteurs de performances pour résoudre les problèmes liés à ATA
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7d7dedf5e6f24c322cd81ed8a3ecb23f96bdc43c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 495813678b18b71af45240e18c40fdab5a5154a3
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195970"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908217"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Résolution des problèmes liés à ATA à l’aide des compteurs de performances
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 Les compteurs de performances ATA vous permettent de savoir si les composants ATA s’exécutent correctement. Les composants ATA traitant les données de manière séquentielle, la présence d’un problème peut entraîner le rejet partiel du trafic quelque part le long de la chaîne de composants. Pour résoudre le problème, vous devez déterminer le composant impliqué et résoudre le problème au début de la chaîne. Utilisez les données fournies par les compteurs de performance pour comprendre comment fonctionne chaque composant.
-Pour comprendre le flux des composants ATA internes, consultez [Architecture ATA](ata-architecture.md).
+Pour comprendre le flux des composants ATA internes, voir [Architecture ATA](ata-architecture.md).
 
 **Processus des composants ATA** :
 
