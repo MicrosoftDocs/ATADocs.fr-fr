@@ -2,8 +2,8 @@
 title: Résolution des problèmes Azure Advanced Threat Protection à l’aide des journaux | Microsoft Docs
 description: Décrit comment utiliser les journaux Azure ATP pour résoudre des problèmes
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 08/05/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 0105630931c6cbebfe2b919946f305ba031bb755
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7ca158bbed1a8cc184d7a9d63f79ba9010f3837c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68781924"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905978"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Résolution des problèmes du capteur Azure Advanced Threat Protection (ATP) à l’aide des journaux ATP
 Les journaux ATP donnent des informations sur ce que fait chaque composant du capteur Azure ATP à n’importe quel moment.

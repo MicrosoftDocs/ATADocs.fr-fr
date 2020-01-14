@@ -2,8 +2,8 @@
 title: Surveiller les événements et l’intégrité système d’Azure Advanced Threat Protection | Microsoft Docs
 description: Le centre d’intégrité Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/3/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b1ad4963e3863cd89a78834e8fc98cec3490b1b0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9fbcdbd6434ed1fcaa91719547d1926adc0cbd51
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195593"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908295"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Utiliser l’intégrité et les événements Azure ATP
 
@@ -47,7 +47,7 @@ Pour vérifier l’intégrité globale de votre instance Azure ATP, cliquez sur 
 
 -   **Rouvrir** : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
 
--   **Supprimer** : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
+-   **Supprimer** : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
 
 

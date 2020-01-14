@@ -2,8 +2,8 @@
 title: Groupes de rôles Azure Advanced Threat Protection pour la gestion des accès | Microsoft Docs
 description: Explique comment utiliser des groupes de rôles Azure ATP.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/29/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a615574ba0f74af8a01806bfffa44f343bba1151
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 37ed6677bffb4dc01f1da75cc41080ad107534cb
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543574"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908261"
 ---
 # <a name="azure-atp-role-groups"></a>Groupes de rôles Azure ATP
 

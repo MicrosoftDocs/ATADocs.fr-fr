@@ -2,8 +2,8 @@
 title: 'Azure Advanced Threat Protection : évaluation de l’exposition de texte clair | Microsoft Docs'
 description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant l’exposition de texte clair.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 07/08/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e683a7de6eae2a379e0dd802947ff4c10ca22e4b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 6b4663f71c0d30acd0fdc696650d359ec33b1227
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74206337"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908458"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Évaluation de la sécurité : Entités exposant les informations d’identification en texte clair 
 

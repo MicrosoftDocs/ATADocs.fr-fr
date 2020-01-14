@@ -2,8 +2,8 @@
 title: Tutoriel sur les alertes d’exfiltration Azure ATP | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/11/2019
 ms.topic: tutorial
@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 704e372952d1b02fdcf6564bad26ebc4c7d184f2
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 377d0c86b37488b4c7545ca6d812bc44bba8af7b
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196872"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907993"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration  
 
-En général, les attaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
+En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Informations d’identification compromises](atp-compromised-credentials-alerts.md)

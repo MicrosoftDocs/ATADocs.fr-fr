@@ -2,8 +2,8 @@
 title: Examen des chemins de mouvement latéral avec Azure ATP | Microsoft Docs
 description: Cet article décrit comment détecter et examiner les attaques par chemins de mouvement latéral avec Azure Advanced Threat Protection.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3428a95fd77252bf7384c8e733842134bc8141d2
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: febc71a649a9f1ab15f47bd67f2f6b1098b5dce5
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004729"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906253"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutoriel : Utiliser des chemins de mouvement latéral
 

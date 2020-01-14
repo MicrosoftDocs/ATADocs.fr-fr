@@ -5,24 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d764d466e0981c673874386d7b28019f48d79827
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9ff42bce05809c442d519871f90ae911fb400670
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618417"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543956"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP 
 
 
 ## <a name="sensor-failure-communication-error"></a>Erreur d’échec de communication du capteur
+
 Si vous recevez l’erreur d’échec du capteur suivante : 
 
 System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Impossible de se connecter au serveur distant ---> System.Net.Sockets.SocketException: Échec de la tentative de connexion parce que la partie connectée n'a pas répondu correctement après un certain laps de temps ou la connexion établie a échoué parce que l'hôte connecté n'a pas pu répondre...
@@ -67,20 +68,24 @@ Si, lors de l’installation sans assistance d’un capteur, vous tentez d’uti
 
 Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec une carte d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, suivez ces instructions :
 
+1.  Téléchargez la dernière version du programme d’installation de Npcap [https://nmap.org/npcap/](https://nmap.org/npcap/).
+    - Vous pouvez également demander la version OEM du pilote Npcap (qui prend en charge l’installation sans assistance) de l’équipe de support.
+    - Les copies de Npcap n’entrent pas en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement conjointement avec Azure ATP. Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE). 
+
 Si vous n’avez pas encore installé le capteur :
 
-1.  Téléchargez Npcap depuis [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.  Désinstallez WinPcap, s’il était installé.
-3.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
-4.  Installez le package du capteur.
+1.  Désinstallez WinPcap, s’il était installé.
+1.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes.
+    - Si vous utilisez le programme d’installation de l’interface utilisateur graphique, désactivez le support de bouclage et sélectionnez mode WinPcap**.
+1.  Installez le package du capteur.
 
 Si vous avez déjà installé le capteur :
 
-1.  Téléchargez Npcap depuis [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.  Désinstallez le capteur.
-3.  Désinstallez WinPcap.
-4.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
-5.  Réinstallez le package du capteur.
+1.  Désinstallez le capteur.
+1.  Désinstallez WinPcap.
+1.  Installez Npcap avec les options suivantes : loopback_support=no & winpcap_mode=yes
+    - Si vous utilisez le programme d’installation de l’interface utilisateur graphique, désactivez le **support de bouclage** et sélectionnez mode **WinPcap**.
+1.  Réinstallez le package du capteur.
 
 ## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur 
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode Groupe multiprocesseur.
@@ -98,11 +103,24 @@ Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows 
 
 Si vous avez un capteur Azure ATP sur des machines virtuelles VMware, vous pouvez recevoir l’alerte de surveillance **Une partie du trafic réseau n’est pas analysée**. Ce scénario se produit à cause d’une différence de configuration dans VMware.
 
-Pour résoudre ce problème :
+Pour résoudre le problème
 
 Définissez le paramètre suivant sur **Désactivé** dans la configuration de carte réseau de la machine virtuelle : **IPv4 TSO Offload**.
 
  ![Problème de capteur VMware](./media/vm-sensor-issue.png)
+
+Utilisez la commande suivante pour vérifier si le déchargement d’envoi volumineux (LSO) est activé ou désactivé :
+
+`Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
+
+![Vérifier l’état de LSO](./media/missing-network-traffic-health-alert.png)
+
+Si LSO est activé, utilisez la commande suivante pour le désactiver :
+
+`Disable-NetAdapterLso -Name {name of adapter}` 
+
+![Désactiver l’état LSO](./media/disable-lso-vmware.png)
+
 
 ## <a name="see-also"></a>Voir aussi
 - [Prérequis d’Azure ATP](atp-prerequisites.md)

@@ -2,20 +2,20 @@
 title: 'Démarrage rapide : Créer votre instance Azure ATP | Microsoft Docs'
 description: Guide de démarrage rapide pour créer l’instance pour votre déploiement d’Azure ATP, qui est la première étape de l’installation d’Azure ATP.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18a9feba8344ce88c4afb2ed3911b51aea0b9e07
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d50774470dba20f523959da04f370ff34bcd87bb
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73462332"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905163"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Démarrage rapide : Créer votre instance Azure ATP
 

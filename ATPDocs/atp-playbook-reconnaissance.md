@@ -3,16 +3,16 @@ title: Tutoriel de playbook Azure ATP Reconnaissance | Microsoft Docs
 description: Le tutoriel de playbook Azure ATP Reconnaissance décrit comment simuler des menaces de reconnaissance pour la détection par Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 53ff08105d688275dad6b2283e3d30e0db8df002
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70209231"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908189"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 
@@ -52,7 +52,7 @@ Azure ATP supprime l’activité de reconnaissance de mappage réseau de votre *
 
 Pour tester la reconnaissance DNS, nous utilisons l’outil de ligne de commande natif, *nslookup*, pour lancer un transfert de zone DNS. Les serveurs DNS avec une configuration correcte refusent les requêtes de ce type et n’autorisent pas la tentative de transfert de zone.  
 
-Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
+Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
 
 ``` cmd
 nslookup

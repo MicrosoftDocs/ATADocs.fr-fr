@@ -2,8 +2,8 @@
 title: Configurer les transferts d’événements Windows dans Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit les options de configuration des transferts d’événements Windows avec Azure ATP
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/29/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5acf930c53e27818d44cde99ad3aace15073090
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9ff768c4a6d52f37ee7a134bb079bc6ec51ee552
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197210"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906986"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 

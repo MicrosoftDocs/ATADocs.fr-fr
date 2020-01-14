@@ -3,16 +3,16 @@ title: Playbook Azure ATP de contrôle du domaine | Microsoft Docs
 description: Le playbook Azure ATP de contrôle du domaine décrit comment simuler des attaques de contrôle du domaine devant être détectées par Azure ATP
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 800b72e0bb06a95e10a0c52885d78ebe276e00b7
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 5eb15b0eeda7fec50c898550a683ef1cdbccfdb7
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543828"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908361"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutoriel : Playbook de contrôle du domaine
 

@@ -1,20 +1,20 @@
 ---
 title: 'Démarrage rapide : Installer le capteur Azure ATP | Microsoft Docs'
 description: La quatrième étape de la procédure d’installation d’Azure ATP vous permet d’installer le capteur Azure ATP.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 124bc127242d97197239cb37fddda154c1bcb445
-ms.sourcegitcommit: 44ce78c9d7f156dd0c0798823bba53e092f5abdf
+ms.openlocfilehash: 56c74fbacac2bb0bc9affa5b3443be7c7900316e
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034082"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908563"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Démarrage rapide : Installer le capteur Azure ATP
 
@@ -71,7 +71,7 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
      - Clé d’accès : Récupérée auprès du portail Azure ATP à l’étape précédente.
     
-7. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
+7. Cliquez sur **Suivant**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
 
     - KB 3047154 (pour Windows Server 2012 R2 uniquement)
 

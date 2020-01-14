@@ -1,18 +1,18 @@
 ---
 title: Planification de votre déploiement Azure Advanced Threat Protection - Démarrage rapide | Microsoft Docs
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 12/26/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 5edb88ebc9db10abec7e8064be4af37f66111afc
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 894f25b7a3d3757bf27a130d84b159fe0d5b1219
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543909"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907358"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 

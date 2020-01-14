@@ -2,8 +2,8 @@
 title: 'Azure Advanced Threat Protection : évaluations de la posture de sécurité des identités | Microsoft Docs'
 description: Cet article propose une vue d’ensemble des rapports d’évaluation de la posture de sécurité des identités fournis par Azure ATP.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/16/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cb562e8d9dc21d8fa5fcce70ea2020be22796621
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7109196ef5c3e5d330d0d0b82f9e8bd753fe70fc
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71007509"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907646"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Évaluations de la posture de sécurité des identités Azure ATP
  
@@ -32,7 +32,7 @@ Même si votre entreprise investit beaucoup de temps et d’efforts pour renforc
 
 ## <a name="how-do-i-get-started"></a>Comment faire pour commencer 
 
-### <a name="access"></a>Accès
+### <a name="access"></a>Access
 
 Vous pouvez accéder aux évaluations de la sécurité Azure ATP dans le portail Microsoft Cloud App Security après avoir activé l’intégration d’Azure ATP. Pour apprendre à intégrer Azure ATP à Cloud App Security, consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration). 
 

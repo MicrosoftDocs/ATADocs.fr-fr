@@ -2,8 +2,8 @@
 title: Problèmes connus dans Azure ATP | Microsoft Docs
 description: Décrit les problèmes connus dans Azure ATP
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/25/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a2bfa219334960300901ac47129800d52a80a69a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e74d9330735e88eecbdd382f65dd8ac504502da7
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65193529"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906098"
 ---
 # <a name="azure-atp-known-issues"></a>Problèmes connus dans Azure ATP
 
