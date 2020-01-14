@@ -3,16 +3,16 @@ title: Planification de votre déploiement Azure Advanced Threat Protection - D�
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 author: mlottner
 ms.author: mlottner
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5edb88ebc9db10abec7e8064be4af37f66111afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540883"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543909"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -103,8 +103,6 @@ Lorsque vous déterminez le dimensionnement, notez les éléments suivants :
 |Autre hôte de virtualisation|Reportez-vous à la documentation donnée par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
 |
 
-En cas d’exécution en tant que machine virtuelle, arrêtez le serveur avant de créer un point de contrôle pour éviter tout risque d’endommagement de la base de données.
-
 ## <a name="manual-sizing"></a> Estimation du trafic des contrôleurs de domaine
 
 Si, pour une raison quelconque, vous ne pouvez pas utiliser l’outil de dimensionnement Azure ATP, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine. Collectez les informations pendant 24 heures avec un intervalle de collecte court, environ 5 secondes. Ensuite, pour chaque contrôleur de domaine, calculez la moyenne quotidienne et la moyenne des périodes les plus actives (15 minutes). Les sections suivantes expliquent comment collecter le compteur de paquets/s dans un contrôleur de domaine.
@@ -121,7 +119,7 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 
     ![Image d’Ensembles de collecteurs de données](media/atp-traffic-estimation-2.png)
 
-3.  Cliquez avec le bouton droit sur **Défini par l’utilisateur**, puis sélectionnez **Nouveau** &gt; **Ensemble de collecteurs de données**.
+3.  Cliquez avec le bouton de droite sur **Défini par l’utilisateur**, puis sélectionnez **Nouveau** &gt; **Ensemble de collecteurs de données**.
 
     ![Image du nouvel ensemble de collecteurs de données](media/atp-traffic-estimation-3.png)
 

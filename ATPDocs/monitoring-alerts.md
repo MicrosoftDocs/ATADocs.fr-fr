@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4d6c54378f88422a419f1f67850b302087eb3195
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68298753"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544395"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Présentation des alertes de surveillance du capteur autonome et du capteur Azure ATP
 
@@ -57,7 +57,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Un capteur Azure ATP est obsolète.|Un capteur Azure ATP exécute une version qui est obsolète depuis au moins trois versions.|Mettez à jour le capteur manuellement et vérifiez ce qui empêche la mise à jour automatique du capteur. Si cela ne fonctionne pas, téléchargez le dernier package d’installation du capteur, puis désinstallez et réinstallez le capteur. Pour plus d’informations, consultez [Installation du capteur Azure ATP](install-atp-step4.md).|Moyenne|
+|Un capteur Azure ATP est obsolète.|Un capteur Azure ATP exécute une version qui ne peut pas communiquer avec l’infrastructure cloud Azure ATP.|Mettez à jour le capteur manuellement et vérifiez ce qui empêche la mise à jour automatique du capteur. Si cela ne fonctionne pas, téléchargez le dernier package d’installation du capteur, puis désinstallez et réinstallez le capteur. Pour plus d’informations, consultez [Installation du capteur Azure ATP](install-atp-step4.md).|Moyenne|
 
 ## <a name="sensor-reached-a-memory-resource-limit"></a>Le capteur a atteint la limite des ressources mémoire
 

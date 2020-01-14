@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 27630e93db4e103454e6d0fec7756824988ec4a2
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f0c38f179411565685f3bc2e35d23ac21ce0ef47
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71185506"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544169"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
 Chaque capteur Azure Advanced Threat Protection (ATP) requiert une connectivité Internet au service cloud Azure ATP pour fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web. Chaque capteur Azure ATP nécessite que vous utilisiez la configuration de proxy de Microsoft Windows Internet (WinINET) pour signaler les données de capteur et communiquer avec le service Azure ATP. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez toujours configurer les paramètres de proxy de navigateur Windows Internet (WinINet) pour la communication entre le capteur et le service cloud Azure ATP.
 
-Quand vous configurez le proxy, vous devez savoir que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService**, et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide du compte **LocalSystem**. 
+Quand vous configurez le proxy, souvenez-vous que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide du compte **LocalSystem**. 
 
 > [!NOTE]
 > Si vous utilisez un proxy transparent ou WPAD dans votre topologie de réseau, vous n’avez pas besoin de configurer WinINET pour votre proxy.

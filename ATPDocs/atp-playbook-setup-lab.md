@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 8a968e290cd031d837b4edadab78c307e7fe0796
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "59745588"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544059"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
 
@@ -53,8 +53,8 @@ Dans les exemples pour ces tutoriels, le nom NetBIOS de la forêt est **CONTOSO.
 |  FQDN | Système d’exploitation | IP | Fonction |
 |------|-------|---------|--------------|
 | ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Contrôleur de domaine avec le capteur Azure ATP installé localement |
-| VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |PC de la victime |
-| AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | PC de l’administrateur de domaine (parfois appelé « Station de travail d’administrateur sécurisée » ou « Station de travail d’administrateur privilégiée ») |
+| VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |PC de la victime |
+| AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | PC de l’administrateur de domaine (parfois appelé « Station de travail d’administrateur sécurisée » ou « Station de travail d’administrateur privilégiée ») |
 
 ### <a name="active-directory-users-and-groups"></a>Utilisateurs et groupes Active Directory
 
@@ -199,8 +199,8 @@ Pour exécuter les playbooks d’alerte de sécurité Azure ATP, les outils suiv
 |----|-----|
 | Mimikatz | [GitHub – Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub – PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) |
-| NetSess | [Outils JoeWare](http://www.joeware.net/freetools) |
+| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| NetSess | [Outils JoeWare](https://www.joeware.net/freetools) |
 
 Nous remercions les auteurs de ces outils de recherche d’avoir permis à la communauté de mieux comprendre les cyber risques et leur impact.
 
