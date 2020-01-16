@@ -3,16 +3,16 @@ title: Vue d’ensemble du tutoriel sur les alertes de sécurité Azure ATP | Mi
 description: Cette vue d’ensemble du tutoriel décrit les quatre parties du labo d’alertes de sécurité Azure ATP pour la simulation de menaces à détecter par Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 116f4648026d8f291a1576bb0cbd4bf392ff8a9a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 644b934622c20fa1be640120fe9c04ea6a89e08c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "57007447"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908490"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Présentation du tutoriel : labo d’alertes de sécurité ATP
 

@@ -2,8 +2,8 @@
 title: Supervision des contrôleurs de domaine et des capteurs installés sur vos contrôleurs de domaine à l’aide d’Azure Advanced Threat Protection | Microsoft Docs
 description: Décrit comment superviser les capteurs Azure ATP et la couverture des capteurs à l’aide d’Azure ATP
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6970908b95fe31ecd24b4cdc1005180e39495913
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: bdb731d3f5b509eaad9f4c3046f73e52220ba096
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71185612"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908544"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
@@ -41,7 +41,7 @@ Le fichier Excel téléchargé contient les informations de couverture suivantes
 
 |Titre|Description|
 |----|----|
-|Hostname|Nom de l'ordinateur|
+|Nom d’hôte|Nom de l'ordinateur|
 |Nom du domaine|Nom du domaine|
 |Supervisé|État de la supervision Azure ATP|
 |Type de capteur|Capteur Azure ATP ou capteur autonome Azure ATP|

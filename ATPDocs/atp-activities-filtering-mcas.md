@@ -2,8 +2,8 @@
 title: Filtrage d’activités et stratégies d’Azure Advanced Threat Protection dans Microsoft Cloud App Security | Microsoft Docs
 description: Vue d’ensemble du filtrage des activités Azure ATP et des stratégies avec Microsoft Cloud App Security.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 07/01/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1508cb558f16adf54f80cec0c13631059dbf45bf
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 97d13dc5780e9cf24955644a9e0493a8434f62cd
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67506516"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908060"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Utiliser des filtres d’activité et créer des stratégies d’action avec Azure ATP dans Microsoft Cloud App Security 
 
@@ -30,7 +30,7 @@ L’utilisation d’Azure ATP avec Microsoft Cloud App Security permet d’analy
 ## <a name="prerequisites"></a>Prérequis
 
 Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur dans l’environnement hybride, les éléments suivants sont nécessaires :
-- Licence valide pour Microsoft Cloud App Security
+- Une licence valide pour Microsoft Cloud App Security
 - Licence valide pour Azure ATP connectée à votre instance Active Directory
 
 >[!NOTE]

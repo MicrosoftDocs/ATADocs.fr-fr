@@ -2,8 +2,8 @@
 title: Tutoriel sur les alertes de sécurité Azure ATP | Microsoft Docs
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/13/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f215639ea72d0c767f32bd9628e1c404da23aaa0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: baefea19a50cec6a6d14835ac3cb8754671ec85c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196396"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907493"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutoriel : Présentation des alertes de sécurité
 
@@ -63,7 +63,7 @@ Pour chaque alerte, posez-vous les questions suivantes afin de déterminer la cl
 2. L’alerte a-t-elle été déclenchée par les mêmes types d’ordinateurs ou d’utilisateurs
    (par exemple, des serveurs ayant le même rôle ou des utilisateurs du même groupe/service) ? Si les ordinateurs ou utilisateurs étaient similaires, vous pouvez décider de les exclure afin d’éviter de recevoir ultérieurement d’autres alertes FP.
 
-Remarque : Une augmentation des alertes du même type réduit généralement le niveau d’importance/de suspicion de l’alerte. Pour les alertes répétées, vérifiez les configurations et utilisez les détails et les définitions de l’alerte de sécurité afin de comprendre exactement ce qui déclenche la répétition. 
+Remarque : Une augmentation des alertes du même type réduit généralement le niveau d’importance/de suspicion de l’alerte. Pour les alertes répétées, vérifiez les configurations et utilisez les détails et les définitions de l’alerte de sécurité afin de comprendre exactement ce qui déclenche la répétition. 
 
 ## <a name="security-alert-categories"></a>Catégories des alertes de sécurité
 

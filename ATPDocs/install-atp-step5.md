@@ -1,20 +1,20 @@
 ---
 title: Configurer les paramètres du capteur Azure ATP - concepts | Microsoft Docs
 description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: b50dc7247e17831c3b083090787b85c228c13a77
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004854"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907768"
 ---
 # <a name="configure-azure-atp-sensor-settings"></a>Configurer les paramètres du capteur Azure ATP
 
@@ -70,10 +70,10 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 
 1. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
-    1. Type ```nslookup```
-    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```.
+    1. Tapez ```nslookup```
+    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, ```server contosodc.contoso.azure```
         - Veillez à remplacer contosodc.contoso.azure et contoso.azure par le nom de domaine complet de votre capteur Azure ATP et le nom de domaine respectivement.
-    1. Type ```ls -d contoso.azure```
+    1. Tapez ```ls -d contoso.azure```
     1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.  
     1. À partir de la console Azure ATP, ouvrez le profil d’entité pour l’ordinateur à partir duquel vous avez exécuté le test de connectivité. 
     1. Vérifiez l’activité logique associée et confirmez la. 

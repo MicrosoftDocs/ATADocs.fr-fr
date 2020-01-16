@@ -2,8 +2,8 @@
 title: Référence sur les anciennes versions d’Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
 description: Cet article est une référence concernant les mises à jour des versions précédentes d’Azure Advanced Threat Protection (Azure ATP).
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: reference
@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 12e05c54b4237aa04d285d342c960e536a248cdc
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9b7c4e8e6619df992f0336d3b67ca0cdfc7c750b
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153139"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908536"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Référence sur les versions d’Azure Advanced Threat Protection (Azure ATP) 
 
