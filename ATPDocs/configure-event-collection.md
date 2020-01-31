@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 01/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4150ce673ce73142139d7c85935e711a64e5046
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 535d4c15a9f7d03bea45eea7b8140e7f8f9149c2
+ms.sourcegitcommit: f1a11982e2ee806d2a29420901f9ddac64d7dd51
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907038"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76762977"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -40,14 +40,10 @@ Pour configurer la collecte d’événements Windows 8004 :
 Lorsque l’événement Windows 8004 est analysé par le capteur Azure ATP,  les activités d’authentification NTLM Azure ATP sont enrichies avec les données ayant fait l’objet d’un accès par le serveur.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
-Pour qu’Azure ATP puisse consommer des données provenant d’un serveur Syslog, vous devez effectuer les étapes suivantes :
-
-- Configurez vos serveurs de capteur Azure ATP pour écouter et accepter les événements transférés à partir du serveur SIEM/Syslog.
+Les capteurs autonomes Azure ATP sont configurés par défaut pour recevoir les données syslog. Pour que les capteurs autonomes Azure ATP puissent consommer les données dont vous avez besoin pour transférer vos données syslog au capteur. 
 
   > [!NOTE]
   > Azure ATP écoute uniquement sur IPv4 et non sur IPv6. 
-
-- Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques au capteur Azure ATP.
 
 > [!IMPORTANT]
 > -   Ne transférez pas toutes les données Syslog au capteur Azure ATP.
@@ -60,15 +56,12 @@ Pour plus d’informations sur la façon de configurer le transfert d’événem
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Configuration du capteur Azure ATP pour écouter les événements SIEM
 
-1.  Dans la configuration Azure ATP, sous **Sources de données**, cliquez sur **SIEM** et activez **Syslog**, puis cliquez sur **Enregistrer**.
 
-    ![Image de l’activation du protocole UDP de l’écouteur syslog](media/atp-siem-config.png)
-
-2.  Configurez votre serveur SIEM ou Syslog pour transférer tous les événements requis à l’adresse IP de l’un des capteurs Azure ATP. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
+- Configurez votre serveur SIEM ou Syslog pour transférer tous les événements requis à l’adresse IP de l’un des capteurs autonomes Azure ATP. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
 
 Azure ATP prend en charge les événements SIEM aux formats suivants :  
 
-## <a name="rsa-security-analytics"></a>RSA Security Analytics
+### <a name="rsa-security-analytics"></a>RSA Security Analytics
 &lt;En-tête Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   L’en-tête syslog est facultatif.
@@ -97,7 +90,7 @@ Azure ATP prend en charge les événements SIEM aux formats suivants :
 
 -   L’ordre est important, et rien d’autre ne doit figurer dans le message.
 
-## <a name="hp-arcsight"></a>HP Arcsight
+### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le contrôleur de domaine a tenté de valider les informations d’identification d’un compte.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Doit être conforme à la définition du protocole.
@@ -128,7 +121,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
 
     -   « Reason or Error Code » = code de résultat de NTLM
 
-## <a name="splunk"></a>Splunk
+### <a name="splunk"></a>Splunk
 &lt;En-tête Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 L’ordinateur a tenté de valider les informations d’identification d’un compte.
@@ -165,7 +158,7 @@ Code d’erreur :         0x0
 
 -   L’ordre n’est pas important pour les paires clé=valeur.
 
-## <a name="qradar"></a>QRadar
+### <a name="qradar"></a>QRadar
 QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. Azure ATP nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements Windows sans agent. Pour plus d’informations, consultez [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0

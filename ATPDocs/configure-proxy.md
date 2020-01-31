@@ -12,23 +12,23 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67ffd16571af8dc298edcb3940560c155cee75b9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 88d6c9fddc0a9e8db8d63a64618b7ab9c14a092f
+ms.sourcegitcommit: 1a0cc214568bf12041d11e037dfe56a8d9e707c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906803"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76706220"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
 Chaque capteur Azure Advanced Threat Protection (ATP) requiert une connectivité Internet au service cloud Azure ATP pour fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web. Chaque capteur Azure ATP nécessite que vous utilisiez la configuration de proxy de Microsoft Windows Internet (WinINET) pour signaler les données de capteur et communiquer avec le service Azure ATP. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez toujours configurer les paramètres de proxy de navigateur Windows Internet (WinINet) pour la communication entre le capteur et le service cloud Azure ATP.
 
-Quand vous configurez le proxy, souvenez-vous que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide du compte **LocalSystem**. 
+Quand vous configurez le proxy, souvenez-vous que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide du compte **LocalSystem**.
 
 > [!NOTE]
 > Si vous utilisez un proxy transparent ou WPAD dans votre topologie de réseau, vous n’avez pas besoin de configurer WinINET pour votre proxy.
 
-## <a name="configure-the-proxy"></a>Configurer le proxy 
+## <a name="configure-the-proxy"></a>Configurer le proxy
 
 Vous pouvez configurer vos paramètres proxy pendant l'installation du capteur en utilisant les paramètres définis dans [Installation silencieuse, paramètres d'authentification proxy](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
 
@@ -38,9 +38,8 @@ Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
 **Syntaxe** :
 
-
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port pour le capteur Azure ATP.|
@@ -54,21 +53,20 @@ Vous pouvez également configurer votre serveur proxy manuellement à l’aide d
 
 Le proxy statique est configurable par le biais du Registre. Vous devez copier la configuration du proxy que vous utilisez dans le contexte de l’utilisateur pour localsystem et localservice. Pour copier vos paramètres de proxy du contexte de l’utilisateur :
 
-1.   Veillez à sauvegarder les clés de Registre avant de les modifier.
+1. Veillez à sauvegarder les clés de Registre avant de les modifier.
 
-2. Dans le Registre, recherchez la valeur `DefaultConnectionSettings` comme REG_BINARY sous la clé de Registre `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` et copiez-la.
- 
-2.  Si LocalSystem n’a pas les paramètres de proxy appropriés (non configurés ou différents de Current_User), alors copiez le paramètre de proxy de Current_User vers LocalSystem. Sous la clé de Registre `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
+1. Dans le Registre, recherchez la valeur `DefaultConnectionSettings` comme REG_BINARY sous la clé de Registre `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` et copiez-la.
 
-3.  Collez la valeur de Current_user `DefaultConnectionSettings` comme REG_BINARY.
+1. Si LocalSystem n’a pas les paramètres de proxy appropriés (non configurés ou différents de Current_User), alors copiez le paramètre de proxy de Current_User vers LocalSystem. Sous la clé de Registre `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
-4.  Si LocalService n’a pas les paramètres de proxy appropriés, alors copiez le paramètre de proxy à partir de Current_User vers LocalService. Sous la clé de Registre `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
+1. Collez la valeur de Current_user `DefaultConnectionSettings` comme REG_BINARY.
 
-5.  Collez la valeur de Current_User `DefaultConnectionSettings` comme REG_BINARY.
+1. Si LocalService n’a pas les paramètres de proxy appropriés, alors copiez le paramètre de proxy à partir de Current_User vers LocalService. Sous la clé de Registre `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
+
+1. Collez la valeur de Current_User `DefaultConnectionSettings` comme REG_BINARY.
 
 > [!NOTE]
 > Toutes les applications sont concernées, notamment les services Windows qui utilisent WinINET avec le contexte LocalService, LocalSytem.
-
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Activer l’accès aux URL du service Azure ATP dans le serveur proxy
 
@@ -86,12 +84,12 @@ Les URL précédentes mappent automatiquement vers l’emplacement de service co
 |Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asie|triprd1wcasse1sensorapi.atp.azure.com|
 
- 
 > [!NOTE]
-> Pour garantir la sécurité maximale et la confidentialité des données, Azure ATP utilise l’authentification mutuelle basée sur les certificats entre chaque capteur Azure ATP et le back-end cloud Azure ATP. Si l’inspection SSL est utilisée dans votre environnement, assurez-vous que l’inspection est configurée pour l’authentification mutuelle, de sorte qu’elle n’interfère pas dans le processus d’authentification.
-
-
+>
+> - Pour garantir la sécurité maximale et la confidentialité des données, Azure ATP utilise l’authentification mutuelle basée sur les certificats entre chaque capteur Azure ATP et le back-end cloud Azure ATP. Si l’inspection SSL est utilisée dans votre environnement, assurez-vous que l’inspection est configurée pour l’authentification mutuelle, de sorte qu’elle n’interfère pas dans le processus d’authentification.
+> - Vous pouvez également utiliser notre balise de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
