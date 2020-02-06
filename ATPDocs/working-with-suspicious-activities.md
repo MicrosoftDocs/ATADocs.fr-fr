@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 09/15/2019
+ms.date: 01/26/2020
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1463d3aa397c42069ada0e540fd6e0eb9f846c9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6d8a18b7e2268945dcfd254afb5580a180ad0204
+ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907323"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818241"
 ---
 # <a name="working-with-security-alerts"></a>Utilisation des alertes de sécurité
 
@@ -47,6 +47,7 @@ Une alerte de sécurité comprend les informations suivantes :
     - Télécharger l’alerte de sécurité au format Excel.
 
 > [!NOTE]
+>
 > - Lorsque vous pointez votre souris sur un utilisateur ou un ordinateur, un mini-profil d’entité s’affiche. Il fournit des informations complémentaires sur l’entité, notamment le nombre d’alertes de sécurité auxquelles est liée l’entité.
 > - En cliquant sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
 
@@ -54,7 +55,7 @@ Une alerte de sécurité comprend les informations suivantes :
 
 ## <a name="security-alert-categories"></a>Catégories des alertes de sécurité
 
-Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases (voir ci-dessous), comme les phases d’une chaîne de destruction de cyberattaque standard. 
+Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases (voir ci-dessous), comme les phases d’une chaîne de destruction de cyberattaque standard.
 
 - [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
 - [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
@@ -70,18 +71,18 @@ Ces détections sont marquées d’un badge de préversion pour vous permettre d
 
 ![détection vpn en préversion](./media/preview-detection-vpn.png)
 
-Par défaut, les détections en préversion sont activées dans Azure ATP. 
+Par défaut, les détections en préversion sont activées dans Azure ATP.
 
 Pour désactiver les détections en préversion :
 
 1. Dans la console Azure ATP, cliquez sur la roue dentée des paramètres.
 2. Dans le menu de gauche, sous Préversion, cliquez sur **Détections**.
 3. Utilisez le curseur pour activer et désactiver les détections en préversion.
- 
-![détections en préversion](./media/preview-detections.png) 
 
+![détections en préversion](./media/preview-detections.png)
 
 ## <a name="filter-security-alerts-list"></a>Filtrer la liste des alertes de sécurité
+
 Pour filtrer la liste des alertes de sécurité :
 
 1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
@@ -102,7 +103,6 @@ Pour filtrer la liste des alertes de sécurité :
 
     Correspond aux activités pouvant conduire à une usurpation d’identité, une élévation des privilèges ou d’autres attaques à impact élevé.
 
-
 ## <a name="managing-security-alerts"></a>Gestion des alertes de sécurité
 
 Vous pouvez changer l’état d’une alerte de sécurité en cliquant sur son état actuel, puis en sélectionnant l’une des options suivantes : **Ouvertes**, **Ignorées**, **Fermées** ou **Supprimées**.
@@ -116,18 +116,14 @@ Pour cela, cliquez sur les trois points en haut à droite d’une alerte pour af
 
 - **Fermé** : utilisé pour effectuer le suivi des activités que vous avez identifiées, examinées et résolues.
 
-    > [!NOTE]
-    > Si une activité est détectée à nouveau après une courte période, Azure ATP peut rouvrir une alerte ayant été fermée.
+- **Ignoré** : permet d’ignorer temporairement une alerte, et de n’être averti de nouveau qu’en cas de nouvelle instance. Cela signifie que si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours avant de réapparaître, une nouvelle alerte est ouverte.
 
-- **Ignoré** : permet d’ignorer temporairement une alerte, et de n’être averti de nouveau qu’en cas de nouvelle instance. Cela signifie que si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes averti à nouveau.
-
-- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
+- **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
 - **Exclure** : Possibilité d’empêcher une entité de déclencher un certain type d’alertes. Par exemple, vous pouvez configurer Azure ATP pour empêcher une entité (un utilisateur ou un ordinateur) de déclencher à nouveau une alerte pour un certain type d’activité, par exemple un administrateur qui exécute du code à distance ou un scanner de sécurité qui effectue une reconnaissance DNS. En plus d’ajouter des exclusions directement dans l’alerte de sécurité lorsque celle-ci est détectée dans la chronologie, vous pouvez également accéder aux **Exclusions** de la page Configuration et, pour chaque alerte de sécurité, ajouter et supprimer manuellement des entités ou des sous-réseaux exclus (par exemple, pour les attaques pass-the-ticket).
 
 > [!NOTE]
 > Les pages de configuration peuvent être modifiées seulement par des administrateurs Azure ATP.
-
 
 ## <a name="see-also"></a>Voir aussi
 
