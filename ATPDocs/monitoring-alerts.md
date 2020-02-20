@@ -1,27 +1,27 @@
 ---
-title: Présentation des alertes de surveillance d’Azure ATP | Microsoft Docs
+title: Compréhension des alertes d’intégrité Azure ATP
 description: Décrit comment utiliser les journaux Azure ATP pour résoudre des problèmes
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/24/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22380f67b4a3f913bd80ded72f06db9ce57e0a11
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907832"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259380"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Présentation des alertes de surveillance du capteur autonome et du capteur Azure ATP
+# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Compréhension des alertes d’intégrité du capteur et du capteur autonome Azure ATP
 
-Le centre d’intégrité Azure ATP vous informe de l’existence d’un problème dans votre instance Azure ATP en déclenchant une alerte de supervision. Cet article décrit toutes les alertes de surveillance pour chaque composant, en indiquant la cause et les étapes nécessaires pour résoudre le problème.
+Le centre d’intégrité Azure ATP vous informe de l’existence d’un problème dans votre instance Azure ATP en déclenchant une alerte d’intégrité. Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Tous les contrôleurs de domaine ne sont pas accessibles par un capteur
 
@@ -34,6 +34,12 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
 |L’ensemble ou une partie des cartes réseau de capture sélectionnées sur le capteur Azure ATP sont désactivées ou déconnectées.|Le trafic réseau pour l’ensemble ou une partie des contrôleurs de domaine n’est plus capturé par le capteur Azure ATP. Ceci a un impact sur la possibilité de détecter les activités suspectes liées à ces contrôleurs de domaine.|Vérifiez que ces cartes réseau de capture sélectionnées sur le capteur Azure ATP sont activées et connectées.|Moyenne|
+
+## <a name="directory-services-user-credentials-are-incorrect"></a>Les informations d'identification de l'utilisateur des services d'annuaire sont incorrectes
+
+|Alerte|Description|Résolution|Gravité|
+|----|----|----|----|
+|Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard** : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-atp-step2.md#prerequisites).|Moyenne|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Aucun trafic reçu du contrôleur de domaine
 

@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/26/2020
+ms.date: 02/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: ef493165f939bd037e12361d7eec403ad397b0fc
-ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
+ms.openlocfilehash: 50bbf3fda8b0e91a94cd917b4bf4174ccd31e9ca
+ms.sourcegitcommit: 173b9fc26592efec2113c6ee585b04311ddfdbf1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818224"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77421994"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -26,15 +26,38 @@ Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’�
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant-collant l’URL suivante dans votre lecteur de flux :   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## <a name="azure-atp-release-2109"></a>Azure ATP version 2.109
+
+Mise en production : 16 février 2020
+
+- **Amélioration de fonctionnalité : entités sensibles**  
+À partir de cette version (2.109), les ordinateurs identifiés comme Autorité de certification, DHCP ou serveurs de noms de domaine par Azure ATP sont désormais automatiquement marqués comme **Sensibles**.
+
+## <a name="azure-atp-release-2108"></a>Azure ATP version 2.108
+
+Mise en production : 9 février 2020
+
+- **Nouvelle fonctionnalité : Support des comptes de service administré du groupe**  
+Azure ATP prend désormais en charge l’utilisation de comptes de service administré du groupe (gMSA) pour renforcer la sécurité lors de la connexion des capteurs Azure ATP à vos forêts Azure Active Directory (AD). Pour plus d’informations sur l’utilisation de gMSA avec des capteurs Azure ATP, consultez [Se connecter à votre forêt Active Directory](install-atp-step2.md#prerequisites).
+
+- **Amélioration de fonctionnalité : Rapport planifié avec trop de données**  
+Lorsqu’un rapport planifié contient trop de données, l’e-mail vous en informe maintenant en affichant le texte suivant : La période spécifiée contient trop de données pour générer un rapport. Cela remplace le comportement précédent de la découverte du fait uniquement après avoir cliqué sur le lien de rapport dans l’e-mail.
+
+- **Amélioration de fonctionnalité : Logique de la couverture des contrôleurs de domaine mis à jour**  
+Nous avons mis à jour notre logique de rapport de couverture des contrôleurs de domaine pour inclure des informations supplémentaires à partir d’Azure AD, ce qui permet d’obtenir une vue plus précise des contrôleurs de domaine sans capteurs. Cette nouvelle logique doit également avoir un impact positif sur le score sécurisé Microsoft correspondant.
+
 ## <a name="azure-atp-release-2107"></a>Azure ATP version 2.107
 
-Publication : 26 janvier 2020
+Mise en production : 3 février 2020
 
 - **Nouvelle activité supervisée : Modification de l’historique des SID**  
-    La modification de l’historique des SID est désormais une activité surveillée et filtrable. En savoir plus sur les [activités surveillées par Azure ATP](monitored-activities.md)et la manière de [filtrer et de rechercher des activités surveillées](atp-activities-search.md) dans le portail.
+La modification de l’historique des SID est désormais une activité surveillée et filtrable. En savoir plus sur les [activités surveillées par Azure ATP](monitored-activities.md)et la manière de [filtrer et de rechercher des activités surveillées](atp-activities-search.md) dans le portail.
 
 - **Amélioration de fonctionnalité : Les alertes fermées ou supprimées ne sont plus rouvertes**  
-    Une fois qu’une alerte est fermée ou supprimée sur le portail Azure ATP, si la même activité est à nouveau détectée peu de temps après, une nouvelle alerte est ouverte. Auparavant, dans les mêmes conditions, l’alerte était rouverte.
+Une fois qu’une alerte est fermée ou supprimée sur le portail Azure ATP, si la même activité est à nouveau détectée peu de temps après, une nouvelle alerte est ouverte. Auparavant, dans les mêmes conditions, l’alerte était rouverte.
+
+- **TLS 1.2 requis pour l’accès au portail et les capteurs**  
+TLS 1.2 est désormais requis pour utiliser les capteurs Azure ATP et le service cloud. L’accès au portail Azure ATP n’est plus possible en utilisant des navigateurs qui ne prennent pas en charge TLS 1.2.
 
 ## <a name="azure-atp-release-2106"></a>Azure ATP version 2.106
 
@@ -53,13 +76,13 @@ Publication : 12 mai 2020
 Mise en production le 23 septembre 2019
 
 - **Expirations de la version du capteur éliminées**  
-    Les packages de déploiement de capteur Azure ATP et d’installation de capteur n’expirent plus après un certain nombre de versions et ne sont désormais mis à jour qu’une seule fois. Le résultat de cette fonctionnalité est que les packages d’installation du capteur téléchargés peuvent désormais être installés même si ils sont antérieurs que notre nombre maximum de versions écoulées.
+Les packages de déploiement de capteur Azure ATP et d’installation de capteur n’expirent plus après un certain nombre de versions et ne sont désormais mis à jour qu’une seule fois. Le résultat de cette fonctionnalité est que les packages d’installation du capteur téléchargés peuvent désormais être installés même si ils sont antérieurs que notre nombre maximum de versions écoulées.
 
 - **Confirmer la compromission**  
-    Vous pouvez maintenant confirmer la compromission d’utilisateurs Office 365 spécifiques et définir leur niveau de risque sur **haut**. Ce flux de travail permet à vos équipes d’opérations de sécurité de réduire les seuils de délai de résolution des incidents de sécurité. En savoir plus sur [comment confirmer la compromission](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) à l’aide de Azure ATP et Cloud App Security.
+Vous pouvez maintenant confirmer la compromission d’utilisateurs Office 365 spécifiques et définir leur niveau de risque sur **haut**. Ce flux de travail permet à vos équipes d’opérations de sécurité de réduire les seuils de délai de résolution des incidents de sécurité. En savoir plus sur [comment confirmer la compromission](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) à l’aide de Azure ATP et Cloud App Security.
 
 - **Nouvelle bannière d’expérience**  
-    Sur les pages du portail Azure ATP où une nouvelle expérience est disponible dans le portail Cloud App Security, de nouvelles bannières s’affichent pour décrire ce qui est disponible avec les liens d’accès.
+Sur les pages du portail Azure ATP où une nouvelle expérience est disponible dans le portail Cloud App Security, de nouvelles bannières s’affichent pour décrire ce qui est disponible avec les liens d’accès.
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -92,7 +115,7 @@ Publication : 17 novembre 2019
 Publication : 3 novembre 2019
 
 - **Amélioration de fonctionnalité :  ajout de la notification de l’interface utilisateur relative à la disponibilité du portail Cloud App Security au portail Azure ATP**  
-    Pour garantir que tous les utilisateurs soient informés de la disponibilité des fonctionnalités améliorées disponibles à l’aide du portail Cloud App Security, la notification a été ajoutée pour le portail à partir de la chronologie d’alerte Azure ATP existante.
+Pour garantir que tous les utilisateurs soient informés de la disponibilité des fonctionnalités améliorées disponibles à l’aide du portail Cloud App Security, la notification a été ajoutée pour le portail à partir de la chronologie d’alerte Azure ATP existante.
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
@@ -101,7 +124,7 @@ Publication : 3 novembre 2019
 Publication : 27 octobre 2019
 
 - **Amélioration de fonctionnalité : alerte de suspicion d’attaque par force brute**  
-    Amélioration de l’[alerte de suspicion d’attaque par force brute (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) à l’aide d’une analyse supplémentaire et amélioration de la logique de détection pour réduire les résultats d’alerte **vrai positif (B-TP)** et **faux positif (FP)** .
+Amélioration de l’[alerte de suspicion d’attaque par force brute (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) à l’aide d’une analyse supplémentaire et amélioration de la logique de détection pour réduire les résultats d’alerte **vrai positif (B-TP)** et **faux positif (FP)** .
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 

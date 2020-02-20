@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50a14aeb6b91fc94c71f6be69bf66db13528c9f1
-ms.sourcegitcommit: 1a0cc214568bf12041d11e037dfe56a8d9e707c2
+ms.openlocfilehash: eb6484eeaa9bd5ed4e04f90a5a8dc1ed4327b8b5
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76706237"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259441"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -50,10 +50,24 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Vérifiez que le ou les contrôleurs de domaine sur lesquels vous prévoyez d’installer des capteurs Azure ATP ont une connectivité Internet au service cloud Azure ATP. Le capteur Azure ATP prend en charge l’utilisation d’un proxy. Pour plus d’informations sur la configuration du proxy, consultez [Configuration d’un proxy pour Azure ATP](configure-proxy.md).
 
-- Compte d’utilisateur AD **local** et mot de passe avec accès en lecture à tous les objets dans les domaines surveillés.
+- Au moins l’un des comptes de services d’annuaire suivants, avec accès en lecture à tous les objets dans les domaines analysés :
+  - Un mot de passe et un compte d’utilisateur AD **standard**. Requis pour les capteurs exécutant Windows Server 2008 R2 SP1.
+  - Un **compte de service administré du groupe** (gMSA). Requiert Windows Server 2012 ou version ultérieure.  
+  Tous les capteurs doivent disposer des autorisations pour récupérer le mot de passe du compte gMSA.  
+  Pour en savoir plus sur les comptes gMSA, consultez [Prise en main des comptes de service administré de groupe](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
+
+    Le tableau suivant indique les comptes d’utilisateurs AD qui peuvent être utilisés avec les versions de serveur suivantes :
+
+    |Type de compte|Windows Server 2008 R2 SP1|Windows Server 2012 ou version ultérieure|
+    |---|---|---|
+    |Compte d’utilisateur AD **standard**|Oui|Oui|
+    |Compte **gMSA**|Non|Oui|
 
     > [!NOTE]
-    > Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
+    >
+    > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
 - Si vous exécutez Wireshark sur le capteur autonome Azure ATP, redémarrez le service de capteur Azure Advanced Threat Protection après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
 
@@ -69,9 +83,10 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
 
-- Microsoft Edge
-- Internet Explorer 10 et versions ultérieures
-- Google Chrome 4.0 et versions ultérieures
+- Un navigateur qui prend en charge TLS 1.2, par exemple :
+  - Microsoft Edge
+  - Internet Explorer 11 et versions ultérieures
+  - Google Chrome 30.0 et versions ultérieures
 - Largeur d’écran d’une résolution minimale de 1 700 pixels
 - Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
