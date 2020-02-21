@@ -12,7 +12,7 @@
       href: atp-us-govt-gcc-high.md
     - name: Nouveautés d’Azure ATP
       href: atp-whats-new.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   expanded: true
   items:
     - name: Créer votre instance Azure ATP
@@ -57,7 +57,7 @@
       href: use-case-lateral-movement-path.md
     - name: Comprendre la résolution de noms réseau (NNR)
       href: atp-nnr-policy.md
-    - name: Les rapports
+    - name: Rapports
       href: reports.md
     - name: Rôles d'utilisateur
       href: atp-role-groups.md
@@ -77,16 +77,18 @@
               href: atp-isp-overview.md
             - name: Évaluation des entités exposant les informations d’identification en texte clair
               href: atp-cas-isp-clear-text.md
-            - name: Évaluation des entités dormantes dans des groupes sensibles
-              href: atp-cas-isp-dormant-entities.md
             - name: Évaluation de l’utilisation des protocoles hérités
               href: atp-cas-isp-legacy-protocols.md
-            - name: Évaluation des contrôleurs de domaine avec le service Spouleur d’impression disponible
-              href: atp-cas-isp-print-spooler.md
             - name: Évaluation de l’utilisation du chiffrement faible
               href: atp-cas-isp-weak-cipher.md
             - name: Évaluation de la délégation Kerberos non sécurisée
               href: atp-cas-isp-unconstrained-kerberos.md
+            - name: Évaluation des contrôleurs de domaine avec le service Spouleur d’impression disponible
+              href: atp-cas-isp-print-spooler.md
+            - name: Évaluation des entités dormantes dans des groupes sensibles
+              href: atp-cas-isp-dormant-entities.md
+            - name: Contrôleurs de domaine non supervisés
+              href: atp-cas-isp-unmonitored-domain-controller.md
     - name: Laboratoire des alertes de sécurité
       items:
         - name: Vue d’ensemble du laboratoire
@@ -131,7 +133,7 @@
       href: troubleshooting-atp-known-issues.md
     - name: Résoudre les problèmes à l’aide des journaux
       href: troubleshooting-atp-using-logs.md
-    - name: Intégrer avec Windows Defender ATP
+    - name: Intégrer à Windows Defender ATP
       href: integrate-wd-atp.md
     - name: Intégration VPN
       href: install-atp-step6-vpn.md
