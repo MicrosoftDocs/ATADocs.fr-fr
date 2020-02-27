@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 50bbf3fda8b0e91a94cd917b4bf4174ccd31e9ca
-ms.sourcegitcommit: 173b9fc26592efec2113c6ee585b04311ddfdbf1
+ms.openlocfilehash: 3787274ba5fc75ffebdf670f3fdb58b7497a4485
+ms.sourcegitcommit: 55adde8edff43f3df2402149335c16d43f45e1a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77421994"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567915"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -25,6 +25,13 @@ Cet article est fréquemment mis à jour pour vous informer des nouveautés des 
 Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’à la version 2.55 (comprise), voir la [Référence sur les versions d’Azure ATP](atp-release-reference.md).
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant-collant l’URL suivante dans votre lecteur de flux :   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2110"></a>Azure ATP version 2.110
+
+Publication : 23 février 2020
+
+- **Nouvelle évaluation de la sécurité : contrôleurs de domaine non supervisés**  
+Les évaluations de la sécurité Azure ATP incluent désormais un rapport sur les contrôleurs de domaine non supervisés et les serveurs sans capteur pour vous aider à gérer la couverture complète de votre environnement. Pour plus d’informations, consultez [Contrôleurs de domaine non supervisés](atp-cas-isp-unmonitored-domain-controller.md).
 
 ## <a name="azure-atp-release-2109"></a>Azure ATP version 2.109
 
@@ -536,7 +543,8 @@ Publiée le 13 janvier 2019
 - **Nouvelle alerte de sécurité : Exfiltration de données sur SMB - (préversion)**  
 L’alerte de sécurité Azure ATP [Exfiltration de données sur SMB](atp-exfiltration-alerts.md) est désormais disponible en préversion publique. Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le compte KRBTGT. Avec le compte KRBTGT, les attaquants peuvent créer un ticket TGT Kerberos qui fournit une autorisation d’accès à n’importe quelle ressource.
 
-- **Amélioration de fonctionnalité : Alerte de sécurité Tentative d’exécution de code à distance**    Une nouvelle description de l’alerte et des preuves supplémentaires ont été ajoutées pour faciliter la compréhension de l’alerte et fournir de meilleurs workflows d’investigation.
+- **Amélioration de fonctionnalité : alerte de sécurité Tentative d’exécution de code à distance**  
+Une nouvelle description de l’alerte et des preuves supplémentaires ont été ajoutées pour faciliter la compréhension de l’alerte et fournir de meilleurs workflows d’investigation.
 
 - **Amélioration de fonctionnalité : activités logiques de requêtes DNS**  
 Des types de requêtes supplémentaires ont été ajoutés aux [activités supervisées Azure ATP](monitored-activities.md), notamment : **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.

@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/06/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d84102528e3423ed149cdc64c010a7f190a40f68
-ms.sourcegitcommit: 20cf564885aa01985524c9c995ae5ba282606fac
+ms.openlocfilehash: 671920475245e99c788a733e2d445947649c7def
+ms.sourcegitcommit: d9abce00e781d47009e317767698d1729f70dc35
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77045130"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478558"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -39,8 +39,12 @@ Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l
 
 Si, lors de l’installation du capteur, vous recevez l’erreur suivante :  **The sensor failed to register due to licensing issues.**
 
-Deployment log entries: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
+**Entrées du journal de déploiement :**
 
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
+[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
 
 **Cause :**
 
@@ -54,13 +58,15 @@ Assurez-vous que le capteur peut naviguer vers *.atp.azure.com via le proxy conf
 
 Si, lors de l’installation sans assistance d’un capteur, vous tentez d’utiliser PowerShell, vous obtenez l’erreur suivante :
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
 
 **Cause :** L’omission du préfixe ./ requis pour l’installation lors de l’utilisation de PowerShell entraîne cette erreur.
 
 **Résolution :** Utilisez la commande complète pour installer correctement.
 
-    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```powershell
+./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```
 
 ## Problème d’association de cartes réseau du capteur Azure ATP <a name="nic-teaming"></a>
 
@@ -68,7 +74,7 @@ Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec u
 
 1. Téléchargez le programme d’installation Npcap version 0.9984 à partir de  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
     - Vous pouvez également demander la version OEM du pilote Npcap (qui prend en charge l’installation sans assistance) de l’équipe de support.
-    - Les copies de Npcap n’entrent pas en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement conjointement avec Azure ATP. Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Les copies de Npcap ne sont pas prises en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement conjointement avec Azure ATP. Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 Si vous n’avez pas encore installé le capteur :
 
@@ -86,9 +92,11 @@ Si vous avez déjà installé le capteur :
 1. Réinstallez le package du capteur.
 
 ## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur
+
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode Groupe multiprocesseur.
 
 Solutions de contournement possibles :
+
 - Si l’hyperthreading est activé, désactivez-le. Cela peut suffisamment réduire le nombre de cœurs logiques pour éviter d’avoir à exécuter en mode **Groupe multiprocesseur**.
 
 - Si votre ordinateur dispose de moins de 64 cœurs logiques et s’exécute sur un hôte HP, vous pourrez peut-être modifier le paramètre BIOS **Optimisation de la taille du groupe NUMA** de la valeur par défaut **En cluster** à la valeur **Plat**.
@@ -119,8 +127,29 @@ Si LSO est activé, utilisez la commande suivante pour le désactiver :
 
 ![Désactiver l’état LSO](./media/disable-lso-vmware.png)
 
+## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Le capteur n’a pas réussi à récupérer les informations d'identification du compte de service administré du groupe (gMSA)
+
+Si vous recevez l’alerte de surveillance suivante : **Les informations d'identification de l'utilisateur des services d'annuaire sont incorrectes**
+
+**Entrées du journal du capteur :**
+
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync a démarré [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
+2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync a terminé [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+
+**Entrées du journal de mise à jour du capteur :**
+
+2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync a échoué, le mot de passe GMSA n’a pas pu être récupéré [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
+
+**Cause :**
+
+le capteur n’a pas pu récupérer le compte gMSA désigné à partir du portail Azure ATP.
+
+**Résolution :**
+
+Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte.
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
