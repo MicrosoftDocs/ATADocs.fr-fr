@@ -4,17 +4,17 @@ description: La troisième étape de la procédure d’installation d’Azure AT
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 02/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 758fd23c1f6300305fad7e209909810977f81627
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: d698432aa8955fb46ed25940bacce39026a543e4
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907790"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590537"
 ---
 # <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Démarrage rapide : Télécharger le package d’installation de capteur Azure ATP
 
@@ -26,7 +26,7 @@ Dans ce guide de démarrage rapide, vous allez télécharger le package d’inst
 
 ## <a name="download-the-setup-package"></a>Télécharger le package d’installation
 
-Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de capteur Azure ATP. Le package d’installation de capteur Azure ATP peut être installé sur un serveur dédié ou sur un contrôleur de domaine. Quand vous l’installez directement sur un contrôleur de domaine, il est installé en tant que capteur Azure ATP. Si vous l’installez sur un serveur dédié et que vous utilisez la mise en miroir de port, il est installé en tant que capteur autonome Azure ATP. Pour plus d’informations sur le capteur Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md). 
+Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de capteur Azure ATP. Pour plus d’informations sur le capteur Azure ATP, consultez [Architecture Azure ATP](atp-architecture.md).
 
 Cliquez sur **Télécharger** dans la liste des étapes en haut de la page pour accéder à la page **Capteur**.
 

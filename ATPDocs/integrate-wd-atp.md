@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 10/18/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de847403a509617a2c8dc6d8036633ff355f3492
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 01899ea7c6cae155dc1cc9e559a2cc27cc74c9d8
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906545"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590622"
 ---
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Intégrer Azure ATP à Windows Defender ATP
 
@@ -25,9 +25,7 @@ Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows 
 
 En intégrant Windows Defender ATP et Azure ATP, vous pouvez tirer parti de toute la puissance des deux services et sécuriser votre environnement, notamment :
 
-- Capteurs et capteurs autonomes Azure ATP : ils peuvent être installés directement sur vos contrôleurs de domaine ou mettre en miroir les ports de vos contrôleurs de domaine sur ATP, pour capturer et analyser le trafic réseau de plusieurs protocoles (par exemple, Kerberos, DNS, RPC ou NTLM) à des fins d’authentification, d’autorisation et de collecte d’informations. 
-
--   Capteurs comportementaux de point de terminaison : intégrés à Windows 10, ils collectent et traitent les signaux comportementaux du système d’exploitation (par exemple, les processus, le Registre, les fichiers et les communications réseau) et envoient ces données de capteurs à votre instance cloud, isolée et privée de Windows Defender ATP.
+- Capteurs comportementaux de point de terminaison : intégrés à Windows 10, ils collectent et traitent les signaux comportementaux du système d’exploitation (par exemple, les processus, le Registre, les fichiers et les communications réseau) et envoient ces données de capteurs à votre instance cloud, isolée et privée de Windows Defender ATP.
 
 - Analyse de la sécurité cloud : grâce au Big Data, au Machine Learning et à la vision unique de Microsoft sur l’écosystème Windows (par exemple, [l’Outil de suppression de logiciels malveillants Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), les produits cloud d’entreprise (par exemple, Office 365) et les ressources en ligne (par exemple, Bing et la réputation d’URL SmartScreen), les signaux comportementaux sont convertis en insights, détections et réponses recommandées aux menaces avancées.
 
@@ -43,36 +41,37 @@ La technologie Azure ATP détecte des activités suspectes multiples en se focal
 
 Au même moment, Windows Defender ATP tire parti de la technologie et de l’expertise de Microsoft pour détecter les cyber-attaques sophistiquées, en fournissant :
 
-- Détection d’attaques avancées, basée sur le cloud et les comportements<br></br>Détecte des attaques ayant traversé toutes les autres défenses (détection après violation), fournit des alertes corrélées activables pour des adversaires connus et inconnus qui tentent de dissimuler leurs activités sur les points de terminaison.
+- Détection d’attaques avancées, basée sur le cloud et les comportements  
+Détecte des attaques ayant traversé toutes les autres défenses (détection après violation), fournit des alertes corrélées activables pour des adversaires connus et inconnus qui tentent de dissimuler leurs activités sur les points de terminaison.
 
-- Chronologie détaillée pour une enquête approfondie et l’atténuation des risques<br></br>Recherchez facilement des comportements suspects ou la portée d’une violation sur n’importe quel ordinateur dans une riche chronologie informatique. Inventaire des fichiers, URL et connexions réseau sur le réseau. Obtenez des informations supplémentaires grâce à la collection et à l’analyse approfondies (« détonation ») pour tous les fichiers et URL.
+- Chronologie détaillée pour une enquête approfondie et l’atténuation des risques  
+Recherchez facilement des comportements suspects ou la portée d’une violation sur n’importe quel ordinateur dans une riche chronologie informatique. Inventaire des fichiers, URL et connexions réseau sur le réseau. Obtenez des informations supplémentaires grâce à la collection et à l’analyse approfondies (« détonation ») pour tous les fichiers et URL.
 
-- Base de connaissances de renseignements sur les menaces, unique et intégrée<br></br>La perception inégalée des menaces fournit des détails sur les acteurs et le contexte intentionnel de chaque détection basée sur les renseignements sur les menaces – en associant les sources de renseignement internes et tierces.
+- Base de connaissances de renseignements sur les menaces, unique et intégrée  
+La perception inégalée des menaces fournit des détails sur les acteurs et le contexte intentionnel de chaque détection basée sur les renseignements sur les menaces – en associant les sources de renseignement internes et tierces.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour activer cette fonctionnalité, vous avez besoin d’une licence pour Azure ATP et Windows Defender ATP. 
-
+Pour activer cette fonctionnalité, vous avez besoin d’une licence pour Azure ATP et Windows Defender ATP.
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Comment intégrer Azure ATP et Windows Defender ATP
 
-1. Dans le portail Azure ATP, ouvrez **Configuration**. 
+1. Dans le portail Azure ATP, ouvrez **Configuration**.
 
     ![Menu Configuration Azure ATP](./media/atp-configuration-wd.png)
-2. Dans la liste des Configurations, sélectionnez **Windows Defender ATP** et définissez l’activation/la désactivation de l’intégration sur **Activé**. 
+2. Dans la liste des Configurations, sélectionnez **Windows Defender ATP** et définissez l’activation/la désactivation de l’intégration sur **Activé**.
 
     ![Activer l’intégration de Windows Defender](./media/enable-integration.png)
 
-
-3. Dans le [portail Windows Defender ATP](https://securitycenter.windows.com/preferences/advanced), accédez à **Paramètres** et à **Fonctionnalités avancées**, puis définissez **Intégration Azure ATP** sur **ON**. 
+3. Dans le [portail Windows Defender ATP](https://securitycenter.windows.com/preferences/advanced), accédez à **Paramètres** et à **Fonctionnalités avancées**, puis définissez **Intégration Azure ATP** sur **ON**.
 
     ![Activer l’intégration Windows Defender ATP](./media/wd-atp-enable.png)
 
-4. Pour vérifier l’état de l’intégration, dans le portail Azure ATP, accédez à **Paramètres** > **Intégration avec Windows Defender ATP**. Vous pouvez voir le statut de l’intégration ; en cas de problème, vous verrez une erreur. 
+4. Pour vérifier l’état de l’intégration, dans le portail Azure ATP, accédez à **Paramètres** > **Intégration avec Windows Defender ATP**. Vous pouvez voir le statut de l’intégration ; en cas de problème, vous verrez une erreur.
 
 ## <a name="how-it-works"></a>Fonctionnement
 
-Une fois Azure ATP et Windows Defender ATP complètement intégrés, dans le portail Azure ATP, dans la fenêtre contextuelle de mini-profil et dans la page de profil d’entité, chaque entité figurant dans Windows Defender ATP inclut un badge pour montrer qu’elle est intégrée à Windows Defender ATP. 
+Une fois Azure ATP et Windows Defender ATP complètement intégrés, dans le portail Azure ATP, dans la fenêtre contextuelle de mini-profil et dans la page de profil d’entité, chaque entité figurant dans Windows Defender ATP inclut un badge pour montrer qu’elle est intégrée à Windows Defender ATP.
 
  ![Alertes Windows Defender ATP](./media/profile-alerts-wd.png)
 
@@ -80,17 +79,16 @@ Si l’entité contient des alertes dans Windows Defender ATP, un nombre à côt
 
  ![Alertes Azure ATP](./media/atp-integrated-wd-icon-alerts.png)
 
-Si vous cliquez sur le badge, vous êtes dirigé vers le portail Windows Defender ATP où vous pouvez afficher et solutionner les alertes. Si l’entité n’est pas reconnue par Windows Defender ATP, le badge est grisé. 
+Si vous cliquez sur le badge, vous êtes dirigé vers le portail Windows Defender ATP où vous pouvez afficher et solutionner les alertes. Si l’entité n’est pas reconnue par Windows Defender ATP, le badge est grisé.
 
  ![Windows Defender ATP grisé](./media/wd-grey.png)
 
-Dans le portail Windows Defender ATP, cliquez sur un point de terminaison pour voir les alertes Azure ATP. Si vous cliquez sur les alertes pour cette entité dans Windows Defender ATP, la page de profil de l’entité s’ouvre dans Azure ATP. 
- 
+Dans le portail Windows Defender ATP, cliquez sur un point de terminaison pour voir les alertes Azure ATP. Si vous cliquez sur les alertes pour cette entité dans Windows Defender ATP, la page de profil de l’entité s’ouvre dans Azure ATP.
+
  > [!NOTE]
- > Actuellement, l’intégration d’Azure ATP à Windows Defender ATP prend en charge seulement les utilisateurs et les machines qui font partie de l’annuaire AD local. Les utilisateurs d’Azure AD et les machines virtuelles gérées dans Azure ne sont pas pris en compte dans le cadre de l’intégration 
+ > Actuellement, l’intégration d’Azure ATP à Windows Defender ATP prend en charge seulement les utilisateurs et les machines qui font partie de l’annuaire AD local. Les utilisateurs d’Azure AD et les machines virtuelles gérées dans Azure ne sont pas pris en compte dans le cadre de l’intégration
 
 ![Alertes Windows Defender ATP](./media/wd-atp-alerts.png)
-
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -99,4 +97,3 @@ Dans le portail Windows Defender ATP, cliquez sur un point de terminaison pour v
 - [Architecture Azure ATP](atp-architecture.md)
 - [Installer ATP](install-atp-step1.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
-
