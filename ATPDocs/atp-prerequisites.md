@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb6484eeaa9bd5ed4e04f90a5a8dc1ed4327b8b5
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: 176f71af622a9a19f38888273def7362d4c4364b
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259441"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590605"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -26,7 +26,7 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 >[!NOTE]
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité Azure ATP](atp-capacity-planning.md).
 
-Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP, du capteur Azure ATP et/ou du capteur autonome Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
+Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP et du capteur Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
 
 Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview).
 
@@ -40,7 +40,10 @@ Ce guide des prérequis comprend les sections suivantes qui vous permettent de v
 
 [Capteur Azure ATP](#azure-atp-sensor-requirements) : Liste le matériel du capteur Azure ATP, ainsi que la configuration logicielle requise.
 
-[Capteur autonome Azure ATP](#azure-atp-standalone-sensor-requirements) : Liste le matériel du capteur autonome Azure ATP, la configuration logicielle requise ainsi que les paramètres que vous devez configurer sur vos serveurs de capteurs autonomes Azure ATP.
+[Capteur autonome Azure ATP](#azure-atp-standalone-sensor-requirements) : Le capteur autonome Azure ATP est installé sur un serveur dédié et nécessite la configuration de mise en miroir des ports sur le contrôleur de domaine pour recevoir le trafic réseau.
+
+> [!NOTE]
+> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 ## <a name="before-you-start"></a>Avant de commencer
 
@@ -77,7 +80,10 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
-- Facultatif : lorsque vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 et 8004 à Azure ATP pour continuer à améliorer les détections basées sur l’authentification Azure ATP, les ajouts à des groupes sensibles et les détections de création de services suspects.  Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+- Facultatif : lorsque vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 et 8004 à Azure ATP pour continuer à améliorer les détections basées sur l’authentification Azure ATP, les ajouts à des groupes sensibles et les détections de création de services suspects.  Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine.
+
+> [!NOTE]
+> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 
@@ -180,6 +186,9 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows sp�
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Configuration requise pour le capteur autonome Azure ATP
 
 Cette section décrit la configuration requise pour le capteur autonome Azure ATP.
+
+> [!NOTE]
+> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 ### <a name="general"></a>Général
 

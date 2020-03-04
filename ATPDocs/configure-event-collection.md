@@ -5,32 +5,35 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/26/2020
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 535d4c15a9f7d03bea45eea7b8140e7f8f9149c2
-ms.sourcegitcommit: f1a11982e2ee806d2a29420901f9ddac64d7dd51
+ms.openlocfilehash: baa8f733496b9883e010af2eca0672920f94f48f
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76762977"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590673"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
 Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 et 8004. Ces événements peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant les transferts d’événements Windows](configure-event-forwarding.md).
 
 > [!NOTE]
-> Il est important d’exécuter le script d’audit d’Azure ATP avant de configurer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires. 
+>
+> - Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> - Il est important d’exécuter le script d’audit d’Azure ATP avant de configurer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires.
 
 Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, Azure ATP peut utiliser des événements Windows pour améliorer les détections. Azure ATP utilise les événements Windows 4776 et 8004 pour NTLM, ce qui améliore plusieurs détections, et les événements 4732, 4733, 4728, 4729, 4756, 4757, 7045 et 8004 pour améliorer la détection des modifications de groupes sensibles et la création de services. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 ## <a name="ntlm-authentication-using-windows-event-8004"></a>Authentification NTLM avec l’événement Windows 8004
 
 Pour configurer la collecte d’événements Windows 8004 :
+
 1. Accédez à : Configuration de l’ordinateur\Stratégies\ Paramètres Windows\Paramètres de sécurité\Stratégies locales\Options de sécurité
 2. Définissez la **stratégie de groupe de domaine** comme suit :
    - Sécurité réseau : Restreindre NTLM : Trafic NTLM sortant vers serveurs distants = **Auditer tout**
@@ -40,88 +43,91 @@ Pour configurer la collecte d’événements Windows 8004 :
 Lorsque l’événement Windows 8004 est analysé par le capteur Azure ATP,  les activités d’authentification NTLM Azure ATP sont enrichies avec les données ayant fait l’objet d’un accès par le serveur.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
-Les capteurs autonomes Azure ATP sont configurés par défaut pour recevoir les données syslog. Pour que les capteurs autonomes Azure ATP puissent consommer les données dont vous avez besoin pour transférer vos données syslog au capteur. 
+
+Les capteurs autonomes Azure ATP sont configurés par défaut pour recevoir les données syslog. Pour que les capteurs autonomes Azure ATP puissent consommer les données dont vous avez besoin pour transférer vos données syslog au capteur.
 
   > [!NOTE]
-  > Azure ATP écoute uniquement sur IPv4 et non sur IPv6. 
+  > Azure ATP écoute uniquement sur IPv4 et non sur IPv6.
 
 > [!IMPORTANT]
-> -   Ne transférez pas toutes les données Syslog au capteur Azure ATP.
-> -   Azure ATP prend en charge le trafic UDP provenant du serveur SIEM/Syslog.
+> - Ne transférez pas toutes les données Syslog au capteur Azure ATP.
+> - Azure ATP prend en charge le trafic UDP provenant du serveur SIEM/Syslog.
 
-Pour plus d’informations sur la façon de configurer le transfert d’événements spécifiques vers un autre serveur, consultez la documentation produit de votre serveur SIEM/Syslog. 
+Pour plus d’informations sur la façon de configurer le transfert d’événements spécifiques vers un autre serveur, consultez la documentation produit de votre serveur SIEM/Syslog.
 
 > [!NOTE]
 >Si vous n’utilisez pas un serveur SIEM/Syslog, vous pouvez configurer vos contrôleurs de domaine Windows de façon à transférer tous les événements nécessaires pour qu’ils soient collectés et analysés par Azure ATP.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Configuration du capteur Azure ATP pour écouter les événements SIEM
 
-
 - Configurez votre serveur SIEM ou Syslog pour transférer tous les événements requis à l’adresse IP de l’un des capteurs autonomes Azure ATP. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
 
-Azure ATP prend en charge les événements SIEM aux formats suivants :  
+Azure ATP prend en charge les événements SIEM aux formats suivants :
 
 ### <a name="rsa-security-analytics"></a>RSA Security Analytics
+
 &lt;En-tête Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
--   L’en-tête syslog est facultatif.
+- L’en-tête syslog est facultatif.
 
--   Le séparateur de caractère « \n » est obligatoire entre tous les champs.
+- Le séparateur de caractère « \n » est obligatoire entre tous les champs.
 
--   Les champs, dans l’ordre, sont les suivants :
+- Les champs, dans l’ordre, sont les suivants :
 
-    1.  Constante RsaSA (doit être indiquée).
+    1. Constante RsaSA (doit être indiquée).
 
-    2.  Horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
+    1. Horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
 
-    3.  ID de l’événement Windows
+    1. ID de l’événement Windows
 
-    4.  Nom du fournisseur d’événements Windows
+    1. Nom du fournisseur d’événements Windows
 
-    5.  Nom du journal des événements Windows
+    1. Nom du journal des événements Windows
 
-    6.  Nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
+    1. Nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
 
-    7.  Nom de l’utilisateur qui s’authentifie.
+    1. Nom de l’utilisateur qui s’authentifie.
 
-    8.  Nom de l’hôte source.
+    1. Nom de l’hôte source.
 
-    9. Code de résultat de NTLM.
+    1. Code de résultat de NTLM.
 
--   L’ordre est important, et rien d’autre ne doit figurer dans le message.
+- L’ordre est important, et rien d’autre ne doit figurer dans le message.
 
 ### <a name="hp-arcsight"></a>HP Arcsight
+
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le contrôleur de domaine a tenté de valider les informations d’identification d’un compte.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
--   Doit être conforme à la définition du protocole.
+- Doit être conforme à la définition du protocole.
 
--   Aucun en-tête syslog.
+- Aucun en-tête syslog.
 
--   La partie en-tête, séparée par une barre verticale, doit exister (comme indiqué dans le protocole).
+- La partie en-tête, séparée par une barre verticale, doit exister (comme indiqué dans le protocole).
 
--   Les clés suivantes dans la partie _Extension_ doivent être présentes dans l’événement :
+- Les clés suivantes dans la partie _Extension_ doivent être présentes dans l’événement :
 
-    -   externalId = ID de l’événement Windows.
+    - externalId = ID de l’événement Windows.
 
-    -   rt = horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
+    - rt = horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
 
-    -   cat = nom du journal des événements Windows.
+    - cat = nom du journal des événements Windows.
 
-    -   shost = nom de l’hôte source.
+    - shost = nom de l’hôte source.
 
-    -   dhost = nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
+    - dhost = nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
 
-    -   duser = utilisateur qui s’authentifie.
+    - duser = utilisateur qui s’authentifie.
 
--   L’ordre de la partie _Extension_ n’est pas important.
+- L’ordre de la partie _Extension_ n’est pas important.
 
--   Vous devez avoir une clé personnalisée et un libellé dé clé pour les deux champs suivants :
+- Vous devez avoir une clé personnalisée et un libellé dé clé pour les deux champs suivants :
 
-    -   « EventSource »
+    - « EventSource »
 
-    -   « Reason or Error Code » = code de résultat de NTLM
+    - « Reason or Error Code » = code de résultat de NTLM
 
 ### <a name="splunk"></a>Splunk
+
 &lt;En-tête Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 L’ordinateur a tenté de valider les informations d’identification d’un compte.
@@ -134,31 +140,32 @@ Station de travail source :       SIEM
 
 Code d’erreur :         0x0
 
--   L’en-tête syslog est facultatif.
+- L’en-tête syslog est facultatif.
 
--   Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires.
+- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires.
 
--   Les champs sont au format clé = valeur.
+- Les champs sont au format clé = valeur.
 
--   Les clés suivantes doivent exister et avoir une valeur :
+- Les clés suivantes doivent exister et avoir une valeur :
 
-    -   EventCode = ID de l’événement Windows.
+    - EventCode = ID de l’événement Windows.
 
-    -   Logfile = nom du journal des événements Windows.
+    - Logfile = nom du journal des événements Windows.
 
-    -   SourceName = nom du fournisseur d’événements Windows.
+    - SourceName = nom du fournisseur d’événements Windows.
 
-    -   TimeGenerated = horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
+    - TimeGenerated = horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodatage de l’arrivée au serveur SIEM ou de l’envoi à ATP). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
 
-    -   ComputerName = nom de l’hôte source.
+    - ComputerName = nom de l’hôte source.
 
-    -   Message = texte de l’événement Windows d’origine.
+    - Message = texte de l’événement Windows d’origine.
 
--   La clé et la valeur du message DOIVENT figurer en dernier.
+- La clé et la valeur du message DOIVENT figurer en dernier.
 
--   L’ordre n’est pas important pour les paires clé=valeur.
+- L’ordre n’est pas important pour les paires clé=valeur.
 
 ### <a name="qradar"></a>QRadar
+
 QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. Azure ATP nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements Windows sans agent. Pour plus d’informations, consultez [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -177,13 +184,11 @@ Message représente le texte de l’événement Windows d’origine.
 
 Assurez-vous que \t sépare les paires clé/valeur.
 
->[!NOTE] 
+>[!NOTE]
 > Utiliser WinCollect pour la collecte des événements Windows n’est pas pris en charge.
 
-
-
-
 ## <a name="see-also"></a>Voir aussi
+
 - [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
 - [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)

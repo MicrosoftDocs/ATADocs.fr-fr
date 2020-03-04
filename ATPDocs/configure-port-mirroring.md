@@ -5,24 +5,27 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 10/4/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 17df701b408e49556b4517c01c6308b3ba1304e8
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: d6c5cf1619a88e55db2968977d4fd3ee0aebc8e3
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906825"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590656"
 ---
 # <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
-> [!NOTE] 
-> Cet article s’applique seulement si vous déployez des capteurs autonomes Azure ATP à la place de capteurs Azure ATP. Pour déterminer si vous devez utiliser des capteurs autonomes Azure ATP, consultez [Choix des capteurs appropriés pour votre déploiement](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
- 
+
+Cet article s’applique seulement si vous déployez des capteurs autonomes Azure ATP à la place de capteurs Azure ATP.
+
+> [!NOTE]
+> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+
 La principale source de données utilisée par Azure ATP est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’Azure ATP puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports ou utiliser un TAP réseau.
 
 Pour la **mise en miroir des ports**, configurez-la pour chaque contrôleur de domaine à surveiller en tant que **source** du trafic réseau. En règle générale, vous devez collaborer avec l’équipe de virtualisation ou de mise en réseau pour configurer la mise en miroir des ports.
@@ -62,11 +65,12 @@ Vos contrôleurs de domaine et votre capteur autonome Azure ATP peuvent être ph
 
   > [!NOTE]
   > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
- 
+
 - Pour faire en sorte que le capteur autonome Azure ATP soit correctement dimensionné pour gérer par lui-même le monitoring de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et un capteur autonome Azure ATP sur chaque hôte. Configurez chaque capteur autonome Azure ATP de façon à surveiller tous les contrôleurs de domaine qui s’exécutent dans le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
 
 Après avoir configuré la mise en miroir des ports, validez son fonctionnement avant d’installer le capteur autonome Azure ATP.
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

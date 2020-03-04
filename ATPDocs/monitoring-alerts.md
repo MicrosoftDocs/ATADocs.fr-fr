@@ -5,21 +5,21 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/13/2020
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: 48dad2ec51850e67a69c5dec4dfb14abec5c8237
+ms.sourcegitcommit: 4381148c0487b473e23fe9b425b133c42acde881
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259380"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78208079"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Compréhension des alertes d’intégrité du capteur et du capteur autonome Azure ATP
+# <a name="understanding-azure-atp-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Azure ATP
 
 Le centre d’intégrité Azure ATP vous informe de l’existence d’un problème dans votre instance Azure ATP en déclenchant une alerte d’intégrité. Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
 
@@ -40,6 +40,12 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
 |Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard** : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-atp-step2.md#prerequisites).|Moyenne|
+
+## <a name="low-success-rate-of-active-name-resolution"></a>Taux de réussite faible dans la résolution de noms active
+
+|Alerte|Description|Résolution|Gravité|
+|----|----|----|----|
+|Les capteurs Azure ATP répertoriés ne parviennent pas à résoudre les adresses IP en noms d’appareils dans plus de 90 % des cas en utilisant les méthodes suivantes :<br />- NTLM sur RPC<br />- NetBIOS<br />- DNS inversé|Cela a un impact sur les capacités de détection d’Azure ATP et pourrait augmenter le nombre de fausses alertes positives.|- Pour NTLM sur RPC : Vérifiez que le port 135 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />- Pour DNS inversé : Vérifiez que le capteur peut atteindre le serveur DNS et que les zones de recherche inversée sont activées.<br />- Pour NetBIOS : Vérifiez que le port 137 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />En outre, assurez-vous que la configuration du réseau (par exemple, les pare-feu) n'empêche pas la communication vers les ports concernés.|Faible|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Aucun trafic reçu du contrôleur de domaine
 
@@ -102,11 +108,10 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’est pas analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](atp-capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
 
 ## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Événements Windows absents de la stratégie d’audit du contrôleur de domaine
+
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
 | Événements Windows absents de la stratégie d’audit du contrôleur de domaine|Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Une configuration incorrecte exclurait certains événements critiques de vos journaux, entraînant une couverture Azure ATP incomplète.|Examinez votre [stratégie d’audit avancée](atp-advanced-audit-policy.md) et modifiez-la si nécessaire. | Moyenne|
-
-
 
 ## <a name="see-also"></a>Voir aussi
 
