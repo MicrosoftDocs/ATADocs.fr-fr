@@ -13,11 +13,11 @@ ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39fbd3f42cfccd60a007b8640421a8af1c178243
-ms.sourcegitcommit: 8bb80eaef3c2a1085834b98839564c5d37334f56
+ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76515678"
+ms.lasthandoff: 03/08/2020
+ms.locfileid: "78926530"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertes de sécurité Azure ATP
 
@@ -40,7 +40,7 @@ Pour en savoir plus sur la structure et les composants courants de toutes les al
 
 Le tableau suivant répertorie le mappage entre les noms d’alerte, leurs ID externes uniques correspondants et leurs ID d’alerte Microsoft Cloud App Security. En cas d’utilisation avec des scripts ou avec l’automation, Microsoft recommande d’utiliser les ID externes des alertes au lieu de leur nom, car seuls les ID externes des alertes de sécurité sont permanents et non susceptibles d’être modifiés.
 
-# <a name="external-idstabexternal"></a>[ID externes](#tab/external)
+# <a name="external-ids"></a>[ID externes](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Nouveau nom de l’alerte de sécurité|ID externe unique|Gravité|MITRE ATT&CK Matrix™|
@@ -80,7 +80,7 @@ Le tableau suivant répertorie le mappage entre les noms d’alerte, leurs ID ex
 > |[Reconnaissance des utilisateurs et des membres d’un groupe (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Moyenne|Découverte|
 > |[Reconnaissance des utilisateurs et des adresses IP (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Moyenne|Découverte|
 
-# <a name="cloud-app-security-idstabcloud-app-security"></a>[ID Cloud App Security](#tab/cloud-app-security)
+# <a name="cloud-app-security-ids"></a>[ID Cloud App Security](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Nouveau nom de l’alerte de sécurité|ID d’alerte Cloud App Security|
