@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/22/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e27505cfb801ebda0376d716d4156364b1af1a74
-ms.sourcegitcommit: 8bb80eaef3c2a1085834b98839564c5d37334f56
+ms.openlocfilehash: b53e7f63949896908834a55985988c9a7dffaca5
+ms.sourcegitcommit: 594cba9674559beebd82e0c0eb08792000f97e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76515695"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78332062"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
 
@@ -51,7 +51,7 @@ Le champ cs2 identifie s’il s’agit d’une alerte nouvelle ou mise à jour.
 
 ## <a name="sample-logs"></a>Exemples de journaux
 
-Les exemples de journaux sont conformes à la RFC 5242, mais Azure ATP prend également en charge la RFC 3164.
+Les exemples de journaux sont conformes à la RFC 5424, mais Azure ATP prend également en charge la RFC 3164.
 
 Priorités :
 
