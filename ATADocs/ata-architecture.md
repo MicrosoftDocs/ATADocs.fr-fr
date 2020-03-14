@@ -13,13 +13,13 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 179cf31a6f9c8c62670ea96d671f209712325f56
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905204"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319202"
 ---
-# <a name="ata-architecture"></a>Architecture d’ATA
+# <a name="ata-architecture"></a>Architecture ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -84,7 +84,7 @@ Le centre ATA reçoit le trafic analysé de la passerelle ATA et de la passerell
 |Processeur d’activité réseau|Traite toutes les activités réseau au sein de chaque lot reçu. par exemple, en mettant en correspondance les différentes étapes Kerberos effectuées depuis des ordinateurs potentiellement différents.|
 |Profileur d’entité|Associe un profil à toutes les entités uniques en fonction du trafic et des événements. Par exemple, ATA met à jour la liste des ordinateurs avec une session ouverte pour chaque profil utilisateur.|
 |Base de données du centre|Gère le processus d’écriture des activités réseau et des événements dans la base de données. |
-|Database|ATA utilise MongoDB pour stocker l’ensemble des données du système :<br /><br />- Activités réseau<br />- Activités d’événements<br />- Entités uniques<br />- Activités suspectes<br />- Configuration ATA|
+|Base de données|ATA utilise MongoDB pour stocker l’ensemble des données du système :<br /><br />- Activités réseau<br />- Activités d’événements<br />- Entités uniques<br />- Activités suspectes<br />- Configuration ATA|
 |Détecteurs|Les détecteurs utilisent des algorithmes d’apprentissage automatique et des règles déterministes pour rechercher les activités suspectes et les comportements anormaux des utilisateurs sur votre réseau.|
 |Console ATA|La console ATA permet de configurer ATA et de surveiller les activités suspectes détectées par ATA sur votre réseau. La console ATA ne dépend pas du service du centre ATA et s’exécute même quand celui-ci est arrêté, à condition qu’elle puisse communiquer avec la base de données.|
 
@@ -146,7 +146,7 @@ Le tableau suivant présente un exemple de contrôleur de domaine qui dispose de
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|Passerelle légère ATA (Microsoft.Tri.Gateway.exe)|Divers (autres processus) |Quota de passerelle légère ATA|Trafic ignoré par la passerelle|
-|30 %|20 %|10 %|45 %|Non|
+|30 %|20%|10 %|45 %|Non|
 
 Si Active Directory a besoin de davantage de puissance de calcul, le quota requis par la passerelle légère ATA est réduit. Dans l’exemple suivant, la passerelle légère ATA a besoin de davantage que le quota alloué et ignore une partie du trafic (analyse partielle du trafic) :
 
@@ -174,12 +174,12 @@ Pour améliorer la détection ATA de l’attaque Pass-the-Hash, de l’attaque p
 
 -   Configuration du transfert d’événements Windows<br>ATA peut aussi obtenir vos événements en configurant vos contrôleurs de domaine pour qu’ils transfèrent les événements Windows 4776, 4732, 4733, 4728, 4729, 4756 et 4757 à votre passerelle ATA. Cette méthode est particulièrement utile si vous n’avez pas de serveur SIEM ou si votre serveur SIEM n’est pas actuellement pris en charge par ATA. Pour effectuer la configuration du transfert d’événements Windows dans ATA, voir [Configurer le transfert d’événements Windows](configure-event-collection.md). Cela s’applique uniquement aux passerelles ATA physiques et non à la passerelle légère ATA.
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)

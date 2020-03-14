@@ -13,11 +13,11 @@ ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: bc0dafbb95fb8ea2328d2b005802aff003b9ec97
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908152"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319172"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
@@ -460,7 +460,7 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 **Examen**
 
-1. Cliquez sur **Télécharger les détails** pour consulter toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
+1. Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
    - Liste des comptes attaqués
    - Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
    - Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
@@ -552,8 +552,8 @@ Appliquez les derniers correctifs à tous vos ordinateurs et vérifiez que toute
 >[!NOTE]
 > Pour désactiver une alerte d’activité suspecte, contactez le support.
 
-## <a name="related-videos"></a>Vidéos connexes
-- [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vidéos associées
+- [Rejoindre la communauté de sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Voir aussi

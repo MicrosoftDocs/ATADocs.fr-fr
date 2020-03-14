@@ -12,11 +12,11 @@ ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 0ec953c4311c12a44686cbbf4f4394492f74dd7f
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905488"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319152"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
@@ -58,7 +58,7 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 |Paquets par seconde pour tous les contrôleurs de domaine|Processeur (cores&#42;)|Mémoire (Go)|Stockage de la base de données par jour (Go)|Stockage de la base de données par mois (Go)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1 000|2|32|0.3|9|30 (100)
-|40 000|4|48|12|360|500 (750)
+|40,000|4|48|12|360|500 (750)
 |200 000|8|64|60|1 800|1 000 (1 500)
 |400 000|12|96|120|3,600|2 000 (2 500)
 |750,000|24|112|225|6,750|2,500 (3,000)
@@ -91,7 +91,7 @@ Quand vous choisissez le type de déploiement de passerelle, prenez en compte le
 |Type de passerelle|Avantages|Coût|Topologie de déploiement|Utilisation des contrôleurs de domaine|
 |----|----|----|----|-----|
 |Passerelle ATA|Avec un déploiement hors bande, il est plus difficile pour les agresseurs de détecter qu’ATA est présent|Plus élevé|Installée en même temps que le contrôleur de domaine (hors bande)|Prend en charge jusqu’à 50 000 paquets par seconde|
-|Passerelle légère ATA|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Plus faible|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 10 000 paquets par seconde|
+|Passerelle légère ATA|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Lower|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 10 000 paquets par seconde|
 
 Voici quelques exemples de scénarios dans lesquels les contrôleurs de domaine doivent être couverts par la passerelle légère ATA :
 
@@ -116,7 +116,7 @@ Une passerelle légère ATA peut prendre en charge la surveillance d’un contr�
 |---------------------------|-------------------------|---------------|
 |1 000|2|6|
 |5 000|6|16|
-    |10 000|10|24|
+    |10 000|10|24|
 
 &#42;Nombre total de paquets par seconde sur le contrôleur de domaine surveillé par une passerelle légère ATA donnée.
 
@@ -151,7 +151,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 |---------------------------|-------------------------|---------------|
 |1 000|1|6|
 |5 000|2|10|
-|10 000|3|12|
+|10 000|3|12|
 |20,000|6|24|
 |50 000|16|48|
 
@@ -168,12 +168,12 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Architecture d’ATA](ata-architecture.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
