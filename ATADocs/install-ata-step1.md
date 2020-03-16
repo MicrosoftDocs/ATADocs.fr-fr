@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 1 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 1
 description: La première étape de la procédure d’installation d’ATA consiste à télécharger le centre ATA et à l’installer sur le serveur de votre choix.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 61f210562cb1af4ed6a28d1f0ee0bf61f49bedc4
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 8a6841b3999938300217ae4d859e94853aed7bca
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907883"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413874"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -116,7 +116,7 @@ Si vous avez installé ATA dans un autre répertoire, modifiez les chemins d’a
 > [« Préinstallation](configure-port-mirroring.md)
 > [Étape 2 »](install-ata-step2.md)
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
@@ -126,5 +126,5 @@ Si vous avez installé ATA dans un autre répertoire, modifiez les chemins d’a
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 

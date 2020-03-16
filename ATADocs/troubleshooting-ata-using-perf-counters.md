@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes d’Advanced Threat Analytics avec les compteurs de performances | Microsoft Docs
+title: Résolution des problèmes liés à Advanced Threat Analytics avec des compteurs de performances
 description: Explique comment utiliser les compteurs de performances pour résoudre les problèmes liés à ATA
 keywords: ''
 author: shsagir
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 495813678b18b71af45240e18c40fdab5a5154a3
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 14ec1e07a3a9240cd28d1cfce39ed3922c71f752
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908217"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411783"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Résolution des problèmes liés à ATA à l’aide des compteurs de performances
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 Les compteurs de performances ATA vous permettent de savoir si les composants ATA s’exécutent correctement. Les composants ATA traitant les données de manière séquentielle, la présence d’un problème peut entraîner le rejet partiel du trafic quelque part le long de la chaîne de composants. Pour résoudre le problème, vous devez déterminer le composant impliqué et résoudre le problème au début de la chaîne. Utilisez les données fournies par les compteurs de performance pour comprendre comment fonctionne chaque composant.
-Pour comprendre le flux des composants ATA internes, voir [Architecture ATA](ata-architecture.md).
+Pour comprendre le flux des composants ATA internes, consultez [Architecture ATA](ata-architecture.md).
 
 **Processus des composants ATA** :
 
@@ -56,7 +56,7 @@ Voici la liste des principaux compteurs de passerelle ATA :
 
 > [!div class="mx-tableFixed"]
 > 
-> |Compteur|Description|Seuil|Résolution des problèmes|
+> |Compteur|Description|cible|Résolution des problèmes|
 > |-----------|---------------|-------------|-------------------|
 > |Passerelle Microsoft ATA\Messages analysés PEF NetworkListener\s|Quantité de trafic traitée par la passerelle ATA chaque seconde.|Aucun seuil|Aide à comprendre la quantité de trafic qui est analysée par la passerelle ATA.|
 > |Événements supprimés PEF NetworkListener\s|Quantité de trafic supprimée par la passerelle ATA chaque seconde.|Ce nombre doit toujours être égal à zéro (de rares suppressions en rafales sont acceptables).|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à **Processus des composants ATA** ci-dessus.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
@@ -78,7 +78,7 @@ Pour cela, ouvrez l’**Analyseur de performances** et ajoutez tous les compteur
 
 > [!div class="mx-tableFixed"]
 > 
-> |Compteur|Description|Seuil|Résolution des problèmes|
+> |Compteur|Description|cible|Résolution des problèmes|
 > |-----------|---------------|-------------|-------------------|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|Quantité maximale de temps processeur (en pourcentage) que le processus de passerelle légère peut consommer. |Aucun seuil. | Il s’agit de la limitation qui empêche que toutes les ressources du contrôleur de domaine soient utilisées par la passerelle légère ATA. Si vous voyez que le processus atteint souvent la limite maximale sur une période donnée (le processus atteint la limite, puis commence à ignorer le trafic), cela signifie que vous devez ajouter des ressources au serveur qui exécute le contrôleur de domaine.|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|Quantité maximale de mémoire allouée (en octets) que le processus de passerelle légère peut consommer.|Aucun seuil. | Il s’agit de la limitation qui empêche que toutes les ressources du contrôleur de domaine soient utilisées par la passerelle légère ATA. Si vous voyez que le processus atteint souvent la limite maximale sur une période donnée (le processus atteint la limite, puis commence à ignorer le trafic), cela signifie que vous devez ajouter des ressources au serveur qui exécute le contrôleur de domaine.| 
@@ -91,7 +91,7 @@ Pour connaître la consommation réelle, consultez les compteurs suivants :
 
 > [!div class="mx-tableFixed"]
 > 
-> |Compteur|Description|Seuil|Résolution des problèmes|
+> |Compteur|Description|cible|Résolution des problèmes|
 > |-----------|---------------|-------------|-------------------|
 > |Process(Microsoft.Tri.Gateway)\%Processor Time|Temps processeur (en pourcentage) réellement consommé par le processus de passerelle légère. |Aucun seuil. | Comparez les résultats de ce compteur à la limite indiquée dans GatewayUpdaterResourceManager CPU Time Max %. Si vous voyez que le processus atteint souvent la limite maximale sur une période donnée (le processus atteint la limite, puis commence à ignorer le trafic), cela signifie que vous devez allouer davantage de ressources à la passerelle légère.|
 > |Process(Microsoft.Tri.Gateway)\Private Bytes|Quantité de mémoire allouée (en octets) réellement consommée par le processus de passerelle légère.|Aucun seuil. | Comparez les résultats de ce compteur à la limite indiquée dans GatewayUpdaterResourceManager Commit Memory Max Size. Si vous voyez que le processus atteint souvent la limite maximale sur une période donnée (le processus atteint la limite, puis commence à ignorer le trafic), cela signifie que vous devez allouer davantage de ressources à la passerelle légère.| 
@@ -106,7 +106,7 @@ Voici la liste des principaux compteurs du centre ATA :
 
 > [!div class="mx-tableFixed"]
 > 
-> |Compteur|Description|Seuil|Résolution des problèmes|
+> |Compteur|Description|cible|Résolution des problèmes|
 > |-----------|---------------|-------------|-------------------|
 > |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|Nombre de lots d’entités mis en file d’attente par le centre ATA.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 10 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener.  Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
 > |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|Nombre d’activités réseau en attente de traitement.|Doit être inférieur à la valeur maximale de -1 (valeur maximale par défaut : 50 000)|Vérifiez si un composant a atteint sa taille maximale et bloque les composants qui le précèdent jusqu’à NetworkListener. Reportez-vous à la section **Processus des composants ATA** précédente.<br /><br />Vérifiez qu’il n’existe aucun problème avec le processeur ou la mémoire.|
@@ -123,7 +123,7 @@ Voici le tableau des principaux compteurs de système d’exploitation à prend
 
 > [!div class="mx-tableFixed"]
 > 
-> |Compteur|Description|Seuil|Résolution des problèmes|
+> |Compteur|Description|cible|Résolution des problèmes|
 > |-----------|---------------|-------------|-------------------|
 > |Processeur(_Total)\% de temps processeur|Durée (en pourcentage) que le processeur met pour exécuter des threads actifs.|Inférieur à 80 % en moyenne|Vérifiez si l’un des processus prend beaucoup plus de temps processeur qu’il ne devrait.<br /><br />Ajoutez des processeurs.<br /><br />Réduisez la quantité de trafic sur chaque serveur.<br /><br />Le compteur « Processeur(_Total)\% de temps processeur » peut être moins précis sur les serveurs virtuels. Dans ce cas, le moyen le plus précis de mesurer le manque de puissance du processeur est d’utiliser le compteur « System\Longueur de la file du processeur ».|
 > |Système\Commutateurs de contexte\s|Taux combiné auquel tous les processeurs commutent d’un thread à l’autre.|Inférieur à 5 000 cœurs&#42; (cœurs physiques)|Vérifiez si l’un des processus prend beaucoup plus de temps processeur qu’il ne devrait.<br /><br />Ajoutez des processeurs.<br /><br />Réduisez la quantité de trafic sur chaque serveur.<br /><br />Le compteur « Processeur(_Total)\% de temps processeur » peut être moins précis sur les serveurs virtuels. Dans ce cas, le moyen le plus précis de mesurer le manque de puissance du processeur est d’utiliser le compteur « System\Longueur de la file du processeur ».|
@@ -137,7 +137,7 @@ Voici le tableau des principaux compteurs de système d’exploitation à prend
 > |\LogicalDisk(&#42;)\Octets d’écriture disque\s|Nombre d’octets écrits par seconde sur le disque.|Aucun seuil|Les compteurs d’utilisation du disque peuvent apporter des informations utiles à la résolution des problèmes de latence de stockage.|
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

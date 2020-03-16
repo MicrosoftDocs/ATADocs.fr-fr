@@ -1,5 +1,5 @@
 ---
-title: Gérer les journaux générés par le système Advanced Threat Analytics | Microsoft Docs
+title: Gérer les journaux générés par le système Advanced Threat Analytics
 description: Décrit les données collectées par ATA et explique comment désactiver la collecte de données.
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea4dcdeaedf4ba0a8b907acdc727a428a72aaa02
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: eef3aa45b9563a4fea09e5cebc0f4ece7c39d734
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907997"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413959"
 ---
 # <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système
 
@@ -63,7 +63,7 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 
     -   ID d’activité suspecte
 
-    -   Status
+    -   Statut
 
     -   Heures de début et de fin
 
@@ -77,7 +77,7 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 
     -   ID du problème d’intégrité
 
-    -   Status
+    -   Statut
 
     -   Heures de début et de fin
 

@@ -1,5 +1,5 @@
 ---
-title: Groupes de rôles Advanced Threat Analytics pour la gestion des accès | Microsoft Docs
+title: Groupes de rôles Advanced Threat Analytics pour la gestion des accès
 description: Explique comment utiliser des groupes de rôles ATA.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f4a3bed481fcd9ca789057f0b45fc25a30d01ad
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 050260b65b14ca425f536fdfc0c936c0fce885df
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196232"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412293"
 ---
 # <a name="ata-role-groups"></a>Groupes de rôles ATA
 
@@ -35,7 +35,7 @@ ATA présente trois types de groupe de rôles : ATA Administrators, ATA Users e
 
 |Activité |Administrateurs Microsoft Advanced Threat Analytics|Utilisateurs Microsoft Advanced Threat Analytics|Observateurs Microsoft Advanced Threat Analytics|
 |----|----|----|----|
-|Se connecter|Disponible|Disponible|Disponible|
+|Connexion|Disponible|Disponible|Disponible|
 |Fournir des commentaires sur les activités suspectes|Disponible|Disponible|Non disponible|
 |Modifier l’état des activités suspectes|Disponible|Disponible|Non disponible|
 |Partager/exporter une activité suspecte par e-mail/via un lien|Disponible|Disponible|Non disponible|

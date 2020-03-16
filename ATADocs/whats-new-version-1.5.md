@@ -1,5 +1,5 @@
 ---
-title: Nouveautés d’Advanced Threat Analytics version 1.5 | Microsoft Docs
+title: Nouveautés d’Advanced Threat Analytics version 1,5
 description: Répertorie les nouveautés d’ATA version 1.5, ainsi que les problèmes connus
 keywords: ''
 author: rkarlin
@@ -12,18 +12,18 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c3cbce98ef0b0fa75dcc0df813582d4d46dac4fb
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: f7e65f1da222de3b7a4cb05541bd2359e3046901
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544260"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414231"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nouveautés d’ATA version 1.5
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-15-update"></a>Quelles sont les nouveautés d’ATA 1.5 ?
-La mise à jour vers ATA 1.5 comprend des améliorations dans les domaines suivants :
+ATA 1.5 comporte les améliorations suivantes :
 
 -   Détection plus rapide
 
@@ -62,7 +62,7 @@ Une fois la passerelle ATA configurée, au premier démarrage de celle-ci, l’
 Dans la passerelle ATA, le seul logiciel de capture réseau que vous pouvez installer est [Moniteur réseau Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865). N’installez pas l’analyseur de message Microsoft ni aucun autre logiciel de capture réseau. L’installation d’autres logiciels empêchera la passerelle ATA de fonctionner correctement.
 
 ### <a name="kb-on-virtualization-host"></a>Base de connaissance sur les hôtes de virtualisation
-N’installez pas la base de connaissance 3047154 sur un hôte de virtualisation, car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports.
+N’installez pas le correctif KB3047154 sur un hôte de virtualisation, car cela empêcherait le bon fonctionnement de la mise en miroir des ports.
 
 ## <a name="see-also"></a>Voir aussi
 

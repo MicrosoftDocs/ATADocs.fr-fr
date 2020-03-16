@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 7 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 7
 description: Dans cette étape d’installation d’ATA, vous intégrez votre VPN.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d8ebc54fc2c82bbe99b79f1c736f17e15629fc6a
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153102"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410423"
 ---
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7
 
@@ -40,7 +40,7 @@ ATA s’intègre avec votre solution VPN en écoutant les événements de gestio
 > [!IMPORTANT]
 > À compter de septembre 2019, le service de géolocalisation VPN Advanced Threat Analytics chargé de la détection des emplacements VPN prend désormais en charge exclusivement TLS 1,2. Assurez-vous que votre centre ATA est configuré pour prendre en charge TLS 1,2, car les versions 1,1 et 1,0 ne sont plus prises en charge.   
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 Pour activer l’intégration VPN, veillez à définir les paramètres suivants :
 
@@ -99,7 +99,7 @@ Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Cen
 
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -109,5 +109,5 @@ Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Cen
 - [Outil de dimensionnement ATA](https://aka.ms/aatpsizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 

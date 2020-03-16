@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes de démarrage du service Advanced Threat Analytics | Microsoft Docs
+title: Résolution des problèmes de démarrage du service Advanced Threat Analytics
 description: Décrit comment résoudre les problèmes de démarrage d’ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6669e23e2948997c452a44bfbe4fc08d659b3e8b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 97450fd93a8c881d5722365deab8b237df489091
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197185"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413857"
 ---
 # <a name="troubleshooting-service-startup"></a>Résolution des problèmes de démarrage du service
 
@@ -63,7 +63,7 @@ Cela se produit parce que, dans le cadre du processus d’installation de la pas
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

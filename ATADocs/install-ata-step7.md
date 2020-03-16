@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 8 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 8
 description: Lors de l’étape finale de l’installation d’ATA, vous configurez l’utilisateur Honeytoken.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ef51590c3d4e2bf07f839e4dc6a60e2f84d19a50
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 367d40e57590ace725700de947f3c1fd31b9db5e
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543040"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411205"
 ---
 # <a name="install-ata---step-8"></a>Installer ATA - Étape 8
 
@@ -51,7 +51,7 @@ Pour configurer ceci, procédez comme suit :
 
    ![Exclusions](media/exclusions.png)
 
-4.  Cliquez sur **Save**.
+4.  Cliquez sur **Enregistrer**.
 
 
 Félicitations, vous avez correctement déployé Microsoft Advanced Threat Analytics !
@@ -68,7 +68,7 @@ Pour vérifier qu’ATA est opérationnel et qu’il détecte les violations dan
 > [Étape 9 »](install-ata-step9-samr.md)
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -78,5 +78,5 @@ Pour vérifier qu’ATA est opérationnel et qu’il détecte les violations dan
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 

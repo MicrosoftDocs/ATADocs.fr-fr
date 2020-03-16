@@ -1,5 +1,5 @@
 ---
-title: Examiner les attaques par chemin de mouvement latéral avec ATA | Microsoft Docs
+title: Examiner les attaques par chemin de mouvement latéral avec ATA
 description: Cet article décrit comment détecter des attaques par chemins de mouvement latéral avec Advanced Threat Analytics (ATA).
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 53c81575202bbccc9eacf5bb26c5fa624fb7e667
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4c937a99da6bd26d58fc112eb1c154b59d8d53a1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908235"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412038"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Examiner les chemins de mouvement latéral avec ATA
 
@@ -47,11 +47,11 @@ Pour découvrir les comptes sensibles de votre réseau qui sont vulnérables en 
 4. Le fichier Excel créé vous fournit des détails sur vos comptes sensibles menacés. L’onglet **Résumé** propose des graphes qui décrivent en détail le nombre de comptes sensibles, les ordinateurs et les moyennes pour les ressources à risque. L’onglet **Détails** présente une liste des comptes sensibles dont vous devez vous soucier. Notez que les chemins sont des chemins qui existaient auparavant et qui peuvent ne pas être disponibles aujourd’hui.
 
 
-## <a name="investigate"></a>Investiguer
+## <a name="investigate"></a>Étudier
 
 Maintenant que vous avez identifié les comptes sensibles qui présentent des risques, vous pouvez vous plonger dans ATA pour en savoir plus et prendre des mesures préventives.
 
-1. Dans la console ATA, recherchez le badge Mouvement latéral qui est ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral. ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou de la ![icône de chemin d’accès](./media/paths-icon.png). Cette opération est possible si un chemin de mouvement latéral a existé au cours des deux derniers jours.
+1. Dans la console ATA, recherchez le badge Mouvement latéral qui est ajouté au profil de l’entité quand celle-ci se trouve sur un chemin de mouvement latéral. ![icône de mouvement latéral](./media/lateral-movement-icon.png) or ![icône de chemin d’accès](./media/paths-icon.png). Cette opération est possible si un chemin de mouvement latéral a existé au cours des deux derniers jours.
 
 2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**.
 

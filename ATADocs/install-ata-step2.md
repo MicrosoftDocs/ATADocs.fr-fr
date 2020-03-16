@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 2 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 2
 description: La deuxième étape de la procédure d’installation d’ATA vous aide à configurer les paramètres de connectivité du domaine sur le serveur de votre centre ATA.
 keywords: ''
 author: shsagir
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68ad769851926eed137108ff65663666cbf4fad0
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: ff20bf7da1586090d2728015f08cf94d432df38f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907896"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410457"
 ---
 # <a name="install-ata---step-2"></a>Installer ATA - Étape 2
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 1](install-ata-step1.md)
+> [« Étape 1](install-ata-step1.md)
 > [Étape 3 »](install-ata-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour se connecter à votre forêt Active Directory
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Étape 2. Fournir un nom d’utilisateur et un mot de passe pour se connecter à votre forêt Active Directory
 
 La première fois que vous ouvrez la console ATA, l’écran suivant apparaît :
 
@@ -45,16 +45,16 @@ La première fois que vous ouvrez la console ATA, l’écran suivant apparaît 
 
     Après l’enregistrement, le message d’accueil dans la console devient : ![Étape de bienvenue ATA 1 terminée](media/ATA_1.7-welcome-provide-username-finished.png)
 
-3. Dans la console, cliquez sur **Download Gateway setup and install the first Gateway** (Télécharger le programme d’installation de passerelle et installer la première passerelle) pour continuer.
+3. Dans la console, cliquez sur **Télécharger l’installation de la passerelle et installer la première passerelle** pour continuer.
 
 
 > [!div class="step-by-step"]
-> [« Étape 1](install-ata-step1.md)
+> [« Étape 1](install-ata-step1.md)
 > [Étape 3 »](install-ata-step3.md)
 
 
 ## <a name="see-also"></a>Voir aussi
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -64,4 +64,4 @@ La première fois que vous ouvrez la console ATA, l’écran suivant apparaît 
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)

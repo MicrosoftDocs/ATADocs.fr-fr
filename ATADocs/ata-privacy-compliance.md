@@ -1,5 +1,5 @@
 ---
-title: Stratégie relative aux données personnelles Advanced Threat Analytics | Microsoft Docs
+title: Stratégie de données personnelles d’Advanced Threat Analytics
 description: Fournit des liens vers des informations sur la suppression des informations personnelles et des données personnelles à partir d’ATA.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: f6280764ca16ef3c29f22f7f91767aa6c3637a4f
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: da4b81d0a812a9fe8c1f86982445ce017f5e290f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905534"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412106"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
 
@@ -49,7 +49,7 @@ Utilisez le script de base de données RGPD d’ATA pour supprimer les entités 
 
 ### <a name="delete-entities"></a>Supprimer des entités
 
-Cette action supprime définitivement une entité dans la base de données ATA. Pour exécuter cette commande, indiquez le nom de commande `deleteAccount` et le paramètre `SamName`, `UpnName` ou `GUID` pour l’ordinateur ou le nom d’utilisateur que vous souhaitez supprimer. Exemple : 
+Cette action supprime définitivement une entité dans la base de données ATA. Pour exécuter cette commande, indiquez le nom de commande `deleteAccount` et le paramètre `SamName`, `UpnName` ou `GUID` pour l’ordinateur ou le nom d’utilisateur que vous souhaitez supprimer. Par exemple : 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
@@ -61,7 +61,7 @@ Cette action supprime définitivement les données d’activité des entités da
 
 Pour exécuter cette commande, indiquez le nom de commande `deleteOldData` et le nombre de jours de données que vous souhaitez conserver dans la base de données. 
 
-Exemple : 
+Par exemple : 
 
 `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 

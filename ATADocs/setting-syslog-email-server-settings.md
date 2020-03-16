@@ -1,5 +1,5 @@
 ---
-title: Définition des paramètres de notification par e-mail dans Advanced Threat Analytics | Microsoft Docs
+title: Définition des paramètres de notification par e-mail dans Advanced Threat Analytics
 description: Décrit comment faire en sorte qu’ATA vous avertisse (par courrier électronique ou transfert d’événements ATA) quand il détecte des activités suspectes
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f60b7450c430793c9c14139f9cf268908a5dbc4
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a8769213bbc130299da99c852112af20ecad3267
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195677"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412208"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Fournir à ATA les paramètres de votre serveur de messagerie
 
@@ -36,12 +36,12 @@ ATA peut vous avertir quand il détecte une activité suspecte. Pour qu’ATA pu
 4. Dans la section **Notifications** sous **Serveur de messagerie**, entrez les informations suivantes :
 
 
-   |              Champ              |                                                                                                 Description                                                                                                  |               Value                |
+   |              Champ              |                                                                                                 Description                                                                                                  |               Valeur                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-   | Point de terminaison du serveur SMTP (obligatoire) |                                                            Entrez le nom de domaine complet de votre serveur SMTP et modifiez éventuellement le numéro de port (par défaut, 25).                                                            | Exemple :<br />smtp.contoso.com |
+   | Point de terminaison du serveur SMTP (obligatoire) |                                                            Entrez le nom de domaine complet de votre serveur SMTP et modifiez éventuellement le numéro de port (par défaut, 25).                                                            | Par exemple :<br />smtp.contoso.com |
    |               SSL               |                                              Activez/désactivez SSL si le serveur SMTP exigeait SSL. **Remarque :** si vous activez SSL, vous devez également modifier le numéro de port.                                               |        La valeur par défaut est désactivée         |
-   |         Authentication          | Activez l’authentification si votre serveur SMTP l’exige. **Remarque :** si vous activez l’authentification, vous devez fournir le nom d’utilisateur et le mot de passe d’un compte de messagerie qui a l’autorisation de se connecter au serveur SMTP. |        La valeur par défaut est désactivée         |
-   |      Envoyer depuis (obligatoire)       |                                                                        Entrez une adresse de messagerie à partir de laquelle le courrier sera envoyé.                                                                         | Exemple :<br />ATA@contoso.com  |
+   |         Authentification          | Activez l’authentification si votre serveur SMTP l’exige. **Remarque :** si vous activez l’authentification, vous devez fournir le nom d’utilisateur et le mot de passe d’un compte de messagerie qui a l’autorisation de se connecter au serveur SMTP. |        La valeur par défaut est désactivée         |
+   |      Envoyer depuis (obligatoire)       |                                                                        Entrez une adresse de messagerie à partir de laquelle le courrier sera envoyé.                                                                         | Par exemple :<br />ATA@contoso.com  |
 
    ![Image des paramètres du serveur de messagerie ATA](media/ata-email-server.png)
 

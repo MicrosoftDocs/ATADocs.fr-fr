@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.8 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,8
 description: Procédures de mise à jour d’ATA vers la version 1.8
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b30527feafc7ee74f17f9f9600bbbc1e28a3dfa6
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 51f9be6f5c2073070bbddb6669c0dda084c0e150
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543604"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412990"
 ---
 # <a name="updating-ata-to-version-18"></a>Mise à jour d’ATA vers la version 1.8
 

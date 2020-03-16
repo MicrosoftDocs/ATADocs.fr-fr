@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 3 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 3
 description: La troisième étape de la procédure d’installation d’ATA vous aide à télécharger le package d’installation de la passerelle ATA.
 keywords: ''
 author: rkarlin
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5d9ebf49493ec474ec1093aef66786d38db0cd57
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: eebbac33dbc339ec3558ab7458197cf8bdf92b3a
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543858"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410495"
 ---
 # <a name="install-ata---step-3"></a>Installer ATA - Étape 3
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 2](install-ata-step2.md)
-> [Étape 4 »](install-ata-step4.md)
+> [« Étape 2](install-ata-step2.md)
+> [Étape 4 »](install-ata-step4.md)
 
-## <a name="step-3-download-the-ata-gateway-setup-package"></a>Étape 3. Télécharger le package d’installation de la passerelle ATA
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Étape 3. Télécharger le package d’installation de la passerelle ATA
 
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA. Elle peut être installée sur un serveur dédié ou sur un contrôleur de domaine. Si vous l’installez sur un contrôleur de domaine, elle est installée en tant que passerelle légère ATA. Pour plus d’informations sur la passerelle légère ATA, consultez [Architecture ATA](ata-architecture.md). 
 
@@ -51,11 +51,11 @@ Le fichier zip comprend les fichiers suivants :
 
 
 > [!div class="step-by-step"]
-> [« Étape 2](install-ata-step2.md)
-> [Étape 4 »](install-ata-step4.md)
+> [« Étape 2](install-ata-step2.md)
+> [Étape 4 »](install-ata-step4.md)
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -64,4 +64,4 @@ Le fichier zip comprend les fichiers suivants :
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)

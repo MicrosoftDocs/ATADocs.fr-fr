@@ -1,5 +1,5 @@
 ---
-title: Configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Advanced Threat Analytics | Microsoft Docs
+title: Configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Advanced Threat Analytics
 description: Décrit comment configurer SAM-R pour activer la détection de chemin de mouvement latéral dans Advanced Threat Analytics (ATA)
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b8e8924fe0cd00985252c04edfb92ec51759b48
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: fa47a151ae8131039a5f7822acc5b541deb5c621
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907967"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413976"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
@@ -29,7 +29,7 @@ ms.locfileid: "75907967"
 > [!NOTE]
 > Avant d’appliquer une nouvelle stratégie, assurez-vous toujours que votre environnement reste sécurisé, sans impact sur la compatibilité des applications en activant et en vérifiant vos modifications proposées en mode audit. 
 
-## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9 : Configurer les autorisations requises SAM-R
+## <a name="step-9-configure-sam-r-required-permissions"></a>Étape 9. Configurer les autorisations requises SAM-R
 
 La détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur des requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont effectuées à l’aide du protocole SAM-R, via le compte de service ATA créé à l' [étape 2. Connectez-vous à AD](install-ata-step2.md).
  
@@ -59,4 +59,4 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)

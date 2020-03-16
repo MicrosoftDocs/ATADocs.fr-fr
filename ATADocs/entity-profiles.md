@@ -1,5 +1,5 @@
 ---
-title: Utilisation des profils d’entité dans la console Advanced Threat Analytics | Microsoft Docs
+title: Utilisation des profils d’entité dans la console Advanced Threat Analytics
 description: Décrit comment investiguer des entités à partir de l’écran des profils utilisateur dans la console ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1f8f2c507ea45ddb422868f8b86a973c8454509e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195845"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412344"
 ---
 # <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
 
@@ -49,11 +49,11 @@ En haut, vous pouvez voir les vignettes de résumé qui vous donnent un petit ap
 
 Pour les ordinateurs, vous verrez :
 - Le nombre d’activités suspectes ouvertes pour l’ordinateur
-- Le nombre d’utilisateurs connectés à l’ordinateur
+-  Le nombre d’utilisateurs connectés à l’ordinateur
 - Le nombre de ressources auxquelles l’ordinateur a accédé
-- Le nombre d’emplacements sur l’ordinateur à partir desquels un accès au VPN a été effectué
+-  Le nombre d’emplacements sur l’ordinateur à partir desquels un accès au VPN a été effectué
 - La liste des adresses IP que l’ordinateur a utilisées
-
+  
   ![ordinateur de menu des entités](media/entity-computer.png)
 
 À l’aide du bouton **Filtrer par**, situé au-dessus de la chronologie des activités, vous pouvez filtrer les activités par type d’activité. Vous pouvez également éliminer par filtrage un type spécifique (bruyant) d’activité. C’est vraiment utile pour votre investigation lorsque vous voulez comprendre les bases de ce que fait une entité sur le réseau. Vous pouvez également accéder à une date spécifique et exporter vers Excel les activités filtrées. Le fichier exporté fournit une page pour les modifications des services d’annuaire (éléments ayant changé dans Active Directory pour ce compte) et une page distincte pour les activités. 
@@ -70,10 +70,11 @@ Dans la section **Contrôle d’accès d’utilisateur**, ATA expose les paramè
 
 En cliquant sur l’onglet **Chemins d'accès de mouvement latéral**, vous pouvez afficher une image entièrement interactive et dynamique offrant une représentation visuelle des chemins de mouvement latéral en direction et en provenance de cet utilisateur qui peuvent être utilisés pour infiltrer votre réseau.
 
-Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [Chemins d’accès de mouvement latéral](use-case-lateral-movement-path.md). 
+Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 
  ![chemins de mouvement latéral du profil utilisateur](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="see-also"></a>Voir aussi
 [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+      

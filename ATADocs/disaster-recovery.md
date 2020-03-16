@@ -1,5 +1,5 @@
 ---
-title: Récupération d’urgence pour Advanced Threat Analytics | Microsoft Docs
+title: Récupération d’urgence pour Advanced Threat Analytics
 description: Décrit comment vous pouvez récupérer rapidement les fonctionnalités ATA après un sinistre
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 69efa57478c6534d96ae4ce1e347cddc0c46896e
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 5bf0654f951466f6cb33e9c71c522fbf582179c9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907694"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413296"
 ---
 # <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
 
@@ -66,7 +66,7 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](install-ata-step6.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

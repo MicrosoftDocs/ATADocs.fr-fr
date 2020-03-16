@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.7 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,7
 description: Procédures pour mettre à jour ATA vers la version 1.7
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8ef9bda4c3b1c3922744a4b292ee135b913e9306
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: a317af53040b13d212364b8114fdde64be6abf10
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543234"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412701"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Mise à jour d’ATA vers la version 1.7 : guide de migration
 La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suivants :

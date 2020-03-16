@@ -1,5 +1,5 @@
 ---
-title: Nouveautés d’Advanced Threat Analytics version 1.6 | Microsoft Docs
+title: Nouveautés d’Advanced Threat Analytics version 1,6
 description: Répertorie les nouveautés d’ATA version 1.6, ainsi que les problèmes connus
 keywords: ''
 author: rkarlin
@@ -12,18 +12,18 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 21b7fda6747fdb2c2590afe148a5f883e22410a5
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: c87966ee2d8f53187bcc412cb027b19c4ddcf891
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544303"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412548"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nouveautés d’ATA version 1.6
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-16-update"></a>Quelles sont les nouveautés d’ATA 1.6 ?
-ATA 1.6 comporte les améliorations suivantes :
+La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
 
 -   Nouvelles détections
 
@@ -45,7 +45,7 @@ ATA 1.6 comporte les améliorations suivantes :
 - **Demande d’information privée de protection contre les données malveillantes** L’API de protection des données (DPAPI) est un service de protection des données avec mot de passe. De nombreuses applications qui stockent les secrets des utilisateurs, comme les mots de passe de sites web et les informations d’identification de partage de fichiers, utilisent ce service de protection. Pour prendre en charge les scénarios de perte du mot de passe, les utilisateurs peuvent déchiffrer des données protégées à l’aide d’une clé de récupération qui ne fait pas appel à leur mot de passe. Dans un environnement de domaine, des attaquants peuvent dérober à distance la clé de récupération et s’en servir pour déchiffrer des données protégées sur tous les ordinateurs joints au domaine.
 
 
-- **Énumération de sessions Net** La reconnaissance est une étape clé de la chaîne de destruction d’une attaque avancée. Les contrôleurs de domaine fonctionnent comme des serveurs de fichiers pour les besoins de la distribution de l’objet de stratégie de groupe. Pour cela, ils utilisent le protocole SMB (Server Message Block). Dans le cadre de la phase de reconnaissance, des attaquants peuvent interroger le contrôleur de domaine pour toutes les sessions SMB actives sur le serveur. Ils ont ainsi la possibilité d’accéder à tous les utilisateurs et à toutes les adresses IP associés à ces sessions SMB. L’énumération de sessions SMB peut être utilisée par des attaquants pour cibler des comptes sensibles et leur permettre de se déplacer latéralement sur le réseau.
+- **Énumération de sessions Net** La reconnaissance est une étape clé de la chaîne de destruction d’une attaque avancée. Les contrôleurs de domaine fonctionnent comme des serveurs de fichiers pour les besoins de la distribution de l’objet de stratégie de groupe. Pour cela, ils utilisent le protocole SMB (Server Message Block). Dans le cadre de la phase de reconnaissance, des attaquants peuvent interroger le contrôleur de domaine pour toutes les sessions SMB actives sur le serveur. Ils ont ainsi la possibilité d’accéder à tous les utilisateurs et à toutes les adresses IP associés à ces sessions SMB. L’énumération de sessions SMB peut être mise à profit par des attaquants pour cibler des comptes sensibles et faciliter les mouvements latéraux sur le réseau.
 
 
 - **Demandes de réplication malveillantes** Dans les environnements Active Directory, la réplication se produit régulièrement entre contrôleurs de domaine. Un attaquant peut usurper une requête de réplication Active Directory (parfois en empruntant l’identité d’un contrôleur de domaine). Cette usurpation d’identité permet à un attaquant de récupérer les données stockées dans Active Directory, y compris les hachages de mot de passe, sans utiliser de techniques plus envahissantes, comme le cliché instantané de volume.

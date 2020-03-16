@@ -1,5 +1,5 @@
 ---
-title: Identifier des comptes sensibles avec ATA | Microsoft Docs
+title: Baliser les comptes sensibles avec ATA
 description: Décrit comment identifier des comptes sensibles à l’aide d’Advanced Threat Analytics (ATA)
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 39ad944d4517cbfe73cc7ac95f0cf7ceb6a3f213
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4897bee445099b21dabac7ffbbbf3e607254b237
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196044"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414163"
 ---
 # <a name="tag-sensitive-accounts"></a>Identifier des comptes sensibles
 
@@ -36,7 +36,7 @@ Vous pouvez identifier manuellement des groupes ou des comptes comme sensibles p
 
     ![Exemple de compte sensible ATA](media/sensitive-account-sample.png)
 
-4. Cliquez sur **Save**.
+4. Cliquez sur **Enregistrer**.
 
 5. Accédez à la page de profil d’entité en cliquant sur le nom de l’entité. Ici, vous serez en mesure de voir pourquoi l’entité est considérée comme sensible - parce qu’elle appartient à un groupe ou qu’elle a été marquée comme sensible manuellement.
 
@@ -55,13 +55,13 @@ Les groupes de la liste suivante sont considérés comme sensibles par ATA. Une 
 -   Utilisateurs du Bureau à distance 
 -   Opérateurs de configuration réseau 
 -   Générateurs d’approbation de forêt entrante
--   Administrateurs du domaine
+-   Admins du domaine
 -   Contrôleurs de domaine
 -   Propriétaires créateurs de la stratégie de groupe 
 -   Contrôleurs de domaine en lecture seule 
 -   Contrôleurs de domaine d’entreprise en lecture seule 
 -   Administrateurs du schéma 
--   Administrateurs de l’entreprise
+-   Administrateurs de l'entreprise
      
 ## <a name="see-also"></a>Voir aussi
 [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

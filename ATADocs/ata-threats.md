@@ -1,5 +1,5 @@
 ---
-title: Quelles sont les menaces détectées par Advanced Threat Analytics ? | Microsoft Docs
+title: Quelles sont les menaces détectées par Advanced Threat Analytics ?
 description: Répertorie les menaces détectées par Advanced Threat Analytics
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f656ab40b55ab0abb226cac9f3a6818e5cadee89
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4529401696dd07dffb04871c4da4214c3a2aa3c5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196524"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412531"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Quelles sont les menaces que recherche ATA ?
 
@@ -36,9 +36,9 @@ Pour plus d’informations, consultez [Gestion des activités suspectes](working
 
 ## <a name="whats-next"></a>Étapes suivantes
 
--   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, voir [Architecture ATA](ata-architecture.md).
+-   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, consultez [Architecture ATA](ata-architecture.md).
 
--   Pour commencer le déploiement d’ATA, voir [Installer ATA](install-ata-step1.md).
+-   Pour commencer le déploiement d’ATA, consultez [Installer ATA](install-ata-step1.md).
 
 
 ## <a name="see-also"></a>Voir aussi

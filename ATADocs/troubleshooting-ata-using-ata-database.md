@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes d’Advanced Threat Analytics en utilisant la base de données | Microsoft Docs
+title: Résolution des problèmes de Advanced Threat Analytics à l’aide de la base de données
 description: Décrit comment vous pouvez utiliser la base de données ATA pour résoudre les problèmes
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fd929ff7c2a11997997b2c5107e66f9e8a1d2038
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195818"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414214"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Résolution des problèmes liés à ATA à l’aide de la base de données ATA
 
@@ -35,7 +35,7 @@ La procédure par défaut et la plus simple pour interroger la base de données 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Comment...|Syntaxe|Remarques|
+> |Procédure :|Syntaxe|Remarques|
 > |-------------|----------|---------|
 > |Rechercher des collections dans la base de données.|`show collections`|Utile en tant que test de bout en bout pour constater que le trafic est écrit dans la base de données et que l’événement 4776 est reçu par ATA.|
 > |Obtenir les détails d’un utilisateur/ordinateur/groupe (UniqueEntity), par exemple un ID d’utilisateur.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
@@ -49,7 +49,7 @@ Voici un exemple de code qui utilise la syntaxe fournie précédemment. Si vous 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

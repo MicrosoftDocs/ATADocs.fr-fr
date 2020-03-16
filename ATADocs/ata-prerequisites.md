@@ -1,5 +1,5 @@
 ---
-title: Prérequis pour Advanced Threat Analytics | Microsoft Docs
+title: Conditions préalables à Advanced Threat Analytics
 description: Décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement
 keywords: ''
 author: shsagir
@@ -12,14 +12,14 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00a00492960d4535ce66c98aceb9b2d5daf3bdd7
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 94d30c768273b51aef0e8b7a75affbf2b5db85df
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905614"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412072"
 ---
-# <a name="ata-prerequisites"></a>Conditions préalables au déploiement d’ATA
+# <a name="ata-prerequisites"></a>Configuration requise pour ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -29,7 +29,7 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 > Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
 
-Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou la passerelle légère ATA. Pour plus d’informations sur les composants ATA, consultez [Architecture ATA](ata-architecture.md).
+Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou la passerelle légère ATA. Pour plus d’informations sur les composants d’ATA, consultez [Architecture d’ATA](ata-architecture.md).
 
 Le système ATA fonctionne sur la limite de forêt Active Directory et prend en charge le niveau fonctionnel de forêt Windows 2003 et versions ultérieures.
 
@@ -124,8 +124,8 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 |**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
 |**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
 |**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
-|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Sortant|
-|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Sortant|
+|**SMTP** (facultatif)|TCP|25|SMTP Server|Sortant|
+|**SMTPS** (facultatif)|TCP|465|SMTP Server|Sortant|
 |**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Sortant|
 |**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
@@ -199,7 +199,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 
     -   Serveurs DNS préféré et auxiliaire
 
-    -   Le **Suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
+    -   Le **suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
 
         ![Configurer le suffixe DNS dans les paramètres TCP/IP avancés](media/ATA-DNS-Suffix.png)
 
@@ -318,7 +318,7 @@ L’accès à la console ATA s’effectue au moyen d’un navigateur, avec prise
 
 -   Largeur d’écran d’une résolution minimale de 1 700 pixels
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 

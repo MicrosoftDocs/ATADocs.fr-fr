@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.5 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,5
 description: Procédures pour mettre à jour ATA vers la version 1.5
 keywords: ''
 author: rkarlin
@@ -12,15 +12,15 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d71cfd283d89f6b1d1413f4d9832fb4302504622
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a008a345eb2c3a214f0f4f2352328ad60472e3ec
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196168"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412718"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Mise à jour d’ATA vers la version 1.5 : guide de migration
-La mise à jour vers ATA 1.5 comprend des améliorations dans les domaines suivants :
+ATA 1.5 comporte les améliorations suivantes :
 
 -   Détection plus rapide
 
@@ -89,7 +89,7 @@ Suivez ces étapes pour mettre à jour ATA vers la version 1.5 :
 > [!IMPORTANT]
 > - Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA.
 
 Pour télécharger le package d’installation de la passerelle ATA :

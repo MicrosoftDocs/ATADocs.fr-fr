@@ -1,5 +1,5 @@
 ---
-title: Forum aux questions sur Advanced Threat Analytics | Microsoft Docs
+title: Forum aux questions sur Advanced Threat Analytics
 description: Fournit des réponses aux questions les plus fréquentes sur ATA
 keywords: ''
 author: shsagir
@@ -12,18 +12,18 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9c8a16cbd49f653425b27fe50d18d7de155dab12
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 06b0aa757e2c5a85da276964faacfdf8090ccd74
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905709"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412463"
 ---
-# <a name="ata-frequently-asked-questions"></a>Forum Aux Questions : ATA
+# <a name="ata-frequently-asked-questions"></a>Forum aux questions sur ATA
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
-Cet article fournit des éléments d’informations et des réponses aux questions les plus fréquemment posées sur ATA.
+Cet article fournit des éléments d’informations et des réponses aux questions les plus fréquentes sur ATA.
 
 
 ## <a name="where-can-i-get-a-license-for-advanced-threat-analytics-ata"></a>Où puis-je obtenir une licence pour ATA (Advanced Threat Analytique) ?
@@ -159,7 +159,7 @@ Oui. Vous pouvez consulter l’intégrité globale du déploiement ainsi que les
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)

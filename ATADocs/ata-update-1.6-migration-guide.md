@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.6 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,6
 description: Procédures pour mettre à jour ATA vers la version 1.6
 keywords: ''
 author: rkarlin
@@ -12,15 +12,15 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea37da339e5c78e4fbcb4cdd3351403cf0d4d49c
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: ca0a71a9af5c65fada34043f5d63ce11a8987ac9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543249"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412752"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Mise à jour d’ATA vers la version 1.6 : guide de migration
-ATA 1.6 comporte les améliorations suivantes :
+La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
 
 -   Nouvelles détections
 
@@ -96,7 +96,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 > [!IMPORTANT] 
 > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Étape 2. Télécharger le package d’installation de la passerelle ATA
 Après avoir configuré les paramètres de connectivité du domaine, vous pouvez télécharger le package d’installation de la passerelle ATA.
 
 Pour télécharger le package d’installation de la passerelle ATA :

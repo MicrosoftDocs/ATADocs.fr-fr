@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.9 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,9
 description: Procédures de mise à jour d’ATA vers la version 1.9
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b970f5e8472c58fa87a078d8b8612a4dbc86e388
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 69229a4c5f34a273d5c5a8854d7f209b9462b48f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543783"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413194"
 ---
 # <a name="updating-ata-to-version-19"></a>Mise à jour d’ATA vers la version 1.9
 

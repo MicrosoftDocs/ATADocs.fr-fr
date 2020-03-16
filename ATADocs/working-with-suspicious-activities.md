@@ -1,5 +1,5 @@
 ---
-title: Gestion des activités suspectes dans Advanced Threat Analytics | Microsoft Docs
+title: Utilisation d’activités suspectes dans Advanced Threat Analytics
 description: Explique comment passer en revue les activités suspectes identifiées par ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2ee7687feac6e8b703a2e17b3b60418e96dcee71
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544331"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414401"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
@@ -95,8 +95,8 @@ Pour cela, cliquez sur les trois points en haut à droite d’une activité susp
   > Les pages de configuration peuvent être modifiées seulement par des administrateurs d’ATA.
 
 
-## <a name="related-videos"></a>Vidéos connexes
-- [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vidéos associées
+- [Rejoindre la communauté de sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Voir aussi

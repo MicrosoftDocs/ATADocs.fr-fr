@@ -1,5 +1,5 @@
 ---
-title: Nouveautés de la version 1.8 d’ATA | Microsoft Docs
+title: Nouveautés de la version 1.8 d’ATA
 description: Liste les nouveautés de la version 1.8 d’ATA ainsi que les problèmes connus
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: deb170191a649c72eaae3d26ba34bea6358b27b0
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: f13c603b25a58b81b8786734b0c11bf3f8da8f9c
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544290"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414282"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nouveautés de la version 1.8 d’ATA
 
@@ -31,7 +31,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 - L’implémentation de protocole inhabituelle a été améliorée pour pouvoir détecter le logiciel malveillant WannaCry.
 
-- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification est effectuée dans un groupe avec privilèges élevés.
+- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification anormale est effectuée dans un groupe avec privilèges élevés.
 - NOUVEAU ! **Échecs d’authentification suspects** (comportement par force brute) : L’attaquant tente d’utiliser la force brute sur des informations d’identification pour compromettre des comptes. ATA déclenche désormais une alerte quand un comportement anormal d’authentification ayant échoué est détecté.   
 
 - **Tentative d’exécution à distance - WMI exec** : L’attaquant peut tenter de contrôler votre réseau en exécutant du code à distance sur votre contrôleur de domaine. ATA a amélioré la détection de l’exécution à distance pour inclure la détection des méthodes WMI qui permettent d’exécuter du code à distance.
@@ -67,7 +67,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ## <a name="security-improvements"></a>Améliorations apportées à la sécurité
 
--   NOUVEAU ! **Authentification unique pour la gestion d’ATA**. ATA prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Les scripts d’installation sans assistance pour la passerelle ATA et la passerelle légère ATA utilisent désormais le contexte de l’utilisateur connecté, sans demander les informations d’identification.
+-   NOUVEAU ! **Authentification unique pour la gestion d’ATA**. ATA prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez également vous connecter à l’aide d’une carte à puce. Les scripts d’installation sans assistance pour la passerelle ATA et la passerelle légère ATA utilisent désormais le contexte de l’utilisateur connecté, sans demander les informations d’identification.
 -   Les privilèges sur le système local ont été supprimés du processus de passerelle ATA, vous pouvez maintenant utiliser des comptes virtuels (disponibles uniquement sur les passerelles ATA autonomes), des comptes de service administrés et des comptes de service administrés de groupe pour exécuter le processus de passerelle ATA.   
 -   Des journaux d’audit pour le centre et les passerelles ATA ont été ajoutés et toutes les actions sont maintenant consignées dans le journal des événements Windows.
 -   La prise en charge des certificats KSP a été ajoutée pour le centre ATA.

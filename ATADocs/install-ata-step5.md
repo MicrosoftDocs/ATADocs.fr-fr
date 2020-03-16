@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 5 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 5
 description: La cinquième étape de la procédure d’installation d’ATA vous aide à configurer les paramètres de votre passerelle ATA.
 keywords: ''
 author: rkarlin
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0be6430a82752f51ed2660bb4053bb396b90e8b5
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 2b784d34e505e39b9333bb0642de8a7bd061f6a1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544032"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413942"
 ---
 # <a name="install-ata---step-5"></a>Installer ATA - Étape 5
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-ata-step4.md)
-> [Étape 6 »](install-ata-step6.md)
+> [« Étape 4](install-ata-step4.md)
+> [Étape 6 »](install-ata-step6.md)
 
 
 ## <a name="step-5-configure-the-ata-gateway-settings"></a>Étape 5. Configurer les paramètres de la passerelle ATA
@@ -64,7 +64,7 @@ Une fois la passerelle ATA installée, procédez comme suit pour configurer ses 
 3. Si vous le souhaitez, vous pouvez définir le [détecteur Syslog et la collecte des transferts d’événements Windows](configure-event-collection.md). 
 4. Activez **Mettre la passerelle ATA à jour automatiquement** pour que cette passerelle ATA soit automatiquement mise à jour si vous mettez à jour le centre ATA à l’occasion de futures publications de version.
 
-5. Cliquez sur **Save**.
+5. Cliquez sur **Enregistrer**.
 
 
 ## <a name="validate-installations"></a>Valider les installations
@@ -84,12 +84,12 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-ata-step4.md)
-> [Étape 6 »](install-ata-step6.md)
+> [« Étape 4](install-ata-step4.md)
+> [Étape 6 »](install-ata-step6.md)
 
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -99,5 +99,5 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 

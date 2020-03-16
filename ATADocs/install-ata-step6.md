@@ -1,5 +1,5 @@
 ---
-title: Installer Advanced Threat Analytics - Étape 6 | Microsoft Docs
+title: Installer Advanced Threat Analytics-étape 6
 description: Dans cette étape d’installation d’ATA, vous configurez des sources de données.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d95dc3755e5aaeadd979b9c71cbc09a9a01637b9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: de80ecf737d387f6917dc9c8ec5035045ddc5ad6
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907930"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413925"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
@@ -27,7 +27,7 @@ ms.locfileid: "75907930"
 > [« Étape 5](install-ata-step5.md)
 > [Étape 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Étape 6 : Configurer la collecte d’événements
+## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collection d’événements
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
 Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ces événements Windows sont lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières, soit en configurant la passerelle ATA pour écouter les événements SIEM, soit en [configurant le transfert d’événements Windows](configure-event-collection.md).  
@@ -192,7 +192,7 @@ Assurez-vous que \t sépare les paires clé/valeur.
 
 
 
-## <a name="related-videos"></a>Vidéos connexes
+## <a name="related-videos"></a>Vidéos associées
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -202,5 +202,5 @@ Assurez-vous que \t sépare les paires clé/valeur.
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 

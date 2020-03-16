@@ -1,5 +1,5 @@
 ---
-title: Mise à jour d’Advanced Threat Analytics vers la version 1.9.2 - Guide de migration | Microsoft Docs
+title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1.9.2
 description: Procédure de mise à jour d’ATA vers la version 1.9.2
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: d7149197933800697d26b42196dcc4c9121ea593
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 07c193422140eb2b9a19c587ff93103be70e0edc
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907538"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411409"
 ---
 # <a name="ata-version-192"></a>ATA version 1.9.2
 
@@ -47,7 +47,7 @@ Cette mise à jour inclut également des améliorations au niveau de la stabilit
 
 Pour obtenir le package autonome pour cette mise à jour, accédez au site Web du centre de téléchargement Microsoft : [Téléchargez le package ATA 1.9.2 maintenant](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Configuration requise
+### <a name="prerequisites"></a>Composants requis
 
 Pour installer cette mise à jour, une des versions ATA suivantes doit déjà être installée : 
 - Mise à jour 1 pour ATA 1.9 (version 1.9.7412)
@@ -55,7 +55,7 @@ Pour installer cette mise à jour, une des versions ATA suivantes doit déjà ê
 - Mise à jour 1 pour ATA 1.8 (version 1.8.6765)
 - ATA 1.8 (version 1.8.6645)
 
-### <a name="restart-requirement"></a>Exigence de redémarrage
+### <a name="restart-requirement"></a>Redémarrage requis
 
 Il est possible que vous deviez redémarrer votre ordinateur après avoir appliqué cette mise à jour.
 

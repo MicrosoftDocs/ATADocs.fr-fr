@@ -1,5 +1,5 @@
 ---
-title: Ressources et guide de préparation Advanced Threat Analytics | Microsoft Docs
+title: Guide de disponibilité et des ressources Advanced Threat Analytics
 description: Fournit une liste de ressources, de vidéos et de liens de démarrage, de déploiement et de guide de préparation pour ATA.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 7ebf92ba3d6977dd9aad79d8e87818c5f84795b9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543009"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412055"
 ---
 # <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
 
@@ -83,7 +83,7 @@ Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes d
 
 
 
-## <a name="security-best-practices"></a>Meilleures pratiques en matière de sécurité
+## <a name="security-best-practices"></a>Méthodes conseillées pour la sécurité
 
 [Bonnes pratiques d’ATA](https://aka.ms/atasecbestpractices) - Bonnes pratiques pour la sécurisation d’ATA.
 

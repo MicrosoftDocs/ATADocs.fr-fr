@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes d’Advanced Threat Analytics en utilisant les journaux | Microsoft Docs
+title: Résolution des problèmes de Advanced Threat Analytics à l’aide des journaux
 description: Décrit comment utiliser les journaux ATA pour résoudre des problèmes
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd4af40af83b060093b0b5822d0e9110a4ada4f0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 01b13916f3cdcba1d1aa166c8998d7d91bbd2bfb
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70076635"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414248"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Résolution des problèmes liés à ATA à l’aide des journaux ATA
 
@@ -89,7 +89,7 @@ Journaux de déploiement de la passerelle ATA et de la passerelle légère ATA 
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 - [Planification de la capacité d’ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
