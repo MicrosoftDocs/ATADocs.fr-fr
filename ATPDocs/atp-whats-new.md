@@ -1,5 +1,5 @@
 ---
-title: Nouveautés d’Azure ATP (Azure Advanced Threat Protection) | Microsoft Docs
+title: Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP (Azure Advanced Threat Protection).
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: de73b8e121b185b01be8ad83fc7c8606c03cb2c6
-ms.sourcegitcommit: 40179a7206773a40de96caffe6c5f3fbcb4a1c27
+ms.openlocfilehash: 0b0805a634466d1ef8e53c187ef674edc529eda4
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78938888"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412684"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 

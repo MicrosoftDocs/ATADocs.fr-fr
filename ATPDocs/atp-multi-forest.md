@@ -1,5 +1,5 @@
 ---
-title: Prise en charge multi-forêt dans Azure Advanced Threat Protection | Microsoft Docs
+title: Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 description: Prise en charge de plusieurs forêts Active Directory dans Azure ATP.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cee14a8fe693cdd3035038884b6c9ba2370bf5a5
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: ecac12f266a424e55266d1343a2d03a75bca8840
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259461"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413993"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
