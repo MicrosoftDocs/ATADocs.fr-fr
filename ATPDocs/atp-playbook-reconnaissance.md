@@ -1,5 +1,5 @@
 ---
-title: Tutoriel de playbook Azure ATP Reconnaissance | Microsoft Docs
+title: Tutoriel sur le playbook de reconnaissance Azure ATP
 description: Le tutoriel de playbook Azure ATP Reconnaissance décrit comment simuler des menaces de reconnaissance pour la détection par Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 53ff08105d688275dad6b2283e3d30e0db8df002
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 50aeef3f54285b24de308269f41be54aeb379067
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908189"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411919"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 

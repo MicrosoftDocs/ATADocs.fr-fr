@@ -1,5 +1,5 @@
 ---
-title: Stratégie relative aux données personnelles Azure Advanced Threat Protection | Microsoft Docs
+title: Stratégie relative aux données personnelles Azure Advanced Threat Protection
 description: Fournit des liens vers des informations sur la suppression des informations personnelles et des données personnelles à partir d’Azure ATP.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 13035874f4d40376c93dbc39020277716fe37d1d
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 159cc41bf31697c6da8ac3f1f307eda4f8d11ea3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908102"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414061"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sécurité et confidentialité des données Azure ATP
 

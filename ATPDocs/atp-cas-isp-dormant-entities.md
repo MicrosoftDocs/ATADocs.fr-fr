@@ -1,5 +1,5 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluations de la sécurité des entités dormantes | Microsoft Docs'
+title: 'Azure Advanced Threat Protection : évaluations de la sécurité des entités dormantes'
 description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant les entités dormantes dans des groupes sensibles.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a4e8ea1119387392f2588f3753390086a257b09
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 34938ff60ebc75812f44a7c014a960c89f2441a5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908435"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414452"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Évaluation de la sécurité : Entités dormantes dans des groupes **sensibles** 
 

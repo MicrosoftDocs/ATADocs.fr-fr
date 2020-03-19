@@ -1,5 +1,5 @@
 ---
-title: Tutoriel sur la configuration du labo d’alertes de sécurité Azure ATP | Microsoft Docs
+title: Tutoriel sur la configuration du labo d’alertes de sécurité Azure ATP
 description: Dans ce tutoriel, vous allez configurer un labo de test Azure ATP pour simuler des menaces devant être détectées par Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 8c3238c07c05bf307c91753e6d69b35b376a3c21
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908515"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414520"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
 

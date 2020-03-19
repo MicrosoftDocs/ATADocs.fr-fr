@@ -1,5 +1,5 @@
 ---
-title: Alertes de sécurité Azure ATP indiquant des informations d’identification compromises | Microsoft Docs
+title: Alertes de sécurité Azure ATP indiquant des informations d’identification compromises
 d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7c244926edc1a575159f5ff4bac925ead12bf76d
-ms.sourcegitcommit: 4381148c0487b473e23fe9b425b133c42acde881
+ms.openlocfilehash: e52e8652450e716beed323f1893d94051208b1e6
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78208055"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411029"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 

@@ -1,5 +1,5 @@
 ---
-title: Résolution de noms réseau Azure Advanced Threat Protection | Microsoft Docs
+title: Résolution de noms réseau Azure Advanced Threat Protection
 description: Cet article offre une vue d’ensemble de la fonctionnalité de résolution de noms réseau avancée d’Azure ATP et de ses applications.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 260100f37e32067e20a224046e1efa200e0284d3
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f05b713e9e5ea72d43f9e48a32d06d40e8347da5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908382"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412004"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
 

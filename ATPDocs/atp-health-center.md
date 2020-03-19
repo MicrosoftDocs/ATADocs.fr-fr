@@ -1,5 +1,5 @@
 ---
-title: Surveiller les événements et l’intégrité système d’Azure Advanced Threat Protection | Microsoft Docs
+title: Surveiller les événements et l’intégrité système d’Azure Advanced Threat Protection
 description: Le centre d’intégrité Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9fbcdbd6434ed1fcaa91719547d1926adc0cbd51
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 743d2f6c147542ff2b57383e93c75474ea9524b9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908295"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414537"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Utiliser l’intégrité et les événements Azure ATP
 

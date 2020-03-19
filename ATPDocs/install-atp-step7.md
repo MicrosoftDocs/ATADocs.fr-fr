@@ -1,5 +1,5 @@
 ---
-title: Configuration d’exclusions de détection et de comptes honeytoken dans Azure Advanced Threat Protection | Microsoft Docs
+title: Configuration d’exclusions de détection et de comptes honeytoken dans Azure Advanced Threat Protection
 description: Configuration d’exclusions de détection et de comptes honeytoken
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4035fbbb3a705cff541c5e07d6bbdce72d99d119
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 5af501b1d040c0c93b978882dc52d7f26921f8a2
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905179"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413670"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurer des exclusions d’adresses IP et de comptes honeytoken
 

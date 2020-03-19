@@ -1,5 +1,5 @@
 ---
-title: 'Azure Advanced Threat Protection : rapport d’évaluation de la posture de sécurité des identités concernant les chiffrements faibles | Microsoft Docs'
+title: 'Azure Advanced Threat Protection : rapport d’évaluation de la posture de sécurité des identités concernant les chiffrements faibles'
 description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant les chiffrements faibles.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d755668f3460e5dd3213f601d74ecf88e37df7d6
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f73edb6278d4b6ddebe13e1ed01f78d66988f392
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908393"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413143"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Évaluation de la sécurité : Utilisation de chiffrements faibles
 

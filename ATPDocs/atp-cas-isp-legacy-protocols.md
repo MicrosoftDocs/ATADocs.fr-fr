@@ -1,5 +1,5 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les protocoles hérités | Microsoft Docs'
+title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les protocoles hérités'
 description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant les protocoles hérités.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7a5f3b92114b27c7c2df11d5c2aa629317415a8c
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: e1cd5eef793a801944f61c1fe2484bfc9a02b900
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908095"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414503"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Évaluation de la sécurité : Utilisation des protocoles hérités 
  

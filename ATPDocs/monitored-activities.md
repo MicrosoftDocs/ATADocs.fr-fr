@@ -1,5 +1,5 @@
 ---
-title: Activités de domaine supervisées par Azure ATP | Microsoft Docs
+title: Activités de domaine supervisées par Azure ATP
 description: Décrit chaque type d’activité supervisé par Azure Advanced Threat Protection
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cce0cfab66410b1e13f20a9837b7c55472f4cb3d
-ms.sourcegitcommit: 450295f4ee87db835c9921d2595ae9d291f727c5
+ms.openlocfilehash: bd669b3b0bcf1f505e69a65eecdb671b9f66845b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281744"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414673"
 ---
 # <a name="azure-atp-monitored-activities"></a>Activités supervisées par Azure ATP
 

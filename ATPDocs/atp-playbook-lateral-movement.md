@@ -1,5 +1,5 @@
 ---
-title: Playbook de mouvement latéral d’alertes de sécurité Azure ATP | Microsoft Docs
+title: Playbook de mouvement latéral d’alertes de sécurité Azure ATP
 description: Le playbook Azure ATP décrit comment simuler des menaces de mouvement latéral pour la détection par Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 1ac1a5652305d17f65fee7a4e5c7e0b73b0b1473
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 998b932dc88ca14bed4fd008ea5d1d6574e385a0
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908065"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410687"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
 

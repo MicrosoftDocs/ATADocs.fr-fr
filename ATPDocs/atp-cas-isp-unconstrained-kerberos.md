@@ -1,5 +1,5 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les délégations Kerberos sans contrainte | Microsoft Docs'
+title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les délégations Kerberos sans contrainte'
 description: Cet article propose une vue d’ensemble des rapports d’évaluation de la posture de sécurité fournis par Azure ATP concernant les délégations Kerberos sans contrainte.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7249c8a5c320720bad7e8f90ab49fbdaaabcf279
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4938c5a222e6a8c20444ca73e3e119636ed59e83
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905553"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413908"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Évaluation de la sécurité : Délégations Kerberos non sécurisées
 
