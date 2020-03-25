@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/18/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 61415f1a5f74a216dd0c505b6e92419601e08941
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414639"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504239"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -68,7 +68,7 @@ Si, lors de l’installation sans assistance d’un capteur, vous tentez d’uti
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## Problème d’association de cartes réseau du capteur Azure ATP <a name="nic-teaming"></a>
+## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problème d’association de cartes réseau du capteur Azure ATP <a name="nic-teaming"></a>
 
 Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec une carte d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, suivez ces instructions :
 
@@ -147,6 +147,18 @@ le capteur n’a pas pu récupérer le compte gMSA désigné à partir du portai
 **Résolution :**
 
 Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte.
+
+## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Les téléchargements de rapports contenant plus de 300 000 entrées ne sont pas pris en charge
+
+Azure ATP ne prend pas en charge les téléchargements de rapports contenant plus de 300 000 entrées chacun. Les rapports de plus de 300 000 entrées ne s’affichent pas intégralement.
+
+**Cause :**
+
+Il s’agit d’une limitation de conception.
+
+**Résolution :**
+
+Aucune solution connue.
 
 ## <a name="see-also"></a>Voir aussi
 

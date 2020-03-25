@@ -12,32 +12,32 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a32bf8f614019f15cfe0740aeaf59956ce94909
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 4a26195a6ceba0a32e9cf2d698574ca0acc7ef15
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411070"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504226"
 ---
-# <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP) 
+# <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP)
 
+Utilisez ce guide pour faire passer une installation ATA existante au service Azure Advanced Threat Protection (Azure ATP). Ce guide explique les prérequis et les exigences d’Azure ATP. Il décrit également comment planifier et mener à bien votre transfert. Vous trouverez également des étapes de validation et des conseils pour tirer parti des solutions de sécurité et de protection contre les menaces les plus récentes avec Azure ATP après l’installation.
 
-Utilisez ce guide pour faire passer une installation ATA existante au service Azure Advanced Threat Protection (Azure ATP). Ce guide explique les prérequis et les exigences d’Azure ATP. Il décrit également comment planifier et mener à bien votre transfert. Vous trouverez également des étapes de validation et des conseils pour tirer parti des solutions de sécurité et de protection contre les menaces les plus récentes avec Azure ATP après l’installation. 
+Pour plus d’informations sur les différences entre ATA et Azure ATP, consultez la [Foire aux questions Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
 
-Pour en savoir plus sur les différences entre ATA et Azure ATP, consultez le [Forum aux questions Azure ATP] (https://docs.microsoft.com/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
-
-Dans ce guide, vous allez : 
+Dans ce guide, vous allez :
 
 > [!div class="checklist"]
-> * Passer en revue et confirmer les prérequis du service Azure ATP
-> * Documenter votre configuration ATA existante
-> * Planifier votre transfert
-> * Installer et configurer votre service Azure ATP
-> * Effectuer des vérifications post-transfert
-> * Désactiver ATA une fois le transfert terminé 
+>
+> - Passer en revue et confirmer les prérequis du service Azure ATP
+> - Documenter votre configuration ATA existante
+> - Planifier votre transfert
+> - Installer et configurer votre service Azure ATP
+> - Effectuer des vérifications post-transfert
+> - Désactiver ATA une fois le transfert terminé
 
->[!NOTE]
-> Vous pouvez passer à Azure ATP à partir de n’importe quelle version d’ATA. Toutefois, comme les données ne peuvent pas passer d’ATA à Azure ATP, nous vous recommandons de conserver les données et alertes du centre ATA nécessaires pour les examens en cours jusqu’à ce que toutes les alertes ATA soient fermées ou corrigées. 
+> [!NOTE]
+> Vous pouvez passer à Azure ATP à partir de n’importe quelle version d’ATA. Toutefois, comme les données ne peuvent pas passer d’ATA à Azure ATP, nous vous recommandons de conserver les données et alertes du centre ATA nécessaires pour les examens en cours jusqu’à ce que toutes les alertes ATA soient fermées ou corrigées.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -49,31 +49,32 @@ Dans ce guide, vous allez :
 
 - Vérifiez que tous les contrôleurs de domaine que vous envisagez d’utiliser disposent d’un accès Internet suffisant au service Azure ATP. Vérifiez et confirmez que vos contrôleurs de domaine répondent aux [exigences de configuration d’un proxy Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy).
 
->[!NOTE]
-> Ce guide de migration est destién uniquement aux capteurs Azure ATP. Pour plus d’informations, consultez la page consacrée au [choix du capteur approprié pour votre déploiement](https://docs.microsoft.com/azure-advanced-threat-protection/atp-capacity-planning#choosing-the-right-sensor-type-for-your-deployment). 
+> [!NOTE]
+> Ce guide de migration est destién uniquement aux capteurs Azure ATP. Pour plus d’informations, consultez la page consacrée au [choix du capteur approprié pour votre déploiement](https://docs.microsoft.com/azure-advanced-threat-protection/atp-capacity-planning#choosing-the-right-sensor-type-for-your-deployment).
 
-## <a name="plan"></a>Plan 
+## <a name="plan"></a>Plan
 
-Veillez à rassembler les informations suivantes avant de commencer le transfert : 
+Veillez à rassembler les informations suivantes avant de commencer le transfert :
+
 1. Détails de votre compte [Directory Services](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step2).
 1. [Paramètres](https://docs.microsoft.com/azure-advanced-threat-protection/setting-syslog) de notification Syslog.
 1. [Détails des notifications](https://docs.microsoft.com/azure-advanced-threat-protection/notifications) par e-mail.
 1. Appartenance au groupe de rôle ATA
 1. Intégration VPN
-1. Exclusions des alertes 
+1. Exclusions des alertes
     - Les exclusions n’étant pas transférables d’ATA vers Azure ATP, les détails de chaque exclusion sont nécessaires pour [répliquer les exclusions dans Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/excluding-entities-from-detections).
-1. Détails des comptes HoneyToken. 
+1. Détails des comptes HoneyToken.
     - Si vous ne disposez pas de comptes HoneyToken dédiés, découvrez-en plus sur [HoneyTokens dans Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step7) et créez des comptes à cet effet.
-1. Liste complète de toutes les entités (ordinateurs, groupes, utilisateurs) à étiqueter manuellement comme entités sensibles. 
+1. Liste complète de toutes les entités (ordinateurs, groupes, utilisateurs) à étiqueter manuellement comme entités sensibles.
     - Découvrez l’importance des [entités sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/sensitive-accounts) dans Azure ATP.
-1. [Détails](https://docs.microsoft.com/azure-advanced-threat-protection/reports) de la planification des rapports (liste des rapports et planifications). 
-1. Identification et détails de chaque passerelle légère ATA configurée comme candidat synchronisateur de domaine Azure ATP. 
-   - Découvrez-en plus sur l’importance des [candidats synchronisateurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5#configure-sensor-settings) dans Azure ATP.
+1. [Détails](https://docs.microsoft.com/azure-advanced-threat-protection/reports) de la planification des rapports (liste des rapports et planifications).
+1. Identification et détails de chaque passerelle légère ATA configurée comme candidat synchronisateur de domaine Azure ATP.
+    - Découvrez-en plus sur l’importance des [candidats synchronisateurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5#configure-sensor-settings) dans Azure ATP.
 
 > [!NOTE]
 > Ne désinstallez pas le centre ATA tant que toutes les passerelles ATA n’ont pas été supprimées. Si vous désinstallez le centre ATA alors que des passerelles ATA sont en cours d’exécution, votre organisation se retrouve sans aucune protection contre les menaces.
 
-## <a name="move"></a>Déplacer 
+## <a name="move"></a>Déplacer
 
 Pour finir de passer à Azure ATP, effectuez ces deux étapes simples :
 
@@ -81,19 +82,19 @@ Pour finir de passer à Azure ATP, effectuez ces deux étapes simples :
 
 1. [Créer votre instance Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1)
 
-2. Désinstallez la passerelle légère ATA sur tous les contrôleurs de domaine.  
+2. Désinstallez la passerelle légère ATA sur tous les contrôleurs de domaine.
 
 3. Installez le capteur Azure ATP sur tous les contrôleurs de domaine :
-     - [Téléchargez les fichiers du capteur Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3).
-     - [Récupérez votre clé d’accès Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3#download-the-setup-package).
-     - [Installez des capteurs Azure ATP sur vos contrôleurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step4). 
+    - [Téléchargez les fichiers du capteur Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3).
+    - [Récupérez votre clé d’accès Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step3#download-the-setup-package).
+    - [Installez des capteurs Azure ATP sur vos contrôleurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step4).
 
-### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Étape 2 : Configurer et valider l’instance Azure ATP  
+### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Étape 2 : Configurer et valider l’instance Azure ATP
 
 - [Configurer le capteur](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5)
 
->[!NOTE]
-> Certaines tâches de la liste suivante, comme la sélection d’entités pour attribuer manuellement l’étiquette **Sensible**, ne peuvent pas être effectuées avant l’installation de capteurs Azure ATP et la synchronisation initiale. Prévoyez jusqu’à 2 heures pour la synchronisation initiale. 
+> [!NOTE]
+> Certaines tâches de la liste suivante, comme la sélection d’entités pour attribuer manuellement l’étiquette **Sensible**, ne peuvent pas être effectuées avant l’installation de capteurs Azure ATP et la synchronisation initiale. Prévoyez jusqu’à 2 heures pour la synchronisation initiale.
 
 #### <a name="configuration"></a>Configuration
 
@@ -113,38 +114,36 @@ Connectez-vous au portail Azure ATP et effectuez les tâches de configuration su
 | 10 | [Activer/désactiver les notifications par e-mail](https://docs.microsoft.com/azure-advanced-threat-protection/notifications) | - [ ] |
 | 11  | [Paramètres de planification des rapports](https://docs.microsoft.com/azure-advanced-threat-protection/reports) (liste des rapports et planifications).| - [ ] |
 | 12  | Configurer des [autorisations en fonction du rôle](https://docs.microsoft.com/azure-advanced-threat-protection/atp-role-groups) | - [ ] |
-| 12  | [Configuration de notifications SIEM (adresse IP)](https://docs.microsoft.com/azure-advanced-threat-protection/configure-event-collection#siemsyslog)| - [ ] | 
+| 12  | [Configuration de notifications SIEM (adresse IP)](https://docs.microsoft.com/azure-advanced-threat-protection/configure-event-collection#siemsyslog)| - [ ] |
 
 #### <a name="validation"></a>Validation
 
 Dans le portail Azure ATP :
-- Passez en revue les [alertes d’intégrité](https://docs.microsoft.com/azure-advanced-threat-protection/atp-health-center) à la recherche de problèmes de service. 
+
+- Passez en revue les [alertes d’intégrité](https://docs.microsoft.com/azure-advanced-threat-protection/atp-health-center) à la recherche de problèmes de service.
 - Passez en revue les [journaux des erreurs de capteur](https://docs.microsoft.com/azure-advanced-threat-protection/troubleshooting-atp-using-logs) Azure ATP à la recherche d’erreurs inhabituelles.
 
 ## <a name="after-the-move"></a>Après le transfert
 
-Cette section du guide présente les actions que vous pouvez effectuer à l’issue du transfert. 
+Cette section du guide présente les actions que vous pouvez effectuer à l’issue du transfert.
 
->[!NOTE]
-> L’importation d’alertes de sécurité existantes d’ATA vers ATP n’est pas prise en charge. Veillez à enregistrer ou à corriger toutes les alertes ATA existantes avant de désactiver le centre ATA.  
+> [!NOTE]
+> L’importation d’alertes de sécurité existantes d’ATA vers ATP n’est pas prise en charge. Veillez à enregistrer ou à corriger toutes les alertes ATA existantes avant de désactiver le centre ATA.
 
-- **Désactiver le centre ATA** 
-    - Pour référencer les données du centre ATA après le transfert, nous vous recommandons de conserver les données du centre en ligne pendant un certain temps. Une fois le centre ATA désactivé, le nombre de ressources peut généralement être réduit, surtout si les ressources sont une machine virtuelle.  
+- **Désactiver le centre ATA**  
+  - Pour référencer les données du centre ATA après le transfert, nous vous recommandons de conserver les données du centre en ligne pendant un certain temps. Une fois le centre ATA désactivé, le nombre de ressources peut généralement être réduit, surtout si les ressources sont une machine virtuelle.
 
-- **Sauvegarder MongoDB** 
-    - Si vous souhaitez conserver les données ATA indéfiniment, [sauvegardez MongoDB](https://docs.microsoft.com/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).  
+- **Sauvegarder MongoDB**  
+  - Si vous souhaitez conserver les données ATA indéfiniment, [sauvegardez MongoDB](https://docs.microsoft.com/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
 ## <a name="mission-accomplished"></a>Mission accomplie
 
-Félicitations ! Vous venez de passer d’ATA à Azure ATP. 
+Félicitations ! Vous venez de passer d’ATA à Azure ATP.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez plus en détail les fonctionnalités d’[Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/what-is-atp), ses fonctions et les [alertes de sécurité](https://docs.microsoft.com/azure-advanced-threat-protection/understanding-security-alerts).  
+Découvrez plus en détail les fonctionnalités d’[Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/what-is-atp), ses fonctions et les [alertes de sécurité](https://docs.microsoft.com/azure-advanced-threat-protection/understanding-security-alerts).
+
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
 Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
-
-
-
-

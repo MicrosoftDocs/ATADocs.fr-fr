@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 0b0805a634466d1ef8e53c187ef674edc529eda4
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3529bee9f7ebaf13b541109375845fedcac2bfa8
+ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412684"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79989840"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -24,7 +24,25 @@ Cet article est fréquemment mis à jour pour vous informer des nouveautés des 
 
 Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’à la version 2.55 (comprise), voir la [Référence sur les versions d’Azure ATP](atp-release-reference.md).
 
-Flux RSS : Recevez une notification quand cette page est mise à jour en copiant-collant l’URL suivante dans votre lecteur de flux :   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2112"></a>Azure ATP version 2.112
+
+Date de publication : 15 mars 2020
+
+- **Intégration automatique des nouvelles instances d’Azure ATP avec Microsoft Cloud App Security**  
+Lors de la création d’une instance d’Azure ATP (anciennement Workspace), l’intégration avec Microsoft Cloud App Security est activée par défaut. Pour plus d’informations sur l’intégration, consultez [Utilisation d’Azure ATP avec Microsoft Cloud App Security](atp-mcas-integration.md).
+
+- **Nouvelles activités analysées**  
+Les analyses d’activité suivantes sont maintenant disponibles :
+  - ouverture de session interactive avec un certificat ;
+  - échec de l’ouverture de session avec un certificat ;
+  - accès délégué aux ressources.
+
+    En savoir plus sur les [activités surveillées par Azure ATP](monitored-activities.md)et la manière de [filtrer et de rechercher des activités surveillées](atp-activities-search.md) dans le portail.
+
+- **Amélioration de fonctionnalité : Enrichissement des activités d’accès aux ressources**  
+À partir de cette version, Azure ATP fournit des informations pour les activités d’accès aux ressources indiquant si la ressource est approuvée pour la délégation non contrainte. Non sécurisée, cette configuration de ressource comporte un risque que des acteurs malveillants puissent tourner l’application à leur avantage. Pour plus d'informations sur le risque, consultez [Évaluation de sécurité : Délégation Kerberos non sécurisée](atp-cas-isp-unconstrained-kerberos.md).
 
 ## <a name="azure-atp-release-2111"></a>Azure ATP version 2.111
 

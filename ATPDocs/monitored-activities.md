@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd669b3b0bcf1f505e69a65eecdb671b9f66845b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
+ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414673"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79989845"
 ---
 # <a name="azure-atp-monitored-activities"></a>Activités supervisées par Azure ATP
 
@@ -92,12 +92,15 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Type d’ouverture de session|Activité supervisée|Description|
 |---------------------|---------------------|------------------|
 |Type d’ouverture de session 2|Validation des informations d’identification|Événement d’authentification de compte de domaine utilisant les méthodes d’authentification NTLM et Kerberos.|
-|Type d’ouverture de session 2|Ouverture de session interactive|L’utilisateur a obtenu l’accès au réseau en entrant un nom d’utilisateur et un mot de passe (méthode d’authentification Kerberos).|
+|Type d’ouverture de session 2|Ouverture de session interactive|L’utilisateur a obtenu un accès réseau en entrant un nom d’utilisateur et un mot de passe (méthode d’authentification Kerberos ou NTLM).|
+|Type d’ouverture de session 2|Ouverture de session interactive avec un certificat|L’utilisateur a obtenu un accès réseau à l’aide d’un certificat.|
 |Type d’ouverture de session 2|Connexion VPN|L’utilisateur s’est connecté via l’authentification VPN à l’aide du protocole RADIUS.|
-|Type d’ouverture de session 3|Accès aux ressources|L’utilisateur a accédé à une ressource à l’aide de l’authentification Kerberos.|
+|Type d’ouverture de session 3|Accès aux ressources|L’utilisateur a accédé à une ressource à l’aide de l’authentification Kerberos ou NTLM.|
+|Type d’ouverture de session 3|Accès délégué aux ressources|L’utilisateur a accédé à une ressource à l’aide de la délégation Kerberos.|
 |Type d’ouverture de session 8|Texte en clair LDAP|L’utilisateur s’est authentifié à l’aide du protocole LDAP avec un mot de passe en texte clair (authentification simple).|
 |Type d’ouverture de session 10|Bureau à distance|L’utilisateur a ouvert une session RDP sur un ordinateur distant à l’aide de l’authentification Kerberos.|
 |---|Échec de l’ouverture de session|La tentative d’authentification du compte de domaine (via NTLM et Kerberos) a échoué pour l’une des raisons suivantes : le compte a été désactivé ou verrouillé, il a expiré ou il a utilisé un certificat non approuvé, ou une tentative d’ouverture de session non valide a été effectuée (heure d’ouverture de session non valide, utilisation d’un ancien mot de passe, expiration du mot de passe ou mot de passe incorrect).|
+|---|Échec de l’ouverture de session avec un certificat|La tentative d’authentification du compte de domaine (par Kerberos) a échoué pour l’une des raisons suivantes : compte désactivé, expiré ou verrouillé, certificat non approuvé, heure d’ouverture de session non valide, ancien mot de passe, mot de passe expiré ou mot de passe incorrect.|
 
 ## <a name="monitored-machine-activities-machine-account"></a>Activités surveillées des machines : Compte d’ordinateur
 

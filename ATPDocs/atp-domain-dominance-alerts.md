@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ff893c87c1bff5c1cdc6ace9fe4beae1ddb2c6fe
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 33278c6207a21bb5155458d0a3cba61412bd5053
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414418"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504197"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -64,8 +64,8 @@ Les scanners de sécurité avancés peuvent générer légitimement ce type d’
 
 1. Vérifiez si l’ordinateur source exécute un scanner de sécurité approuvé par l’organisation dans Active Directory.
 
-    - Si la réponse est **oui** alors qu’il ne devrait pas s’exécuter, corrigez la configuration de l’application. Cette alerte est une activité **B-TP** et peut être **fermée**.
-    - Si la réponse est **oui** et qu’il doit toujours agir ainsi, **fermez** l’alerte et excluez cet ordinateur, il s’agit probablement d’une activité **B-TP**.
+    * Si la réponse est **oui** alors qu’il ne devrait pas s’exécuter, corrigez la configuration de l’application. Cette alerte est une activité **B-TP** et peut être **fermée**.
+    * Si la réponse est **oui** et qu’il doit toujours agir ainsi, **fermez** l’alerte et excluez cet ordinateur, il s’agit probablement d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -76,10 +76,10 @@ Les scanners de sécurité avancés peuvent générer légitimement ce type d’
 
 1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 3. La clé privée volée n’est jamais modifiée. Ce qui signifie que l’acteur peut toujours utiliser la clé volée pour déchiffrer les données protégées dans le domaine cible. Il n’existe pas de moyen méthodologique pour changer cette clé privée.
-    - Pour créer une clé, utilisez la clé privée actuelle, créez une clé et rechiffrez chaque clé principale de domaine avec la nouvelle clé privée.
+    * Pour créer une clé, utilisez la clé privée actuelle, créez une clé et rechiffrez chaque clé principale de domaine avec la nouvelle clé privée.
 
 ## <a name="remote-code-execution-attempt-external-id-2019"></a>Tentative d’exécution de code à distance (ID externe 2019)
 
@@ -94,8 +94,8 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 Les stations de travail d’administration, les membres des équipes informatiques et les comptes de service peuvent tous légitimement effectuer des tâches d’administration sur les contrôleurs de domaine.
 
 1. Vérifiez si l’utilisateur ou l’ordinateur source est censé exécuter ces types de commandes sur votre contrôleur de domaine.
-    - Si l’utilisateur ou l’ordinateur source est autorisé à exécuter ces types de commandes, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
-    - Si l’utilisateur ou l’ordinateur source est autorisé à exécuter ces commandes sur votre contrôleur de domaine et va continuer à le faire, il s’agit d’une activité **B-TP**. **Fermez** l’alerte de sécurité et excluez l’ordinateur.
+    * Si l’utilisateur ou l’ordinateur source est autorisé à exécuter ces types de commandes, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si l’utilisateur ou l’ordinateur source est autorisé à exécuter ces commandes sur votre contrôleur de domaine et va continuer à le faire, il s’agit d’une activité **B-TP**. **Fermez** l’alerte de sécurité et excluez l’ordinateur.
 
 **Comprendre l’étendue de la violation**
 
@@ -108,11 +108,11 @@ Les stations de travail d’administration, les membres des équipes informatiqu
 
 1. Réinitialisez le mot de passe des utilisateurs source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez les contrôleurs de domaine en procédant ainsi :
-    - Empêchez la tentative d’exécution du code à distance.
-    - Recherchez les utilisateurs connectés aux environs de l’heure de l’activité suspecte, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Empêchez la tentative d’exécution du code à distance.
+    * Recherchez les utilisateurs connectés aux environs de l’heure de l’activité suspecte, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 3. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés aux environs de l’heure de l’activité suspecte, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés aux environs de l’heure de l’activité suspecte, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 **Prévention**
 
@@ -153,9 +153,9 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Vérifiez si cet ordinateur source est censé générer ce type d’activité.
 
-    - Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
-    - Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes bénignes.
+    * Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes bénignes.
 
 **Comprendre l’étendue de la violation**
 
@@ -167,8 +167,8 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 **Correction :**
 
 1. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis.  
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis.  
     Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 **Prévention :**
@@ -206,9 +206,9 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Cet ordinateur source était-il censé générer ce type d’activité ?
 
-    - Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
-    - Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes **B-TP**.
+    * Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -219,8 +219,8 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 **Correction :**
 
 1. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis.
     Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Corrigez les données qui ont été répliquées sur les contrôleurs de domaine.
 
@@ -263,9 +263,9 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Cet ordinateur source était-il censé générer ce type d’activité ?
 
-    - Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si la réponse est **oui** alors que l’ordinateur source ne devrait pas continuer la génération de ce type d’activité, corrigez la configuration de l’application/du serveur. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
-    - Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes bénignes.
+    * Si la réponse est **oui** et que l’ordinateur source doit continuer à générer ce type d’activité, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes bénignes.
 
 **Comprendre l’étendue de la violation**
 
@@ -277,8 +277,8 @@ Les serveurs et les applications risquent de répliquer les données à partir d
 
 1. Réinitialisez le mot de passe des utilisateurs source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 **Prévention :**
 
@@ -300,12 +300,12 @@ Dans une alerte Golden Ticket, la méthode de chiffrement du champ TGT du messag
 
 **TP, B-TP ou FP**
 
-Certaines ressources légitimes ne prennent pas en charge les codes de chiffrement fort et peuvent déclencher cette alerte.
+Certaines ressources légitimes, qui ne prennent pas en charge le chiffrement renforcé, sont susceptibles de déclencher cette alerte.
 
 1. Les utilisateurs sources partagent-ils tous quelque chose en commun ?
    1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
    2. Vérifiez les ressources auxquelles ces tickets ont accédé.
-      - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
+      * Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
    3. Si une seule ressource fait actuellement l’objet d’un accès, vérifiez qu’il s’agit d’une ressource valide à laquelle ces utilisateurs sont censés accéder.
 
       Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
@@ -313,9 +313,9 @@ Certaines ressources légitimes ne prennent pas en charge les codes de chiffreme
 Les applications peuvent s’authentifier avec un code de chiffrement plus faible. Certaines s’authentifient pour le compte d’utilisateurs, comme les serveurs IIS et SQL.
 
 1. Vérifiez si les utilisateurs sources partagent quelque chose en commun.
-    - Par exemple, les membres du personnel de vente utilisent-ils tous une application spécifique qui risque déclencher l’alerte ?
-    - Vérifiez s’il existe des applications de ce type sur l’ordinateur source.
-    - Vérifiez les rôles de l’ordinateur.  
+    * Par exemple, les membres du personnel de vente utilisent-ils tous une application spécifique qui risque déclencher l’alerte ?
+    * Vérifiez s’il existe des applications de ce type sur l’ordinateur source.
+    * Vérifiez les rôles de l’ordinateur.  
     Des serveurs fonctionnent-ils avec ces types d’applications ?
 
      Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
@@ -331,13 +331,13 @@ Les applications peuvent s’authentifier avec un code de chiffrement plus faibl
 
 1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés.
-    - **Planifiez soigneusement avant d’effectuer la double réinitialisation KRBTGT. Celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
+    * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés.
+    * **Planifiez soigneusement avant d’effectuer la double réinitialisation KRBTGT. Celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
 
 4. Vérifiez que tous les contrôleurs de domaine avec une version de système d’exploitation antérieure ou égale à Windows Server 2012 R2 sont installés avec [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) et que tous les serveurs et contrôleurs de domaine membres avec une version antérieure ou égale à 2012 R2 sont à jour avec [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Pour plus d’informations, consultez  [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)  et  [Faux PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
@@ -355,12 +355,12 @@ Pour les ordinateurs qui sont corrigés avec MS14-068 (contrôleur de domaine) o
 
 1. Vérifiez si les ressources ont fait l’objet d’un accès dans la liste des preuves d’alerte de sécurité, et si les tentatives ont réussi ou échoué.
 2. Vérifiez si les ordinateurs qui ont fait l’objet d’un accès ont été corrigés, comme décrit ci-dessus.
-    - Si les ordinateurs ont été corrigés, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si les ordinateurs ont été corrigés, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
 Certains systèmes d’exploitation ou applications sont connus pour modifier les données d’autorisation. Par exemple, les services Linux et Unix ont leur propre mécanisme d’autorisation qui peut déclencher l’alerte.
 
 1. L’ordinateur source exécute-t-il un système d’exploitation ou une application qui a son propre mécanisme d’autorisation ?
-    - Si l’ordinateur source exécute ce type de mécanisme d’autorisation, mettez à niveau le système d’exploitation ou corrigez la configuration de l’application. **Fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+    * Si l’ordinateur source exécute ce type de mécanisme d’autorisation, mettez à niveau le système d’exploitation ou corrigez la configuration de l’application. **Fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -372,10 +372,10 @@ Certains systèmes d’exploitation ou applications sont connus pour modifier le
 
 1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
+    * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
 4. Vérifiez que tous les contrôleurs de domaine avec une version de système d’exploitation antérieure ou égale à Windows Server 2012 R2 sont installés avec [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) et que tous les serveurs et contrôleurs de domaine membres avec une version antérieure ou égale à 2012 R2 sont à jour avec [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Pour plus d’informations, consultez  [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)  et  [Faux PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Suspicion d’utilisation de golden ticket (compte inexistant) (ID externe 2027)
@@ -393,7 +393,7 @@ La synchronisation des changements dans Active Directory peut prendre du temps.
 2. L’utilisateur a-t-il été récemment ajouté ?
 3. L’utilisateur a-t-il été récemment supprimé d’Active Directory  ?
 
-Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+Si la réponse à toutes les questions précédentes est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -402,12 +402,12 @@ Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte co
 **Suggestions de correction et étapes préventives**
 
 1. Inclure les ordinateurs sources
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
+    * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
 
 ## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Suspicion d’utilisation de golden ticket (anomalie de ticket) (ID externe 2032)
 
@@ -419,7 +419,7 @@ Les attaquants ayant des droits d’administrateur de domaine peuvent compromett
 
 Les services de fédération peuvent générer des tickets qui déclencheront cette alerte.
 1. L’ordinateur source héberge-t-il les services de fédération qui génèrent ces types de tickets ?
-    - Si l’ordinateur source héberge des services qui génèrent ces types de tickets, fermez l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si l’ordinateur source héberge des services qui génèrent ces types de tickets, fermez l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -429,12 +429,12 @@ Les services de fédération peuvent générer des tickets qui déclencheront ce
 **Suggestions de correction et étapes préventives**
 
 1. Inclure les ordinateurs sources
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.
+    * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.
 
     **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
 
@@ -450,9 +450,9 @@ Les attaquants ayant des droits d’administrateur de domaine peuvent compromett
 
 1. Au cours des dernières heures, le paramètre **Durée de vie maximale du ticket utilisateur** de la stratégie de sécurité a-t-il fait l’objet de modifications susceptibles d’affecter l’alerte ?
 2. Le capteur autonome Azure ATP impliqué dans cette alerte est-il une machine virtuelle ?
-    - Si le capteur autonome Azure ATP est impliqué, a-t-il été récemment repris à partir d’un état enregistré ?
+    * Si le capteur autonome Azure ATP est impliqué, a-t-il été récemment repris à partir d’un état enregistré ?
 3. Le réseau présente-t-il un problème de synchronisation d’heure, où les ordinateurs ne sont pas tous synchronisés ?
-    - Cliquez sur le bouton **Télécharger les détails** pour voir le fichier Excel du rapport de l’alerte de sécurité, voir les activités réseau associées et vérifier s’il existe une différence entre « StartTime » et « DomainControllerStartTime ».
+    * Cliquez sur le bouton **Télécharger les détails** pour voir le fichier Excel du rapport de l’alerte de sécurité, voir les activités réseau associées et vérifier s’il existe une différence entre « StartTime » et « DomainControllerStartTime ».
 
 Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
@@ -464,12 +464,12 @@ Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de
 **Suggestions de correction et étapes préventives**
 
 1. Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    - Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
-    - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.
+    * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.
 
     **Planifiez soigneusement avant d’effectuer une double réinitialisation KRBTGT. La réinitialisation impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.**
 
@@ -493,8 +493,8 @@ Skeleton Key est un programme malveillant qui s’exécute sur les contrôleurs 
 
 1. Réinitialisez les mots de passe des utilisateurs compromis et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez le contrôleur de domaine.
-    - Supprimez les programmes malveillants. Pour plus d’informations, voir [Analyse des programmes malveillants Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
-    - Recherchez les utilisateurs connectés au environs de l’heure où l’activité suspecte s’est produite, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Supprimez les programmes malveillants. Pour plus d’informations, voir [Analyse des programmes malveillants Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
+    * Recherchez les utilisateurs connectés au environs de l’heure où l’activité suspecte s’est produite, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 ## <a name="suspicious-additions-to-sensitive-groups-external-id-2024"></a>Ajouts suspects à des groupes sensibles (ID externe 2024)
 
@@ -514,14 +514,14 @@ Quatre semaines par contrôleur de domaine, à partir du premier événement.
 
 Les modifications de groupe légitimes qui se produisent rarement et le système qui n’a pas appris « normalement » peuvent déclencher une alerte. Ces alertes sont considérées comme **B-TP**.
 1. La modification du groupe est-elle légitime ?
-    - Si la modification du groupe est légitime, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+    * Si la modification du groupe est légitime, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
 1. Examinez les utilisateurs ajoutés aux groupes.
-    - Concentrez-vous sur leurs activités une fois qu’ils ont été ajoutés aux groupes sensibles.
+    * Concentrez-vous sur leurs activités une fois qu’ils ont été ajoutés aux groupes sensibles.
 2. Examinez l’utilisateur source.
-    - Téléchargez le rapport **Modifications des groupes sensibles** pour voir toutes les autres modifications effectuées au cours de la même période et en déterminer les auteurs.
+    * Téléchargez le rapport **Modifications des groupes sensibles** pour voir toutes les autres modifications effectuées au cours de la même période et en déterminer les auteurs.
 3. Recherchez les ordinateurs auxquels l’utilisateur source s’est connecté aux environs de l’heure de l’activité.
 
 **Suggestions de correction et étapes préventives**
@@ -529,9 +529,9 @@ Les modifications de groupe légitimes qui se produisent rarement et le système
 **Correction :**
 
 1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    - Recherchez l’ordinateur sur lequel l’utilisateur source était actif.
-    - Vérifiez les ordinateurs auxquels l’utilisateur s’est connecté aux environs de l’heure de l’activité. Vérifiez si ces ordinateurs sont compromis.
-    - Si les utilisateurs sont compromis, réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Recherchez l’ordinateur sur lequel l’utilisateur source était actif.
+    * Vérifiez les ordinateurs auxquels l’utilisateur s’est connecté aux environs de l’heure de l’activité. Vérifiez si ces ordinateurs sont compromis.
+    * Si les utilisateurs sont compromis, réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 **Prévention :**
 
@@ -551,8 +551,8 @@ Un service suspect a été créé sur un contrôleur de domaine dans votre organ
 Certaines tâches d’administration sont légitimement effectuées sur les contrôleur de domaine par les stations de travail d’administration, les membres des équipes informatiques et les comptes de service.
 
 1. L’utilisateur/ordinateur source est-il censé exécuter ces types de services sur le contrôleur de domaine ?
-    - Si l’utilisateur ou l’ordinateur source est censé exécuter ces types de services, mais ne doit pas continuer, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
-    - Si l’utilisateur ou l’ordinateur source est censé exécuter ces types de services et doit continuer, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez cet ordinateur.
+    * Si l’utilisateur ou l’ordinateur source est censé exécuter ces types de services, mais ne doit pas continuer, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+    * Si l’utilisateur ou l’ordinateur source est censé exécuter ces types de services et doit continuer, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez cet ordinateur.
 
 **Comprendre l’étendue de la violation**
 
@@ -565,10 +565,10 @@ Certaines tâches d’administration sont légitimement effectuées sur les cont
 
 1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Incluez les contrôleurs de domaine.
-    - Corrigez le service suspect.
-    - Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+    * Corrigez le service suspect.
+    * Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 3. Localisez l’ordinateur sur lequel l’utilisateur source était actif.
-    - Vérifiez les ordinateurs auxquels l’utilisateur s’est connecté aux environs de l’heure de l’activité et vérifiez si ces ordinateurs sont également compromis.
+    * Vérifiez les ordinateurs auxquels l’utilisateur s’est connecté aux environs de l’heure de l’activité et vérifiez si ces ordinateurs sont également compromis.
 
 **Prévention :**
 
@@ -581,11 +581,11 @@ Certaines tâches d’administration sont légitimement effectuées sur les cont
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Examiner un ordinateur](investigate-a-computer.md)
-- [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
-- [Utilisation des chemins de mouvement latéral](use-case-lateral-movement-path.md)
-- [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
-- [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
-- [Alertes de mouvement latéral](atp-lateral-movement-alerts.md)
-- [Alertes d’exfiltration](atp-exfiltration-alerts.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+* [Examiner un ordinateur](investigate-a-computer.md)
+* [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
+* [Utilisation des chemins de mouvement latéral](use-case-lateral-movement-path.md)
+* [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
+* [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
+* [Alertes de mouvement latéral](atp-lateral-movement-alerts.md)
+* [Alertes d’exfiltration](atp-exfiltration-alerts.md)
+* [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
