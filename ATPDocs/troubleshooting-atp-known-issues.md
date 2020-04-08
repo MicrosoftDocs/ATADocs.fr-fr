@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
-ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
+ms.openlocfilehash: bb738a45889bbb2c509f6cf2b2d7e47f0782bd7a
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79504239"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669717"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -101,13 +101,13 @@ Solutions de contournement possibles :
 
 - Si votre ordinateur dispose de moins de 64 cœurs logiques et s’exécute sur un hôte HP, vous pourrez peut-être modifier le paramètre BIOS **Optimisation de la taille du groupe NUMA** de la valeur par défaut **En cluster** à la valeur **Plat**.
 
-## <a name="windows-defender-atp-integration-issue"></a>Problème d’intégration Windows Defender ATP
+## <a name="microsoft-defender-atp-integration-issue"></a>Problème d’intégration de Microsoft Defender ATP
 
-Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Windows Defender ATP. Pour plus d’informations, consultez [Intégration d’Azure ATP et de Windows Defender ATP](integrate-wd-atp.md).
+Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Microsoft Defender ATP. Pour plus d’informations, consultez [Intégration d’Azure ATP et de Microsoft Defender ATP](integrate-wd-atp.md).
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problème de capteur pour la machine virtuelle VMware
 
-Si vous avez un capteur Azure ATP sur des machines virtuelles VMware, vous pouvez recevoir l’alerte de surveillance **Une partie du trafic réseau n’est pas analysée**. Ce scénario se produit à cause d’une différence de configuration dans VMware.
+Si vous avez un capteur Azure ATP sur des machines virtuelles VMware, vous pouvez recevoir l’alerte d’intégrité **Une partie du trafic réseau n’est pas analysée**. Ce scénario se produit à cause d’une différence de configuration dans VMware.
 
 Pour résoudre le problème
 
@@ -129,7 +129,7 @@ Si LSO est activé, utilisez la commande suivante pour le désactiver :
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Le capteur n’a pas réussi à récupérer les informations d'identification du compte de service administré du groupe (gMSA)
 
-Si vous recevez l’alerte de surveillance suivante : **Les informations d'identification de l'utilisateur des services d'annuaire sont incorrectes**
+Si vous recevez l’alerte d’intégrité suivante : **Les informations d'identification de l'utilisateur des services d'annuaire sont incorrectes**
 
 **Entrées du journal du capteur :**
 

@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3529bee9f7ebaf13b541109375845fedcac2bfa8
-ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
+ms.openlocfilehash: f56f4a10a956cab92aa18c5f7dcdd208d0e4d8b3
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79989840"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669644"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -400,8 +400,8 @@ Les chemins de mouvement latéral (LMP) constituent une méthode clé pour la d�
 
 Date de publication : 24 mars 2019
 
-- **Amélioration de fonctionnalité : Alertes de monitoring de résolution de noms réseau (NNR)**  
-Des alertes de monitoring ont été ajoutées pour les niveaux de confiance associés à des alertes de sécurité Azure ATP qui reposent sur la résolution NNR. Chacune comprend des recommandations actionnables et détaillées aidant à résoudre les faibles taux de réussite NNR.
+- **Amélioration de fonctionnalité : Alertes d’intégrité de résolution de noms réseau (NNR)**  
+Des alertes d’intégrité ont été ajoutées pour les niveaux de confiance associés à des alertes de sécurité Azure ATP qui reposent sur la résolution NNR. Chacune comprend des recommandations actionnables et détaillées aidant à résoudre les faibles taux de réussite NNR.
 
     Pour plus d’informations sur la façon dont Azure ATP utilise la résolution NNR et sur son importance pour l’exactitude des alertes, voir [Présentation de la résolution de noms réseau](atp-nnr-policy.md).
 

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 209202957877edf07de5309ae3e07143fc653452
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 92c17776623beb3d03e37bb81ce12b433e5dc35e
+ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414656"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80666178"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
@@ -25,7 +25,7 @@ Il est essentiel de maintenir Azure Advanced Threat Protection à jour pour bén
 
 Le service Azure ATP est en général mis à jour plusieurs fois par mois : nouvelles détections, nouvelles fonctionnalités et améliorations des performances. Elles s’accompagnent souvent d’une mise à jour mineure des capteurs. Les capteurs Azure ATP et les mises à jour correspondantes n’ont jamais d’autorisations d’accès en écriture à vos contrôleurs de domaine. Les mises à jour contrôlent seulement les capteurs Azure ATP et leurs fonctionnalités de détection. 
 
-### <a name="azure-atp-sensor-update-types"></a>Types de mise à jour des capteurs Azure ATP   
+### <a name="azure-atp-sensor-update-types"></a>Types de mise à jour des capteurs Azure ATP    
 
 Les capteurs Azure ATP acceptent deux types de mises à jour :
 - Mises à jour des versions mineures : 
@@ -89,7 +89,7 @@ Pour définir un capteur sur une mise à jour différée :
 ![Mise à jour des capteurs](./media/sensor-update.png)
 
 
-En cas d’échec du processus de mise à jour sur un capteur, une alerte de monitoring est déclenchée et envoyée sous forme de notification.
+En cas d’échec du processus de mise à jour sur un capteur, une alerte d’intégrité est déclenchée et envoyée sous forme de notification.
 
 ![Échec de la mise à jour d’un capteur](./media/sensor-outdated.png)
 

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 33278c6207a21bb5155458d0a3cba61412bd5053
-ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
+ms.openlocfilehash: 37e153e3b5b6c4511648c6971b07602cf5f34b6a
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79504197"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669671"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -333,7 +333,7 @@ Les applications peuvent s’authentifier avec un code de chiffrement plus faibl
 2. Incluez l’ordinateur source.
     * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     * Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Si vous avez installé Microsoft Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés.
@@ -404,7 +404,7 @@ Si la réponse à toutes les questions précédentes est **oui**, **fermez** l�
 1. Inclure les ordinateurs sources
     * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Si vous avez installé Microsoft Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés. Planifiez avec soin avec d’effectuer une double réinitialisation de KRBTGT, car celle-ci impacte tous les ordinateurs, serveurs et utilisateurs de l’environnement.
@@ -431,7 +431,7 @@ Les services de fédération peuvent générer des tickets qui déclencheront ce
 1. Inclure les ordinateurs sources
     * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Si vous avez installé Microsoft Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.
@@ -466,7 +466,7 @@ Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de
 1. Incluez l’ordinateur source.
     * Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     * Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-    * Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+    * Si vous avez installé Microsoft Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 2. Incluez les ressources auxquelles a accédé ce ticket.
 3. Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services sont interrompus et ne refonctionnent qu’après avoir été renouvelés ou, dans certains cas, redémarrés.

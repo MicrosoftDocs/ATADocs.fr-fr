@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0d737adb2c4d03fbeedb2277573f40d4a29b5de9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: a6ae76dcee7b6a54f7721c77277387ac4f2e7fbb
+ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413279"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80666231"
 ---
 # <a name="azure-atp-architecture"></a>Architecture Azure ATP
 
@@ -34,7 +34,7 @@ Directement installé sur vos contrôleurs de domaine, le capteur Azure ATP acc�
 ## <a name="azure-atp-components"></a>Composants d’Azure ATP
 Azure ATP est constitué des composants suivants :
 
--   **Portail Azure ATP** <br>
+-    **Portail Azure ATP** <br>
 Le portail Azure ATP vous permet de créer votre instance Azure ATP, montre les données provenant des capteurs Azure ATP, et vous permet de superviser, gérer et examiner les menaces dans votre environnement réseau.  
 -   **Capteur Azure ATP**<br>
 Les capteurs Azure ATP sont installés directement sur vos contrôleurs de domaine. Le capteur supervise directement le trafic des contrôleurs de domaine, sans recourir à un serveur dédié, ou à une configuration de mise en miroir de ports.
@@ -80,7 +80,7 @@ Le capteur Azure ATP inclut un composant de surveillance qui évalue la capacit�
 
 Quoi qu’il se passe sur le contrôleur de domaine, le processus de supervision libère continuellement des ressources pour que les fonctionnalités principales du contrôleur de domaine ne soient pas affectées.
 
-Si en raison du processus de supervision, le capteur Azure ATP vient à manquer de ressources, le trafic n’est que partiellement supervisé et l’alerte de supervision « Dropped port mirrored network traffic » (Le trafic réseau du port en miroir a été supprimé) s’affiche dans la page Intégrité du portail Azure ATP.
+Si en raison du processus de supervision, le capteur Azure ATP vient à manquer de ressources, le trafic n’est que partiellement supervisé et l’alerte d’intégrité « Dropped port mirrored network traffic » (Le trafic réseau du port en miroir a été supprimé) s’affiche dans la page Intégrité du portail Azure ATP.
 
 ### <a name="windows-events"></a>Événements Windows
 

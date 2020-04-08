@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 294d76a0455ac11866196919caa1bd830617420b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 77ec242769d15eb3681f9e511709a0e6953878e8
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414707"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669523"
 ---
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Modifier le mot de passe de connectivité de domaine dans la configuration du portail Azure ATP
 
@@ -53,5 +53,5 @@ Suivez la procédure ci-dessous pour mettre à jour le mot de passe de connectiv
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Intégration à Windows Defender ATP](integrate-wd-atp.md)
+- [Intégration avec Microsoft Defender ATP](integrate-wd-atp.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

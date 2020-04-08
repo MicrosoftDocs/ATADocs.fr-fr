@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ecac12f266a424e55266d1343a2d03a75bca8840
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: d33b9c03bc7d2a83760b64d32c7c810aa75d1908
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413993"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669433"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Prise en charge de plusieurs forêts dans Azure Advanced Threat Protection
 
@@ -31,7 +31,7 @@ Avec la prise en charge de plusieurs forêts Active Directory :
 
 - vous permet de voir et de superviser les activités effectuées par les utilisateurs dans plusieurs forêts à partir d’un seul volet ;
 - améliore la détection et réduit les faux positifs grâce à l’intégration Active Directory avancée et à la résolution de comptes ;
-- améliore le contrôle et facilite le déploiement ; améliore les alertes de supervision et la création de rapports pour la couverture interorganisationnelle lorsque vos contrôleurs de domaine sont supervisés à partir d’une seule console Azure ATP.
+- améliore le contrôle et facilite le déploiement ; améliore les alertes d’intégrité et la création de rapports pour la couverture interorganisationnelle lorsque vos contrôleurs de domaine sont supervisés à partir d’une seule console Azure ATP.
 
 ## <a name="azure-atp-detection-activity-across-multiple-forests"></a>Détection par Azure ATP des activités dans plusieurs forêts
 

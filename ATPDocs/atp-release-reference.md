@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: efc6412bebeb839c577a3e65aac0d9386927a0a3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 347af29a8748446345455442741e8c7eb599ac5b
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414180"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669762"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Référence sur les versions d’Azure Advanced Threat Protection (Azure ATP) 
 
@@ -34,9 +34,9 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 ## <a name="azure-atp-release-254"></a>Azure ATP version 2.54
 Publication : 11 novembre 2018
 
-- **Amélioration de fonctionnalité : des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte via DNS**<br>   Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
+- **Amélioration de fonctionnalité : des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte via DNS**<br> Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md). 
 
-- **Améliorations de la documentation : mise à jour des journaux SIEM, conseils de problèmes connus**<br>    Un mappage des externalId ainsi que des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md). <br>Un article a été ajouté pour fournir des conseils au sujet de problèmes connus non encore résolus. Pour en savoir plus, consultez [Problèmes connus dans Azure ATP](known-issues.md).  
+- **Améliorations de la documentation : mise à jour des journaux SIEM, conseils de problèmes connus**<br> Un mappage des externalId ainsi que des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md). <br>Un article a été ajouté pour fournir des conseils au sujet de problèmes connus non encore résolus. Pour en savoir plus, consultez [Problèmes connus dans Azure ATP](known-issues.md).  
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
@@ -47,7 +47,7 @@ Publication : 4 novembre 2018
 L’[alerte de sécurité d’échec d’authentification suspecte](suspicious-activity-guide.md) d’Azure ATP inclut désormais la surveillance pour la détection des attaques en force par pulvérisation de mots de passe.
 Dans une attaque par **pulvérisation de mots de passe** classique, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Lorsque la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. 
 
-- **Amélioration de fonctionnalité : envoyer un message de test Syslog**<br>   Nouvelle possibilité d’envoyer un message test Syslog pendant le processus de configuration SIEM. Consultez [Intégrer à Syslog](setting-syslog.md) pour en savoir plus. 
+- **Amélioration de fonctionnalité : envoyer un message de test Syslog**<br> Nouvelle possibilité d’envoyer un message test Syslog pendant le processus de configuration SIEM. Consultez [Intégrer à Syslog](setting-syslog.md) pour en savoir plus. 
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -75,7 +75,7 @@ L’[alerte de sécurité Tentative d’exécution de code à distance](suspicio
 ## <a name="azure-atp-release-251"></a>Azure ATP version 2.51
 Publication : 21 octobre 2018
 
-- Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
+- Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -86,9 +86,9 @@ Publication : 14 octobre 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP version 2.49
 Publication : 7 octobre 2018
--   **Nouvelles détections : communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour renforcer la protection contre les attaques de communication suspecte sur le DNS :
+- **Nouvelles détections : communication DNS suspecte** (préversion)<br>Nouvelle détection ajoutée pour renforcer la protection contre les attaques de communication suspecte sur le DNS :
 
-    -   Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Un attaquant peut alors accéder à une machine compromise afin d’utiliser le protocole DNS de manière abusive. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
+    - Cette détection permet de détecter les attaques contre le protocole DNS. Dans la plupart des organisations, le protocole DNS n’est pas supervisé et les activités malveillantes sont rarement bloquées. Un attaquant peut alors accéder à une machine compromise afin d’utiliser le protocole DNS de manière abusive. Des communications malveillantes via DNS peuvent être utilisées pour l’exfiltration, des commandes et le contrôle des données, et/ou l’affranchissement des limitations du réseau d’entreprise.
 
 - **Nouvelle fonctionnalité** <br>**Rôle d’utilisateur** Azure ATP amélioré avec les fonctionnalités suivantes :
   - Changer l’état des alertes de sécurité (rouvrir, fermer, exclure, supprimer)
@@ -188,16 +188,16 @@ Publication : 22 juillet 2018
 
   - permet de voir et d’examiner les activités effectuées par les utilisateurs dans différentes forêts sur un seul écran ;
   - améliore la détection et réduit les faux positifs grâce à l’intégration Active Directory avancée et à la résolution de comptes ;
-  - fournit de meilleures alertes de monitoring et fonctionnalités de création de rapports pour une couverture interorganisationnelle.
+  - fournit de meilleures alertes d’intégrité et fonctionnalités de création de rapports pour une couverture interorganisationnelle.
 
 
--   **Nouvelles détections : DCShadow**<br>Deux nouvelles détections ont été ajoutées pour vous protéger contre les attaques DCShadow (« Domain Controller Shadow ») :
+- **Nouvelles détections : DCShadow**<br>Deux nouvelles détections ont été ajoutées pour vous protéger contre les attaques DCShadow (« Domain Controller Shadow ») :
 
-    -   Promotion des contrôleurs de domaine suspects (attaque potentielle DCShadow) : cette détection permet de détecter les attaques selon lesquelles un ordinateur emprunte l’identité d’un contrôleur de domaine, puis essaie d’utiliser la réplication pour propager les modifications à d’autres contrôleurs de domaine dans votre domaine.
+    - Promotion des contrôleurs de domaine suspects (attaque potentielle DCShadow) : cette détection permet de détecter les attaques selon lesquelles un ordinateur emprunte l’identité d’un contrôleur de domaine, puis essaie d’utiliser la réplication pour propager les modifications à d’autres contrôleurs de domaine dans votre domaine.
 
-    -   Demande de réplication suspecte (attaque potentielle DCShadow) : cette détection permet de protéger contre les attaques qui tentent d’effectuer une promotion au statut de contrôleur de domaine sur des ordinateurs qui ne l’ont pas afin de modifier les objets annuaire.
+    - Demande de réplication suspecte (attaque potentielle DCShadow) : cette détection permet de protéger contre les attaques qui tentent d’effectuer une promotion au statut de contrôleur de domaine sur des ordinateurs qui ne l’ont pas afin de modifier les objets annuaire.
 
--   **Amélioration des informations sur le passage à une version antérieure du chiffrement**<br>La détection du passage à une version antérieure du chiffrement donne maintenant des informations supplémentaires sur le type d’attaque détecté : Overpass-the-Hash, golden ticket et Skeleton Key. Par ailleurs, ces alertes ont été agrégées pour faciliter les recherches.
+- **Amélioration des informations sur le passage à une version antérieure du chiffrement**<br>La détection du passage à une version antérieure du chiffrement donne maintenant des informations supplémentaires sur le type d’attaque détecté : Overpass-the-Hash, golden ticket et Skeleton Key. Par ailleurs, ces alertes ont été agrégées pour faciliter les recherches.
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
 
@@ -212,7 +212,7 @@ Publication : 15 juillet 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP version 2.39
 
 Publication : 5 juillet 2018
--   **Nouvelle détection ajoutée : golden ticket Kerberos - compte inexistant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure Advanced Threat Protection (ATP) des activités suspectes](suspicious-activity-guide.md)
+- **Nouvelle détection ajoutée : golden ticket Kerberos - compte inexistant** (préversion)<br>Cette nouvelle détection vous aide à protéger votre organisation contre les attaques dans lesquelles un golden ticket est créé pour un compte qui n’existe pas dans votre domaine. Pour plus d’informations, consultez le [Guide Azure Advanced Threat Protection (ATP) des activités suspectes](suspicious-activity-guide.md)
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -248,7 +248,7 @@ Publication : 10 juin 2018
 
 - **Mise à jour de la détection d’implémentation de protocole inhabituelle**<br></br>La détection d’implémentation de protocole inhabituelle fournit des informations supplémentaires. Maintenant, vous pouvez voir quel outil d’attaque potentiel Azure ATP soupçonne d’agir sur votre réseau. Pour plus d’informations, consultez le [Guide des activités suspectes](suspicious-activity-guide.md).
  
-- **Alerte de capteur obsolète**<br></br>Azure ATP inclut une nouvelle alerte de monitoring pour vous permettre de savoir si un capteur a plus de trois versions de retard. Si vous voyez cette alerte, vous devez mettre à jour le capteur ou rechercher pourquoi le capteur n’est pas mis à jour automatiquement. Si l’alerte persiste, désinstallez et réinstallez le capteur.
+- **Alerte de capteur obsolète**<br></br>Azure ATP inclut une nouvelle alerte d’intégrité pour vous permettre de savoir si un capteur a plus de trois versions de retard. Si vous voyez cette alerte, vous devez mettre à jour le capteur ou rechercher pourquoi le capteur n’est pas mis à jour automatiquement. Si l’alerte persiste, désinstallez et réinstallez le capteur.
 
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
@@ -297,7 +297,7 @@ Publication : 6 mai 2018
 Publication : 29 avril 2018
  
 - Les activités de passage à une version antérieure de chiffrement suspectes incluent désormais une section de preuve qui décrit les symptômes détectés par Azure ATP provoquant la suspicion de l’apparition d’une activité de passage à une version antérieure de chiffrement. 
--   Azure ATP utilise désormais Azure E-mail Orchestrator pour tous les e-mails envoyés à partir de Azure ATP, y compris les activités suspectes, alertes et rapports de surveillance. Vous verrez que ces notifications par e-mail désormais suivent un format cohérent pour la facilité d’utilisation et les fichiers Excel seront liés par e-mail pour être téléchargés à partir de la console.
+- Azure ATP utilise désormais Azure E-mail Orchestrator pour tous les e-mails envoyés à partir de Azure ATP, y compris les activités suspectes, alertes d’intégrité et rapports. Vous verrez que ces notifications par e-mail désormais suivent un format cohérent pour la facilité d’utilisation et les fichiers Excel seront liés par e-mail pour être téléchargés à partir de la console.
  
  
 ## <a name="azure-atp-release-229"></a>Azure ATP version 2.29
@@ -311,7 +311,7 @@ Publication : 22 avril 2018
 
 Publication : 15 avril 2018
  
--   Les utilisateurs membres des groupes de rôles Utilisateurs Azure ATP et Observateurs ATP Azure sont à présent autorisés à voir les alertes de surveillance.
+- Les utilisateurs membres des groupes de rôles Utilisateurs Azure ATP et Observateurs ATP Azure sont à présent autorisés à voir les alertes d’intégrité.
 - Cette version comprend des correctifs et des améliorations visant plusieurs problèmes. 
 
 
@@ -329,8 +329,8 @@ Publication : 8 avril 2018
 Date de publication : 25 mars 2018
 
 - Quand Azure ATP vous avertit d’une activité suspecte que vous identifiez comme activité positive sans gravité (une action légitime qui n’est pas une activité suspecte), vous avez la possibilité d’exclure des ordinateurs et des adresses IP pour plus de détections, notamment : Déclassement de chiffrement, LDAP force brute, PAC falsifié, force brute et Pass-the-hash.
--   Les performances du capteur Azure ATP ont été améliorées.
--   Une nouvelle région a été ajoutée pour le déploiement de l’espace de travail, vous pouvez désormais déployer un espace de travail en Asie. 
+- Les performances du capteur Azure ATP ont été améliorées.
+- Une nouvelle région a été ajoutée pour le déploiement de l’espace de travail, vous pouvez désormais déployer un espace de travail en Asie. 
 
 
 ## <a name="azure-atp-release-225"></a>Azure ATP version 2.25
@@ -360,7 +360,7 @@ Date de publication : 11 mars 2018
 - Il est à présent facile d’accéder à la documentation à partir d’un lien fourni dans les alertes d’activité suspectes qui vous permettra de voir les [étapes d’investigation que vous pouvez suivre](suspicious-activity-guide.md). 
 
 **Améliorations des performances**
- -  L’infrastructure des capteurs Azure ATP a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
+ - L’infrastructure des capteurs Azure ATP a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 
 ## <a name="see-also"></a>Voir aussi
 - [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)

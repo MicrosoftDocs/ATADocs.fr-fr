@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0b15763991dd3eb26773615f0938a89a535dc45
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410730"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669738"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Utilisation du portail Azure ATP
 
@@ -63,7 +63,7 @@ Après la publication d’une nouvelle version d’Azure ATP, la fenêtre **Nouv
 
 Vous pouvez filtrer les activités suspectes qui s’affichent dans la chronologie des attaques ou sous l’onglet Activités suspectes du profil d’entité, selon leur l’état et leur niveau de gravité.
 
-### Barre de recherche <a name="search-bar"></a>
+### <a name="search-bar"></a>Barre de recherche <a name="search-bar"></a>
 
 Le menu supérieur comprend une barre de recherche. Vous pouvez rechercher un utilisateur spécifique, un ordinateur ou un groupe dans Azure ATP. Pour tester la fonction de recherche, commencez à taper un nom. Au bas de la barre de recherche, le nombre de résultats de recherche trouvés est indiqué. 
 
@@ -106,7 +106,7 @@ Si vous pointez votre souris sur une entité, n’importe où sur le portail Azu
 - Première consultation – Première fois où Azure ATP a observé une activité à partir de cette entité.
 - Dernière consultation – Dernière fois où Azure ATP a observé une activité à partir de cette entité.
 - Badge d’association de sécurité – S’affiche si des activités suspectes sont associées à cette entité.
-- Badge WD ATP – S’affiche si des activités suspectes dans Windows Defender ATP sont associées à cette entité.
+- Badge WD ATP – S’affiche si des activités suspectes dans Microsoft Defender ATP sont associées à cette entité.
 - Badge de chemins de mouvement latéral – S’affiche si des chemins de mouvement latéral ont été détectés pour cette entité au cours des deux derniers jours.
 
 

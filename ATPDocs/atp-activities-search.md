@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 46d4d847a4145475989b28b02e638c7324dc4bb5
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 39e9d4c6656d2e55389720ab86690cfcd705423f
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414350"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669537"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Recherche et filtrage d’activités supervisées dans Azure ATP 
 
@@ -40,6 +40,6 @@ Pour filtrer les alertes et les activités :
 
 ## <a name="see-also"></a>Voir aussi
 - [Examen des entités](investigate-entity.md)
-- [Supervision des alertes](monitoring-alerts.md)
+- [Alertes d’intégrité](health-alerts.md)
 - [Utilisation d’alertes de sécurité](working-with-suspicious-activities.md)
 - [Consulter le forum ATP](https://aka.ms/azureatpcommunity)

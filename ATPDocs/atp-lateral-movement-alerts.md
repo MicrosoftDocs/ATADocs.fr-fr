@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 544d1708bb86372f7271b4d398f3aebaa74c790e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: e646dd3b3f5f25fd2c19ffbd621fafe3ac960c0b
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413024"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669780"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral
 
@@ -147,7 +147,7 @@ Il existe des applications personnalisées qui transfèrent des tickets pour le 
 2. Contenez les ordinateurs sources et de destination.
 3. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
 4. Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-5. Si vous avez installé Windows Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
+5. Si vous avez installé Microsoft Defender ATP, utilisez **klist.exe purger** pour supprimer tous les tickets de la session spécifiée et empêcher toute utilisation ultérieure des tickets.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Falsification de l’authentification NTLM suspectée (ID externe 2039)
 
@@ -177,7 +177,7 @@ Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand
 
 **Prévention**
 
-• Vérifiez que tous les appareils de l’environnement sont à jour et ont les correctifs nécessaires contre [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
+* Vérifiez que tous les appareils de l’environnement sont à jour et ont les correctifs nécessaires contre [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
 
@@ -224,7 +224,7 @@ Dans une attaque over-pass-the-hash, un attaquant peut utiliser un code de hacha
 
       Si la réponse est oui, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**.
 
-Certaines ressources légitimes ne prennent pas en charge les codes de chiffrement fort et peuvent déclencher cette alerte.
+Certaines ressources légitimes, qui ne prennent pas en charge le chiffrement renforcé, sont susceptibles de déclencher cette alerte.
 
 2. Tous les utilisateurs sources partagent-ils quelque chose ?
     1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?

@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 50aeef3f54285b24de308269f41be54aeb379067
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411919"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669616"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 
@@ -157,7 +157,7 @@ Nous pouvons voir lorsque JeffL est connecté à VictimPC à l’aide du protoco
 
 ![Chronologie de l’activité logique de JeffL](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-De nombreuses activités sont consignées dans la chronologie des activités logiques, qui est une fonctionnalité majeure pour la forensique numérique et la réponse aux incidents (DFIR). Vous pouvez même voir des activités lorsque la détection initiale n’est pas venue d’Azure ATP, mais de Windows Defender ATP, d’Office 365 et autres.
+De nombreuses activités sont consignées dans la chronologie des activités logiques, qui est une fonctionnalité majeure pour la forensique numérique et la réponse aux incidents (DFIR). Vous pouvez même voir des activités lorsque la détection initiale n’est pas venue d’Azure ATP, mais de Microsoft Defender ATP, d’Office 365 et autres.
 
 En jetant un coup d’œil à la **page de ContosoDC**, nous pouvons également voir les ordinateurs auxquels JeffL s’est connecté.
 
@@ -171,11 +171,11 @@ Notre attention se tourne maintenant vers l’énumération de sessions SMB.
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Reconnaissance des utilisateurs et des adresses IP (SMB)
 
-Le dossier sysvol d’Active Directory est l’un des partages réseau dans l’environnement, même si ce n’est pas *le* plus important. Chaque ordinateur et utilisateur doit pouvoir accéder à ce partage réseau en particulier pour extraire des stratégies de groupe. Une énumération de sessions actives avec le dossier sysvol peut fournir peut obtenir une mine d’informations à un attaquant.
+Le dossier sysvol d’Active Directory est l’un des partages réseau dans l’environnement, si ce n’est *le* plus important. Chaque ordinateur et utilisateur doit pouvoir accéder à ce partage réseau en particulier pour extraire des stratégies de groupe. Une énumération de sessions actives avec le dossier sysvol peut fournir peut obtenir une mine d’informations à un attaquant.
 
 Notre prochaine étape est une énumération de sessions SMB sur la ressource ContosoDC. Nous souhaitons savoir qui d’autre a des sessions avec le partage SMB et *à partir de quelle adresse IP*.
 
-### <a name="use-joewares-netsessexe-from-victimpc"></a>Utiliser NetSess.exe de JoeWare à partir de VictimPC
+### <a name="use-joewares-netsessexe-from-victimpc"></a>Utiliser le fichier NetSess.exe de JoeWare à partir de VictimPC
 
 Exécution de l’outil **NetSess** de JoeWare sur ContosoDC dans le contexte d’un utilisateur authentifié, dans notre cas ContosoDC :
 
