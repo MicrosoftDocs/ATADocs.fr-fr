@@ -1,6 +1,6 @@
 ---
-title: fichier descriptif
-description: fichier descriptif
+title: Fichier Include
+description: Fichier Include
 services: active-directory
 author: eross-msft
 ms.service: active-directory
@@ -9,11 +9,11 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.openlocfilehash: b049b3651f12b1a73a3511d030bbdbbfaceb2480
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "68862445"
 ---
 >[!Note] 
-> Cet article explique comment supprimer des données personnelles de l’appareil ou du service, et peut être utilisé pour prendre en charge vos obligations dans le cadre du RGPD. Si vous recherchez des informations générales sur le RGPD, consultez la [section sur le RGPD du portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Cet article explique comment supprimer les données personnelles de l’appareil ou du service et il peut être utilisé dans le cadre de vos obligations en vertu du Règlement général sur la protection des données. Si vous recherchez des informations générales sur le RGPD, consultez la [section RGPD du portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
