@@ -8,10 +8,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414486"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
@@ -36,7 +36,7 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 1. Recherchez le champ **Paquets occupés/s** dans le tableau du capteur Azure ATP du fichier Excel des résultats et prenez note de celui-ci.
 1. Faites correspondre votre champ **Paquets occupés/s** au champ **PAQUETS PAR SECONDE** dans la section [Tableau du capteur Azure ATP](#sizing) de cet article. Utilisez les champs pour déterminer la mémoire et le processeur qui seront utilisés par le capteur.
 
-## <a name="sizing"></a> Dimensionnement du capteur Azure ATP
+## <a name="azure-atp-sensor-sizing"></a><a name="sizing"></a> Dimensionnement du capteur Azure ATP
 
 Un capteur Azure ATP peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau qu’il génère. Le tableau suivant est une estimation. La quantité finale analysée par le capteur étant dépendante du volume et de la distribution du trafic.
 
@@ -74,7 +74,7 @@ Lorsque vous déterminez le dimensionnement, notez les éléments suivants :
 |VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **Réserver toute la mémoire invitée (tout verrouillé)** .|
 |Autre hôte de virtualisation|Reportez-vous à la documentation donnée par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
 
-## <a name="manual-sizing"></a> Estimation du trafic des contrôleurs de domaine
+## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Estimation du trafic des contrôleurs de domaine
 
 Si, pour une raison quelconque, vous ne pouvez pas utiliser l’outil de dimensionnement Azure ATP, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine. Collectez les informations pendant 24 heures avec un intervalle de collecte court, environ 5 secondes. Ensuite, pour chaque contrôleur de domaine, calculez la moyenne quotidienne et la moyenne des périodes les plus actives (15 minutes). Les sections suivantes expliquent comment collecter le compteur de paquets/s dans un contrôleur de domaine.
 

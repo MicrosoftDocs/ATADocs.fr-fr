@@ -8,10 +8,10 @@ ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414520"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
@@ -73,7 +73,7 @@ Il existe un groupe de sécurité « Support technique » (SG) dont Ron HelpDe
 
 Pour configurer le labo de base, nous allons ajouter des utilisateurs et des groupes à Active Directory, modifier une stratégie SAM et un groupe sensible dans Azure ATP.
 
-### <a name="bkmk_hydrate"></a> Alimenter Active Directory avec des utilisateurs sur ContosoDC
+### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Alimenter Active Directory avec des utilisateurs sur ContosoDC
 
 Pour simplifier le labo, nous avons automatisé le processus de création d’utilisateurs et de groupes fictifs dans Active Directory. Ce script est exécuté comme une condition préalable à ce tutoriel. Vous pouvez utiliser ou modifier le script pour alimenter l’environnement Active Directory de votre labo. Si vous préférez ne pas utiliser de script, vous pouvez le faire manuellement.
 
@@ -166,7 +166,7 @@ Inspectez le groupe d’administrateurs sur **VictimPC** et assurez-vous qu’il
 
 ![le support technique et JeffV doivent se trouver dans le groupe des administrateurs locaux pour VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="helpdesk-simulation"></a> Simulez la prise en charge du support technique sur VictimPC
+### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simulez la prise en charge du support technique sur VictimPC
 
 Pour simuler un réseau actif et géré, créez une tâche planifiée sur la machine **VictimPC** afin d’exécuter le processus « cmd.exe » en tant que **RonHD**.
 

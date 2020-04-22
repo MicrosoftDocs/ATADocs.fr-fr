@@ -15,7 +15,7 @@
 ### [Nouveautés d’ATA version 1.5](whats-new-version-1.5.md)
 #### [Mise à jour vers ATA 1.5 : guide de migration](ata-update-1.5-migration-guide.md)
 ### [Nouveautés d’ATA version 1.4](whats-new-version-1.4.md)
-## [Forum Aux Questions](ata-technical-faq.md)
+## [Forum aux questions](ata-technical-faq.md)
 ## [Sécurité et confidentialité des données ATA](ata-privacy-compliance.md)
 # Planification et conception
 ## [Architecture d’ATA](ata-architecture.md)
@@ -66,5 +66,5 @@
 ## [Résolution des problèmes à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md)
 ## [Résolution des problèmes à l’aide de la base de données](troubleshooting-ata-using-ata-database.md)
 ## [Résolution des problèmes de démarrage du service](troubleshooting-service-startup.md)
-## [Récupération d'urgence](disaster-recovery.md)
+## [Récupération d’urgence](disaster-recovery.md)
 # [Guide de préparation à ATA](ata-resources.md)
