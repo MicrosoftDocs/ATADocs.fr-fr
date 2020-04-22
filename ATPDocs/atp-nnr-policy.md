@@ -13,10 +13,10 @@ ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 35d3e630e8f8ff4752badc5e2dad09aec8058671
-ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80666208"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
@@ -63,9 +63,9 @@ Après avoir confirmé l’appareil, vous pouvez déterminer si l’alerte est u
 
     ![Certitude de la preuve](media/nnr-high-certainty.png)
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Configuration requise
 
-|Protocole|Transport|Port|Appareil|Sens|
+|Protocole|Transport|Port|Appareil|Direction|
 |--------|--------|------|-------|------|
 |NTLM sur RPC*|TCP|135|Tous les appareils sur le réseau|Entrant|
 |NetBIOS*|UDP|137|Tous les appareils sur le réseau|Entrant|
@@ -102,4 +102,4 @@ Chaque alerte d’intégrité fournit les détails de la méthode, des capteurs 
 
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Consulter le forum ATP](https://aka.ms/azureatpcommunity)
+- [Consultez le forum ATP !](https://aka.ms/azureatpcommunity)

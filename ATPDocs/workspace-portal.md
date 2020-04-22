@@ -13,10 +13,10 @@ ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669738"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Utilisation du portail Azure ATP
@@ -41,7 +41,7 @@ Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comm
 1. Vous pouvez entrer dans le portail Azure ATP soit en vous connectant au portail [https://portal.atp.azure.com](https://portal.atp.azure.com) et en sélectionnant votre instance, soit en accédant à l’URL de l’instance : [https://*nom_instance*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
-2. Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
+2. Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez également vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
 
    > [!NOTE]
    > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Exécutez également votre navigateur en tant qu’un autre utilisateur, ou fermez votre session Windows et connectez-vous avec votre utilisateur administrateur Azure ATP. Contrairement au portail Azure ATP, le nouveau [portail Cloud App Security](https://portal.cloudappsecurity.com) offre une connexion multi-utilisateur et ne nécessite aucune licence supplémentaire pour une utilisation avec Azure ATP.  
@@ -71,7 +71,7 @@ Le menu supérieur comprend une barre de recherche. Vous pouvez rechercher un ut
 
 Si vous cliquez sur ce nombre, vous pouvez accéder à la page des résultats de recherche, dans laquelle vous pouvez filtrer les résultats par type d’entité pour un examen approfondi.
 
-![Recherche de résultats](media/search-results.png)
+![résultats de la recherche](media/search-results.png)
 
 ### <a name="health-center"></a>Centre d’intégrité
 
@@ -97,7 +97,7 @@ Si vous pointez votre souris sur une entité, n’importe où sur le portail Azu
 - Titre
 - Service
 - Balises AD
-- E-mail
+- Adresse de messagerie
 - Office
 - Numéro de téléphone
 - Domaine

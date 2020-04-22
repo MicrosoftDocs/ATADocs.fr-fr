@@ -12,10 +12,10 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: e8705fe48bf7ff32a59e33808d66de474d1b306d
-ms.sourcegitcommit: a7e3fdd7bf0f1d8f269cdbfe3931c937a436392b
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75663865"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Utilisation d’Azure ATP avec Microsoft Cloud App Security
@@ -45,7 +45,7 @@ Intégré dans Azure ATP, le portail Cloud App Security émet des alertes et fou
 
 Vous pouvez choisir de continuer à utiliser Azure ATP dans le portail Azure ATP, ou d’accéder aux alertes Azure ATP et aux indices d’identité à l’aide du portail Microsoft Cloud App Security. Dans les deux cas, les tâches de paramétrage et de configuration d’Azure ATP continuent à être gérées dans le portail Azure ATP.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur dans l’environnement hybride, les éléments suivants sont nécessaires :
 
@@ -65,7 +65,7 @@ Consultez le [démarrage rapide de Cloud App Security](https://docs.microsoft.co
 
 Accédez à vos données Azure ATP et à de nouvelles fonctionnalités hybrides au sein des alertes, des activités et des pages utilisateur de Cloud App Security.
 
-## <a name="alerts"></a>Alertes
+## <a name="alerts"></a>Alerts
 
 Les alertes Azure ATP sont affichées dans la file d'attente **Alertes** de Cloud App Security. Des options de filtrage d’alertes supplémentaires sont disponibles uniquement lorsque les alertes sont affichées avec Cloud App Security. Les alertes Azure ATP sont filtrées avec le filtre d’application pour **Active Directory**.
 
@@ -89,7 +89,7 @@ Pour accéder à une page utilisateur d’un utilisateur système :
 1. Ouvrez **Alertes** dans le menu principal.
 1. Sélectionnez et filtrez la file d’attente des alertes pour un utilisateur spécifique à l’aide du champ **Nom d’utilisateur**.
 
- ou
+ or
 
 1. À partir du menu **Examiner**, sélectionnez **Journal d’activité**.
 1. Filtrez la file d’attente du journal d’activité par utilisateur.

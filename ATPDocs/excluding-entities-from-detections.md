@@ -13,10 +13,10 @@ ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: bc777fde6cdf12abb45b9608091166e3cf03ee2c
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669569"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
@@ -33,12 +33,12 @@ Par exemple, les activités approuvées dans le cadre des opérations informatiq
 
 Il y a deux façons d’exclure manuellement des entités : soit directement à partir de l’alerte de sécurité, soit à partir de l’onglet **Exclusions** de la page **Configuration**. 
 
-- **Dans l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur l’activité d’un utilisateur, d’un ordinateur ou d’une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, suivez les étapes ci-dessous :
+- **À partir de l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur une activité associée à un utilisateur, un ordinateur ou une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, effectuez les étapes suivantes :
   - Cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’alerte de sécurité pour cette entité, puis sélectionnez **Fermer et exclure**. Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions définies pour cette alerte de sécurité. Elle ferme l’alerte de sécurité et la retire de la liste des événements **Ouvert** dans la **chronologie des alertes**.
 
     ![Exclure une entité](./media/exclude-in-sa.png)
 
-- **Sur la page de configuration** :  pour vérifier ou modifier des exclusions, cliquez sur **Exclusions** sous **Configuration**, puis sélectionnez l’alerte de sécurité à laquelle l’exclusion sera appliquée, comme **Reconnaissance DNS**.
+- **À partir de la page Configuration** : pour revoir ou changer des exclusions, sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’alerte de sécurité à laquelle appliquer l’exclusion, comme **Reconnaissance DNS**.
 
     ![Configuration d’exclusion](./media/exclusions.png)
 

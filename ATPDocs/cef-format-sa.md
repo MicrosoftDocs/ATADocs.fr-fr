@@ -13,10 +13,10 @@ ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: 0f24d69946fbbaa1824eb7b38ac431a3be638fa9
-ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80666227"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
@@ -40,10 +40,10 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 |cs#label|chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ |
 |cs#|chaînes du client autorisés par CEF, où cs# est sa valeur.|
 
-- Par exemple : `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`  
+- Exemple : `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`.  
 Le champ cs1 est l’URL de l’alerte.
 
-- Par exemple : `cs2Label=trigger cs2=new`  
+- Exemple : `cs2Label=trigger cs2=new`.  
 Le champ cs2 identifie s’il s’agit d’une alerte nouvelle ou mise à jour.
 
 > [!NOTE]

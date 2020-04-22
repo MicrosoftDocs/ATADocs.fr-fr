@@ -13,10 +13,10 @@ ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
-ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79989845"
 ---
 # <a name="azure-atp-monitored-activities"></a>Activités supervisées par Azure ATP
@@ -35,7 +35,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 > - Cet article s’applique pour tous les types de capteurs Azure ATP.
 > - Les activités supervisées par Azure ATP s’affichent à la fois dans la page de profil de l’utilisateur et dans celle de la machine.
 
-## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités surveillées des utilisateurs : Changements d’attributs AD du compte d’utilisateur
+## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités utilisateur supervisées : changement des attributs AD du compte d’utilisateur
 
 |Activité supervisée|Description|
 |---------------------|------------------|
@@ -50,7 +50,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Activation de l’option Le mot de passe n’expire jamais pour le compte|Le mot de passe de l’utilisateur a été configuré pour ne jamais expirer.|
 |Activation de l’option Mot de passe non nécessaire pour le compte|Le compte d’utilisateur a été configuré pour permettre la connexion avec un mot de passe vide.|
 |Changement du compte pour exiger une carte à puce|Le compte a été configuré pour exiger que les utilisateurs se connectent à un appareil à l’aide d’une carte à puce.|
-|Changement des types de chiffrement pris en charge dans le compte|Les types de chiffrement pris en charge par Kerberos ont été modifiés (types : Des, AES 129, AES 256)|
+|Changement des types de chiffrement pris en charge dans le compte|Les types de chiffrement Kerberos pris en charge ont été modifiés (Des, AES 129, AES 256)|
 |Changement du nom UPN du compte|Le nom de principal de l’utilisateur a été changé.|
 |Changement de l’appartenance au groupe|L’utilisateur a été ajouté à un groupe ou supprimé d’un groupe par un autre utilisateur ou par lui-même.|
 |Changement de la messagerie de l’utilisateur|L’attribut Messagerie de l’utilisateur a été changé.|
@@ -62,7 +62,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |SID-History Changed|Account's SID-History attribute was changed.|
 -->
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Activités surveillées des utilisateurs : Opérations de principal de sécurité AD
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Activités utilisateur supervisées : opérations sur le principal de sécurité AD
 
 |Activité supervisée|Description|
 |---------------------|------------------|
@@ -73,7 +73,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Changement du chemin du principal de sécurité|Le nom unique X du compte a été remplacé par Y.|
 |Changement du nom SAM du principal de sécurité|Le nom SAM a été changé (SAM est le nom d’ouverture de session utilisé pour les clients et les serveurs exécutant des versions antérieures du système d’exploitation).|
 
-## <a name="monitored-user-activities-domain-controller-based-user-operations"></a>Activités surveillées des utilisateurs : Opérations de l’utilisateur basées sur le contrôleur de domaine
+## <a name="monitored-user-activities-domain-controller-based-user-operations"></a>Activités utilisateur supervisées : opérations de l’utilisateur concernant le contrôleur de domaine
 
 |Activité supervisée|Description|
 |---------------------|------------------|
@@ -87,22 +87,22 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Planification des tâches|L’utilisateur a tenté de planifier la tâche X sur un ordinateur distant.|
 |Exécution WMI|L’utilisateur a tenté d’exécuter à distance une méthode WMI.|
 
-## <a name="monitored-user-activities-login-operations"></a>Activités surveillées des utilisateurs : Opérations de connexion
+## <a name="monitored-user-activities-login-operations"></a>Activités utilisateur supervisées : opérations de connexion
 
 |Type d’ouverture de session|Activité supervisée|Description|
 |---------------------|---------------------|------------------|
 |Type d’ouverture de session 2|Validation des informations d’identification|Événement d’authentification de compte de domaine utilisant les méthodes d’authentification NTLM et Kerberos.|
 |Type d’ouverture de session 2|Ouverture de session interactive|L’utilisateur a obtenu un accès réseau en entrant un nom d’utilisateur et un mot de passe (méthode d’authentification Kerberos ou NTLM).|
-|Type d’ouverture de session 2|Ouverture de session interactive avec un certificat|L’utilisateur a obtenu un accès réseau à l’aide d’un certificat.|
+|Type d’ouverture de session 2|ouverture de session interactive avec un certificat ;|L’utilisateur a obtenu un accès réseau à l’aide d’un certificat.|
 |Type d’ouverture de session 2|Connexion VPN|L’utilisateur s’est connecté via l’authentification VPN à l’aide du protocole RADIUS.|
 |Type d’ouverture de session 3|Accès aux ressources|L’utilisateur a accédé à une ressource à l’aide de l’authentification Kerberos ou NTLM.|
-|Type d’ouverture de session 3|Accès délégué aux ressources|L’utilisateur a accédé à une ressource à l’aide de la délégation Kerberos.|
+|Type d’ouverture de session 3|accès délégué aux ressources.|L’utilisateur a accédé à une ressource à l’aide de la délégation Kerberos.|
 |Type d’ouverture de session 8|Texte en clair LDAP|L’utilisateur s’est authentifié à l’aide du protocole LDAP avec un mot de passe en texte clair (authentification simple).|
 |Type d’ouverture de session 10|Bureau à distance|L’utilisateur a ouvert une session RDP sur un ordinateur distant à l’aide de l’authentification Kerberos.|
 |---|Échec de l’ouverture de session|La tentative d’authentification du compte de domaine (via NTLM et Kerberos) a échoué pour l’une des raisons suivantes : le compte a été désactivé ou verrouillé, il a expiré ou il a utilisé un certificat non approuvé, ou une tentative d’ouverture de session non valide a été effectuée (heure d’ouverture de session non valide, utilisation d’un ancien mot de passe, expiration du mot de passe ou mot de passe incorrect).|
-|---|Échec de l’ouverture de session avec un certificat|La tentative d’authentification du compte de domaine (par Kerberos) a échoué pour l’une des raisons suivantes : compte désactivé, expiré ou verrouillé, certificat non approuvé, heure d’ouverture de session non valide, ancien mot de passe, mot de passe expiré ou mot de passe incorrect.|
+|---|échec de l’ouverture de session avec un certificat ;|La tentative d’authentification du compte de domaine (par Kerberos) a échoué pour l’une des raisons suivantes : compte désactivé, expiré ou verrouillé, certificat non approuvé, heure d’ouverture de session non valide, ancien mot de passe, mot de passe expiré ou mot de passe incorrect.|
 
-## <a name="monitored-machine-activities-machine-account"></a>Activités surveillées des machines : Compte d’ordinateur
+## <a name="monitored-machine-activities-machine-account"></a>Activités ordinateur supervisées : compte d’ordinateur
 
 |Activité supervisée|Description|
 |---------------------|------------------|

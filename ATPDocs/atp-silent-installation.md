@@ -13,16 +13,16 @@ ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: cfa2ed34b63dc513af6370064a31c7ef68a97fef
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79410440"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Commutateurs et installation sans assistance d’Azure ATP
 Cet article fournit des instructions pour les commutateurs et l’installation sans assistance d’Azure ATP.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Azure ATP nécessite l’installation de Microsoft .NET Framework 4.7. 
 
@@ -80,7 +80,7 @@ Utilisez la commande suivante pour effectuer une installation sans assistance co
 > |InstallationPath|InstallationPath=""|Non|Définit le chemin d’accès de l’installation des fichiers binaires du capteur AATP. Chemin d’accès par défaut : %programfiles%\capteur Azure Advanced Threat Protection
 > |AccessKey|AccessKey="\*\*"|Oui|Définit la clé d’accès utilisée pour inscrire le capteur Azure ATP auprès de l’instance Azure ATP.|
 
-**Exemples** : Utilisez la commande suivante pour installer sans assistance le capteur Azure ATP :
+**Exemples** : utilisez la commande suivante pour installer en mode silencieux le capteur Azure ATP :
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
@@ -119,7 +119,7 @@ Utilisez la commande suivante pour mettre à jour sans assistance le capteur Azu
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 
-**Exemples** : pour mettre à jour le capteur Azure ATP sans assistance :
+**Exemples** : Pour mettre à jour sans assistance le capteur Azure ATP :
 
     Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
@@ -139,7 +139,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 > |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance du capteur Azure ATP du serveur.|
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
-**Exemples** : pour désinstaller le capteur Azure ATP du serveur sans assistance :
+**Exemples** : Pour désinstaller sans assistance le capteur Azure ATP du serveur :
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall
@@ -152,4 +152,4 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Installer le capteur Azure ATP](install-atp-step4.md)
 - [Configurer le capteur Azure ATP](install-atp-step5.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

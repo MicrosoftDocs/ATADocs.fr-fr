@@ -13,10 +13,10 @@ ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 27e6a0c474b06e21942e4e07211c608f7cdfd1fd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414078"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Évaluations de la posture de sécurité des identités Azure ATP
@@ -32,7 +32,7 @@ Même si votre entreprise investit beaucoup de temps et d’efforts pour renforc
 
 ## <a name="how-do-i-get-started"></a>Comment faire pour commencer 
 
-### <a name="access"></a>Access
+### <a name="access"></a>Accès
 
 Vous pouvez accéder aux évaluations de la sécurité Azure ATP dans le portail Microsoft Cloud App Security après avoir activé l’intégration d’Azure ATP. Pour apprendre à intégrer Azure ATP à Cloud App Security, consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration). 
 

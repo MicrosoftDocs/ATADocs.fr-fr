@@ -13,10 +13,10 @@ ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: c12678dcab848e04469f5fe494349f68814fb2c1
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413653"
 ---
 # <a name="integrate-vpn"></a>Intégrer le VPN
@@ -30,7 +30,7 @@ Azure ATP s’intègre à votre solution VPN en écoutant les événements de ge
 -   Check Point
 -   Cisco ASA
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Pour activer l’intégration VPN, veillez à définir les paramètres suivants :
 

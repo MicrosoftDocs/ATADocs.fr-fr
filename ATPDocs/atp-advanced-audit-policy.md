@@ -13,10 +13,10 @@ ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a322b72aae6ead6e8fd5a08c731e3dd7c8ee7d10
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413891"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Vérification de la stratégie d’audit avancée Azure ATP
@@ -42,7 +42,7 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
 
 4. Dans la fenêtre qui s’ouvre, accédez à **Configuration ordinateur** > **Stratégies** > **Paramètres Windows** > **Paramètres de sécurité** > **Configuration avancée de la stratégie d’audit**.
 
-    ![Configuration avancée de la stratégie d'audit](media/atp-advanced-audit-policy-check-step-2.png)
+    ![Configuration de la stratégie d’audit avancée](media/atp-advanced-audit-policy-check-step-2.png)
 
 5. Accédez au compte d’ouverture de session, double-cliquez sur **Validation des informations d’identification d’audit**, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements de réussite et d’échec. 
 

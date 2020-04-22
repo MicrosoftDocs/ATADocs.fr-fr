@@ -13,10 +13,10 @@ ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: bffad5454cbc1f9216333f44af9a7cfd39ce5433
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414469"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Utiliser des filtres d’activité et créer des stratégies d’action avec Azure ATP dans Microsoft Cloud App Security 
@@ -27,7 +27,7 @@ Pour plus d’informations sur l’exécution de votre intégration, consultez [
 
 L’utilisation d’Azure ATP avec Microsoft Cloud App Security permet d’analyser les activités et d’émettre des alertes sur la base du comportement des utilisateurs et des entités (UEBA), donc d’identifier les comportements les plus risqués dans votre entreprise et de fournir un indice de priorité complet ainsi qu’un filtrage des activités et des stratégies d’activité personnalisables. 
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Configuration requise
 
 Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur dans l’environnement hybride, les éléments suivants sont nécessaires :
 - Une licence valide pour Microsoft Cloud App Security

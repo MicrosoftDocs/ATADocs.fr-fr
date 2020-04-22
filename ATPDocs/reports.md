@@ -13,10 +13,10 @@ ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 74739e03bf4fdeb92175f9699701d47d6281d108
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414690"
 ---
 # <a name="azure-atp-reports"></a>Rapports Azure ATP
@@ -27,13 +27,13 @@ La section Rapports Azure ATP du portail Azure ATP vous permet de planifier ou d
 Pour accéder à la page Rapports, cliquez sur l’icône de rapport dans la barre de menus : ![icône de rapport](./media/atp-report-icon.png).
 Les rapports disponibles sont les suivants : 
 
-- **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **résumé** de ce qui a été détecté sur votre réseau, un pour les **activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité Azure ATP nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
+- **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **résumé** de ce qui a été détecté sur votre réseau, un pour les **activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité Azure ATP nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
 
-- **Modification de groupes sensibles** : ce rapport liste toutes les modifications apportées aux groupes sensibles (comme les administrateurs ou les comptes et groupes étiquetés manuellement). Si vous utilisez des capteurs autonomes Azure ATP pour recevoir un rapport complet sur vos groupes sensibles, vérifiez que [les événements sont transférés de vos contrôleurs de domaine vers les capteurs autonomes](configure-event-forwarding.md). 
+- **Modification des groupes sensibles** : ce rapport répertorie toutes les modifications apportées à des groupes sensibles (comme les administrateurs, ou les comptes et groupes manuellement balisés). Si vous utilisez des capteurs autonomes Azure ATP pour recevoir un rapport complet sur vos groupes sensibles, vérifiez que [les événements sont transférés de vos contrôleurs de domaine vers les capteurs autonomes](configure-event-forwarding.md). 
 
-- **Mots de passe exposés en texte clair** : certains services utilisent le protocole LDAP non sécurisé pour envoyer des informations d’identification de compte en texte brut, y compris pour des comptes sensibles. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. Ce rapport liste tous les mots de passe de compte et d’ordinateur source dont Azure ATP a détecté qu’ils étaient envoyés en texte clair. 
+- **Mots de passe exposés en texte clair** : certains services utilisent le protocole LDAP non sécurisé pour envoyer des informations d’identification de compte en texte brut, y compris pour des comptes sensibles. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. Ce rapport liste tous les mots de passe de compte et d’ordinateur source dont Azure ATP a détecté qu’ils étaient envoyés en texte clair. 
 
-- **Chemins d’accès par mouvement latéral aux comptes sensibles** : ce rapport liste les comptes sensibles exposés au moyen de chemins d’accès par mouvement latéral. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). Ce rapport collecte les chemins de mouvement latéral potentiels qui ont été détectés dans la période de rapport que vous sélectionnez. 
+- **Chemins d'accès de mouvement latéral pour les comptes sensibles** : ce rapport répertorie les comptes sensibles qui sont exposés via les chemins d’accès de mouvement latéral. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). Ce rapport collecte les chemins de mouvement latéral potentiels qui ont été détectés dans la période de rapport que vous sélectionnez. 
 
 Il existe deux façons de générer un rapport : à la demande ou en planifiant un rapport à envoyer périodiquement à votre adresse e-mail.
 

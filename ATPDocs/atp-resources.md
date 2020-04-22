@@ -13,10 +13,10 @@ ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a4d4d9cf6bcd0fb6c8f321ab2388ed5a455c36f5
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669656"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
@@ -70,13 +70,13 @@ Dès lors qu’Azure ATP est opérationnel, vous pouvez examiner les alertes de 
 
 ## <a name="community-resources"></a>Ressources de la communauté
 
-Blog : [Blog Azure ATP](https://aka.ms/aatpblog)
+Blog : [Blog sur Azure ATP](https://aka.ms/aatpblog)
 
-Communauté publique : [Communauté technique Azure ATP](https://aka.ms/AatpCom)
+Communauté publique : [Communauté technique d’Azure ATP](https://aka.ms/AatpCom)
 
-Communauté privée : [Groupe Yammer Azure ATP](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
+Communauté privée : [Groupe Yammer sur Azure ATP](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 
-Channel 9 : [Page Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
+Channel 9 : [Page Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
 ## <a name="see-also"></a>Voir aussi
 

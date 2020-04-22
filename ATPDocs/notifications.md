@@ -13,10 +13,10 @@ ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 8d74d2542008dfdf471991ed2de99c989bfdaf8c
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79411019"
 ---
 # <a name="set-azure-atp-notifications"></a>Définir des notifications Azure ATP
@@ -34,7 +34,7 @@ Pour recevoir des notifications à une adresse e-mail spécifique, définissez l
 3. Sous **Notifications par e-mail**, spécifiez quelles notifications doivent être envoyées par e-mail. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité. 
  
    > [!NOTE]
-   > Les alertes par e-mail pour les activités suspectes sont envoyées uniquement lors de la création de l’activité suspecte.
+   > Les alertes par courrier électronique pour les activités suspectes sont envoyées uniquement lors de la création de l’activité suspecte.
  
 4. Cliquez sur **Save**.
 
