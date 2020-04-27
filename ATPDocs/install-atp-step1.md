@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5638e10a23ae9ddec744d7730283c17be5fab322
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 22e37d606ca5f6057408c59a7384082737fa0029
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413755"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81436122"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Démarrage rapide : Créer votre instance Azure ATP
 
@@ -58,7 +58,7 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
     ![Gérer les groupes de rôles](media/creation-manage-role-groups.png)
 
-- Conservation des données : les instances Azure ATP supprimées précédemment n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité des données Azure ATP et confidentialité](atp-privacy-compliance.md).
+- Conservation des données : les instances Azure ATP supprimées précédemment n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité et confidentialité des données Azure ATP](atp-privacy-compliance.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
