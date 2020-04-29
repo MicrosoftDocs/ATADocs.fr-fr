@@ -32,7 +32,7 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-health-events"></a>Événements d’intégrité ATA
 
-|ID de l’événement|Nom de l’alerte|
+|ID de l'événement|Nom de l’alerte|
 |---------|---------------|
 |1001|Espace disque du centre insuffisant|
 |1003|Centre surchargé|
@@ -58,7 +58,7 @@ Vous trouverez les événements ici :
  
 ## <a name="ata-security-alert-events"></a>Événements d'alerte de sécurité ATA
 
-|ID de l’événement|Nom de l’alerte|
+|ID de l'événement|Nom de l’alerte|
 |---------|---------------|
 |2001|Suspicion d’usurpation d’identité basée sur un comportement inhabituel|
 |2002|Implémentation de protocole inhabituelle|
@@ -86,7 +86,7 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-auditing-events"></a>Événements d’audit ATA
 
-|ID de l’événement|Nom de l’alerte|
+|ID de l'événement|Nom de l’alerte|
 |---------|---------------|
 |3001|Changement de configuration ATA|
 |3002|Passerelle ATA ajoutée|
