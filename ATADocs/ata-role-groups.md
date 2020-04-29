@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 050260b65b14ca425f536fdfc0c936c0fce885df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f50c6158031bfcc6215b33e9890fa42a35fe1487
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412293"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524682"
 ---
 # <a name="ata-role-groups"></a>Groupes de rôles ATA
 
@@ -39,7 +39,7 @@ ATA présente trois types de groupe de rôles : ATA Administrators, ATA Users e
 |Fournir des commentaires sur les activités suspectes|Disponible|Disponible|Non disponible|
 |Modifier l’état des activités suspectes|Disponible|Disponible|Non disponible|
 |Partager/exporter une activité suspecte par e-mail/via un lien|Disponible|Disponible|Non disponible|
-|Modifier l’état de la surveillance des alertes|Disponible|Disponible|Non disponible|
+|Modifier l’état des alertes d’intégrité|Disponible|Disponible|Non disponible|
 |Mettre à jour la configuration ATA|Disponible|Non disponible|Non disponible|
 |Passerelle – Ajouter|Disponible|Non disponible|Non disponible|
 |Passerelle – Supprimer |Disponible|Non disponible|Non disponible|

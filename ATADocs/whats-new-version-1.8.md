@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f13c603b25a58b81b8786734b0c11bf3f8da8f9c
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: dfc1266fd3687b6134ca79f083b2777083723798
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414282"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524699"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Nouveautés de la version 1.8 d’ATA
 
@@ -31,7 +31,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 - L’implémentation de protocole inhabituelle a été améliorée pour pouvoir détecter le logiciel malveillant WannaCry.
 
-- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification anormale est effectuée dans un groupe avec privilèges élevés.
+- NOUVEAU ! **Modification anormale des groupes sensibles** : Dans le cadre de la phase d’élévation de privilèges, l’attaquant modifie des groupes avec des privilèges élevés pour avoir accès à des ressources sensibles. ATA détecte désormais quand une modification est effectuée dans un groupe avec privilèges élevés.
 - NOUVEAU ! **Échecs d’authentification suspects** (comportement par force brute) : L’attaquant tente d’utiliser la force brute sur des informations d’identification pour compromettre des comptes. ATA déclenche désormais une alerte quand un comportement anormal d’authentification ayant échoué est détecté.   
 
 - **Tentative d’exécution à distance - WMI exec** : L’attaquant peut tenter de contrôler votre réseau en exécutant du code à distance sur votre contrôleur de domaine. ATA a amélioré la détection de l’exécution à distance pour inclure la détection des méthodes WMI qui permettent d’exécuter du code à distance.
@@ -63,16 +63,16 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 -   Les performances du centre ATA ont été améliorées. Dans ATA 1.8, le centre ATA peut traiter plus de 1 million de paquets par seconde.
 -   La passerelle légère ATA peut désormais lire les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
--   Vous pouvez maintenant configurer séparément la messagerie pour surveiller les alertes et les activités suspectes.
+-   Vous pouvez désormais configurer séparément la messagerie électronique pour les alertes d’intégrité et les activités suspectes.
 
 ## <a name="security-improvements"></a>Améliorations apportées à la sécurité
 
--   NOUVEAU ! **Authentification unique pour la gestion d’ATA**. ATA prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez également vous connecter à l’aide d’une carte à puce. Les scripts d’installation sans assistance pour la passerelle ATA et la passerelle légère ATA utilisent désormais le contexte de l’utilisateur connecté, sans demander les informations d’identification.
+-   NOUVEAU ! **Authentification unique pour la gestion d’ATA**. ATA prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Les scripts d’installation sans assistance pour la passerelle ATA et la passerelle légère ATA utilisent désormais le contexte de l’utilisateur connecté, sans demander les informations d’identification.
 -   Les privilèges sur le système local ont été supprimés du processus de passerelle ATA, vous pouvez maintenant utiliser des comptes virtuels (disponibles uniquement sur les passerelles ATA autonomes), des comptes de service administrés et des comptes de service administrés de groupe pour exécuter le processus de passerelle ATA.   
 -   Des journaux d’audit pour le centre et les passerelles ATA ont été ajoutés et toutes les actions sont maintenant consignées dans le journal des événements Windows.
 -   La prise en charge des certificats KSP a été ajoutée pour le centre ATA.
 
-## <a name="additional-changes"></a>Autres modifications
+## <a name="additional-changes"></a>Modifications supplémentaires
 
 - La possibilité d’ajouter des notes a été supprimée dans les activités suspectes
 - Les recommandations sur la limitation des activités suspectes ont été supprimées de la chronologie Activités suspectes.
@@ -85,7 +85,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ### <a name="ata-gateway-on-windows-server-core"></a>Passerelle ATA sur Windows Server Core
 
-**Symptômes**: La mise à niveau d’une passerelle ATA vers la version 1.8 sur Windows Server 2012 R2 Core avec .Net Framework 4.7 peut échouer avec l’erreur :  *La passerelle Microsoft Advanced Threat Analytics a cessé de fonctionner*. 
+**Symptômes**: La mise à niveau d’une passerelle ATA vers la version 1.8 sur Windows Server 2012 R2 Core avec .Net Framework 4.7 peut échouer avec l’erreur : * La passerelle Microsoft Advanced Threat Analytics a cessé de fonctionner*. 
 
 ![Erreur de base de passerelle](./media/gateway-core-error.png)
 
@@ -121,7 +121,7 @@ Sur Windows Server 2016 Core, vous ne verrez peut-être pas l’erreur mais le 
 
 ### <a name="proxy-interference"></a>Interférence de proxy
 
-**Symptômes** : Après la mise à niveau vers ATA 1.8, le service de passerelle ATA risque de ne pas démarrer. Dans le journal des erreurs ATA, vous verrez peut-être l’exception suivante :   *: une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
+**Symptômes** : Après la mise à niveau vers ATA 1.8, le service de passerelle ATA risque de ne pas démarrer. Dans le journal des erreurs ATA, vous verrez peut-être l’exception suivante : * : une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.*
 
 **Description** : Depuis ATA 1.8, la passerelle ATA communique avec le centre ATA à l’aide du protocole HTTP. Si l’ordinateur sur lequel vous avez installé la passerelle ATA utilise un serveur proxy pour se connecter au centre ATA, il peut rompre cette communication. 
 

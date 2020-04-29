@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8a6841b3999938300217ae4d859e94853aed7bca
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f3e8073f90be456d17d887491f5a3b9899c00912
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413874"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524784"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [tape 2 »](install-ata-step2.md)
+> [Étape 2»](install-ata-step2.md)
 
 
 Cette procédure d’installation fournit des instructions pour effectuer une nouvelle installation d’ATA 1.9. Pour plus d’informations sur la mise à jour d’un déploiement d’ATA existant à partir d’une version antérieure, consultez le [guide de migration d’ATA pour la version 1.9](ata-update-1.9-migration-guide.md).
@@ -32,7 +32,7 @@ Cette procédure d’installation fournit des instructions pour effectuer une no
 > [!IMPORTANT] 
 > Si vous utilisez Windows 2012 R2, installez la mise à jour KB2934520 sur le serveur du centre ATA et sur les serveurs de passerelle ATA avant de lancer l’installation ; sinon, le programme d’installation d’ATA installe cette mise à jour qui nécessite un redémarrage pendant l’installation d’ATA.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Étape 1. Télécharger et installer le centre ATA
+## <a name="step-1-download-and-install-the-ata-center"></a>Étape 1. Télécharger et installer le centre ATA
 Après avoir vérifié que le serveur répond à la configuration requise, vous pouvez passer à l’installation du centre ATA.
     
 > [!NOTE]
@@ -40,7 +40,7 @@ Après avoir vérifié que le serveur répond à la configuration requise, vous 
 
 Effectuez les opérations suivantes sur le serveur du centre ATA.
 
-1.  Téléchargez ATA à partir du [Centre de gestion des licences en volume Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/) ou de [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  Téléchargez ATA à partir du centre de gestion des [licences en volume Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx) ou à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/) ou de [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Connectez-vous à l’ordinateur sur lequel vous installez le centre ATA en tant qu’utilisateur membre du groupe Administrateurs local.
 
@@ -49,15 +49,15 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 > [!NOTE]   
 > Veillez à exécuter le fichier d’installation à partir d’un lecteur local, et non à partir d’un fichier ISO monté, pour éviter les problèmes liés à un redémarrage obligatoire dans le cadre de l’installation.   
 
-4. Si Microsoft .Net Framework n’est pas installé, vous êtes invité à l’installer quand vous démarrez l’installation. Vous pouvez être invité à effectuer un redémarrage après avoir installé le .NET Framework.
-5. Dans la page **Bienvenue**, sélectionnez la langue à utiliser pour les écrans d’installation d’ATA et cliquez sur **Suivant**.
+4. Si Microsoft .NET Framework n’est pas installé, vous êtes invité à l’installer lorsque vous démarrez l’installation. Vous pouvez être invité à effectuer un redémarrage après avoir installé le .NET Framework.
+5. Sur la page **Bienvenue** , sélectionnez la langue à utiliser pour les écrans d’installation d’ATA, puis cliquez sur **suivant**.
 
 6. Lisez les Termes du contrat de licence logiciel Microsoft ; si vous les acceptez, cochez la case correspondante, puis cliquez sur **Suivant**.
 
 7. Nous recommandons de configurer la mise à jour automatique pour ATA. Si Windows n’est pas configuré pour se mettre à jour automatiquement sur votre ordinateur, l’écran **Utiliser Microsoft Update pour maintenir l’ordinateur à jour et sécurisé** apparaît. 
    ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png)
 
-8. Sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** . Les paramètres Windows sont modifiés de manière à récupérer les mises à jour des autres produits Microsoft (y compris ATA). 
+8. Sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**. Les paramètres Windows sont modifiés de manière à récupérer les mises à jour des autres produits Microsoft (y compris ATA). 
 
     ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
@@ -72,7 +72,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
    ![Image de la configuration du centre ATA](media/ATA-Center-Configuration.png)
 
 > [!NOTE]   
-> Faites bien attention aux alertes de surveillance relatives à l’état du certificat SSL Center Service et aux avertissements relatifs à l’expiration. Si le certificat expire, vous devrez redéployer complètement ATA. 
+> Veillez à attirer l’attention sur les alertes d’intégrité concernant l’état du certificat SSL du Service Center et les avertissements d’expiration. Si le certificat expire, vous devrez redéployer complètement ATA. 
 
 10. Cliquez sur **Installer** pour installer le centre ATA et ses composants.
    Les composants suivants sont installés et configurés pendant l’installation du centre ATA :
@@ -92,7 +92,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 ### <a name="validate-installation"></a>Valider l’installation
 
 1.  Vérifiez que le service nommé **Microsoft Advanced Threat Analytics Center** est en cours d’exécution.
-2.  Sur le Bureau, cliquez sur le raccourci **Microsoft Advanced Threat Analytics** pour vous connecter à la console ATA. Connectez-vous avec les informations d’identification d’utilisateur que vous avez utilisées pour installer le centre ATA.
+2.  Sur le bureau, cliquez sur le raccourci **Microsoft Advanced Threat Analytics** pour vous connecter à la console ATA. Connectez-vous avec les informations d’identification d’utilisateur que vous avez utilisées pour installer le centre ATA.
 
 ### <a name="set-anti-virus-exclusions"></a>Définir des exclusions d’antivirus
 
@@ -113,10 +113,10 @@ Veillez à également exclure les dossiers et les processus suivants de l’anal
 Si vous avez installé ATA dans un autre répertoire, modifiez les chemins d’accès des dossiers en fonction de votre installation. 
 
 > [!div class="step-by-step"]
-> [« Préinstallation](configure-port-mirroring.md)
-> [Étape 2 »](install-ata-step2.md)
+> [« Étape de pré-installation](configure-port-mirroring.md)
+> [2 »](install-ata-step2.md)
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
@@ -126,5 +126,5 @@ Si vous avez installé ATA dans un autre répertoire, modifiez les chemins d’a
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 

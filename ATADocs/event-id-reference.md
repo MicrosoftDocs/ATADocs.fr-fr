@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a5e417911afdc64a7e0693dc354eedeed517b316
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: fb9d2f56cb2280fc060ff4ddcf6ac2cd233baa27
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907733"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524733"
 ---
 # <a name="ata-event-id-reference"></a>Informations de référence sur les ID d’événement ATA
 
@@ -32,7 +32,7 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-health-events"></a>Événements d’intégrité ATA
 
-|ID d’événement de surveillance| Nom de l’alerte de surveillance|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |1001|Espace disque du centre insuffisant|
 |1003|Centre surchargé|
@@ -43,7 +43,7 @@ Vous trouverez les événements ici :
 |1008|Tout ou partie des cartes réseau de capture sur une passerelle ne sont pas disponibles|
 |1009|Un adaptateur de réseau de capture sur une passerelle n’existe plus|
 |1010|Certains contrôleurs de domaine ne sont pas accessibles par une passerelle / Tous les contrôleurs de domaine ne sont pas accessibles par une passerelle|
-|1011|La passerelle a cessé de communiquer|
+|1010|La passerelle a cessé de communiquer|
 |1012|Certains événements transférés ne sont pas analysés|
 |1013|Une partie du trafic réseau n’est pas analysé|
 |1014|Échec de l’envoi des e-mails|
@@ -58,7 +58,7 @@ Vous trouverez les événements ici :
  
 ## <a name="ata-security-alert-events"></a>Événements d'alerte de sécurité ATA
 
-|Noms des alertes|ID des événements d’alerte|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |2001|Suspicion d’usurpation d’identité basée sur un comportement inhabituel|
 |2002|Implémentation de protocole inhabituelle|
@@ -86,7 +86,7 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-auditing-events"></a>Événements d’audit ATA
 
-|Noms des alertes|ID des événements d’alerte|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |3001|Changement de configuration ATA|
 |3002|Passerelle ATA ajoutée|
@@ -98,7 +98,7 @@ Vous trouverez les événements ici :
 
 ## <a name="see-also"></a>Voir aussi
 - [Configuration requise pour ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

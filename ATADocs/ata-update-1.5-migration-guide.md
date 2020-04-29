@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a008a345eb2c3a214f0f4f2352328ad60472e3ec
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 6b87863ffa2cbb437c0ca9dedd52991b88c19b16
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412718"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524852"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Mise à jour d’ATA vers la version 1.5 : guide de migration
 ATA 1.5 comporte les améliorations suivantes :
@@ -32,13 +32,13 @@ ATA 1.5 comporte les améliorations suivantes :
 
 -   Meilleure réactivité de l’interface utilisateur face à des activités suspectes impliquant plusieurs milliers d’entités
 
--   Résolution automatique améliorée pour les alertes de surveillance
+-   Résolution automatique améliorée des alertes d’intégrité
 
 -   Compteurs de performances supplémentaires pour une meilleure surveillance et une meilleure résolution des problèmes
 
 ## <a name="updating-ata-to-version-15"></a>Mise à jour d’ATA vers la version 1.5
 > [!NOTE]
-> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA qui inclut la version 1.5. Suivez ensuite la procédure d’installation standard décrite dans [Installer ATA](install-ata-step1.md).
+> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA, qui comprend la version 1,5 et suivez la procédure d’installation standard décrite dans [installer ATA](install-ata-step1.md).
 
 Si vous avez déjà déployé ATA version 1.4, cette procédure vous guide tout au long des étapes nécessaires pour mettre à jour votre installation.
 
@@ -76,11 +76,11 @@ Suivez ces étapes pour mettre à jour ATA vers la version 1.5 :
 
         ![Choisissez la migration complète ou partielle.](media/ATA-center-fullpartial.png)
 
-        -   Si vous sélectionnez la migration **Partielle**, tout le trafic réseau collecté et les événements Windows transférés qui ont été analysés par ATA sont supprimés. Les profils de comportement des utilisateurs doivent aussi être réappris, ce qui nécessite au moins trois semaines. Si vous manquez d’espace disque, il est judicieux d’opter pour une migration **Partielle**.
+        -   Si vous sélectionnez la migration **Partielle**, tout le trafic réseau collecté et les événements Windows transférés qui ont été analysés par ATA sont supprimés. Les profils de comportement des utilisateurs doivent aussi être réappris, ce qui nécessite au moins trois semaines. Si vous manquez d’espace disque, il est utile d’exécuter une migration **partielle** .
 
         -   Si vous exécutez une migration **Complète**, vous avez besoin de plus d’espace disque (quantité indiquée dans la page de mise à niveau). Il est aussi possible que la migration prenne plus de temps en fonction du trafic réseau. La migration complète conserve toutes les données collectées précédemment et préserve les profils de comportement des utilisateurs. Comme il est inutile de réapprendre les profils de comportement, ATA peut détecter les comportements anormaux dès la mise à jour terminée.
 
-3.  Cliquez sur **Mettre à jour**. Quand vous cliquez sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
+3.  Cliquez sur **Update**. Quand vous cliquez sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
 
 4.  Une fois le centre ATA mis à jour, les passerelles ATA indiquent qu’elles sont obsolètes.
 
@@ -96,11 +96,11 @@ Pour télécharger le package d’installation de la passerelle ATA :
 
 1.  Supprimez les versions précédemment téléchargées du package de la passerelle ATA.
 
-2.  Sur la machine de la passerelle ATA, ouvrez un navigateur et entrez l’adresse IP de la console ATA que vous avez configurée dans le centre ATA. Une fois la console ATA ouverte, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
+2.  Sur la machine de la passerelle ATA, ouvrez un navigateur et entrez l’adresse IP de la console ATA que vous avez configurée dans le centre ATA. Lorsque la console ATA s’ouvre, cliquez sur l’icône des paramètres et sélectionnez **configuration**.
 
     ![Icône des paramètres de configuration](media/ATA-config-icon.png)
 
-3.  Sous l’onglet **Passerelles ATA**, cliquez sur **Télécharger l’installation de la passerelle ATA**.
+3.  Sous l’onglet **passerelles ATA** , cliquez sur Télécharger la configuration de la **passerelle ATA**.
 
 4.  Enregistrez le package localement.
 

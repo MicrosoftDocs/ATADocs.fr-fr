@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f44bc785fcdd84984f06f25f098d0e582d3b5a9d
-ms.sourcegitcommit: d3fe4c4884b32329f6bce7b44977def8bfb3234c
+ms.openlocfilehash: 548be58270bc703db0f26673036e0f3a905fbdcc
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80675015"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524818"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
@@ -53,7 +53,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 > |System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|La passerelle ATA ou la passerelle légère ATA ne peuvent pas arrêter et démarrer la session ETW qui collecte le trafic réseau en raison d’un problème WMI|Suivez les instructions de la rubrique [WMI : reconstruction du référentiel WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) pour résoudre le problème WMI|
 > |System.Net.Sockets.SocketException : Une tentative interdite d’accès à un socket a été réalisée par ses autorisations d’accès|Une autre application utilise le port 514 sur la passerelle ATA|Utilisez `netstat -o` pour établir quel processus utilise ce port.|
 
-## <a name="deployment-errors"></a>Erreurs liées au déploiement
+## <a name="deployment-errors"></a>Erreurs de déploiement
 
 > [!div class="mx-tableFixed"]
 >
@@ -61,9 +61,9 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 > |-------------|----------|---------|
 > |L’installation de .Net Framework 4.6.1 échoue avec l’erreur 0x800713ec.|Les composants requis pour .Net Framework 4.6.1 ne sont pas installés sur le serveur. |Avant d’installer ATA, vérifiez que les mises à jour Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) et [KB2919355](https://support.microsoft.com/kb/2919355) sont installées sur le serveur.|
 > |System.Threading.Tasks.TaskCanceledException : une tâche a été annulée|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu accéder au centre ATA.|1. Vérifiez la connectivité réseau au centre ATA en y accédant à l’aide de son adresse IP. <br></br>2. Vérifiez la configuration du proxy ou du pare-feu.|
-> |System.Net.Http.HttpRequestException : une erreur s’est produite lors de l’envoi de la demande. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu atteindre le centre ATA en raison d’une configuration incorrecte du proxy.|Désactivez la configuration du proxy avant le déploiement puis réactivez la configuration du proxy. Vous pouvez aussi configurer une exception dans le proxy.|
+> |System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu atteindre le centre ATA en raison d’une configuration incorrecte du proxy.|Désactivez la configuration du proxy avant le déploiement puis réactivez la configuration du proxy. Vous pouvez aussi configurer une exception dans le proxy.|
 > |System.Net.Sockets.SocketException : Une connexion existante a dû être fermée par l’hôte distant||Activez TLS 1,2 pour .net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit :<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>configuration du proxy ;</br>problèmes de mise en réseau ;</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
+> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>Configuration du proxy</br>Problèmes de mise en réseau</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
 > | Error [\\[]DeploymentModel[\\]] Failed management authentication|La validation du certificat du centre a échoué|Il est possible que la validation du certificat du centre nécessite une connexion Internet. Vérifiez que votre service de passerelle affiche la configuration de proxy appropriée pour permettre la connexion et la validation.|
 
 ## <a name="ata-center-errors"></a>Erreurs du centre ATA
@@ -72,7 +72,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 >
 > |Error|Description|Résolution|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1. Arrêtez le service du centre ATA. <br></br>2. Supprimez le certificat du centre ATA dans le magasin de certificats du centre. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3. Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil-importpfx "CenterCertificate. pfx" sur\\_KEYEXCHANGE <br></br>4. Démarrez le service du centre ATA. <br></br>5. Vérifiez que tout fonctionne maintenant comme prévu.|
+> |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1. Arrêtez le service du centre ATA. <br></br>2. Supprimez le certificat du centre ATA dans le magasin de certificats du centre. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3. Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil-importpfx "CenterCertificate.\\pfx" sur _KEYEXCHANGE <br></br>4. Démarrez le service du centre ATA. <br></br>5. Vérifiez que tout fonctionne maintenant comme prévu.|
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problèmes de la passerelle ATA et de la passerelle légère
 
@@ -80,8 +80,8 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 >
 > |Problème|Description|Résolution|
 > |-------------|----------|---------|
-> |Aucun trafic reçu du contrôleur de domaine, mais les alertes de surveillance sont observées|Aucun trafic n’a été reçu d’un contrôleur de domaine utilisant la mise en miroir de ports via une passerelle ATA|Sur la carte réseau de capture de la passerelle ATA, désactivez ces fonctionnalités dans **Paramètres avancés** :<br></br>RSC (Receive Segment Coalescing) (IPv4)<br></br>RSC (Receive Segment Coalescing) (IPv6)|
-> |Cette alerte de surveillance s’affiche : une partie du trafic réseau n'est pas analysée|Si vous avez une passerelle ATA ou une passerelle légère sur les machines virtuelles VMware, vous pouvez recevoir cette alerte de surveillance. Ce scénario se produit à cause d’une différence de configuration dans VMware.|Définissez les paramètres suivants avec les valeurs 0 ou Désactivé dans la configuration de carte réseau des machines virtuelles : TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload TLS 1.0 est désactivé sur passerelle ATA mais .Net est défini pour utiliser TLS 1.2|
+> |Aucun trafic reçu du contrôleur de domaine, mais des alertes d’intégrité sont observées|Aucun trafic n’a été reçu d’un contrôleur de domaine utilisant la mise en miroir de ports via une passerelle ATA|Sur la carte réseau de capture de la passerelle ATA, désactivez ces fonctionnalités dans **Paramètres avancés**:<br></br>RSC (Receive Segment Coalescing) (IPv4)<br></br>RSC (Receive Segment Coalescing) (IPv6)|
+> |Cette alerte d’intégrité s’affiche : du trafic réseau n’est pas analysé|Si vous avez une passerelle ATA ou une passerelle légère sur des machines virtuelles VMware, vous pouvez recevoir cette alerte d’intégrité. Ce scénario se produit à cause d’une différence de configuration dans VMware.|Définissez les paramètres suivants avec les valeurs 0 ou Désactivé dans la configuration de carte réseau des machines virtuelles : TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|
 
 ## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur
 
@@ -95,8 +95,8 @@ Solutions de contournement possibles :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

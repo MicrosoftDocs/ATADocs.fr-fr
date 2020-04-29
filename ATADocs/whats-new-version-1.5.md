@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f7e65f1da222de3b7a4cb05541bd2359e3046901
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 76f6c7dcd083d1e84443fefcaff4c753ea6bf272
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414231"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524716"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Nouveautés d’ATA version 1.5
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
@@ -35,7 +35,7 @@ ATA 1.5 comporte les améliorations suivantes :
 
 -   Meilleure réactivité de l’interface utilisateur face à des activités suspectes impliquant plusieurs milliers d’entités
 
--   Résolution automatique améliorée pour les alertes de surveillance
+-   Résolution automatique améliorée des alertes d’intégrité
 
 -   Compteurs de performances supplémentaires pour une meilleure surveillance et une meilleure résolution des problèmes
 
@@ -47,7 +47,7 @@ Après la mise à jour vers ATA version 1.5, vous obtenez l’erreur suivante l
 
 ![Erreur de passerelle ATA](media/ata-install-error.png)
 
-<b>Solution de contournement :</b> envoyez un e-mail à l’adresse <ataeval@microsoft.com> pour demander la procédure de contournement.
+<b>Solution de contournement :</b> envoyez un e-mail à l’adresse <ataeval@microsoft.com> pour obtenir la procédure de contournement.
 ### <a name="deployment"></a>Déploiement
 Le dossier spécifié pour « Chemin d’accès des données de la base de données » et « Chemin d’accès du journal de base de données » doit être vide (aucun fichier ou ni sous-dossier).
 S’il n’est pas vide, le déploiement ne peut pas progresser.
@@ -62,7 +62,7 @@ Une fois la passerelle ATA configurée, au premier démarrage de celle-ci, l’
 Dans la passerelle ATA, le seul logiciel de capture réseau que vous pouvez installer est [Moniteur réseau Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865). N’installez pas l’analyseur de message Microsoft ni aucun autre logiciel de capture réseau. L’installation d’autres logiciels empêchera la passerelle ATA de fonctionner correctement.
 
 ### <a name="kb-on-virtualization-host"></a>Base de connaissance sur les hôtes de virtualisation
-N’installez pas le correctif KB3047154 sur un hôte de virtualisation, car cela empêcherait le bon fonctionnement de la mise en miroir des ports.
+N’installez pas la base de connaissance 3047154 sur un hôte de virtualisation, car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports.
 
 ## <a name="see-also"></a>Voir aussi
 
