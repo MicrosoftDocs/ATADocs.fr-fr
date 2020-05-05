@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6a38a61e5028003ba10ad6929e24e63e81418f7b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 5e2a9a05c4f8dbbeb83562266e3564d023cef79a
+ms.sourcegitcommit: 7be507dc6b6016ff9aa9df4b52a3542246e98209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413704"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736424"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Démarrage rapide : Installer le capteur Azure ATP
 
@@ -32,9 +32,9 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 1. Vérifiez que l’ordinateur dispose d’une connectivité au(x) point(s) de terminaison approprié(s) du service cloud Azure ATP :
    - Europe
-      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com)
       - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-   - FR 
+   - FR
       - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
       - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
       - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
@@ -53,14 +53,14 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 
 5. L’Assistant Installation vérifie automatiquement si le serveur est un contrôleur de domaine ou un serveur dédié. S’il s’agit d’un contrôleur de domaine, le capteur Azure ATP est installé. S’il s’agit d’un serveur dédié, le capteur autonome Azure ATP est installé.
-    
+
     Par exemple, pour un capteur Azure ATP, l’écran suivant s’affiche pour vous informer qu’un capteur Azure ATP est installé sur votre serveur dédié :
-    
+
     ![Installation du capteur Azure ATP](media/sensor-install-deployment-type.png)
 
    Cliquez sur **Suivant**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Un avertissement s’affiche si le contrôleur de domaine ou le serveur dédié ne présente pas la configuration matérielle minimale requise pour l’installation. Cet avertissement ne vous empêche pas de cliquer sur **Suivant** et d’effectuer l’installation. Cela peut être le bon choix pour installer Azure ATP dans un petit environnement de test de laboratoire qui nécessite moins de place pour le stockage des données. Pour les environnements de production, nous vous recommandons vivement de respecter le guide de [planification de la capacité](atp-capacity-planning.md) d’Azure ATP pour vous assurer que vos contrôleurs de domaine ou serveurs dédiés répondent aux conditions requises.
 
 6. Sous **Configurer le capteur**, entrez le chemin d’installation et la clé d’accès que vous avez copiée à l’étape précédente, en fonction de votre environnement :
@@ -69,24 +69,22 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
       - Chemin d’installation : Emplacement où le capteur Azure ATP est installé. Par défaut, le chemin est %programfiles%\Azure Advanced Threat Protection sensor. Conservez la valeur par défaut.
 
-     - Clé d’accès : Récupérée auprès du portail Azure ATP à l’étape précédente.
-    
+      - Clé d’accès : Récupérée auprès du portail Azure ATP à l’étape précédente.
+
 7. Cliquez sur **Suivant**. Les composants suivants sont installés et configurés pendant l’installation du capteur Azure ATP :
 
     - KB 3047154 (pour Windows Server 2012 R2 uniquement)
 
         > [!IMPORTANT]
-        > - N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports. 
+        > - N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports.
         > - Si Wireshark est installé sur l’ordinateur du capteur ATP, après avoir exécuté Wireshark, vous devez redémarrer le capteur ATP, car il utilise les mêmes pilotes.
 
     - Service de capteur Azure ATP et service de mise à jour du capteur Azure ATP
     - Microsoft Visual C++ 2013 Redistributable
 
-
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le capteur Azure ATP est conçu pour avoir un impact minimal sur les ressources de votre contrôleur de domaine et sur l’activité réseau. Pour créer une évaluation des performances, consultez [Planifier la capacité de votre solution Azure ATP](install-atp-step5.md).
-
+Le capteur Azure ATP est conçu pour avoir un impact minimal sur les ressources de votre contrôleur de domaine et sur l’activité réseau. Pour créer une évaluation des performances, consultez [Planifier la capacité pour Azure ATP](atp-capacity-planning.md).
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 

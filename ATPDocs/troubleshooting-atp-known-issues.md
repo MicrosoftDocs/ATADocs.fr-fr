@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bb738a45889bbb2c509f6cf2b2d7e47f0782bd7a
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 6e0d99b0a93fc11825b3acc29a5c03e984dd4bb8
+ms.sourcegitcommit: 7308663627a517d840264a6071cf9eb8f980c742
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669717"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82198367"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -146,7 +146,7 @@ le capteur n’a pas pu récupérer le compte gMSA désigné à partir du portai
 
 **Résolution :**
 
-Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte.
+Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte. Dans la stratégie appliquée, vous devrez peut-être ajouter le compte gMSA aux attributions des droits utilisateur **Ouvrir une session en tant que service**.
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Les téléchargements de rapports contenant plus de 300 000 entrées ne sont pas pris en charge
 

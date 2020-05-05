@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1cb324f7641a175ad47e01f4fa87efe5764334f
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: a6e5ae637492296dfe1647a0ad82a5b1e2d673f3
+ms.sourcegitcommit: 40f9a460c5b771dfd1e62098d7744162a7214d54
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79546209"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82590478"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -84,7 +84,7 @@ Azure ATP prend en charge les événements SIEM aux formats suivants :
     9. Code de résultat de NTLM.
 - L’ordre est important, et rien d’autre ne doit figurer dans le message.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+### <a name="microfocus-arcsight"></a>MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le contrôleur de domaine a tenté de valider les informations d’identification d’un compte.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
@@ -100,7 +100,6 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
   - dhost = nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
   - duser = utilisateur qui s’authentifie.
 - L’ordre de la partie _Extension_ n’est pas important.
-
 - Vous devez avoir une clé personnalisée et un libellé dé clé pour les deux champs suivants :
   - « EventSource »
   - « Reason or Error Code » = code de résultat de NTLM
@@ -142,6 +141,7 @@ QRadar permet la collecte d’événements par le biais d’un agent. Si les don
 Les champs requis sont les suivants :
 
 - Type d’agent pour la collecte
+
 - Nom du fournisseur de journaux des événements Windows
 - Source du journal des événements Windows
 - Nom de domaine complet du contrôleur de domaine
