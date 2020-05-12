@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6e5ae637492296dfe1647a0ad82a5b1e2d673f3
-ms.sourcegitcommit: 40f9a460c5b771dfd1e62098d7744162a7214d54
+ms.openlocfilehash: 56c16de6e6ff4757bc152d6814dd6b54538bb68d
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82590478"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852266"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -25,7 +25,7 @@ Pour améliorer les capacités de détection, Azure ATP a besoin des événement
 
 > [!NOTE]
 >
-> - Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> - Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 > - Il est important d’exécuter le script d’audit d’Azure ATP avant de configurer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires.
 
 Outre la collecte et l’analyse du trafic réseau à destination et en provenance des contrôleurs de domaine, Azure ATP peut utiliser des événements Windows pour améliorer les détections. Azure ATP utilise les événements Windows 4776 et 8004 pour NTLM, ce qui améliore plusieurs détections, et les événements 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045 et 8004 pour améliorer la détection des modifications de groupes sensibles et la création de services. Vous pouvez recevoir ces événements à partir de votre serveur SIEM ou définir le transfert d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
@@ -44,7 +44,7 @@ Lorsque l’événement Windows 8004 est analysé par le capteur Azure ATP,  les
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
 
-Les capteurs autonomes Azure ATP sont configurés par défaut pour recevoir les données syslog. Pour que les capteurs autonomes Azure ATP puissent consommer les données dont vous avez besoin pour transférer vos données syslog au capteur.
+Les capteurs autonomes Azure ATP sont configurés par défaut pour recevoir les données Syslog. Pour que les capteurs autonomes Azure ATP puissent consommer les données dont vous avez besoin pour transférer vos données syslog au capteur.
 
 > [!NOTE]
 > Azure ATP écoute uniquement sur IPv4 et non sur IPv6.

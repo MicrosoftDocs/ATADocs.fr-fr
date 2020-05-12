@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 185d3e8c70c11e06d1125a634c3cd9c12e2076c8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414265"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852283"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -43,7 +43,7 @@ Ce guide des prérequis comprend les sections suivantes qui vous permettent de v
 [Capteur autonome Azure ATP](#azure-atp-standalone-sensor-requirements) : Le capteur autonome Azure ATP est installé sur un serveur dédié et nécessite la configuration de mise en miroir des ports sur le contrôleur de domaine pour recevoir le trafic réseau.
 
 > [!NOTE]
-> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 ## <a name="before-you-start"></a>Avant de commencer
 
@@ -185,7 +185,7 @@ La détection Azure ATP s’appuie sur des journaux d’événements Windows sp�
 Cette section décrit la configuration requise pour le capteur autonome Azure ATP.
 
 > [!NOTE]
-> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 ### <a name="general"></a>Général
 

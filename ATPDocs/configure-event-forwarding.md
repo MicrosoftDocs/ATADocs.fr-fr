@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ec95a6c9522710f31fc7e55c58a664f5b590914
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7f2d68c4fea2916a1b95353cc90b2eb59e113707
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79510893"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852300"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
@@ -28,7 +28,7 @@ Pour améliorer les capacités de détection, Azure ATP a besoin des événement
 
 > [!NOTE]
 >
-> - Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> - Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 > - Vérifiez que le contrôleur de domaine est correctement configuré pour capturer les événements requis.
 
 ## <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>Configuration WEF pour le capteur autonome Azure ATP avec mise en miroir de ports

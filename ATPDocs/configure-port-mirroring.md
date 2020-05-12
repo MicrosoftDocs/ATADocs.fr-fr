@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 70c122d4983d4b5b32899d13ff81b81d38d65af8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: e4873dbe0aa79456a55f5efff9c15e13141a2d9f
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413840"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852249"
 ---
 # <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
 
 Cet article s’applique seulement si vous déployez des capteurs autonomes Azure ATP à la place de capteurs Azure ATP.
 
 > [!NOTE]
-> Les capteurs autonomes Azure ATP ne prennent pas en charge tous les types de sources de données, ce qui entraîne des détections manquées. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
 
 La principale source de données utilisée par Azure ATP est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’Azure ATP puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports ou utiliser un TAP réseau.
 
@@ -47,10 +47,10 @@ Vos contrôleurs de domaine et votre capteur autonome Azure ATP peuvent être ph
 
 |Capteur autonome Azure ATP|Contrôleur de domaine|Considérations|
 |---------------|---------------------|------------------|
-|Virtuel|Virtuel sur le même hôte|Le commutateur virtuel doit prendre en charge la mise en miroir des ports.<br /><br />Le fait de déplacer l’une des machines virtuelles vers un autre hôte où elle sera toute seule risque de briser la mise en miroir des ports.|
+|Virtuelle|Virtuel sur le même hôte|Le commutateur virtuel doit prendre en charge la mise en miroir des ports.<br /><br />Le fait de déplacer l’une des machines virtuelles vers un autre hôte où elle sera toute seule risque de briser la mise en miroir des ports.|
 |Virtuel|Virtuel sur des hôtes différents|Vérifiez que votre commutateur virtuel prend en charge ce scénario.|
-|Virtuel|Physique|Nécessite une carte réseau dédiée ; sinon, Azure ATP détecte tout le trafic entrant et sortant de l’hôte, même le trafic qu’il envoie au service cloud Azure ATP.|
-|Physique|Virtuel|Vérifiez que votre commutateur virtuel prend en charge ce scénario et configurez la mise en miroir des ports sur vos commutateurs physiques selon le cas :<br /><br />Si l’hôte virtuel se trouve sur le même commutateur physique, vous devez configurer SPAN au niveau du commutateur.<br /><br />Si l’hôte virtuel se trouve sur un autre commutateur, vous devez configurer RSPAN ou ERSPAN&#42;.|
+|Les machines|Physique|Nécessite une carte réseau dédiée ; sinon, Azure ATP détecte tout le trafic entrant et sortant de l’hôte, même le trafic qu’il envoie au service cloud Azure ATP.|
+|Physique|Les machines|Vérifiez que votre commutateur virtuel prend en charge ce scénario et configurez la mise en miroir des ports sur vos commutateurs physiques selon le cas :<br /><br />Si l’hôte virtuel se trouve sur le même commutateur physique, vous devez configurer SPAN au niveau du commutateur.<br /><br />Si l’hôte virtuel se trouve sur un autre commutateur, vous devez configurer RSPAN ou ERSPAN&#42;.|
 |Physique|Physique sur le même commutateur|Le commutateur physique doit prendre en charge SPAN/la mise en miroir des ports.|
 |Physique|Physique sur un autre commutateur|Exige que les commutateurs physiques prennent en charge RSPAN ou ERSPAN&#42;.|
 
@@ -66,7 +66,7 @@ Vos contrôleurs de domaine et votre capteur autonome Azure ATP peuvent être ph
   > [!NOTE]
   > Si votre environnement prend en charge la configuration « virtuel à virtuel » sur différents hôtes (RSPAN), vous n’avez pas à vous soucier de l’affinité.
 
-- Pour s’assurer que les capteurs autonomes Azure ATP sont correctement dimensionnés pour gérer eux-mêmes la surveillance de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et installez un capteur autonome Azure ATP sur chaque hôte. Configurez chaque capteur autonome Azure ATP de façon à surveiller tous les contrôleurs de domaine qui s’exécutent dans le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
+- Pour faire en sorte que le capteur autonome Azure ATP soit correctement dimensionné pour gérer par lui-même le monitoring de tous les contrôleurs de domaine, essayez cette option : installez une machine virtuelle sur chaque hôte de virtualisation et un capteur autonome Azure ATP sur chaque hôte. Configurez chaque capteur autonome Azure ATP de façon à surveiller tous les contrôleurs de domaine qui s’exécutent dans le cluster. Ainsi, n’importe quel hôte sur lequel les contrôleurs de domaine s’exécutent est surveillé.
 
 Après avoir configuré la mise en miroir des ports, validez son fonctionnement avant d’installer le capteur autonome Azure ATP.
 
