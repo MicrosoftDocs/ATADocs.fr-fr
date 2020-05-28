@@ -1,6 +1,6 @@
 ---
 title: Alertes de sécurité de la phase de reconnaissance Azure ATP
-d|Description: This article explains the Azure ATP alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
+description: Cet article décrit les alertes Azure ATP émises quand des attaques faisant généralement partie des efforts de la phase de reconnaissance sont détectées contre votre organisation.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 45cf86c6e497276143ba698bac031f5e90c09440
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 800cb9aea336c09d3e3591062faa420546822914
+ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414129"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825271"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
 

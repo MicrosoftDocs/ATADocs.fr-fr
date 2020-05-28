@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/19/2020
+ms.date: 05/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 48dad2ec51850e67a69c5dec4dfb14abec5c8237
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: b756b62a96a4d72fc00a405c174c734aed3861fa
+ms.sourcegitcommit: 536d7595270732b99096e4044dd7b10085940ea0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669908"
+ms.lasthandoff: 05/17/2020
+ms.locfileid: "83443513"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Azure ATP
 
@@ -95,17 +95,23 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |----|----|----|----|
 |Un capteur Azure ATP a des fonctionnalités limitées en raison de problèmes de connectivité avec certains des contrôleurs de domaine configurés.|La détection d’attaques de type « Pass-The-Hash » peut être moins précise quand certains contrôleurs de domaine ne peuvent pas être interrogés par le capteur Azure ATP.|Vérifiez que les contrôleurs de domaine sont fonctionnels et que ce capteur Azure ATP peut les utiliser pour ouvrir des connexions LDAP.|Moyenne|
 
-## <a name="some-forwarded-events-are-not-being-analyzed"></a>Certains événements transférés ne sont pas analysés
+## <a name="some-forwarded-events-could-not-be-analyzed"></a>Certains événements transférés n’ont pas pu être analysés
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP reçoit plus d’événements que ce qu’il ne peut traiter.|Certains événements transférés ne sont pas analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
+|Le capteur Azure ATP reçoit plus d’événements que ce qu’il ne peut traiter.|Certains événements transférés n’ont pas pu être analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
 
-## <a name="some-network-traffic-is-not-being-analyzed"></a>Une partie du trafic réseau n’est pas analysé
+## <a name="some-network-traffic-could-not-be-analyzed"></a>Une partie du trafic réseau n’a pas pu être analysée
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’est pas analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](atp-capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
+|Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’a pas pu être analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](atp-capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
+
+## <a name="some-windows-events-could-not-be-analyzed"></a>Certains événements Windows n’ont pas pu être analysés
+
+|Alerte|Description|Résolution|Gravité|
+|----|----|----|----|
+|Le capteur Azure ATP reçoit plus d’événements du suivi d’événements pour Windows (ETW) que ce qu’il peut traiter.|Certains événements du suivi d’événements pour Windows (ETW) n’ont pas pu être analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
 
 ## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Événements Windows absents de la stratégie d’audit du contrôleur de domaine
 

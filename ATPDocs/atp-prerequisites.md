@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
-ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
+ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
+ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852283"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825298"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -135,7 +135,7 @@ Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter 
 ### <a name="server-specifications"></a>Spécifications du serveur
 
 Le capteur Azure ATP nécessite au minimum deux cœurs et 6 Go de RAM sur le contrôleur de domaine.
-Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
+Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** de la machine exécutant le capteur Azure ATP.
 
 Vous pouvez déployer les capteurs Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées.
 
@@ -202,7 +202,7 @@ Pour plus d’informations sur l’utilisation de machines virtuelles avec le ca
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 
-Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur autonome Azure ATP.<br>
+Pour des performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** de la machine exécutant le capteur autonome Azure ATP.<br>
 Les capteurs autonomes Azure ATP peuvent prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction du volume du trafic réseau à destination et en provenance des contrôleurs de domaine.
 
 >[!NOTE]

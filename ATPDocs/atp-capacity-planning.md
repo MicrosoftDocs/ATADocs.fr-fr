@@ -3,16 +3,16 @@ title: 'Démarrage rapide : Planification de votre déploiement Azure Advanced 
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Azure ATP nécessaires pour prendre en charge votre réseau
 author: shsagir
 ms.author: shsagir
-ms.date: 02/19/2020
+ms.date: 05/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7bcebf2142980990bb71fb1c09faa986b4315fa7
+ms.sourcegitcommit: c3949c8f0332198753c14e3bcd7cb4ca6d288e25
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414486"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83696036"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Démarrage rapide : Planifier la capacité pour Azure ATP
 
@@ -40,9 +40,9 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 
 Un capteur Azure ATP peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau qu’il génère. Le tableau suivant est une estimation. La quantité finale analysée par le capteur étant dépendante du volume et de la distribution du trafic.
 
-La capacité d’UC et de mémoire suivante fait référence à la **consommation propre du capteur**, et pas à la capacité du contrôleur de domaine.
+La capacité de processeur et de mémoire vive (RAM) suivante fait référence à la **consommation propre du capteur**, et pas à la capacité du contrôleur de domaine.
 
-|Paquets par seconde*|Processeur (cœurs)**|Mémoire (Go)|
+|Paquets par seconde|Processeur (cœurs)\*|Mémoire\*\* (Go)|
 |----|----|-----|
 |0 à 1 000|0,25|2,50|
 |1 000 à 5 000|0,75|6,00|
@@ -52,16 +52,19 @@ La capacité d’UC et de mémoire suivante fait référence à la **consommatio
 |50 000 à 75 000 |3,50|9,50|
 |75 000 à 100 000|3,50|9,50|
 
-** Cela comprend des cœurs physiques et non des cœurs hyper-thread.
+\* Cela comprend des cœurs physiques, et non des cœurs hyper-thread.  
+\*\* Mémoire vive (RAM)
 
 Lorsque vous déterminez le dimensionnement, notez les éléments suivants :
 
-- Nombre total de cœurs que le service de capteur va utiliser.<br>Nous vous recommandons de ne pas utiliser des cœurs hyper-thread. L’utilisation de cœurs hyper-thread peut entraîner des problèmes d’intégrité du capteur Azure ATP.
+- Nombre total de cœurs que le service de capteur va utiliser.  
+Nous vous recommandons de ne pas utiliser des cœurs hyper-thread. L’utilisation de cœurs hyper-thread peut entraîner des problèmes d’intégrité du capteur Azure ATP.
 - Quantité totale de mémoire que le service de capteur va utiliser.
 - Si le contrôleur de domaine n’a pas les ressources demandées par le capteur Azure ATP, ses performances ne sont pas affectées. Mais le capteur Azure ATP risque de ne pas fonctionner comme prévu.
 - En cas d’exécution en tant que machine virtuelle, toute la mémoire doit être allouée à la machine virtuelle à tout moment.
 - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le capteur Azure ATP.
-- Au moins 2 cœurs sont nécessaires. Au moins 6 Go d’espace sont nécessaires, 10 Go sont recommandés, ce qui inclut l’espace nécessaire pour les fichiers binaires et les journaux Azure ATP.
+- Au moins 2 cœurs sont nécessaires.
+- Au moins 6 Go d’espace disque sont nécessaires, 10 Go sont recommandés, ce qui inclut l’espace nécessaire pour les fichiers binaires et les journaux Azure ATP.
 
 ### <a name="dynamic-memory"></a>Mémoire dynamique
 
