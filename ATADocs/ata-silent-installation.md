@@ -4,7 +4,7 @@ description: Cet article explique comment installer ATA en mode silencieux.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea408a1c9a4d8dc937bab7afda4cedc656da6f15
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 7130b378178165eb834cf8874a477f97db3420d7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412480"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775520"
 ---
 # <a name="ata-silent-installation"></a>Installation en mode silencieux ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "79412480"
 
 Cet article fournit des instructions pour installer ATA sans assistance.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
 ATA version 1,9 nécessite l’installation de Microsoft .NET Framework 4.6.1. 
 
@@ -35,7 +35,7 @@ Quand vous installez ou mettez à jour ATA, .Net Framework 4.6.1 est automatiqu
 > L’installation de .Net Framework 4.6.1 peut nécessiter le redémarrage du serveur. Quand vous installez la passerelle ATA sur des contrôleurs de domaine, pensez à planifier une fenêtre de maintenance pour ces derniers.
 Quand vous utilisez la méthode d’installation d’ATA sans assistance, le programme d’installation est configuré pour redémarrer automatiquement le serveur à la fin de l’installation (si nécessaire). En raison d’un bogue de Windows Installer, l’indicateur norestart ne peut pas être utilisé de façon fiable pour vérifier que le serveur ne redémarre pas : veillez donc à exécuter seulement une installation sans assistance pendant une fenêtre de maintenance.
 
-Pour suivre la progression du déploiement, surveillez les journaux d’installation d’ATA, qui se trouvent dans **%AppData%\Local\Temp**.
+Pour suivre la progression du déploiement, surveillez les journaux du programme d’installation d’ATA, qui se trouvent dans **%AppData%\Local\Temp**.
 
 
 ## <a name="install-the-ata-center"></a>Installer le centre ATA
@@ -47,18 +47,18 @@ Utilisez la commande suivante pour installer le centre ATA :
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 > |LicenseAccepted|--LicenseAccepted|Oui|Indique que la licence a été lue et approuvée. Doit être définie sur installation sans assistance.|
 
-**Paramètres d’installation** :
+**Paramètres d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
@@ -91,14 +91,14 @@ Utilisez la commande suivante pour mettre à jour le centre ATA :
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 
@@ -115,17 +115,17 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
     Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
-> |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance du centre ATA du serveur.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Désinstaller l’interface|/uninstall|Oui|Exécute la désinstallation sans assistance du centre ATA du serveur.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
-**Paramètres d’installation** :
+**Paramètres d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
@@ -156,17 +156,17 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 > Si vous travaillez sur un ordinateur joint au domaine et que vous vous êtes connecté à l’aide de votre nom d’utilisateur et de votre mot de passe d’administrateur ATA, vous n’avez pas à fournir vos informations d’identification ici.
 
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
-**Paramètres d’installation** :
+**Paramètres d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
@@ -191,14 +191,14 @@ Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assista
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme d’installation sans afficher d’interface utilisateur, ni d’invites.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
 
@@ -215,15 +215,15 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
 
-**Options d’installation** :
+**Options d’installation**:
 
 > [!div class="mx-tableFixed"]
 > 
 > |Nom|Syntaxe|Obligatoire pour une désinstallation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Oui|Exécute le programme de désinstallation sans afficher d’interface utilisateur, ni d’invites.|
-> |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance de la passerelle ATA du serveur.|
-> |Aide|/help|Non|Fournit de l'aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
+> |Désinstaller l’interface|/uninstall|Oui|Exécute la désinstallation sans assistance de la passerelle ATA du serveur.|
+> |Help|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
 **Exemples** : Pour désinstaller sans assistance la passerelle ATA du serveur :
 
@@ -243,4 +243,4 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)

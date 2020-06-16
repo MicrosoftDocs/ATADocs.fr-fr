@@ -2,9 +2,9 @@
 title: Nouveautés d’ATA version 1.7
 description: Répertorie les nouveautés d’ATA version 1.7, ainsi que les problèmes connus
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: db393df81a922cf7362e5705376c9d72fe13e363
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 14fd7b13b61005ef215c6ba80920572ebcdf0b64
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414384"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774704"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nouveautés d’ATA version 1.7
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
@@ -27,13 +27,13 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 -   Détections nouvelles et mises à jour
 
--   Contrôle d'accès en fonction d'un rôle
+-   Contrôle d’accès en fonction du rôle
 
 -   Prise en charge de Windows Server 2016 et Windows Server 2016 Core
 
 -   Améliorations apportées à l’expérience utilisateur
 
--   Modifications mineures
+-   Changements mineurs
 
 
 ### <a name="new--updated-detections"></a>Détections nouvelles et mises à jour
@@ -56,7 +56,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 - **Prise en charge de Windows Server 2016 et Windows Server Core** ATA 1.7 prend en charge le déploiement de passerelles légères sur les contrôleurs de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus mais pas Nano). De plus, cette version prend en charge Windows Server 2016 pour les composants Centre ATA et Passerelle ATA.
 
-### <a name="user-experience"></a>Expérience utilisateur
+### <a name="user-experience"></a>Expérience de l'utilisateur
 - **Expérience de configuration** Dans cette version, l’expérience de configuration d’ATA a été repensée pour une meilleure expérience utilisateur et pour mieux prendre en charge les environnements à plusieurs passerelles ATA. Cette version introduit également la page de mise à jour de la passerelle ATA pour une gestion plus simple et plus performante des mises à jour automatiques pour les différentes passerelles.
 
 ## <a name="known-issues"></a>Problèmes connus
@@ -108,7 +108,7 @@ Pour résoudre ce problème, accédez à l’emplacement suivant à partir d’u
 1.  `Mongo.exe ATA` (ATA doit être noté en lettres majuscules)
 2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
-## <a name="minor-changes"></a>Modifications mineures
+## <a name="minor-changes"></a>Changements mineurs
 
 - ATA utilise désormais OWIN au lieu d’IIS pour la console ATA.
 - Si le service du centre ATA ne fonctionne pas, vous ne pouvez pas accéder à la console ATA.

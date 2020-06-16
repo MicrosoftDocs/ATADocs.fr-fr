@@ -2,9 +2,9 @@
 title: Installer Advanced Threat Analytics-étape 7
 description: Dans cette étape d’installation d’ATA, vous intégrez votre VPN.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 11/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8ebc54fc2c82bbe99b79f1c736f17e15629fc6a
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c36d312518a21664892293fc38c4c41a23614c5d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410423"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774789"
 ---
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 5](install-ata-step5.md)
-> [Étape 8 »](install-ata-step7.md)
+> [«Étape 5](install-ata-step5.md) 
+>  [Étape 8»](install-ata-step7.md)
 
-## <a name="step-7-integrate-vpn"></a>Étape 7. Intégrer le VPN
+## <a name="step-7-integrate-vpn"></a>Étape 7. Intégrer le VPN
 
 Microsoft Advanced Threat Analytics (ATA) version 1,8 et ultérieures peuvent collecter des informations de gestion de comptes à partir de solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
 
@@ -40,7 +40,7 @@ ATA s’intègre avec votre solution VPN en écoutant les événements de gestio
 > [!IMPORTANT]
 > À compter de septembre 2019, le service de géolocalisation VPN Advanced Threat Analytics chargé de la détection des emplacements VPN prend désormais en charge exclusivement TLS 1,2. Assurez-vous que votre centre ATA est configuré pour prendre en charge TLS 1,2, car les versions 1,1 et 1,0 ne sont plus prises en charge.   
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
 Pour activer l’intégration VPN, veillez à définir les paramètres suivants :
 
@@ -57,7 +57,7 @@ Si vous utilisez une solution VPN tierce, consultez sa documentation pour obteni
 Effectuez les étapes suivantes sur votre serveur RRAS.
  
 1.  Ouvrez la console Routage et accès distant.
-2.  Cliquez avec le bouton droit sur le nom du serveur et cliquez sur **Propriétés**.
+2.  Cliquez avec le bouton droit sur le nom du serveur, puis cliquez sur **Propriétés**.
 3.  Sous l’onglet **Sécurité**, sous **Fournisseur de comptes**, sélectionnez **Gestion de comptes RADIUS** et cliquez sur **Configurer**.
 
     ![Configuration de RADIUS](./media/radius-setup.png)
@@ -76,7 +76,7 @@ Pour configurer les données VPN dans ATA :
  
    ![Menu de configuration ATA](./media/config-menu.png)
 
-2. Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Cliquez ensuite sur **Enregistrer**.
+2. Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Ensuite, cliquez sur **Enregistrer**.
  
 
   ![Configurer le VPN ATA](./media/vpn.png)
@@ -94,12 +94,12 @@ Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Cen
 
 
 > [!div class="step-by-step"]
-> [« Étape 6](install-ata-step5.md)
-> [Étape 8 »](install-ata-step7.md)
+> [«Étape 6](install-ata-step5.md) 
+>  [Étape 8»](install-ata-step7.md)
 
 
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -109,5 +109,5 @@ Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Cen
 - [Outil de dimensionnement ATA](https://aka.ms/aatpsizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 

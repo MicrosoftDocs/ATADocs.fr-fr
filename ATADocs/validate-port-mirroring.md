@@ -2,9 +2,9 @@
 title: Valider la mise en miroir des ports dans Advanced Threat Analytics
 description: Explique comment vérifier que la mise en miroir des ports est configurée correctement
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,21 +12,21 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 635c6b82dd983eb33a6238a3a9d14f63ffc9dacd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 022cb5fb51d7269a4dc33727d0b949a5ab2dcc88
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414333"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774806"
 ---
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!NOTE] 
-> Cet article ne vous concerne que si vous déployez des passerelles ATA au lieu de passerelles légères ATA. Pour déterminer si vous devez utiliser des passerelles ATA, consultez [Choix des passerelles appropriées pour votre déploiement](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
+> Cet article ne vous concerne que si vous déployez des passerelles ATA au lieu de passerelles légères ATA. Pour déterminer si vous devez utiliser des passerelles ATA, consultez [choix des passerelles appropriées pour votre déploiement](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
-Les étapes suivantes sont conçues pour vous guider dans le processus de validation de la mise en miroir des ports. Pour qu’ATA fonctionne correctement, la passerelle ATA doit pouvoir voir le trafic entrant et sortant du contrôleur de domaine. La principale source de données utilisée par ATA est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’ATA puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports. La mise en miroir des ports copie le trafic d’un port (le port source) vers un autre port (le port de destination).
+Les étapes suivantes sont conçues pour vous guider dans le processus de validation de la mise en miroir des ports. Pour qu’ATA fonctionne correctement, la passerelle ATA doit pouvoir voir le trafic entrant et sortant du contrôleur de domaine. La principale source de données utilisée par ATA est l’inspection approfondie des paquets du trafic réseau à destination et en provenance de vos contrôleurs de domaine. Pour qu’ATA puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports. La mise en miroir des ports copie le trafic d’un port (le port source) vers un autre port (le port de destination).
 
 ## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Valider la mise en miroir de port à l’aide d’un script Windows PowerShell
 
@@ -191,7 +191,7 @@ Exemple d’exécution du script :
     
     
 ## <a name="validate-port-mirroring-using-net-mon"></a>Valider la mise en miroir à l’aide du Moniteur réseau
-1.  Installez [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) sur la passerelle ATA que vous souhaitez valider.
+1.  Installez [Moniteur réseau Microsoft 3,4](https://www.microsoft.com/download/details.aspx?id=4865) sur la passerelle ATA que vous souhaitez valider.
 
     > [!IMPORTANT]
     > N’installez pas l’analyseur de message Microsoft ou tout autre logiciel de capture du trafic sur la passerelle ATA.

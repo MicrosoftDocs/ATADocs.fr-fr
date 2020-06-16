@@ -2,9 +2,9 @@
 title: Nouveautés d’Advanced Threat Analytics version 1,4
 description: Répertorie les nouveautés d’ATA version 1.4, ainsi que les problèmes connus
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a06773002de2b0b830ba179899373543b2bfbff
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414197"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774752"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Nouveautés d’ATA version 1.4
 Ces notes de publication fournissent des informations sur les problèmes connus de la version 1.4 d’Advanced Threat Analytics.
@@ -92,7 +92,7 @@ Après la désinstallation, supprimez le dossier d’installation dans le centre
 Si vous disposez de plusieurs passerelles ATA et recevez des alertes concernant des passerelles ATA déconnectées, la résolution automatique ne fonctionne que pour une seule d’entre elles et laisse les autres alertes à l’état Ouvert. Vérifiez manuellement que la passerelle ATA fonctionne et que le service est en cours d’exécution, puis résoudre l’alerte manuellement.
 
 ### <a name="kb-on-virtualization-host"></a>Base de connaissance sur les hôtes de virtualisation
-N’installez pas le correctif KB3047154 sur un hôte de virtualisation, car cela empêcherait le bon fonctionnement de la mise en miroir des ports.
+N’installez pas la base de connaissance 3047154 sur un hôte de virtualisation, car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports.
 
 ## <a name="see-also"></a>Voir aussi
 

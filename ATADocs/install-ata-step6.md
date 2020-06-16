@@ -4,7 +4,7 @@ description: Dans cette étape d’installation d’ATA, vous configurez des sou
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 63ed171d5eb7142cdf9d8bc3587c9134321b6d98
-ms.sourcegitcommit: 40f9a460c5b771dfd1e62098d7744162a7214d54
+ms.openlocfilehash: 06b7e42789b58a6da01479917b0e1277b651a8bd
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82590495"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775163"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 5](install-ata-step5.md)
-> [étape 7 »](vpn-integration-install-step.md)
+> [«Étape 5](install-ata-step5.md) 
+>  [Étape 7»](vpn-integration-install-step.md)
 
 ## <a name="step-6-configure-event-collection"></a>Étape 6. Configurer la collecte d’événements
 
@@ -88,7 +88,7 @@ ATA prend en charge les événements SIEM aux formats suivants :
 
 - L’ordre est important, et rien d’autre ne doit figurer dans le message.
 
-#### <a name="microfocus-arcsight"></a>Microfocus ArcSight
+#### <a name="microfocus-arcsight"></a>MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le contrôleur de domaine a tenté de valider les informations d’identification d’un compte.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
@@ -114,9 +114,9 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
 
 L’ordinateur a tenté de valider les informations d’identification d’un compte.
 
-Package d’authentification : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Package d’authentification : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Compte d’ouverture de session : Administrateur
+Compte d’ouverture de session : Administrateur
 
 Station de travail source : SIEM
 
@@ -138,7 +138,7 @@ Code d’erreur : 0x0
 
 #### <a name="qradar"></a>QRadar
 
-QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. ATA nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements de Windows sans agent. Pour plus d’informations, consultez [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : collecte des événements Windows sans agent à l’aide du protocole MSRPC").
+QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. ATA nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements de Windows sans agent. Pour plus d’informations, consultez [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -161,15 +161,15 @@ Assurez-vous que \t sépare les paires clé/valeur.
 > Utiliser WinCollect pour la collecte des événements Windows n’est pas pris en charge.
 
 > [!div class="step-by-step"]
-> [« Étape 5](install-ata-step5.md)
-> [étape 7 »](vpn-integration-install-step.md)
+> [«Étape 5](install-ata-step5.md) 
+>  [Étape 7»](vpn-integration-install-step.md)
 
 ## <a name="related-videos"></a>Vidéos connexes
 
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Guide de déploiement ATA POC](https://aka.ms/atapoc)
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)

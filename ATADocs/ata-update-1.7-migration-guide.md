@@ -2,9 +2,9 @@
 title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,7
 description: Procédures pour mettre à jour ATA vers la version 1.7
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a317af53040b13d212364b8114fdde64be6abf10
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 323a58084c935f0d94c71a12adc21ea95c6e1713
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412701"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775452"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Mise à jour d’ATA vers la version 1.7 : guide de migration
 La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suivants :
@@ -30,7 +30,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 ## <a name="updating-ata-to-version-17"></a>Mise à jour d’ATA vers la version 1.7
 
 > [!NOTE] 
-> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA qui inclut la version 1.7. Suivez ensuite la procédure d’installation standard décrite dans [Installer ATA](install-ata-step1.md).
+> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA, qui comprend la version 1,7 et suivez la procédure d’installation standard décrite dans [installer ATA](install-ata-step1.md).
 
 Si vous avez déjà déployé la version 1.6 d’ATA, cette procédure vous guide tout au long des étapes nécessaires pour mettre à jour votre déploiement.
 
@@ -61,7 +61,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 
     -  Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
 
-    -  Si vous n’avez pas activé les mises à jour automatiques dans la version 1.6, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** .
+    -  Si vous n’avez pas activé les mises à jour automatiques dans la version 1.6, vous êtes invité à configurer ATA pour utiliser Microsoft Update afin de rester à jour.  Dans la page Microsoft Update, sélectionnez **utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
     ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png) Ainsi, Windows est configuré de manière à récupérer les mises à jour des autres produits Microsoft (notamment ATA), comme illustré ci-après. 
      ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
@@ -69,7 +69,7 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
     
     ![Migration des données ATA](media/migration-data-migration17.png)
 
-    -  Cliquez sur **Mettre à jour**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
+    -  Cliquez sur **Update**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
 
 4.  Une fois la mise à jour du centre ATA terminée, cliquez sur **Lancer** pour afficher l’écran **Mettre à jour** dans la console ATA pour les passerelles ATA.
     ![Écran de réussite de mise à jour](media/migration-center-success17.png)

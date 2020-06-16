@@ -2,9 +2,9 @@
 title: Nouveautés d’Advanced Threat Analytics version 1,6
 description: Répertorie les nouveautés d’ATA version 1.6, ainsi que les problèmes connus
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,18 +12,18 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c87966ee2d8f53187bcc412cb027b19c4ddcf891
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3a9e339451271d491189480982313ab70354787d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412548"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774739"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Nouveautés d’ATA version 1.6
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-16-update"></a>Quelles sont les nouveautés d’ATA 1.6 ?
-La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
+ATA 1.6 comporte les améliorations suivantes :
 
 -   Nouvelles détections
 
@@ -99,7 +99,7 @@ Dans les déploiements dans lesquels la base de données fait l’objet d’un d
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Échec de la migration en cas de mise à jour à partir d’ATA 1.5
 Quand vous effectuez la mise à jour vers ATA 1.6, le processus peut échouer avec le code d’erreur suivant :
 
-![Erreur de mise à jour d’ATA vers la version 1.6](http://i.imgur.com/QrLSApr.png) Si vous recevez cette erreur, examinez le journal de déploiement qui se trouve dans **C:\Users\<utilisateur>\AppData\Local\Temp**, puis recherchez l’exception suivante :
+![Erreur de mise à jour d’ATA vers 1,6 ](http://i.imgur.com/QrLSApr.png) si cette erreur s’affiche, examinez le journal de déploiement dans : **C:\Users \<User> \AppData\Local\Temp**et recherchez l’exception suivante :
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -107,7 +107,7 @@ Vous pouvez également voir cette erreur : System.ArgumentNullException : La v
     
 Si vous voyez l’une de ces erreurs, effectuez la solution de contournement suivante :
 
-**Solution de contournement** : 
+**Solution** : 
 
 1.  Déplacez dans un dossier temporaire le dossier « data_old » (qui se trouve généralement dans %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
 2.  Désinstallez le centre ATA v1.5 et supprimez toutes les données de la base de données.
@@ -121,7 +121,7 @@ Si vous voyez l’une de ces erreurs, effectuez la solution de contournement sui
     1.  MongoDB
     2.  Microsoft Advanced Threat Analytics Center
 7.  Passez en revue les journaux pour vérifier que le produit s’exécute sans erreur.
-8.  [Téléchargez](https://aka.ms/ataremoveduplicateprofiles "Télécharger") l’outil « RemoveDuplicateProfiles. exe » et copiez-le dans le chemin d’installation principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+8.  [Téléchargez](https://aka.ms/ataremoveduplicateprofiles "Téléchargement") l’outil « RemoveDuplicateProfiles.exe » et copiez-le dans le chemin d’installation principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  À partir d’une invite de commandes avec élévation de privilèges, exécutez `RemoveDuplicateProfiles.exe` et attendez la fin de l’opération.
 10. À partir du répertoire …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin **Mongo ATA**, tapez la commande suivante :
 

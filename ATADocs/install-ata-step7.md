@@ -2,9 +2,9 @@
 title: Installer Advanced Threat Analytics-étape 8
 description: Lors de l’étape finale de l’installation d’ATA, vous configurez l’utilisateur Honeytoken.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 367d40e57590ace725700de947f3c1fd31b9db5e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 9482053a183dfd41f20028d00c15c171cea725c7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411205"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775146"
 ---
 # <a name="install-ata---step-8"></a>Installer ATA - Étape 8
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 7](vpn-integration-install-step.md)
-> [Étape 9 »](install-ata-step9-samr.md)
+> [«Étape 7](vpn-integration-install-step.md) 
+>  [Étape 9»](install-ata-step9-samr.md)
 
-## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Étape 8. Configurer des exclusions d’adresses IP et un utilisateur Honeytoken
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Étape 8 : Configurer des exclusions d’adresses IP et un utilisateur Honeytoken
 
 ATA permet d’exclure des adresses IP ou utilisateurs spécifiques d’un certain nombre de détections. 
 
@@ -37,11 +37,11 @@ Avec ATA, vous pouvez aussi configurer un utilisateur Honeytoken servant de piè
 
 Pour configurer ceci, procédez comme suit :
 
-1.  À partir de la console ATA, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
+1.  À partir de la console ATA, cliquez sur l’icône des paramètres et sélectionnez **configuration**.
 
     ![Paramètres de configuration ATA](media/ATA-config-icon.png)
 
-2.  Sous **Détection**, cliquez sur **Étiquettes d’entité**.
+2.  Sous **détection**, cliquez sur **étiquettes d’entité**.
 
 2. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken. Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau.
 
@@ -64,11 +64,11 @@ Pour vérifier qu’ATA est opérationnel et qu’il détecte les violations dan
 
 
 > [!div class="step-by-step"]
-> [« Étape 7](vpn-integration-install-step.md)
-> [Étape 9 »](install-ata-step9-samr.md)
+> [«Étape 7](vpn-integration-install-step.md) 
+>  [Étape 9»](install-ata-step9-samr.md)
 
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -78,5 +78,5 @@ Pour vérifier qu’ATA est opérationnel et qu’il détecte les violations dan
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 

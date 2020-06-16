@@ -2,9 +2,9 @@
 title: Quelles sont les menaces détectées par Advanced Threat Analytics ?
 description: Répertorie les menaces détectées par Advanced Threat Analytics
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4529401696dd07dffb04871c4da4214c3a2aa3c5
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: dcc7e65cbe7fee4d743ce1abd1d81d30a5406a7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412531"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775486"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Quelles sont les menaces que recherche ATA ?
 
@@ -34,9 +34,9 @@ Les phases de la « kill-chain » où ATA fournit une détection sont mises en
 Pour plus d’informations, consultez [Gestion des activités suspectes](working-with-suspicious-activities.md) et [Guide sur les activités suspectes dans ATA](suspicious-activity-guide.md).
 
 
-## <a name="whats-next"></a>Étapes suivantes
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
--   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, consultez [Architecture ATA](ata-architecture.md).
+-   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, voir [Architecture ATA](ata-architecture.md).
 
 -   Pour commencer le déploiement d’ATA, consultez [Installer ATA](install-ata-step1.md).
 

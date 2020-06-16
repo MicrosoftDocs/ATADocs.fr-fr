@@ -4,7 +4,7 @@ description: Explique ce qu’est Microsoft Advanced Threat Analytics (ATA) et q
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 7/24/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,14 +12,14 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b88ca23b2d01d08357b3decb1e8e91c07848f5d8
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: d0f50163150f93baa0bd3084984705faf4fa6ea1
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410594"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774772"
 ---
-# <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
+# <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
@@ -40,14 +40,14 @@ ATA peut recevoir des événements et des journaux des éléments suivants :
 -   Directement depuis le collecteur d’événements Windows (pour la passerelle légère)
 
 
-Pour plus d’informations sur l’architecture d’ATA, consultez [Architecture d’ATA](ata-architecture.md).
+Pour plus d’informations sur l’architecture ATA, consultez [architecture ATA](ata-architecture.md).
 
 ## <a name="what-does-ata-do"></a>Que fait ATA ?
 
 La technologie ATA détecte plusieurs activités suspectes, en se focalisant sur différentes phases de la chaîne de cyber-attaque, notamment :
 
--   Reconnaissance, au cours de laquelle les personnes malveillantes vont recueillir des informations sur la façon dont l’environnement est construit, sur les différents assets, et sur les entités qui existent. C’est en général à ce stade que les attaquants élaborent des plans pour les phases d’attaque suivantes.
--   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la l'élargissement de sa surface d’attaque au sein de votre réseau.
+-   Les différentes ressources de reconnaissance, au cours de laquelle des personnes malveillantes recueillir des informations sur la façon dont l’environnement est construit, sont, et les entités qui existent. C’est en général à ce stade que les attaquants élaborent des plans pour les phases d’attaque suivantes.
+-   Cycle de mouvement latéral, pendant lequel un attaquant investit temps et efforts dans la propagation de sa surface d’attaque au sein de votre réseau.
 -   Dominance (persistance) de domaine, pendant laquelle un attaquant capture les informations lui permettant de reprendre sa campagne avec différentes séries de points d’entrée, d’informations d’identification et de techniques. 
 
 Ces phases d’une cyber-attaque sont similaires et prévisibles, quel que soit le type de société visé ou le type d’informations ciblé.
@@ -63,7 +63,7 @@ Les **attaques malveillantes** sont détectées de manière déterministe, en re
 -   Réplications malveillantes
 -   Reconnaissance
 -   Force brute
--   Exécution distante
+-   Exécution à distance
 
 Pour obtenir la liste complète des détections et leurs descriptions, consultez [Quelles sont les activités suspectes détectables par ATA ?](ata-threats.md) 
 
@@ -102,17 +102,17 @@ Vous pouvez afficher les activités suspectes de ce type dans le tableau de bord
 - Si vous choisissez d’effectuer une migration complète, elle peut durer très longtemps en fonction de la taille de la base de données. Quand vous sélectionnez vos options de migration, le temps estimé s’affiche : notez-le bien avant de décider quelle option choisir. 
 
 
-## <a name="whats-next"></a>Étapes suivantes
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
--   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, consultez [Architecture ATA](ata-architecture.md).
+-   Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, voir [Architecture ATA](ata-architecture.md).
 
 -   Pour commencer le déploiement d’ATA, consultez [Installer ATA](install-ata-step1.md).
 
-## <a name="related-videos"></a>Vidéos associées
-- [Rejoindre la communauté de sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vidéos connexes
+- [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
 ## <a name="see-also"></a>Voir aussi
-[Scénario d’activité suspecte ATA](https://aka.ms/ataplaybook)
-[Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+Manuel d’activité [suspecte ATA](https://aka.ms/ataplaybook) 
+ [Consultez le Forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

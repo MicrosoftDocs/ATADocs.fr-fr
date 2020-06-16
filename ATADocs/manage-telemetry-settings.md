@@ -4,19 +4,19 @@ description: Décrit les données collectées par ATA et explique comment désac
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 8/19/2018
 ms.topic: article
 ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eef3aa45b9563a4fea09e5cebc0f4ece7c39d734
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413959"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775129"
 ---
 # <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système
 
@@ -53,11 +53,11 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 
     -   Nombre de groupes
 
-    -   Nombre d’utilisateurs
+    -   Nombre d'utilisateurs
 
 -   Activités suspectes : les données rendues anonymes suivantes sont collectées pour chaque activité suspecte :
 
-    (Les noms d’ordinateurs, noms d’utilisateurs et adresses IP ne sont **pas** collectés)
+    (Les noms d’ordinateur, les noms d’utilisateur et les adresses IP ne sont **pas** collectés)
 
     -   Type d’activité suspecte
 

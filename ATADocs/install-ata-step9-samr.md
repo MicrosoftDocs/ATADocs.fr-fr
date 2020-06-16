@@ -4,7 +4,7 @@ description: Décrit comment configurer SAM-R pour activer la détection de chem
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa47a151ae8131039a5f7822acc5b541deb5c621
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 4804717d489a68380f78292d8ee8e89910bf7435
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413976"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775061"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
@@ -59,4 +59,4 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)

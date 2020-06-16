@@ -2,9 +2,9 @@
 title: Installer Advanced Threat Analytics-étape 4
 description: La quatrième étape de la procédure d’installation d’ATA vous aide à installer la passerelle ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,22 +12,22 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6c36bc1778c267e01ea98a916d17370a62d905d2
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1b66474219101f9d5c7f9ce38b3a7e3ff34b6f50
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410627"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775197"
 ---
 # <a name="install-ata---step-4"></a>Installer ATA - Étape 4
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 3](install-ata-step3.md)
+> [« Étape 3](install-ata-step3.md)
 > [Étape 5 »](install-ata-step5.md)
 
-## <a name="step-4-install-the-ata-gateway"></a>Étape 4. Installer la passerelle ATA
+## <a name="step-4-install-the-ata-gateway"></a>Étape 4. Installer la passerelle ATA
 
 Avant d’installer la passerelle ATA sur un serveur dédié, vérifiez que la mise en miroir des ports est correctement configurée et que la passerelle ATA peut voir le trafic à destination et en provenance des contrôleurs de domaine. Pour plus d’informations, consultez [Valider la mise en miroir des ports](validate-port-mirroring.md).
 
@@ -72,22 +72,22 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
     -   KB 3047154 (pour Windows Server 2012 R2 uniquement)
     
         > [!IMPORTANT]
-        > -   N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela empêcherait le bon fonctionnement de la mise en miroir des ports. 
+        > -   N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports. 
         > -   N’installez pas l’Analyseur de message, Wireshark ou tout autre logiciel de capture réseau sur la passerelle ATA. Si vous souhaitez capturer le trafic réseau, installez et utilisez le Moniteur réseau Microsoft version 3.4.
     
     -   Service de passerelle ATA
     -   Microsoft Visual C++ 2013 Redistributable
     -   Jeu d’éléments de collecte de données de l’Analyseur de performances personnalisé
     
-7. Une fois l’installation terminée : pour la passerelle ATA, cliquez sur **Lancer** pour ouvrir votre navigateur et vous connecter à la console ATA ; pour la passerelle légère ATA, cliquez sur **Terminer**.
+7. Une fois l’installation terminée, pour la passerelle ATA, cliquez sur **lancer** pour ouvrir votre navigateur et vous connecter à la console ATA, pour la passerelle légère ATA, cliquez sur **Terminer**.
 
 
 > [!div class="step-by-step"]
-> [« Étape 3](install-ata-step3.md)
+> [« Étape 3](install-ata-step3.md)
 > [Étape 5 »](install-ata-step5.md)
 
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -96,5 +96,5 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 

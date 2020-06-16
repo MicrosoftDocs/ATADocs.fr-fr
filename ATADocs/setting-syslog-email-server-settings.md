@@ -2,9 +2,9 @@
 title: Définition des paramètres de notification par e-mail dans Advanced Threat Analytics
 description: Décrit comment faire en sorte qu’ATA vous avertisse (par courrier électronique ou transfert d’événements ATA) quand il détecte des activités suspectes
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a8769213bbc130299da99c852112af20ecad3267
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 2a27025cb21892792c9502766ee90075df42efb6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412208"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775027"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Fournir à ATA les paramètres de votre serveur de messagerie
 
@@ -27,7 +27,7 @@ ATA peut vous avertir quand il détecte une activité suspecte. Pour qu’ATA pu
 
 1. Sur le serveur du centre ATA, cliquez sur l’icône **Microsoft Advanced Threat Analytics Management**(Gestion de Microsoft Advanced Threat Analytics) sur le Bureau.
 
-2. Entrez votre nom d’utilisateur et votre mot de passe, puis cliquez sur **Se connecter**.
+2. Entrez votre nom d’utilisateur et votre mot de passe, puis cliquez sur **se connecter**.
 
 3. Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 
@@ -60,7 +60,7 @@ ATA peut vous avertir quand il détecte une activité suspecte en envoyant la no
 
 2. Sur le serveur du centre ATA, cliquez sur l’icône **Microsoft Advanced Threat Analytics Management**(Gestion de Microsoft Advanced Threat Analytics) sur le Bureau.
 
-3. Entrez votre nom d’utilisateur et votre mot de passe, puis cliquez sur **Se connecter**.
+3. Entrez votre nom d’utilisateur et votre mot de passe, puis cliquez sur **se connecter**.
 
 4. Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 

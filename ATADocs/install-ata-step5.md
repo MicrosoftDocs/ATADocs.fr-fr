@@ -2,9 +2,9 @@
 title: Installer Advanced Threat Analytics-étape 5
 description: La cinquième étape de la procédure d’installation d’ATA vous aide à configurer les paramètres de votre passerelle ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,23 +12,23 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b784d34e505e39b9333bb0642de8a7bd061f6a1
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: de26eca5f9824b59dddffc9ad8856e03fdb08e2a
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413942"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775180"
 ---
 # <a name="install-ata---step-5"></a>Installer ATA - Étape 5
 
 *S’applique à : Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-ata-step4.md)
-> [Étape 6 »](install-ata-step6.md)
+> [«Étape 4](install-ata-step4.md) 
+>  [Étape 6»](install-ata-step6.md)
 
 
-## <a name="step-5-configure-the-ata-gateway-settings"></a>Étape 5. Configurer les paramètres de la passerelle ATA
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Étape 5. Configurer les paramètres de la passerelle ATA
 
 Une fois la passerelle ATA installée, procédez comme suit pour configurer ses paramètres.
 
@@ -76,7 +76,7 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 
 3.  S’il s’agit de la première passerelle ATA installée, patientez quelques minutes, puis connectez-vous à la console ATA. Ouvrez ensuite le volet de notification en effectuant un mouvement de balayage à partir du côté droit de l’écran. La liste **Entités apprises récemment** doit s’afficher dans la barre de notification à droite de la console.
 
-4.  Sur le Bureau, cliquez sur le raccourci **Microsoft Advanced Threat Analytics** pour vous connecter à la console ATA. Connectez-vous avec les mêmes informations d’identification utilisateur que celles que vous avez utilisées pour installer le centre ATA.
+4.  Sur le bureau, cliquez sur le raccourci **Microsoft Advanced Threat Analytics** pour vous connecter à la console ATA. Connectez-vous avec les mêmes informations d’identification utilisateur que celles que vous avez utilisées pour installer le centre ATA.
 5.  Dans la console, recherchez un élément dans la barre de recherche, comme un utilisateur ou un groupe sur votre domaine.
 6.  Ouvrez l’Analyseur de performances. Dans l’arborescence des performances, cliquez sur **Analyseur de performances**, puis sur l’icône du signe Plus (+) pour **Ajouter un compteur**. Développez **Passerelle Microsoft ATA**, puis descendez dans la liste jusqu’au compteur **Messages capturés par Network Listener PEF/s** et ajoutez-le. Vérifiez que l’activité apparaît sur le graphique.
 
@@ -84,12 +84,12 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 
 
 > [!div class="step-by-step"]
-> [« Étape 4](install-ata-step4.md)
-> [Étape 6 »](install-ata-step6.md)
+> [«Étape 4](install-ata-step4.md) 
+>  [Étape 6»](install-ata-step6.md)
 
 
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
@@ -99,5 +99,5 @@ Pour vous assurer que la passerelle ATA a été déployée avec succès, effectu
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
 

@@ -2,9 +2,9 @@
 title: Mise à jour d’Advanced Threat Analytics vers le Guide de migration 1,6
 description: Procédures pour mettre à jour ATA vers la version 1.6
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,15 +12,15 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ca0a71a9af5c65fada34043f5d63ce11a8987ac9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 38289e3f3327241ed9777de231a90e23212d6f24
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412752"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775469"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Mise à jour d’ATA vers la version 1.6 : guide de migration
-La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suivants :
+ATA 1.6 comporte les améliorations suivantes :
 
 -   Nouvelles détections
 
@@ -38,7 +38,7 @@ La mise à jour vers ATA 1.6 comprend des améliorations dans les domaines suiv
 
 ## <a name="updating-ata-to-version-16"></a>Mise à jour d’ATA vers la version 1.6
 > [!NOTE] 
-> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA qui inclut la version 1.6. Suivez ensuite la procédure d’installation standard décrite dans [Installer ATA](install-ata-step1.md).
+> Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA, qui comprend la version 1,6 et suivez la procédure d’installation standard décrite dans [installer ATA](install-ata-step1.md).
 
 Si vous avez déjà déployé la version 1.5 d’ATA, cette procédure vous guide tout au long des étapes nécessaires pour mettre à jour votre déploiement.
 
@@ -80,14 +80,14 @@ Dans cette version, le même fichier d’installation (Microsoft ATA Center Setu
 
     3.  Lisez le Contrat de Licence Utilisateur Final et, si vous en acceptez les termes, cliquez sur **Suivant**.
 
-    4.  Vous pouvez désormais utiliser Microsoft Update pour qu’ATA reste à jour.  Dans la page Microsoft Update, sélectionnez **Utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)** .
+    4.  Vous pouvez désormais utiliser Microsoft Update pour qu’ATA reste à jour.  Dans la page Microsoft Update, sélectionnez **utiliser Microsoft Update lorsque je recherche des mises à jour (recommandé)**.
     ![Image montrant comment maintenir ATA à jour](media/ata_ms_update.png) Ainsi, Windows est configuré de manière à récupérer les mises à jour des autres produits Microsoft (notamment ATA), comme illustré ci-après. 
      ![Image de mise à jour automatique de Windows](media/ata_installupdatesautomatically.png)
 
     5.  Avant le début de l’installation, ATA effectue une vérification de la disponibilité. Examinez les résultats de la vérification pour vérifier que les composants requis sont correctement configurés et que vous disposez de l’espace disque minimal. 
     ![Image de vérification de la disponibilité d’ATA](media/ata_install_readinesschecks.png)
 
-    6.  Cliquez sur **Mettre à jour**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
+    6.  Cliquez sur **Update**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
 
 3.  Une fois le centre ATA mis à jour, les passerelles ATA indiquent qu’elles sont obsolètes.
 
@@ -103,11 +103,11 @@ Pour télécharger le package d’installation de la passerelle ATA :
 
 1.  Supprimez les versions précédemment téléchargées du package de la passerelle ATA.
 
-2.  Sur la machine de la passerelle ATA, ouvrez un navigateur et entrez l’adresse IP de la console ATA que vous avez configurée dans le centre ATA. Une fois la console ATA ouverte, cliquez sur l’icône des paramètres et sélectionnez **Configuration**.
+2.  Sur la machine de la passerelle ATA, ouvrez un navigateur et entrez l’adresse IP de la console ATA que vous avez configurée dans le centre ATA. Lorsque la console ATA s’ouvre, cliquez sur l’icône des paramètres et sélectionnez **configuration**.
 
     ![Icône des paramètres de configuration](media/ATA-config-icon.png)
 
-3.  Sous l’onglet **Passerelles ATA**, cliquez sur **Télécharger l’installation de la passerelle ATA**.
+3.  Sous l’onglet **passerelles ATA** , cliquez sur Télécharger la configuration de la **passerelle ATA**.
 
 4.  Enregistrez le package localement.
 

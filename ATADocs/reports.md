@@ -2,9 +2,9 @@
 title: Utilisation des rapports ATA
 description: Explique comment vous pouvez générer des rapports dans ATA pour surveiller votre réseau.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e14a0ffa795f16fe2f5cd4a9cef06b98bb90bc74
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 20332702453ef48b454303399dc7203ac61ea111
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412905"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775078"
 ---
 # <a name="ata-reports"></a>Rapports ATA
 
@@ -29,7 +29,7 @@ La section Rapports ATA de la console vous permet de générer des rapports cont
 Pour accéder à la page Rapports, cliquez sur l’icône de rapport dans la barre de menus : ![icône de rapport](./media/ata-report-icon.png).
 Les rapports disponibles sont : 
 
-- **Rapport de synthèse** : ce rapport présente un tableau de bord de l’état dans le système. Vous pouvez afficher trois onglets : un pour un **Résumé** de ce qui a été détecté sur votre réseau, un pour les **Activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **Problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité système ATA nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
+- **Rapport de synthèse**: le rapport de synthèse présente un tableau de bord de l’état du système. Vous pouvez afficher trois onglets : un pour un **Résumé** de ce qui a été détecté sur votre réseau, un pour les **Activités suspectes ouvertes** qui répertorie les activités suspectes nécessitant votre attention, et un pour les **Problèmes d’intégrité ouverts** qui répertorie les problèmes d’intégrité système ATA nécessitant votre attention. Les activités suspectes répertoriées sont regroupées par type, tout comme les problèmes d’intégrité. 
 
 - **Modification des groupes sensibles** : ce rapport liste toutes les modifications apportées aux groupes sensibles (comme les administrateurs).
 
@@ -65,8 +65,8 @@ Pour définir un rapport planifié :
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
