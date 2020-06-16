@@ -4,7 +4,7 @@ description: Fournit des liens vers des informations sur la suppression des info
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: da4b81d0a812a9fe8c1f86982445ce017f5e290f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: ed811af8f046aff1249e30ac1c7c5585b07f9f88
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412106"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774925"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
 

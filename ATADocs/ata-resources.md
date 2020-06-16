@@ -2,9 +2,9 @@
 title: Guide de disponibilité et des ressources Advanced Threat Analytics
 description: Fournit une liste de ressources, de vidéos et de liens de démarrage, de déploiement et de guide de préparation pour ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 7/15/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7ebf92ba3d6977dd9aad79d8e87818c5f84795b9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: fff985790da3065693e4d22f84465ea24918bd14
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412055"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775571"
 ---
 # <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA 
 
@@ -52,7 +52,7 @@ Si vous utilisez des serveurs physiques, vous devez planifier la capacité. Vous
 [Outil de dimensionnement ATA](ata-capacity-planning.md) -L’outil de dimensionnement automatise la collecte des besoins en trafic d’ATA. Il fournit automatiquement des recommandations de prise en charge et de ressource pour le Centre ATA et les passerelles légères ATA.
 
 
-[Planification de la capacité d’ATA](ata-capacity-planning.md)
+[Planification de la capacité ATA](ata-capacity-planning.md)
 
 
 ## <a name="deploy-ata"></a>Déployer ATA
@@ -77,13 +77,13 @@ Les paramètres nécessaires de base dans ATA sont configurés dans l’Assistan
 
 Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des attaques. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez à la console ATA. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’ATA :
 
-[Manuel des activités suspectes d’ATA](https://aka.ms/ataplaybook) -Cet article vous guide tout au long des techniques d’attaque visant à voler des informations d’identification avec des outils de recherche disponibles sur Internet. À chaque étape de l’attaque, vous pouvez voir comment ATA vous aide à mieux comprendre ces menaces.
+[Manuel sur les activités suspectes d’ATA](https://aka.ms/ataplaybook) : cet article vous guide dans les techniques d’attaque contre le vol d’informations d’identification à l’aide d’outils de recherche facilement disponibles sur Internet.À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
 
 [Guide des activités suspectes d’ATA](suspicious-activity-guide.md)
 
 
 
-## <a name="security-best-practices"></a>Méthodes conseillées pour la sécurité
+## <a name="security-best-practices"></a>Bonnes pratiques de sécurité
 
 [Bonnes pratiques d’ATA](https://aka.ms/atasecbestpractices) - Bonnes pratiques pour la sécurisation d’ATA.
 
@@ -95,6 +95,6 @@ Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes d
 
 ## <a name="community-resources"></a>Ressources de la communauté
 
-[Blog ATA](https://aka.ms/ATABlog)
-[Communauté ATA](https://aka.ms/ATACommunity)
-[Donner son avis sur ATA](https://aka.ms/ATAUserVoice)
+[Blog ATA](https://aka.ms/ATABlog) 
+ [Communauté ATA](https://aka.ms/ATACommunity) 
+ [Fournir des commentaires sur ATA](https://aka.ms/ATAUserVoice)

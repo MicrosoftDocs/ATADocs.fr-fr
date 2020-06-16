@@ -2,9 +2,9 @@
 title: Résolution des problèmes de Advanced Threat Analytics à l’aide des journaux
 description: Décrit comment utiliser les journaux ATA pour résoudre des problèmes
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 01b13916f3cdcba1d1aa166c8998d7d91bbd2bfb
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 72f5371689281a7710455b9bc49b2182415b795b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414248"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774891"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Résolution des problèmes liés à ATA à l’aide des journaux ATA
 
@@ -28,7 +28,7 @@ Les journaux ATA offrent un aperçu de ce que fait chaque composant ATA à un mo
 ## <a name="ata-gateway-logs"></a>Journaux de la passerelle ATA
 Dans cette section, chaque référence à la passerelle ATA concerne également la passerelle légère ATA. 
 
-Les journaux de la passerelle ATA se trouvent dans le sous-dossier nommé **Logs** où ATA est installé ; l’emplacement par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\\** . Dans l’emplacement de l’installation par défaut, il se trouve ici : **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Les journaux de la passerelle ATA se trouvent dans le sous-dossier nommé **Logs** où ATA est installé ; l’emplacement par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\\**. Dans l’emplacement d’installation par défaut, il se trouve à l’emplacement suivant : **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 La passerelle ATA dispose des journaux suivants :
 
@@ -67,7 +67,7 @@ Le centre ATA dispose des journaux suivants :
 
 
 ## <a name="ata-deployment-logs"></a>Journaux de déploiement ATA
-Les journaux de déploiement ATA sont situés dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l’emplacement d’installation par défaut, il se trouve à l’adresse suivante : **C:\Users\<connecté à l’utilisateur > \AppData\Local\Temp** (ou un répertoire au-dessus de% temp%).
+Les journaux de déploiement ATA sont situés dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l’emplacement d’installation par défaut, il se trouve à l’emplacement suivant : **C:\Users \<logged-in-user> \AppData\Local\Temp** (ou un répertoire au-dessus de% temp%).
 
 Journaux de déploiement du centre ATA :
 
@@ -89,8 +89,8 @@ Journaux de déploiement de la passerelle ATA et de la passerelle légère ATA 
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

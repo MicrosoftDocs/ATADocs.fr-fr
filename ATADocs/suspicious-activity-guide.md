@@ -4,7 +4,7 @@ d|Description: This article provides a list of the suspicious activities ATA can
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b9518a895dc4f9ed74cc183f14c1149f1fd7f14f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 21214cd1586b2379d9d5e8808a276e80d5456053
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411341"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774976"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
@@ -28,13 +28,13 @@ Après avoir examiné une activité suspecte, vous pouvez la classer comme :
 
 -   **Vrai positif** : action malveillante détectée par ATA.
 
--   **Vrai positif sans gravité** : action détectée par ATA qui est réelle, mais pas malveillante, comme un test de pénétration.
+-   **Vrai positif sans gravité**: action détectée par ATA qui est réelle, mais pas malveillante, comme un test de pénétration.
 
 -   **Faux positif** : fausse alerte. L’activité n’a pas eu lieu.
 
 Pour plus d’informations sur la gestion des alertes ATA, consultez [Gestion des activités suspectes](working-with-suspicious-activities.md).
 
-Si vous avez des questions ou des commentaires à ce sujet, contactez l'équipe ATA à l’adresse [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
+Si vous avez des questions ou des commentaires, contactez l’équipe ATA à l’adresse [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com) .
 
 ## <a name="abnormal-modification-of-sensitive-groups"></a>Modification anormale de groupes sensibles
 
@@ -89,7 +89,7 @@ Rejoignez la machine au domaine, si nécessaire, ou réinitialisez le mot de pas
 
 Dans une attaque par force brute, un attaquant tente de s’authentifier en essayant plusieurs mots de passe pour différents comptes jusqu’à ce qu’il trouve le bon mot de passe de l’un des comptes. Une fois qu’il a deviné le mot de passe d’un compte, l’attaquant utilise ce compte pour se connecter au réseau.
 
-Dans cette détection, une alerte est déclenchée quand ATA détecte un nombre massif d’authentifications de liaison simple. L’attaque peut être *horizontale* avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, *verticale* avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou à la fois horizontale et verticale.
+Dans cette détection, une alerte est déclenchée quand ATA détecte un nombre massif d’authentifications de liaison simple. Il peut s’agir *d’un* petit ensemble de mots de passe entre plusieurs utilisateurs. ou *verticalement»* avec un grand ensemble de mots de passe sur quelques utilisateurs seulement. ou une combinaison de ces deux options.
 
 **Examen**
 
@@ -101,7 +101,7 @@ Dans cette détection, une alerte est déclenchée quand ATA détecte un nombre 
 
 **Correction**
 
-Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
+Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fournissent le premier niveau de sécurité nécessaire contre les attaques en force brute.
 
 ## <a name="encryption-downgrade-activity"></a>Passage à une version antérieure du chiffrement
 
@@ -195,7 +195,7 @@ Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaqua
 
 2. S’il s’agit d’un compte sensible, réinitialisez deux fois le compte KRBTGT comme dans l’activité suspecte Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et utilisez  [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Dans la mesure où il s’agit d’une technique de mouvement latéral, suivez les bonnes pratiques indiquées dans [Recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Activité de Golden Ticket Kerberos<a name="golden-ticket"></a>
+## <a name="kerberos-golden-ticket-activity"></a>Activité de Golden Ticket Kerberos<a name="golden-ticket"></a>
 
 **Description**
 
@@ -205,7 +205,7 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
 
 **Examen**
 
-1. Le paramètre **Durée de vie maximale du ticket utilisateur** défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Si c’est le cas, **fermez** l’alerte, car il s’agit d’un faux positif.
+1. Le paramètre **Durée de vie maximale du ticket utilisateur** défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Si c’est le cas, **Fermez** l’alerte (il s’agit d’un faux positif).
 
 2. La passerelle ATA impliquée dans cette alerte est-elle une machine virtuelle ? Si c’est le cas, son exécution a-t-elle repris à partir d’un état de mise en mémoire ? Si c’est le cas, **fermez** l’alerte.
 
@@ -261,7 +261,7 @@ Vérifiez les autorisations suivantes :
 - Répliquer tous les changements d’annuaire  
 
 Pour plus d’informations, consultez  [Accorder des autorisations Active Directory Domain Services pour la synchronisation de profils dans SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Vous pouvez utiliser l’ [analyseur AD ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/)  ou créer un script Windows PowerShell pour savoir qui possède ces autorisations dans le domaine.
+Vous pouvez tirer parti de l' [analyseur ACL Active Directory](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/)   ou créer un script Windows PowerShell pour déterminer qui dispose de ces autorisations dans le domaine.
 
 ## <a name="massive-object-deletion"></a>Suppression massive d’objets
 
@@ -298,7 +298,7 @@ Des vulnérabilités connues dans les versions antérieures de Windows Server pe
 
 **Correction**
 
-Vérifiez que tous les contrôleurs de domaine dotés du système d’exploitation Windows Server 2012 R2 ou version antérieure sont installés avec  [withKB3011780and](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)  et que tous les serveurs et contrôleurs de domaine membres avec 2012 R2 ou version antérieure sont à jour avec KB2496930. Pour plus d’informations, consultez  [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)  et  [Faux PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Vérifiez que tous les contrôleurs de domaine dotés de systèmes d’exploitation jusqu’à Windows Server 2012 R2 sont installés avec [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)   et que tous les serveurs membres et contrôleurs de domaine jusqu’à 2012 R2 sont à jour avec KB2496930. Pour plus d’informations, consultez [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx)   et [contrefaçond PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Reconnaissance à l’aide de l’énumération de compte
 
@@ -325,7 +325,7 @@ Si la réponse à l’une de ces questions est oui, **fermez** l’activité sus
 
 **Correction**
 
-Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
+Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fournissent le premier niveau de sécurité nécessaire contre les attaques en force brute.
 
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Reconnaissance à l’aide de requêtes de services d’annuaire
@@ -373,7 +373,7 @@ Il existe plusieurs types de requêtes dans le protocole DNS. ATA détecte les d
 
 **Examen**
 
-1. La machine source (**En provenance de…** ) est-elle un serveur DNS ? Si c’est le cas, il s’agit probablement d’un faux positif. Pour le vérifier, cliquez sur l’alerte pour accéder à la page de détails correspondante. Dans le tableau, sous **Requête**, vérifiez quels domaines ont été interrogés. S’agit-il de domaines existants ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif). De plus, vérifiez que le port UDP 53 est ouvert entre la passerelle ATA et l’ordinateur source pour éviter les futurs faux positifs.
+1. La machine source (**En provenance de…**) est-elle un serveur DNS ? Si c’est le cas, il s’agit probablement d’un faux positif. Pour le vérifier, cliquez sur l’alerte pour accéder à la page de détails correspondante. Dans le tableau, sous **Requête**, vérifiez quels domaines ont été interrogés. S’agit-il de domaines existants ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif). De plus, vérifiez que le port UDP 53 est ouvert entre la passerelle ATA et l’ordinateur source pour éviter les futurs faux positifs.
 2.  L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **excluez les entités** dans ATA, soit directement en choisissant **Fermer et exclure**, soit via la page **Exclusion**, sous **Configuration** (disponible pour les administrateurs d’ATA).
 3.  Si la réponse à toutes les questions précédentes est non, continuez à chercher en vous concentrant sur l’ordinateur source. Cliquez sur l’ordinateur source pour accéder à sa page de profil. Vérifiez ce qui s’est passé à peu près au même moment que la requête, en recherchant d’éventuelles activités inhabituelles, notamment : qui s’est connecté et a accédé à quelles ressources.
 
@@ -429,7 +429,7 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 
 1. Limitez l’accès à distance aux contrôleurs de domaine à partir d’ordinateurs qui ne sont pas de niveau 0.
 
-2. Implémentez un  [accès privilégié](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)  pour autoriser uniquement les machines avec une sécurité renforcée à se connecter aux contrôleurs de domaine pour les administrateurs.
+2. Implémentez un [accès privilégié](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)   pour autoriser uniquement les ordinateurs sécurisés à se connecter aux contrôleurs de domaine pour les administrateurs.
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Informations d’identification de compte sensible exposées et services qui exposent des informations d’identification de compte
 
@@ -460,7 +460,7 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 **Examen**
 
-1. Cliquez sur **Télécharger les détails** pour voir toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
+1. Cliquez sur **Télécharger les détails** pour consulter toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes : 
    - Liste des comptes attaqués
    - Liste des comptes devinés dans lesquels des tentatives de connexion se sont terminées par une authentification réussie
    - Activités des événements concernés si les tentatives d’authentification ont été effectuées à l’aide de NTLM 
@@ -471,9 +471,9 @@ Dans cette détection, une alerte est déclenchée après l’échec de nombreus
 
 **Correction**
 
-Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) assurent le niveau minimum de sécurité nécessaire contre les attaques par force brute.
+Les [mots de passe longs et complexes](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fournissent le premier niveau de sécurité nécessaire contre les attaques en force brute.
 
-## Création de service malveillant<a name="suspicious-service-creation"></a>
+## <a name="suspicious-service-creation"></a>Création de service suspect<a name="suspicious-service-creation"></a>
 
 **Description**
 
@@ -489,7 +489,7 @@ Les attaquants tentent d’exécuter des services suspects sur votre réseau. AT
 
    - Si la réponse à ces deux questions est *oui*, **fermez** l’alerte ou ajoutez-la à la liste des exclusions.
 
-3. Si la réponse à l’une de ces questions est *non*, considérez l’attaque comme un vrai positif.
+3. Si la réponse à l’une de ces questions est *non*, cela doit être considéré comme un vrai positif.
 
 **Correction**
 
@@ -552,8 +552,8 @@ Appliquez les derniers correctifs à tous vos ordinateurs et vérifiez que toute
 >[!NOTE]
 > Pour désactiver une alerte d’activité suspecte, contactez le support.
 
-## <a name="related-videos"></a>Vidéos associées
-- [Rejoindre la communauté de sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vidéos connexes
+- [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Voir aussi

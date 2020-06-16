@@ -2,9 +2,9 @@
 title: Nouveautés d’ATA version 1.9
 description: Liste les nouveautés de la version 1.9 d’ATA ainsi que les problèmes connus
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40193c0aa8c0ee10dd129d4153dd63df9f8eb926
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412803"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774670"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Nouveautés d’ATA version 1.9
 
@@ -42,13 +42,13 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 -   Avec ATA 1.9, vous pouvez [identifier manuellement des groupes](tag-sensitive-accounts.md) ou des comptes comme sensibles pour améliorer les détections. Cette identification impacte de nombreuses détections ATA, telles que la détection des modifications des groupes sensibles et le chemin de mouvement latéral, qui s’appuient sur les groupes et les comptes considérés comme sensibles.
 
-## <a name="performance-improvements"></a>Améliorations apportées aux performances
+## <a name="performance-improvements"></a>Optimisation des performances
 
 - L’infrastructure du Centre ATA a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 
 
 
-## <a name="additional-changes"></a>Autres modifications
+## <a name="additional-changes"></a>Modifications supplémentaires
 
 - Après l’installation d’une nouvelle version d’ATA, l’icône [**Nouveautés**](working-with-ata-console.md) apparaît dans la barre d’outils pour vous indiquer ce qui a été changé dans la dernière version. Elle fournit également un lien vers le journal des modifications détaillé de la version.
 

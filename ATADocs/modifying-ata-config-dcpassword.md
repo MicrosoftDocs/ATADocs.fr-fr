@@ -2,9 +2,9 @@
 title: Modifier la configuration Advanced Threat Analytics-mot de passe de connectivité du domaine
 description: Décrit comment modifier le mot de passe de connectivité de domaine sur la passerelle ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa89acd842632c4a23d34f73aa6fe21abbc7878f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: fbbb692e462626c3625135a8a5fb5109fe570659
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414095"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775095"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Modifier la configuration ATA - Mot de passe de connectivité de domaine
 

@@ -4,7 +4,7 @@ description: Décrit la configuration requise pour réussir le déploiement d’
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 94d30c768273b51aef0e8b7a75affbf2b5db85df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1fe38bb767dee48454e10007d1225904ae52e4e2
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412072"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84773038"
 ---
 # <a name="ata-prerequisites"></a>Configuration requise pour ATA
 
@@ -26,7 +26,7 @@ ms.locfileid: "79412072"
 Cet article décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement.
 
 > [!NOTE]
-> Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
+>  Pour plus d’informations sur la façon de planifier les ressources et la capacité, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
 
 
 Les différents composants d’ATA sont le centre ATA, la passerelle ATA et/ou la passerelle légère ATA. Pour plus d’informations sur les composants d’ATA, consultez [Architecture d’ATA](ata-architecture.md).
@@ -100,7 +100,7 @@ Si vous exécutez le centre ATA en tant que machine virtuelle, arrêtez le serve
 Sur un serveur physique, la base de données ATA nécessite la **désactivation** de l’accès mémoire non uniforme (NUMA) dans le BIOS. Votre système peut parler d’entrelacement de nœuds pour faire référence à NUMA, auquel cas vous devez **activer** l’entrelacement de nœuds pour désactiver NUMA. Pour plus d’informations, consultez la documentation du BIOS.<br>
 
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
-Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
+Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
@@ -109,7 +109,7 @@ Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’es
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
 
-### <a name="network-adapters"></a>Cartes réseau
+### <a name="network-adapters"></a>Adaptateurs réseau
 
 Vous devez disposer des éléments suivants :
 -   Au moins une carte réseau (si vous utilisez des serveurs physiques dans un environnement de réseau local virtuel, nous vous recommandons d’utiliser deux cartes réseau)
@@ -119,17 +119,17 @@ Vous devez disposer des éléments suivants :
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts pour que le centre ATA fonctionne correctement.
 
-|Protocole|Transport|Port|Vers/À partir de|Direction|
+|Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
-|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
-|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
-|**SMTP** (facultatif)|TCP|25|SMTP Server|Sortant|
-|**SMTPS** (facultatif)|TCP|465|SMTP Server|Sortant|
-|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Sortant|
+|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Trafic entrant|
+|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Trafic entrant|
+|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Trafic entrant|
+|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Règle de trafic sortant|
+|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Règle de trafic sortant|
+|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Règle de trafic sortant|
 |**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
-|**DNS**|TCP et UDP|53|Serveurs DNS|Sortant|
+|**DNS**|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
 |**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Sortant|
 |**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Sortant|
 
@@ -149,7 +149,7 @@ Le certificat doit avoir les éléments suivants :
 -   Une clé publique de 2 048 bits de longueur
 -   Des indicateurs d’utilisation KeyEncipherment et ServerAuthentication définis à une valeur
 -   La valeur « KeyExchange » pour KeySpec (KeyNumber) (AT\_KEYEXCHANGE).
-    La valeur « signature » (au niveau de la SIGNATURE\_) n’est *pas* prise en charge. 
+    La valeur « signature » (au niveau de la \_ signature) n’est *pas* prise en charge. 
 -   Toutes les machines de passerelle doivent être en mesure de valider et d’approuver entièrement le certificat Center sélectionné.
 
 Par exemple, vous pouvez utiliser les modèles standard **Serveur web** ou **Ordinateur**.
@@ -177,7 +177,7 @@ Pour vous en assurer, exécutez l’applet de commande Windows PowerShell suivan
 Pour plus d’informations sur l’utilisation de machines virtuelles avec la passerelle ATA, consultez [Configurer la mise en miroir des ports](configure-port-mirroring.md).
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
+> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela comprend l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.<br>
@@ -185,12 +185,12 @@ Une passerelle ATA peut prendre en charge la surveillance de plusieurs contrôle
 
 Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de gestion de la mémoire de l’ordinateur virtuel, consultez [mémoire dynamique](#dynamic-memory).
 
-Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
+Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Cartes réseau
+### <a name="network-adapters"></a>Adaptateurs réseau
 La passerelle ATA nécessite au moins une carte de gestion et au moins une carte de capture :
 
 -   **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Elle doit être configurée avec les paramètres suivants :
@@ -199,7 +199,7 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 
     -   Serveurs DNS préféré et auxiliaire
 
-    -   Le **suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
+    -   Le **Suffixe DNS pour cette connexion** doit être le nom DNS du domaine pour chaque domaine surveillé.
 
         ![Configurer le suffixe DNS dans les paramètres TCP/IP avancés](media/ATA-DNS-Suffix.png)
 
@@ -215,19 +215,19 @@ La passerelle ATA nécessite au moins une carte de gestion et au moins une carte
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences de la passerelle ATA :
 
-|Protocole|Transport|Port|Vers/À partir de|Direction|
+|Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
 |LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
 |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
 |Kerberos|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Règle de trafic sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
-|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
+|DNS|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
-|SSL|TCP|443|Centre ATA|Sortant|
+|SSL|TCP|443|Centre ATA|Règle de trafic sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 
 
@@ -261,7 +261,7 @@ Pendant l’installation, le .Net Framework 4.6.1 est installé et peut entraîn
 
 
 > [!NOTE]
-> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
+> Un minimum de 5 Go d’espace sont nécessaires et 10 Go sont recommandés. Cela comprend l’espace nécessaire pour les fichiers binaires ATA, les journaux ATA et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Spécifications du serveur
 
@@ -271,13 +271,13 @@ Vous pouvez déployer la passerelle légère ATA sur des contrôleurs de domaine
 
 Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de gestion de la mémoire de l’ordinateur virtuel, consultez [mémoire dynamique](#dynamic-memory).
 
-Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md).
+Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle légère ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Cartes réseau
+### <a name="network-adapters"></a>Adaptateurs réseau
 
 La passerelle légère ATA surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine. <br>
 Après le déploiement, vous pouvez utiliser la console ATA si vous voulez changer les cartes réseau analysées.
@@ -288,9 +288,9 @@ Après le déploiement, vous pouvez utiliser la console ATA si vous voulez chang
 ### <a name="ports"></a>Ports
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par la passerelle légère ATA :
 
-|Protocole|Transport|Port|Vers/À partir de|Direction|
+|Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
+|DNS|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |SSL|TCP|443|Centre ATA|Sortant|
@@ -318,13 +318,13 @@ L’accès à la console ATA s’effectue au moyen d’un navigateur, avec prise
 
 -   Largeur d’écran d’une résolution minimale de 1 700 pixels
 
-## <a name="related-videos"></a>Vidéos associées
+## <a name="related-videos"></a>Vidéos connexes
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Voir aussi
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
-- [Architecture d’ATA](ata-architecture.md)
+- [Architecture ATA](ata-architecture.md)
 - [Installer ATA](install-ata-step1.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

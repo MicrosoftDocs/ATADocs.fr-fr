@@ -2,9 +2,9 @@
 title: Exclusion d’entités des détections dans Advanced Threat Analytics
 description: Explique comment empêcher ATA de détecter comme suspectes les activités d’une entité spécifique
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7fad2868ba78570e983b2eae811cfe2ed9e6d182
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410475"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775338"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
 
@@ -31,7 +31,7 @@ Pour empêcher des entités de déclencher des alertes dans ATA :
 
 Il existe deux façons d’exclure des entités : à partir de l’activité suspecte elle-même ou à partir de l’onglet **Exclusions** de la page **Configuration**.
 
-- **À partir de l’activité suspecte** : dans la chronologie de l’activité suspecte, lorsque vous recevez une alerte sur une activité pour un utilisateur, un ordinateur ou une adresse IP qui est autorisé(e) à effectuer l’activité spécifique et qui peut l’exécuter fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte pour cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Elle ferme également l’activité suspecte qui n'est plus répertoriée dans la liste d’événements **ouverts** dans la **chronologie de l’activité suspecte**.
+- **À partir de l’activité suspecte** : dans la chronologie de l’activité suspecte, lorsque vous recevez une alerte sur une activité pour un utilisateur, un ordinateur ou une adresse IP qui est autorisé(e) à effectuer l’activité spécifique et qui peut l’exécuter fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte pour cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Il ferme l’activité suspecte et n’est plus répertoriée dans la liste événements **ouverts** dans la chronologie de l' **activité suspecte**.
 
     ![Exclure une entité](./media/exclude-in-sa.png)
 

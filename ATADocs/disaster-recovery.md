@@ -4,7 +4,7 @@ description: Décrit comment vous pouvez récupérer rapidement les fonctionnali
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5bf0654f951466f6cb33e9c71c522fbf582179c9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 41abda99939f1152cd21f8de6034cf42f435bbf4
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413296"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775339"
 ---
 # <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
 
@@ -32,7 +32,7 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 1. La configuration du centre ATA est sauvegardée dans un fichier toutes les 4 heures. Recherchez la dernière copie de sauvegarde de la configuration du centre ATA et enregistrez-la sur un ordinateur distinct. Pour obtenir une explication complète de la localisation de ces fichiers, consultez [Exporter et importer la configuration ATA](ata-configuration-file.md). 
 2. Exportez le certificat du centre ATA.
-    1. Dans le Gestionnaire de certificats, accédez à **Certificats (ordinateur local)**  -> **Personnel** ->**Certificats**, puis sélectionnez **Centre ATA**.
+    1. Dans le gestionnaire de certificats, accédez à **certificats (ordinateur local)**  ->  **Personal**  -> **certificats**personnels, puis sélectionnez **Centre ATA**.
     2. Cliquez avec le bouton droit sur **Centre ATA** et sélectionnez **Toutes les tâches** puis **Exportation**. 
      ![Certificat du centre ATA](media/ata-center-cert.png)
     3. Suivez les instructions pour exporter le certificat, en veillant à exporter également la clé privée.
@@ -66,8 +66,8 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](install-ata-step6.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

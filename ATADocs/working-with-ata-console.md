@@ -2,9 +2,9 @@
 title: Fonctionnement de la console Advanced Threat Analytics
 description: Explique comment se connecter à la console ATA et à ses composants
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1db61a38cf87e6c1d8989e5ee591a0741f25f4e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414367"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774653"
 ---
 # <a name="working-with-the-ata-console"></a>Utilisation de la console ATA
 
@@ -43,7 +43,7 @@ Pour ouvrir une session dans la console ATA, vous devez utiliser le compte d’u
    >[!NOTE]
    > Vous pouvez également ouvrir un navigateur à partir du centre ATA ou de la passerelle ATA et accéder à l’adresse IP que vous avez configurée dans l’installation du centre ATA pour la console ATA.    
 
-2. Si l’ordinateur où le centre ATA est installé et l’ordinateur à partir duquel vous tentez d’accéder à la console ATA sont joints à un domaine, ATA prend en charge l’authentification unique intégrée avec l’authentification Windows. Si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez également vous connecter à l’aide d’une carte à puce. Vos autorisations dans ATA correspondent à votre [rôle administrateur](ata-role-groups.md).
+2. Si l’ordinateur où le centre ATA est installé et l’ordinateur à partir duquel vous tentez d’accéder à la console ATA sont joints à un domaine, ATA prend en charge l’authentification unique intégrée avec l’authentification Windows. Si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans ATA correspondent à votre [rôle administrateur](ata-role-groups.md).
 
    > [!NOTE]
    > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder à la console ATA en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur ATA. Vous pouvez également exécuter votre navigateur en tant qu’un autre utilisateur, ou vous déconnecter de Windows et ouvrir une session avec votre utilisateur administrateur ATA. Pour faire en sorte que la console ATA demande des informations d’identification, accédez à la console en utilisant une adresse IP : vous êtes alors invité à entrer des informations d’identification.
@@ -68,7 +68,7 @@ Il s’agit de la page de destination qui s’affiche par défaut quand vous vou
 
 ![Image de la chronologie des attaques ATA](media/ATA-Suspicious-Activity-Timeline.jpg)
 
-Pour plus d’informations, consultez [Gestion des activités suspectes](working-with-suspicious-activities.md).
+Pour plus d’informations, voir [Gestion des activités suspectes](working-with-suspicious-activities.md).
 
 ### <a name="notification-bar"></a>Barre de notification
 
@@ -106,7 +106,7 @@ Les groupes de la liste suivante sont considérés comme **sensibles** par ATA. 
 - Admins du domaine 
 - Contrôleurs de domaine 
 - Administrateurs de schéma
-- Administrateurs de l'entreprise 
+- Administrateurs de l’entreprise 
 - Propriétaires créateurs de la stratégie de groupe 
 - Contrôleurs de domaine en lecture seule 
 - Administrateurs  
@@ -130,11 +130,11 @@ Si vous pointez votre souris sur une entité, n'importe où dans la console, où
 
 -   Nom
 
--   Image
+-   Photo
 
--   Adresse de messagerie
+-   E-mail
 
--   Téléphone
+-   Telephone
 
 -   Nombre d’activités suspectes par niveau de gravité
 

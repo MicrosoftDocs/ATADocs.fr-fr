@@ -4,7 +4,7 @@ description: Décrit comment résoudre les problèmes connus dans Advanced Threa
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/22/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 548be58270bc703db0f26673036e0f3a905fbdcc
-ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
+ms.openlocfilehash: 7aef6beb7c763ac4e4393288a4c4f7b1dc35ac31
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524818"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774942"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
@@ -72,7 +72,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 >
 > |Error|Description|Résolution|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1. Arrêtez le service du centre ATA. <br></br>2. Supprimez le certificat du centre ATA dans le magasin de certificats du centre. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3. Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil-importpfx "CenterCertificate.\\pfx" sur _KEYEXCHANGE <br></br>4. Démarrez le service du centre ATA. <br></br>5. Vérifiez que tout fonctionne maintenant comme prévu.|
+> |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1. Arrêtez le service du centre ATA. <br></br>2. Supprimez le certificat du centre ATA dans le magasin de certificats du centre. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3. Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil-importpfx "CenterCertificate. pfx" sur \\ _KEYEXCHANGE <br></br>4. Démarrez le service du centre ATA. <br></br>5. Vérifiez que tout fonctionne maintenant comme prévu.|
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problèmes de la passerelle ATA et de la passerelle légère
 

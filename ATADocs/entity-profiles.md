@@ -2,9 +2,9 @@
 title: Utilisation des profils d’entité dans la console Advanced Threat Analytics
 description: Décrit comment investiguer des entités à partir de l’écran des profils utilisateur dans la console ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412344"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775401"
 ---
 # <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
 
@@ -70,7 +70,7 @@ Dans la section **Contrôle d’accès d’utilisateur**, ATA expose les paramè
 
 En cliquant sur l’onglet **Chemins d'accès de mouvement latéral**, vous pouvez afficher une image entièrement interactive et dynamique offrant une représentation visuelle des chemins de mouvement latéral en direction et en provenance de cet utilisateur qui peuvent être utilisés pour infiltrer votre réseau.
 
-Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
+Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 
  ![chemins de mouvement latéral du profil utilisateur](media/user-profile-lateral-movement-paths.png)
 

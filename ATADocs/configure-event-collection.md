@@ -2,9 +2,9 @@
 title: Configurer le transfert d’événements Windows dans Advanced Threat Analytics
 description: Décrit les options de configuration du transfert des événements Windows avec ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84ce1bed4203ff7344d1e28dc4765ba5cfe79843
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 31e1b1923d6cef2b0bc4c34349be8b6516aceb0b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411851"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775384"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
@@ -35,7 +35,7 @@ Pour améliorer les capacités de détection, ATA a besoin des événements Wind
 
 Après avoir configuré la mise en miroir des ports depuis les contrôleurs de domaine sur la passerelle ATA, utilisez les instructions ci-dessous pour configurer les transferts d’événements Windows à l’aide de la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding. 
 
-**Étape 1 : ajouter le compte service réseau au groupe Lecteurs des journaux d’événements du domaine** 
+**Étape 1 : Ajouter le compte de service réseau au groupe Lecteurs du journal des événements de domaine** 
 
 Dans ce scénario, nous partons du principe que la passerelle ATA est un membre du domaine.
 
@@ -45,7 +45,7 @@ Dans ce scénario, nous partons du principe que la passerelle ATA est un membre 
 
 Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d’événements**, redémarrez les contrôleurs de domaine pour que la modification prenne effet.
 
-**Étape 2 : créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le Gestionnaire d’abonnements cible.** 
+**Étape 2 : Créer une stratégie sur les contrôleurs de domaine pour définir le paramètre Configurer le gestionnaire d’abonnements cible** 
 > [!Note] 
 > Vous pouvez créer une stratégie de groupe pour ces paramètres et appliquer la stratégie de groupe à chaque contrôleur de domaine surveillé par la passerelle ATA. Les étapes ci-dessous modifient la stratégie locale du contrôleur de domaine.     
 
@@ -69,7 +69,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
    4.  Cliquez sur **OK**.
    5.  À partir d’une invite de commandes avec élévation de privilèges, tapez *gpupdate /force*. 
 
-**Étape 3 : effectuer les opérations suivantes sur la passerelle ATA** 
+**Étape 3 : Effectuer les opérations suivantes sur la passerelle ATA** 
 
 1.  Ouvrez une invite de commandes avec élévation de privilèges et tapez *wecutil qc*.
 2.  Ouvrez l’**Observateur d’événements**. 
@@ -92,7 +92,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     6.  Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur la passerelle ATA.
 
 
-Pour plus d’informations, consultez [Configurer les ordinateurs pour transférer et recueillir les événements](https://technet.microsoft.com/library/cc748890)
+Pour plus d'informations, voir : [Configurer les ordinateurs de façon à transférer et à recueillir les événements](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Voir aussi
 - [Installer ATA](install-ata-step1.md)

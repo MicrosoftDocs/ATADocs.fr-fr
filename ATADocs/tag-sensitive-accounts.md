@@ -2,9 +2,9 @@
 title: Baliser les comptes sensibles avec ATA
 description: Décrit comment identifier des comptes sensibles à l’aide d’Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4897bee445099b21dabac7ffbbbf3e607254b237
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 81924146012b02464f435904593c930eda9f77b9
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414163"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774993"
 ---
 # <a name="tag-sensitive-accounts"></a>Identifier des comptes sensibles
 
@@ -61,7 +61,7 @@ Les groupes de la liste suivante sont considérés comme sensibles par ATA. Une 
 -   Contrôleurs de domaine en lecture seule 
 -   Contrôleurs de domaine d’entreprise en lecture seule 
 -   Administrateurs du schéma 
--   Administrateurs de l'entreprise
+-   Administrateurs de l’entreprise
      
 ## <a name="see-also"></a>Voir aussi
 [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

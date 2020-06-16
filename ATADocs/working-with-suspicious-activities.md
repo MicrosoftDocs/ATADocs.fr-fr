@@ -2,9 +2,9 @@
 title: Utilisation d’activités suspectes dans Advanced Threat Analytics
 description: Explique comment passer en revue les activités suspectes identifiées par ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 4/29/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414401"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774636"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
@@ -35,7 +35,7 @@ Chaque activité suspecte comporte les informations suivantes :
 
 -   Gravité de l’activité suspecte (haute, moyenne ou faible)
 
--   État : Ouvert, fermé ou supprimé.
+-   État : Ouvert, fermé ou supprimé.
 
 -   La capacité à :
 
@@ -54,11 +54,11 @@ Pour filtrer la liste des activités suspectes :
 
 1.  Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
 
-2.  Pour filtrer la liste, sélectionnez **Haute**, **Moyenne** ou **Faible**.
+2.  Pour filtrer la liste, sélectionnez **haute**, **moyenne**ou **faible**.
 
 **Gravité des activités suspectes**
 
--   **Faible**
+-   **Low**
 
     Correspond aux activités suspectes pouvant conduire à des attaques durant lesquelles des utilisateurs ou logiciels malveillants accèdent aux données d’une entreprise.
 
@@ -72,7 +72,7 @@ Pour filtrer la liste des activités suspectes :
 
 
 ## <a name="remediating-suspicious-activities"></a>Résolution des activités suspectes
-Vous pouvez changer l’état d’une activité suspecte en cliquant sur son état actuel, puis en sélectionnant une des options suivantes : **Ouvert**, **Ignoré**, **Fermé** ou **Supprimé**.
+Vous pouvez modifier l’état d’une activité suspecte en cliquant sur l’état actuel de l’activité suspecte, puis en sélectionnant l’une des options suivantes : **ouvrir**, **supprimer**, **Fermer**ou **supprimer**.
 Pour cela, cliquez sur les trois points en haut à droite d’une activité suspecte spécifique pour afficher la liste des actions disponibles.
 
 ![Actions ATA pour les activités suspectes](./media/sa-actions.png)
@@ -95,8 +95,8 @@ Pour cela, cliquez sur les trois points en haut à droite d’une activité susp
   > Les pages de configuration peuvent être modifiées seulement par des administrateurs d’ATA.
 
 
-## <a name="related-videos"></a>Vidéos associées
-- [Rejoindre la communauté de sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vidéos connexes
+- [Rejoindre la communauté sur la sécurité](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Voir aussi

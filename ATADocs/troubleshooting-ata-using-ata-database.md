@@ -2,9 +2,9 @@
 title: Résolution des problèmes de Advanced Threat Analytics à l’aide de la base de données
 description: Décrit comment vous pouvez utiliser la base de données ATA pour résoudre les problèmes
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 269646c7547b0a9a3538405a4180d063e27e0455
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414214"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774908"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Résolution des problèmes liés à ATA à l’aide de la base de données ATA
 
@@ -31,11 +31,11 @@ La procédure par défaut et la plus simple pour interroger la base de données 
 
 1.  Ouvrez une fenêtre de ligne de commande et modifiez le chemin au dossier bin MongoDB. Le chemin par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
 
-2.  Exécutez `mongo.exe ATA`. Veillez à taper ATA tout en majuscules.
+2.  Exécutez : `mongo.exe ATA`. Veillez à taper ATA tout en majuscules.
 
 > [!div class="mx-tableFixed"]
 > 
-> |Procédure :|Syntaxe|Remarques|
+> |Comment...|Syntaxe|Notes|
 > |-------------|----------|---------|
 > |Rechercher des collections dans la base de données.|`show collections`|Utile en tant que test de bout en bout pour constater que le trafic est écrit dans la base de données et que l’événement 4776 est reçu par ATA.|
 > |Obtenir les détails d’un utilisateur/ordinateur/groupe (UniqueEntity), par exemple un ID d’utilisateur.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
@@ -49,8 +49,8 @@ Voici un exemple de code qui utilise la syntaxe fournie précédemment. Si vous 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
 ## <a name="see-also"></a>Voir aussi
-- [Prérequis au déploiement d’ATA](ata-prerequisites.md)
-- [Planification de la capacité d’ATA](ata-capacity-planning.md)
+- [Configuration requise pour ATA](ata-prerequisites.md)
+- [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-collection.md)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
