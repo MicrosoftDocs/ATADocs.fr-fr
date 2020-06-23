@@ -4,7 +4,7 @@ description: Explique comment utiliser des groupes de rôles Azure ATP.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1d325797ee7bce5dd5dca8b5c14987c73a4eab72
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 2deb152dff120a5345e16d1c45e30af86ceb0c7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669330"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775622"
 ---
 # <a name="azure-atp-role-groups"></a>Groupes de rôles Azure ATP
 

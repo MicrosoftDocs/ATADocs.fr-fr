@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f7f8bbbf9da70dc89bb3c7acde3167930919ce1f
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 4ed8f666ca8999adcaefce4cc190ddb457bd5fdc
+ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771916"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85129814"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
@@ -24,7 +24,7 @@ ms.locfileid: "84771916"
 
 Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide à estimer le nombre de passerelles ATA et/ou de passerelles légères ATA dont vous avez besoin, ainsi que la capacité du serveur pour votre centre ATA et vos passerelles ATA.
 
-> [!NOTE] 
+> [!NOTE]
 > Vous pouvez déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance décrits dans cet article.
 
 ## <a name="using-the-sizing-tool"></a>Utilisation de l’outil de dimensionnement
@@ -35,25 +35,20 @@ La manière recommandée la plus simple de déterminer la capacité pour votre d
 - Stockage du centre ATA : Faites correspondre le champ **Paquets moyens/s** du tableau du centre ATA dans le fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau du centre ATA](#ata-center-sizing).
 - Passerelle ATA : Faites correspondre le champ **Paquets occupés/s** dans le tableau de la passerelle ATA du fichier de résultats avec le champ **PAQUETS PAR SECONDE** dans le [tableau de la passerelle ATA](#ata-gateway-sizing) ou le [tableau de la passerelle légère ATA](#ata-lightweight-gateway-sizing) en fonction du [type de passerelle que vous choisissez](#choosing-the-right-gateway-type-for-your-deployment).
 
-
 ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
-
 
 > [!NOTE]
 > Étant donné que les différents environnements varient et présentent plusieurs caractéristiques de trafic réseau particulières et imprévisibles, une fois que vous déployez initialement ATA et exécuter l’outil de dimensionnement, vous devrez peut-être ajuster et adapter votre déploiement au niveau de la capacité.
-
 
 Si pour une raison ou une autre, vous ne pouvez pas utiliser l’outil de dimensionnement ATA, collectez manuellement les informations du compteur de paquets/s de tous vos contrôleurs de domaine pendant 24 heures avec un intervalle de collecte court (environ 5 secondes). Ensuite, pour chaque contrôleur de domaine, calculez la moyenne quotidienne et la période la plus chargée (15 minutes).
 Les sections suivantes fournissent des instructions sur la collecte du compteur Paquets/s d’un contrôleur de domaine.
 
-
 > [!NOTE]
 > Étant donné que les différents environnements varient et présentent plusieurs caractéristiques de trafic réseau particulières et imprévisibles, une fois que vous déployez initialement ATA et exécuter l’outil de dimensionnement, vous devrez peut-être ajuster et adapter votre déploiement au niveau de la capacité.
 
-
 ### <a name="ata-center-sizing"></a>Dimensionnement du centre ATA
+
 Le centre ATA nécessite l’équivalent de 30 jours de données qui est le minimum recommandé pour obtenir des analyses comportementales des utilisateurs.
- 
 
 |Paquets par seconde pour tous les contrôleurs de domaine|Processeur (cores&#42;)|Mémoire (Go)|Stockage de la base de données par jour (Go)|Stockage de la base de données par mois (Go)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -78,8 +73,8 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 > - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 > - Sur un serveur physique, la base de données ATA nécessite la **désactivation** de l’accès mémoire non uniforme (NUMA) dans le BIOS. Votre système peut utiliser l’entrelacement de nœuds pour faire référence à NUMA, auquel cas vous devez **activer** l’entrelacement de nœuds pour désactiver NUMA. Pour plus d’informations, consultez la documentation du BIOS. Notez que cela ne s’applique pas quand le centre ATA s’exécute sur un serveur virtuel.
 
-
 ## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Choix du type de passerelle appropriée pour votre déploiement
+
 Dans un déploiement ATA, toutes les combinaisons de types de passerelles ATA sont prises en charge :
 
 - Passerelles ATA uniquement
@@ -95,57 +90,48 @@ Quand vous choisissez le type de déploiement de passerelle, prenez en compte le
 
 Voici quelques exemples de scénarios dans lesquels les contrôleurs de domaine doivent être couverts par la passerelle légère ATA :
 
-
 - Sites de succursale
 
 - Contrôleurs de domaine virtuels déployés dans le cloud (IaaS)
 
-
 Voici quelques exemples de scénarios dans lesquels les contrôleurs de domaine doivent être couverts par la passerelle ATA :
-
 
 - Siège social de centres de données (comptant des contrôleurs de domaine avec plus de 10 000 paquets par seconde)
 
-
 ### <a name="ata-lightweight-gateway-sizing"></a>Dimensionnement de passerelle légère ATA
 
-Une passerelle légère ATA peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau qu’il génère. 
-
+Une passerelle légère ATA peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau qu’il génère.
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
 |1 000|2|6|
 |5 000|6|16|
-    |10 000|10|24|
+|10 000|10|24|
 
 &#42;Nombre total de paquets par seconde sur le contrôleur de domaine surveillé par une passerelle légère ATA donnée.
 
-&#42;&#42;Nombre total de cœurs non multithreads installés sur ce contrôleur de domaine.<br>Même si le multithread est acceptable pour la passerelle légère ATA, vous devez compter les cœurs réels et non les cœurs multithreads lors de la planification de la capacité.
+&#42;&#42;Nombre total de cœurs non multithreads installés sur ce contrôleur de domaine.  
+Même si le multithread est acceptable pour la passerelle légère ATA, vous devez compter les cœurs réels et non les cœurs multithreads lors de la planification de la capacité.
 
 &#42;&#42;&#42;Quantité totale de mémoire installée sur ce contrôleur de domaine.
 
-> [!NOTE]   
-> -   Si le contrôleur de domaine n’a pas les ressources demandées par la passerelle légère ATA, les performances du contrôleur de domaine ne sont pas affectées, mais la passerelle légère ATA risque de ne pas fonctionner comme prévu.
-> -   Lorsque vous exécutez le centre en tant que machine virtuelle, le centre nécessite que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution du centre ATA en tant que machine virtuelle, consultez [Configuration requise pour le centre ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory).
-> -   Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle légère ATA.
-> -   Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
-
+> [!NOTE]
+>
+> - Si le contrôleur de domaine n’a pas les ressources demandées par la passerelle légère ATA, les performances du contrôleur de domaine ne sont pas affectées, mais la passerelle légère ATA risque de ne pas fonctionner comme prévu.
+> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)).
+> - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle légère ATA.
+> - Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="ata-gateway-sizing"></a>Dimensionnement de la passerelle ATA
 
 Prenez en compte les problèmes suivants quand vous choisissez le nombre de passerelles ATA à déployer.
 
--   **Forêts et domaines Active Directory**<br>
-    ATA peut surveiller le trafic provenant de plusieurs domaines d’une même forêt Active Directory. La surveillance de plusieurs forêts Active Directory nécessite des déploiements ATA distincts. Ne configurez pas un déploiement ATA unique pour surveiller le trafic réseau des contrôleurs de domaine de différentes forêts.
-
--   **Mise en miroir de port**<br>
-Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs passerelles ATA par site de succursale ou centre de données.
-
--   **Capacité**<br>
-    Une passerelle ATA peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction de la quantité de trafic réseau des contrôleurs de domaine surveillés. 
-<br>
-
-
+- **Forêts et domaines Active Directory**  
+  ATA peut surveiller le trafic provenant de plusieurs domaines d’une même forêt Active Directory. La surveillance de plusieurs forêts Active Directory nécessite des déploiements ATA distincts. Ne configurez pas un déploiement ATA unique pour surveiller le trafic réseau des contrôleurs de domaine de différentes forêts.
+- **Mise en miroir de port**  
+Les considérations relatives à la mise en miroir des ports peuvent vous amener à déployer plusieurs passerelles ATA par site de passerelle de données ou de succursale.
+- **Capacité**  
+  Une passerelle ATA peut prendre en charge la surveillance de plusieurs contrôleurs de domaine, en fonction de la quantité de trafic réseau des contrôleurs de domaine surveillés.
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)|
 |---------------------------|-------------------------|---------------|
@@ -161,18 +147,18 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 &#42;&#42; L’hyper-threading doit être désactivé.
 
-> [!NOTE] 
-> -   Lorsque vous exécutez le centre en tant que machine virtuelle, le centre nécessite que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution du centre ATA en tant que machine virtuelle, consultez [Configuration requise pour le centre ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
-> -   Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.
-> -   Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
-
-
+> [!NOTE]
+>
+> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.
+> - Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
 ## <a name="related-videos"></a>Vidéos connexes
+
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## <a name="see-also"></a>Voir aussi
+
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Configuration requise pour ATA](ata-prerequisites.md)
 - [Architecture ATA](ata-architecture.md)

@@ -4,7 +4,7 @@ description: Vue d’ensemble du filtrage des activités Azure ATP et des strat�
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bffad5454cbc1f9216333f44af9a7cfd39ce5433
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 4614c8fc06a78fc8d22b135c8a0be9b5e2bae673
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414469"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774562"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Utiliser des filtres d’activité et créer des stratégies d’action avec Azure ATP dans Microsoft Cloud App Security 
 

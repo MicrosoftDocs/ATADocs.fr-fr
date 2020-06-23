@@ -4,7 +4,7 @@ description: Décrit le processus d’obtention de support pour Azure ATP.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 1/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 81405d38badbd9fedda1ff54a9e0b09368689b83
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 2c2b5a42383979c59dec0c387119d5483aeda9d8
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669499"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84771933"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure Advanced Threat Protection 
 
