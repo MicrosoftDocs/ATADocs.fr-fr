@@ -85,8 +85,12 @@
               href: atp-cas-isp-laps.md
             - name: Évaluation de l’utilisation des protocoles hérités
               href: atp-cas-isp-legacy-protocols.md
+            - name: Chemins de mouvement latéral les plus risqués
+              href: atp-cas-isp-riskiest-lmp.md
             - name: Contrôleurs de domaine non supervisés
               href: atp-cas-isp-unmonitored-domain-controller.md
+            - name: Attributs de compte non sécurisé
+              href: atp-cas-isp-unsecure-account-attributes.md
             - name: Évaluation de la délégation Kerberos non sécurisée
               href: atp-cas-isp-unconstrained-kerberos.md
             - name: "Attributs d’historique SID non\_sécurisés"
