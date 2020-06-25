@@ -4,20 +4,20 @@ description: Fournit des exemples de journaux d’activités suspectes envoyés 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/05/2020
+manager: shsagir
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0f24d69946fbbaa1824eb7b38ac431a3be638fa9
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 0d7d6ffbc52b1b5c1d662d3d6c14a1dcf0ab0084
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666227"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772868"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
 
@@ -29,21 +29,21 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 
 |Détail|Explication|
 |---------|---------------|
-|start|heure de début de l’alerte|
-|suser|compte (généralement le compte d’utilisateur) impliqué dans l’alerte|
-|compte d'ordinateur|compte (généralement le compte d’utilisateur) impliqué dans l’alerte|
-|outcome|le cas échéant, réussite ou échec de l’activité suspecte dans l’alerte|
-|msg|description de l'alerte|
-|cnt|pour les alertes qui ont le compte du nombre de fois où l’activité s’est produite (par exemple une attaque par force brute a une certaine quantité de mots de passe devinés)|
-|app |protocole utilisé dans cette alerte|
-|externalId|ID de type d’événement écrit par Azure ATP dans le journal des événements correspondant à chaque type d’alerte. Lors du transfert d’alertes à Microsoft Cloud App Security, ce champ est rempli avec l’ID d’alerte Cloud App Security correspondant.|
-|cs#label|chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ |
-|cs#|chaînes du client autorisés par CEF, où cs# est sa valeur.|
+|start|Heure de début de l’alerte|
+|suser|Compte (généralement le compte d’utilisateur) impliqué dans l’alerte|
+|shost|Compte (généralement le compte d’ordinateur) impliqué dans l’alerte|
+|outcome|Le cas échéant, réussite ou échec de l’activité suspecte dans l’alerte|
+|msg|Description de l’alerte|
+|cnt|Pour les alertes qui comportent le nombre de fois où l’activité s’est produite (par exemple une attaque par force brute est associée à une certaine quantité de mots de passe devinés)|
+|app |Protocole utilisé dans cette alerte|
+|externalId|ID d’événement écrit par Azure ATP dans le journal des événements correspondant à chaque type d’alerte. Lors du transfert d’alertes à Microsoft Cloud App Security, ce champ est rempli avec l’ID d’alerte Cloud App Security correspondant.|
+|cs#label|Chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ |
+|cs#|Chaînes du client autorisées par CEF, où cs# est sa valeur.|
 
-- Exemple : `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`.  
+- Par exemple : `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`  
 Le champ cs1 est l’URL de l’alerte.
 
-- Exemple : `cs2Label=trigger cs2=new`.  
+- Par exemple : `cs2Label=trigger cs2=new`  
 Le champ cs2 identifie s’il s’agit d’une alerte nouvelle ou mise à jour.
 
 > [!NOTE]

@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e2a9a05c4f8dbbeb83562266e3564d023cef79a
-ms.sourcegitcommit: 7be507dc6b6016ff9aa9df4b52a3542246e98209
+ms.openlocfilehash: 8efa1ecf511285d38266c6701e16872e833bdccd
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736424"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772375"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Démarrage rapide : Installer le capteur Azure ATP
 
@@ -24,7 +24,7 @@ Dans ce guide de démarrage rapide, vous allez installer le capteur Azure ATP su
 
 - Une [instance Azure ATP](install-atp-step1.md) qui est [connectée à Active Directory](install-atp-step2.md).
 - Une copie téléchargée de votre [package d’installation du capteur ATP](install-atp-step3.md) et la clé d’accès.
-- Vérifiez que Microsoft .NET Framework 4.7 est installé sur l’ordinateur. Si .NET Framework 4.7 n’est pas installé, le package d’installation du capteur Azure ATP l’installe, ce qui peut nécessiter un redémarrage du serveur.
+- Vérifiez que Microsoft .NET Framework 4.7 (ou version ultérieure) est installé sur l’ordinateur. Si Microsoft .NET Framework 4.7 (ou version ultérieure) n’est pas installé, le package d’installation du capteur Azure ATP l’installe, ce qui peut nécessiter un redémarrage du serveur.
 
 ## <a name="install-the-sensor"></a>Installer le capteur
 

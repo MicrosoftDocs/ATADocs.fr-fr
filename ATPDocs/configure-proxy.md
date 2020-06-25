@@ -4,7 +4,7 @@ description: Décrit comment configurer votre pare-feu ou proxy pour permettre l
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 484d3bba9ebb4c648e78413472b84100aa76d482
-ms.sourcegitcommit: 31fd8256f38cf69c51a9ba9cf8d38140b72a5ed7
+ms.openlocfilehash: 787f5c29395c6356e8b1502fb6984a3d81b7974b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588392"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772670"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
@@ -72,9 +72,9 @@ Le proxy statique est configurable par le biais du Registre. Vous devez copier l
 
 Pour activer l’accès à Azure ATP, autorisez le trafic vers les URL suivantes :
 
-- \<<nom-instance>.atp.azure.com (pour la connectivité de la console). Par exemple, « Contoso-corp.atp.azure.com »
+- \<your-instance-name>.atp.azure.com – pour la connectivité de la console. Par exemple, « Contoso-corp.atp.azure.com »
 
-- \<<nom-instance>sensorapi.atp.azure.com (pour la connectivité des capteurs). Par exemple, « contoso-corpsensorapi.atp.azure.com »
+- \<your-instance-name>sensorapi.atp.azure.com pour la connectivité des capteurs. Par exemple, « contoso-corpsensorapi.atp.azure.com »
 
 Les URL précédentes mappent automatiquement vers l’emplacement de service correspondant à votre instance Azure ATP. Si vous avez besoin d’un contrôle plus précis, autorisez le trafic vers les points de terminaison appropriés dans le tableau suivant :
 

@@ -4,7 +4,7 @@ description: Décrit la configuration requise pour réussir le déploiement d’
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
-ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
+ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825298"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775690"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -127,7 +127,7 @@ Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule 
 
 Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
 
-Pendant l’installation, .Net Framework 4.7 est installé et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
+Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé automatiquement et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
 
 > [!NOTE]
 > Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.

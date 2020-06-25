@@ -4,20 +4,20 @@ description: Fournit une liste de questions fréquemment posées sur Azure ATP e
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/15/2020
+manager: shsagir
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 64d23884189d68e69805133c8411e1ff0e8f95e8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 67e15453424e42ccab54b5c83272690c6d605f4b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414044"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775707"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 
@@ -76,7 +76,7 @@ Autres fonctionnalités d’Azure ATP :
 
 Azure ATP fait partie intégrante de Microsoft 365 Security, sécurisant l’organisation hybride :
 
-- Azure ATP, ainsi que Microsoft Cloud App Security (MCAS) et Azure AD Identity Protection, offre une expérience d’investigation unifiée pour les activités des utilisateurs, localement et dans le cloud, et fournit des détections améliorées centrées sur l’utilisateur et l’analytique du comportement de l’entité (UEBA).
+- Azure ATP, ainsi que Microsoft Cloud App Security et Azure Active Directory (Azure AD) Identity Protection, offrent une expérience d’investigation unifiée pour les activités des utilisateurs, localement et dans le cloud, et fournit des détections améliorées centrées sur l’utilisateur et l’analytique du comportement de l’entité (UEBA).
 - ATA n’est pas intégré à d’autres solutions de sécurité en ligne Microsoft
 
 Scalable et sécurisé, tirant parti de la puissance du cloud :
@@ -92,11 +92,7 @@ Azure ATP est disponible dans le cadre de la suite Enterprise Mobility + Securit
 
 ### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>Azure ATP n’a-t-elle besoin que d’une seule licence ou nécessite-t-elle une licence pour chaque utilisateur que je souhaite protéger ?
 
-Azure ATP nécessite une licence pour chaque utilisateur.
-
-### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Cette offre va-t-elle faire partie d’Azure Active Directory ou du service Active Directory local ?
-
-La solution Azure ATP est pour l’instant une offre autonome. Elle ne fait partie ni d’Azure Active Directory, ni du service Active Directory local.
+Azure ATP exige que tous les utilisateurs Azure AD disposent d’une licence
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Est-ce que mes données sont isolées des données des autres clients ?
 
@@ -166,7 +162,7 @@ Vous pouvez configurer Azure ATP de façon à envoyer une alerte Syslog à n’i
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
 
-Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs du domaine »).
+Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
 
 Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](sensitive-accounts.md).
 
@@ -194,7 +190,7 @@ Pour générer des chemins de mouvement latéral potentiels pour les utilisateur
 3. **Interrogation d’Active Directory à l’aide de LDAP** pour les données d’entité  
 Les capteurs Azure ATP interrogent le contrôleur de domaine à partir du domaine auquel l’entité appartient. Il peut s’agir du même capteur ou d’un autre contrôleur de domaine de ce domaine.
 
-|Protocole|Service|Port|Source| Direction|
+|Protocole|Service|Port|Source| Sens|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|

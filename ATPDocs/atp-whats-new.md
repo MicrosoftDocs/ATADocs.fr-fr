@@ -4,19 +4,19 @@ description: Cet article est mis à jour fréquemment pour vous informer des nou
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 04/23/2020
+manager: shsagir
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 77a0c0bb4470894aa7998c852a63fd5bade72433
-ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
+ms.openlocfilehash: da3b41bd39b4ebae88eff1196ebf6715f217a522
+ms.sourcegitcommit: 83a2c0bd87a024ab2cf9fb6240a5da25c916ad95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825307"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800370"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -26,9 +26,31 @@ Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’�
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## <a name="azure-atp-release-2117"></a>Azure ATP version 2.117
+
+Publication : 14 juin 2021
+
+- **Amélioration de fonctionnalité : Détails supplémentaires sur les activités qui sont disponibles dans l’expérience unifiée SecOps**  
+Nous avons enrichi les informations d’appareil que nous envoyons à Cloud App Security, notamment les noms d’appareil, les adresses IP, les UPN de compte et les ports utilisés. Pour plus d’informations sur l’intégration à Cloud App Security, consultez [Utilisation d’Azure ATP avec Cloud App Security](atp-mcas-integration.md).
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="azure-atp-release-2116"></a>Azure ATP version 2.116
+
+Publication : 7 juin 2020
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
 ## <a name="azure-atp-release-2115"></a>Azure ATP version 2.115
 
-Publication : 24 mai 2020
+Publication : 31 mai 2020
+
+- **Nouvelles évaluations de sécurité**  
+Les évaluations de sécurité Azure ATP incluent désormais les nouvelles évaluations suivantes :
+  - **Attributs d’historique SID non sécurisés**  
+    Cette évaluation fournit des rapports sur les attributs d’historique SID qui peuvent être utilisés par des personnes malveillantes pour accéder à votre environnement. Pour plus d’informations, consultez [Évaluation de la sécurité : Attributs d’historique SID non sécurisés](atp-cas-isp-unsecure-sid-history-attribute.md).
+  - **Utilisation de Microsoft LAPS**  
+    Cette évaluation permet de connaître les comptes d’administrateur locaux qui n’utilisent pas la solution LAPS pour sécuriser leur mot de passe. L’utilisation de LAPS simplifie la gestion des mots de passe et contribue également à la défense contre les cyberattaques. Pour plus d’informations, consultez [Évaluation de la sécurité : Utilisation de Microsoft LAPS](atp-cas-isp-laps.md).
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 

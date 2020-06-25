@@ -4,7 +4,7 @@ description: Décrit comment mettre à jour et différer la mise à jour des cap
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 92c17776623beb3d03e37bb81ce12b433e5dc35e
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666178"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775894"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
@@ -75,7 +75,7 @@ Pour définir un capteur sur une mise à jour différée :
 3. Les capteurs qui ne sont pas définis sur **Mise à jour différée** commencent un par un le processus de mise à jour :
    1. Le service de mise à jour des capteurs Azure ATP récupère la version mise à jour auprès du service cloud (au format de fichier .cab).
    2. Le service de mise à jour des capteurs Azure ATP valide la signature du fichier.
-   3. Le service de mise à jour des capteurs Azure ATP extrait le fichier .cab dans un nouveau dossier du dossier d’installation du capteur, par défaut *C:\Program Files\Azure Advanced Threat Protection Sensor\<numéro de version>* .
+   3. Le service de mise à jour des capteurs Azure ATP extrait le fichier .cab dans un nouveau dossier du dossier d’installation du capteur, par défaut *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>* .
    4. Le service de capteur Azure ATP pointe vers les nouveaux fichiers extraits à partir du fichier .cab.    
    5. Le service de mise à jour des capteurs Azure ATP redémarre le service de capteur Azure ATP.
        > [!NOTE]

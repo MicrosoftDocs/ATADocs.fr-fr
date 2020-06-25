@@ -4,7 +4,7 @@ description: Découvrez comment faire passer une installation Advanced Threat An
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4a26195a6ceba0a32e9cf2d698574ca0acc7ef15
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: eb37bf60d0de0ee09afa74e6a23c54ca40ee32c3
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79504226"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774619"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP)
 
@@ -43,7 +43,7 @@ Dans ce guide, vous allez :
 
 - Un locataire Azure Active Directory avec au moins un administrateur général ou de sécurité est nécessaire pour créer une instance Azure ATP. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures.
 
-- Azure ATP nécessite le .NET Framework 4.7 et peut nécessiter un contrôleur de domaine (redémarrage) si vous ne disposez pas de la version 4.7 du .NET Framework.
+- Azure ATP exige .NET Framework 4.7 ou version ultérieure. Si vous ne disposez pas d’une telle version, il peut exiger le redémarrage du contrôleur de domaine.
 
 - Vérifiez que vos contrôleurs de domaine répondent à toutes les [exigences du capteur Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#azure-atp-sensor-requirements) et que votre environnement répond à toutes les [exigences d’Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites).
 
