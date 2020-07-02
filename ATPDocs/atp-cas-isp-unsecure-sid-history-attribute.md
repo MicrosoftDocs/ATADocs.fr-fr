@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa97b3f59ea16572608432ea51ad0984ceaac75
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f10756f3b5fc009e2bd37fff9eff04d1c5c41585
+ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774041"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256267"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Évaluation de la sécurité : Attributs d’historique SID non sécurisés
 
@@ -33,7 +33,7 @@ Quand une organisation ne parvient pas à sécuriser ses attributs de compte, el
 
 Les acteurs malveillants, à l’instar des voleurs, recherchent souvent le moyen le plus simple et le plus silencieux de s’introduire dans un environnement. Les comptes configurés avec un attribut d’historique SID non sécurisé sont des fenêtres d’opportunités pour les attaquants et peuvent présenter des risques.
 
-Par exemple, un compte non sensible dans un domaine peut contenir le SID d’administrateur d’entreprise dans son historique SID d’un autre domaine de la forêt Active Directory, ce qui « élève » l’accès du compte d’utilisateur à un administrateur de domaine effectif dans tous les domaines de la forêt. De plus, si vous disposez d’une approbation de forêt pour laquelle le filtrage des SID (également appelé « mise en quarantaine ») n’est pas activé, il est possible d’injecter un SID à partir d’une autre forêt. Il est alors ajouté au jeton utilisateur au moment de son authentification et utilisé pour les évaluations d’accès.
+Par exemple, un compte non sensible dans un domaine peut contenir le SID d’administrateur d’entreprise dans son historique SID d’un autre domaine de la forêt Active Directory, ce qui « élève » l’accès du compte d’utilisateur à un administrateur de domaine effectif dans tous les domaines de la forêt. De plus, si vous disposez d’une approbation de forêt pour laquelle le filtrage des SID (également appelé « mise en quarantaine ») n’est pas activé, il est possible d’injecter un SID à partir d’une autre forêt. Il est alors ajouté au jeton utilisateur au moment de son authentification et utilisé pour les évaluations d’accès.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
