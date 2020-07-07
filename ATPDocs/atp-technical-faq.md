@@ -12,12 +12,11 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67e15453424e42ccab54b5c83272690c6d605f4b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
-ms.translationtype: HT
+ms.openlocfilehash: c5f7e42f7b0817a3befaa949b24f6da7b76a3e84
+ms.sourcegitcommit: f26801a9ffd3dccb87b6388c63f24c972de37cf7
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85593707"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 
@@ -66,23 +65,23 @@ Oui. Étant donné que les comptes d’ordinateurs (de même que toute autre ent
 
 ### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Quelle est la différence entre Advanced Threat Analytics (ATA) et Azure ATP ?
 
-ATA est une solution autonome, installée localement. Azure ATP avec sa connectivité cloud inclut des mises à jour continues des fonctionnalités, notamment de nouvelles détections, des fonctionnalités UEBA, des évaluations de sécurité et une expérience d’investigation sur les solutions de sécurité Microsoft 365.
+ATA est une solution locale autonome avec plusieurs composants, tels que le centre ATA qui nécessite du matériel dédié localement.
 
-Autres fonctionnalités d’Azure ATP :
+Azure ATP est une solution de sécurité basée sur le cloud qui tire parti de vos signaux Active Directory (Azure AD) locaux. La solution est très scalable et fréquemment mise à jour.
 
-- Azure ATP détecte plus de comportements suspects et d’attaques avancées sur site qu’ATA, et fournit des rapports **d’évaluation de la sécurité des identités**.
-- Capteur repensé avec des sources de données supplémentaires (par exemple, **Suivi d’événements pour Windows**).
-- Azure ATP protège les environnements à plusieurs forêts.
+Contrairement au capteur ATA, le capteur Azure ATP utilise également des sources de données telles que le Suivi d’événements pour Windows (ETW) permettant à Azure ATP de fournir des détections supplémentaires.
 
-Azure ATP fait partie intégrante de Microsoft 365 Security, sécurisant l’organisation hybride :
+Les mises à jour fréquentes d’Azure ATP incluent les fonctionnalités suivantes :
 
-- Azure ATP, ainsi que Microsoft Cloud App Security et Azure Active Directory (Azure AD) Identity Protection, offrent une expérience d’investigation unifiée pour les activités des utilisateurs, localement et dans le cloud, et fournit des détections améliorées centrées sur l’utilisateur et l’analytique du comportement de l’entité (UEBA).
-- ATA n’est pas intégré à d’autres solutions de sécurité en ligne Microsoft
+- **Prise en charge [des environnements multiforêts](atp-multi-forest.md)**  : Permet aux organisations d’avoir une visibilité sur les forêts AD.
 
-Scalable et sécurisé, tirant parti de la puissance du cloud :
+- **[Évaluations de la posture de sécurité des identités](atp-isp-overview.md)**  : Identifie les configurations incorrectes et les composants exploitables courants, et fournit des voies d’atténuation pour réduire la surface d’attaque.
 
-- Azure ATP permet aux clients de profiter des avantages d’une solution basée sur le cloud, sans limitations de mise à l’échelle, ni mises à jour continues.
-- ATA est basé sur un serveur local de gestion centralisé qui nécessite un matériel dédié pour le déploiement du centre de gestion central sur site, et reçoit généralement une ou deux mises à jour de version par an.
+- **[Fonctions UEBA](/cloud-app-security/tutorial-ueba)**  : Insights sur les risques de chaque utilisateur via le scoring des priorités d’investigation des utilisateurs. Le score peut assister SecOps dans leurs investigations et aider les analystes à comprendre les activités inhabituelles de l’utilisateur et de l’organisation.
+
+- **Intégrations natives** : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
+
+- **Contributions à la Protection Microsoft contre les menaces (MTP)**  : Fournit des données d’alerte et de menace à MTP. MTP tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un seul tableau de bord. Grâce à cette grande précision, les défenseurs peuvent se concentrer sur les menaces critiques et chasser les failles sophistiquées, en faisant confiance à l’automatisation puissante de MTP pour arrêter les attaques n’importe où dans la « kill chain » et faire revenir l’organisation à un état sécurisé.
 
 ## <a name="licensing-and-privacy"></a>Gestion des licences et confidentialité
 
