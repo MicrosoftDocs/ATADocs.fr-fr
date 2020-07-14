@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/16/2019
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb37bf60d0de0ee09afa74e6a23c54ca40ee32c3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 43cc53fc4de948b4f95c716f0f1bbcd7094a412e
+ms.sourcegitcommit: 0edb9162b28c7e672e8bd04a026dbf561ace246b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774619"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86280987"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP)
 
@@ -68,8 +68,6 @@ Veillez à rassembler les informations suivantes avant de commencer le transfert
 1. Liste complète de toutes les entités (ordinateurs, groupes, utilisateurs) à étiqueter manuellement comme entités sensibles.
     - Découvrez l’importance des [entités sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/sensitive-accounts) dans Azure ATP.
 1. [Détails](https://docs.microsoft.com/azure-advanced-threat-protection/reports) de la planification des rapports (liste des rapports et planifications).
-1. Identification et détails de chaque passerelle légère ATA configurée comme candidat synchronisateur de domaine Azure ATP.
-    - Découvrez-en plus sur l’importance des [candidats synchronisateurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5#configure-sensor-settings) dans Azure ATP.
 
 > [!NOTE]
 > Ne désinstallez pas le centre ATA tant que toutes les passerelles ATA n’ont pas été supprimées. Si vous désinstallez le centre ATA alors que des passerelles ATA sont en cours d’exécution, votre organisation se retrouve sans aucune protection contre les menaces.
@@ -104,16 +102,15 @@ Connectez-vous au portail Azure ATP et effectuez les tâches de configuration su
 |--------------|------------|------------------|
 | 1  | Définir des [mises à jour différées sur une sélection de contrôleurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/sensor-update) | - [ ] |
 | 2  | Détails du compte [Services d’annuaire](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step2).| - [ ] |
-| 3  | Configurer des [candidats synchronisateurs de domaine](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step5#configure-sensor-settings) | - [ ] |
-| 4  | Configurer des [notifications Syslog](https://docs.microsoft.com/azure-advanced-threat-protection/setting-syslog) | - [ ] |
-| 5  | Informations sur l’[intégration du VPN](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step6-vpn)| - [ ] |
-| 6  | Configurer [l’intégration de WDATP](https://docs.microsoft.com/azure-advanced-threat-protection/integrate-wd-atp)| - [ ] |
-| 7  | Définir des comptes [HoneyTokens](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step7)| - [ ] |
-| 8  | Étiqueter les [entités sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/sensitive-accounts)| - [ ] |
-| 9  | Créer des [exclusions d’alerte de sécurité](https://docs.microsoft.com/azure-advanced-threat-protection/excluding-entities-from-detections)| - [ ] |
-| 10 | [Activer/désactiver les notifications par e-mail](https://docs.microsoft.com/azure-advanced-threat-protection/notifications) | - [ ] |
-| 11  | [Paramètres de planification des rapports](https://docs.microsoft.com/azure-advanced-threat-protection/reports) (liste des rapports et planifications).| - [ ] |
-| 12  | Configurer des [autorisations en fonction du rôle](https://docs.microsoft.com/azure-advanced-threat-protection/atp-role-groups) | - [ ] |
+| 3  | Configurer des [notifications Syslog](https://docs.microsoft.com/azure-advanced-threat-protection/setting-syslog) | - [ ] |
+| 4  | Informations sur l’[intégration du VPN](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step6-vpn)| - [ ] |
+| 5  | Configurer [l’intégration de WDATP](https://docs.microsoft.com/azure-advanced-threat-protection/integrate-wd-atp)| - [ ] |
+| 6  | Définir des comptes [HoneyTokens](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step7)| - [ ] |
+| 7  | Étiqueter les [entités sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/sensitive-accounts)| - [ ] |
+| 8  | Créer des [exclusions d’alerte de sécurité](https://docs.microsoft.com/azure-advanced-threat-protection/excluding-entities-from-detections)| - [ ] |
+| 9 | [Activer/désactiver les notifications par e-mail](https://docs.microsoft.com/azure-advanced-threat-protection/notifications) | - [ ] |
+| 10  | [Paramètres de planification des rapports](https://docs.microsoft.com/azure-advanced-threat-protection/reports) (liste des rapports et planifications).| - [ ] |
+| 11  | Configurer des [autorisations en fonction du rôle](https://docs.microsoft.com/azure-advanced-threat-protection/atp-role-groups) | - [ ] |
 | 12  | [Configuration de notifications SIEM (adresse IP)](https://docs.microsoft.com/azure-advanced-threat-protection/configure-event-collection#siemsyslog)| - [ ] |
 
 #### <a name="validation"></a>Validation
