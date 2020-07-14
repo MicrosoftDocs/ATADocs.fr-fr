@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/15/2020
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
+ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775690"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86175725"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -161,16 +161,16 @@ Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant
 
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par le capteur Azure ATP :
 
-|Protocole|Transport|Port|Vers/À partir de|Sens|
+|Protocole|Transport|Port|Du|À|Sens|
 |------------|-------------|--------|-----------|-------------|
-|**Ports Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
-|SSL(localhost)|TCP|444|localhost|Les deux|
-|**Ports internes**|||||
-|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Tous les appareils sur le réseau|Sortant|
-|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
-|RADIUS|UDP|1813|RADIUS|Entrant|
+|**Ports Internet**||||||
+|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|Sortant|
+|SSL(localhost)|TCP|444|Capteur Azure ATP|localhost|Les deux|
+|**Ports internes**||||||
+|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
+|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
+|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
@@ -242,21 +242,21 @@ Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moi
 
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences du capteur autonome Azure ATP :
 
-|Protocole|Transport|Port|Vers/À partir de|Sens|
+|Protocole|Transport|Port|Du|À|Sens|
 |------------|-------------|--------|-----------|-------------|
 |**Ports Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Service cloud Azure ATP|Sortant|
+|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|Sortant|
 |**Ports internes**|||||
-|LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
-|LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
-|LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
-|LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
-|Kerberos|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
-|Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
-|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
-|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Entrant|
-|RADIUS|UDP|1813|RADIUS|Entrant|
+|LDAP|TCP et UDP|389|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|LDAP sécurisé (LDAPS)|TCP|636|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|LDAP vers le catalogue global|TCP|3268|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|LDAPS vers le catalogue global|TCP|3269|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|Kerberos|TCP et UDP|88|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
+|Horloge Windows|UDP|123|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
+|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
+|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
+|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
 
 > [!NOTE]
 >
