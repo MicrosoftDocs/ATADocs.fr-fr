@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: ed811af8f046aff1249e30ac1c7c5585b07f9f88
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 907fb2c6f7e24bfc0f69ae29534303f7b02d9708
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774925"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472414"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
 
@@ -37,7 +37,7 @@ Les données personnelles des utilisateurs et des entités dans ATA sont dériv�
 
 ## <a name="deleting-personal-data"></a>Suppression des données personnelles 
 
-Les données dans ATA sont répliquées et toujours mises à jour à partir d’AD. Toutefois, quand une entité est supprimée dans AD, ses données dans ATA sont conservées à des fins d’investigation de sécurité. 
+Bien que les données d’ATA soient répliquées et toujours mises à jour à partir d’Active Directory, lorsqu’une entité est supprimée dans Active Directory, les données de l’entité dans ATA sont conservées à des fins d’investigation de sécurité. 
 
 Pour supprimer définitivement les données relatives à un utilisateur dans la base de données ATA, effectuez les étapes suivantes : 
 
@@ -87,4 +87,4 @@ Pour désactiver la collecte de données :
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+- Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr).

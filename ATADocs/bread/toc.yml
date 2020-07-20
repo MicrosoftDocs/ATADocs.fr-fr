@@ -9,16 +9,3 @@
         - name: Advanced Threat Analytics
           tocHref: /advanced-threat-analytics/
           topicHref: /advanced-threat-analytics
-          items:
-            - name: Comprendre et explorer
-              tocHref: /advanced-threat-analytics/understand-explore/
-              topicHref: /advanced-threat-analytics/understand/ata-understand-and-explore
-            - name: Planifier et concevoir
-              tocHref: /advanced-threat-analytics/plan-design/
-              topicHref: /advanced-threat-analytics/plandesign/ata-plan-and-design
-            - name: Déployer et utiliser
-              tocHref: /advanced-threat-analytics/deploy-use/
-              topicHref: /advanced-threat-analytics/deployuse/configure-port-mirroring
-            - name: Dépanner
-              tocHref: /advanced-threat-analytics/troubleshoot/
-              topicHref: /advanced-threat-analytics/troubleshoot/ata-troubleshooting
