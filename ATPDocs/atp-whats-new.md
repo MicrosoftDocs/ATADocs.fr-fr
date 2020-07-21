@@ -11,11 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 68cc9d2361724bde50ba89d0ba4873e4cb90e14b
-ms.sourcegitcommit: b4ca2f176cf378d6a6a2718043de2dbf9d657a89
+ms.openlocfilehash: 6afb2ef0502077d45c53da988067ea9b9b98da94
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2020
-ms.locfileid: "85953905"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472448"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -341,7 +342,7 @@ Publication : 7 juillet 2019
 Publication : 1er juillet 2019
 
 - **Prise en charge d’un nouvel emplacement : Centre de données Azure au Royaume-Uni**  
-Les instances Azure ATP sont désormais prises en charge dans le centre de données Azure au Royaume-Uni. Pour en savoir plus sur la création d’instances Azure ATP et les emplacements de leurs centres de données correspondants, consultez l’[étape 1 de l’installation d’Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+Les instances Azure ATP sont désormais prises en charge dans le centre de données Azure au Royaume-Uni. Pour en savoir plus sur la création d’instances Azure ATP et les emplacements de leurs centres de données correspondants, consultez l’[étape 1 de l’installation d’Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
 
 - **Amélioration de fonctionnalité : Nouveau nom et nouvelles fonctionnalités pour l’alerte Ajouts suspects à des groupes sensibles (ID externe 2024)**  
 L’alerte **Ajouts suspects à des groupes sensibles** était précédemment appelée **Modifications suspectes des groupes sensibles**. L’ID externe de l’alerte (ID 2024) ne change pas. Ce changement de nom reflète plus fidèlement l’objectif de l’alerte qui est de vous alerter en cas d’ajout à vos groupes **sensibles**. L’alerte améliorée comprend également de nouvelles preuves et des descriptions améliorées. Pour plus d’informations, consultez [Ajouts suspects à des groupes sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
