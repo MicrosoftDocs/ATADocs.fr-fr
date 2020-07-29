@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/05/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
-ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
+ms.openlocfilehash: a44abd85bf8aeb49b6ff1d1f2c34532a63de6c3c
+ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86175725"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87293189"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -127,7 +127,7 @@ Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule 
 
 Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
 
-Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé automatiquement et peut nécessiter un redémarrage du contrôleur de domaine, si un redémarrage est déjà en attente.
+Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé automatiquement et peut nécessiter un redémarrage du contrôleur de domaine. Cette étape peut également être requise si un redémarrage est déjà en attente.
 
 > [!NOTE]
 > Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires Azure ATP, les journaux Azure ATP et les journaux de performance.
@@ -165,12 +165,16 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |------------|-------------|--------|-----------|-------------|
 |**Ports Internet**||||||
 |SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|Sortant|
-|SSL(localhost)|TCP|444|Capteur Azure ATP|localhost|Les deux|
+|SSL (localhost)|TCP|444|Capteur Azure ATP|localhost|Les deux|
 |**Ports internes**||||||
 |DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
 |RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
+|**Ports NNR**||||||
+|NTLM sur RPC|TCP|Port 135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
@@ -257,6 +261,10 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
 |RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
+|**Ports NNR**||||||
+|NTLM sur RPC|TCP|135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 
 > [!NOTE]
 >
