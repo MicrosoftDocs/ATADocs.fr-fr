@@ -153,8 +153,6 @@
       items:
         - name: Configurer le capteur Azure ATP
           href: install-atp-step5.md
-        - name: Vérification de la stratégie d’audit avancée
-          href: atp-advanced-audit-policy.md
         - name: Configurer la collecte d’événements Windows
           href: configure-windows-event-collection.md
         - name: configuration du proxy ;
