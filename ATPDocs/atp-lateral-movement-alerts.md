@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47530916ff4329e167c8d3f17e5dc24930c7b072
-ms.sourcegitcommit: 0a2365fdbee41fe7838591aefaea2145a0426615
+ms.openlocfilehash: 4ef5d8985d42cd53f803eb97d8ebc0eba69a39af
+ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2020
-ms.locfileid: "85120138"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87856374"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral
 
@@ -35,14 +35,15 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 
 > [!div class="checklist"]
 >
-> * Exécution de code à distance sur DNS (ID externe 2036)
-> * Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
-> * Suspicion d’usurpation d’identité (pass-the-ticket) (ID externe 2018)
-> * Falsification de l’authentification NTLM suspectée (ID externe 2039)
-> * Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
-> * Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement) (ID externe 2008)
-> * Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
-> * Manipulation présumée de paquet SMB (exploitation CVE-2020-0796) - (préversion) (ID externe 2406)
+> - Exécution de code à distance sur DNS (ID externe 2036)
+> - Suspicion d’usurpation d’identité (pass-the-hash) (ID externe 2017)
+> - Suspicion d’usurpation d’identité (pass-the-ticket) (ID externe 2018)
+> - Falsification de l’authentification NTLM suspectée (ID externe 2039)
+> - Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
+> - Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
+> - Manipulation présumée de paquet SMB (exploitation CVE-2020-0796) - (préversion) (ID externe 2406)
+
+<!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
 ## <a name="remote-code-execution-over-dns-external-id-2036"></a>Exécution de code à distance sur DNS (ID externe 2036)
 
@@ -179,7 +180,7 @@ Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand
 
 **Prévention**
 
-• Vérifiez que tous les appareils de l’environnement sont à jour et ont les correctifs nécessaires contre [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
+* Vérifiez que tous les appareils de l’environnement sont à jour et ont les correctifs nécessaires contre [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspicion d’attaque de relais NTLM (compte Exchange) (ID externe 2037)
 
@@ -208,54 +209,54 @@ Dans cette détection, une alerte est déclenchée quand Azure ATP identifie une
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     2. Recherchez les utilisateurs connectés à peu près au même moment que l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 2. Forcez l’utilisation de NTLMv2 « sealed » dans le domaine, en utilisant la stratégie de groupe **Sécurité réseau : niveau d’authentification LAN Manager**. Pour plus d’informations, consultez [Instructions pour le niveau d’authentification LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) afin de définir la stratégie de groupe pour les contrôleurs de domaine.
+<!--
+## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
-## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Suspicion d’attaque over-pass-the-hash (passage à une version antérieure du chiffrement) (ID externe 2008)
-
-*Nom précédent :* Passage à une version antérieure du chiffrement
+*Previous name:* Encryption downgrade activity
 
 **Description**
 
-Le passage à une version antérieure du chiffrement est une méthode visant à affaiblir Kerberos en abaissant le niveau de chiffrement de différents champs du protocole qui sont normalement chiffrés à l’aide du niveau de chiffrement le plus élevé. Un champ au chiffrement affaibli peut être plus vulnérable à des attaques de force brute en mode hors connexion. Plusieurs méthodes d’attaque exploitent les codes faibles de chiffrement Kerberos. Dans le cadre de cette détection, Azure ATP examine les types de chiffrement Kerberos utilisés par les ordinateurs et les utilisateurs, et déclenche des alertes quand un chiffrement plus faible et inhabituel est utilisé pour l’ordinateur source et/ou l’utilisateur, et que cela correspond à une technique d’attaque connue.
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
-Dans une attaque over-pass-the-hash, un attaquant peut utiliser un code de hachage faible dérobé pour créer un ticket fort avec une requête Kerberos AS. Dans le cadre de cette détection, on identifie les instances où le type de chiffrement du message AS_REQ reçu de l’ordinateur source a été abaissé par rapport au comportement appris (l’ordinateur utilisait l’algorithme AES).
+In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
-**TP, B-TP ou FP ?**
+**TP, B-TP, or FP?**
 
-1. Déterminez si la configuration de carte à puce a changé récemment.
-    - Les comptes impliqués ont-ils récemment subi des changements de configuration de carte à puce ?
+1. Determine if the smartcard configuration recently changed.
+    - Did the accounts involved recently have smartcard configurations changes?
 
-      Si la réponse est oui, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**.
+      If the answer is yes, **Close** the security alert as a **T-BP** activity.
 
-Certaines ressources légitimes, qui ne prennent pas en charge le chiffrement renforcé, sont susceptibles de déclencher cette alerte.
+Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
 
-2. Tous les utilisateurs sources partagent-ils quelque chose ?
-    1. Par exemple, les membres du personnel marketing accèdent-ils tous à une ressource spécifique susceptible de provoquer le déclenchement de l’alerte ?
-    2. Vérifiez les ressources auxquelles ces tickets ont accédé.
-       - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
-    3. Si une seule ressource est sollicitée, vérifiez s’il s’agit d’une ressource à laquelle ces utilisateurs sont autorisés à accéder.
+2. Do all source users share something?
+    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
+    2. Check the resources accessed by those tickets.
+       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
+    3. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
-      Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
-**Comprendre l’étendue de la violation**
+**Understand the scope of the breach**
 
-1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. Examinez l’[utilisateur compromis](investigate-a-computer.md).
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the [compromised user](investigate-a-computer.md).
 
-**Suggestions de correction et étapes préventives**
+**Suggested remediation and steps for prevention**
 
-**Correction**
+**Remediation**
 
-1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
-3. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-4. Recherchez les utilisateurs connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+2. Contain the source computer.
+3. Find the tool that performed the attack and remove it.
+4. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
-**Prévention**
+**Prevention**
 
-1. Configurez votre domaine pour qu’il prenne en charge des codes de chiffrement renforcés et désactivez *Utiliser les types de chiffrement DES Kerberos*. Apprenez-en davantage sur [les types de chiffrement et Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
-2. Vérifiez que le niveau fonctionnel du domaine est configuré pour prendre en charge les codes de chiffrement fort.
-3. Utilisez de préférence des applications qui prennent en charge les codes de chiffrement fort.
-
+1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
+2. Make sure the domain functional level is set to support strong encryption cyphers.
+3. Give preference to using applications that support strong encryption cyphers.
+-->
 ## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Suspicion d’attaque over-pass-the-hash (Kerberos) (ID externe 2002)
 
 *Nom précédent :* Implémentation inhabituelle du protocole Kerberos (attaque overpass-the-hash potentielle)
