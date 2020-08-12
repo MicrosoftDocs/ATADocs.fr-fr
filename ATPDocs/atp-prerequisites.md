@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a44abd85bf8aeb49b6ff1d1f2c34532a63de6c3c
-ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
+ms.openlocfilehash: 30514dac7053cfd117cf1f0c50a5e8536148d5c1
+ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87293189"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88027191"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -80,7 +80,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
-- Facultatif : lorsque vous déployez le capteur autonome, il est nécessaire de transférer les événements Windows 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045 et 8004 à Azure ATP pour continuer à améliorer les détections basées sur l’authentification Azure ATP, les ajouts à des groupes sensibles et les détections de création de services suspects.  Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
+- Facultatif : Lorsque vous déployez le capteur autonome, vous devez transférer les [événements Windows](configure-windows-event-collection.md#configure-event-collection) à Azure ATP pour continuer à améliorer les détections basées sur l’authentification Azure ATP, les ajouts aux groupes sensibles et les détections de création de services suspects.  Le capteur Azure ATP reçoit automatiquement ces événements. Dans le capteur autonome Azure ATP, vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à Azure ATP des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 ## <a name="azure-atp-portal-requirements"></a>Exigences pour le portail Azure ATP
 
@@ -178,7 +178,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
-La détection Azure ATP s’appuie sur des journaux d’événements Windows spécifiques suivants que le capteur analyse à partir de vos contrôleurs de domaine : 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045, and 8004. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations sur la configuration des stratégies appropriées, consultez [Stratégie d'audit avancée](atp-advanced-audit-policy.md). Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+La détection Azure ATP s’appuie sur des [journaux d’événements Windows](configure-windows-event-collection.md#configure-event-collection) spécifiques que le capteur analyse à partir de vos contrôleurs de domaine. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations sur la configuration des stratégies appropriées, consultez [Stratégie d'audit avancée](atp-advanced-audit-policy.md). Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#configure-audit-policies) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 > [!NOTE]
 >

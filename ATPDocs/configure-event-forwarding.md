@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 78dfdfa8c862cba8cfabafdffe19f17e970b55df
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1f7d61b88c1a83f6ec075692af147a87dfe0c039
+ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772885"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88027242"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
 > [!NOTE]
 > Le capteur Azure ATP lit automatiquement les événements localement, sans qu’il ne soit nécessaire de configurer les transferts d’événements.
 
-Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows suivants : 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776 et 7041. Ils peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en configurant les transferts d’événements Windows.
+Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows qui sont listés dans [Configurer la collecte des événements](configure-windows-event-collection.md#configure-event-collection). Ils peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en configurant les transferts d’événements Windows.
 
 > [!NOTE]
 >

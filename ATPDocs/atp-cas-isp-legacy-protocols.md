@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e28dfdb4683d56f9ef33c138acf2c90bc305b9f5
-ms.sourcegitcommit: fcee078841aa6503fd1bdfb2097850d8209b82c0
+ms.openlocfilehash: a7d0ea7c8cc0eec8952cba17386045d9ee7529be
+ms.sourcegitcommit: 032132b54c905d08a24d15028782c66cc0620f20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528359"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88023291"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Évaluation de la sécurité : Utilisation des protocoles hérités
 
@@ -45,7 +45,9 @@ Pour mettre hors service les protocoles hérités, votre organisation doit d’a
 1. Utilisez le tableau de rapport pour découvrir les principales entités qui utilisent des protocoles hérités.
 
     ![Empêcher l’utilisation de protocoles hérités](media/atp-cas-isp-legacy-protocols-2.png)
-1. Prenez les mesures appropriées sur ces entités pour découvrir les dépendances, arrêter l’utilisation des protocoles hérités, et au final [désactiver complètement les protocoles](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/) et [supprimer les clients MIC 2 et Exploiting LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+1. Prenez les mesures nécessaires concernant ces entités pour découvrir les dépendances.
+1. Cessez d’utiliser les protocoles hérités, puis [désactivez complètement ces protocoles](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
+1. [Supprimez MIC 2 et cessez d’utiliser les clients LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

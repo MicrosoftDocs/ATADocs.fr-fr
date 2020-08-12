@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 503b8ac25a8ab812ca48eba138a7eafefe3168c0
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 37ae29e667d3507d1415acae3098e6f93565ec4e
+ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772358"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88027157"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Azure ATP
 
@@ -27,7 +27,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP est actuellement hors connexion en raison de problèmes de connectivité avec tous les contrôleurs de domaine configurés.|Ceci a un impact sur la capacité d’Azure ATP à détecter les activités suspectes liées à des contrôleurs de domaine surveillés par ce capteur Azure ATP.| Vérifiez que les contrôleurs de domaine sont fonctionnels et que ce capteur Azure ATP peut les utiliser pour ouvrir des connexions LDAP. En outre, dans **Paramètres** veillez à configurer un compte de service de répertoire pour chaque forêt déployée.|Moyenne|
+|Le capteur Azure ATP est actuellement hors connexion en raison de problèmes de connectivité avec tous les contrôleurs de domaine configurés.|Ceci impacte la capacité d’Azure ATP à détecter les activités suspectes liées à des contrôleurs de domaine supervisés par ce capteur Azure ATP.| Vérifiez que les contrôleurs de domaine sont fonctionnels et que ce capteur Azure ATP peut les utiliser pour ouvrir des connexions LDAP. En outre, dans **Paramètres** veillez à configurer un compte de service de répertoire pour chaque forêt déployée.|Moyenne|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>L’ensemble ou une partie des cartes réseau de capture sur un capteur ne sont pas disponibles
 
@@ -45,7 +45,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Les capteurs Azure ATP répertoriés ne parviennent pas à résoudre les adresses IP en noms d’appareils dans plus de 90 % des cas en utilisant les méthodes suivantes :<br />- NTLM sur RPC<br />- NetBIOS<br />- DNS inversé|Cela a un impact sur les capacités de détection d’Azure ATP et pourrait augmenter le nombre de fausses alertes positives.|- Pour NTLM sur RPC : Vérifiez que le port 135 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />- Pour DNS inversé : Vérifiez que le capteur peut atteindre le serveur DNS et que les zones de recherche inversée sont activées.<br />- Pour NetBIOS : Vérifiez que le port 137 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />En outre, assurez-vous que la configuration du réseau (par exemple, les pare-feu) n'empêche pas la communication vers les ports concernés.|Faible|
+|Les capteurs Azure ATP répertoriés ne parviennent pas à résoudre les adresses IP en noms d’appareils dans plus de 90 % des cas en utilisant les méthodes suivantes :<br />- NTLM sur RPC<br />- NetBIOS<br />- DNS inversé|Ceci impacte les capacités de détection d’Azure ATP et peut augmenter le nombre de fausses alertes positives.|- Pour NTLM sur RPC : Vérifiez que le port 135 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />- Pour DNS inversé : Vérifiez que le capteur peut atteindre le serveur DNS et que les zones de recherche inversée sont activées.<br />- Pour NetBIOS : Vérifiez que le port 137 est ouvert aux communications entrantes issues des capteurs Azure ATP, sur tous les ordinateurs de l’environnement.<br />En outre, assurez-vous que la configuration du réseau (par exemple, les pare-feu) n'empêche pas la communication vers les ports concernés.|Faible|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Aucun trafic reçu du contrôleur de domaine
 
@@ -87,7 +87,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Aucune communication n’a été reçue du capteur Azure ATP. L’intervalle de temps par défaut pour cette alerte est de 5 minutes.|Le trafic réseau n’est plus capturé par la carte réseau sur le capteur Azure ATP. Ceci a un impact sur la capacité d’ATA à détecter les activités suspectes, car le trafic réseau ne pourra pas atteindre le service cloud Azure ATP.|Vérifiez que le port utilisé pour la communication entre le capteur Azure ATP et le service cloud Azure ATP n’est pas bloqué par un routeur ni un pare-feu.|Moyenne|
+|Aucune communication n’a été reçue du capteur Azure ATP. L’intervalle de temps par défaut pour cette alerte est de 5 minutes.|Le trafic réseau n’est plus capturé par la carte réseau sur le capteur Azure ATP. Ceci impacte la capacité d’ATA à détecter les activités suspectes, car le trafic réseau ne pourra pas atteindre le service cloud Azure ATP.|Vérifiez que le port utilisé pour la communication entre le capteur Azure ATP et le service cloud Azure ATP n’est pas bloqué par un routeur ni un pare-feu.|Moyenne|
 
 ## <a name="some-domain-controllers-are-unreachable-by-a-sensor"></a>Certains contrôleurs de domaine ne sont pas accessibles par un capteur
 
@@ -113,11 +113,13 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |----|----|----|----|
 |Le capteur Azure ATP reçoit plus d’événements du suivi d’événements pour Windows (ETW) que ce qu’il peut traiter.|Certains événements du suivi d’événements pour Windows (ETW) n’ont pas pu être analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
 
-## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Événements Windows absents de la stratégie d’audit du contrôleur de domaine
+<!--
+## Windows events missing from domain controller audit policy
 
-|Alerte|Description|Résolution|Gravité|
+|Alert|Description|Resolution|Severity|
 |----|----|----|----|
-| Événements Windows absents de la stratégie d’audit du contrôleur de domaine|Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Une configuration incorrecte exclurait certains événements critiques de vos journaux, entraînant une couverture Azure ATP incomplète.|Examinez votre [stratégie d’audit avancée](atp-advanced-audit-policy.md) et modifiez-la si nécessaire. | Moyenne|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
+-->
 
 ## <a name="see-also"></a>Voir aussi
 

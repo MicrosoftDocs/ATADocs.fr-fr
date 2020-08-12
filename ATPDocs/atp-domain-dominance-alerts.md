@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662ded6bef3e38079173181c41920b2f57e6407d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: c4d21a4065176db1f90e73edb7fdc8192c81d950
+ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773565"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87856391"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -298,6 +298,10 @@ Le passage à une version inférieure du chiffrement est une méthode visant à 
 
 Dans une alerte Golden Ticket, la méthode de chiffrement du champ TGT du message TGS_REQ (demande de service) reçu de l’ordinateur source a été détectée comme inférieure par rapport au comportement appris. Cette détection n’est pas basée sur une anomalie de temps (contrairement à l’autre détection Golden Ticket). De plus, dans le cas de cette alerte, Azure ATP n’a pas détecté de demande d’authentification Kerberos associée à la demande de service précédente.
 
+**Période d’apprentissage**
+
+Cette alerte a une période d’apprentissage de 5 jours à compter du début de la supervision du contrôleur de domaine.
+
 **TP, B-TP ou FP**
 
 Certaines ressources légitimes, qui ne prennent pas en charge le chiffrement renforcé, sont susceptibles de déclencher cette alerte.
@@ -365,7 +369,7 @@ Certains systèmes d’exploitation ou applications sont connus pour modifier le
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. S’il y a un [utilisateur source](investigate-a-user.md), investiguez.
+2. S’il y a un [utilisateur source](investigate-a-user.md), procédez à une investigation.
 3. Vérifiez les ressources qui ont fait l’objet d’un accès réussi et [investiguez](investigate-a-computer.md).
 
 **Suggestions de correction et étapes préventives**
@@ -380,7 +384,7 @@ Certains systèmes d’exploitation ou applications sont connus pour modifier le
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Suspicion d’utilisation de golden ticket (compte inexistant) (ID externe 2027)
 
-Nom précédent : golden ticket Kerberos
+Nom précédent : Golden Ticket Kerberos
 
 **Description**
 
@@ -440,7 +444,7 @@ Les services de fédération peuvent générer des tickets qui déclencheront ce
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Suspicion d’utilisation de golden ticket (anomalie de temps) (ID externe 2022)
 
-Nom précédent : golden ticket Kerberos
+Nom précédent : Golden Ticket Kerberos
 
 **Description**
 
@@ -540,7 +544,7 @@ Les modifications de groupe légitimes qui se produisent rarement et le système
 
 ## <a name="suspicious-service-creation-external-id-2026"></a>Création de service malveillant (ID externe 2026)
 
-*Nom précédent :* Création de service malveillant
+*Nom précédent :* Création de service suspect
 
 **Description**
 
