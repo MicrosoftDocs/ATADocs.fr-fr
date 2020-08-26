@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d3347151b490af645802aa759bf9379ee60162ba
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e0694e13a731c1c8146f733ee8e49a3a2888d52c
+ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88793376"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -41,10 +41,7 @@ Si, lors de l’installation du capteur, vous recevez l’erreur suivante :  **
 
 **Entrées du journal de déploiement :**
 
-[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
-[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync a retourné [validateCreateSensorResult=LicenseInvalid]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]] [1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
 
 **Cause :**
 
@@ -54,15 +51,56 @@ Dans certains cas, lors de la communication via un proxy, lors de l’authentifi
 
 Assurez-vous que le capteur peut naviguer vers *.atp.azure.com via le proxy configuré sans authentification. Pour plus d'informations, consultez [Configurer le proxy pour activer la communication](configure-proxy.md).
 
+## <a name="proxy-authentication-problem-presents-as-a-connection-error"></a>Le problème d’authentification du proxy se présente sous la forme d’une erreur de connexion
+
+Si, lors de l’installation du capteur, vous recevez l’erreur suivante :  **Échec de la connexion du capteur au service.**
+
+**Cause :**
+
+Le problème peut être provoqué par une erreur de configuration du proxy transparent sur Server Core, par exemple si les certificats racines requis par Azure ATP ne sont pas à jour ou sont manquants.
+
+**Résolution :**
+
+Exécutez l’applet de commande PowerShell suivante pour vérifier que le certificat racine approuvé du service Azure ATP existe sur Server Core. L’exemple suivant utilise « DigiCert Baltimore Root ».
+
+```powershell
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+```
+
+```Output
+Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
+FriendlyName : DigiCert Baltimore Root
+NotBefore    : 5/12/2000 11:46:00 AM
+NotAfter     : 5/12/2025 4:59:00 PM
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
+
+Si vous ne voyez pas la sortie attendue, effectuez les étapes suivantes :
+
+1. Téléchargez le [certificat racine Baltimore CyberTrust](https://cacert.omniroot.com/bc2025.crt) sur la machine Server Core.
+1. Exécutez l’applet de commande PowerShell suivante pour installer le certificat.
+
+    ```powershell
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    ```
+
 ## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Erreur d’installation sans assistance lors de la tentative d’utilisation de PowerShell
 
 Si, lors de l’installation sans assistance d’un capteur, vous tentez d’utiliser PowerShell, vous obtenez l’erreur suivante :
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```powershell
+"Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```
 
-**Cause :** L’omission du préfixe ./ requis pour l’installation lors de l’utilisation de PowerShell entraîne cette erreur.
+**Cause :**
 
-**Résolution :** Utilisez la commande complète pour installer correctement.
+L’omission du préfixe ./ requis pour l’installation lors de l’utilisation de PowerShell entraîne cette erreur.
+
+**Résolution :**
+
+Utilisez la commande complète pour installer correctement.
 
 ```powershell
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -133,8 +171,7 @@ Si vous recevez l’alerte d’intégrité suivante : **Les informations d'iden
 
 **Entrées du journal du capteur :**
 
-2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync a démarré [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
-2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync a terminé [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync a démarré [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True] 2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync a terminé [UserName=account_name Domain=domain1.test.local IsSuccess=False]
 
 **Entrées du journal de mise à jour du capteur :**
 

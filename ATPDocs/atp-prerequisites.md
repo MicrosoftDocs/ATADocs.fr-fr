@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30514dac7053cfd117cf1f0c50a5e8536148d5c1
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
+ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027191"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88793373"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -103,14 +103,16 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 
 ## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Exigences pour Azure ATP NNR (Network Name Resolution, résolution de noms réseau)
 
-La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité Azure ATP. Pour que le service Azure ATP fonctionne correctement, au moins l’une des méthodes NNR suivantes doit être accessible pour les capteurs Azure ATP :
+La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité Azure ATP. Pour résoudre les adresses IP en noms d’ordinateur, les capteurs Azure ATP recherchent les adresses IP à l’aide des méthodes suivantes :
 
-1. **NTLM sur RPC** (port TCP 135)
-2. **NetBIOS** (port UDP 137)
-3. **RDP** (port TCP 3389), seulement le premier paquet de Client hello
-4. **Requêtes sur le serveur DNS par recherche DNS inversée de l’adresse IP** (UDP 53)
+- NTLM sur RPC (port TCP 135)
+- NetBIOS (port UDP 137)
+- RDP (port TCP 3389), seulement le premier paquet de **Client hello**
+- Interroge le serveur DNS par recherche DNS inversée de l’adresse IP (UDP 53)
 
-Pour que les méthodes 1, 2 et 3 fonctionnent, les ports appropriés doivent être ouverts en entrée depuis les capteurs Azure ATP vers les appareils du réseau. Pour en savoir plus sur Azure ATP et NNR, consultez [Stratégie Azure ATP NNR](atp-nnr-policy.md).
+Pour que les trois premières méthodes fonctionnent, les ports appropriés doivent être ouverts en entrée depuis les capteurs Azure ATP vers les appareils du réseau. Pour en savoir plus sur Azure ATP et NNR, consultez [Stratégie Azure ATP NNR](atp-nnr-policy.md).
+
+Pour obtenir les meilleurs résultats, nous vous recommandons d’utiliser toutes les méthodes. Si ce n’est pas possible, vous devez utiliser la méthode de recherche DNS et au moins l’une des autres méthodes.
 
 ## <a name="azure-atp-sensor-requirements"></a>Configuration requise pour le capteur Azure ATP
 
@@ -171,10 +173,12 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
 |RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
-|**Ports NNR**||||||
+|**Ports NNR**\*||||||
 |NTLM sur RPC|TCP|Port 135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 |NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 |RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+
+\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
@@ -261,10 +265,12 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
 |RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
-|**Ports NNR**||||||
+|**Ports NNR** \*||||||
 |NTLM sur RPC|TCP|135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 |NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
 |RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+
+\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
 > [!NOTE]
 >
