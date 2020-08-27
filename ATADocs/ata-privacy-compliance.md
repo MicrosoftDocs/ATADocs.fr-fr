@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 907fb2c6f7e24bfc0f69ae29534303f7b02d9708
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 1ae7d9277de591f54cdb1918ee72174a806b1c96
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472414"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954032"
 ---
 # <a name="ata-data-security-and-privacy"></a>Sécurité et confidentialité des données ATA
 
@@ -43,7 +43,7 @@ Pour supprimer définitivement les données relatives à un utilisateur dans la 
 
 1. [Téléchargez](https://aka.ms/ata-gdpr-script) le script MongoDB (gdpr.js).  
 
-2. Copiez le script dans le dossier ATA (qui se trouve dans `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB`) et exécutez la commande suivante à partir la machine du centre ATA : 
+1. Copiez le script dans le dossier ATA (qui se trouve dans `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB`) et exécutez la commande suivante à partir la machine du centre ATA : 
 
 Utilisez le script de base de données RGPD d’ATA pour supprimer les entités et les données d’activité qui s’y rapportent, comme décrit dans les sections suivantes.
 
@@ -83,8 +83,8 @@ Pour plus d’informations, consultez [Gérer les journaux générés par le sys
 Pour désactiver la collecte de données :
 
 1. Connectez-vous à la console ATA, cliquez sur les trois points dans la barre d’outils, puis sélectionnez **À propos de**. 
-2. Décochez la case **Envoyez-nous des informations d’utilisation pour nous aider à améliorer votre expérience utilisateur à l’avenir**. 
+1. Décochez la case **Envoyez-nous des informations d’utilisation pour nous aider à améliorer votre expérience utilisateur à l’avenir**. 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr).
+- Pour plus d’informations sur l’approbation et la conformité dans ATA, consultez le [portail d’approbation de services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Enterprise](/microsoft-365/compliance/gdpr).

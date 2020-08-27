@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 494c06aac05bd1de11f1101bda8c8f73ffaf25bb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 4479de3764f9cceffe9a3ed401aa20332a985498
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773208"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954219"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Utilisation de l’intégrité et des événements système d’ATA
 
@@ -35,7 +35,7 @@ Si un problème se produit, le centre d’intégrité ATA déclenche une alerte 
 ### <a name="managing-ata-health"></a>Gestion de l’intégrité d’ATA
 Pour vérifier l’intégrité globale de votre système, cliquez sur l’icône du centre d’intégrité dans la barre de menus. ![Icône du centre d’intégrité ATA](media/ATA-red-dot.png)
 
--   Il est possible de gérer toutes les alertes actives et de leur appliquer l’opération **Fermer**, **Ignorer** ou **Supprimer** en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
+- Il est possible de gérer toutes les alertes actives et de leur appliquer l’opération **Fermer**, **Ignorer** ou **Supprimer** en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
 -   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
 

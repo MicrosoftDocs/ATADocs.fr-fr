@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5a48993ecf5b4384b5b7826ee72862798790a5fb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: a0a2abcf78c19180b841b9f2ec9186b19beea7c5
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775316"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954661"
 ---
 # <a name="ata-event-id-reference"></a>Informations de référence sur les ID d’événement ATA
 
@@ -28,11 +28,11 @@ L’Observateur d’événements du centre ATA journalise les événements pour 
 
 Vous trouverez les événements ici :
 
-![emplacement des ID d’événement](./media/event-id-location.png)
+![emplacement des ID d’événement](media/event-id-location.png)
 
 ## <a name="ata-health-events"></a>Événements d’intégrité ATA
 
-|ID de l'événement|Nom de l’alerte|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |1001|Espace disque du centre insuffisant|
 |1003|Centre surchargé|
@@ -58,7 +58,7 @@ Vous trouverez les événements ici :
  
 ## <a name="ata-security-alert-events"></a>Événements d'alerte de sécurité ATA
 
-|ID de l'événement|Nom de l’alerte|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |2001|Suspicion d’usurpation d’identité basée sur un comportement inhabituel|
 |2002|Implémentation de protocole inhabituelle|
@@ -86,7 +86,7 @@ Vous trouverez les événements ici :
 
 ## <a name="ata-auditing-events"></a>Événements d’audit ATA
 
-|ID de l'événement|Nom de l’alerte|
+|ID de l’événement|Nom de l’alerte|
 |---------|---------------|
 |3001|Changement de configuration ATA|
 |3002|Passerelle ATA ajoutée|

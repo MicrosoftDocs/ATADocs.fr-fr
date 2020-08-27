@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2649e5ece9a1613c8c0f396c7fc906219c178046
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5b7b60910975ce1f8922a32b799b997917542257
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775214"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954542"
 ---
 # <a name="install-ata---step-3"></a>Installer ATA - Étape 3
 
@@ -38,16 +38,16 @@ Cliquez sur **Télécharger la configuration** de la passerelle dans la liste de
 > [!NOTE] 
 > Pour accéder ultérieurement à l’écran de configuration de la passerelle, cliquez sur **l’icône de paramètres** (en haut à droite) et sélectionnez **Configuration** puis, sous **Système**, cliquez sur **Passerelles**.  
 
-1.  Cliquez sur **Configuration de la passerelle**.
+1. Cliquez sur **Configuration de la passerelle**.
   ![Télécharger le programme d’installation de la passerelle ATA](media/download-gateway-setup.png)
-2.  Enregistrez le package localement.
-3.  Copiez le package sur le serveur dédié ou sur le contrôleur de domaine sur lequel vous installez la passerelle ATA. Vous pouvez également ouvrir la console ATA à partir du serveur dédié ou du contrôleur de domaine et ignorer cette étape.
+1. Enregistrez le package localement.
+1. Copiez le package sur le serveur dédié ou sur le contrôleur de domaine sur lequel vous installez la passerelle ATA. Vous pouvez également ouvrir la console ATA à partir du serveur dédié ou du contrôleur de domaine et ignorer cette étape.
 
 Le fichier zip comprend les fichiers suivants :
 
--   Programme d’installation de la passerelle ATA
+- Programme d’installation de la passerelle ATA
 
--   Fichier de paramètres de configuration avec les informations requises pour se connecter au centre ATA
+- Fichier de paramètres de configuration avec les informations requises pour se connecter au centre ATA
 
 
 > [!div class="step-by-step"]

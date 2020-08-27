@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 02cd26323be6ae79524d4912674380af23d2c3af
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954797"
 ---
 # <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
 
@@ -49,9 +49,9 @@ En haut, vous pouvez voir les vignettes de résumé qui vous donnent un petit ap
 
 Pour les ordinateurs, vous verrez :
 - Le nombre d’activités suspectes ouvertes pour l’ordinateur
--  Le nombre d’utilisateurs connectés à l’ordinateur
+- Le nombre d’utilisateurs connectés à l’ordinateur
 - Le nombre de ressources auxquelles l’ordinateur a accédé
--  Le nombre d’emplacements sur l’ordinateur à partir desquels un accès au VPN a été effectué
+- Le nombre d’emplacements sur l’ordinateur à partir desquels un accès au VPN a été effectué
 - La liste des adresses IP que l’ordinateur a utilisées
   
   ![ordinateur de menu des entités](media/entity-computer.png)
@@ -70,7 +70,7 @@ Dans la section **Contrôle d’accès d’utilisateur**, ATA expose les paramè
 
 En cliquant sur l’onglet **Chemins d'accès de mouvement latéral**, vous pouvez afficher une image entièrement interactive et dynamique offrant une représentation visuelle des chemins de mouvement latéral en direction et en provenance de cet utilisateur qui peuvent être utilisés pour infiltrer votre réseau.
 
-Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [chemins de mouvement latéral](use-case-lateral-movement-path.md). 
+Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 
  ![chemins de mouvement latéral du profil utilisateur](media/user-profile-lateral-movement-paths.png)
 

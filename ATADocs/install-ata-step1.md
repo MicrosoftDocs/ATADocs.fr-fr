@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 77f384ecd4ded0e47737013a138cdf1bdbf167cf
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 2b61069662100ec9c0c66620a26c740c7d1d2471
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954678"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -40,7 +40,7 @@ Après avoir vérifié que le serveur répond à la configuration requise, vous 
 
 Effectuez les opérations suivantes sur le serveur du centre ATA.
 
-1. Téléchargez ATA à partir du centre de gestion des [licences en volume Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx) ou à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/) ou de [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1. Téléchargez ATA à partir du centre de gestion des [licences en volume Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx) ou à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/) ou de [MSDN](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget).
 
 1. Connectez-vous à l’ordinateur sur lequel vous installez le centre ATA en tant qu’utilisateur membre du groupe Administrateurs local.
 
@@ -65,7 +65,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
     |Champ|Description|Commentaires|
     |---------|---------------|------------|
-    |Chemin d’installation|Il s’agit de l’emplacement où est installé le centre ATA. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center|Conservez la valeur par défaut.|
+    |Chemin d’installation|Il s’agit de l’emplacement où est installé le centre ATA. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center|Conservez la valeur par défaut|
     |Chemin d’accès des données de la base de données|Il s’agit de l’emplacement dans lequel les fichiers de la base de données MongoDB sont enregistrés. L’emplacement par défaut est le suivant : %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Modifiez cette valeur pour pointer vers un emplacement capable de prendre en charge l’évolution de vos besoins en matière de redimensionnement. **Remarque :** <ul><li>Dans les environnements de production, vous devez utiliser un lecteur avec suffisamment d'espace (tel que déterminé par la planification de la capacité).</li><li>Pour les déploiements volumineux, la base de données doit figurer sur un disque physique distinct.</li></ul>Pour plus d’informations sur le redimensionnement, consultez [Planification de la capacité ATA](ata-capacity-planning.md).|
     |Certificat SSL du service du centre|Il s’agit du certificat utilisé par le service du centre ATA et de la console ATA.|Cliquez sur l’icône en forme de clé pour sélectionner un certificat installé ou utilisez la case à cocher pour créer un certificat auto-signé.|
 

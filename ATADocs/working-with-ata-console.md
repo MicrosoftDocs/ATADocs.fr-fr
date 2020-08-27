@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1532d110daf23562c768a7b145bcff9326f73223
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774653"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955120"
 ---
 # <a name="working-with-the-ata-console"></a>Utilisation de la console ATA
 
@@ -43,12 +43,12 @@ Pour ouvrir une session dans la console ATA, vous devez utiliser le compte d’u
    >[!NOTE]
    > Vous pouvez également ouvrir un navigateur à partir du centre ATA ou de la passerelle ATA et accéder à l’adresse IP que vous avez configurée dans l’installation du centre ATA pour la console ATA.    
 
-2. Si l’ordinateur où le centre ATA est installé et l’ordinateur à partir duquel vous tentez d’accéder à la console ATA sont joints à un domaine, ATA prend en charge l’authentification unique intégrée avec l’authentification Windows. Si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans ATA correspondent à votre [rôle administrateur](ata-role-groups.md).
+1. Si l’ordinateur où le centre ATA est installé et l’ordinateur à partir duquel vous tentez d’accéder à la console ATA sont joints à un domaine, ATA prend en charge l’authentification unique intégrée avec l’authentification Windows. Si vous avez déjà ouvert une session sur votre ordinateur, ATA utilise ce jeton pour vous connecter à la console ATA. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans ATA correspondent à votre [rôle administrateur](ata-role-groups.md).
 
    > [!NOTE]
    > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder à la console ATA en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur ATA. Vous pouvez également exécuter votre navigateur en tant qu’un autre utilisateur, ou vous déconnecter de Windows et ouvrir une session avec votre utilisateur administrateur ATA. Pour faire en sorte que la console ATA demande des informations d’identification, accédez à la console en utilisant une adresse IP : vous êtes alors invité à entrer des informations d’identification.
 
-3. Pour vous connecter à l’aide de l’authentification unique, vérifiez que le site de la console ATA est défini en tant que site intranet local dans votre navigateur et que vous y accédez en utilisant un nom court ou un localhost.
+1. Pour vous connecter à l’aide de l’authentification unique, vérifiez que le site de la console ATA est défini en tant que site intranet local dans votre navigateur et que vous y accédez en utilisant un nom court ou un localhost.
 
 > [!NOTE]
 > En plus de la journalisation de chaque alerte d’activité suspecte et d’intégrité, chaque modification de configuration apportée à la console ATA est auditée dans le journal des événements Windows sur l’ordinateur du centre ATA, sous **Journal des applications et des services** puis **Microsoft ATA**. Chaque connexion à la console ATA est également auditée.<br></br>  Les configurations qui affectent la passerelle ATA sont également consignées dans le journal des événements Windows de l’ordinateur de la passerelle ATA. 
@@ -128,15 +128,15 @@ Si vous pointez votre souris sur une entité, n'importe où dans la console, où
 
 ![Image du mini-profil dans ATA](media/ATA-mini-profile.jpg)
 
--   Nom
+- Nom
 
--   Photo
+- Photo
 
--   E-mail
+- Email
 
--   Telephone
+- Telephone
 
--   Nombre d’activités suspectes par niveau de gravité
+- Nombre d’activités suspectes par niveau de gravité
 
 
 

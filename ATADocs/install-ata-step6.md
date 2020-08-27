@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06b7e42789b58a6da01479917b0e1277b651a8bd
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1ece55ea9d0ad43a85a27741af34242f58fd0002
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775163"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955511"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
@@ -31,7 +31,7 @@ ms.locfileid: "84775163"
 
 ### <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
-Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ces événements Windows sont lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières, soit en configurant la passerelle ATA pour écouter les événements SIEM, soit en [configurant le transfert d’événements Windows](configure-event-collection.md). 
+Pour améliorer les capacités de détection, ATA a besoin des événements Windows suivants : 4776, 4732, 4733, 4728, 4729, 4756, 4757 et 7045. Ces événements Windows sont lus automatiquement par la passerelle légère ATA ou, si la passerelle légère ATA n’est pas déployée, ils peuvent être transférés à la passerelle ATA de deux manières, soit en configurant la passerelle ATA pour écouter les événements SIEM, soit en [configurant le transfert d’événements Windows](configure-event-collection.md).
 
 > [!NOTE]
 > Pour les versions ATA 1,8 et ultérieures, la configuration de la collecte d’événements Windows n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA lit désormais les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.
@@ -45,7 +45,7 @@ Pour qu’ATA puisse consommer des données provenant d’un serveur Syslog, vou
 - Configurez vos serveurs de passerelle ATA pour écouter et accepter les événements transférés à partir du serveur SIEM/Syslog.
 
 > [!NOTE]
-> ATA écoute uniquement sur IPv4 et non sur IPv6. 
+> ATA écoute uniquement sur IPv4 et non sur IPv6.
 >
 > - Configurez votre serveur SIEM/Syslog de façon à transférer des événements spécifiques à la passerelle ATA.
 
@@ -53,7 +53,7 @@ Pour qu’ATA puisse consommer des données provenant d’un serveur Syslog, vou
 > - Ne transférez pas toutes les données Syslog vers la passerelle ATA.
 > - ATA prend en charge le trafic UDP provenant du serveur SIEM/Syslog.
 
-Pour plus d’informations sur la façon de configurer le transfert d’événements spécifiques vers un autre serveur, consultez la documentation produit de votre serveur SIEM/Syslog. 
+Pour plus d’informations sur la façon de configurer le transfert d’événements spécifiques vers un autre serveur, consultez la documentation produit de votre serveur SIEM/Syslog.
 
 > [!NOTE]
 > Si vous n’utilisez pas un serveur SIEM/Syslog, vous pouvez configurer vos contrôleurs de domaine Windows de façon à transférer l’événement Windows associé à l’ID 4776 pour qu’il soit collecté et analysé par ATA. L’événement Windows associé à l’ID 4776 fournit des données relatives aux authentifications NTLM.
@@ -64,9 +64,9 @@ Pour plus d’informations sur la façon de configurer le transfert d’événem
 
     ![Image de l’activation du protocole UDP de l’écouteur syslog](media/ATA-enable-siem-forward-events.png)
 
-2. Configurez votre serveur SIEM ou Syslog pour transférer l’événement Windows associé à l’ID 4776 vers l’adresse IP de l’une des passerelles ATA. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
+1. Configurez votre serveur SIEM ou Syslog pour transférer l’événement Windows associé à l’ID 4776 vers l’adresse IP de l’une des passerelles ATA. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
 
-ATA prend en charge les événements SIEM aux formats suivants :  
+ATA prend en charge les événements SIEM aux formats suivants :
 
 #### <a name="rsa-security-analytics"></a>RSA Security Analytics
 
@@ -98,7 +98,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Le c
 - La partie en-tête, séparée par une barre verticale, doit exister (comme indiqué dans le protocole).
 - Les clés suivantes dans la partie _Extension_ doivent être présentes dans l’événement :
   - externalId = ID de l’événement Windows.
-  - rt = Horodateur de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée au serveur SIEM ou de l’envoi à ATA). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
+  - RT = horodateur de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée à la SIEM ou de l’envoi à ATA). De préférence avec une précision de l’ordre de la milliseconde (ceci est important).
   - cat = nom du journal des événements Windows.
   - shost = nom de l’hôte source.
   - dhost = nom de l’ordinateur recevant l’événement (ici, le contrôleur de domaine).
@@ -130,7 +130,7 @@ Code d’erreur : 0x0
   - EventCode = ID de l’événement Windows.
   - Logfile = nom du journal des événements Windows.
   - SourceName = nom du fournisseur d’événements Windows.
-  - TimeGenerated = horodateur de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée au serveur SIEM ou de l’envoi à ATA). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
+  - TimeGenerated = horodatage de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée à la SIEM ou de l’envoi à ATA). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
   - ComputerName = nom de l’hôte source.
   - Message = texte de l’événement Windows d’origine.
 - La clé et la valeur du message DOIVENT figurer en dernier.
@@ -140,7 +140,9 @@ Code d’erreur : 0x0
 
 QRadar permet la collecte d’événements par le biais d’un agent. Si les données sont recueillies au moyen d’un agent, le format de l’heure est collecté sans les données des millisecondes. ATA nécessitant les données des millisecondes, vous devez définir QRadar pour qu’il utilise la collecte d’événements de Windows sans agent. Pour plus d’informations, consultez [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar : Collecte d’événements Windows sans agent avec le protocole MSRPC").
 
-    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
+<13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
 
 Les champs requis sont les suivants :
 
@@ -151,13 +153,13 @@ Les champs requis sont les suivants :
 - Nom de domaine complet du contrôleur de domaine
 - ID de l’événement Windows
 
-TimeGenerated représente l’horodateur de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée au serveur SIEM ou de l’envoi à ATA). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
+TimeGenerated est l’horodateur de l’événement réel (vérifiez qu’il ne s’agit pas de l’horodateur de l’arrivée à la SIEM ou de l’envoi à ATA). Le format doit être aaaaMMjjHHmmss.FFFFFF, avec de préférence une précision de l’ordre de la milliseconde (ceci est important).
 
 Message représente le texte de l’événement Windows d’origine.
 
 Assurez-vous que \t sépare les paires clé/valeur.
 
->[!NOTE] 
+>[!NOTE]
 > Utiliser WinCollect pour la collecte des événements Windows n’est pas pris en charge.
 
 > [!div class="step-by-step"]

@@ -1,6 +1,6 @@
 ---
 title: Compréhension des alertes d’intégrité ATA
-description: Décrit comment utiliser les journaux ATA pour résoudre des problèmes
+description: Décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 96350f1724b743e5c640ad41cb7b8e2cdd656adb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 8569e26786c36f08fdcf98dcd11452cdef5736b6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775044"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955987"
 ---
 # <a name="understanding-ata-health-alerts"></a>Compréhension des alertes d’intégrité ATA
 
@@ -86,11 +86,11 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="all-domain-controllers-are-unreachable-by-a-gateway"></a>Tous les contrôleurs de domaine ne sont pas accessibles par une passerelle
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|La passerelle ATA est actuellement hors connexion en raison de problèmes de connectivité avec tous les contrôleurs de domaine configurés.|Ceci a un impact sur la capacité d’ATA à détecter les activités suspectes liées à des contrôleurs de domaine surveillés par cette passerelle ATA.| Vérifiez que les contrôleurs de domaine sont fonctionnels et que cette passerelle ATA peut les utiliser pour ouvrir des connexions LDAP.|Moyenne|
+|La passerelle ATA est actuellement hors connexion en raison de problèmes de connectivité avec tous les contrôleurs de domaine configurés.|Cela a un impact sur la capacité d’ATA à détecter les activités suspectes liées à des contrôleurs de domaine surveillés par cette passerelle ATA.| Vérifiez que les contrôleurs de domaine sont fonctionnels et que cette passerelle ATA peut les utiliser pour ouvrir des connexions LDAP.|Moyenne|
 ### <a name="gateway-stopped-communicating"></a>La passerelle a cessé de communiquer
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Aucune communication n’a été reçue de la passerelle ATA. L’intervalle de temps par défaut pour cette alerte est de 5 minutes.|Le trafic réseau n’est plus capturé par la carte réseau sur la passerelle ATA. Ceci a un impact sur la capacité d’ATA à détecter les activités suspectes, car le trafic réseau ne pourra pas atteindre le centre ATA.|Vérifiez que le port utilisé pour la communication entre la passerelle ATA et le service du centre ATA n’est pas bloqué par un routeur ou un pare-feu.|Moyenne|
+|Aucune communication n’a été reçue de la passerelle ATA. L’intervalle de temps par défaut pour cette alerte est de 5 minutes.|Le trafic réseau n’est plus capturé par la carte réseau sur la passerelle ATA. Cela a un impact sur la capacité d’ATA à détecter les activités suspectes, car le trafic réseau ne pourra pas atteindre le centre ATA.|Vérifiez que le port utilisé pour la communication entre la passerelle ATA et le service du centre ATA n’est pas bloqué par un routeur ou un pare-feu.|Moyenne|
 ### <a name="no-traffic-received-from-domain-controller"></a>Aucun trafic reçu du contrôleur de domaine
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|

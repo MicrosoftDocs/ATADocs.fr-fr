@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f803f8c99ac3cfd7c36f113658f05d486b8192c8
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 9fb89568d92070fa69a632bed5da535b0897cf6c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775418"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953709"
 ---
 # <a name="updating-ata-to-version-19"></a>Mise à jour d’ATA vers la version 1.9
 
@@ -34,9 +34,9 @@ Suivez ces étapes pour mettre à jour ATA vers la version 1.9 :
 1.  [Téléchargez la version mise à jour d’ATA 1.9 à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=56725) ou la version complète à partir du [Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Dans la version de migration, le fichier peut être utilisé uniquement pour la mise à jour d’ATA 1.8. Dans la version du Centre d’évaluation, le même fichier d’installation (Microsoft ATA Center Setup.exe) est utilisé pour l’installation d’un nouveau déploiement d’ATA et la mise à niveau des déploiements existants.
 
-2.  Mettez à jour le centre ATA.
+1. Mettez à jour le centre ATA.
 
-4.  Mettez à jour les passerelles ATA.
+1. Mettez à jour les passerelles ATA.
 
     > [!IMPORTANT]
     > Pour assurer le bon fonctionnement d’ATA, mettez à jour toutes les passerelles.
@@ -45,11 +45,11 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
 
 1. Sauvegardez votre base de données (facultatif) :
 
-   -   Si le centre ATA s’exécute en tant que machine virtuelle et que vous souhaitez effectuer un point de contrôle, commencez par arrêter la machine virtuelle.
+   - Si le centre ATA s’exécute en tant que machine virtuelle et que vous souhaitez effectuer un point de contrôle, commencez par arrêter la machine virtuelle.
 
-   -   Si le centre ATA est en cours d’exécution sur un serveur physique, consultez l’article [Récupération d’urgence](disaster-recovery.md) pour plus d’informations sur la sauvegarde de la base de données.
+   - Si le centre ATA est en cours d’exécution sur un serveur physique, consultez l’article [Récupération d’urgence](disaster-recovery.md) pour plus d’informations sur la sauvegarde de la base de données.
 
-2. Exécutez le fichier d’installation, **Microsoft ATA Center Setup.exe**, puis suivez les instructions à l’écran pour installer la mise à jour.
+1. Exécutez le fichier d’installation, **Microsoft ATA Center Setup.exe**, puis suivez les instructions à l’écran pour installer la mise à jour.
 
    - Dans la page **Bienvenue**, choisissez votre langue et cliquez sur **Suivant**.
 
@@ -64,11 +64,11 @@ Dans la version de migration, le fichier peut être utilisé uniquement pour la 
 
    - Cliquez sur **Update**. Une fois que vous avez cliqué sur Mettre à jour, ATA passe en mode hors connexion jusqu’à la fin de la mise à jour.
 
-3. Une fois la mise à jour du centre ATA terminée, cliquez sur **Lancer** pour afficher l’écran **Mettre à jour** dans la console ATA pour les passerelles ATA.
+1. Une fois la mise à jour du centre ATA terminée, cliquez sur **Lancer** pour afficher l’écran **Mettre à jour** dans la console ATA pour les passerelles ATA.
 
     ![Écran de réussite de mise à jour](media/migration-center-success.png)
 
-4. Dans l’écran **Mises à jour**, si vous avez déjà configuré vos passerelles ATA pour une mise à jour automatique, elles sont mises à jour à ce stade. Sinon, cliquez sur **Mettre à jour** en regard de chaque passerelle ATA.
+1. Dans l’écran **Mises à jour**, si vous avez déjà configuré vos passerelles ATA pour une mise à jour automatique, elles sont mises à jour à ce stade. Sinon, cliquez sur **Mettre à jour** en regard de chaque passerelle ATA.
   
     ![Image de mise à jour des passerelles](media/migration-update-gw.png)
 

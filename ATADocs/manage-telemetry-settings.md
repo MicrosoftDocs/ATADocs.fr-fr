@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 175132fa85f95717987f074f0185bc94bfe187ba
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775129"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955409"
 ---
 # <a name="manage-system-generated-logs"></a>Gérer les journaux générés par le système
 
@@ -31,55 +31,55 @@ ms.locfileid: "84775129"
 
 Les données rendues anonymes collectées incluent les paramètres suivants :
 
--   Compteurs de performances du centre ATA et de la passerelle ATA
+- Compteurs de performances du centre ATA et de la passerelle ATA
 
--   ID de produit des copies sous licence d’ATA
+- ID de produit des copies sous licence d’ATA
 
--   Date de déploiement du centre ATA
+- Date de déploiement du centre ATA
 
--   Nombre de passerelles ATA déployées
+- Nombre de passerelles ATA déployées
 
--   Informations Active Directory rendues anonymes suivantes :
+- Informations Active Directory rendues anonymes suivantes :
 
-    -   ID du domaine dont le nom correspond au premier domaine lors d’un tri par ordre alphabétique
+    - ID du domaine dont le nom correspond au premier domaine lors d’un tri par ordre alphabétique
 
-    -   Nombre de contrôleurs de domaine
+    - Nombre de contrôleurs de domaine
 
-    -   Nombre de contrôleurs de domaine surveillés par ATA via la mise en miroir des ports
+    - Nombre de contrôleurs de domaine surveillés par ATA via la mise en miroir des ports
 
-    -   Nombre de sites
+    - Nombre de sites
 
-    -   Nombre d’ordinateurs
+    - Nombre d’ordinateurs
 
-    -   Nombre de groupes
+    - Nombre de groupes
 
-    -   Nombre d'utilisateurs
+    - Nombre d'utilisateurs
 
--   Activités suspectes : les données rendues anonymes suivantes sont collectées pour chaque activité suspecte :
+- Activités suspectes : les données rendues anonymes suivantes sont collectées pour chaque activité suspecte :
 
     (Les noms d’ordinateur, les noms d’utilisateur et les adresses IP ne sont **pas** collectés)
 
-    -   Type d’activité suspecte
+    - Type d’activité suspecte
 
-    -   ID d’activité suspecte
+    - ID d’activité suspecte
 
-    -   Statut
+    - Statut
 
-    -   Heures de début et de fin
+    - Heures de début et de fin
 
-    -   Entrée fournie
+    - Entrée fournie
 
 - Problèmes d’intégrité – Les données anonymes suivantes sont collectées pour chaque problème d’intégrité :
 
     (Les noms d’ordinateurs, les noms d’utilisateurs et les adresses IP ne sont pas collectés.)
 
-    -   Type de problème d’intégrité
+    - Type de problème d’intégrité
 
-    -   ID du problème d’intégrité
+    - ID du problème d’intégrité
 
-    -   Statut
+    - Statut
 
-    -   Heures de début et de fin
+    - Heures de début et de fin
 
 - Adresses URL de la console ATA - Adresses URL lors de l’utilisation de la console ATA, c’est-à-dire quelles pages de la console ATA sont consultées.
 
@@ -87,9 +87,9 @@ Les données rendues anonymes collectées incluent les paramètres suivants :
 ### <a name="disable-data-collection"></a>Désactiver la collecte de données
 Procédez comme suit pour arrêter la collecte et l’envoi de données de télémétrie à Microsoft :
 
-1.  Connectez-vous à la console ATA, cliquez sur les trois points dans la barre d’outils, puis sélectionnez **À propos de**.
+1. Connectez-vous à la console ATA, cliquez sur les trois points dans la barre d’outils, puis sélectionnez **À propos de**.
 
-2.  Décochez la case **Envoyez-nous des informations d’utilisation pour nous aider à améliorer votre expérience utilisateur à l’avenir**.
+1. Décochez la case **Envoyez-nous des informations d’utilisation pour nous aider à améliorer votre expérience utilisateur à l’avenir**.
 
 ## <a name="see-also"></a>Voir aussi
 - [Résolution des problèmes liés à ATA à l’aide du journal des événements](troubleshooting-ata-using-logs.md)

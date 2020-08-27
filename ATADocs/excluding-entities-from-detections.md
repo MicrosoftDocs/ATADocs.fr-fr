@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b5e80251fb4ffc4347671b573eb5435c09517e71
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954627"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
 
@@ -33,11 +33,11 @@ Il existe deux façons d’exclure des entités : à partir de l’activité sus
 
 - **À partir de l’activité suspecte** : dans la chronologie de l’activité suspecte, lorsque vous recevez une alerte sur une activité pour un utilisateur, un ordinateur ou une adresse IP qui est autorisé(e) à effectuer l’activité spécifique et qui peut l’exécuter fréquemment, cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’activité suspecte pour cette entité, puis sélectionnez **Fermer et exclure**. <br></br>Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions pour cette activité suspecte. Il ferme l’activité suspecte et n’est plus répertoriée dans la liste événements **ouverts** dans la chronologie de l' **activité suspecte**.
 
-    ![Exclure une entité](./media/exclude-in-sa.png)
+    ![Exclure une entité](media/exclude-in-sa.png)
 
 - **À partir de la page Configuration** : pour vérifier ou modifier les exclusions : sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’activité suspecte, comme **Informations d’identification de compte sensibles exposées**.
 
-    ![Configuration d’exclusion](./media/exclusions-config-page.png)
+    ![Configuration d’exclusion](media/exclusions-config-page.png)
 
 Pour supprimer une entité de la configuration **Exclusions** : cliquez sur le signe moins en regard du nom de l’entité, puis cliquez sur **Enregistrer** au bas de la page.
 

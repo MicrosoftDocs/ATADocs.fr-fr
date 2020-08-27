@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8b6232817ae35bdd170f90bdc1c25920f9932322
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954117"
 ---
 # <a name="ata-prerequisites"></a>Configuration requise pour ATA
 
@@ -55,7 +55,7 @@ Cette section répertorie les informations que vous devez rassembler ainsi que l
 
 - N’installez pas Microsoft Message Analyzer sur une passerelle ATA ou une passerelle légère ATA. Le pilote de Message Analyzer est en conflit avec les pilotes de la passerelle ATA et de la passerelle légère ATA. Si vous exécutez Wireshark sur la passerelle ATA, vous devez redémarrer le service de passerelle Microsoft Advanced Threat Analytics après avoir arrêté la capture Wireshark. Si ce n’est pas le cas, la passerelle arrête la capture du trafic. L’exécution de Wireshark sur une passerelle légère ATA n’interfère pas avec la passerelle légère ATA.
 
-- Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. ATA peut ainsi détecter la suppression en bloc d’objets du domaine. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recommandé : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. ATA peut ainsi détecter la suppression en bloc d’objets du domaine. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modifier les autorisations sur un conteneur d’objets supprimés** dans l'article [Afficher ou définir des autorisations sur un objet d’annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - Facultatif : un compte d’un utilisateur sans activités réseau. Ce compte est configurable comme utilisateur Honeytoken ATA. Pour configurer un compte comme utilisateur Honeytoken, seul le nom d’utilisateur est nécessaire. Pour plus d’informations sur la configuration de Honeytoken, consultez [Configurer des exclusions d’adresses IP et un utilisateur Honeytoken](install-ata-step7.md).
 
@@ -87,7 +87,7 @@ Sur un serveur physique, la base de données ATA nécessite la **désactivation*
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun des contrôleurs de domaine déterminent les spécifications serveur requises. Pour plus d’informations, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
 ### <a name="time-synchronization"></a>Synchronisation de l’heure
 
@@ -107,15 +107,15 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 
 |Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Trafic entrant|
-|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Trafic entrant|
-|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Trafic entrant|
-|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Règle de trafic sortant|
-|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Règle de trafic sortant|
-|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Règle de trafic sortant|
+|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
+|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
+|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
+|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Sortant|
+|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Sortant|
+|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Sortant|
 |**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
-|**DNS**|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
+|**DNS**|TCP et UDP|53|Serveurs DNS|Sortant|
 |**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Sortant|
 |**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Sortant|
 
@@ -126,7 +126,7 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 
 Pour installer et déployer ATA plus rapidement, vous pouvez installer des certificats auto-signés pendant l’installation. Il est alors recommandé, après le déploiement initial, de remplacer ces certificats auto-signés par des certificats issus d’une autorité de certification interne et utilisables par le centre ATA.
 
-Vérifiez que le centre ATA et les passerelles ATA ont accès au point de distribution de votre liste de révocation de certificats. S’ils n’ont pas accès à Internet, suivez la [procédure d’importation manuelle d’une liste de révocation de certificats](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) en veillant à installer l’ensemble des points de distribution de la liste pour toute la chaîne.
+Vérifiez que le centre ATA et les passerelles ATA ont accès au point de distribution de votre liste de révocation de certificats. S’ils n’ont pas accès à Internet, suivez la [procédure d’importation manuelle d’une liste de révocation de certificats](/previous-versions/tn-archive/aa996972(v=exchg.65)) en veillant à installer l’ensemble des points de distribution de la liste pour toute la chaîne.
 
 Le certificat doit avoir les éléments suivants :
 
@@ -212,12 +212,12 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être configur
 |LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
 |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
 |Kerberos|TCP et UDP|88|Contrôleurs de domaine|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Règle de trafic sortant|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Tous les appareils sur le réseau|Sortant|
 |Horloge Windows|UDP|123|Contrôleurs de domaine|Sortant|
-|DNS|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
+|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
-|SSL|TCP|443|Centre ATA|Règle de trafic sortant|
+|SSL|TCP|443|Centre ATA|Sortant|
 |Syslog (facultatif)|UDP|514|Serveur SIEM|Entrant|
 
 > [!NOTE]
@@ -282,7 +282,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par la pas
 
 |Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|DNS|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
+|DNS|TCP et UDP|53|Serveurs DNS|Sortant|
 |NTLM sur RPC|TCP|135|Tous les appareils sur le réseau|Les deux|
 |NetBIOS|UDP|137|Tous les appareils sur le réseau|Les deux|
 |SSL|TCP|443|Centre ATA|Sortant|

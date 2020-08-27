@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4ed8f666ca8999adcaefce4cc190ddb457bd5fdc
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 608a606c8ef93e46b36658c2344a66d73eb5d8ec
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954202"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
@@ -52,8 +52,8 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 
 |Paquets par seconde pour tous les contrôleurs de domaine|Processeur (cores&#42;)|Mémoire (Go)|Stockage de la base de données par jour (Go)|Stockage de la base de données par mois (Go)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1 000|2|32|0.3|9|30 (100)
-|40,000|4|48|12|360|500 (750)
+|1 000|2|32|0.3|9|30 (100)
+|40 000|4|48|12|360|500 (750)
 |200 000|8|64|60|1 800|1 000 (1 500)
 |400 000|12|96|120|3,600|2 000 (2 500)
 |750,000|24|112|225|6 750|2,500 (3,000)
@@ -69,7 +69,7 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 > - Il vous est possible de déployer le Centre ATA sur n’importe quel fournisseur IaaS du moment que vous respectez les critères de performance qui sont décrits dans cet article.
 > - La latence de stockage pour les activités de lecture et d’écriture doit être inférieure à 10 ms.
 > - Le rapport entre les activités de lecture et d’écriture est d’environ 1 pour 3 en dessous de 100 000 paquets par seconde et de 1 pour 6 au-dessus de 100 000 paquets par seconde.
-> - Lorsque vous exécutez le centre en tant que machine virtuelle, le centre nécessite que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution du centre ATA en tant que machine virtuelle, consultez [Configuration requise pour le centre ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - Lorsque vous exécutez le centre en tant que machine virtuelle, le centre nécessite que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution du centre ATA en tant que machine virtuelle, consultez [Configuration requise pour le centre ATA](ata-prerequisites.md#dynamic-memory)
 > - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour le centre ATA.<br>
 > - Sur un serveur physique, la base de données ATA nécessite la **désactivation** de l’accès mémoire non uniforme (NUMA) dans le BIOS. Votre système peut utiliser l’entrelacement de nœuds pour faire référence à NUMA, auquel cas vous devez **activer** l’entrelacement de nœuds pour désactiver NUMA. Pour plus d’informations, consultez la documentation du BIOS. Notez que cela ne s’applique pas quand le centre ATA s’exécute sur un serveur virtuel.
 
@@ -83,7 +83,7 @@ Dans un déploiement ATA, toutes les combinaisons de types de passerelles ATA so
 
 Quand vous choisissez le type de déploiement de passerelle, prenez en compte les avantages suivants :
 
-|Type de passerelle|Avantages|Coût|Topologie de déploiement|Utilisation des contrôleurs de domaine|
+|Type de passerelle|Avantages|Coût|Topologie du déploiement|Utilisation des contrôleurs de domaine|
 |----|----|----|----|-----|
 |Passerelle ATA|Avec un déploiement hors bande, il est plus difficile pour les agresseurs de détecter qu’ATA est présent|Plus grand|Installée en même temps que le contrôleur de domaine (hors bande)|Prend en charge jusqu’à 50 000 paquets par seconde|
 |Passerelle légère ATA|Ne nécessite pas de configuration de la mise en miroir de port ni de serveur dédié|Moins grand|Installée sur un contrôleur de domaine|Prend en charge jusqu’à 10 000 paquets par seconde|
@@ -104,7 +104,7 @@ Une passerelle légère ATA peut prendre en charge la surveillance d’un contr�
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
-|1 000|2|6|
+|1 000|2|6|
 |5 000|6|16|
 |10 000|10|24|
 
@@ -118,7 +118,7 @@ Même si le multithread est acceptable pour la passerelle légère ATA, vous dev
 > [!NOTE]
 >
 > - Si le contrôleur de domaine n’a pas les ressources demandées par la passerelle légère ATA, les performances du contrôleur de domaine ne sont pas affectées, mais la passerelle légère ATA risque de ne pas fonctionner comme prévu.
-> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)).
+> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](ata-prerequisites.md#dynamic-memory)).
 > - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle légère ATA.
 > - Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 
@@ -135,7 +135,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)|
 |---------------------------|-------------------------|---------------|
-|1 000|1|6|
+|1 000|1|6|
 |5 000|2|10|
 |10 000|3|12|
 |20 000|6|24|
@@ -149,7 +149,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 > [!NOTE]
 >
-> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - Lors de l’exécution de la passerelle en tant que machine virtuelle, la passerelle requiert que toute la mémoire soit allouée à la machine virtuelle en permanence. Pour plus d’informations sur l’exécution de la passerelle ATA en tant que machine virtuelle, consultez [besoins en mémoire dynamique](ata-prerequisites.md#dynamic-memory)
 > - Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** pour la passerelle ATA.
 > - Un minimum de 5 Go d’espace est requis et 10 Go sont recommandés, y compris l’espace nécessaire pour les fichiers binaires ATA, les [journaux ATA](troubleshooting-ata-using-logs.md)et les [journaux de performances](troubleshooting-ata-using-perf-counters.md).
 

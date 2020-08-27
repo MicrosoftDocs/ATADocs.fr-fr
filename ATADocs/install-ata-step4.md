@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1b66474219101f9d5c7f9ce38b3a7e3ff34b6f50
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 8bd8347e3ac37b9cd3b3c94dddfeb3e1a3b59112
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775197"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954576"
 ---
 # <a name="install-ata---step-4"></a>Installer ATA - Étape 4
 
@@ -43,22 +43,22 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
    > [!NOTE] 
    > L’installation directe à partir du fichier zip est vouée à l’échec.
     
-2. Exécutez **Microsoft ATA Gateway Setup.exe**, puis suivez les instructions de l’Assistant Installation.
+1. Exécutez **Microsoft ATA Gateway Setup.exe**, puis suivez les instructions de l’Assistant Installation.
     
-3. Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
+1. Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
     
-4. L’Assistant Installation vérifie automatiquement si le serveur est un contrôleur de domaine ou un serveur dédié. S’il s’agit d’un contrôleur de domaine, la passerelle légère ATA est installée. S’il s’agit d’un serveur dédié, la passerelle ATA est installée. 
+1. L’Assistant Installation vérifie automatiquement si le serveur est un contrôleur de domaine ou un serveur dédié. S’il s’agit d’un contrôleur de domaine, la passerelle légère ATA est installée. S’il s’agit d’un serveur dédié, la passerelle ATA est installée. 
     
    Par exemple, pour une passerelle ATA, l’écran suivant s’affiche pour vous informer qu’une passerelle ATA sera installée sur votre serveur dédié :
     
-   ![Installation d’une passerelle ATA](media/ata-gw-install.png) Cliquez sur **Suivant**.
+    ![Installation d’une passerelle ATA](media/ata-gw-install.png) Cliquez sur **Suivant**.
     
    > [!NOTE] 
    > Si le contrôleur de domaine ou le serveur dédié ne dispose pas de la configuration matérielle minimale requise pour l’installation, un avertissement s’affiche. Il ne vous empêche pas de cliquer sur **Suivant** et de procéder à l’installation. Cela peut être le bon choix pour l’installation d’ATA dans un petit environnement de test de laboratoire dans lequel vous n’avez pas besoin d’autant de place pour le stockage des données. Pour les environnements de production, nous vous recommandons fortement de respecter le guide de [planification de la capacité](ata-capacity-planning.md) ATA pour vous assurer que vos contrôleurs de domaine ou serveurs dédiés répondent aux conditions requises.
     
-5. Sous **Configurer la passerelle**, entrez les informations suivantes en fonction de votre environnement :
+1. Sous **Configurer la passerelle**, entrez les informations suivantes en fonction de votre environnement :
     
-   ![Image de la configuration de la passerelle ATA](media/ata-gw-configure.png)
+    ![Image de la configuration de la passerelle ATA](media/ata-gw-configure.png)
     
    > [!NOTE]
    > Quand vous déployez la passerelle ATA, vous ne devez pas fournir les informations d’identification. Si l’installation de la passerelle ATA ne parvient pas à récupérer vos informations d’identification à l’aide de l’authentification unique (par exemple, cela peut se produire si le centre ATA n’est pas dans le domaine, si la passerelle ATA n’est pas dans le domaine ou si vous n’avez pas les informations d’identification de l’administrateur d’ATA), vous devez fournir les informations d’identification, comme dans l’écran suivant : 
@@ -67,19 +67,19 @@ Effectuez les opérations suivantes sur le serveur de la passerelle ATA.
    
     - Chemin d’installation : Il s’agit de l’emplacement où la passerelle ATA doit être installée. L’emplacement par défaut est %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Conservez la valeur par défaut.
    
-6. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
+1. Cliquez sur **Installer**. Les composants suivants sont installés et configurés pendant l’installation de la passerelle ATA :
     
-    -   KB 3047154 (pour Windows Server 2012 R2 uniquement)
+    - KB 3047154 (pour Windows Server 2012 R2 uniquement)
     
         > [!IMPORTANT]
-        > -   N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports. 
-        > -   N’installez pas l’Analyseur de message, Wireshark ou tout autre logiciel de capture réseau sur la passerelle ATA. Si vous souhaitez capturer le trafic réseau, installez et utilisez le Moniteur réseau Microsoft version 3.4.
+        > - N’installez pas le correctif KB 3047154 sur un hôte de virtualisation (l’hôte responsable de la virtualisation, que vous pouvez exécuter sur une machine virtuelle), car cela pourrait nuire au bon fonctionnement de la mise en miroir des ports. 
+        > - N’installez pas l’Analyseur de message, Wireshark ou tout autre logiciel de capture réseau sur la passerelle ATA. Si vous souhaitez capturer le trafic réseau, installez et utilisez le Moniteur réseau Microsoft version 3.4.
     
-    -   Service de passerelle ATA
-    -   Microsoft Visual C++ 2013 Redistributable
-    -   Jeu d’éléments de collecte de données de l’Analyseur de performances personnalisé
+    - Service de passerelle ATA
+    - Microsoft Visual C++ 2013 Redistributable
+    - Jeu d’éléments de collecte de données de l’Analyseur de performances personnalisé
     
-7. Une fois l’installation terminée, pour la passerelle ATA, cliquez sur **lancer** pour ouvrir votre navigateur et vous connecter à la console ATA, pour la passerelle légère ATA, cliquez sur **Terminer**.
+1. Une fois l’installation terminée, pour la passerelle ATA, cliquez sur **lancer** pour ouvrir votre navigateur et vous connecter à la console ATA, pour la passerelle légère ATA, cliquez sur **Terminer**.
 
 
 > [!div class="step-by-step"]
