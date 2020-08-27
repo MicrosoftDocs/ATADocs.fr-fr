@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fbbb692e462626c3625135a8a5fb5109fe570659
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1df0644b5649e2e1694e6e6560a49662689b2d32
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775095"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956531"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Modifier la configuration ATA - Mot de passe de connectivité de domaine
 
@@ -31,23 +31,23 @@ Si vous pensez que cela s’est produit, recherchez les erreurs suivantes dans l
 
 Pour corriger ce problème, procédez comme suit pour mettre à jour le mot de passe de connectivité de domaine dans le centre ATA :
 
-1.  Ouvrez la console ATA dans le centre ATA.
+1. Ouvrez la console ATA dans le centre ATA.
 
-2.  Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
+1. Sélectionnez l’option des paramètres dans la barre d’outils, puis **Configuration**.
 
     ![Icône des paramètres de configuration ATA](media/ATA-config-icon.png)
 
-3.  Sélectionnez **Services d’annuaire**.
+1. Sélectionnez **Services d’annuaire**.
 
     ![Image de modification du mot de passe de la passerelle ATA](media/ATA-GW-change-DC-password.png)
 
-4.  Sous **Mot de passe**, modifiez le mot de passe.
+1. Sous **Mot de passe**, modifiez le mot de passe.
 
     Si le centre ATA dispose d’une connectivité au domaine, utilisez le bouton **Tester la connexion** pour valider les informations d’identification
 
-5.  Cliquez sur **Enregistrer**.
+1. Cliquez sur **Enregistrer**.
 
-6.  Après avoir modifié le mot de passe, vérifiez manuellement que le service de la passerelle ATA fonctionne sur les serveurs de la passerelle ATA.
+1. Après avoir modifié le mot de passe, vérifiez manuellement que le service de la passerelle ATA fonctionne sur les serveurs de la passerelle ATA.
 
 
 

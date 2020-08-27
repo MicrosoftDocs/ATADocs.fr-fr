@@ -12,47 +12,47 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cbe31a255a5b437852b6084fcea92556a04a6bd5
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774752"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956684"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Nouveautés d’ATA version 1.4
 Ces notes de publication fournissent des informations sur les problèmes connus de la version 1.4 d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-this-version"></a>Nouveautés de cette version
 
--   Prise en charge du transfert d’événements Windows pour envoyer les événements directement à partir des contrôleurs de domaine vers la passerelle ATA
+- Prise en charge du transfert d’événements Windows pour envoyer les événements directement à partir des contrôleurs de domaine vers la passerelle ATA
 
--   Amélioration de la détection Pass-The-Hash pour les ressources d’entreprise grâce à la combinaison de l’inspection approfondie des paquets et des journaux des événements Windows
+- Amélioration de la détection Pass-The-Hash pour les ressources d’entreprise grâce à la combinaison de l’inspection approfondie des paquets et des journaux des événements Windows
 
--   Amélioration de la détection et de la visibilité des appareils non joints à un domaine et des appareils non Windows
+- Amélioration de la détection et de la visibilité des appareils non joints à un domaine et des appareils non Windows
 
--   Amélioration des performances afin de permettre un trafic plus important pour chaque passerelle ATA
+- Amélioration des performances afin de permettre un trafic plus important pour chaque passerelle ATA
 
--   Amélioration des performances pour permettre un nombre plus important de passerelles ATA par centre ATA
+- Amélioration des performances pour permettre un nombre plus important de passerelles ATA par centre ATA
 
--   Un nouveau processus de résolution automatique des noms a été ajouté. Celui-ci met en correspondance les noms d’ordinateurs et les adresses IP. Cette fonctionnalité unique permet un grand gain de temps lors du processus d’investigation et fournit des preuves solides pour les analystes de sécurité
+- Un nouveau processus de résolution automatique des noms a été ajouté. Celui-ci met en correspondance les noms d’ordinateurs et les adresses IP. Cette fonctionnalité unique permet un grand gain de temps lors du processus d’investigation et fournit des preuves solides pour les analystes de sécurité
 
--   Amélioration de la collecte des commentaires des utilisateurs pour un ajustement automatique du processus de détection.
+- Amélioration de la collecte des commentaires des utilisateurs pour un ajustement automatique du processus de détection.
 
--   Détection automatique des périphériques NAT.
+- Détection automatique des périphériques NAT.
 
--   Basculement automatique quand les contrôleurs de domaine ne sont pas accessibles.
+- Basculement automatique quand les contrôleurs de domaine ne sont pas accessibles.
 
--   La surveillance de l’intégrité du système et les notifications fournissent désormais des informations sur l’état de santé global du déploiement, ainsi que sur les problèmes spécifiques liés à la configuration et à la connectivité.
+- La surveillance de l’intégrité du système et les notifications fournissent désormais des informations sur l’état de santé global du déploiement, ainsi que sur les problèmes spécifiques liés à la configuration et à la connectivité.
 
--   Visibilité des sites et des emplacements où fonctionnent les entités.
+- Visibilité des sites et des emplacements où fonctionnent les entités.
 
--   Prise en charge de plusieurs domaines.
+- Prise en charge de plusieurs domaines.
 
--   Prise en charge des noms de domaine en une seule partie.
+- Prise en charge des noms de domaine en une seule partie.
 
--   Prise en charge de la modification de l’adresse IP et du certificat du centre ATA et des passerelles ATA.
+- Prise en charge de la modification de l’adresse IP et du certificat du centre ATA et des passerelles ATA.
 
--   Télémétrie pour une meilleure expérience utilisateur.
+- Télémétrie pour une meilleure expérience utilisateur.
 
 ## <a name="known-issues"></a>Problèmes connus
 Les problèmes connus de cette version sont les suivants :
@@ -72,17 +72,17 @@ Si l’installation ATA s’ouvre au lieu de la désinstallation quand vous ess
 
 **Centre ATA**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Ajoutez une nouvelle valeur de chaîne nommée `InstallationPath` avec la valeur `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Il s’agit du dossier d’installation par défaut. Si vous avez modifié le dossier d’installation, entrez le chemin où ATA est installé.
+- Ajoutez une nouvelle valeur de chaîne nommée `InstallationPath` avec la valeur `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Il s’agit du dossier d’installation par défaut. Si vous avez modifié le dossier d’installation, entrez le chemin où ATA est installé.
 
     ![Éditeur du Registre pour le chemin d’installation du centre ATA](media/ATA-uninstall-center-bug.jpg)
 
 **Passerelle ATA**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Ajoutez une nouvelle valeur de chaîne nommée `InstallationPath` avec la valeur `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Il s’agit du dossier d’installation par défaut.  Si vous avez modifié le dossier d’installation, entrez le chemin où ATA est installé.
+- Ajoutez une nouvelle valeur de chaîne nommée `InstallationPath` avec la valeur `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Il s’agit du dossier d’installation par défaut.  Si vous avez modifié le dossier d’installation, entrez le chemin où ATA est installé.
 
     ![Éditeur du Registre pour le chemin d’installation de la passerelle ATA](media/ATA-GW-uninstall-bug.jpg)
 

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956157"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Nouveautés d’ATA version 1.9
 
@@ -32,17 +32,17 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 ## <a name="new-reports-to-help-you-investigate"></a>Nouveaux rapports pour vous aider dans votre analyse 
 
--   L’option [**Mots de passe exposés en texte clair**](reports.md) vous permet de détecter quand des comptes, sensibles ou pas, envoient des informations d’identification de compte en texte clair. Vous pouvez ainsi investiguer et limiter l’utilisation d’une liaison simple LDAP dans votre environnement pour améliorer le niveau de sécurité de votre réseau. Ce rapport remplace les alertes d’activité suspecte en texte clair de compte sensible et de service.
+- L’option [**Mots de passe exposés en texte clair**](reports.md) vous permet de détecter quand des comptes, sensibles ou pas, envoient des informations d’identification de compte en texte clair. Vous pouvez ainsi investiguer et limiter l’utilisation d’une liaison simple LDAP dans votre environnement pour améliorer le niveau de sécurité de votre réseau. Ce rapport remplace les alertes d’activité suspecte en texte clair de compte sensible et de service.
 
 - L’option [**Chemins de mouvement latéral vers des comptes sensibles**](reports.md) liste les comptes sensibles qui sont exposés via des chemins de mouvement latéral. Il vous permet de limiter ces chemins et de renforcer votre réseau pour réduire le risque de surface d’attaque. Vous pouvez ainsi empêcher le mouvement latéral pour ne pas que les attaquants se déplacent sur votre réseau entre les utilisateurs et les ordinateurs et finissent par toucher le jackpot en termes de sécurité virtuel : vos informations d’identification de compte administrateur sensibles.
 
 ## <a name="improved-investigation"></a>Investigation avancée
 
--  ATA 1.9 inclut un nouveau [profil d’entité](entity-profiles.md) amélioré. Le profil d’entité vous fournit un tableau de bord conçu pour des investigations approfondies complètes sur les utilisateurs, les ressources auxquelles ils accèdent et leur historique. Le profil d’entité vous permet également d’identifier les utilisateurs sensibles qui sont accessibles via les chemins de mouvement latéral. 
+- ATA 1.9 inclut un nouveau [profil d’entité](entity-profiles.md) amélioré. Le profil d’entité vous fournit un tableau de bord conçu pour des investigations approfondies complètes sur les utilisateurs, les ressources auxquelles ils accèdent et leur historique. Le profil d’entité vous permet également d’identifier les utilisateurs sensibles qui sont accessibles via les chemins de mouvement latéral. 
 
--   Avec ATA 1.9, vous pouvez [identifier manuellement des groupes](tag-sensitive-accounts.md) ou des comptes comme sensibles pour améliorer les détections. Cette identification impacte de nombreuses détections ATA, telles que la détection des modifications des groupes sensibles et le chemin de mouvement latéral, qui s’appuient sur les groupes et les comptes considérés comme sensibles.
+- Avec ATA 1.9, vous pouvez [identifier manuellement des groupes](tag-sensitive-accounts.md) ou des comptes comme sensibles pour améliorer les détections. Cette identification impacte de nombreuses détections ATA, telles que la détection des modifications des groupes sensibles et le chemin de mouvement latéral, qui s’appuient sur les groupes et les comptes considérés comme sensibles.
 
-## <a name="performance-improvements"></a>Optimisation des performances
+## <a name="performance-improvements"></a>Améliorations des performances
 
 - L’infrastructure du Centre ATA a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 

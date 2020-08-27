@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c36d312518a21664892293fc38c4c41a23614c5d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: bb05247a57f6ca8c00dcdb4b74d928120d5ecd5a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774789"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956327"
 ---
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7
 
@@ -33,20 +33,20 @@ Microsoft Advanced Threat Analytics (ATA) version 1,8 et ultérieures peuvent co
 
 ATA s’intègre avec votre solution VPN en écoutant les événements de gestion de comptes RADIUS transférés aux passerelles ATA. Ce mécanisme est basé sur la gestion de comptes RADIUS standard ([RFC 2866](https://tools.ietf.org/html/rfc2866)) et les fournisseurs VPN suivants sont pris en charge :
 
--   Microsoft
--   F5
--   Cisco ASA
+- Microsoft
+- F5
+- Cisco ASA
 
 > [!IMPORTANT]
-> À compter de septembre 2019, le service de géolocalisation VPN Advanced Threat Analytics chargé de la détection des emplacements VPN prend désormais en charge exclusivement TLS 1,2. Assurez-vous que votre centre ATA est configuré pour prendre en charge TLS 1,2, car les versions 1,1 et 1,0 ne sont plus prises en charge.   
+> À compter de septembre 2019, le service de géolocalisation VPN Advanced Threat Analytics chargé de la détection des emplacements VPN prend désormais en charge exclusivement TLS 1,2. Assurez-vous que votre centre ATA est configuré pour prendre en charge TLS 1,2, car les versions 1,1 et 1,0 ne sont plus prises en charge.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour activer l’intégration VPN, veillez à définir les paramètres suivants :
 
--   Ouvrir le port UDP 1813 sur vos passerelles ATA et vos passerelles légères ATA.
+- Ouvrir le port UDP 1813 sur vos passerelles ATA et vos passerelles légères ATA.
 
--   Le Centre ATA doit pouvoir accéder à *ti.ata.azure.com* avec HTTPS (port 443) afin d’être en mesure d’interroger l’emplacement des adresses IP entrantes.
+- Le Centre ATA doit pouvoir accéder à *ti.ata.azure.com* avec HTTPS (port 443) afin d’être en mesure d’interroger l’emplacement des adresses IP entrantes.
 
 L’exemple ci-dessous utilise Microsoft Routing and Remote Access Server (RRAS) pour décrire le processus de configuration VPN.
 
@@ -55,17 +55,17 @@ Si vous utilisez une solution VPN tierce, consultez sa documentation pour obteni
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>Configurer la gestion de comptes RADIUS sur le système VPN
 
 Effectuez les étapes suivantes sur votre serveur RRAS.
- 
-1.  Ouvrez la console Routage et accès distant.
-2.  Cliquez avec le bouton droit sur le nom du serveur, puis cliquez sur **Propriétés**.
-3.  Sous l’onglet **Sécurité**, sous **Fournisseur de comptes**, sélectionnez **Gestion de comptes RADIUS** et cliquez sur **Configurer**.
 
-    ![Configuration de RADIUS](./media/radius-setup.png)
+1. Ouvrez la console Routage et accès distant.
+1. Cliquez avec le bouton droit sur le nom du serveur et cliquez sur **Propriétés**.
+1. Sous l’onglet **Sécurité**, sous **Fournisseur de comptes**, sélectionnez **Gestion de comptes RADIUS** et cliquez sur **Configurer**.
 
-4.  Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **Nom du serveur** de la passerelle ATA ou de la passerelle légère ATA la plus proche. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques que vous pouvez mémoriser. Vous devez la fournir plus loin dans votre configuration ATA. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
- 
-     ![Configuration du VPN](./media/vpn-set-accounting.png)
-     
+    ![Configuration de RADIUS](media/radius-setup.png)
+
+1. Dans la fenêtre **Ajouter un serveur RADIUS**, tapez le **Nom du serveur** de la passerelle ATA ou de la passerelle légère ATA la plus proche. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques que vous pouvez mémoriser. Vous devez la fournir plus loin dans votre configuration ATA. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
+
+    ![Capture d’écran montrant la configuration VPN](media/vpn-set-accounting.png)
+
 ### <a name="configure-vpn-in-ata"></a>Configurer le VPN dans ATA
 
 ATA collecte les données VPN et identifie quand et où les informations d’identification sont utilisées via le VPN, puis intègre ces données dans votre investigation. Vous obtenez ainsi des informations supplémentaires qui vous aideront à étudier les alertes signalées par ATA.
@@ -73,41 +73,34 @@ ATA collecte les données VPN et identifie quand et où les informations d’ide
 Pour configurer les données VPN dans ATA :
 
 1. Dans la console ATA, ouvrez la page Configuration d’ATA et accédez à **VPN**.
- 
-   ![Menu de configuration ATA](./media/config-menu.png)
 
-2. Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Ensuite, cliquez sur **Enregistrer**.
- 
+    ![Menu de configuration ATA](media/config-menu.png)
 
-  ![Configurer le VPN ATA](./media/vpn.png)
+1. Activez **Gestion de comptes Radius** et tapez le **Secret partagé** que vous avez configuré sur votre serveur VPN RRAS. Cliquez ensuite sur **Enregistrer**.
 
+    ![Configurer le VPN ATA](media/vpn.png)
 
-Une fois l’activation effectuée, toutes les passerelles et passerelles légères ATA écoutent le port 1813 pour les événements de gestion de comptes RADIUS. 
+Une fois l’activation effectuée, toutes les passerelles et passerelles légères ATA écoutent le port 1813 pour les événements de gestion de comptes RADIUS.
 
 Votre configuration est terminée et vous pouvez voir maintenant l’activité VPN dans la page de profil de l’utilisateur :
- 
-   ![Configuration du VPN](./media/vpn-user.png)
+
+![Configuration du VPN](media/vpn-user.png)
 
 Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Centre ATA pour traitement, celui-ci a besoin d’accéder à *ti.ata.azure.com* avec HTTPS (port 443) pour pouvoir résoudre les adresses IP externes dans les événements VPN de leur emplacement géographique.
-
-
-
 
 > [!div class="step-by-step"]
 > [«Étape 6](install-ata-step5.md) 
 >  [Étape 8»](install-ata-step7.md)
 
-
-
 ## <a name="related-videos"></a>Vidéos connexes
+
 - [Vue d’ensemble du déploiement ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Sélection du type de passerelle ATA approprié](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## <a name="see-also"></a>Voir aussi
+
 - [Guide de déploiement ATA POC](https://aka.ms/atapoc)
 - [Outil de dimensionnement ATA](https://aka.ms/aatpsizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration requise pour ATA](ata-prerequisites.md)
-

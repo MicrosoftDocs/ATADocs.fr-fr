@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 269646c7547b0a9a3538405a4180d063e27e0455
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d71379b5af28c5cbce445e32ef98c5501c6be002
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774908"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956429"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Résolution des problèmes liés à ATA à l’aide de la base de données ATA
 
@@ -29,9 +29,9 @@ Vous pouvez interagir avec la base de données à l’aide de la ligne de comman
 ## <a name="interacting-with-the-database"></a>Interaction avec la base de données
 La procédure par défaut et la plus simple pour interroger la base de données consiste à utiliser l’interpréteur de commandes Mongo :
 
-1.  Ouvrez une fenêtre de ligne de commande et modifiez le chemin au dossier bin MongoDB. Le chemin par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
+1. Ouvrez une fenêtre de ligne de commande et modifiez le chemin au dossier bin MongoDB. Le chemin par défaut est : **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
 
-2.  Exécutez : `mongo.exe ATA`. Veillez à taper ATA tout en majuscules.
+1. Exécutez : `mongo.exe ATA`. Veillez à taper ATA tout en majuscules.
 
 > [!div class="mx-tableFixed"]
 > 

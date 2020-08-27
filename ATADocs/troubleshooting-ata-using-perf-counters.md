@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 94a7ef9a31828e57417f0def62f0d9eadd8ed021
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1406e96ea205d50a64b475cc6a2d9642e38f63a4
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774874"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956395"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Résolution des problèmes liés à ATA à l’aide des compteurs de performances
 
@@ -28,21 +28,21 @@ Pour comprendre le flux des composants ATA internes, voir [Architecture ATA](at
 
 **Processus des composants ATA** :
 
-1.  Quand un composant atteint sa taille maximale, il empêche le composant qui le précède de lui envoyer des entités supplémentaires.
+1. Quand un composant atteint sa taille maximale, il empêche le composant qui le précède de lui envoyer des entités supplémentaires.
 
-2.  En conséquence, le composant précédent augmente **sa propre** taille jusqu’à empêcher le composant qui le précède d’envoyer des entités.
+1. En conséquence, le composant précédent augmente **sa propre** taille jusqu’à empêcher le composant qui le précède d’envoyer des entités.
 
-3.  Ce cas se produit jusqu’au composant NetworkListener qui supprime le trafic quand il ne peut plus transférer d’entités.
+1. Ce cas se produit jusqu’au composant NetworkListener qui supprime le trafic quand il ne peut plus transférer d’entités.
 
 
 ## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Récupération des fichiers de surveillance des performances pour la résolution des problèmes
 
 Pour récupérer les fichiers de surveillance des performances (BLG) à partir de divers composants ATA :
-1.  Ouvrez l’Analyseur de performances.
-2.  Arrêtez l’ensemble de collecteurs de données nommé : **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
-3.  Accédez au dossier de l’ensemble de collecteurs de données (par défaut, il s’agit de « C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets » ou de « C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets »).
-4.  Copiez le fichier BLG qui a été modifié le plus récemment.
-5.  Redémarrez l’ensemble de collecteurs de données nommé : **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
+1. Ouvrez l’Analyseur de performances.
+1. Arrêtez l’ensemble de collecteurs de données nommé : **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
+1. Accédez au dossier de l’ensemble de collecteurs de données (par défaut, il s’agit de « C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets » ou de « C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets »).
+1. Copiez le fichier BLG qui a été modifié le plus récemment.
+1. Redémarrez l’ensemble de collecteurs de données nommé : **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
 
 
 ## <a name="ata-gateway-performance-counters"></a>Compteurs de performances de la passerelle ATA
@@ -67,8 +67,8 @@ Voici la liste des principaux compteurs de passerelle ATA :
 > |Passerelle Microsoft ATA\Temps d’envoi des lots EntitySender|Durée nécessaire pour envoyer le dernier lot.|Doit être inférieur à 1 000 millisecondes dans la plupart des cas|Vérifiez la présence de problèmes réseau entre la passerelle ATA et le centre ATA.|
 > 
 > [!NOTE]
-> -   Les valeurs temporelles des compteurs sont exprimées en millisecondes.
-> -   Il est parfois plus pratique de surveiller tous les compteurs en même temps à l’aide du type de graphe **Rapport** (par exemple : monitoring en temps réel de l’ensemble des compteurs)
+> - Les valeurs temporelles des compteurs sont exprimées en millisecondes.
+> - Il est parfois plus pratique de surveiller tous les compteurs en même temps à l’aide du type de graphe **Rapport** (par exemple : monitoring en temps réel de l’ensemble des compteurs)
 
 ## <a name="ata-lightweight-gateway-performance-counters"></a>Compteurs de performance de la passerelle légère ATA
 Vous pouvez utiliser les compteurs de performances pour la gestion de quota dans la passerelle légère, pour vous assurer qu’ATA n’épuise pas trop les ressources des contrôleurs de domaine sur lesquels il est installé.
@@ -115,8 +115,8 @@ Voici la liste des principaux compteurs du centre ATA :
 > 
 > 
 > [!NOTE]
-> -   Les valeurs temporelles des compteurs sont exprimées en millisecondes.
-> -   Il est parfois plus pratique de surveiller tous les compteurs en même temps à l’aide du graphique « Rapport » (par exemple : surveillance en temps réel de l’ensemble des compteurs).
+> - Les valeurs temporelles des compteurs sont exprimées en millisecondes.
+> - Il est parfois plus pratique de surveiller tous les compteurs en même temps à l’aide du graphique « Rapport » (par exemple : surveillance en temps réel de l’ensemble des compteurs).
 
 ## <a name="operating-system-counters"></a>Compteurs de système d’exploitation
 Voici le tableau des principaux compteurs de système d’exploitation à prendre en compte :

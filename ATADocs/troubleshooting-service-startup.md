@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 57f023a557bafff4653e00926fa0d0f813b5d041
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 0a4a9a5de29e2579776096154e6158b02e58c087
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956378"
 ---
 # <a name="troubleshooting-service-startup"></a>Résolution des problèmes de démarrage du service
 
@@ -27,21 +27,23 @@ ms.locfileid: "84774857"
 
 Si votre centre ATA ne démarre pas, effectuez la procédure de dépannage suivante :
 
-1.  Exécutez la commande Windows PowerShell suivante : `Get-Service Pla | Select Status`
-    pour vérifier que le service Compteur de performances est en cours d’exécution. Si ce n’est pas le cas, c’est qu’il s’agit d’un problème de la plateforme, et vous devez faire en sorte que ce service fonctionne à nouveau.
-2.  S’il était en cours d’exécution, essayez de le redémarrer et vérifiez si cela résout le problème : `Restart-Service Pla`
-3.  Essayez de créer manuellement un nouveau collecteur de données (n’importe quel collecteur fera l’affaire, vous pouvez même collecter par exemple l’utilisation de l’UC de l’ordinateur).
+1. Exécutez la commande Windows PowerShell suivante : `Get-Service Pla | Select Status`
+   pour vérifier que le service Compteur de performances est en cours d’exécution. Si ce n’est pas le cas, c’est qu’il s’agit d’un problème de la plateforme, et vous devez faire en sorte que ce service fonctionne à nouveau.
+1. S’il était en cours d’exécution, essayez de le redémarrer et vérifiez si le problème est résolu :  `Restart-Service Pla`
+1. Essayez de créer manuellement un nouveau collecteur de données (n’importe quel collecteur fera l’affaire, vous pouvez même collecter par exemple l’utilisation de l’UC de l’ordinateur).
 S’il peut démarrer, la plateforme est probablement opérationnelle. Sinon, il s’agit toujours d’un problème de plateforme.
 
-4.  Essayez de recréer manuellement le collecteur de données ATA à l’aide d’une invite de commandes avec élévation de privilèges en exécutant ces commandes :
+1. Essayez de recréer manuellement le collecteur de données ATA à l’aide d’une invite de commandes avec élévation de privilèges en exécutant ces commandes :
 
-        sc stop ATACenter
-        logman stop "Microsoft ATA Center"
-        logman export "Microsoft ATA Center" -xml c:\center.xml
-        logman delete "Microsoft ATA Center"
-        logman import "Microsoft ATA Center" -xml c:\center.xml
-        logman start "Microsoft ATA Center"
-        sc start ATACenter
+```dos
+sc stop ATACenter
+logman stop "Microsoft ATA Center"
+logman export "Microsoft ATA Center" -xml c:\center.xml
+logman delete "Microsoft ATA Center"
+logman import "Microsoft ATA Center" -xml c:\center.xml
+logman start "Microsoft ATA Center"
+sc start ATACenter
+```
 
 ## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Résolution des problèmes de démarrage de la passerelle légère ATA
 
@@ -54,15 +56,19 @@ Votre passerelle ATA ne démarre pas et vous obtenez cette erreur :<br></br>
 
 Cela se produit parce que, dans le cadre du processus d’installation de la passerelle légère, ATA alloue un seuil de processeur qui permet à la passerelle légère d’utiliser le processeur avec une mémoire tampon de 15 %. Si vous avez configuré indépendamment un seuil à l’aide de la clé de Registre : ce conflit empêche la passerelle légère de démarrer. 
 
-**Résolution**
+**Résolution :**
 
-1. Sous les clés de Registre, s’il existe une valeur DWORD appelée **Désactiver les compteurs de performances** , assurez-vous qu’elle est définie sur **0**:`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
- 
-2. Ensuite, redémarrez le service Pla. La passerelle légère ATA détecte automatiquement le changement et redémarre le service.
+1. Sous les clés de Registre, s’il existe une valeur DWORD appelée **Désactiver les compteurs de performances** , assurez-vous qu’elle est définie sur **0**:
 
+```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance
+```
+
+1. Ensuite, redémarrez le service Pla. La passerelle légère ATA détecte automatiquement le changement et redémarre le service.
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Configuration requise pour ATA](ata-prerequisites.md)
 - [Planification de la capacité ATA](ata-capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)

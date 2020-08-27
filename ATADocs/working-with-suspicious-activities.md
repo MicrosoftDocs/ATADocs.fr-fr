@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e7fb0da19b39466392fedaf2198f795909248049
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774636"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956786"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
@@ -29,36 +29,36 @@ Cet article explique les principes de base d’Advanced Threat Analytics.
 Une fois connecté à la console ATA, la **Chronologie des activités suspectes** s’ouvre automatiquement. Les activités suspectes sont répertoriées par ordre chronologique, avec les plus récentes en haut de la liste.
 Chaque activité suspecte comporte les informations suivantes :
 
--   Les entités impliquées, y compris les utilisateurs, les ordinateurs, les serveurs, les contrôleurs de domaine et les ressources
+- Les entités impliquées, y compris les utilisateurs, les ordinateurs, les serveurs, les contrôleurs de domaine et les ressources
 
--   Les date et heure et la durée des activités suspectes
+- Les date et heure et la durée des activités suspectes
 
--   Gravité de l’activité suspecte (haute, moyenne ou faible)
+- Gravité de l’activité suspecte (haute, moyenne ou faible)
 
--   État : Ouvert, fermé ou supprimé.
+- État : Ouvert, fermé ou supprimé.
 
--   La capacité à :
+- La capacité à :
 
-    -   Partager l’activité suspecte avec d’autres personnes de votre entreprise par e-mail.
+    - Partager l’activité suspecte avec d’autres personnes de votre entreprise par e-mail.
 
-    -   Exporter l’activité suspecte dans Excel.
+    - Exporter l’activité suspecte dans Excel.
 
 > [!NOTE]
-> -   Quand vous pointez votre souris sur un utilisateur ou un ordinateur, un mini-profil d’entité s’affiche avec des informations complémentaires sur l’entité, notamment le nombre d’activités suspectes auxquelles est liée l’entité.
-> -   Quand vous cliquez sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
+> - Quand vous pointez votre souris sur un utilisateur ou un ordinateur, un mini-profil d’entité s’affiche avec des informations complémentaires sur l’entité, notamment le nombre d’activités suspectes auxquelles est liée l’entité.
+> - Quand vous cliquez sur une entité, vous êtes dirigé vers le profil d’entité de l’utilisateur ou l’ordinateur.
 
 ![Image de la chronologie des activités suspectes ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrer la liste des activités suspectes
 Pour filtrer la liste des activités suspectes :
 
-1.  Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
+1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
 
-2.  Pour filtrer la liste, sélectionnez **haute**, **moyenne**ou **faible**.
+1. Pour filtrer la liste, sélectionnez **haute**, **moyenne**ou **faible**.
 
 **Gravité des activités suspectes**
 
--   **Low**
+-   **Faible**
 
     Correspond aux activités suspectes pouvant conduire à des attaques durant lesquelles des utilisateurs ou logiciels malveillants accèdent aux données d’une entreprise.
 
@@ -75,7 +75,7 @@ Pour filtrer la liste des activités suspectes :
 Vous pouvez modifier l’état d’une activité suspecte en cliquant sur l’état actuel de l’activité suspecte, puis en sélectionnant l’une des options suivantes : **ouvrir**, **supprimer**, **Fermer**ou **supprimer**.
 Pour cela, cliquez sur les trois points en haut à droite d’une activité suspecte spécifique pour afficher la liste des actions disponibles.
 
-![Actions ATA pour les activités suspectes](./media/sa-actions.png)
+![Actions ATA pour les activités suspectes](media/sa-actions.png)
 
 **État des activités suspectes**
 

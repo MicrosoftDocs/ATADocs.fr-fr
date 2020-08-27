@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1bdf5a33efb00fd592b6da9fc8696df3bcfe281b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 31ab0d74020ae446d0739ed2b9e79c19b5ffb60c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956344"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Chemin de mise à niveau recommandé pour ATA
 
@@ -32,12 +32,12 @@ Cet article fournit des informations sur les versions d’ATA (Advanced Threat A
 |----|----|
 |1.6|1.6.4103|
 |1.6 Update 1|1.6.4317|
-|1.7|1.7.5402| 
+|1,7|1.7.5402| 
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
 |1.8 Update 1|1.8.6765|
-|1.9|1.9.7312|
+|1,9|1.9.7312|
 |1.9 Update 1|1.9.7412|
 |1.9 Update 2|1.9.7478|
 
@@ -45,7 +45,7 @@ Cet article fournit des informations sur les versions d’ATA (Advanced Threat A
 
 Reportez-vous au diagramme du chemin de mise à niveau pour déterminer le chemin de mise à niveau correct pour votre installation actuelle. 
 
-![Chemin de mise à niveau de la version ATA](./media/upgrade-path-ata.png)
+![Chemin de mise à niveau de la version ATA](media/upgrade-path-ata.png)
 
 ## <a name="see-also"></a>Voir aussi
 - [Configuration requise pour ATA](ata-prerequisites.md)
