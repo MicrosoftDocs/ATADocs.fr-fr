@@ -178,7 +178,7 @@
     - name: Informations de référence sur le journal SIEM
       href: cef-format-sa.md
     - name: Problèmes connus dans Azure ATP
-      href: known-issues.md
+      href: ./troubleshooting-atp-known-issues.md
     - name: Informations de référence sur les versions Azure ATP
       href: atp-release-reference.md
 - name: Ressources
