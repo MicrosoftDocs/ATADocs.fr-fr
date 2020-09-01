@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e0694e13a731c1c8146f733ee8e49a3a2888d52c
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 4de688b3ea1c80f8ed0e517baf9da3b469a8d82a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956718"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
 
@@ -53,7 +53,7 @@ Assurez-vous que le capteur peut naviguer vers *.atp.azure.com via le proxy conf
 
 ## <a name="proxy-authentication-problem-presents-as-a-connection-error"></a>Le problème d’authentification du proxy se présente sous la forme d’une erreur de connexion
 
-Si, lors de l’installation du capteur, vous recevez l’erreur suivante :  **Échec de la connexion du capteur au service.**
+Si, lors de l’installation du capteur, vous recevez l’erreur suivante : **Échec de la connexion du capteur au service.**
 
 **Cause :**
 
@@ -151,19 +151,19 @@ Pour résoudre le problème
 
 Définissez le paramètre suivant sur **Désactivé** dans la configuration de carte réseau de la machine virtuelle : **IPv4 TSO Offload**.
 
- ![Problème de capteur VMware](./media/vm-sensor-issue.png)
+ ![Problème de capteur VMware](media/vm-sensor-issue.png)
 
 Utilisez la commande suivante pour vérifier si le déchargement d’envoi volumineux (LSO) est activé ou désactivé :
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
-![Vérifier l’état de LSO](./media/missing-network-traffic-health-alert.png)
+![Vérifier l’état de LSO](media/missing-network-traffic-health-alert.png)
 
 Si LSO est activé, utilisez la commande suivante pour le désactiver :
 
 `Disable-NetAdapterLso -Name {name of adapter}`
 
-![Désactiver l’état LSO](./media/disable-lso-vmware.png)
+![Désactiver l’état LSO](media/disable-lso-vmware.png)
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Le capteur n’a pas réussi à récupérer les informations d'identification du compte de service administré du groupe (gMSA)
 
