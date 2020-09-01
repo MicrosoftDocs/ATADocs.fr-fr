@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8c95335f50988eba7d3d18e9d0550e33647c9389
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 0057f2627139e8803aa04c693b0fe051bf8d118a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027174"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956888"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -35,7 +35,7 @@ Outre la collecte et l’analyse du trafic réseau à destination et en provenan
 Pour configurer la collecte d’événements Windows 8004 :
 
 1. Accédez à : Configuration de l’ordinateur\Stratégies\ Paramètres Windows\Paramètres de sécurité\Stratégies locales\Options de sécurité
-2. Définissez la **stratégie de groupe de domaine** comme suit :
+1. Définissez la **stratégie de groupe de domaine** comme suit :
     - Sécurité réseau : Restreindre NTLM : Trafic NTLM sortant vers serveurs distants = **Auditer tout**
     - Sécurité réseau : Restreindre NTLM : Auditer l’authentification NTLM dans ce domaine = **Activer tout**
     - Sécurité réseau : Restreindre NTLM : Auditer le trafic NTLM entrant = **Activer l’audit pour tous les comptes**

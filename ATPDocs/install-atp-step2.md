@@ -4,15 +4,15 @@ description: La deuxième étape de la procédure d’installation d’Azure ATP
 author: shsagir
 ms.author: shsagir
 ms.date: 01/15/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 4d3e65aaafea7cefd4ef564c0ee0a82b8d2fdfe4
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 29d6fc0a1a79b5861bad447f160ba7f5fe6a0131
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954338"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Démarrage rapide : Se connecter à votre forêt Active Directory
 
@@ -52,7 +52,7 @@ La première fois que vous ouvrez le portail Azure ATP, l’écran suivant s’a
     |**Compte de service administré du groupe** (requis pour le compte gMSA)|Pour le compte gMSA, sélectionnez **Compte de service administré du groupe**.|
     |**Domaine** (obligatoire)|Entrez le domaine de l’utilisateur en lecture seule. Par exemple : **contoso.com**. Il est important d’entrer le nom de domaine complet où se trouve l’utilisateur. Par exemple, si le compte de l’utilisateur se trouve dans le domaine corp.contoso.com, vous devez entrer `corp.contoso.com`, et non contoso.com.|
 
-2. Dans le portail Azure ATP, cliquez sur **Télécharger le programme d’installation du capteur et installer le premier capteur** pour continuer.
+1. Dans le portail Azure ATP, cliquez sur **Télécharger le programme d’installation du capteur et installer le premier capteur** pour continuer.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

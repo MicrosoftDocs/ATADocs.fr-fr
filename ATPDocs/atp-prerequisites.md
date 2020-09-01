@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/27/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: e0c6e9826b734e9e94e787ba62cd782eb5ef8dd6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793373"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956633"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -28,7 +28,7 @@ Cet article décrit la configuration requise pour réussir le déploiement d’A
 
 Azure ATP se compose du service cloud Azure ATP, qui est constitué du portail Azure ATP et du capteur Azure ATP. Pour plus d’informations sur chaque composant d’Azure ATP, consultez [Architecture d’Azure ATP](atp-architecture.md).
 
-Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview).
+Azure ATP protège vos utilisateurs Active Directory locaux et/ou utilisateurs synchronisés avec Azure Active Directory. Pour protéger un environnement composé uniquement d’utilisateurs AAD, consultez [Protection d’identité AAD](/azure/active-directory/identity-protection/overview).
 
 Pour créer votre instance d’Azure ATP, vous avez besoin d’un locataire AAD au moins un administrateur général/de sécurité. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures.
 
@@ -76,7 +76,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à Azure ATP de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à Azure ATP de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-atp-step7.md).
 
@@ -94,7 +94,7 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 - Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
     > [!NOTE]
-    > Vous pouvez également utiliser notre balise de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Vous pouvez également utiliser notre balise de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Diagramme d’architecture Azure ATP](media/azure-atp-architecture.png)
 
@@ -141,7 +141,7 @@ Pour bénéficier de performances optimales, choisissez **Hautes performances** 
 
 Vous pouvez déployer les capteurs Azure ATP sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées.
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode [Groupe multiprocesseur](https://docs.microsoft.com/windows/win32/procthread/processor-groups). Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode [Groupe multiprocesseur](/windows/win32/procthread/processor-groups). Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > En cas d’exécution en tant que machine virtuelle, la mémoire dynamique ou toute autre fonctionnalité d’augmentation de la mémoire n’est pas prise en charge.
@@ -182,7 +182,7 @@ Le tableau suivant répertorie les ports qui, au minimum, sont requis par le cap
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
-La détection Azure ATP s’appuie sur des [journaux d’événements Windows](configure-windows-event-collection.md#configure-event-collection) spécifiques que le capteur analyse à partir de vos contrôleurs de domaine. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations sur la configuration des stratégies appropriées, consultez [Stratégie d'audit avancée](atp-advanced-audit-policy.md). Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#configure-audit-policies) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+La détection Azure ATP s’appuie sur des [journaux d’événements Windows](configure-windows-event-collection.md#configure-event-collection) spécifiques que le capteur analyse à partir de vos contrôleurs de domaine. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations sur la configuration des stratégies appropriées, consultez [Stratégie d'audit avancée](configure-windows-event-collection.md). Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#configure-audit-policies) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 > [!NOTE]
 >

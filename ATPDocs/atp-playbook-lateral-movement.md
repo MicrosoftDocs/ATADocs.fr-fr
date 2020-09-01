@@ -2,17 +2,17 @@
 title: Playbook de mouvement latéral d’alertes de sécurité Azure ATP
 description: Le playbook Azure ATP décrit comment simuler des menaces de mouvement latéral pour la détection par Azure ATP.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 998b932dc88ca14bed4fd008ea5d1d6574e385a0
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 03eaafcb803a4cb443ad97f488ab83c690dadffa
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79410687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955392"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
 
@@ -45,16 +45,16 @@ Au cours de nos attaques de reconnaissance factices, **VictimPC** n’a pas ét�
 ### <a name="mimikatz-sekurlsalogonpasswords"></a>Mimikatz sekurlsa::logonpasswords
 
 1. Ouvrez une **invite de commandes avec élévation de privilèges** sur **VictimPC**. 
-2. Accédez au dossier d’outils où vous avez enregistré Mimikatz et exécutez la commande suivante :
+1. Accédez au dossier d’outils où vous avez enregistré Mimikatz et exécutez la commande suivante :
 
    ``` cmd
    mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
    ```
 
-3. Ouvrez **c:\\temp\\victimpc.txt** pour afficher les informations d’identification collectées et écrites par Mimikatz dans le fichier txt.
-   ![Résultat de Mimikatz, y compris le code de hachage NTLM de RonHD](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
+1. Ouvrez **c:\\temp\\victimpc.txt** pour afficher les informations d’identification collectées et écrites par Mimikatz dans le fichier txt.
+    ![Résultat de Mimikatz, y compris le code de hachage NTLM de RonHD](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
 
-4. Nous avons pu collecter le code de hachage NTLM de RonHD à partir de la mémoire avec mimikatz. Nous aurons besoin du code de hachage NTLM sous peu.
+1. Nous avons pu collecter le code de hachage NTLM de RonHD à partir de la mémoire avec mimikatz. Nous aurons besoin du code de hachage NTLM sous peu.
 
    > [!Important]
    > - Il est prévu et normal que les codes de hachage illustrés dans cet exemple soient différents des codes de hachage que vous voyez dans votre propre environnement de labo. L’objectif de cet exercice est de vous aider à comprendre comment les codes de hachage ont été obtenus, d’obtenir leurs valeurs et de les utiliser dans les étapes suivantes. </br> </br>
@@ -87,9 +87,9 @@ Il ressort des résultats que RonHD est membre du groupe de sécurité « Suppo
    > [!Note]
    > Si votre code de hachage pour RonHD était différent dans les étapes précédentes, remplacez le code de hachage NTLM ci-dessus par le code de hachage collecté auprès de *victimpc.txt*.
 
-   ![Overpass-the-hash par le biais de mimikatz](media/playbook-lateral-opth1.png)
+    ![Overpass-the-hash par le biais de mimikatz](media/playbook-lateral-opth1.png)
 
-2. Vérifiez qu’une nouvelle invite de commandes s’ouvre. Elle s’exécute en tant que RonHD, mais il est possible que cela ne soit pas *encore* évident. Ne fermez pas la nouvelle invite de commande, car vous allez l’utiliser ensuite.
+1. Vérifiez qu’une nouvelle invite de commandes s’ouvre. Elle s’exécute en tant que RonHD, mais il est possible que cela ne soit pas *encore* évident. Ne fermez pas la nouvelle invite de commande, car vous allez l’utiliser ensuite.
 
 Azure ATP ne détecte pas un code de hachage passé sur une ressource locale. Azure ATP détecte lorsqu’un code de hachage est **utilisé à partir d’une ressource pour accéder à une autre** ressource ou à un autre service.
 
@@ -107,29 +107,29 @@ Nous allons utiliser **PowerSploit** ```Get-NetLocalGroup``` pour nous aider à 
    Get-NetLocalGroup 10.0.24.6
    ```
 
-   ![Obtenir les administrateurs locaux pour 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
+    ![Obtenir les administrateurs locaux pour 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
 
    Dans les coulisses, cet exemple utilise la gestion des actifs logiciels à distance pour identifier les administrateurs locaux pour l’adresse IP que nous avons découvert précédemment et qui a été exposée à un compte d’administrateur de domaine.
 
    Notre résultat doit ressembler à :
 
-   ![Résultat de PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
+    ![Résultat de PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
 
    Cet ordinateur a deux administrateurs locaux, l’administrateur intégré « ContosoAdmin » et « Support technique ». Nous savons que RonHD est membre du groupe de sécurité « Support technique ». On nous a également donné le nom de l’ordinateur, AdminPC. Étant donné que nous avons les informations d’identification de RonHD, nous devrions pouvoir les utiliser pour nous déplacer latéralement vers AdminPC et d’accéder à cet ordinateur.
 
-2. À partir de la *même invite de commandes, qui s’exécute dans le contexte de RonHD*, tapez **quitter** sortir de PowerShell si nécessaire. Exécutez ensuite la commande suivante :
+1. À partir de la *même invite de commandes, qui s’exécute dans le contexte de RonHD*, tapez **quitter** sortir de PowerShell si nécessaire. Exécutez ensuite la commande suivante :
 
    ``` cmd
    dir \\adminpc\c$
    ```
 
-3. Nous avons pu accéder à AdminPC. Voyons quels tickets nous avons. Dans la même invite de commandes, exécutez la commande suivante :
+1. Nous avons pu accéder à AdminPC. Voyons quels tickets nous avons. Dans la même invite de commandes, exécutez la commande suivante :
 
    ``` cmd
    klist
    ```
 
-   ![Utilisez klist pour nous montrer des tickets Kerberos dans notre processus cmd.exe en cours](media/playbook-lateral-klist.png)
+    ![Utilisez klist pour nous montrer des tickets Kerberos dans notre processus cmd.exe en cours](media/playbook-lateral-klist.png)
 
 Vous pouvez voir que, pour ce processus particulier, nous avons un TGT de RonHD en mémoire. Nous avons effectué avec succès une attaque Overpass-the-Hash dans notre labo. Nous avons converti le code de hachage NTLM compromis précédemment et l’avons utilisé pour obtenir un TGT Kerberos. Ce TGT Kerberos a été ensuite utilisé pour accéder à une autre ressource réseau, dans le cas présent, AdminPC. 
 
@@ -179,15 +179,15 @@ Avec Mimikatz préparé sur AdminPC, nous allons utiliser PsExec pour l’exécu
 
    Cette commande exécute et exporte les tickets trouvés dans le processus LSASS.exe et les place dans le répertoire actuel, sur AdminPC.
 
-2. Nous devons copier les tickets pour les faire revenir d’AdminPC à VictimPC. Comme nous nous intéressons uniquement aux tickets de SamiraA pour cet exemple, exécutez la commande suivante :
+1. Nous devons copier les tickets pour les faire revenir d’AdminPC à VictimPC. Comme nous nous intéressons uniquement aux tickets de SamiraA pour cet exemple, exécutez la commande suivante :
 
    ``` cmd
    xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
    ```
 
-   ![Exporter les informations d’identification collectées d’AdminPC vers VictimPC](media/playbook-escalation-export_tickets2.png)
+    ![Exporter les informations d’identification collectées d’AdminPC vers VictimPC](media/playbook-escalation-export_tickets2.png)
 
-3. Nous allons effacer nos traces sur AdminPC en supprimant nos fichiers.
+1. Nous allons effacer nos traces sur AdminPC en supprimant nos fichiers.
 
    ``` cmd
    rmdir \\adminpc\c$\temp /s /q
@@ -198,7 +198,7 @@ Avec Mimikatz préparé sur AdminPC, nous allons utiliser PsExec pour l’exécu
 
    Sur notre **VictimPC**, ces tickets collectés se trouvent dans notre dossier **c:\temp\adminpc_tickets** :
 
-   ![C:\temp\tickets est résultat mimikatz exporté à partir d’AdminPC](media/playbook-escalation-export_tickets4.png)
+    ![C:\temp\tickets est résultat mimikatz exporté à partir d’AdminPC](media/playbook-escalation-export_tickets4.png)
 
 
 ### <a name="mimikatz-kerberosptt"></a>Mimikatz Kerberos::ptt
@@ -211,28 +211,28 @@ Avec les tickets localement sur VictimPC, il est maintenant temps de devenir Sam
    mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
    ```
 
-   ![Importez les tickets volés dans le processus cmd.exe](media/playbook-escalation-ptt1.png)
+    ![Importez les tickets volés dans le processus cmd.exe](media/playbook-escalation-ptt1.png)
 
-2. Dans la même invite de commandes avec élévation de privilèges, vous devez valider que la session d’invite de commandes comprend les tickets adéquats. Exécutez la commande suivante :
+1. Dans la même invite de commandes avec élévation de privilèges, vous devez valider que la session d’invite de commandes comprend les tickets adéquats. Exécutez la commande suivante :
 
    ``` cmd
    klist
    ```
 
-   ![Exécutez klist pour afficher les tickets importés dans le processus CMD](media/playbook-escalation-ptt2.png)
+    ![Exécutez klist pour afficher les tickets importés dans le processus CMD](media/playbook-escalation-ptt2.png)
 
-3. Notez que ces tickets restent inutilisés. En agissant comme un attaquant, nous avons réussi à « passer le ticket ». Nous avons collecté les informations d’identification de SamirA dans AdminPC avant de les passer à un autre processus s’exécutant sur VictimPC.
+1. Notez que ces tickets restent inutilisés. En agissant comme un attaquant, nous avons réussi à « passer le ticket ». Nous avons collecté les informations d’identification de SamirA dans AdminPC avant de les passer à un autre processus s’exécutant sur VictimPC.
 
    > [!Note]
    > Comme dans Pass-the-Hash, Azure ATP ne sait pas que le ticket a été passé à l’activité du client local. Cependant, Azure ATP détecte l’activité *une fois que le ticket est utilisé*, autrement dit, exploité pour accéder à une autre ressource/un autre service.
 
-4. Terminez votre attaque simulée en accédant au contrôleur de domaine à partir de **VictimPC**. Dans l’invite de commandes maintenant en cours d’exécution avec les tickets de SamirA en mémoire, exécutez :
+1. Terminez votre attaque simulée en accédant au contrôleur de domaine à partir de **VictimPC**. Dans l’invite de commandes maintenant en cours d’exécution avec les tickets de SamirA en mémoire, exécutez :
 
    ``` cmd
    dir \\ContosoDC\c$
    ```
 
-   ![Accédez au lecteur c:\ de ContosoDC à l’aide des informations d’identification de SamirA](media/playbook-escalation-ptt3.png)
+    ![Accédez au lecteur c:\ de ContosoDC à l’aide des informations d’identification de SamirA](media/playbook-escalation-ptt3.png)
 
 Bravo ! Nos attaques fictives nous ont permis d’accéder en tant qu’administrateur à notre contrôleur de domaine et de réussir à compromettre le domaine/la forêt Active Directory de notre labo.
 

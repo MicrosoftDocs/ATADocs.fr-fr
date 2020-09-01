@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f7d61b88c1a83f6ec075692af147a87dfe0c039
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 0a127cec114eb92320334999354522e676f99b37
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027242"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956905"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
@@ -54,7 +54,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
 1. Sur la ligne de commande, tapez *gpedit.msc*.
 1. Développez **Configuration ordinateur > Modèles d’administration > Composants Windows > Transfert d’événements**.
 
-   ![Image de l’éditeur de groupe de stratégie locale](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Image de l’éditeur de groupe de stratégie locale](media/wef%201%20local%20group%20policy%20editor.png)
 
 1. Double-cliquez sur **Configurer le Gestionnaire d’abonnements cible**.
 
@@ -87,7 +87,7 @@ Après avoir ajouté le **Service réseau** au groupe **Lecteurs des journaux d�
     1. Cliquez avec le bouton droit sur l’abonnement créé et sélectionnez **État d’exécution** pour voir s’il existe des problèmes avec l’état.
     1. Après quelques minutes, vérifiez que les événements que vous avez configurés pour être transférés apparaissent dans les événements transférés sur le capteur autonome Azure ATP.
 
-Pour plus d'informations, voir : [Configurer les ordinateurs de façon à transférer et à recueillir les événements](https://technet.microsoft.com/library/cc748890)
+Pour plus d'informations, voir : [Configurer les ordinateurs de façon à transférer et à recueillir les événements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -2,17 +2,17 @@
 title: Tutoriel sur la configuration du labo d’alertes de sécurité Azure ATP
 description: Dans ce tutoriel, vous allez configurer un labo de test Azure ATP pour simuler des menaces devant être détectées par Azure ATP.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: c6b1a309d86562082121806e1c81897e9632e95c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414520"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955103"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutoriel : Configurer un labo d’alertes de sécurité ATP 
 
@@ -34,7 +34,7 @@ Dans ce tutoriel vous allez :
    - Continuez et [alimentez Active Directory (AD) avec des utilisateurs](#bkmk_hydrate).
 1. Une [instance Azure ATP](install-atp-step1.md) qui est [connectée à AD](install-atp-step2.md).
 1. [Téléchargez](install-atp-step3.md) et [installez la dernière version du capteur Azure ATP](install-atp-step4.md) sur le contrôleur de domaine de votre labo.
-1. Vous êtes familiarisé avec les [stations de travail à accès privilégié](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) et la [stratégie SAMR](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. Vous êtes familiarisé avec les [stations de travail à accès privilégié](/windows-server/identity/securing-privileged-access/privileged-access-workstations) et la [stratégie SAMR](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## <a name="recommendations"></a>Recommandations
 
@@ -114,9 +114,9 @@ Pour autoriser le Service Azure ATP à effectuer correctement une énumération 
 
     ![Modifier la stratégie de groupe pour autoriser Azure ATP à utiliser les fonctionnalités de chemin d’accès de mouvement latéral.](media/playbook-labsetup-localgrouppolicies3.png)
 
-2. Ajoutez le compte de service Azure ATP à la liste des comptes approuvés pour effectuer cette action sur vos systèmes Windows modernes.
+1. Ajoutez le compte de service Azure ATP à la liste des comptes approuvés pour effectuer cette action sur vos systèmes Windows modernes.
 
-    ![Ajoutez le service](./media/samr-add-service.png)
+    ![Ajoutez le service](media/samr-add-service.png)
 
 ### <a name="add-sensitive-group-to-azure-atp"></a>Ajouter un groupe sensible à Azure ATP
 
@@ -124,15 +124,15 @@ L’ajout du groupe de sécurité « Support technique » en tant que **groupe
 
 1. Dans le portail Azure ATP, cliquez sur l’icône d’engrenage **Configuration** dans la barre de menus.
 
-2. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
+1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
 
     ![Étiquettes d’entité Azure ATP](media/entity-tags.png)
 
-3. Dans la section **Sensible**, tapez le nom « Support technique » pour **Groupes sensibles**, puis cliquez sur le signe **+** pour les ajouter.
+1. Dans la section **Sensible**, tapez le nom « Support technique » pour **Groupes sensibles**, puis cliquez sur le signe **+** pour les ajouter.
 
     ![Étiquetez le « Support technique » comme groupe sensible Azure ATP afin d’activer les graphes de mouvement latéral et les rapports pour ce groupe privilégié](media/playbook-labsetup-helpdesksensitivegroup.png)
 
-4. Cliquez sur **Save**.
+1. Cliquez sur **Save**.
 
 ### <a name="azure-atp-lab-base-setup-checklist"></a>Liste de vérification de la configuration de base du labo Azure ATP
 
@@ -180,7 +180,7 @@ Pour simuler un réseau actif et géré, créez une tâche planifiée sur la mac
     Register-ScheduledTask -TaskName "RonHD Cmd.exe - AATP SA Playbook" -Trigger $trigger -User $runAs -Password $ronHHDPass -Action $action
     ```
 
-2. Connectez-vous à la machine en tant que **JeffL**. Le processus de Cmd.exe démarre dans le contexte de RonHD après l’ouverture de session, simulant la gestion de la machine par le support technique.
+1. Connectez-vous à la machine en tant que **JeffL**. Le processus de Cmd.exe démarre dans le contexte de RonHD après l’ouverture de session, simulant la gestion de la machine par le support technique.
 
 ### <a name="turn-off-antivirus-on-victimpc"></a>Désactivez l’antivirus sur VictimPC
 
@@ -199,7 +199,7 @@ Pour exécuter les playbooks d’alerte de sécurité Azure ATP, les outils suiv
 |----|-----|
 | Mimikatz | [GitHub – Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub – PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
 | NetSess | [Outils JoeWare](https://www.joeware.net/freetools) |
 
 Nous remercions les auteurs de ces outils de recherche d’avoir permis à la communauté de mieux comprendre les cyber risques et leur impact.
@@ -218,7 +218,7 @@ Nous remercions les auteurs de ces outils de recherche d’avoir permis à la co
 
    ```
 
-2. Après avoir exécuté le script, **Support technique** se trouve dans la liste locale **Administrateurs** > **Membres** d’**AdminPC**.
+1. Après avoir exécuté le script, **Support technique** se trouve dans la liste locale **Administrateurs** > **Membres** d’**AdminPC**.
 ![Support technique dans le groupe d’administrateurs locaux pour AdminPC](media/playbook-labsetup-localgrouppolicies1.png)
 
 ### <a name="simulate-domain-activities-from-adminpc"></a>Simulez des activités de domaine à partir d’AdminPC
@@ -273,4 +273,3 @@ Testez votre environnement de labo Azure ATP à l’aide des playbooks d’alert
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
 Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
-

@@ -6,17 +6,17 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 01/05/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 021953b0b5fbd972686cc3743c796a5bbefdcab5
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cc76b68971ae780e90260f198d0745a29719ca45
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773446"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955358"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Utilisation d’Azure ATP avec Microsoft Cloud App Security
 
@@ -55,13 +55,13 @@ Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur da
 >[!NOTE]
 >
 > - Si vous n’avez pas d’abonnement à Cloud App Security, vous pourrez continuer à utiliser le portail Cloud App Security pour examiner les alertes Azure ATP et explorer les utilisateurs et leurs activités managées locales, mais vous ne recevrez pas d’informations connexes de vos applications cloud.
-> - Les administrateurs Azure ATP peuvent avoir besoin de nouvelles autorisations pour accéder à Cloud App Security. Pour savoir comment attribuer des autorisations à Cloud App Security, consultez [Gérer l’accès administrateur](https://docs.microsoft.com/cloud-app-security/manage-admins).
+> - Les administrateurs Azure ATP peuvent avoir besoin de nouvelles autorisations pour accéder à Cloud App Security. Pour savoir comment attribuer des autorisations à Cloud App Security, consultez [Gérer l’accès administrateur](/cloud-app-security/manage-admins).
 
-Consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration) pour apprendre à activer rapidement Azure ATP dans Cloud App Security.
+Consultez [Intégration d’Azure ATP](/cloud-app-security/aatp-integration) pour apprendre à activer rapidement Azure ATP dans Cloud App Security.
 
 ## <a name="azure-atp-in-cloud-app-security"></a>Azure ATP dans Cloud App Security
 
-Consultez le [démarrage rapide de Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security) pour vous familiariser avec les principes fondamentaux de l’utilisation du portail Cloud App Security.
+Consultez le [démarrage rapide de Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) pour vous familiariser avec les principes fondamentaux de l’utilisation du portail Cloud App Security.
 
 Accédez à vos données Azure ATP et à de nouvelles fonctionnalités hybrides au sein des alertes, des activités et des pages utilisateur de Cloud App Security.
 
@@ -79,11 +79,11 @@ Si vos deux services (Azure ATP et Cloud App Security) sont actuellement configu
 
 ## <a name="activities"></a>Activités
 
-Les alertes Azure ATP sont affichées dans le **journal d'activité** de Cloud App Security. Des options et fonctionnalités de filtrage d’activité supplémentaires sont disponibles uniquement lorsque les alertes sont affichées avec Cloud App Security. Consultez [Activités Azure ATP à l’aide de Microsoft Cloud App Security](https://docs.microsoft.com/azure-advanced-threat-protection/atp-activities-filtering-mcas) pour apprendre à filtrer et à créer des stratégies d’activité.
+Les alertes Azure ATP sont affichées dans le **journal d'activité** de Cloud App Security. Des options et fonctionnalités de filtrage d’activité supplémentaires sont disponibles uniquement lorsque les alertes sont affichées avec Cloud App Security. Consultez [Activités Azure ATP à l’aide de Microsoft Cloud App Security](atp-activities-filtering-mcas.md) pour apprendre à filtrer et à créer des stratégies d’activité.
 
 ## <a name="user-pages"></a>Pages utilisateur
 
-Les pages utilisateur contiennent l’[indice de priorité d’examen](https://docs.microsoft.com/cloud-app-security/tutorial-ueba) de chaque utilisateur et un journal d’activité de toutes les actions.
+Les pages utilisateur contiennent l’[indice de priorité d’examen](/cloud-app-security/tutorial-ueba) de chaque utilisateur et un journal d’activité de toutes les actions.
 
 Pour accéder à une page utilisateur d’un utilisateur système :
 1. Ouvrez **Alertes** dans le menu principal.
@@ -98,7 +98,7 @@ Pour accéder à une page utilisateur d’un utilisateur système :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez [Activités Azure ATP à l’aide de Microsoft Cloud App Security](https://docs.microsoft.com/azure-advanced-threat-protection/atp-activities-filtering-mcas) pour apprendre à filtrer et à créer des stratégies d’activité.
+Consultez [Activités Azure ATP à l’aide de Microsoft Cloud App Security](atp-activities-filtering-mcas.md) pour apprendre à filtrer et à créer des stratégies d’activité.
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 

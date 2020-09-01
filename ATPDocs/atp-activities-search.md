@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c6766319861a766ba970ef0ed3d23d1f20c0f34d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f65643c9d1483df44d5cd43f8d849c8241a076ef
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774466"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956939"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Recherche et filtrage d’activités supervisées dans Azure ATP 
 
@@ -28,7 +28,7 @@ Les activités détectées par Azure ATP sur votre réseau peuvent faire l’obj
 
 Dans la chronologie Azure ATP, sélectionnez une entité de votre réseau (contrôleur de domaine, ordinateur ou utilisateur) comme point d’accès de filtre. Ensuite, sélectionnez le type de filtre : **Alerte de sécurité**, **Type d’activité** ou toute combinaison. Une fois le filtre appliqué, la chronologie des menaces de l’entité est mise à jour avec les informations filtrées. Vous pouvez aussi télécharger les alertes et les activités filtrées pour poursuivre l’examen ou le suivi dans d’autres outils. 
 
-![Filtrer les alertes et les activités](./media/activities-filter.png)
+![Filtrer les alertes et les activités](media/activities-filter.png)
 
 Pour filtrer les alertes et les activités :
  1. Sélectionnez l’entité à examiner dans la chronologie d’Azure ATP. 

@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b8717625c70559c465daa90019d01c8709459cf
-ms.sourcegitcommit: c3680d6de51d13bb4aeae02a79e74c4a66d9d268
+ms.openlocfilehash: 914a5051eea5d68a26fced0be871ea6c436bfb8e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85311610"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953505"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Évaluations de la posture de sécurité des identités Azure ATP
 
@@ -35,7 +35,7 @@ Même si votre entreprise investit beaucoup de temps et d’efforts pour renforc
 
 ### <a name="access"></a>Access
 
-Vous pouvez accéder aux évaluations de la sécurité Azure ATP dans le portail Microsoft Cloud App Security après avoir activé l’intégration d’Azure ATP. Pour apprendre à intégrer Azure ATP à Cloud App Security, consultez [Intégration d’Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+Vous pouvez accéder aux évaluations de la sécurité Azure ATP dans le portail Microsoft Cloud App Security après avoir activé l’intégration d’Azure ATP. Pour apprendre à intégrer Azure ATP à Cloud App Security, consultez [Intégration d’Azure ATP](/cloud-app-security/aatp-integration).
 
 ### <a name="licensing"></a>Licences
 
@@ -43,7 +43,7 @@ L’accès aux rapports d’évaluation de la sécurité Azure ATP dans Cloud Ap
 
 ## <a name="access-azure-atp-using-cloud-app-security"></a>Accéder à Azure ATP avec Cloud App Security
 
-Consultez le [guide de démarrage rapide de Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security) pour vous familiariser avec les principes de base du portail Cloud App Security.
+Consultez le [guide de démarrage rapide de Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) pour vous familiariser avec les principes de base du portail Cloud App Security.
 
 **Évaluations de la posture de sécurité des identités**
 

@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b82959c378ef4150bfc9204ccf8d4202792d0547
-ms.sourcegitcommit: 9bf5ddd9636ce1bc99d6e4308ef2d70b7abdc836
+ms.openlocfilehash: 24fab947687183f40d5043678b24e12792d98233
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87386025"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956837"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
 
@@ -91,7 +91,7 @@ Pour activer l’accès à Azure ATP, nous recommandons d’autoriser le trafic 
 
 - `<your-instance-name>sensorapi.atp.azure.com` – pour la connectivité des capteurs. Par exemple, `contoso-corpsensorapi.atp.azure.com`
 
-Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Sinon, si vous avez besoin d’un contrôle plus précis, autorisez le trafic vers les points de terminaison appropriés dans le tableau suivant :
 

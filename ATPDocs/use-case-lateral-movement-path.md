@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5c422a1315bccce93154c3abbc07caea8de6c06
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: edb37833ac44e3f04f9daf7ee57a8e1f41ca5d38
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775792"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955622"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral d’Azure ATP 
 
@@ -28,7 +28,7 @@ On parle de mouvement latéral quand un attaquant utilise des comptes non sensib
 
 Les chemins de mouvement latéral constituent un composant clé des insights de sécurité d’Azure ATP. Les chemins de mouvement latéral d’Azure ATP sont des repères visuels qui vous aident à comprendre et à identifier rapidement la façon exacte dont les attaquants peuvent se déplacer latéralement à l’intérieur de votre réseau. L’objectif des mouvements latéraux au sein de la chaîne de destruction des cyber-attaques est pour les attaquants d’accéder et de compromettre vos comptes sensibles en utilisant des comptes non sensibles. La compromission de vos comptes sensibles leur permet de se rapprocher de leur objectif ultime, le contrôle du domaine. Pour mettre fin à la réussite de ces attaques, les chemins de mouvement latéral d’Azure ATP vous apportent une aide visuelle directe et facile à interpréter sur vos comptes les plus vulnérables et les plus sensibles. Les chemins de mouvement latéral vous aident à atténuer et à prévenir ces risques dans le futur, et à barrer l’accès aux attaquants avant qu’ils prennent le contrôle total du domaine.
 
-![Chemin de mouvement latéral d’Azure ATP](./media/atp-lmp.png)
+![Chemin de mouvement latéral d’Azure ATP](media/atp-lmp.png)
 
 Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont le vol d’informations d’identification et Pass-the-Ticket. Dans les deux méthodes, vos comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs.
 
@@ -36,7 +36,7 @@ Les attaques par mouvements latéraux sont généralement effectuées selon diff
 
 Chaque ordinateur ou profil d’utilisateur découvert par Azure ATP se trouvant dans un chemin de mouvement latéral a un onglet **Chemins d'accès de mouvement latéral**. Les ordinateurs et les profils sans cet onglet n’ont jamais été découverts dans un chemin de mouvement latéral potentiel. 
 
-![Onglet Chemin de mouvement latéral d’Azure ATP](./media/lateral-movement-path-tab.png)
+![Onglet Chemin de mouvement latéral d’Azure ATP](media/lateral-movement-path-tab.png)
 
 Le chemin de mouvement latéral pour chaque entité fournit des informations différentes selon la sensibilité de l’entité : 
 - Utilisateurs sensibles : les chemins de mouvement latéral potentiels conduisant à cet utilisateur sont montrés.
@@ -44,7 +44,7 @@ Le chemin de mouvement latéral pour chaque entité fournit des informations dif
 
 Chaque fois que l’utilisateur clique sur l’onglet, Azure ATP affiche le chemin de mouvement latéral découvert le plus récemment. Chaque chemin de mouvement latéral potentiel est enregistré pendant les 48 heures suivant la découverte. Un historique des chemins de mouvement latéral est disponible. Visualisez les chemins de mouvement latéral plus anciens qui ont été découverts par le passé en cliquant sur **Afficher une autre date**. 
 
-![Affichage des chemins de mouvement latéral d’Azure ATP](./media/atp-lmp-complete.png)
+![Affichage des chemins de mouvement latéral d’Azure ATP](media/atp-lmp-complete.png)
 
 Découvrez quand des chemins de mouvement latéral potentiels ont été identifiés et quelles entités connexes sont potentiellement concernées. 
 
@@ -53,11 +53,11 @@ Découvrez quand des chemins de mouvement latéral potentiels ont été identifi
 Sous l’onglet Activités, une indication est donnée quand un nouveau chemin de mouvement latéral potentiel a été identifié :
 - Utilisateurs sensibles : quand un nouveau chemin vers un utilisateur sensible est identifié
 
-![Chemin de mouvement latéral d’Azure ATP : utilisateur sensible identifié](./media/atp-lmp-activities.png)
+![Chemin de mouvement latéral d’Azure ATP : utilisateur sensible identifié](media/atp-lmp-activities.png)
 
 - Utilisateurs et ordinateurs non sensibles : quand cette entité est identifiée dans un chemin de mouvement latéral potentiel conduisant à un utilisateur sensible.
 
-![Chemin de mouvement latéral d’Azure ATP : utilisateur non sensible identifié](./media/atp-lateral-non-sensitive.png)
+![Chemin de mouvement latéral d’Azure ATP : utilisateur non sensible identifié](media/atp-lateral-non-sensitive.png)
 
 ## <a name="lmp-related-entities"></a>Entités associées à un chemin de mouvement latéral
 Un chemin de mouvement latéral peut désormais vous aider directement dans le processus d’investigation. Les listes d’indices d’alerte de sécurité d’Azure ATP indiquent les entités associées qui sont impliquées dans chaque chemin de mouvement latéral potentiel. Les listes d’indices aident directement votre équipe chargée de répondre aux questions de sécurité à augmenter ou à diminuer l’importance de l’alerte de sécurité et/ou de l’investigation des entités associées. Par exemple, quand une alerte de Pass-the-Ticket est émise, l’ordinateur source, l’utilisateur compromis et l’ordinateur de destination à partir desquels le ticket volé a été utilisé, font tous partie du chemin de mouvement latéral potentiel conduisant à un utilisateur sensible. L’existence du chemin de mouvement latéral détecté rend l’examen de l’alerte et l’observation de l’utilisateur suspecté encore plus importants qu’empêcher votre adversaire d’effectuer d’autres mouvements latéraux. Des indices traçables sont fournis dans les chemins de mouvement latéral pour vous permettre plus facilement et plus rapidement d’empêcher les attaquants de se déplacer dans votre réseau. 

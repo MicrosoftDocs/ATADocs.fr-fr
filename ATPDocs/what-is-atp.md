@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/05/2020
-ms.topic: article
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 41aec3f7189e659e3ad7d2d529574b90788d1e61
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e4391f788e525891aff050ad591b2f5063442ebe
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775724"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954270"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Qu’est-ce qu’Azure Advanced Threat Protection ?
 
@@ -107,14 +107,14 @@ Nous vous recommandons de déployer Azure ATP en trois phases :
 ### <a name="phase-1"></a>Phase 1
 
 1. Configurez Azure ATP pour protéger vos environnements principaux. Le modèle de déploiement rapide d’Azure ATP vous permet de protéger votre organisation dès aujourd’hui. [Installer Azure ATP](install-atp-step1.md)
-2. Définissez les [comptes sensibles](sensitive-accounts.md) et les [comptes honeytoken](install-atp-step7.md).
-3. Passez en revue les rapports et [chemins de mouvement latéral](use-case-lateral-movement-path.md).
+1. Définissez les [comptes sensibles](sensitive-accounts.md) et les [comptes honeytoken](install-atp-step7.md).
+1. Passez en revue les rapports et [chemins de mouvement latéral](use-case-lateral-movement-path.md).
 
 ### <a name="phase-2"></a>Phase 2
 
 1. Protégez tous les contrôleurs de domaine et les [forêts](atp-multi-forest.md) de votre organisation.
-2. Surveillez toutes les [alertes](working-with-suspicious-activities.md) : examinez les alertes de mouvement latéral et de prise de contrôle de domaine.
-3. Utilisez le [Guide des alertes de sécurité](suspicious-activity-guide.md) pour comprendre les menaces et trier les attaques potentielles.
+1. Surveillez toutes les [alertes](working-with-suspicious-activities.md) : examinez les alertes de mouvement latéral et de prise de contrôle de domaine.
+1. Utilisez le [Guide des alertes de sécurité](suspicious-activity-guide.md) pour comprendre les menaces et trier les attaques potentielles.
 
 ### <a name="phase-3"></a>Phase 3
 

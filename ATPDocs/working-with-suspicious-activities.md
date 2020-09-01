@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 01/26/2020
-ms.topic: article
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c15d2117ca25320865bdc4cfbfae2c2c5cca4c3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 331f709c19008e1f11aacc50678893158528042d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775758"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955562"
 ---
 # <a name="working-with-security-alerts"></a>Utilisation des alertes de sécurité
 
@@ -69,17 +69,17 @@ L’équipe de recherche Azure ATP travaille sans relâche à l’implémentatio
 
 Ces détections sont marquées d’un badge de préversion pour vous permettre d’identifier les nouvelles détections et les nouveautés du produit. Si vous désactivez les détections en préversion, vous ne les verrez pas dans la console Azure ATP (ni dans la chronologie ni dans les profils d’entité). Les nouvelles alertes ne seront pas non plus ouvertes.
 
-![détection vpn en préversion](./media/preview-detection-vpn.png)
+![détection vpn en préversion](media/preview-detection-vpn.png)
 
 Par défaut, les détections en préversion sont activées dans Azure ATP.
 
 Pour désactiver les détections en préversion :
 
 1. Dans la console Azure ATP, cliquez sur la roue dentée des paramètres.
-2. Dans le menu de gauche, sous Préversion, cliquez sur **Détections**.
-3. Utilisez le curseur pour activer et désactiver les détections en préversion.
+1. Dans le menu de gauche, sous Préversion, cliquez sur **Détections**.
+1. Utilisez le curseur pour activer et désactiver les détections en préversion.
 
-![détections en préversion](./media/preview-detections.png)
+![détections en préversion](media/preview-detections.png)
 
 ## <a name="filter-security-alerts-list"></a>Filtrer la liste des alertes de sécurité
 
@@ -87,7 +87,7 @@ Pour filtrer la liste des alertes de sécurité :
 
 1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
 
-2. Pour filtrer la liste, sélectionnez **Haute**, **Moyenne** ou **Faible**.
+1. Pour filtrer la liste, sélectionnez **Haute**, **Moyenne** ou **Faible**.
 
 **Gravité des activités suspectes**
 
@@ -108,7 +108,7 @@ Pour filtrer la liste des alertes de sécurité :
 Vous pouvez changer l’état d’une alerte de sécurité en cliquant sur son état actuel, puis en sélectionnant l’une des options suivantes : **Ouvertes**, **Ignorées**, **Fermées** ou **Supprimées**.
 Pour cela, cliquez sur les trois points en haut à droite d’une alerte pour afficher la liste des actions disponibles.
 
-![Actions Azure ATP pour les alertes de sécurité](./media/atp-sa-actions.png)
+![Actions Azure ATP pour les alertes de sécurité](media/atp-sa-actions.png)
 
 **États des alertes de sécurité**
 

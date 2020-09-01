@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 62f2a8614bc9eecf29f2f22a5c26b95c8a648481
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e5afdb5766f4ddd790e85ee6e6e07ae1a2517a44
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772001"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955936"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutoriel : Examiner une entité
 
@@ -70,7 +70,7 @@ Les indicateurs de contrôle de compte d’utilisateur sont également importés
 
 Azure ATP vous permet de savoir si ces indicateurs sont activés ou désactivés dans Azure Active Directory. Les icônes de couleur et le bouton bascule correspondant indiquent l’état de chaque indicateur. Dans l’exemple ci-dessous, seule l’option **Le mot de passe n'expire jamais** est activée dans Active Directory.
 
- ![indicateurs de contrôle de compte d’utilisateur](./media/user-access-flags.png)
+ ![indicateurs de contrôle de compte d’utilisateur](media/user-access-flags.png)
 
 ## <a name="cross-check-with-windows-defender"></a>Croiser les informations avec Windows Defender
 
@@ -81,23 +81,23 @@ Pour vous fournir des insights résultant du croisement entre les produits, votr
 
 Azure ATP importe des informations sur les utilisateurs et les groupes depuis Azure Active Directory, qui vous permettent d’identifier les utilisateurs automatiquement considérés comme sensibles, car membres des groupes suivants dans Active Directory :
 
--   Administrateurs
--   Utilisateurs avec pouvoir
--   Opérateurs de compte
--   Opérateurs de serveur
--   Opérateurs d'impression
--   Opérateurs de sauvegarde
--   Duplicateurs
--   Utilisateurs du Bureau à distance 
--   Opérateurs de configuration réseau 
--   Générateurs d’approbation de forêt entrante
--   Administrateurs du domaine
--   Contrôleurs de domaine
--   Propriétaires créateurs de la stratégie de groupe 
--   Contrôleurs de domaine en lecture seule 
--   Contrôleurs de domaine d’entreprise en lecture seule 
--   Administrateurs du schéma 
--   Administrateurs de l’entreprise
+- Administrateurs
+- Utilisateurs avec pouvoir
+- Opérateurs de compte
+- Opérateurs de serveur
+- Opérateurs d'impression
+- Opérateurs de sauvegarde
+- Duplicateurs
+- Utilisateurs du Bureau à distance 
+- Opérateurs de configuration réseau 
+- Générateurs d’approbation de forêt entrante
+- Administrateurs du domaine
+- Contrôleurs de domaine
+- Propriétaires créateurs de la stratégie de groupe 
+- Contrôleurs de domaine en lecture seule 
+- Contrôleurs de domaine d’entreprise en lecture seule 
+- Administrateurs du schéma 
+- Administrateurs de l’entreprise
 
 En outre, vous pouvez **étiqueter manuellement**  des entités comme sensibles dans Azure ATP. Ceci est important, car certaines détections d’Azure ATP, comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, reposent sur l’état indiquant le caractère sensible d’une entité. Si vous étiquetez manuellement d’autres utilisateurs ou groupes comme sensibles, par exemple les membres du conseil d’administration, les cadres de la société et le directeur des ventes, Azure ATP les considère comme étant sensibles. Pour plus d’informations, consultez [Utilisation de comptes sensibles](sensitive-accounts.md).
 

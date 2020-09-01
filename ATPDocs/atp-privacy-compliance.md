@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 95268bb5e9c41935298b591477da930676aa129f
-ms.sourcegitcommit: 71181a243e60d29a2345620735f9c91ab2b5d689
+ms.openlocfilehash: feae48a00b17ef2556377dee643d133c5499c9fc
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85123493"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955681"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Sécurité et confidentialité des données Azure ATP
 
@@ -40,7 +40,7 @@ Les données utilisateur personnelles d’Azure ATP sont dérivées de l’obje
 
 - Si un utilisateur est supprimé de l’annuaire Active Directory de l’organisation, Azure ATP supprime automatiquement le profil utilisateur et toute activité réseau associée pour une période d’une année. Vous pouvez également [supprimer](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) les alertes de sécurité qui contiennent des données personnelles.
 
-- Des autorisations en **lecture seule** sur le conteneur **Objets supprimés** sont recommandées. Pour en savoir plus sur la façon dont l’autorisation de conteneur Objets supprimés est utilisée par le service Azure ATP, consultez la recommandation relative au conteneur Objets supprimés dans [Prérequis pour Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
+- Des autorisations en **lecture seule** sur le conteneur **Objets supprimés** sont recommandées. Pour en savoir plus sur la façon dont l’autorisation de conteneur Objets supprimés est utilisée par le service Azure ATP, consultez la recommandation relative au conteneur Objets supprimés dans [Prérequis pour Azure ATP](atp-prerequisites.md#before-you-start).
 
 ## <a name="export-personal-data"></a>Exporter les données personnelles
 
@@ -52,7 +52,7 @@ Azure ATP implémente l’audit des modifications des données personnelles, not
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- Pour plus d’informations sur l’approbation et la conformité dans Azure ATP, consultez le [portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Entreprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr?view=o365-worldwide).
+- Pour plus d’informations sur l’approbation et la conformité dans Azure ATP, consultez le [portail Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le [site sur la conformité RGPD de Microsoft 365 Entreprise](/microsoft-365/compliance/gdpr?view=o365-worldwide).
 
 ## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Sécurité et confidentialité pour les clients US Government GCC High d’Azure ATP
-Pour plus d’informations sur les normes de conformité Azure ATP et l’emplacement des données des clients US Government GCC High, consultez la [description Enterprise Mobility + Security for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).
+Pour plus d’informations sur les normes de conformité Azure ATP et l’emplacement des données des clients US Government GCC High, consultez la [description Enterprise Mobility + Security for US Government](/enterprise-mobility-security/solutions/ems-govt-service-description).

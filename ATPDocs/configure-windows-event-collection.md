@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07136153ab0909f6de9089b0f748d4ed123e1458
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: aa86397e76cafabe4c45dd5b394996225d758633
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027214"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956871"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
 
@@ -96,7 +96,7 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
         ![Auditer le trafic NTLM sortant vers des serveurs distants](media/atp-advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Si vous choisissez d’utiliser une stratégie de sécurité locale au lieu d’utiliser une stratégie de groupe, veillez à ajouter les journaux d’audit **Connexion de compte**, **Gestion de compte** et **Options de sécurité** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > Si vous choisissez d’utiliser une stratégie de sécurité locale au lieu d’utiliser une stratégie de groupe, veillez à ajouter les journaux d’audit **Connexion de compte**, **Gestion de compte** et **Options de sécurité** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 1. Après application au moyen d’un objet GPO, les nouveaux événements sont visibles sous vos **journaux d’événements Windows**.
 
@@ -120,7 +120,7 @@ Ces événements peuvent être collectés automatiquement par le capteur Azure 
 > [!NOTE]
 >
 > - Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
-> - Il est important d’évaluer et de vérifier vos [stratégies d’audit](atp-advanced-audit-policy.md) avant d’activer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires.
+> - Il est important d’évaluer et de vérifier vos [stratégies d’audit]() avant d’activer la collecte d’événements, pour vérifier que les contrôleurs de domaine sont correctement configurés pour enregistrer les événements nécessaires.
 
 ## <a name="see-also"></a>Voir aussi
 

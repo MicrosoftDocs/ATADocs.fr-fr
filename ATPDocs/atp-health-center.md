@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 1/3/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50e0ccfb22e068eccadcdbfc3c59251b171813a7
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 0e0b9f73ce019f105d1cb1c08fe2637e23634adf
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773667"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953590"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Utiliser l’intégrité et les événements Azure ATP
 
@@ -34,7 +34,7 @@ Si un problème se produit, le centre d’intégrité Azure ATP déclenche une a
 ### <a name="managing-azure-atp-health"></a>Gestion de l’intégrité d’Azure ATP
 Pour vérifier l’intégrité globale de votre instance Azure ATP, cliquez sur l’icône du centre d’intégrité dans la barre de menus. ![Icône du centre d’intégrité Azure ATP](media/atp-red-dot.png)
 
--   Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer**, en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
+- Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer**, en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
 -   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
 

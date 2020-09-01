@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c046d6844dee3ad53b707e5e6ca033d01f83169b
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: fbd5b1c3b641559f8d5555d65f4424ab34acd80d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775673"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956599"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
 
@@ -54,7 +54,7 @@ Quand vous créez votre instance Azure ATP, les paramètres de base nécessaires
 
 - [Intégration VPN](install-atp-step6-vpn.md)
 - [Autorisations SAM-R](install-atp-step8-samr.md)
-- [Paramètres de stratégie d’audit](atp-advanced-audit-policy.md) : auditez l’intégrité de votre contrôleur de domaine avant et après un déploiement ATP.
+- [Paramètres de stratégie d’audit](configure-windows-event-collection.md) : auditez l’intégrité de votre contrôleur de domaine avant et après un déploiement ATP.
 
 ## <a name="work-with-azure-atp"></a>Utiliser Azure ATP
 

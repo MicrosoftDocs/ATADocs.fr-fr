@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 11/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2d5deb0adb35f07fe792e4254cca6ee8611b942
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: aa497d9a04aa36538b0e5d6642ce2942a4c6d827
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772630"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956854"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
 Cet article explique comment exclure des entités du processus de déclenchement des alertes. Certaines entités sont exclues afin de limiter les vrais positifs sans gravité tout en garantissant la détection des vrais positifs. Pour supprimer le bruit qu’Azure ATP génère à propos d’activités effectuées par des utilisateurs dans le cadre de leur activité professionnelle normale, vous pouvez désactiver, ou exclure, des entités spécifiques du processus de déclenchement des alertes. Par ailleurs, certaines entités courantes sont exclues par défaut. 
@@ -27,7 +27,7 @@ Par exemple, les activités approuvées dans le cadre des opérations informatiq
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entités exclues par défaut du processus de déclenchement des alertes
  Pour certaines alertes, comme **Communication suspecte sur DNS**, des exclusions de domaine automatiques sont ajoutées par Azure ATP sur la base des recherches et des commentaires des clients. 
  
-![Exclusions automatiques des alertes Communication suspecte sur DNS](./media/dns-auto-exclusions.png) 
+![Exclusions automatiques des alertes Communication suspecte sur DNS](media/dns-auto-exclusions.png) 
 
 ## <a name="exclude-entities-from-raising-alerts"></a>Exclure des entités du processus de déclenchement des alertes
 
@@ -36,11 +36,11 @@ Il y a deux façons d’exclure manuellement des entités : soit directement à 
 - **À partir de l’alerte de sécurité** : dans la chronologie des activités, quand vous recevez une alerte sur une activité associée à un utilisateur, un ordinateur ou une adresse IP qui **est** autorisé à effectuer cette activité, même fréquemment, effectuez les étapes suivantes :
   - Cliquez avec le bouton droit sur les points de suspension à la fin de la ligne de l’alerte de sécurité pour cette entité, puis sélectionnez **Fermer et exclure**. Cette opération ajoute l’utilisateur, l’ordinateur ou l’adresse IP à la liste des exclusions définies pour cette alerte de sécurité. Elle ferme l’alerte de sécurité et la retire de la liste des événements **Ouvert** dans la **chronologie des alertes**.
 
-    ![Exclure une entité](./media/exclude-in-sa.png)
+    ![Exclure une entité](media/exclude-in-sa.png)
 
 - **À partir de la page Configuration** : pour revoir ou changer des exclusions, sous **Configuration**, cliquez sur **Exclusions**, puis sélectionnez l’alerte de sécurité à laquelle appliquer l’exclusion, comme **Reconnaissance DNS**.
 
-    ![Configuration d’exclusion](./media/exclusions.png)
+    ![Configuration d’exclusion](media/exclusions.png)
 
 Pour ajouter une entité à partir de la configuration **Exclusions** : entrez le nom de l’entité, cliquez sur le signe plus, puis cliquez sur **Enregistrer** en bas de la page.
 

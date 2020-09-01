@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 12/24/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 860f856acd1a34e52032217b137b6350a0988365
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775894"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956582"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
@@ -62,17 +62,17 @@ Chaque mise à jour est testée et validée sur tous les systèmes d’exploitat
 Pour définir un capteur sur une mise à jour différée :
 
 1. Dans le portail Azure ATP, cliquez sur l’icône des paramètres, puis sélectionnez **Configuration**.
-2. Cliquez sur l’onglet **Mises à jour**.
-3. Dans la ligne du tableau, à côté de chaque capteur que vous voulez différer, positionnez le curseur **Mise à jour différée** sur **Activé**.
-4. Cliquez sur **Save**.
+1. Cliquez sur l’onglet **Mises à jour**.
+1. Dans la ligne du tableau, à côté de chaque capteur que vous voulez différer, positionnez le curseur **Mise à jour différée** sur **Activé**.
+1. Cliquez sur **Save**.
  
 ## <a name="sensor-update-process"></a>Processus de mise à jour des capteurs
 
 À intervalles réguliers de quelques minutes, les capteurs Azure ATP vérifient s’ils ont la version la plus récente. Une fois que le service cloud Azure ATP est mis à jour avec une version plus récente, le service de capteur Azure ATP démarre le processus de mise à jour :
 
 1. Le service cloud Azure ATP se met à jour (dernière version).
-2. Le service de mise à jour des capteurs Azure ATP détecte la version mise à jour.
-3. Les capteurs qui ne sont pas définis sur **Mise à jour différée** commencent un par un le processus de mise à jour :
+1. Le service de mise à jour des capteurs Azure ATP détecte la version mise à jour.
+1. Les capteurs qui ne sont pas définis sur **Mise à jour différée** commencent un par un le processus de mise à jour :
    1. Le service de mise à jour des capteurs Azure ATP récupère la version mise à jour auprès du service cloud (au format de fichier .cab).
    2. Le service de mise à jour des capteurs Azure ATP valide la signature du fichier.
    3. Le service de mise à jour des capteurs Azure ATP extrait le fichier .cab dans un nouveau dossier du dossier d’installation du capteur, par défaut *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>* .
@@ -84,14 +84,14 @@ Pour définir un capteur sur une mise à jour différée :
    7. Le capteur reçoit l’autorisation du service cloud Azure. Vous pouvez vérifier le statut du capteur sur la page **Mises à jour**.
    8. Le capteur suivant démarre le processus de mise à jour. 
 
-4. 72 heures après la mise à jour du service cloud Azure ATP, les capteurs sélectionnés pour la **Mise à jour différée** commencent leur processus de mise à jour, identique à celui des capteurs mis à jour automatiquement.
+1. 72 heures après la mise à jour du service cloud Azure ATP, les capteurs sélectionnés pour la **Mise à jour différée** commencent leur processus de mise à jour, identique à celui des capteurs mis à jour automatiquement.
 
-![Mise à jour des capteurs](./media/sensor-update.png)
+![Mise à jour des capteurs](media/sensor-update.png)
 
 
 En cas d’échec du processus de mise à jour sur un capteur, une alerte d’intégrité est déclenchée et envoyée sous forme de notification.
 
-![Échec de la mise à jour d’un capteur](./media/sensor-outdated.png)
+![Échec de la mise à jour d’un capteur](media/sensor-outdated.png)
 
 
 ## <a name="see-also"></a>Voir aussi
