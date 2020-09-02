@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 85e14135fed9a36279fbf615618f614e71ef9c18
-ms.sourcegitcommit: 2b8b727b11227aa6b665ba9e02ffa700a2dc33c6
+ms.openlocfilehash: 301dc36032950733784b928198fa5b092ccd6f10
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85516908"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809088"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Évaluation de la sécurité : Chemins de mouvement latéral les plus risqués
 
@@ -48,6 +48,9 @@ Par exemple, les chemins les plus risqués sont mieux repérés par les attaquan
 
     > [!NOTE]
     > Attendez 24 heures, puis vérifiez que la recommandation ne figure plus dans la liste.
+
+> [!NOTE]
+> Cette évaluation est mise à jour toutes les 24 heures.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,6 +1,6 @@
 ---
 title: Guide des alertes de sécurité d’Azure ATP
-d|Description: This article provides a list of the security alerts issued by Azure ATP.
+description: Cet article fournit la liste des alertes de sécurité émises par Azure ATP.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f28a1fc6cd3fb4797f25dae5d26c6a3ed5adfeae
-ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
+ms.openlocfilehash: 110ebc82412f9a0831c325d8cb8ffee6b91115ee
+ms.sourcegitcommit: af91810bb220ff8ba90569d87c718a63bdc52d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87856408"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807513"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertes de sécurité Azure ATP
 

@@ -5,31 +5,31 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/01/2020
+ms.date: 08/31/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 92241805626dadc284a0cd76f21e41e9dd6be7bd
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b6f99d8ec19ae57ea19b94daa2bb62d7a7edc446
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775639"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245894"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
 1. **Reconnaissance**
-2. [Informations d’identification compromises](atp-compromised-credentials-alerts.md)
-3. [Mouvements latéraux](atp-lateral-movement-alerts.md)
-4. [Dominance du domaine](atp-domain-dominance-alerts.md)
-5. [Exfiltration](atp-exfiltration-alerts.md)
+1. [Informations d’identification compromises](atp-compromised-credentials-alerts.md)
+1. [Mouvements latéraux](atp-lateral-movement-alerts.md)
+1. [Dominance du domaine](atp-domain-dominance-alerts.md)
+1. [Exfiltration](atp-exfiltration-alerts.md)
 
-Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md).
+Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md). Pour plus d’informations sur les **vrais positifs (TP)** , les **vrais positifs bénins (B-TP)** et les **faux positifs (FP)** , consultez [Classifications des alertes de sécurité](understanding-security-alerts.md#security-alert-classifications).
 
 Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Reconnaissance** détectées par Azure ATP sur votre réseau.
 
@@ -37,11 +37,12 @@ Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et p
 
 > [!div class="checklist"]
 >
-> * Reconnaissance d’énumération de compte (ID externe 2003)
-> * Reconnaissance de mappage de réseau (DNS) (ID externe 2007)
-> * Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)
-> * Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
-> * Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
+> - Reconnaissance d’énumération de compte (ID externe 2003)
+> - Reconnaissance des attributs Active Directory (LDAP) (ID externe 2210)
+> - Reconnaissance de mappage de réseau (DNS) (ID externe 2007)
+> - Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)
+> - Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
+> - Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Reconnaissance d’énumération de compte (ID externe 2003)
 
@@ -57,6 +58,10 @@ Lors d’une reconnaissance à l’aide de l’énumération de comptes, un atta
 
 Dans le cadre de cette détection d’alerte, Azure ATP détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, Azure ATP détecte cela comme une activité suspecte.
 
+**Période d’apprentissage**
+
+Non applicable
+
 **TP, B-TP ou FP**
 
 Certains serveurs et applications interrogent les contrôleurs de domaine pour déterminer si des comptes existent dans des scénarios d’utilisation légitime.
@@ -65,7 +70,7 @@ Pour déterminer si cette requête était un **FP**, **BTP** ou **FP**, cliquez 
 
 1. Vérifiez si l’ordinateur source était censé effectuer ce type de requête. Dans ce cas, un **B-TP** pourrait être dû à des systèmes de ressources humaines ou à des serveurs Microsoft Exchange.
 
-2. Vérifiez les domaines des comptes.
+1. Vérifiez les domaines des comptes.
     - Voyez-vous des utilisateurs supplémentaires qui appartiennent à un autre domaine ?  
      Une erreur de configuration de serveur (par exemple dans Exchange/Skype ou ADSF) peut faire apparaître des utilisateurs supplémentaires qui appartiennent à différents domaines.
     - Examinez la configuration du service à problème afin de corriger l’erreur de configuration.
@@ -91,11 +96,11 @@ Les attaquants utilisent généralement un dictionnaire de noms de comptes aléa
 
       Si vous avez répondu **oui** à l’une des questions précédentes, *fermez* l’alerte de sécurité. Il s’agit probablement d’une activité **B-TP**.
 
-2. Si des tentatives correspondent à des noms de compte existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut essayer d’utiliser des attaques par force brute pour accéder à votre domaine en utilisant les noms d’utilisateur découverts.
+1. Si des tentatives correspondent à des noms de compte existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut essayer d’utiliser des attaques par force brute pour accéder à votre domaine en utilisant les noms d’utilisateur découverts.
     - Vérifiez les noms de compte trouvés en recherchant d’autres activités suspectes.
     - Regardez si des comptes sensibles se trouvent parmi les comptes trouvés.
 
-### <a name="understand-the-scope-of-the-breach"></a>Comprendre l’étendue de la violation
+**Comprendre l’étendue de la violation**
 
 1. Examinez l’ordinateur source
 1. Si des tentatives correspondent à des noms de comptes existants, l’attaquant connaît l’existence de comptes dans votre environnement et peut utiliser des attaques par force brute pour essayer d’accéder à votre domaine en utilisant les noms d’utilisateur découverts. Examinez les comptes existants en suivant le [guide d’investigation sur les utilisateurs](investigate-a-user.md).
@@ -108,13 +113,52 @@ Les attaquants utilisent généralement un dictionnaire de noms de comptes aléa
 
 1. Regardez si ce serveur est exposé à Internet avec des ports ouverts. Par exemple, est-il ouvert à Internet avec le protocole RDP ?
 
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Suggestions de correction et étapes préventives
+**Suggestions de correction et étapes préventives**
 
 1. Contenez l’[ordinateur source](investigate-a-computer.md).
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     1. Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis.
     1. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-1. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation. Les mots de passe longs et complexes assurent le niveau minimal de sécurité nécessaire contre les attaques par force brute. Les attaques par force brute sont généralement l’étape qui suit l’énumération dans la chaîne de destruction de cyber-attaque.
+1. Appliquez des [mots de passe complexes et longs](/windows/device-security/security-policy-settings/password-policy) dans l’organisation. Les mots de passe longs et complexes assurent le niveau minimal de sécurité nécessaire contre les attaques par force brute. Les attaques par force brute sont généralement l’étape qui suit l’énumération dans la chaîne de destruction de cyber-attaque.
+
+## <a name="active-directory-attributes-reconnaissance-ldap-external-id-2210"></a>Reconnaissance des attributs Active Directory (LDAP) (ID externe 2210)
+
+**Description**
+
+La reconnaissance LDAP Active Directory est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Ces informations peuvent aider les attaquants à mapper la structure de domaine et à identifier les comptes privilégiés qu’ils pourront utiliser dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory.
+
+**Période d’apprentissage**
+
+Non applicable
+
+**TP, B-TP ou FP**
+
+1. Cliquez sur l’alerte pour afficher les requêtes qui ont été exécutées.
+    - Vérifiez que l’ordinateur source est bien censé exécuter ces requêtes.
+        - Si oui, fermez l’alerte de sécurité en la signalant comme un faux positif (**FP**). S’il s’agit d’une activité en cours, excluez l’activité suspecte.
+1. Cliquez sur l’ordinateur source pour accéder à sa page de profil.
+    - Recherchez toutes les activités inhabituelles qui se sont produites pendant l’exécution des requêtes, comme les recherches concernant les utilisateurs connectés, les ressources accessibles et autres requêtes de sondage.
+    - Si l’intégration Microsoft Defender ATP est activée, cliquez sur l’icône correspondante pour explorer la machine plus en détail.
+        - Recherchez les processus inhabituels et les alertes qui ont eu lieu lors de l’exécution des requêtes.
+1. Vérifiez les comptes exposés.
+    - Recherchez les activités inhabituelles.
+
+Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette alerte comme un vrai positif (**TP**) et suivez les instructions fournies dans **Comprendre l’étendue de la violation**.
+
+**Comprendre l’étendue de la violation**
+
+1. Examinez l’[ordinateur source](investigate-a-computer.md).
+1. L’ordinateur exécute-t-il un outil d’analyse qui exécute diverses requêtes LDAP ?
+    - Vérifiez si les utilisateurs et groupes interrogés dans l’attaque sont des comptes avec privilèges ou sensibles (par ex., PDG, directeur financier, directeur informatique, etc.). Si c’est le cas, examinez aussi les autres activités sur le point de terminaison et supervisez les ordinateurs auxquels les comptes interrogés sont connectés, car ils sont probablement la cible d’un mouvement latéral.
+1. Vérifiez les requêtes et leurs attributs, et déterminez si les requêtes ont abouti. Examinez chaque groupe exposé, recherchez les activités suspectes effectuées sur le groupe, ou par des utilisateurs membres du groupe.
+1. Avez-vous repéré un comportement de reconnaissance SAM-R, DNS ou SMB sur l’ordinateur source ?
+
+**Suggestions de correction et étapes préventives**
+
+1. Incluez l’ordinateur source.
+    1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    1. Si l’ordinateur exécute un outil d’analyse qui exécute une série de requêtes LDAP, recherchez les utilisateurs qui se sont connectés à peu près en même temps que l’activité, car ces utilisateurs peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconnaissance de mappage de réseau (DNS) (ID externe 2007)
 
@@ -152,20 +196,20 @@ Les scanners de sécurité et les applications légitimes peuvent générer des 
 **Correction :**
 
 - Incluez l’ordinateur source.
-    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+  - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+  - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 **Prévention :**
 
 Il est important de prévenir toute attaque ultérieure à l’aide de requêtes AXFR en sécurisant votre serveur DNS interne.
 
-- Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Sécurisez votre serveur DNS interne pour éviter la reconnaissance à l’aide de DNS en désactivant les transferts de zone ou en [limitant les transferts de zone](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) uniquement aux adresses IP spécifiées. La modification des transferts de zone est l’une des tâches de la liste de contrôle que vous devez suivre pour [sécuriser vos serveurs DNS contre les attaques internes et externes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
 ## <a name="security-principal-reconnaissance-ldap-external-id-2038"></a>Reconnaissance de principal de sécurité (LDAP) (ID externe 2038)
 
 **Description**
 
-La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory.  La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
+La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory. La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
 
 Afin de permettre à Azure ATP de dresser avec précision le profil et d’apprendre les utilisateurs légitimes, aucune alerte de ce type n’est déclenchée dans les 10 premiers jours suivant le déploiement d’Azure ATP. Une fois que la phase d’apprentissage initiale d’Azure ATP est terminée, les alertes sont générées sur les ordinateurs qui effectuent des requêtes d’énumération LDAP suspectes ou des requêtes ciblant des groupes sensibles à l’aide de méthodes jamais observées auparavant.
 
@@ -177,60 +221,30 @@ Afin de permettre à Azure ATP de dresser avec précision le profil et d’appre
 
 1. Cliquez sur l’ordinateur source pour accéder à sa page de profil.
     1. Cet ordinateur source est-il censé générer cette activité ?
-    2. Si l’ordinateur et l’activité sont tels qu’attendus, **fermez** l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**.
+    1. Si l’ordinateur et l’activité sont tels qu’attendus, **fermez** l’alerte de sécurité et excluez cet ordinateur comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
 1. Vérifiez les requêtes qui ont été effectuées (par exemple, Administrateurs du domaine ou tous les utilisateurs d’un domaine) et déterminez si les requêtes ont réussi. Examinez chaque groupe exposé, recherchez les activités suspectes effectuées sur le groupe, ou par des utilisateurs membres du groupe.
-2. Examinez l’[ordinateur source](investigate-a-computer.md).
+1. Examinez l’[ordinateur source](investigate-a-computer.md).
     - Les requêtes LDAP vous permettent de vérifier si une activité d’accès à une ressource s’est produite sur l’un des noms SPN exposés.
 
 **Suggestions de correction et étapes préventives**
 
 1. Incluez l’ordinateur source.
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
-    2. L’ordinateur exécute-t-il un outil d’analyse qui effectue une variété de requêtes LDAP ?
-    3. Recherchez les utilisateurs connectés à peu près au même moment que l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
+    1. L’ordinateur exécute-t-il un outil d’analyse qui effectue une variété de requêtes LDAP ?
+    1. Recherchez les utilisateurs connectés à peu près au même moment que l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Réinitialisez le mot de passe si l’accès à la ressource SPN a été effectuée et s’exécute sous un compte utilisateur (pas le compte machine).
 
 **Suggestions d’étapes Kerberoasting spécifiques pour la prévention et la correction**
 
 1. Réinitialisez les mots de passe des utilisateurs compromis et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Exiger l’utilisation de [mots de passe longs et complexes pour les utilisateurs disposant d’un compte de principal du service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
-3. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Exiger l’utilisation de [mots de passe longs et complexes pour les utilisateurs disposant d’un compte de principal du service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Les alertes de reconnaissance du principal de sécurité (LDAP) sont prises en charge uniquement par les capteurs ATP.
-
-## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
-
-*Nom précédent :* Reconnaissance à l’aide de l’énumération de sessions SMB
-
-### <a name="description"></a>Description
-
-L’énumération à l’aide du protocole SMB (Server Message Block) permet aux attaquants d’obtenir des informations sur les emplacements de connexion récents des utilisateurs. Une fois qu’ils connaissent ces informations, les attaquants peuvent se déplacer de façon latérale dans le réseau pour accéder à un compte sensible spécifique.
-
-Dans cette détection, une alerte est déclenchée quand une énumération de sessions SMB est effectuée sur un contrôleur de domaine.
-
-**TP, B-TP ou FP**
-
-Les applications et les scanners de sécurité sont susceptibles d’interroger légitimement des contrôleurs de domaine pour les sessions SMB ouvertes.
-
-1. Cet ordinateur source est-il censé générer des activités de ce type ?
-2. L’ordinateur source exécute-t-il un scanner de sécurité ?
-    Si la réponse est oui, il s’agit probablement d’une activité B-TP. *Fermez* l’alerte de sécurité et excluez cet ordinateur.
-3. Vérifiez l’identité des utilisateurs qui ont effectué l’opération.
-    Ces utilisateurs sont-ils censés effectuer ces actions ?
-    Si la réponse est oui, *fermez* l’alerte de sécurité comme s’agissant d’une activité B-TP.
-
-**Comprendre l’étendue de la violation**
-
-1. Examinez l’ordinateur source.
-2. Dans la page d’alerte, vérifiez si des utilisateurs sont exposés. Pour examiner plus en détail chaque utilisateur exposé, vérifiez son profil. Nous vous recommandons de commencer votre investigation par les utilisateurs sensibles et de priorité élevée.
-
-**Suggestions de correction et étapes préventives**
-
-Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer la protection de votre environnement contre cette attaque.
+> Les alertes de reconnaissance du principal de sécurité (LDAP) sont prises en charge uniquement par les capteurs ATP.
 
 ## <a name="user-and-group-membership-reconnaissance-samr-external-id-2021"></a>Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
 
@@ -259,16 +273,46 @@ Quatre semaines par contrôleur de domaine à partir de la première activité r
 **Comprendre l’étendue de la violation**
 
 1. Examinez les requêtes qui ont été effectuées, par exemple les requêtes Administrateur entreprise ou Administrateur, et déterminez si elles ont réussi.
-2. Examinez chaque utilisateur exposé à l’aide du guide d’investigation de l’utilisateur.
-3. Examinez l’ordinateur source.
+1. Examinez chaque utilisateur exposé à l’aide du guide d’investigation de l’utilisateur.
+1. Examinez l’ordinateur source.
 
 **Suggestions de correction et étapes préventives**
 
 1. Incluez l’ordinateur source.
-2. Trouvez et supprimez l’outil qui a effectué l’attaque.
-3. Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-4. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-5. Appliquez l’accès réseau et limitez les clients autorisés à effectuer des appels distants à l’aide de la stratégie de groupe SAM.
+1. Trouvez et supprimez l’outil qui a effectué l’attaque.
+1. Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Réinitialisez le mot de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Appliquez l’accès réseau et limitez les clients autorisés à effectuer des appels distants à l’aide de la stratégie de groupe SAM.
+
+## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconnaissance des utilisateurs et des adresses IP (SMB) (ID externe 2012)
+
+*Nom précédent :* Reconnaissance à l’aide de l’énumération de sessions SMB
+
+### <a name="description"></a>Description
+
+L’énumération à l’aide du protocole SMB (Server Message Block) permet aux attaquants d’obtenir des informations sur les emplacements de connexion récents des utilisateurs. Une fois qu’ils connaissent ces informations, les attaquants peuvent se déplacer de façon latérale dans le réseau pour accéder à un compte sensible spécifique.
+
+Dans cette détection, une alerte est déclenchée quand une énumération de sessions SMB est effectuée sur un contrôleur de domaine.
+
+**TP, B-TP ou FP**
+
+Les applications et les scanners de sécurité sont susceptibles d’interroger légitimement des contrôleurs de domaine pour les sessions SMB ouvertes.
+
+1. Cet ordinateur source est-il censé générer des activités de ce type ?
+1. L’ordinateur source exécute-t-il un scanner de sécurité ?
+    Si la réponse est oui, il s’agit probablement d’une activité B-TP. *Fermez* l’alerte de sécurité et excluez cet ordinateur.
+1. Vérifiez l’identité des utilisateurs qui ont effectué l’opération.
+    Ces utilisateurs sont-ils censés effectuer ces actions ?
+    Si la réponse est oui, *fermez* l’alerte de sécurité comme s’agissant d’une activité B-TP.
+
+**Comprendre l’étendue de la violation**
+
+1. Examinez l’ordinateur source.
+1. Dans la page d’alerte, vérifiez si des utilisateurs sont exposés. Pour examiner plus en détail chaque utilisateur exposé, vérifiez son profil. Nous vous recommandons de commencer votre investigation par les utilisateurs sensibles et de priorité élevée.
+
+**Suggestions de correction et étapes préventives**
+
+Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer la protection de votre environnement contre cette attaque.
 
 > [!NOTE]
 > Pour désactiver une alerte de sécurité Azure ATP, contactez le support technique.

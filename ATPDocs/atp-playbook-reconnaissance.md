@@ -2,17 +2,17 @@
 title: Tutoriel sur le playbook de reconnaissance Azure ATP
 description: Le tutoriel de playbook Azure ATP Reconnaissance décrit comment simuler des menaces de reconnaissance pour la détection par Azure ATP.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 2d62d765acf440b39c162bfbab1ad101cb572345
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669616"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955223"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 
@@ -111,9 +111,9 @@ N’importe quel ordinateur ou utilisateur authentifié peut potentiellement én
 
    La sortie affiche tous les utilisateurs dans le domaine Contoso.Azure.
 
-   ![Énumérer tous les utilisateurs dans le domaine](media/playbook-recon-dsenumeration-netusers.png)
+    ![Énumérer tous les utilisateurs dans le domaine](media/playbook-recon-dsenumeration-netusers.png)
 
-2. Essayons d’énumérer tous les groupes dans le domaine. Exécutez la commande suivante :
+1. Essayons d’énumérer tous les groupes dans le domaine. Exécutez la commande suivante :
 
     ``` cmd
     net group /domain
@@ -121,19 +121,19 @@ N’importe quel ordinateur ou utilisateur authentifié peut potentiellement én
 
    La sortie affiche tous les groupes dans le domaine Contoso.Azure. Notez le groupe de sécurité qui n’est pas un groupe par défaut : **Support technique**.
 
-   ![Énumérer tous les groupes dans le domaine](media/playbook-recon-dsenumeration-netgroups.png)
+    ![Énumérer tous les groupes dans le domaine](media/playbook-recon-dsenumeration-netgroups.png)
 
-3. À présent, essayons d’énumérer uniquement le groupe d’administrateurs du domaine. Exécutez la commande suivante :
+1. À présent, essayons d’énumérer uniquement le groupe d’administrateurs du domaine. Exécutez la commande suivante :
 
     ``` cmd
     net group "Domain Admins" /domain
     ```
 
-   ![Énumérer tous les membres du groupe d’administrateurs du domaine](media/playbook-recon-dsenumeration-netdomainadmins.png)
+    ![Énumérer tous les membres du groupe d’administrateurs du domaine](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
     En agissant comme un attaquant, nous avons appris qu’il y a deux membres du groupe d’administrateurs du domaine : **SamiraA** et **ContosoAdmin** (administrateur intégré pour le contrôleur de domaine). Sachant qu’il n’y a pas de limite de sécurité entre notre domaine et la forêt, l’étape suivante consiste à essayer d’énumérer les administrateurs de l’entreprise.
 
-4. Pour tenter d’énumérer les administrateurs de l’entreprise, exécutez la commande suivante :
+1. Pour tenter d’énumérer les administrateurs de l’entreprise, exécutez la commande suivante :
 
     ``` cmd
    net group "Enterprise Admins" /domain
@@ -141,7 +141,7 @@ N’importe quel ordinateur ou utilisateur authentifié peut potentiellement én
 
    Nous avons appris qu’il n'y a qu’un seul administrateur d’entreprise, ContosoAdmin. Ces informations n’étaient pas importantes dans la mesure où nous savions déjà qu'il n’y a pas de limite de sécurité entre notre domaine et la forêt.
 
-   ![Administrateurs de l’entreprise énumérés dans le domaine](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+    ![Administrateurs de l’entreprise énumérés dans le domaine](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
 Avec les informations collectées lors de notre reconnaissance, nous connaissons maintenant le groupe de sécurité du support technique. Ces informations ne sont cependant pas *encore* intéressantes. Nous savons également que **SamiraA** est un membre du groupe d’administrateurs du domaine. Si nous pouvons collecter les informations d’identification de SamiraA, nous pouvons accéder au contrôleur de domaine proprement dit.
 
@@ -157,7 +157,7 @@ Nous pouvons voir lorsque JeffL est connecté à VictimPC à l’aide du protoco
 
 ![Chronologie de l’activité logique de JeffL](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-De nombreuses activités sont consignées dans la chronologie des activités logiques, qui est une fonctionnalité majeure pour la forensique numérique et la réponse aux incidents (DFIR). Vous pouvez même voir des activités lorsque la détection initiale n’est pas venue d’Azure ATP, mais de Microsoft Defender ATP, d’Office 365 et autres.
+De nombreuses activités sont consignées dans la chronologie des activités logiques, qui est une fonctionnalité majeure pour la forensique numérique et la réponse aux incidents (DFIR). Vous pouvez même voir des activités lorsque la détection initiale n’est pas venue d’Azure ATP, mais de Microsoft Defender ATP ou de Microsoft 365, par exemple.
 
 En jetant un coup d’œil à la **page de ContosoDC**, nous pouvons également voir les ordinateurs auxquels JeffL s’est connecté.
 

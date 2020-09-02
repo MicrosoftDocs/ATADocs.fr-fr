@@ -6,17 +6,17 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/26/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 04dc432ebdee36b80b995ed1f19c5e1b0ee91dca
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 63305431d37e1d73c37c9e7b1693d1adb2e9b7af
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793348"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245843"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -25,6 +25,22 @@ Cet article est fréquemment mis à jour pour vous informer des nouveautés des 
 Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’à la version 2.55 (comprise), voir la [Référence sur les versions d’Azure ATP](atp-release-reference.md).
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2124"></a>Azure ATP version 2.124
+
+Publication : 30 août 2020
+
+- **Nouvelles alertes de sécurité**  
+Les alertes de sécurité Azure ATP incluent désormais les détections suivantes :
+  - **Reconnaissance des attributs Active Directory (LDAP) (ID externe 2210)**  
+Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une personne malveillante est soupçonnée d’avoir obtenu des informations critiques sur le domaine en vue de les utiliser dans sa chaîne d’attaque. Pour plus d’informations, consultez [Reconnaissance des attributs Active Directory](atp-reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+  - **Utilisation présumée d’un certificat Kerberos non autorisé (ID externe 2047)**  
+Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante ayant pris le contrôle de l’organisation en compromettant le serveur de l’autorité de certification est soupçonnée de générer des certificats qui pourront être utilisés comme des comptes de porte dérobée lors d’attaques futures, comme des attaques par mouvement latéral sur votre réseau. Pour plus d’informations, consultez, [Utilisation présumée d’un certificat Kerberos non autorisé](atp-lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047).
+  - **Suspicion d’utilisation d’un golden ticket (anomalie de ticket avec la délégation RBCD) (ID externe 2040)**  
+Les attaquants ayant des droits d’administrateur de domaine peuvent compromettre le compte KRBTGT. Avec le compte KRBTGT, ils peuvent créer un ticket TGT Kerberos qui fournit une autorisation pour n’importe quelle ressource.  
+Ce ticket TGT falsifié est appelé « golden ticket », car il permet aux attaquants d’obtenir une persistance réseau durable à l’aide de la délégation contrainte basée sur les ressources (RBCD). Les golden tickets falsifiés de ce type ont des caractéristiques uniques qui peuvent être identifiées par cette nouvelle détection.
+Pour plus d’informations, consultez [Suspicion d’utilisation d’un golden ticket (anomalie de ticket avec la délégation RBCD)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040).
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2123"></a>Azure ATP version 2.123
 
@@ -203,7 +219,7 @@ Mise en production le 23 septembre 2019
 Les packages de déploiement de capteur Azure ATP et d’installation de capteur n’expirent plus après un certain nombre de versions et ne sont désormais mis à jour qu’une seule fois. Le résultat de cette fonctionnalité est que les packages d’installation du capteur téléchargés peuvent désormais être installés même si ils sont antérieurs que notre nombre maximum de versions écoulées.
 
 - **Confirmer la compromission**  
-Vous pouvez maintenant confirmer la compromission d’utilisateurs Office 365 spécifiques et définir leur niveau de risque sur **haut**. Ce flux de travail permet à vos équipes d’opérations de sécurité de réduire les seuils de délai de résolution des incidents de sécurité. En savoir plus sur [comment confirmer la compromission](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) à l’aide de Azure ATP et Cloud App Security.
+Vous pouvez maintenant confirmer la compromission de certains utilisateurs Microsoft 365 et définir leur niveau de risque sur **haut**. Ce flux de travail permet à vos équipes d’opérations de sécurité de réduire les seuils de délai de résolution des incidents de sécurité. En savoir plus sur [comment confirmer la compromission](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) à l’aide de Azure ATP et Cloud App Security.
 
 - **Nouvelle bannière d’expérience**  
 Sur les pages du portail Azure ATP où une nouvelle expérience est disponible dans le portail Cloud App Security, de nouvelles bannières s’affichent pour décrire ce qui est disponible avec les liens d’accès.
@@ -285,13 +301,13 @@ Publication : 8 septembre 2019
 
 Publication : 1er septembre 2019
 
--   Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-292"></a>Azure ATP version 2.92
 
 Publication : 25 août 2019
 
--   Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-291"></a>Azure ATP version 2.91
 
@@ -348,7 +364,7 @@ Jusqu’à présent, Azure ATP fournissait des informations sur le système d’
     L’ajout d’informations complètes sur le système d'exploitation de l’appareil permet d’identifier les appareils non inscrits et non-Windows, tout en facilitant vos processus d’investigation. Pour plus d’informations sur la résolution de noms réseau dans Azure ATP, consultez [Comprendre la résolution de noms réseau (NNR)](atp-nnr-policy.md).  
 
 - **Nouvelle fonctionnalité : Proxy authentifié - préversion**  
-Azure ATP prend désormais en charge les proxys authentifiés. Spécifiez l’URL du proxy en utilisant la ligne de commande du capteur et spécifiez le nom d’utilisateur/mot de passe pour utiliser des proxys qui nécessitent une authentification. Pour plus d’informations sur l’utilisation des proxys authentifiés, consultez [Configurer le proxy](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
+Azure ATP prend désormais en charge les proxys authentifiés. Spécifiez l’URL du proxy en utilisant la ligne de commande du capteur et spécifiez le nom d’utilisateur/mot de passe pour utiliser des proxys qui nécessitent une authentification. Pour plus d’informations sur l’utilisation des proxys authentifiés, consultez [Configurer le proxy](configure-proxy.md).
 
 - **Amélioration de fonctionnalité : Processus de synchronisateur de domaine automatisé**  
 Le processus de désignation et d’étiquetage des contrôleurs de domaine en tant que candidats synchronisateurs de domaine lors de l’installation et de la configuration continue est désormais entièrement automatisé. L’option permettant de sélectionner/désélectionner manuellement les contrôleurs de domaine en tant que candidats synchronisateur de domaine est supprimée.
@@ -366,13 +382,13 @@ Publication : 7 juillet 2019
 Publication : 1er juillet 2019
 
 - **Prise en charge d’un nouvel emplacement : Centre de données Azure au Royaume-Uni**  
-Les instances Azure ATP sont désormais prises en charge dans le centre de données Azure au Royaume-Uni. Pour en savoir plus sur la création d’instances Azure ATP et les emplacements de leurs centres de données correspondants, consultez l’[étape 1 de l’installation d’Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
+Les instances Azure ATP sont désormais prises en charge dans le centre de données Azure au Royaume-Uni. Pour en savoir plus sur la création d’instances Azure ATP et les emplacements de leurs centres de données correspondants, consultez l’[étape 1 de l’installation d’Azure ATP](install-atp-step1.md).
 
 - **Amélioration de fonctionnalité : Nouveau nom et nouvelles fonctionnalités pour l’alerte Ajouts suspects à des groupes sensibles (ID externe 2024)**  
-L’alerte **Ajouts suspects à des groupes sensibles** était précédemment appelée **Modifications suspectes des groupes sensibles**. L’ID externe de l’alerte (ID 2024) ne change pas. Ce changement de nom reflète plus fidèlement l’objectif de l’alerte qui est de vous alerter en cas d’ajout à vos groupes **sensibles**. L’alerte améliorée comprend également de nouvelles preuves et des descriptions améliorées. Pour plus d’informations, consultez [Ajouts suspects à des groupes sensibles](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+L’alerte **Ajouts suspects à des groupes sensibles** était précédemment appelée **Modifications suspectes des groupes sensibles**. L’ID externe de l’alerte (ID 2024) ne change pas. Ce changement de nom reflète plus fidèlement l’objectif de l’alerte qui est de vous alerter en cas d’ajout à vos groupes **sensibles**. L’alerte améliorée comprend également de nouvelles preuves et des descriptions améliorées. Pour plus d’informations, consultez [Ajouts suspects à des groupes sensibles](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Nouvelle fonctionnalité de la documentation : Guide permettant de passer d’Advanced Threat Analytics à Azure ATP**  
-Ce nouvel article liste les prérequis, les conseils de planification ainsi que les étapes de configuration et de vérification pour passer d’ATA au service Azure ATP. Pour plus d’informations, consultez [Passer d’ATA à Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
+Ce nouvel article liste les prérequis, les conseils de planification ainsi que les étapes de configuration et de vérification pour passer d’ATA au service Azure ATP. Pour plus d’informations, consultez [Passer d’ATA à Azure ATP](ata-atp-move-overview.md).
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -381,7 +397,7 @@ Ce nouvel article liste les prérequis, les conseils de planification ainsi que 
 Publication : 23 juin 2019
 
 - **Amélioration de fonctionnalité : Alerte Création de service malveillant (ID externe 2026)**  
-Cette alerte propose désormais une page améliorée avec des preuves supplémentaires et une nouvelle description. Pour plus d’informations, consultez l’[alerte de sécurité concernant la création d’un service suspect](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+Cette alerte propose désormais une page améliorée avec des preuves supplémentaires et une nouvelle description. Pour plus d’informations, consultez l’[alerte de sécurité concernant la création d’un service suspect](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
 - **Prise en charge du nommage d’instance : possibilité d’ajouter un préfixe de domaine composé uniquement de chiffres**  
 Il est désormais possible de créer des instances Azure ATP à l’aide de préfixes de domaine initial contenant uniquement des chiffres. Par exemple, l’utilisation du préfixe de domaine initial 123456.contoso.com est à présent pris en charge.

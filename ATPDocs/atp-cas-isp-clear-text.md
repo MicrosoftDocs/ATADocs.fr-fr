@@ -5,42 +5,46 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f01d7bc5bb8913654047e070f67d4f1e011dd35a
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 39d6197327cf0bda8d3e09ac336781c004fe9c93
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774364"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956735"
 ---
-# <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Évaluation de la sécurité : Entités exposant les informations d’identification en texte clair 
+# <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Évaluation de la sécurité : Entités exposant les informations d’identification en texte clair
 
 ![Empêcher l’exposition d’informations d’identification en texte clair dans Cloud App Security](media/atp-cas-isp-clear-text-1.png)
 
-## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Quelles sont les informations fournies par l’évaluation de la sécurité concernant le texte clair? 
+## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Quelles sont les informations fournies par l’évaluation de la sécurité concernant le texte clair?
 
-Cette évaluation de la sécurité supervise votre trafic à la recherche d’entités exposant des informations d’identification en texte clair et vous alerte sur les risques d’exposition actuels (entités les plus impactées) dans votre organisation. Des suggestions de correction sont également proposées. 
+Cette évaluation de la sécurité supervise votre trafic à la recherche d’entités exposant des informations d’identification en texte clair et vous alerte sur les risques d’exposition actuels (entités les plus impactées) dans votre organisation. Des suggestions de correction sont également proposées.
 
-## <a name="why-is-clear-text-credential-exposure-risky"></a>Pourquoi l’exposition d’informations d’identification en texte clair présente-t-elle un risque ?  
-Les entités qui exposent des informations d’identification en texte clair posent non seulement un risque pour l’entité exposée en question, mais aussi pour toute l’organisation.  
+## <a name="why-is-clear-text-credential-exposure-risky"></a>Pourquoi l’exposition d’informations d’identification en texte clair présente-t-elle un risque ?
 
-Ce risque accru est dû au fait que le trafic non sécurisé, comme une liaison simple LDAP, est très sensible aux attaques de l’intercepteur (« man in the middle »). Ces types d’attaques entraînent des activités malveillantes, notamment l’exploitation par un attaquant des informations d’identification exposées à des fins malveillantes. 
+Les entités qui exposent des informations d’identification en texte clair posent non seulement un risque pour l’entité exposée en question, mais aussi pour toute l’organisation.
 
-## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Comment faire pour utiliser cette évaluation de la sécurité afin d’améliorer la sécurité de mon organisation ? 
+Ce risque accru est dû au fait que le trafic non sécurisé, comme une liaison simple LDAP, est très sensible aux attaques de l’intercepteur (« man in the middle »). Ces types d’attaques entraînent des activités malveillantes, notamment l’exploitation par un attaquant des informations d’identification exposées à des fins malveillantes.
 
-1. Passez en revue l’évaluation de la sécurité pour identifier les entités impactées. 
+## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Comment faire pour utiliser cette évaluation de la sécurité afin d’améliorer la sécurité de mon organisation ?
+
+1. Passez en revue l’évaluation de la sécurité pour identifier les entités impactées.
     ![Passer en revue les principales entités impactées et créer un plan d’action](media/atp-cas-isp-clear-text-2.png)
-1. Recherchez la raison pour laquelle ces entités utilisent LDAP en texte clair. 
-1. Corrigez les problèmes et arrêtez l’exposition. 
-1. Une fois la correction confirmée, nous vous recommandons d’exiger la signature LDAP au niveau du contrôleur de domaine. Pour en savoir plus sur la signature des serveurs LDAP, consultez [Contrôleur de domaine : conditions requises pour la signature de serveur LDAP](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements). 
- 
+1. Recherchez la raison pour laquelle ces entités utilisent LDAP en texte clair.
+1. Corrigez les problèmes et arrêtez l’exposition.
+1. Une fois la correction confirmée, nous vous recommandons d’exiger la signature LDAP au niveau du contrôleur de domaine. Pour en savoir plus sur la signature des serveurs LDAP, consultez [Contrôleur de domaine : conditions requises pour la signature de serveur LDAP](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
+
+> [!NOTE]
+> Cette évaluation est mise à jour en quasi-temps réel.
 
 ## <a name="next-steps"></a>Étapes suivantes
+
 - [Filtrage des activités Azure ATP dans Cloud App Security](atp-activities-filtering-mcas.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

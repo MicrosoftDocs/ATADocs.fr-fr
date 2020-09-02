@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f7e6e4ad8c70e25c0b63ea17aaa8f45d4376ef9
-ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
+ms.openlocfilehash: c01770ca3f115a3ba445f669ec1c0db25a322721
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87293183"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809156"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible
 
@@ -44,6 +44,9 @@ Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de
 
     ![Évaluation de la sécurité pour désactiver le service Spouleur d’impression](media/atp-cas-isp-print-spooler-2.png)
 1. Prenez les mesures appropriées sur les contrôleurs de domaine à risque et supprimez activement le service Spouleur d’impression : manuellement, par le biais d’un objet de stratégie de groupe ou avec d’autres types de commandes distantes.
+
+> [!NOTE]
+> Cette évaluation est mise à jour en quasi-temps réel.
 
 ## <a name="remediation"></a>Mise à jour
 

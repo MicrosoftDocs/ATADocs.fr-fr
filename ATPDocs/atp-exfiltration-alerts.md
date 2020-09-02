@@ -1,6 +1,6 @@
 ---
 title: Tutoriel sur les alertes d’exfiltration Azure ATP
-d|Description: This article explains the Azure ATP alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
+description: Cet article décrit les alertes Azure ATP qui sont émises quand des attaques faisant généralement partie de la phase d’exfiltration sont détectées dans votre organisation.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc700b395ea5c93c5d19b7bdbf2131e742c83f20
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5561ec663f5ef0ef0adfc7ac7cc4033f90bfe3de
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773531"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953522"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration
 
@@ -29,7 +29,7 @@ En général, les cyberattaques sont lancées contre des entités accessibles, p
 4. [Dominance du domaine](atp-domain-dominance-alerts.md)
 5. **Exfiltration**
 
-Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md).
+Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md). Pour plus d’informations sur les **vrais positifs (TP)** , les **vrais positifs bénins (B-TP)** et les **faux positifs (FP)** , consultez [Classifications des alertes de sécurité](understanding-security-alerts.md#security-alert-classifications).
 
 Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Exfiltration** détectées par Azure ATP sur votre réseau. Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et empêcher les attaques suivantes :
 
@@ -52,7 +52,7 @@ Certaines entreprises utilisent DNS de manière légitime pour les communication
 
 1. Vérifiez si le domaine de requête inscrit appartient à une source approuvée, comme votre fournisseur d’antivirus.
     - Considérez-la comme une activité **B-TP** si le domaine est connu et approuvé et que les requêtes DNS sont autorisées. *Fermez* l’alerte de sécurité et excluez le domaine des alertes ultérieures.
-    - Si le domaine de requête inscrit n’est pas approuvé, identifiez le processus qui crée la requête sur l’ordinateur source. Utilisez le [Moniteur de processus](https://docs.microsoft.com/sysinternals/downloads/procmon) pour vous aider dans cette tâche.
+    - Si le domaine de requête inscrit n’est pas approuvé, identifiez le processus qui crée la requête sur l’ordinateur source. Utilisez le [Moniteur de processus](/sysinternals/downloads/procmon) pour vous aider dans cette tâche.
 
 **Comprendre l’étendue de la violation**
 
@@ -60,14 +60,14 @@ Certaines entreprises utilisent DNS de manière légitime pour les communication
     - Avec quelle adresse IP est-il associé ?
     - Qui est le propriétaire du domaine ?
     - Où se trouve l’adresse IP ?
-1. Examinez les [ordinateurs source et de destination](investigate-a-computer.md).
+1. Examinez les [ordinateurs sources et de destination](investigate-a-computer.md).
 
 **Suggestions de correction et étapes préventives**
 
 1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Si après votre investigation le domaine de requête inscrit demeure non approuvé, nous vous recommandons de bloquer le domaine de destination afin d’éviter toute communication future.
+1. Si après votre investigation le domaine de requête inscrit demeure non approuvé, nous vous recommandons de bloquer le domaine de destination afin d’éviter toute communication future.
 
 > [!NOTE]
 > Les alertes de sécurité *Communications suspectes via DNS* indiquent le domaine suspecté. Les nouveaux domaines, ou les domaines récemment ajoutés qui ne sont pas encore connus ou reconnus par Azure ATP, mais qui sont connus de votre organisation ou en font partie, peuvent être fermés.
@@ -86,17 +86,17 @@ Les contrôleurs de domaine contiennent les données les plus sensibles de l’o
 **Comprendre l’étendue de la violation**
 
 1. Examinez les [utilisateurs sources](investigate-a-user.md).
-2. Examinez les [ordinateurs sources et de destination](investigate-a-computer.md) des copies.
+1. Examinez les [ordinateurs sources et de destination](investigate-a-computer.md) des copies.
 
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez le mot de passe des utilisateurs source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les fichiers qui ont été copiés et supprimez-les.  
     Vérifiez s’il y a eu d’autres activités sur ces fichiers. Ont-ils été transférés vers un autre emplacement ? Vérifiez s’ils ont été transférés hors du réseau de l’organisation.
     - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-3. Si l’un des fichiers est le fichier **ntds.dit** :
+1. Si l’un des fichiers est le fichier **ntds.dit** :
     - Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés.
 

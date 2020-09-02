@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 59f3f8a201b78667ef5c8d6d20da177104dc3a38
-ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
+ms.openlocfilehash: 7ac819d4d1f388ea632505cbd3394101020419bc
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85256866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88808986"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Évaluation de la sécurité : Attributs de compte non sécurisés
 
@@ -38,6 +38,9 @@ Par exemple, si l’attribut *PasswordNotRequired* est activé, un attaquant peu
 1. Utilisez le tableau du rapport pour identifier les comptes qui présentent des attributs non sécurisés.
     ![Passer en revue les principales entités impactées et créer un plan d’action](media/atp-cas-isp-unsecure-account-attributes-1.png)
 1. Prenez les mesures appropriées sur ces comptes d’utilisateurs en modifiant ou supprimant les attributs en question.
+
+> [!NOTE]
+> Cette évaluation est mise à jour en quasi-temps réel.
 
 ## <a name="remediation"></a>Correction
 

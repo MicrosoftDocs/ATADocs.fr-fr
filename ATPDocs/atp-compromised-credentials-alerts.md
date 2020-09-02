@@ -1,6 +1,6 @@
 ---
 title: Alertes de sécurité Azure ATP indiquant des informations d’identification compromises
-d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
+description: Cet article décrit les alertes Azure ATP qui sont émises quand des attaques faisant généralement partie de la phase de compromission des informations d’identification sont détectées dans votre organisation.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c8e4f0ae7f49603518cfc6a3d9a9a639827faef
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d0987eec71831b4dc925280c4379be35d5e6f011
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773718"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245877"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 
@@ -25,11 +25,11 @@ En général, les cyberattaques sont lancées contre des entités accessibles, p
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. **Informations d’identification compromises**
-3. [Déplacements latéraux](atp-lateral-movement-alerts.md)
+3. [Mouvements latéraux](atp-lateral-movement-alerts.md)
 4. [Dominance du domaine](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md).
+Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md). Pour plus d’informations sur les **vrais positifs (TP)** , les **vrais positifs bénins (B-TP)** et les **faux positifs (FP)** , consultez [Classifications des alertes de sécurité](understanding-security-alerts.md#security-alert-classifications).
 
 Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Informations d’identification compromises** détectées par Azure ATP sur votre réseau. Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et empêcher les types d’attaques suivants :
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[utilisateur source](investigate-a-user.md).
-2. Examinez l’[ordinateur source](investigate-a-computer.md).
+1. Examinez l’[ordinateur source](investigate-a-computer.md).
 
     > [!NOTE]
     > Si l’authentification a été effectuée avec NTLM, il peut arriver dans certains scénarios que les informations disponibles sur le serveur auquel l’ordinateur source a tenté d’accéder soient insuffisantes. Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur.  
@@ -101,7 +101,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 
       Si la réponse aux questions ci-dessus est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
-2. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
+1. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
     - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
     - Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
@@ -122,15 +122,15 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-3. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-4. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
+1. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Appliquez des [mots de passe complexes et longs](/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
 
 ## <a name="suspected-brute-force-attack-ldap-external-id-2004"></a>Suspicion d’attaque par force brute (LDAP) (ID externe 2004)
 
-*Nom précédent :* Attaque par force brute par le biais d’une liaison simple LDAP
+*Nom précédent :* Attaque par force brute à l'aide d'une liaison simple LDAP
 
 **Description**
 
@@ -148,7 +148,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 
      Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
-2. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
+1. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
     - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
 
       Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
@@ -156,17 +156,17 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. Dans la page de l’alerte, vérifiez si des utilisateurs ont été devinés, le cas échéant. Pour chaque utilisateur qui a été deviné, [consultez leur profil](investigate-a-user.md) afin d’en savoir plus.
+1. Dans la page de l’alerte, vérifiez si des utilisateurs ont été devinés, le cas échéant. Pour chaque utilisateur qui a été deviné, [consultez leur profil](investigate-a-user.md) afin d’en savoir plus.
 
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-3. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-4. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
-5. Empêchez l’utilisation du protocole de texte clair LDAP dans votre organisation.
+1. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Appliquez des [mots de passe complexes et longs](/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
+1. Empêchez l’utilisation du protocole de texte clair LDAP dans votre organisation.
 
 ## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Suspicion d’attaque par force brute (SMB) (ID externe 2033)
 
@@ -185,21 +185,21 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 
 1. Vérifiez si l’ordinateur source exécute son propre type de pile NTLM ou SMB d’application.
     1. Si l’ordinateur source exécute ce type d’application alors qu’il ne devrait pas continuer à le faire, corrigez la configuration de l’application si nécessaire. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**.
-    2. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP** et excluez cet ordinateur.
+    2. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, **fermez** l’alerte de sécurité en la signalant comme un vrai positif bénin (**B-TP**), puis excluez cet ordinateur.
 
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. Examinez l’[utilisateur source](investigate-a-user.md) (le cas échéant).
+1. Examinez l’[utilisateur source](investigate-a-user.md) (le cas échéant).
 
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     2. Cherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis.
     3. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-3. Appliquez des [mots de passe complexes et longs](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) dans l’organisation. Les mots de passe complexes et longs assurent le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
+1. Appliquez des [mots de passe complexes et longs](/windows/security/threat-protection/security-policy-settings/password-policy) dans l’organisation. Les mots de passe complexes et longs assurent le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
 4. [Désactivez SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Suspicion d’attaque de ransomware WannaCry (ID externe 2035)
@@ -225,7 +225,7 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. Examinez l’[utilisateur compromis](investigate-a-user.md).
+1. Examinez l’[utilisateur compromis](investigate-a-user.md).
 
 **Suggestions de correction et étapes préventives**
 
@@ -233,7 +233,7 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
     - [Supprimez WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo).
     - WanaKiwi peut déchiffrer les données interceptées par certains ransomwares, mais uniquement si l’utilisateur n’a pas redémarré ou éteint l’ordinateur. Pour plus d’informations, consultez [Ransomware WannaCry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
     - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Appliquez des correctifs à toutes vos machines, sans oublier les mises à jour de sécurité.
+1. Appliquez des correctifs à toutes vos machines, sans oublier les mises à jour de sécurité.
     - [Désactivez SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
 ## <a name="suspected-use-of-metasploit-hacking-framework-external-id-2034"></a>Suspicion d’utilisation du framework de piratage Metasploit (ID externe 2034)
@@ -248,7 +248,7 @@ Les attaquants utilisent des outils qui implémentent différents protocoles (SM
 
 1. Vérifiez si l’ordinateur source exécute un outil d’attaque tel que Metasploit ou Medusa.
 
-2. Si oui, c’est un vrai positif. Suivez les instructions de la rubrique **Comprendre l’étendue de la violation** ci-dessus.
+1. Si oui, c’est un vrai positif. Suivez les instructions de la rubrique **Comprendre l’étendue de la violation** ci-dessus.
 
 Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 
@@ -259,15 +259,15 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. S’il y a un utilisateur source, [examinez l’utilisateur](investigate-a-user.md).
+1. S’il y a un utilisateur source, [examinez l’utilisateur](investigate-a-user.md).
 
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez les mots de passe des utilisateurs devinés et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Incluez l’ordinateur source.
+1. Incluez l’ordinateur source.
     1. Trouvez l’outil qui a effectué l’attaque et supprimez-le.
     2. Cherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-3. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 4. [Désactivez SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
 ## <a name="suspicious-vpn-connection-external-id-2025"></a>Connexion VPN suspecte (ID externe 2025)
@@ -280,7 +280,7 @@ Azure ATP apprend le comportement de l’entité pour les utilisateurs de connex
 
 Le modèle de comportement VPN est basé sur les ordinateurs auxquels les utilisateurs se connectent et les emplacements à partir desquels ils se connectent.
 
-Une alerte est ouverte quand il y a un écart de comportement de l’utilisateur par rapport à l’algorithme de machine learning.
+Une alerte est déclenchée quand il y a un écart de comportement de l’utilisateur par rapport à l’algorithme de machine learning.
 
 **Période d’apprentissage**
 
@@ -297,14 +297,14 @@ Si la réponse aux questions ci-dessus est oui, **fermez** l’alerte de sécuri
 **Comprendre l’étendue de la violation**
 
 1. Examinez l’[ordinateur source](investigate-a-computer.md).
-2. S’il y a un utilisateur source, [examinez l’utilisateur](investigate-a-user.md).
+1. S’il y a un utilisateur source, [examinez l’utilisateur](investigate-a-user.md).
 
 **Suggestions de correction et étapes préventives**
 
 1. Réinitialisez le mot de passe de l’utilisateur et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-2. Empêchez cet utilisateur de se connecter par VPN.
-3. Empêchez cet ordinateur de se connecter par VPN.
-4. Vérifiez si d’autres utilisateurs sont connectés via VPN à partir de ces emplacements, puis vérifiez s’ils sont compromis.
+1. Empêchez cet utilisateur de se connecter par VPN.
+1. Empêchez cet ordinateur de se connecter par VPN.
+1. Vérifiez si d’autres utilisateurs sont connectés via VPN à partir de ces emplacements, puis vérifiez s’ils sont compromis.
 
 > [!div class="nextstepaction"]
 > [Tutoriel sur les alertes de mouvement latéral](atp-lateral-movement-alerts.md)

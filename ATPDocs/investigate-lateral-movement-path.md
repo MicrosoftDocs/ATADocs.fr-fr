@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0b818f8962cc795ad826e082bf12242bfad9e158
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 4d27ca218eceb42f379680e9f2fae1b5e17e237f
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772103"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956616"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutoriel : Utiliser des chemins de mouvement latéral
 
@@ -29,44 +29,44 @@ Les attaques par mouvements latéraux sont généralement effectuées selon diff
 Dans ce tutoriel, vous allez apprendre à utiliser les chemins de mouvement latéral d’Azure ATP pour [examiner](#investigate) les chemins de mouvement latéral potentiels et, en combinaison avec les alertes de sécurité d’Azure ATP, pour obtenir une meilleure compréhension de ce qui s’est passé dans votre réseau et de quelle manière. Vous allez également apprendre à utiliser le [rapport des chemins de mouvement latéral pour les comptes sensibles](#discover-your-at-risk-sensitive-accounts) pour découvrir tous les comptes sensibles avec des chemins de mouvement latéral potentiels détectés dans votre réseau sur une période de temps donnée.
 
 > [!div class="checklist"]
-> * Examiner les chemins de mouvement latéral
-> * Découvrir vos comptes sensibles à risque
-> * Accéder au rapport **Chemins d’accès de mouvement latéral pour les comptes sensibles**
-
+>
+> - Examiner les chemins de mouvement latéral
+> - Découvrir vos comptes sensibles à risque
+> - Accéder au rapport **Chemins d’accès de mouvement latéral pour les comptes sensibles**
 
 ## <a name="investigate"></a>Étudier
 
 Il existe plusieurs façons d’utiliser et d’investiguer les chemins de mouvement latéral. Dans le portail Azure ATP, effectuez une recherche par entité, puis explorez par chemin ou par activité.
 
-1. Dans le portail, recherchez un utilisateur ou un ordinateur. Regardez si un badge de mouvement latéral a été ajouté à un profil d’entité. Les badges apparaissent seulement quand une entité est détectée dans un chemin de mouvement latéral potentiel au cours des dernières 48 heures.  
+1. Dans le portail, recherchez un utilisateur ou un ordinateur. Regardez si un badge de mouvement latéral a été ajouté à un profil d’entité. Les badges apparaissent seulement quand une entité est détectée dans un chemin de mouvement latéral potentiel au cours des dernières 48 heures.
 
-   ![icône de mouvement latéral](./media/lateral-movement-icon.png) ou ![icône de chemin d’accès](./media/paths-icon.png).
+    ![icône de mouvement latéral](media/lateral-movement-icon.png) ou ![icône de chemin d’accès](media/paths-icon.png).
 
-2. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**.
+1. Dans la page de profil utilisateur qui s’ouvre, cliquez sur l’onglet **Chemins d’accès de mouvement latéral**.
 
-   ![Onglet Chemin de mouvement latéral d’Azure ATP](./media/lateral-movement-path-tab.png)
+    ![Onglet Chemin de mouvement latéral d’Azure ATP](media/lateral-movement-path-tab.png)
 
-3. Le graphe qui s’affiche montre une carte des chemins possibles vers l’utilisateur sensible au cours des dernières 48 heures. Si aucune activité n’a été détectée sur cette période, il n’apparaîtra pas. Utilisez l’option **Afficher une autre date** pour afficher le graphe avec les détections antérieures de chemin de mouvement latéral pour l’entité.
+1. Le graphe qui s’affiche montre une carte des chemins possibles vers l’utilisateur sensible au cours des dernières 48 heures. Si aucune activité n’a été détectée sur cette période, il n’apparaîtra pas. Utilisez l’option **Afficher une autre date** pour afficher le graphe avec les détections antérieures de chemin de mouvement latéral pour l’entité.
 
-   ![Chemin de mouvement latéral - Afficher une autre date](./media/atp-view-different-date.png)
+    ![Chemin de mouvement latéral - Afficher une autre date](media/atp-view-different-date.png)
 
-4. Examinez le graphe pour voir si vous pouvez en savoir plus sur l’exposition aux risques des informations d’identification de l’utilisateur sensible. Par exemple, dans le chemin, suivez les flèches grises **Connecté par** pour voir où Nick s’est connecté avec ses informations d’identification privilégiées. Dans ce cas, ses informations d'identification ont été enregistrées sur l’ordinateur SHAREPOINT-SRV. Identifiez maintenant, parmi les autres utilisateurs connectés à des ordinateurs, lesquels ont généré le plus de risques et de vulnérabilité. Pour ce faire, examinez les flèches noires **Administrateur de** afin de savoir qui possède des privilèges d’administrateur sur la ressource. Dans cet exemple, chaque membre du groupe HelpDesk a la possibilité d’accéder aux informations d’identification des utilisateurs à partir de cette ressource.  
+1. Examinez le graphe pour voir si vous pouvez en savoir plus sur l’exposition aux risques des informations d’identification de l’utilisateur sensible. Par exemple, dans le chemin, suivez les flèches grises **Connecté par** pour voir où Nick s’est connecté avec ses informations d’identification privilégiées. Dans ce cas, ses informations d'identification ont été enregistrées sur l’ordinateur SHAREPOINT-SRV. Identifiez maintenant, parmi les autres utilisateurs connectés à des ordinateurs, lesquels ont généré le plus de risques et de vulnérabilité. Pour ce faire, examinez les flèches noires **Administrateur de** afin de savoir qui possède des privilèges d’administrateur sur la ressource. Dans cet exemple, chaque membre du groupe HelpDesk a la possibilité d’accéder aux informations d’identification des utilisateurs à partir de cette ressource.
 
-   ![Chemin de mouvement latéral d’Azure ATP](./media/atp-lmp.png)
+    ![Chemin de mouvement latéral d’Azure ATP](media/atp-lmp.png)
 
 ## <a name="discover-your-at-risk-sensitive-accounts"></a>Découvrir vos comptes sensibles à risque
 
-Pour détecter tous les comptes sensibles de votre réseau qui sont exposés en raison de leur connexion à des comptes, des groupes ou des ordinateurs non sensibles dans des chemins de mouvement latéral, suivez ces étapes. 
+Pour détecter tous les comptes sensibles de votre réseau qui sont exposés en raison de leur connexion à des comptes, des groupes ou des ordinateurs non sensibles dans des chemins de mouvement latéral, suivez ces étapes.
 
-1. Dans le menu du portail Azure ATP, cliquez sur l’icône Rapports. ![Icône Rapports](./media/atp-report-icon.png).
+1. Dans le menu du portail Azure ATP, cliquez sur l’icône Rapports. ![Icône Rapports](media/atp-report-icon.png).
 
-2. Sous **Chemins d’accès par mouvement latéral à des comptes sensibles**, le rapport est grisé en l’absence de chemins potentiels de mouvement latéral. S’il en existe, il présélectionne automatiquement la première date présentant des données pertinentes. Il contient des données couvrant au maximum les 60 derniers jours.
+1. Sous **Chemins d’accès par mouvement latéral à des comptes sensibles**, le rapport est grisé en l’absence de chemins potentiels de mouvement latéral. S’il en existe, il présélectionne automatiquement la première date présentant des données pertinentes. Il contient des données couvrant au maximum les 60 derniers jours.
 
-   ![rapports](./media/reports.png)
+    ![Capture d’écran montrant la sélection de la date du rapport](media/reports.png)
 
-3. Cliquez sur **Télécharger**.
+1. Cliquez sur **Télécharger**.
 
-4. Un fichier Excel est créé. Il donne des détails sur les chemins potentiels de mouvement latéral et sur l’exposition des comptes sensibles aux dates sélectionnées. L’onglet **Résumé** présente des graphiques qui décrivent en détail le nombre d’ordinateurs et de comptes sensibles, ainsi que les moyennes pour l’accès à risque. L’onglet **Détails** indique la liste des comptes sensibles à examiner.
+1. Un fichier Excel est créé. Il donne des détails sur les chemins potentiels de mouvement latéral et sur l’exposition des comptes sensibles aux dates sélectionnées. L’onglet **Résumé** présente des graphiques qui décrivent en détail le nombre d’ordinateurs et de comptes sensibles, ainsi que les moyennes pour l’accès à risque. L’onglet **Détails** indique la liste des comptes sensibles à examiner.
 
 ## <a name="schedule-report"></a>Planifier un rapport
 

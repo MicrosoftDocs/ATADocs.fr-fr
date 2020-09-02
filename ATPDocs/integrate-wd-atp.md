@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 02/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 11b672b4820b7d79f0fbdc079370e744154facf3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cd8e17d48af6958367f0514caaad3acee8477c35
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771865"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956752"
 ---
 # <a name="integrate-azure-atp-with-microsoft-defender-atp"></a>Intégrer Azure ATP avec Microsoft Defender ATP
 
@@ -27,7 +27,7 @@ En intégrant Microsoft Defender ATP et Azure ATP, vous pouvez tirer parti de to
 
 - Capteurs comportementaux de point de terminaison : intégrés à Windows 10, ils collectent et traitent les signaux comportementaux du système d’exploitation (par exemple, les processus, le Registre, les fichiers et les communications réseau) et envoient ces données de capteurs à votre instance cloud, isolée et privée de Microsoft Defender ATP.
 
-- Analyse de la sécurité cloud : grâce au Big Data, au Machine Learning et à la vision unique de Microsoft sur l’écosystème Windows (par exemple, [l’Outil de suppression de logiciels malveillants Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), les produits cloud d’entreprise (par exemple, Office 365) et les ressources en ligne (par exemple, Bing et la réputation d’URL SmartScreen), les signaux comportementaux sont convertis en insights, détections et réponses recommandées aux menaces avancées.
+- Analyse de la sécurité cloud : Grâce au Big Data, au machine learning et à la vision unique de Microsoft sur l’écosystème Windows (par exemple, l’[Outil de suppression de logiciels malveillants Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), les produits cloud d’entreprise (par exemple, Microsoft 365) et les ressources en ligne (par exemple, Bing et la réputation d’URL SmartScreen), les signaux comportementaux sont convertis en insights, détections et réponses recommandées aux menaces avancées.
 
 - Veille des menaces : générée par les chasseurs et les équipes de sécurité de Microsoft, et complétée par les renseignements fournis par les partenaires, la veille des menaces permet à Microsoft Defender ATP d’identifier les procédures, les techniques et les outils utilisés par les attaquants, et de générer des alertes quand ces activités sont observées dans les données collectées par les capteurs.
 
@@ -58,37 +58,37 @@ Pour activer cette fonctionnalité, vous avez besoin d’une licence pour Azure 
 
 1. Dans le portail Azure ATP, ouvrez **Configuration**.
 
-    ![Menu Configuration Azure ATP](./media/atp-configuration-wd.png)
-2. Dans la liste des Configurations, sélectionnez **Microsoft Defender ATP** et définissez l’activation/la désactivation de l’intégration sur **Activé**.
+    ![Menu Configuration Azure ATP](media/atp-configuration-wd.png)
+1. Dans la liste des Configurations, sélectionnez **Microsoft Defender ATP** et définissez l’activation/la désactivation de l’intégration sur **Activé**.
 
-    ![Activer l’intégration de Windows Defender](./media/enable-integration.png)
+    ![Activer l’intégration de Windows Defender](media/enable-integration.png)
 
-3. Dans le [portail Microsoft Defender ATP](https://securitycenter.windows.com/preferences/advanced), accédez à **Paramètres** et à **Fonctionnalités avancées**, puis définissez **Intégration Azure ATP** sur **ON**.
+1. Dans le [portail Microsoft Defender ATP](https://securitycenter.windows.com/preferences/advanced), accédez à **Paramètres** et à **Fonctionnalités avancées**, puis définissez **Intégration Azure ATP** sur **ON**.
 
-    ![Activer l’intégration Microsoft Defender ATP](./media/wd-atp-enable.png)
+    ![Activer l’intégration Microsoft Defender ATP](media/wd-atp-enable.png)
 
-4. Pour vérifier l’état de l’intégration, dans le portail Azure ATP, accédez à **Paramètres** > **Intégration avec Microsoft Defender ATP**. Vous pouvez voir le statut de l’intégration ; en cas de problème, vous verrez une erreur.
+1. Pour vérifier l’état de l’intégration, dans le portail Azure ATP, accédez à **Paramètres** > **Intégration avec Microsoft Defender ATP**. Vous pouvez voir le statut de l’intégration ; en cas de problème, vous verrez une erreur.
 
 ## <a name="how-it-works"></a>Fonctionnement
 
 Une fois Azure ATP et Microsoft Defender ATP complètement intégrés, dans le portail Azure ATP, dans la fenêtre contextuelle de mini-profil et dans la page de profil d’entité, chaque entité figurant dans Microsoft Defender ATP inclut un badge pour montrer qu’elle est intégrée à Microsoft Defender ATP.
 
- ![Alertes Microsoft Defender ATP](./media/profile-alerts-wd.png)
+ ![Profil des alertes Microsoft Defender ATP](media/profile-alerts-wd.png)
 
 Si l’entité contient des alertes dans Microsoft Defender ATP, un nombre à côté du badge indique combien d’alertes ont été générées.
 
- ![Alertes Azure ATP](./media/atp-integrated-wd-icon-alerts.png)
+ ![Alertes Azure ATP](media/atp-integrated-wd-icon-alerts.png)
 
 Si vous cliquez sur le badge, vous êtes dirigé vers le portail Microsoft Defender ATP où vous pouvez afficher et solutionner les alertes. Si l’entité n’est pas reconnue par Microsoft Defender ATP, le badge est grisé.
 
- ![Microsoft Defender ATP grisé](./media/wd-grey.png)
+ ![Microsoft Defender ATP grisé](media/wd-grey.png)
 
 Dans le portail Microsoft Defender ATP, cliquez sur un point de terminaison pour voir les alertes Azure ATP. Si vous cliquez sur les alertes pour cette entité dans Microsoft Defender ATP, la page de profil de l’entité s’ouvre dans Azure ATP.
 
  > [!NOTE]
  > Actuellement, l’intégration d’Azure ATP à Microsoft Defender ATP prend en charge seulement les utilisateurs et les machines qui font partie de l’annuaire AD local. Les utilisateurs d’Azure AD et les machines virtuelles gérées dans Azure ne sont pas pris en compte dans le cadre de l’intégration
 
-![Alertes Microsoft Defender ATP](./media/wd-atp-alerts.png)
+![Alertes Microsoft Defender ATP](media/wd-atp-alerts.png)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,43 +1,43 @@
 ---
 title: Tutoriel sur les alertes de sécurité Azure ATP
-d|Description: This article explains how to use and understand Azure ATP security alerts.
+description: Cet article explique comment utiliser et comprendre les alertes de sécurité Azure ATP.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 1/13/2019
-ms.topic: tutorial
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4af6355a157dad0f507fa018c2de97520fdf53ae
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b236a1dcd301e00947eac62a6abe1470e4397c37
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956208"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutoriel : Présentation des alertes de sécurité
 
 Les alertes de sécurité Azure ATP expliquent en langage clair et à l’aide de graphismes les activités suspectes qui ont été identifiées sur votre réseau ainsi que les ordinateurs et les acteurs impliqués dans les menaces. Les alertes sont classées par gravité, colorées afin de faciliter le filtrage visuel et organisées par phase de menace. Chaque alerte est conçue pour vous aider à comprendre rapidement et précisément ce qui se passe sur votre réseau. Des listes de preuves d’alertes contiennent des liens directs vers les ordinateurs et les utilisateurs impliqués, afin de rendre vos recherches plus faciles et plus directes.
 
-Dans ce tutoriel, vous allez découvrir la structure des alertes de sécurité Azure ATP et comment les utiliser : 
+Dans ce tutoriel, vous allez découvrir la structure des alertes de sécurité Azure ATP et comment les utiliser :
 
 > [!div class="checklist"]
-> * Structure des alertes de sécurité
-> * Classifications des alertes de sécurité
-> * Catégories des alertes de sécurité
-> * Investigation avancée des alertes de sécurité
-> * Entités associées
-> * Azure ATP et la résolution de noms réseau
-
+>
+> - Structure des alertes de sécurité
+> - Classifications des alertes de sécurité
+> - Catégories des alertes de sécurité
+> - Investigation avancée des alertes de sécurité
+> - Entités associées
+> - Azure ATP et la résolution de noms réseau
 
 ## <a name="security-alert-structure"></a>Structure des alertes de sécurité
 
 Chaque alerte de sécurité Azure ATP comprend les éléments suivants :
- 
+
 - **Titre de l’alerte** <br> Nom Azure ATP officiel de l’alerte.
 - **Description** <br> Brève explication de ce qui s’est passé.
 - **Preuve** <br> Informations supplémentaires et pertinentes concernant ce qui s’est passé, afin de vous aider lors du processus d’investigation.
@@ -53,21 +53,21 @@ Après une investigation appropriée, toutes les alertes de sécurité Azure ATP
 
 - **B-TP (benign true positive)**  : action détectée par Azure ATP qui est réelle, mais pas malveillante, comme un test de pénétration ou une activité connue générée par une application approuvée.
 
-- **FP (false positive)**  : fausse alerte. L’activité n’a pas eu lieu.
+- **FP (false positive)**  : Fausse alerte, ce qui signifie que l’activité n’a pas eu lieu.
 
 ### <a name="is-the-security-alert-a-tp-b-tp-or-fp"></a>L’alerte de sécurité est-elle TP, B-TP ou FP ?
 
 Pour chaque alerte, posez-vous les questions suivantes afin de déterminer la classification d’alerte et de vous aider à décider de la marche à suivre :
 
 1. Quelle est la fréquence de cette alerte de sécurité spécifique dans votre environnement ?
-2. L’alerte a-t-elle été déclenchée par les mêmes types d’ordinateurs ou d’utilisateurs
+1. L’alerte a-t-elle été déclenchée par les mêmes types d’ordinateurs ou d’utilisateurs
    (par exemple, des serveurs ayant le même rôle ou des utilisateurs du même groupe/service) ? Si les ordinateurs ou utilisateurs étaient similaires, vous pouvez décider de les exclure afin d’éviter de recevoir ultérieurement d’autres alertes FP.
 
-Remarque : Une augmentation des alertes du même type réduit généralement le niveau d’importance/de suspicion de l’alerte. Pour les alertes répétées, vérifiez les configurations et utilisez les détails et les définitions de l’alerte de sécurité afin de comprendre exactement ce qui déclenche la répétition. 
+Remarque : Une augmentation des alertes du même type réduit généralement le niveau d’importance/de suspicion de l’alerte. Pour les alertes répétées, vérifiez les configurations et utilisez les détails et les définitions de l’alerte de sécurité afin de comprendre exactement ce qui déclenche la répétition.
 
 ## <a name="security-alert-categories"></a>Catégories des alertes de sécurité
 
-Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases (voir ci-dessous), comme les phases d’une chaîne de destruction de cyberattaque standard. Apprenez-en davantage sur chaque phase et sur les alertes conçues pour détecter chaque attaque grâce aux liens suivants :
+Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases, telles que les phases d’une chaîne de destruction de cyberattaque standard. Apprenez-en davantage sur chaque phase et sur les alertes conçues pour détecter chaque attaque grâce aux liens suivants :
 
 - [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
 - [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
@@ -80,29 +80,29 @@ Les alertes de sécurité d’Azure ATP sont divisées en catégories ou phases 
 Pour obtenir plus de détails sur une alerte de sécurité, téléchargez le rapport d’alerte détaillé Excel.
 
 1. Cliquez sur les trois points dans le coin supérieur droit d’une alerte et sélectionnez *Télécharger les détails*.
- 
-Chaque téléchargement Excel d’alerte Azure ATP fournit les informations suivantes :   
-- Synthèse : le premier onglet comprend les principales caractéristiques de l’alerte 
-  - Titre 
-  - Description 
-  - Heure de début (UTC) 
-  - Heure de fin (UTC) 
+
+Chaque téléchargement Excel d’alerte Azure ATP fournit les informations suivantes :
+- Synthèse : le premier onglet comprend les principales caractéristiques de l’alerte
+  - Titre
+  - Description
+  - Heure de début (UTC)
+  - Heure de fin (UTC)
   - Gravité : faible/moyenne/élevée
   - État : ouverte/fermée
   - Heure de mise à jour de l’état (UTC)
   - Afficher dans le navigateur
-- Toutes les entités impliquées (comptes, ordinateurs et ressources) sont listées, réparties en fonction de leur rôle. 
-    - Source, destination ou attaquée, en fonction de l’alerte. 
-- La plupart des onglets contiennent les données suivantes pour chaque entité : 
+- Toutes les entités impliquées (comptes, ordinateurs et ressources) sont listées, réparties en fonction de leur rôle.
+    - Source, destination ou attaquée, en fonction de l’alerte.
+- La plupart des onglets contiennent les données suivantes pour chaque entité :
   - Nom
-  - Détails 
-  - Type 
-  - SamName  
+  - Détails
+  - Type
+  - SamName
   - Ordinateur source
   - Utilisateur source (s’il est disponible)
   - Contrôleurs de domaine
   - Ressource sollicitée : heure, ordinateur, nom, détails, type, service.
-  - Onglets supplémentaires par alerte : 
+  - Onglets supplémentaires par alerte :
       - Sur les comptes attaqués quand l’attaque suspectée a utilisé la Force Brute.
       - Sur les serveurs DNS (Domain Name System) quand l’attaque suspectée a impliqué la reconnaissance de mappage réseau (DNS).
   - Entités associées : ID, type, nom, Json d’entité unique, Json de profil d’entité unique
@@ -114,10 +114,10 @@ Chaque téléchargement Excel d’alerte Azure ATP fournit les informations suiv
 
 ### <a name="related-entities"></a>Entités associées
 
-Dans chaque alerte, le dernier onglet présente les **entités connexes**. Les entités associées sont toutes les entités impliquées dans une activité suspecte, sans la séparation du « rôle » qu’elles ont joué dans l’alerte. Chaque entité a deux fichiers Json : le Json d’entité unique et le Json de profil d’entité unique. Utilisez ces deux fichiers Json pour en savoir plus sur l’entité et pour faciliter l’investigation de l’alerte. 
- 
+Dans chaque alerte, le dernier onglet présente les **entités connexes**. Les entités associées correspondent à l’ensemble des entités impliquées dans une activité suspecte, sans séparation liée au « rôle » qu’elles ont joué dans l’alerte. Chaque entité a deux fichiers Json : le Json d’entité unique et le Json de profil d’entité unique. Utilisez ces deux fichiers Json pour en savoir plus sur l’entité et pour faciliter l’investigation de l’alerte.
+
 **Json d’entité unique**
- 
+
 Inclut les données qu’Azure ATP a apprises à partir d’Active Directory concernant le compte. Cela comprend tous les attributs, comme *Distinguished Name*, *SID*, <em>LockoutTime et *PasswordExpiryTime</em>. Pour les comptes d’utilisateur, inclut les données telles que *Department*, *Mail* et *PhoneNumber*. Pour les comptes d’ordinateur, inclut les données comme *OperatingSystem*, <em>IsDomainController et *DnsName</em>.
 
 **Json de profil d’entité unique**
@@ -125,8 +125,8 @@ Inclut les données qu’Azure ATP a apprises à partir d’Active Directory con
 Inclut toutes les données qu’Azure ATP a profilé sur l’entité. Azure ATP utilise les activités d’événements et les activités réseau capturées pour en savoir plus sur les utilisateurs et les ordinateurs de l’environnement. Azure ATP profile les informations pertinentes par entité. Ces informations contribuent aux fonctionnalités d’identification des menaces d’Azure ATP.
 
 ![Entités associées](media/related-entities.png)
- 
-### <a name="how-can-i-use-azure-atp-information-in-an-investigation"></a>Comment puis-je utiliser les informations d’Azure ATP lors d’une investigation ? 
+
+### <a name="how-can-i-use-azure-atp-information-in-an-investigation"></a>Comment puis-je utiliser les informations d’Azure ATP lors d’une investigation ?
 
 Les investigations peuvent être aussi détaillées qu’il le faut. Voici quelques idées de méthodes d’investigation à l’aide des données fournies par Azure ATP.
 
@@ -139,14 +139,14 @@ Les investigations peuvent être aussi détaillées qu’il le faut. Voici quelq
 Les fonctionnalités de détection d’Azure ATP s’appuient sur la résolution de noms réseau active pour résoudre les adresses IP aux ordinateurs de votre organisation. Avec la résolution de noms réseau, Azure ATP peut corréler les activités brutes (contenant des adresses IP) aux ordinateurs concernés impliqués dans chaque activité. Sur la base des activités brutes, Azure ATP profile les entités, notamment les ordinateurs, et génère des alertes.
 
 Les données de résolution de noms réseau sont cruciales pour détecter les alertes suivantes :
-- Suspicion d’usurpation d’identité (pass-the-ticket) 
+- Suspicion d’usurpation d’identité (pass-the-ticket)
 - Suspicion d’attaque DCSync (réplication de services d’annuaire)
 - Reconnaissance de mappage de réseau (DNS)
 
 Utilisez les informations de résolution de noms réseau fournies sous l’onglet **Activités réseau** du rapport d’alerte pour déterminer si une alerte est un **FP**. En cas d’alerte **FP**, il est courant que le résultat de certitude de résolution de noms réseau soit donné avec une confiance faible.
 
-Les données des rapports téléchargés apparaissent dans deux colonnes : 
-- **Ordinateur source/de destination** 
+Les données des rapports téléchargés apparaissent dans deux colonnes :
+- **Ordinateur source/de destination**
 
     - *Certitude* : une certitude de faible résolution peut indiquer une résolution de noms incorrecte.
 - **Ordinateur source/de destination**
