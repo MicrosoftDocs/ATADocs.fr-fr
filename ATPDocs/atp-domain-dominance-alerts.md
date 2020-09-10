@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8dfe48699b25b94e7d0a1acc4d0c5ef59ecf5407
-ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
+ms.openlocfilehash: d73ae09d7855640d465dcb215007745673e0064b
+ms.sourcegitcommit: 01bf13ab92084ef4d2fbd6ff7537667fa07a0e21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89245826"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89471508"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -495,7 +495,7 @@ Non applicable
     1. Tous les utilisateurs connectés à l’ordinateur sont-ils censés l’être ?
     1. Les privilèges sont-ils appropriés pour le compte ?
 1. Les utilisateurs connectés sont-ils censés avoir accès à ces ressources ?
-    - Si vous avez activé l’intégration Windows Defender ATP, cliquez sur l’icône correspondante pour en savoir plus.
+    - Si vous avez activé l’intégration de Microsoft Defender ATP, cliquez sur l’icône correspondante pour en savoir plus.
 
 Si vous avez répondu « Oui » aux questions précédentes, fermez l’alerte de sécurité en la signalant comme un faux positif (**FP**).
 
