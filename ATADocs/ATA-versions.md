@@ -11,12 +11,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3230d3530fe4cbb271814c3cca98018b1735760d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: ad00cf100fdd7496e3c2339c08bdd6f99ae57056
+ms.sourcegitcommit: 77d43b683c4588edc84aacf220d1daac00e47c6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771680"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90523128"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support des versions de Microsoft Advanced Threat Analytics (ATA)
 
@@ -25,6 +25,11 @@ ms.locfileid: "84771680"
 La prise en charge de Microsoft ATA est définie par la stratégie de cycle de vie Microsoft pour [ATA 1. x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), avec un support standard qui se termine le 12 janvier 2021.
 
 ATA se met à jour plusieurs fois par an avec chaque version de mise à jour prise en charge pendant 12 mois à partir de sa date de publication générale (GA), ou 6 mois après la disponibilité d’une mise à jour plus récente.
+
+> [!NOTE]
+> **Cycle de vie de support**
+>
+> La [prise en charge standard](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics) de Microsoft Advanced Threat Analytics (ATA) sera terminée le 12 janvier 2021 et le support étendu sera poursuivi jusqu’au 13 janvier 2026.
 
 ## <a name="version-history"></a>Historique des versions
 
@@ -41,7 +46,8 @@ ATA se met à jour plusieurs fois par an avec chaque version de mise à jour pri
 |1.8.1|1.8.6765|2 AOÛT 2017|2 AOÛT 2018|
 |1.9|1.9.7312|21 MARS 2018|21 MARS 2019|
 |1.9.1|1.9.7412|1er JUILLET 2018|1er JUILLET 2019|
-|1.9.2|1.9.7478|28-MAR-2019||
+|1.9.2|1.9.7478|28-MAR-2019|14-MAR-2021|
+|1.9.3|1.9.7561|14-SEP-2020||
 
 ## <a name="see-also"></a>Voir aussi
 
