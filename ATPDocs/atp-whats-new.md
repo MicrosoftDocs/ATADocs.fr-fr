@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/26/2020
+ms.date: 09/13/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 93da7be5e6bac20764fa9d6c9440c0127cd0917a
-ms.sourcegitcommit: 1ee3f30f499810617559f70a703a9b254ba58f6a
+ms.openlocfilehash: d3b0787a94b65e3f4ba1e285366c155e2d222b01
+ms.sourcegitcommit: b62f7bace038314316f4b96af4999b5f210e4153
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89503403"
+ms.lasthandoff: 09/13/2020
+ms.locfileid: "90051794"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -25,6 +25,12 @@ Cet article est fréquemment mis à jour pour vous informer des nouveautés des 
 Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’à la version 2.55 (comprise), voir la [Référence sur les versions d’Azure ATP](atp-release-reference.md).
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2126"></a>Azure ATP version 2.126
+
+Publication : 13 septembre 2020
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2125"></a>Azure ATP version 2.125
 
@@ -785,7 +791,7 @@ Pour plus d’informations sur chacune des versions antérieures à la version 2
 ## <a name="see-also"></a>Voir aussi
 
 - [Présentation d’Azure Advanced Threat Protection](what-is-atp.md)
-- [Forum aux questions](atp-technical-faq.md)
+- [Forum Aux Questions](atp-technical-faq.md)
 - [Prérequis d’Azure ATP](atp-prerequisites.md)
 - [Planification de la capacité Azure ATP](atp-capacity-planning.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
