@@ -2,11 +2,12 @@
 ## [Qu’est-ce que Microsoft Advanced Threat Analytics ?](what-is-ata.md)
 ## [Quelles sont les menaces détectées par ATA ?](ata-threats.md)
 ## Nouveautés dans ATA?
-### [Nouveautés d’ATA version 1.9](whats-new-version-1.9.md)
+### [Nouveautés d’ATA version 1.9](whats-new-version-1.9.md)
+#### [Mise à jour vers ATA 1.9.3 : guide de migration](ata-update-1.9.3-migration-guide.md)
 #### [Mise à jour vers ATA 1.9.2 : guide de migration](ata-update-1.9.2-migration-guide.md)
 #### [Mise à jour vers ATA 1.9.1 : guide de migration](ata-update-1.9.1-migration-guide.md)
 #### [Mise à jour vers ATA 1.9 : guide de migration](ata-update-1.9-migration-guide.md)
-### [Nouveautés d’ATA version 1.8](whats-new-version-1.8.md)
+### [Nouveautés de la version 1.8 d’ATA](whats-new-version-1.8.md)
 #### [Mise à jour vers ATA 1.8 : guide de migration](ata-update-1.8-migration-guide.md)
 ### [Nouveautés d’ATA version 1.7](whats-new-version-1.7.md)
 #### [Mise à jour vers ATA 1.7 : guide de migration](ata-update-1.7-migration-guide.md)
@@ -15,14 +16,14 @@
 ### [Nouveautés d’ATA version 1.5](whats-new-version-1.5.md)
 #### [Mise à jour vers ATA 1.5 : guide de migration](ata-update-1.5-migration-guide.md)
 ### [Nouveautés d’ATA version 1.4](whats-new-version-1.4.md)
-## [Forum aux questions](ata-technical-faq.md)
+## [Forum Aux Questions](ata-technical-faq.md)
 ## [Sécurité et confidentialité des données ATA](ata-privacy-compliance.md)
-# Planification et conception
-## [Architecture d’ATA](ata-architecture.md)
+# Planifier et concevoir
+## [Architecture ATA](ata-architecture.md)
 ## [Planifier la capacité d’ATA](ata-capacity-planning.md)
 ## [Prérequis au déploiement d’ATA](ata-prerequisites.md)
 ## [Parcours de mise à niveau recommandé](upgrade-path.md)
-# Déploiement
+# Déployer
 ## [1 Télécharger et installer le Centre](install-ata-step1.md)
 ## [2 Se connecter à AD](install-ata-step2.md)
 ## [3 Télécharger le package de la passerelle ATA](install-ata-step3.md)
@@ -49,7 +50,7 @@
 ## [Gérer les journaux générés par le système](manage-telemetry-settings.md)
 ## [Définir des notifications ATA](setting-ata-alerts.md)
 ## [Définir les paramètres du serveur Syslog et du serveur de messagerie](setting-syslog-email-server-settings.md)
-## [Identifier les comptes sensibles](tag-sensitive-accounts.md)
+## [Identifier des comptes sensibles](tag-sensitive-accounts.md)
 ## [Gestion des activités suspectes](working-with-suspicious-activities.md)
 ## [Utilisation de la console ATA](working-with-ata-console.md)
 ### [Profils d’entité](entity-profiles.md)
@@ -59,12 +60,12 @@
 ### [Référence de ID de l'événement](event-id-reference.md)
 # Étudier
 ## [Guide des activités suspectes](suspicious-activity-guide.md)
-# Dépannage
+# Dépanner
 ## [Utilisation des journaux d’audit](troubleshoot-audit.md)
 ## [Résolution des problèmes connus](troubleshooting-ata-known-errors.md)
 ## [Résolution des problèmes à l’aide des journaux](troubleshooting-ata-using-logs.md)
 ## [Résolution des problèmes à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md)
 ## [Résolution des problèmes à l’aide de la base de données](troubleshooting-ata-using-ata-database.md)
 ## [Résolution des problèmes de démarrage du service](troubleshooting-service-startup.md)
-## [Récupération d’urgence](disaster-recovery.md)
+## [Récupération d'urgence](disaster-recovery.md)
 # [Guide de préparation à ATA](ata-resources.md)
