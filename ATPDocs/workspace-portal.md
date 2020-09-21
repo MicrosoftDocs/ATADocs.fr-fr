@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa19723ec0193a7a933eef292505a62b3d3b9961
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 984affaff8284f1d1a9239f43428b5167b832024
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955596"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826199"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Utilisation du portail Azure ATP
 
@@ -35,13 +35,13 @@ Cet article décrit comment utiliser les éléments clés du portail Azure ATP.
 ## <a name="enabling-access-to-the-azure-atp-portal"></a>Activation de l’accès au portail Azure ATP
 
 Pour pouvoir vous connecter au portail Azure ATP, vous devez vous connecter comme utilisateur affecté à un groupe de sécurité Azure Active Directory avec un accès au portail Azure ATP.
-Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](atp-role-groups.md).
+Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](role-groups.md).
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Connexion au portail Azure ATP
 
 1. Vous pouvez entrer dans le portail Azure ATP soit en vous connectant au portail [https://portal.atp.azure.com](https://portal.atp.azure.com) et en sélectionnant votre instance, soit en accédant à l’URL de l’instance : `https://*instancename*.atp.azure.com`.
 
-1. Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](atp-role-groups.md).
+1. Azure ATP prend en charge l’authentification unique intégrée à l’authentification Windows : si vous avez déjà ouvert une session sur votre ordinateur, Azure ATP utilise ce jeton pour vous connecter au portail Azure ATP. Vous pouvez aussi vous connecter à l’aide d’une carte à puce. Vos autorisations dans Azure ATP correspondent à votre [rôle d’administrateur](role-groups.md).
 
    > [!NOTE]
    > Veillez à ouvrir une session sur l’ordinateur à partir duquel vous voulez accéder au portail Azure ATP en utilisant votre nom d’utilisateur et votre mot de passe d’administrateur Azure ATP. Exécutez également votre navigateur en tant qu’un autre utilisateur, ou fermez votre session Windows et connectez-vous avec votre utilisateur administrateur Azure ATP. Contrairement au portail Azure ATP, le nouveau [portail Cloud App Security](https://portal.cloudappsecurity.com) offre une connexion multi-utilisateur et ne nécessite aucune licence supplémentaire pour une utilisation avec Azure ATP.
@@ -110,5 +110,5 @@ Si vous pointez votre souris sur une entité, n’importe où sur le portail Azu
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d’instances Azure ATP](install-atp-step1.md)
+- [Création d’instances Azure ATP](install-step1.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

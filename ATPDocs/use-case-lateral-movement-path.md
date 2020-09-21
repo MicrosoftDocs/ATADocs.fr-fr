@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edb37833ac44e3f04f9daf7ee57a8e1f41ca5d38
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3528909977c744cce604e60fe779050e4ec356dd
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955622"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826241"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral d’Azure ATP 
 
@@ -76,7 +76,7 @@ Les insights de sécurité ne sont jamais trop tardifs pour empêcher l’attaqu
 
 **Conseil** : Quand aucun risque d’activité de chemin de mouvement latéral n’est détecté pour une entité au cours des dernières 48 heures, choisissez d’**afficher une autre date** et recherchez des chemins de mouvement latéral potentiels antérieurs. Le **rapport des chemins de mouvement latéral vers les utilisateurs sensibles** est toujours disponible si des chemins de mouvement latéral ont été détectés et vous fournit des informations sur les chemins de mouvement latéral potentiels détectés pour les utilisateurs sensibles. 
 
-**Conseil** : Pour obtenir des instructions sur la configuration des clients et des serveurs à appliquer pour permettre à Azure ATP d’effectuer les opérations SAM-R nécessaires à la détection des chemins de mouvement latéral, voir [Configurer SAM-R](install-atp-step8-samr.md).
+**Conseil** : Pour obtenir des instructions sur la configuration des clients et des serveurs à appliquer pour permettre à Azure ATP d’effectuer les opérations SAM-R nécessaires à la détection des chemins de mouvement latéral, voir [Configurer SAM-R](install-step8-samr.md).
 
 
 ## <a name="investigating-lmps"></a>Examen des chemins de mouvement latéral
@@ -85,6 +85,6 @@ Pour obtenir des instructions sur la façon d’identifier et d’examiner les c
 
 ## <a name="see-also"></a>Voir aussi
 - [Examen des chemins de mouvement latéral d’Azure ATP](investigate-lateral-movement-path.md)
-- [Configurer Azure ATP pour effectuer des appels distants vers SAM](install-atp-step8-samr.md)
+- [Configurer Azure ATP pour effectuer des appels distants vers SAM](install-step8-samr.md)
 - [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

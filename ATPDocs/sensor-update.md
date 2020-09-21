@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 860f856acd1a34e52032217b137b6350a0988365
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0e2a5c24b2dac7675f55e2279ccaa11897e154ef
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956582"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826632"
 ---
 # <a name="update-azure-atp-sensors"></a>Mettre à jour les capteurs Azure ATP
 
@@ -97,5 +97,5 @@ En cas d’échec du processus de mise à jour sur un capteur, une alerte d’in
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
+- [Prérequis d’Azure ATP](prerequisites.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

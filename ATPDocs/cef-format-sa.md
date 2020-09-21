@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0d7d6ffbc52b1b5c1d662d3d6c14a1dcf0ab0084
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 9f85a52c2e71517fca45417e0399a2d453dc7963
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772868"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826479"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
 
@@ -201,8 +201,8 @@ Priorités :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Planification de la capacité Azure ATP](atp-capacity-planning.md)
+- [Prérequis d’Azure ATP](prerequisites.md)
+- [Planification de la capacité Azure ATP](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

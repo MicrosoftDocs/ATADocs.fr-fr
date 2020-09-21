@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b641ef32d483e52c523ed91109ada99f98705c
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b42aa8895e0946a5997a117ec5bca74089190bbd
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956123"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826513"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Azure ATP
 
@@ -39,7 +39,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard** : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-atp-step2.md#prerequisites).|Moyenne|
+|Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard** : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-step2.md#prerequisites).|Moyenne|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Taux de réussite faible dans la résolution de noms active
 
@@ -57,19 +57,19 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le mot de passe de l’utilisateur en lecture seule, utilisé pour effectuer la résolution des entités sur Active Directory, expire dans moins de 30 jours.|Si le mot de passe pour cet utilisateur expire, tous les capteurs Azure ATP cessent de fonctionner et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-atp-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Moyenne|
+|Le mot de passe de l’utilisateur en lecture seule, utilisé pour effectuer la résolution des entités sur Active Directory, expire dans moins de 30 jours.|Si le mot de passe pour cet utilisateur expire, tous les capteurs Azure ATP cessent de fonctionner et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Moyenne|
 
 ## <a name="read-only-user-password-expired"></a>Le mot de passe de l’utilisateur en lecture seule a expiré
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Tous les capteurs Azure ATP cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-atp-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Importante|
+|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Tous les capteurs Azure ATP cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-config-dcpassword.md), puis mettez à jour le mot de passe dans le portail Azure ATP.|Importante|
 
 ## <a name="sensor-outdated"></a>Capteur obsolète
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Un capteur Azure ATP est obsolète.|Un capteur Azure ATP exécute une version qui ne peut pas communiquer avec l’infrastructure cloud Azure ATP.|Mettez à jour le capteur manuellement et vérifiez ce qui empêche la mise à jour automatique du capteur. Si cela ne fonctionne pas, téléchargez le dernier package d’installation du capteur, puis désinstallez et réinstallez le capteur. Pour plus d’informations, consultez [Installation du capteur Azure ATP](install-atp-step4.md).|Moyenne|
+|Un capteur Azure ATP est obsolète.|Un capteur Azure ATP exécute une version qui ne peut pas communiquer avec l’infrastructure cloud Azure ATP.|Mettez à jour le capteur manuellement et vérifiez ce qui empêche la mise à jour automatique du capteur. Si cela ne fonctionne pas, téléchargez le dernier package d’installation du capteur, puis désinstallez et réinstallez le capteur. Pour plus d’informations, consultez [Installation du capteur Azure ATP](install-step4.md).|Moyenne|
 
 ## <a name="sensor-reached-a-memory-resource-limit"></a>Le capteur a atteint la limite des ressources mémoire
 
@@ -105,7 +105,7 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’a pas pu être analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](atp-capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
+|Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’a pas pu être analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
 
 ## <a name="some-windows-events-could-not-be-analyzed"></a>Certains événements Windows n’ont pas pu être analysés
 
@@ -123,8 +123,8 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Planification de la capacité Azure ATP](atp-capacity-planning.md)
+- [Prérequis d’Azure ATP](prerequisites.md)
+- [Planification de la capacité Azure ATP](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

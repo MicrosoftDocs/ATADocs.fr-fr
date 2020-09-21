@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa86397e76cafabe4c45dd5b394996225d758633
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 55e5962ed3d9e9a1a922b47daf46bdb0c2b0d91d
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956871"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826224"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
 
@@ -125,7 +125,7 @@ Ces événements peuvent être collectés automatiquement par le capteur Azure 
 ## <a name="see-also"></a>Voir aussi
 
 - [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
+- [Prérequis d’Azure ATP](prerequisites.md)
 - [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

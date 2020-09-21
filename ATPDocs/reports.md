@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: babb82354c79681bb708f46012c9f53ba09dd348
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b9fd8c81ffe9c779304f07dca230963f1131318a
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955171"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826649"
 ---
 # <a name="azure-atp-reports"></a>Rapports Azure ATP
 
@@ -58,8 +58,8 @@ Pour définir un rapport planifié :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](atp-prerequisites.md)
-- [Planification de la capacité Azure ATP](atp-capacity-planning.md)
+- [Prérequis d’Azure ATP](prerequisites.md)
+- [Planification de la capacité Azure ATP](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)

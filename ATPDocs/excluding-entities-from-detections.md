@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa497d9a04aa36538b0e5d6642ce2942a4c6d827
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 8424acd769b24407f1d4fc57e6549ca2ea1e0edf
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956854"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826530"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
 Cet article explique comment exclure des entités du processus de déclenchement des alertes. Certaines entités sont exclues afin de limiter les vrais positifs sans gravité tout en garantissant la détection des vrais positifs. Pour supprimer le bruit qu’Azure ATP génère à propos d’activités effectuées par des utilisateurs dans le cadre de leur activité professionnelle normale, vous pouvez désactiver, ou exclure, des entités spécifiques du processus de déclenchement des alertes. Par ailleurs, certaines entités courantes sont exclues par défaut. 
@@ -64,5 +64,5 @@ Lorsque vous avez la possibilité d’exclure une adresse IP ou un ordinateur, v
 ## <a name="see-also"></a>Voir aussi
 
 - [Guide des alertes de sécurité d’Azure ATP](suspicious-activity-guide.md)
-- [Intégration avec Microsoft Defender ATP](integrate-wd-atp.md)
+- [Intégration avec Microsoft Defender ATP](integrate-msde.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
