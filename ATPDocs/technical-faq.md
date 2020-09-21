@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/15/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 524fec2722bb31aaffe1629bece5b0381ec98566
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: ed16e9acc876d6ffe5ac36b1dc793f03b300d8d5
+ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828381"
+ms.locfileid: "90829355"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
 
@@ -69,6 +69,8 @@ Oui. Étant donné que les comptes d’ordinateurs (de même que toute autre ent
 ATA est une solution locale autonome avec plusieurs composants, tels que le centre ATA qui nécessite du matériel dédié localement.
 
 Azure ATP est une solution de sécurité basée sur le cloud qui tire parti de vos signaux Active Directory (Azure AD) locaux. La solution est très scalable et fréquemment mise à jour.
+
+La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 Contrairement au capteur ATA, le capteur Azure ATP utilise également des sources de données telles que le Suivi d’événements pour Windows (ETW) permettant à Azure ATP de fournir des détections supplémentaires.
 
