@@ -12,17 +12,19 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 315fade1334f5ebf3d0d50e8c167b3b00889c2d8
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: d8e83ad51970e4add2e703182e9ad466f113a44e
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955052"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909735"
 ---
 # <a name="ata-siem-log-reference"></a>Informations de référence sur le journal SIEM ATA
 
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ATA peut transférer les événements d’alerte de sécurité et d’intégrité à votre serveur SIEM. Les alertes sont transférées au format CEF. Vous trouverez ci-dessous un exemple de chaque type de journal d’alertes de sécurité à envoyer à votre serveur SIEM.
 

@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 66de794ef4e715ef1ca94ca46388fc237bc04392
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: eaef6571a11852e66634e9043daa25ec8fdbe2ef
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828330"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910201"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Évaluations de la posture de sécurité des identités Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En raison d’un manque de visibilité, les organisations de toutes tailles ne savent généralement pas si leurs applications et services locaux peuvent introduire une faille de sécurité. Ce problème de visibilité limitée est particulièrement vrai en ce qui concerne l’utilisation de composants non pris en charge ou obsolètes.
 

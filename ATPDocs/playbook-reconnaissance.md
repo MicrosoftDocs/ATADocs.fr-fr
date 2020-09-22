@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b2311a761651f5b7fc15164020443949d90cf5a7
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 235894040ff84fe627b4cbe4d4ecd857a7555e76
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828438"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912651"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le deuxième tutoriel de cette série en quatre parties sur les alertes de sécurité Azure ATP est un playbook de reconnaissance. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Le playbook explique comment tester certaines détections *discrètes* d’Azure ATP et se concentre sur les fonctionnalités d’Azure ATP *basées sur la signature*. Ce playbook n’inclut pas les alertes ou les détections basées sur le Machine Learning avancé, ni les détections de comportements basées utilisateur/entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](playbook-lab-overview.md).
 

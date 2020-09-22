@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: cda124f5178717181105dff33fc1344da9141661
-ms.sourcegitcommit: dadf9e656fd362f037f15c7a4b52685b5b3bd154
+ms.openlocfilehash: 7424525fa3b5e2e9cd06ad410d7965229885ab35
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865388"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912221"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cette section détaille les erreurs possibles dans les déploiements d’ATA et les étapes requises pour les corriger.
 

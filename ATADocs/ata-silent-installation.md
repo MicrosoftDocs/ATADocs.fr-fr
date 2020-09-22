@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 30ec42082bb726775a0801360ae471a4bd864514
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472383"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908856"
 ---
 # <a name="ata-silent-installation"></a>Installation en mode silencieux ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article fournit des instructions pour installer ATA sans assistance.
 
@@ -97,7 +99,7 @@ Utilisez la commande suivante pour mettre à jour le centre ATA :
 
 Pendant la mise à jour d’ATA, le programme d’installation détecte automatiquement qu’ATA est déjà installé sur le serveur, et aucune option d’installation de mise à jour n’est requise.
 
-**Exemples :**
+**Exemples** :
 
 Pour mettre à jour le centre ATA sans assistance. Dans les environnements de grande taille, la mise à jour du centre ATA peut prendre un certain temps. Surveillez les journaux ATA pour suivre la progression de la mise à jour.
 
@@ -133,7 +135,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 > |---|---|---|---|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Non|Supprime tous les fichiers de la base de données existante.|
 
-**Exemples :**
+**Exemples** :
 
 Pour désinstaller sans assistance le centre ATA du serveur, en supprimant toutes les données de base de données existantes :
 
@@ -177,7 +179,7 @@ Utilisez la commande suivante pour installer la passerelle ATA sans assistance 
 >|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Oui|Définit le nom du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.|
 >|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Oui|Définit le mot de passe du compte d’utilisateur (user@domain.com) qui est utilisé pour inscrire la passerelle ATA auprès du centre ATA.|
 
-**Exemples :**
+**Exemples** :
 
 pour installer la passerelle ATA sans assistance, connectez-vous à l’ordinateur joint au domaine avec vos informations d’identification d’administration ATA, pour éviter d’avoir à spécifier les informations d’identification dans le cadre de l'installation. Sinon, inscrivez-le auprès du centre ATA en utilisant les informations d’identification spécifiées :
 
@@ -205,7 +207,7 @@ Utilisez la commande suivante pour mettre à jour la passerelle ATA sans assista
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
-**Exemples :**
+**Exemples** :
 
 Pour mettre à jour la passerelle ATA sans assistance :
 
@@ -233,7 +235,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 > |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance de la passerelle ATA du serveur.|
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
-**Exemples :**
+**Exemples** :
 
 Pour désinstaller sans assistance la passerelle ATA du serveur :
 

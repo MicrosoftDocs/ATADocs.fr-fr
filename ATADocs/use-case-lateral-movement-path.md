@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed9c101c1533d34d72f2c956ec8fd5efd039adf6
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956361"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910852"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Examiner les chemins de mouvement latéral avec ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Même si vous faites de votre mieux pour protéger vos utilisateurs sensibles, que les administrateurs ont des mots de passe complexes qu’ils changent fréquemment, que leurs ordinateurs sont renforcés et que le stockage de leurs données est sécurisé, des attaquants peuvent malgré tout utiliser des chemins de mouvement latéral pour accéder aux comptes sensibles. Dans les attaques de mouvement latéral, l’attaquant tire parti des instances lorsque des utilisateurs sensibles se connectent à un ordinateur où un utilisateur non sensible a des droits locaux. Les attaquants peuvent ensuite se déplacer latéralement, accéder à l’utilisateur moins sensible, puis se déplacer au sein de l’ordinateur pour se procurer les informations d’identification de l’utilisateur sensible.
 
@@ -45,7 +47,7 @@ Pour découvrir les comptes sensibles de votre réseau qui sont vulnérables en 
 
 1. Le fichier Excel créé vous fournit des détails sur vos comptes sensibles menacés. L’onglet **Résumé** propose des graphes qui décrivent en détail le nombre de comptes sensibles, les ordinateurs et les moyennes pour les ressources à risque. L’onglet **Détails** présente une liste des comptes sensibles dont vous devez vous soucier. Notez que les chemins sont des chemins qui existaient auparavant et qui peuvent ne pas être disponibles aujourd’hui.
 
-## <a name="investigate"></a>Examiner
+## <a name="investigate"></a>Étudier
 
 Maintenant que vous avez identifié les comptes sensibles qui présentent des risques, vous pouvez vous plonger dans ATA pour en savoir plus et prendre des mesures préventives.
 

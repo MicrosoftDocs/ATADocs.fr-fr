@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 20341bb46ed5c7b1deaf3d7dd79e2934007fda2d
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 4afff7abad10684c362afd789a896b721165e6eb
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828408"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912565"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guide de préparation à Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article liste des ressources utiles qui vous aideront à vous préparer et à bien démarrer avec Azure Advanced Threat Protection.
 
@@ -68,7 +70,7 @@ Dès lors qu’Azure ATP est opérationnel, vous pouvez examiner les alertes de 
 
 - [Questions fréquentes sur Azure ATP](technical-faq.md) - Cet article fournit des éléments d’informations et des réponses aux questions les plus fréquemment posées sur Azure ATP.
 
-## <a name="community-resources"></a>Ressources de la communauté
+## <a name="community-resources"></a>Ressources communautaires
 
 Blog : [Blog sur Azure ATP](https://aka.ms/aatpblog)
 

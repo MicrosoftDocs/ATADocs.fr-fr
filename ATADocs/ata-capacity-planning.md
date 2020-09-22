@@ -11,16 +11,18 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 608a606c8ef93e46b36658c2344a66d73eb5d8ec
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: d2db03d8b4074465795ce3ba9113aac78647ad2c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954202"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909245"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide à estimer le nombre de passerelles ATA et/ou de passerelles légères ATA dont vous avez besoin, ainsi que la capacité du serveur pour votre centre ATA et vos passerelles ATA.
 
@@ -52,7 +54,7 @@ Le centre ATA nécessite l’équivalent de 30 jours de données qui est le min
 
 |Paquets par seconde pour tous les contrôleurs de domaine|Processeur (cores&#42;)|Mémoire (Go)|Stockage de la base de données par jour (Go)|Stockage de la base de données par mois (Go)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1 000|2|32|0.3|9|30 (100)
+|1 000|2|32|0.3|9|30 (100)
 |40 000|4|48|12|360|500 (750)
 |200 000|8|64|60|1 800|1 000 (1 500)
 |400 000|12|96|120|3,600|2 000 (2 500)
@@ -104,7 +106,7 @@ Une passerelle légère ATA peut prendre en charge la surveillance d’un contr�
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
-|1 000|2|6|
+|1 000|2|6|
 |5 000|6|16|
 |10 000|10|24|
 
@@ -135,7 +137,7 @@ Les considérations relatives à la mise en miroir des ports peuvent vous amener
 
 |Paquets par seconde&#42;|Unité centrale (cœurs&#42;&#42;)|Mémoire (Go)|
 |---------------------------|-------------------------|---------------|
-|1 000|1|6|
+|1 000|1|6|
 |5 000|2|10|
 |10 000|3|12|
 |20 000|6|24|

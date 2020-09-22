@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6d91f755f3892076714b1bdbb6896f1fa6639a3a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: aa89bb10e60c103af1684ae7a2d2dc5f4227bb92
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955035"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912236"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Après avoir examiné une activité suspecte, vous pouvez la classer comme :
 
@@ -129,7 +131,7 @@ Vérifiez tout d’abord la description de l’alerte pour voir lequel des trois
 1. Skeleton Key : supprimez le logiciel malveillant. Pour plus d’informations, voir [Analyse des programmes malveillants Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 1. Golden Ticket : suivez les instructions pour les activités suspectes [Golden Ticket](#golden-ticket).
-    De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
+    En outre, étant donné que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, implémentez [les recommandations de hachage](https://www.microsoft.com/download/details.aspx?id=36036).
 
 1. Overpass-the-Hash : si le compte concerné n’est pas un compte sensible, réinitialisez son mot de passe. Cela empêche l’attaquant de créer d’autres tickets Kerberos à partir du hachage de mot de passe. Toutefois, les tickets existants resteront utilisables jusqu’à leur expiration. S’il s’agit d’un compte sensible, vous devez envisager de réinitialiser le compte KRBTGT à deux reprises comme dans l’activité suspecte de Golden Ticket. Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération. Consultez les conseils fournis dans l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients). Consultez également utilisation du [Réinitialiser le mot de passe/les clés du compte KRBTGT
 
@@ -210,7 +212,7 @@ Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé
 **Correction**
 
 Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. Nous vous recommandons donc de planifier cette opération.
-De plus, du fait que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, suivez les [recommandations pour Pass-the-Hash](https://www.microsoft.com/download/details.aspx?id=36036).
+En outre, étant donné que la création d’un Golden Ticket nécessite des droits d’administrateur de domaine, implémentez [les recommandations de hachage](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Demande d’information privée de protection contre les données malveillantes
 

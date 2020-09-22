@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954117"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908889"
 ---
 # <a name="ata-prerequisites"></a>Configuration requise pour ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement.
 
@@ -89,7 +91,7 @@ Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun
 
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
-### <a name="time-synchronization"></a>Synchronisation de l’heure
+### <a name="time-synchronization"></a>Synchronisation temporelle
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
@@ -110,12 +112,12 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 |**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
 |**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
 |**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
-|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Sortant|
-|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Sortant|
-|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Sortant|
+|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Règle de trafic sortant|
+|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Règle de trafic sortant|
+|**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Règle de trafic sortant|
 |**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
-|**DNS**|TCP et UDP|53|Serveurs DNS|Sortant|
+|**DNS**|TCP et UDP|53|Serveurs DNS|Règle de trafic sortant|
 |**Kerberos** (facultatif si joint à un domaine)|TCP et UDP|88|Contrôleurs de domaine|Sortant|
 |**Horloge Windows** (facultatif si joint à un domaine)|UDP|123|Contrôleurs de domaine|Sortant|
 
@@ -176,7 +178,7 @@ Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de 
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
-### <a name="time-synchronization"></a>Synchronisation de l’heure
+### <a name="time-synchronization"></a>Synchronisation temporelle
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
@@ -263,7 +265,7 @@ Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de 
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
-### <a name="time-synchronization"></a>Synchronisation de l’heure
+### <a name="time-synchronization"></a>Synchronisation temporelle
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle légère ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 

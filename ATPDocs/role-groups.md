@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd5a9cf3ffe32bb522d1096e089fdad263b3fcb4
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: d66d5c5af5721d94cb834307bb5a5ebee28848fc
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828399"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910014"
 ---
 # <a name="azure-atp-role-groups"></a>Groupes de rôles Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP offre la sécurité basée sur les rôles pour protéger les données conformément aux besoins de sécurité et de conformité spécifiques d’une organisation. Azure ATP prend en charge trois rôles distincts : Administrateurs, Utilisateurs et Observateurs.
 

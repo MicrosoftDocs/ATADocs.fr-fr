@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: c2acb76eebc4d64d532496fba30a508dd5e85611
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 6eb2798ac8bf4f480d604891a24a643ec270b8e6
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828303"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912672"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Didacticiel : Manuel de la dominance du domaine
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le dernier tutoriel de cette série en quatre parties sur les alertes de sécurité Azure ATP est un playbook de contrôle du domaine. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des attaques potentielles contre votre réseau. Le labo explique comment tester certaines détections *discrètes* d’Azure ATP à l’aide des fonctionnalités d’Azure ATP *basées sur la signature*. Les tutoriels n’incluent ni le Machine Learning avancé Azure ATP, ni les détections et les alertes de comportement d’utilisateurs ou basées sur des entités. Ces types de détections et d’alertes ne sont pas inclus dans le test, car ils nécessitent une période d’apprentissage et un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](playbook-lab-overview.md).
 

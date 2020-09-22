@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 55e5962ed3d9e9a1a922b47daf46bdb0c2b0d91d
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 8a7c22c2ea752b0443fac2b4e74b2ff4813bfee8
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826224"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910483"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 La détection Azure Advanced Threat Protection (Azure ATP) s’appuie sur certaines entrées du journal des événements Windows pour améliorer certaines détections et fournir des informations supplémentaires sur les personnes qui ont effectué des actions telles qu’une ouverture de session NTLM, une modification des groupes de sécurité, et autres événements similaires. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Des paramètres de stratégie d’audit avancés incorrects peuvent empêcher l’enregistrement des événements nécessaires dans le journal des événements, et aboutir à une couverture incomplète d’Azure ATP.
 

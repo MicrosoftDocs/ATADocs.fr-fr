@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 24fab947687183f40d5043678b24e12792d98233
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 69a05db012422fef78d7f693f0e12ffebe31c72b
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956837"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912442"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Chaque capteur Azure Advanced Threat Protection (ATP) a besoin d’une connectivité Internet au service cloud Azure ATP pour signaler les données de capteur et fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web.
 

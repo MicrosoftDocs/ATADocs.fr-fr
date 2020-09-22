@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9fb89568d92070fa69a632bed5da535b0897cf6c
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 2277e8eb6cbfb9c61dd0e814d6f2170599ff9c86
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953709"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911820"
 ---
 # <a name="updating-ata-to-version-19"></a>Mise à jour d’ATA vers la version 1.9
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE] 
 > Si ATA n’est pas installé dans votre environnement, téléchargez la version complète d’ATA qui inclut la version 1.9. Suivez ensuite la procédure d’installation standard décrite dans [Installer ATA](install-ata-step1.md).

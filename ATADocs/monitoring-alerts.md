@@ -13,16 +13,18 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 8569e26786c36f08fdcf98dcd11452cdef5736b6
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 456538f0b68f1eec0474f4579908a1dc2c42ee67
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955987"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912010"
 ---
 # <a name="understanding-ata-health-alerts"></a>Compréhension des alertes d’intégrité ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le centre d’intégrité ATA vous permet de savoir quand il y a un problème avec le déploiement d’ATA, en déclenchant une alerte d’intégrité.
 Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.

@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f8c2750061bc464bcd1f78c46aeeafc4c5f181e
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 49a8301b1d13bbd6032b34b893b5a86e4cdd3739
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129831"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911419"
 ---
 # <a name="install-ata---step-5"></a>Installer ATA - Étape 5
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Étape 4](install-ata-step4.md) 
@@ -33,11 +35,11 @@ Une fois la passerelle ATA installée, procédez comme suit pour configurer ses 
 
 1. Dans la console ATA, accédez à **Configuration**, puis sous **Système**, sélectionnez **Passerelles**.
 
-    ![Image de la configuration des paramètres de la passerelle](media/ata-gw-config-1.png)
+    ![Configurer les paramètres de la passerelle, phase 1](media/ata-gw-config-1.png)
 
 1. Cliquez sur la passerelle que vous voulez configurer et entrez les informations suivantes :
 
-    ![Image de la configuration des paramètres de la passerelle](media/ATA-Gateways-config-2.png)
+    ![Configurer les paramètres de la passerelle, phase 2](media/ATA-Gateways-config-2.png)
 
     - **Description** : entrez une description pour la passerelle ATA (facultatif).
     - **Contrôleurs de domaine de port d’écoute (FQDN)** (obligatoire pour la passerelle ATA : ne peut pas être modifié pour la passerelle légère ATA) : entrez le nom de domaine complet de votre contrôleur de domaine et cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
@@ -62,7 +64,7 @@ Une fois la passerelle ATA installée, procédez comme suit pour configurer ses 
 1. Si vous le souhaitez, vous pouvez définir le [détecteur Syslog et la collecte des transferts d’événements Windows](configure-event-collection.md).
 1. Activez **Mettre la passerelle ATA à jour automatiquement** pour que cette passerelle ATA soit automatiquement mise à jour si vous mettez à jour le centre ATA à l’occasion de futures publications de version.
 
-1. Cliquez sur **Enregistrer**.
+1. Cliquez sur **Save**.
 
 ## <a name="validate-installations"></a>Valider les installations
 

@@ -11,14 +11,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c049b9ebed102ab8fc27c006eef95ef94269466f
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: c1c3b18606b38902217a320663ef91191e34f185
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828435"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910169"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Utilisation d’Azure ATP avec Microsoft Cloud App Security
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article est conçu pour vous aider à comprendre et à parcourir l’expérience d’examen améliorée lorsque vous utilisez le portail Microsoft Cloud App Security avec Azure ATP.
 
@@ -89,7 +91,7 @@ Pour accéder à une page utilisateur d’un utilisateur système :
 1. Ouvrez **Alertes** dans le menu principal.
 1. Sélectionnez et filtrez la file d’attente des alertes pour un utilisateur spécifique à l’aide du champ **Nom d’utilisateur**.
 
- ou
+ or
 
 1. À partir du menu **Examiner**, sélectionnez **Journal d’activité**.
 1. Filtrez la file d’attente du journal d’activité par utilisateur.

@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8daf907606c4198611f048c6b3b4866c426957e2
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3f04798ef39299dfa5b31d4a5679d6f68afaeef0
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954304"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909280"
 ---
 # <a name="ata-architecture"></a>Architecture ATA
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 L’architecture d’Advanced Threat Analytics est détaillée dans ce diagramme :
 
@@ -73,7 +75,7 @@ Le **centre ATA** effectue ce qui suit :
 
 Le centre ATA reçoit le trafic analysé de la passerelle ATA et de la passerelle légère ATA. Le centre ATA effectue ensuite le profilage, exécute la détection déterministe, et exécute l’apprentissage automatique et les algorithmes comportementaux pour en savoir plus sur votre réseau afin de détecter les anomalies et vous avertir des activités suspectes.
 
-|Tapez|Description|
+|Type|Description|
 |-|-|
 |Récepteur d’entité|Reçoit des lots d’entités de toutes les passerelles ATA et passerelles légères ATA.|
 |Processeur d’activité réseau|Traite toutes les activités réseau au sein de chaque lot reçu. par exemple, en mettant en correspondance les différentes étapes Kerberos effectuées depuis des ordinateurs potentiellement différents.|
@@ -105,7 +107,7 @@ La **passerelle ATA** et la **passerelle légère ATA** ont la même fonctionnal
 
 La passerelle ATA reçoit le trafic réseau et les événements Windows de votre réseau, et les traite dans les composants principaux suivants :
 
-|Tapez|Description|
+|Type|Description|
 |-|-|
 |Écouteur réseau|L’écouteur réseau capture le trafic réseau et analyse le trafic. Il s’agit d’une tâche qui nécessite une utilisation intensive du processeur. Il est donc important de consulter la [configuration requise pour ATA](ata-prerequisites.md) quand vous planifiez votre passerelle ATA ou passerelle légère ATA.|
 |Écouteur d’événements|L’écouteur d’événements capture et analyse les événements Windows transférés à partir d’un serveur SIEM sur votre réseau.|
@@ -149,7 +151,7 @@ Si Active Directory a besoin de davantage de puissance de calcul, le quota requi
 
 |Active Directory (Lsass.exe)|Passerelle légère ATA (Microsoft.Tri.Gateway.exe)|Divers (autres processus) |Quota de passerelle légère ATA|Trafic ignoré par la passerelle|
 |-|-|-|-|-|
-|60%|15 %|10 %|15 %|Oui|
+|60 %|15 %|10 %|15 %|Oui|
 
 ## <a name="your-network-components"></a>Composants du réseau
 

@@ -12,23 +12,25 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ba1cf2cb1d9cceaa07dfa1db9df533d7c57dae64
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 233d6f51e35081740d068635646318abc503268f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956463"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911979"
 ---
 # <a name="tag-sensitive-accounts"></a>Identifier des comptes sensibles
 
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Vous pouvez identifier manuellement des groupes ou des comptes comme sensibles pour améliorer les détections. C’est important que ces informations soient à jour, car certaines détections ATA, comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, s’appuient sur les groupes et les comptes considérés comme sensibles. Avant, ATA considérait automatiquement une entité comme *sensible* s’il s’agissait d’un membre d’une liste spécifique de groupes. À présent, vous pouvez identifier manuellement d’autres utilisateurs ou groupes comme sensibles, tels que les membres du conseil d’administration, les cadres de la société, le directeur des ventes, etc., pour qu’ATA les considère comme sensibles.
 
 1. Dans la console ATA, cliquez sur l’icône de **configuration** (roue dentée) dans la barre de menus.
 
-1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
+1. Sous **détection,** cliquez sur **étiquettes d’entité**.
 
     ![Étiquettes d’entité ATA](media/entity-tags.png)
 

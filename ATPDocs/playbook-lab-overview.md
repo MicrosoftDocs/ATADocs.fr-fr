@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 52c20174b431da000ecba922462d0c6af112b005
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 380c24fad44cc8af83a98aa5da61cd835bbe7653
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828294"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912620"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Vue d’ensemble du didacticiel : laboratoire d’alerte de sécurité ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 L’objectif du tutoriel sur le labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Ce tutoriel en quatre parties explique comment installer et configurer un environnement de travail pour tester des détections *discrètes* d’Azure ATP. Ce labo se concentre sur les fonctionnalités d’Azure ATP basées sur la *signature*. Ce labo n’inclut ni le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours.
 

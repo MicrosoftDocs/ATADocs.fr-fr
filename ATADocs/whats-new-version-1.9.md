@@ -12,15 +12,16 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 01c8d55654ed4e1b425f8a043628e425496da4cb
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956157"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912814"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Nouveautés d’ATA version 1.9
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 La dernière version de la mise à jour d’ATA peut être [téléchargée à partir du Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=56725) ou la version complète peut être téléchargée à partir du [centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
 Ces notes de publication fournissent des informations sur les mises à jour, les nouvelles fonctionnalités, les correctifs de bogue et les problèmes connus de cette version d’Advanced Threat Analytics.
@@ -42,7 +43,7 @@ Ces notes de publication fournissent des informations sur les mises à jour, les
 
 - Avec ATA 1.9, vous pouvez [identifier manuellement des groupes](tag-sensitive-accounts.md) ou des comptes comme sensibles pour améliorer les détections. Cette identification impacte de nombreuses détections ATA, telles que la détection des modifications des groupes sensibles et le chemin de mouvement latéral, qui s’appuient sur les groupes et les comptes considérés comme sensibles.
 
-## <a name="performance-improvements"></a>Améliorations des performances
+## <a name="performance-improvements"></a>Optimisation des performances
 
 - L’infrastructure du Centre ATA a été améliorée au niveau des performances : la vue de synthèse du trafic permet l’optimisation du pipeline des paquets et du processeur, et réutilise les sockets sur les contrôleurs de domaine pour minimiser les sessions SSL sur ces derniers.
 

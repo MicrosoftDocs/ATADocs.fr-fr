@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e7fb0da19b39466392fedaf2198f795909248049
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3cd6da729d6401840532f1daf73604f699abbbde
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956786"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912135"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article explique les principes de base d’Advanced Threat Analytics.
 
@@ -35,7 +37,7 @@ Chaque activité suspecte comporte les informations suivantes :
 
 - Gravité de l’activité suspecte (haute, moyenne ou faible)
 
-- État : Ouvert, fermé ou supprimé.
+- État : Ouvert, fermé ou supprimé.
 
 - La capacité à :
 
@@ -58,7 +60,7 @@ Pour filtrer la liste des activités suspectes :
 
 **Gravité des activités suspectes**
 
--   **Faible**
+-   **Low**
 
     Correspond aux activités suspectes pouvant conduire à des attaques durant lesquelles des utilisateurs ou logiciels malveillants accèdent aux données d’une entreprise.
 

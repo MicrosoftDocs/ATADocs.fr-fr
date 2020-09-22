@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b3a8e59017c5b356cee7e66b6e81151bd13997a
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 94ef8fc1514d979982c6ea7bcef398720268fe1e
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826462"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910463"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Pour améliorer les capacités de détection, Azure ATP a besoin des événements Windows qui sont listés dans [Configurer la collecte des événements](configure-windows-event-collection.md#configure-event-collection). Ces événements peuvent être lus automatiquement par le capteur Azure ATP ou, si le capteur Azure ATP n’est pas déployé, ils peuvent être transférés au capteur autonome Azure ATP de deux manières : en configurant le capteur autonome Azure ATP afin qu’il reste à l’écoute des événements SIEM ou en [configurant les transferts d’événements Windows](configure-event-forwarding.md).
 

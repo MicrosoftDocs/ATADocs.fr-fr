@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ea2ca8c0c30c9819c8e6fd72bc159d2b65927e00
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 4c98696b11ba329b6b907003b86cc5bd3d111cdf
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828309"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912712"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 La résolution de noms de réseau (NNR) est un composant principal des fonctionnalités de Azure ATP. Azure ATP capture les activités en fonction du trafic réseau, des événements Windows et d’ETW ; or, ces activités contiennent normalement des données d’adresses IP.
 
