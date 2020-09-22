@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 26549610e7a9dc2ec81a785e3900259ba7cfa563
-ms.sourcegitcommit: af91810bb220ff8ba90569d87c718a63bdc52d94
+ms.openlocfilehash: 17d2012773d792327b9dd63c1c24e6be6a533f5a
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807573"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826564"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutoriel : Procéder à une investigation sur un ordinateur
 
@@ -58,9 +58,9 @@ Examinez les informations et les activités suivantes dans le profil d’ordinat
 - [Examiner un utilisateur](investigate-a-user.md)
 - [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
 - [Utilisation des chemins de mouvement latéral](use-case-lateral-movement-path.md)
-- [Alertes de reconnaissance](atp-reconnaissance-alerts.md)
-- [Alertes indiquant des informations d’identification compromises](atp-compromised-credentials-alerts.md)
-- [Alertes de mouvement latéral](atp-lateral-movement-alerts.md)
-- [Alertes de dominance du domaine](atp-domain-dominance-alerts.md)
-- [Alertes d’exfiltration](atp-exfiltration-alerts.md)
+- [Alertes de reconnaissance](reconnaissance-alerts.md)
+- [Alertes indiquant des informations d’identification compromises](compromised-credentials-alerts.md)
+- [Alertes de mouvement latéral](lateral-movement-alerts.md)
+- [Alertes de dominance du domaine](domain-dominance-alerts.md)
+- [Alertes d’exfiltration](exfiltration-alerts.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
