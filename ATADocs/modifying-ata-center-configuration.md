@@ -11,18 +11,20 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3cde73d13874fbcab338ef2ab4bae4c4fb4c21d
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 97ef7f3ba88cc0ce034413ce3dae40a7840db58f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956803"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912884"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Modification de la configuration du centre ATA
 
 
 
-*S’applique à : Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Après le déploiement initial, les modifications doivent être apportées avec soin au centre ATA. Utilisez les procédures suivantes lors de la mise à jour de l’URL de la console et du certificat.
 
@@ -68,7 +70,7 @@ L’URL est utilisée dans les scénarios suivants :
 
 Procédez comme suit pour remplacer le certificat :
 
-1. Avant l’expiration du certificat actuel, créez un certificat et vérifiez qu’il est installé sur le serveur du centre ATA. <br></br>Il est recommandé de choisir un certificat à partir d’une autorité de certification interne, mais il est également possible de créer un nouveau certificat auto-signé. Pour plus d’informations, consultez [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps).
+1. Avant l’expiration du certificat actuel, créez un certificat et vérifiez qu’il est installé sur le serveur du centre ATA. <br></br>Il est recommandé de choisir un certificat à partir d’une autorité de certification interne, mais il est également possible de créer un nouveau certificat auto-signé. Pour plus d’informations, consultez [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserve-view=true).
 
 1. Dans les paramètres ATA, sous **Centre**, sélectionnez ce certificat nouvellement créé. À ce stade, le service du centre ATA est toujours lié au certificat d’origine. 
 

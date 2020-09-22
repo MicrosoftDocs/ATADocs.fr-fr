@@ -7,20 +7,22 @@ author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 89dd81d18bbe70bba358e987f6a6ffb64efbfe11
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 88e5b96534306ab8508b2e0581e906cde0e7d317
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828291"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912949"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Didacticiel : Manuel de mouvement latéral
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le playbook de mouvement latéral est le troisième de la série de tutoriels en quatre parties pour les alertes de sécurité Azure ATP. L’objectif du labo d’alerte de sécurité Azure ATP est d’illustrer les capacités d’**Azure ATP** à identifier et à détecter des activités suspectes et des attaques potentielles contre votre réseau. Le playbook explique comment tester certaines détections *discrètes* d’Azure ATP. Ce playbook se concentre sur les capacités d’Azure ATP basée sur la *signature* et n’inclut ni le Machine Learning avancé, ni les détections de comportements basées utilisateur ou entité (qui nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours). Pour plus d’informations sur chaque tutoriel de cette série, consultez la [vue d’ensemble du labo d’alerte de sécurité ATP](playbook-lab-overview.md).
 
 Ce playbook montre certaines détections de menaces du chemin d'accès de mouvement latéral et certains services d’alertes de sécurité Azure ATP en simulant une attaque avec des outils de piratage et d’attaque courants, réels et accessibles au public.
 
-Ce didacticiel vous apprendra à effectuer les opérations suivantes :
+Dans ce tutoriel, vous allez :
 > [!div class="checklist"]
 > * collecter des codes de hachage NTLM et simuler une attaque Overpass-the-Hash pour obtenir un ticket TGT (Ticket Granting) Kerberos ;
 > * usurper l’identité d’un autre utilisateur, se déplacer latéralement sur le réseau et collecter plus d’informations d’identification ;
