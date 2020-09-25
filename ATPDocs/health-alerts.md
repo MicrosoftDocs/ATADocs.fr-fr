@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67adf184405ef299e26292a7a25f5248cba5c48f
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 30d75912df1efe05f93555f70a68f76785d1ca3a
+ms.sourcegitcommit: 9c282d05682d97714c84e4e0e23e1103e2074fa8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913067"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205272"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Azure ATP
 
@@ -97,11 +97,11 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |----|----|----|----|
 |Un capteur Azure ATP a des fonctionnalités limitées en raison de problèmes de connectivité avec certains des contrôleurs de domaine configurés.|La détection d’attaques de type « Pass-The-Hash » peut être moins précise quand certains contrôleurs de domaine ne peuvent pas être interrogés par le capteur Azure ATP.|Vérifiez que les contrôleurs de domaine sont fonctionnels et que ce capteur Azure ATP peut les utiliser pour ouvrir des connexions LDAP.|Moyenne|
 
-## <a name="some-forwarded-events-could-not-be-analyzed"></a>Certains événements transférés n’ont pas pu être analysés
+## <a name="some-forwarded-events-are-not-being-analyzed"></a>Certains événements transférés ne sont pas analysés
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP reçoit plus d’événements que ce qu’il ne peut traiter.|Certains événements transférés n’ont pas pu être analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
+|Le capteur Azure ATP reçoit plus d’événements que ce qu’il ne peut traiter.|Certains événements transférés ne sont pas analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
 
 ## <a name="some-network-traffic-could-not-be-analyzed"></a>Une partie du trafic réseau n’a pas pu être analysée
 
@@ -109,11 +109,11 @@ Le centre d’intégrité Azure ATP vous informe de l’existence d’un problè
 |----|----|----|----|
 |Le capteur Azure ATP reçoit plus de trafic réseau que ce qu’il ne peut traiter.|Une partie du trafic réseau n’a pas pu être analysée, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Envisagez [d’ajouter des processeurs et de la mémoire](capacity-planning.md) selon les besoins. S’il s’agit d’un capteur Azure ATP autonome, réduisez le nombre de contrôleurs de domaine surveillés.<br></br>Cela peut également se produire si vous utilisez des contrôleurs de domaine sur des machines virtuelles VMware. Pour éviter ces alertes, vous pouvez vérifier que les paramètres suivants sont définis sur 0 ou sont désactivés dans la machine virtuelle :<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Pensez aussi à désactiver IPv4 Giant TSO Offload. Pour plus d’informations, voir la documentation VMware.|Moyenne|
 
-## <a name="some-windows-events-could-not-be-analyzed"></a>Certains événements Windows n’ont pas pu être analysés
+## <a name="some-windows-events-are-not-being-analyzed"></a>Certains événements Windows ne sont pas en cours d’analyse
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le capteur Azure ATP reçoit plus d’événements du suivi d’événements pour Windows (ETW) que ce qu’il peut traiter.|Certains événements du suivi d’événements pour Windows (ETW) n’ont pas pu être analysés, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
+|Le capteur Azure ATP reçoit plus d’événements du suivi d’événements pour Windows (ETW) que ce qu’il peut traiter.|Certains événements du suivi d’événements pour Windows (ETW) ne sont pas en cours d’analyse, ce qui peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine supervisés par ce capteur Azure ATP.|Vérifiez que seuls les événements nécessaires sont transférés vers le capteur Azure ATP ou essayez de transférer certains des événements vers un autre capteur Azure ATP.|Moyenne|
 
 <!--
 ## Windows events missing from domain controller audit policy
