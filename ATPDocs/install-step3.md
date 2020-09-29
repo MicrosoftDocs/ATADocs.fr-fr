@@ -9,14 +9,16 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 08b561bb3021181ab9217c8ab6c4a44947af1e78
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 04e1df3e375d48c17a42590521b9de06373f4799
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826779"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910228"
 ---
 # <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Démarrage rapide : Télécharger le package d’installation de capteur Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide de démarrage rapide, vous allez télécharger le package d’installation du capteur Azure ATP à partir du portail.
 
