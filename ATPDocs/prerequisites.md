@@ -5,21 +5,23 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/27/2020
+ms.date: 09/22/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f90c9a8423567d672544dd62bc1bdb3ba60d8a34
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 274a345c68f3ac021d4407d00b2b3e7225a780f4
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826795"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912608"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article décrit la configuration requise pour réussir le déploiement d’Azure ATP dans votre environnement.
 
@@ -120,14 +122,21 @@ Cette section décrit la configuration requise pour le capteur Azure ATP.
 
 ### <a name="general"></a>Général
 
-> [!NOTE]
-> Vérifiez que [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) est installé si vous utilisez Server 2019. Les capteurs Azure ATP déjà installés sur les serveurs 2019 sans cette mise à jour seront automatiquement arrêtés.
+Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019\* (Server Core inclus mais pas Nano Server), comme indiqué dans le tableau suivant.
 
-Le capteur Azure ATP prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019 (Windows Core inclus mais pas Windows Nano Server).
+| Version du système d'exploitation   | Server avec Expérience utilisateur | Server Core | Nano Server    |
+| -------------------------- | ------------------------------ | ----------- | -------------- |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Non applicable |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Non applicable |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Non applicable |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+
+\* Nécessite [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Les capteurs installés sur Server 2019 sans cette mise à jour seront automatiquement arrêtés.
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur *.atp.azure.com.
+Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur \*.atp.azure.com.
 
 Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé automatiquement et peut nécessiter un redémarrage du contrôleur de domaine. Cette étape peut également être requise si un redémarrage est déjà en attente.
 

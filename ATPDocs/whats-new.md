@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 642d018862a73fd609d44e5e6304533196ad729c
-ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
+ms.openlocfilehash: dda07ccfe2578975517e9e219fa95e0094e751cf
+ms.sourcegitcommit: 3740dcb048065962eb09ed31e077d7f8ff77a165
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829406"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145918"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -26,10 +26,16 @@ Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’�
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+> [!IMPORTANT]
+>
+> Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms dans les prochaines versions.
+
 ## <a name="azure-atp-release-2127"></a>Azure ATP version 2.127
 
 Publication : 20 septembre 2020
 
+- **Nouvelle alerte de sécurité : Tentative suspectée de réaffectation des privilèges Netlogon (ID externe 2411)**  
+L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation external id 2411).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2126"></a>Azure ATP version 2.126
@@ -797,7 +803,7 @@ Pour plus d’informations sur chacune des versions antérieures à la version 2
 ## <a name="see-also"></a>Voir aussi
 
 - [Présentation d’Azure Advanced Threat Protection](what-is.md)
-- [Forum Aux Questions](technical-faq.md)
+- [Forum aux questions](technical-faq.md)
 - [Prérequis d’Azure ATP](prerequisites.md)
 - [Planification de la capacité Azure ATP](capacity-planning.md)
 - [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
