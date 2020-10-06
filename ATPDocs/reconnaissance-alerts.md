@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 48744b2ef9485ad9bc2a54feacfe2b328dd4dfeb
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6eb8484ba49d4ae56a1baafce9ea3b76d0760165
+ms.sourcegitcommit: cd13e58303372d01463ae2ccf1e093d4f6d85fb5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912363"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91754389"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
 
@@ -242,8 +242,8 @@ Afin de permettre à Azure ATP de dresser avec précision le profil et d’appre
 **Suggestions d’étapes Kerberoasting spécifiques pour la prévention et la correction**
 
 1. Réinitialisez les mots de passe des utilisateurs compromis et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-1. Exiger l’utilisation de [mots de passe longs et complexes pour les utilisateurs disposant d’un compte de principal du service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
-1. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Exiger l’utilisation de [mots de passe longs et complexes pour les utilisateurs disposant d’un compte de principal du service](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
 > Les alertes de reconnaissance du principal de sécurité (LDAP) sont prises en charge uniquement par les capteurs ATP.
