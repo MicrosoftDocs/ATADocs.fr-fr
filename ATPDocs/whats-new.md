@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: dda07ccfe2578975517e9e219fa95e0094e751cf
-ms.sourcegitcommit: 3740dcb048065962eb09ed31e077d7f8ff77a165
+ms.openlocfilehash: 84deb65f7f1d6d20fe6913a7fd02b743295db1ef
+ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145918"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451800"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -28,14 +28,21 @@ Flux RSS : Recevez une notification quand cette page est mise à jour en copian
 
 > [!IMPORTANT]
 >
-> Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms dans les prochaines versions.
+> Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.127.
+
+## <a name="azure-atp-release-2128"></a>Azure ATP version 2.128
+
+Publication : 27 septembre 2020
+
+- Nous supprimons les boutons bascule **Notification par e-mail** qui permettent d’activer les notifications par e-mail. Pour recevoir les notifications par e-mail, il suffit d’ajouter une adresse. Pour plus d’informations, consultez [Configurer les notifications](notifications.md).
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2127"></a>Azure ATP version 2.127
 
 Publication : 20 septembre 2020
 
 - **Nouvelle alerte de sécurité : Tentative suspectée de réaffectation des privilèges Netlogon (ID externe 2411)**  
-L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation external id 2411).
+L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2126"></a>Azure ATP version 2.126
