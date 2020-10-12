@@ -10,12 +10,12 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9d9c2c027b5d7c35a02d8751a5d56585ecf0fdb0
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 42fe265978c1cd1ed326e20c2c283853d1b70281
+ms.sourcegitcommit: c12340e58a724fb833403e4fb38810b36e1454f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909261"
+ms.lasthandoff: 10/11/2020
+ms.locfileid: "91941175"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Support des versions de Microsoft Advanced Threat Analytics (ATA)
 
@@ -48,7 +48,7 @@ Les mises à jour d’ATA sont prises en charge pendant 12 mois à partir de leu
 |1.9|1.9.7312|21 MARS 2018|21 MARS 2019|
 |1.9.1|1.9.7412|1er JUILLET 2018|1er JUILLET 2019|
 |1.9.2|1.9.7478|28-MAR-2019|14-MAR-2021|
-|1.9.3|1.9.7561|14-SEP-2020||
+|1.9.3|1.9.7576|14-SEP-2020||
 
 ## <a name="see-also"></a>Voir aussi
 
