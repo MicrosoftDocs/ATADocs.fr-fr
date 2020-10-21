@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/13/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 84deb65f7f1d6d20fe6913a7fd02b743295db1ef
-ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
+ms.openlocfilehash: 26b4abc16ced7707d586f8049c82b30e86acbd0c
+ms.sourcegitcommit: 3ef87e970ca495edb995e0ea32e14f7e364045ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451800"
+ms.lasthandoff: 10/18/2020
+ms.locfileid: "92163664"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
 
@@ -29,6 +29,12 @@ Flux RSS : Recevez une notification quand cette page est mise à jour en copian
 > [!IMPORTANT]
 >
 > Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.127.
+
+## <a name="azure-atp-release-2129"></a>Azure ATP version 2.129
+
+Publication : 18 octobre 2020
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2128"></a>Azure ATP version 2.128
 
