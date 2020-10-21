@@ -24,7 +24,7 @@ ms.locfileid: "90910273"
 Dans ce guide de démarrage rapide, vous allez créer votre instance Azure ATP dans le portail Azure ATP. Dans Azure ATP, vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
 
 > [!IMPORTANT]
-> Actuellement, les centres de données Azure ATP sont déployés en Europe, au Royaume-Uni, en Amérique du Nord, en Amérique Centrale, aux Caraïbes et en Asie. Votre instance est créée automatiquement dans le centre de données géographiquement le plus proche de votre annuaire Azure Active Directory (Azure AD). Une fois créées, les instances Azure ATP ne peuvent pas être déplacées.
+> Actuellement, les centres de données Azure ATP sont déployés en Europe, au Royaume-Uni, en Amérique du Nord, en Amérique Centrale, aux Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données géographiquement le plus proche de votre annuaire Azure Active Directory (Azure AD). Une fois créées, les instances Azure ATP ne peuvent pas être déplacées.
 
 ## <a name="prerequisites"></a>Prérequis
 
