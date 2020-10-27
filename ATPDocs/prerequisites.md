@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/22/2020
+ms.date: 10/25/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 274a345c68f3ac021d4407d00b2b3e7225a780f4
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3438ca66b02edc93ba01754c696822613dfcc380
+ms.sourcegitcommit: 0ee43433d020fd05ad8825442dfb0e6b6bfa658f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912608"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526642"
 ---
 # <a name="azure-atp-prerequisites"></a>Prérequis d’Azure ATP
 
@@ -56,7 +56,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 - Vérifiez que le ou les contrôleurs de domaine sur lesquels vous prévoyez d’installer des capteurs Azure ATP ont une connectivité Internet au service cloud Azure ATP. Le capteur Azure ATP prend en charge l’utilisation d’un proxy. Pour plus d’informations sur la configuration du proxy, consultez [Configuration d’un proxy pour Azure ATP](configure-proxy.md).
 
 - Au moins l’un des comptes de services d’annuaire suivants, avec accès en lecture à tous les objets dans les domaines analysés :
-  - Un mot de passe et un compte d’utilisateur AD **standard**. Requis pour les capteurs exécutant Windows Server 2008 R2 SP1.
+  - Un mot de passe et un compte d’utilisateur AD **standard** . Requis pour les capteurs exécutant Windows Server 2008 R2 SP1.
   - Un **compte de service administré du groupe** (gMSA). Requiert Windows Server 2012 ou version ultérieure.  
   Tous les capteurs doivent disposer des autorisations pour récupérer le mot de passe du compte gMSA.  
   Pour en savoir plus sur les comptes gMSA, consultez [Prise en main des comptes de service administré de groupe](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
@@ -71,14 +71,14 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
     > [!NOTE]
     >
     > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
-    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA** , vous devez également utiliser au moins un compte d’utilisateur AD **standard** .
     > - Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
 - Si vous exécutez Wireshark sur le capteur autonome Azure ATP, redémarrez le service de capteur Azure Advanced Threat Protection après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
 
 - Si vous essayez d’installer le capteur Azure ATP sur une machine configurée avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous voulez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur Azure ATP](troubleshooting-known-issues.md#nic-teaming).
 
-- Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à Azure ATP de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
+- Recommandation relative au conteneur **Objets supprimés**  : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à Azure ATP de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken d’Azure ATP. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-step7.md).
 
@@ -96,7 +96,7 @@ L’accès au portail ATP s’effectue via un navigateur. Les navigateurs et par
 - Pare-feu/proxy ouvert : pour communiquer avec le service cloud Azure ATP, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
     > [!NOTE]
-    > Vous pouvez également utiliser notre balise de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Vous pouvez également utiliser notre balise de service Azure ( **AzureAdvancedThreatProtection** ) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Diagramme d’architecture Azure ATP](media/azure-atp-architecture.png)
 
@@ -172,20 +172,19 @@ Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant
 
 Le tableau suivant répertorie les ports qui, au minimum, sont requis par le capteur Azure ATP :
 
-|Protocole|Transport|Port|Du|À|Sens|
-|------------|-------------|--------|-----------|-------------|
-|**Ports Internet**||||||
-|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|Sortant|
-|SSL (localhost)|TCP|444|Capteur Azure ATP|localhost|Les deux|
-|**Ports internes**||||||
-|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
-|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
-|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
-|**Ports NNR**\*||||||
-|NTLM sur RPC|TCP|Port 135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
-|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
-|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|Protocole|Transport|Port|Du|À|
+|------------|-------------|--------|-----------|
+|**Ports Internet**|||||
+|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|
+|SSL (localhost)|TCP|444|Capteur Azure ATP|localhost|
+|**Ports internes**|||||
+|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|
+|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|
+|**Ports NNR**\*|||||
+|NTLM sur RPC|TCP|Port 135|Capteurs ATP|Tous les appareils sur le réseau|
+|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|
 
 \* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
@@ -235,7 +234,7 @@ L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est in
 
 Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moins une carte de capture :
 
-- **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Le capteur utilise cette carte pour interroger le contrôleur de domaine qu’il protège et procéder à la résolution des comptes d’ordinateur. <br>Elle doit être configurée avec les paramètres suivants :
+- **Carte de gestion**  : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Le capteur utilise cette carte pour interroger le contrôleur de domaine qu’il protège et procéder à la résolution des comptes d’ordinateur. <br>Elle doit être configurée avec les paramètres suivants :
 
     - Adresse IP statique (passerelle par défaut incluse)
 
@@ -248,7 +247,7 @@ Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moi
         > [!NOTE]
         > Si le capteur autonome Azure ATP est membre du domaine, le suffixe peut être configuré automatiquement.
 
-- **Carte de capture** : cette carte est utilisée pour capturer le trafic à destination et en provenance des contrôleurs de domaine.
+- **Carte de capture**  : cette carte est utilisée pour capturer le trafic à destination et en provenance des contrôleurs de domaine.
 
     > [!IMPORTANT]
     >
@@ -259,25 +258,26 @@ Le capteur autonome Azure ATP nécessite au moins une carte de gestion et au moi
 
 Le tableau suivant répertorie les ports qui, au minimum, doivent être configurés sur la carte de gestion pour satisfaire aux exigences du capteur autonome Azure ATP :
 
-|Protocole|Transport|Port|Du|À|Sens|
-|------------|-------------|--------|-----------|-------------|
-|**Ports Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|Sortant|
-|**Ports internes**|||||
-|LDAP|TCP et UDP|389|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|LDAP sécurisé (LDAPS)|TCP|636|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|LDAP vers le catalogue global|TCP|3268|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|LDAPS vers le catalogue global|TCP|3269|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|Kerberos|TCP et UDP|88|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|Sortant|
-|Horloge Windows|UDP|123|Capteur Azure ATP|Contrôleurs de domaine|Sortant|
-|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|Sortant|
-|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|Entrant|
-|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|Entrant|
-|**Ports NNR** \*||||||
-|NTLM sur RPC|TCP|135|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
-|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
-|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|Entrant|
+|Protocole|Transport|Port|Du|À|
+|------------|-------------|--------|-----------|
+|**Ports Internet**||||
+|SSL (*.atp.azure.com)|TCP|443|Capteur Azure ATP|Service cloud Azure ATP|
+|SSL (localhost)|TCP|444|Capteur Azure ATP|localhost|
+|**Ports internes**||||
+|LDAP|TCP et UDP|389|Capteur Azure ATP|Contrôleurs de domaine|
+|LDAP sécurisé (LDAPS)|TCP|636|Capteur Azure ATP|Contrôleurs de domaine|
+|LDAP vers le catalogue global|TCP|3268|Capteur Azure ATP|Contrôleurs de domaine|
+|LDAPS vers le catalogue global|TCP|3269|Capteur Azure ATP|Contrôleurs de domaine|
+|Kerberos|TCP et UDP|88|Capteur Azure ATP|Contrôleurs de domaine|
+|Netlogon (SMB, CIFS, SAM-R)|TCP et UDP|445|Capteur Azure ATP|Tous les appareils sur le réseau|
+|Horloge Windows|UDP|123|Capteur Azure ATP|Contrôleurs de domaine|
+|DNS|TCP et UDP|53|Capteur Azure ATP|Serveurs DNS|
+|Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur Azure ATP|
+|RADIUS|UDP|1813|RADIUS|Capteur Azure ATP|
+|**Ports NNR** \*|||||
+|NTLM sur RPC|TCP|135|Capteurs ATP|Tous les appareils sur le réseau|
+|NetBIOS|UDP|137|Capteurs ATP|Tous les appareils sur le réseau|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|Capteurs ATP|Tous les appareils sur le réseau|
 
 \* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
