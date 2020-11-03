@@ -1,23 +1,22 @@
 ---
-title: Évaluations des attributs d’historique SID non sécurisés d’Azure Advanced Threat Protection
-description: Cet article fournit une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant les entités ayant des attributs d’historique SID non sécurisés.
+title: Évaluations des attributs d’historique SID non sécurisés de Microsoft Defender
+description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités de l’identité avec un attribut d’historique SID non sécurisé rapport d’évaluation de l’état de la sécurité de l’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7819bf79ca70068be21f0aae0b08ff920d7a1605
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 851a0c0db49a59b96a8f239a3b9a08f9e51819c5
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912741"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276607"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Évaluation de la sécurité : Attributs d’historique SID non sécurisés
 
@@ -27,7 +26,7 @@ ms.locfileid: "90912741"
 
 L’historique SID est un attribut qui prend en charge les [scénarios de migration](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Chaque compte d’utilisateur est associé à un [identificateur de sécurité (SID)](/windows/win32/secauthz/security-identifiers) qui est utilisé pour suivre le principal de sécurité et l’accès du compte lors de la connexion à des ressources. L’historique SID permet que l’accès d’un autre compte soit efficacement cloné à un autre et est extrêmement utile pour garantir que les utilisateurs conservent l’accès quand ils sont déplacés (migrés) d’un domaine vers un autre.
 
-L’évaluation recherche les comptes disposant d’attributs d’historique SID qu’Azure ATP a profilés comme étant risqués.
+L’évaluation vérifie les comptes avec des attributs d’historique SID dont les [!INCLUDE [Product long](includes/product-long.md)] profils sont risqués.
 
 ## <a name="what-risk-does-unsecure-sid-history-attribute-pose"></a>Quel risque l’attribut d’historique SID non sécurisé présente-t-il ?
 
@@ -40,7 +39,7 @@ Par exemple, un compte non sensible dans un domaine peut contenir le SID d’adm
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
 1. Utilisez la table de rapport pour découvrir les comptes qui ont un attribut d’historique SID non sécurisé.
-    ![Passer en revue les principales entités impactées et créer un plan d’action](media/atp-cas-isp-unsecure-sid-history-attribute-1.png)
+    ![Passer en revue les principales entités impactées et créer un plan d’action](media/cas-isp-unsecure-sid-history-attribute-1.png)
 1. Prenez la mesure appropriée pour supprimer l’attribut d’historique SID des comptes à l’aide de PowerShell en effectuant les étapes suivantes :
 
     1. Identifiez le SID dans l’attribut SIDHistory défini sur le compte.
@@ -60,5 +59,5 @@ Par exemple, un compte non sensible dans un domaine peut contenir le SID d’adm
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Filtrage des activités Azure ATP dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

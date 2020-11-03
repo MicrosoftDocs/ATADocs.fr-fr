@@ -1,23 +1,22 @@
 ---
-title: Évaluation de l’utilisation de Microsoft LAPS d’Azure Advanced Threat Protection
-description: Cet article fournit une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant l’utilisation Microsoft LAPS.
+title: Microsoft Defender for Identity Microsoft couvre l’utilisation des évaluations
+description: Cet article fournit une vue d’ensemble du rapport d’évaluation de l’évaluation de l’utilisation des identités Microsoft de Microsoft Defender pour les identités.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fdc5ace86a48b78041e1a7fc8927ae24d64b00ff
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 44731f9d987eda3d87339b1502de609de9d222ed
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913215"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277523"
 ---
 # <a name="security-assessment-microsoft-laps-usage"></a>Évaluation de la sécurité : Utilisation de Microsoft LAPS
 
@@ -37,13 +36,13 @@ LAPS simplifie la gestion des mots de passe tout en permettant aux clients d’i
 
 1. Utilisez la table de rapport pour découvrir lesquels de vos domaines ont certains (ou tous les) appareils Windows compatibles non protégés par LAPS, ou dont le mot de passe managé LAPS n’a pas été changé au cours des 60 derniers jours.
 1. Pour les domaines partiellement protégés, sélectionnez la ligne appropriée pour voir la liste des appareils non protégés par LAPS dans ce domaine.
-    ![Sélectionner un domaine avec des appareils LAPS](media/atp-cas-isp-laps-1.png)
+    ![Sélectionner un domaine avec des appareils LAPS](media/cas-isp-laps-1.png)
 1. Prenez la mesure appropriée sur ces appareils en téléchargeant, en installant et en configurant [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282), ou en résolvant les problèmes s’y rapportant, à l’aide de la documentation fournie dans le téléchargement.
-    ![Corriger un appareil LAPS](media/atp-cas-isp-laps-2.png)
+    ![Corriger un appareil LAPS](media/cas-isp-laps-2.png)
 
 > [!NOTE]
 > Cette évaluation est mise à jour toutes les 24 heures.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

@@ -1,70 +1,69 @@
 ---
-title: Analyse des contrôleurs de domaine et des capteurs installés installés sur vos contrôleurs de domaine à l’aide d’Azure-protection avancée contre les menaces
-description: Décrit comment superviser les capteurs Azure ATP et la couverture des capteurs à l’aide d’Azure ATP
+title: Analyse des contrôleurs de domaine et des capteurs installés installés sur vos contrôleurs de domaine à l’aide de Microsoft Defender pour l’identité
+description: Décrit comment surveiller Microsoft Defender pour les capteurs d’identité et la couverture de capteur à l’aide de Defender pour l’identité
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/16/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ac4c0b9bd4e8a99d5edaaec2746f3ce7d413005c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: af05ee5bbd064e31b231ad36374b4c069d8f7cfc
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912560"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275387"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dès que vous avez installé et configuré le premier capteur Azure ATP sur l’un des contrôleurs de domaine dans votre réseau, Azure ATP démarre la supervision des contrôleurs de domaine de votre environnement.
+Dès que le premier [!INCLUDE [Product long](includes/product-long.md)] capteur est installé et configuré sur un contrôleur de domaine de votre réseau, [!INCLUDE [Product short](includes/product-short.md)] commence à surveiller votre environnement pour les contrôleurs de domaine.
 
-Une fois qu’un capteur Azure ATP est installé et configuré sur un contrôleur de domaine de votre réseau, il communique en permanence avec le service Azure ATP en lui envoyant des informations d’état, des informations sur l’intégrité et la version ainsi que les événements et changements collectés à partir d’Active Directory.
+Une fois qu’un [!INCLUDE [Product short](includes/product-short.md)] capteur est installé et configuré sur un contrôleur de domaine de votre réseau, le capteur communique avec le [!INCLUDE [Product short](includes/product-short.md)] service sur une base constante qui envoie l’état du capteur, les informations sur l’intégrité et la version, ainsi que les événements Active Directory et les modifications collectées.
 
 ## <a name="domain-controller-status"></a>État des contrôleurs de domaine
 
-Azure ATP supervise en continu votre environnement afin de détecter l’ajout de contrôleurs de domaine non supervisés dans votre environnement. Le cas échéant, il génère des rapports sur ces derniers pour vous aider à gérer la couverture complète de votre environnement.
+[!INCLUDE [Product short](includes/product-short.md)] surveille en permanence votre environnement pour les contrôleurs de domaine non surveillés introduits dans votre environnement et fournit des rapports sur ceux-ci pour vous aider à gérer la couverture complète de votre environnement.
 
-1. Pour vérifier l’état des contrôleurs de domaine supervisés et non supervisés qui ont été détectés, accédez à la zone **Configuration** dans le portail Azure ATP et, sous la section **Système**, sélectionnez **Capteurs**.
+1. Pour vérifier l’état de vos contrôleurs de domaine détectés et non surveillés et leur état, accédez à la zone **configuration** du [!INCLUDE [Product short](includes/product-short.md)] portail et, sous la section **système** , sélectionnez **capteurs**.
 
-    ![Supervision de l’état par le capteur Azure ATP](media/atp-sensors-status-monitoring.png)
+    ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] analyse de l’état du capteur](media/sensors-status-monitoring.png)
 
 1. Tous les contrôleurs de domaine supervisés et non supervisés détectés sont listés en haut de l’écran. Pour télécharger les détails de l’état de supervision des contrôleurs de domaine, sélectionnez **Téléchargement des détails**.
 
 Le fichier Excel téléchargé contient les informations de couverture suivantes pour tous les contrôleurs de domaine détectés dans votre organisation :
 
-|Titre|Description|
+|Intitulé|Description|
 |----|----|
 |Nom d’hôte|Nom de l'ordinateur|
 |Nom de domaine|Nom de domaine|
-|Surveillé|État de la supervision Azure ATP|
-|Type de capteur|Capteur Azure ATP ou capteur autonome Azure ATP|
+|Surveillé|[!INCLUDE [Product short](includes/product-short.md)] État de l’analyse|
+|Type de capteur|[!INCLUDE [Product short](includes/product-short.md)] capteur ou [!INCLUDE [Product short](includes/product-short.md)] capteur autonome|
 |Unité d’organisation|Emplacement dans Active Directory |
 |Version du système d'exploitation| Version du système d’exploitation détecté|
-|Adresse IP|Adresse IP détectée|
+|Adresse IP|Adresse IP détectée|
 
 ## <a name="search-domain-controllers"></a>Rechercher les contrôleurs de domaine
 
-La gestion de votre flotte de capteurs et de contrôleurs de domaine peut constituer un défi. Pour faciliter la recherche et l’identification, les contrôleurs de domaine peuvent être recherchés à l’aide de la fonctionnalité de recherche de la liste de capteurs Azure ATP.
+La gestion de votre flotte de capteurs et de contrôleurs de domaine peut constituer un défi. Pour faciliter la recherche et l’identification, les contrôleurs de domaine peuvent être recherchés à l’aide de la fonctionnalité de recherche dans la [!INCLUDE [Product short](includes/product-short.md)] liste des capteurs.
 
-1. Pour rechercher vos contrôleurs de domaine, accédez à la zone **Configuration** du portail Azure ATP et, sous la section **système**, sélectionnez **Capteurs**.
+1. Pour rechercher vos contrôleurs de domaine, accédez à la zone **configuration** du [!INCLUDE [Product short](includes/product-short.md)] portail et, sous la section **système** , sélectionnez **capteurs**.
 1. Sélectionnez l’option de filtre sur la colonne **contrôleur de domaine** dans la liste de tables du contrôleur de domaine.
 1. Entrez le nom que vous souhaitez rechercher. Les caractères génériques ne sont actuellement pas pris en charge dans le champ de recherche.
 
-    ![Recherche de contrôleur de domaine Azure ATP](media/search-sensor.png)
+    ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] Rechercher dans le contrôleur de domaine](media/search-sensor.png)
 
 > [!NOTE]
-> Les pages de configuration dans le portail Azure ATP sont modifiables uniquement par les administrateurs Azure ATP.
+> [!INCLUDE [Product short](includes/product-short.md)] les pages de configuration du portail ne peuvent être modifiées que par les [!INCLUDE [Product short](includes/product-short.md)] administrateurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Architecture Azure ATP](architecture.md)
-- [Configurer des capteurs Azure ATP](install-step5.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Configuration des [!INCLUDE [Product short](includes/product-short.md)] capteurs](install-step5.md)
 - [Prise en charge de plusieurs forêts](multi-forest.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

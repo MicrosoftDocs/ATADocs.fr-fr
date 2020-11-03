@@ -1,61 +1,60 @@
 ---
-title: Passer d’Advanced Threat Analytics à Azure Advanced Threat Protection
-description: Découvrez comment faire passer une installation Advanced Threat Analytics existante à Azure ATP.
+title: Advanced Threat Analytics à Microsoft Defender pour le déplacement de l’identité
+description: Découvrez comment déplacer une installation Advanced Threat Analytics existante vers Microsoft Defender pour l’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/21/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e959e6c0134cf23355b7c1bc89c7e35166230fb9
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 032a5f289657485b744ad335dc51777a8ba72602
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912188"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275040"
 ---
-# <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>Passer d’Advanced Threat Analytics (ATA) à Azure Advanced Threat Protection (Azure ATP)
+# <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
-Utilisez ce guide pour faire passer une installation ATA existante au service Azure Advanced Threat Protection (Azure ATP). Ce guide explique les prérequis et les exigences d’Azure ATP. Il décrit également comment planifier et mener à bien votre transfert. Vous trouverez également des étapes de validation et des conseils pour tirer parti des solutions de sécurité et de protection contre les menaces les plus récentes avec Azure ATP après l’installation.
+Utilisez ce guide pour passer d’une installation ATA existante au service ( [!INCLUDE [Product long](includes/product-long.md)] ). Ce guide explique les conditions [!INCLUDE [Product short](includes/product-short.md)] préalables et la configuration requise, ainsi que les détails de la planification et de l’exécution de votre déplacement. Des étapes de validation et des conseils pour tirer parti des dernières solutions de sécurité et de protection contre les menaces avec [!INCLUDE [Product short](includes/product-short.md)] après l’installation sont également inclus.
 
-Pour plus d’informations sur les différences entre ATA et Azure ATP, consultez la [Foire aux questions Azure ATP](technical-faq.md#what-is-azure-atp).
+Pour en savoir plus sur les différences entre ATA et [!INCLUDE [Product short](includes/product-short.md)] , consultez le [ [!INCLUDE [Product short](includes/product-short.md)] Forum aux questions](technical-faq.md#what-is-azure-atp).
 
 Dans ce guide, vous allez :
 
 > [!div class="checklist"]
 >
-> - Passer en revue et confirmer les prérequis du service Azure ATP
+> - Vérifier et confirmer les [!INCLUDE [Product short](includes/product-short.md)] conditions préalables du service
 > - Documenter votre configuration ATA existante
 > - Planifier votre transfert
-> - Installer et configurer votre service Azure ATP
+> - Configurer et configurer votre [!INCLUDE [Product short](includes/product-short.md)]  service
 > - Effectuer des vérifications post-transfert
 > - Désactiver ATA une fois le transfert terminé
 
 > [!NOTE]
-> Vous pouvez passer à Azure ATP à partir de n’importe quelle version d’ATA. Toutefois, comme les données ne peuvent pas passer d’ATA à Azure ATP, nous vous recommandons de conserver les données et alertes du centre ATA nécessaires pour les examens en cours jusqu’à ce que toutes les alertes ATA soient fermées ou corrigées.
+> Le passage à [!INCLUDE [Product short](includes/product-short.md)] d’ATA est possible à partir de n’importe quelle version d’ATA. Toutefois, comme les données ne peuvent pas être déplacées d’ATA vers [!INCLUDE [Product short](includes/product-short.md)] , il est recommandé de conserver les données et les alertes du centre ATA requises pour les investigations en cours jusqu’à ce que toutes les alertes ATA soient fermées ou corrigées.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Un locataire Azure Active Directory avec au moins un administrateur général ou de sécurité est nécessaire pour créer une instance Azure ATP. Chaque instance Azure ATP prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures.
+- Un locataire Azure Active Directory avec au moins un administrateur global/de sécurité est requis pour créer une [!INCLUDE [Product short](includes/product-short.md)] instance. Chaque [!INCLUDE [Product short](includes/product-short.md)] instance de prend en charge plusieurs Active Directory limite de forêt et de niveau fonctionnel de forêt (FFL) de Windows 2003 et versions ultérieures.
 
-- Azure ATP exige .NET Framework 4.7 ou version ultérieure. Si vous ne disposez pas d’une telle version, il peut exiger le redémarrage du contrôleur de domaine.
+- [!INCLUDE [Product short](includes/product-short.md)] nécessite .NET Framework 4,7 ou une version ultérieure et peut nécessiter un contrôleur de domaine (redémarrage) si la version actuelle de .NET Framework n’est pas 4,7 ou version ultérieure.
 
-- Vérifiez que vos contrôleurs de domaine répondent à toutes les [exigences du capteur Azure ATP](prerequisites.md#azure-atp-sensor-requirements) et que votre environnement répond à toutes les [exigences d’Azure ATP](prerequisites.md).
+- Assurez-vous que vos contrôleurs de domaine répondent à toutes les [ [!INCLUDE [Product short](includes/product-short.md)] conditions requises](prerequisites.md#azure-atp-sensor-requirements) par le capteur et que votre environnement est conforme à toutes les [ [!INCLUDE [Product short](includes/product-short.md)] exigences](prerequisites.md).
 
-- Vérifiez que tous les contrôleurs de domaine que vous envisagez d’utiliser disposent d’un accès Internet suffisant au service Azure ATP. Vérifiez et confirmez que vos contrôleurs de domaine répondent aux [exigences de configuration d’un proxy Azure ATP](configure-proxy.md).
+- Vérifiez que tous les contrôleurs de domaine que vous envisagez d’utiliser disposent d’un accès Internet suffisant au [!INCLUDE [Product short](includes/product-short.md)] service. Vérifiez et confirmez que vos contrôleurs de domaine satisfont à la [ [!INCLUDE [Product short](includes/product-short.md)] Configuration requise du proxy](configure-proxy.md).
 
 > [!NOTE]
-> Ce guide de migration est destién uniquement aux capteurs Azure ATP.
+> Ce guide de migration est conçu [!INCLUDE [Product short](includes/product-short.md)] uniquement pour les capteurs.
 
 ## <a name="plan"></a>Plan
 
@@ -67,11 +66,11 @@ Veillez à rassembler les informations suivantes avant de commencer le transfert
 1. Appartenance au groupe de rôle ATA
 1. Intégration VPN
 1. Exclusions des alertes
-    - Les exclusions n’étant pas transférables d’ATA vers Azure ATP, les détails de chaque exclusion sont nécessaires pour [répliquer les exclusions dans Azure ATP](excluding-entities-from-detections.md).
+    - Les exclusions ne peuvent pas être transférées d’ATA vers [!INCLUDE [Product short](includes/product-short.md)] . par conséquent, les détails de chaque exclusion sont requis pour [répliquer les exclusions dans [!INCLUDE [Product short](includes/product-short.md)] ](excluding-entities-from-detections.md).
 1. Détails des comptes HoneyToken.
-    - Si vous ne disposez pas de comptes HoneyToken dédiés, découvrez-en plus sur [HoneyTokens dans Azure ATP](install-step7.md) et créez des comptes à cet effet.
+    - Si vous ne disposez pas déjà de comptes HoneyToken dédiés, en savoir plus sur les [HoneyTokens dans [!INCLUDE [Product short](includes/product-short.md)] ](install-step7.md) et créer des comptes à utiliser à cet effet.
 1. Liste complète de toutes les entités (ordinateurs, groupes, utilisateurs) à étiqueter manuellement comme entités sensibles.
-    - Découvrez l’importance des [entités sensibles](sensitive-accounts.md) dans Azure ATP.
+    - En savoir plus sur l’importance des [entités sensibles](sensitive-accounts.md) dans [!INCLUDE [Product short](includes/product-short.md)] .
 1. [Détails](reports.md) de la planification des rapports (liste des rapports et planifications).
 
 > [!NOTE]
@@ -79,29 +78,29 @@ Veillez à rassembler les informations suivantes avant de commencer le transfert
 
 ## <a name="move"></a>Déplacer
 
-Pour finir de passer à Azure ATP, effectuez ces deux étapes simples :
+Procédez à la migration [!INCLUDE [Product short](includes/product-short.md)] en deux étapes simples :
 
-### <a name="step-1-create-and-install-azure-atp-instance-and-sensors"></a>Étape 1 : Créer et installer une instance et des capteurs Azure ATP
+### <a name="step-1-create-and-install-product-short-instance-and-sensors"></a>Étape 1 : créer et installer une [!INCLUDE [Product short](includes/product-short.md)] instance et des capteurs
 
-1. [Créer votre instance Azure ATP](install-step1.md)
+1. [Créer votre nouvelle [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
 
 1. Désinstallez la passerelle légère ATA sur tous les contrôleurs de domaine.
 
-1. Installez le capteur Azure ATP sur tous les contrôleurs de domaine :
-    - [Téléchargez les fichiers du capteur Azure ATP](install-step3.md).
-    - [Récupérez votre clé d’accès Azure ATP](install-step3.md#download-the-setup-package).
-    - [Installez des capteurs Azure ATP sur vos contrôleurs de domaine](install-step4.md).
+1. Installez le [!INCLUDE [Product short](includes/product-short.md)] capteur sur tous les contrôleurs de domaine :
+    - [Téléchargez les [!INCLUDE [Product short](includes/product-short.md)] fichiers de capteur](install-step3.md).
+    - [Récupérer votre [!INCLUDE [Product short](includes/product-short.md)] Clé d’accès](install-step3.md#download-the-setup-package).
+    - [Installez [!INCLUDE [Product short](includes/product-short.md)] les capteurs sur vos contrôleurs de domaine](install-step4.md).
 
-### <a name="step-2-configure-and-validate-azure-atp-instance"></a>Étape 2 : Configurer et valider l’instance Azure ATP
+### <a name="step-2-configure-and-validate-product-short-instance"></a>Étape 2 : configurer et valider l' [!INCLUDE [Product short](includes/product-short.md)] instance
 
 - [Configurer le capteur](install-step5.md)
 
 > [!NOTE]
-> Certaines tâches de la liste suivante, comme la sélection d’entités pour attribuer manuellement l’étiquette **Sensible**, ne peuvent pas être effectuées avant l’installation de capteurs Azure ATP et la synchronisation initiale. Prévoyez jusqu’à 2 heures pour la synchronisation initiale.
+> Certaines tâches de la liste suivante ne peuvent pas être effectuées avant d’installer des [!INCLUDE [Product short](includes/product-short.md)] capteurs, puis d’effectuer une synchronisation initiale, comme la sélection d’entités pour le balisage **sensible** manuelle. Prévoyez jusqu’à 2 heures pour la synchronisation initiale.
 
 #### <a name="configuration"></a>Configuration
 
-Connectez-vous au portail Azure ATP et effectuez les tâches de configuration suivantes.
+Connectez-vous au [!INCLUDE [Product short](includes/product-short.md)] portail et effectuez les tâches de configuration suivantes.
 
 | Étape    | Action | État |
 |--------------|------------|------------------|
@@ -109,7 +108,7 @@ Connectez-vous au portail Azure ATP et effectuez les tâches de configuration su
 | 2  | Détails du compte [Services d’annuaire](install-step2.md).| - [ ] |
 | 3  | Configurer des [notifications Syslog](setting-syslog.md) | - [ ] |
 | 4  | Informations sur l’[intégration du VPN](install-step6-vpn.md)| - [ ] |
-| 5  | Configurer [l’intégration de WDATP](integrate-msde.md)| - [ ] |
+| 5  | Configurer [l’intégration de WDATP](integrate-mde.md)| - [ ] |
 | 6  | Définir des comptes [HoneyTokens](install-step7.md)| - [ ] |
 | 7  | Étiqueter les [entités sensibles](sensitive-accounts.md)| - [ ] |
 | 8  | Créer des [exclusions d’alerte de sécurité](excluding-entities-from-detections.md)| - [ ] |
@@ -120,17 +119,17 @@ Connectez-vous au portail Azure ATP et effectuez les tâches de configuration su
 
 #### <a name="validation"></a>Validation
 
-Dans le portail Azure ATP :
+Dans le [!INCLUDE [Product short](includes/product-short.md)] portail :
 
 - Passez en revue les [alertes d’intégrité](health-center.md) à la recherche de problèmes de service.
-- Passez en revue les [journaux des erreurs de capteur](troubleshooting-using-logs.md) Azure ATP à la recherche d’erreurs inhabituelles.
+- Consultez [!INCLUDE [Product short](includes/product-short.md)] les [journaux d’erreurs de capteur](troubleshooting-using-logs.md) pour connaître les erreurs inhabituelles.
 
 ## <a name="after-the-move"></a>Après le transfert
 
 Cette section du guide présente les actions que vous pouvez effectuer à l’issue du transfert.
 
 > [!NOTE]
-> L’importation d’alertes de sécurité existantes d’ATA vers ATP n’est pas prise en charge. Veillez à enregistrer ou à corriger toutes les alertes ATA existantes avant de désactiver le centre ATA.
+> L’importation d’alertes de sécurité existantes à partir d’ATA vers [!INCLUDE [Product short](includes/product-short.md)] n’est pas prise en charge. Veillez à enregistrer ou à corriger toutes les alertes ATA existantes avant de désactiver le centre ATA.
 
 - **Désactiver le centre ATA**  
   - Pour référencer les données du centre ATA après le transfert, nous vous recommandons de conserver les données du centre en ligne pendant un certain temps. Une fois le centre ATA désactivé, le nombre de ressources peut généralement être réduit, surtout si les ressources sont une machine virtuelle.
@@ -140,12 +139,12 @@ Cette section du guide présente les actions que vous pouvez effectuer à l’is
 
 ## <a name="mission-accomplished"></a>Mission accomplie
 
-Félicitations ! Vous venez de passer d’ATA à Azure ATP.
+Félicitations ! Votre passage d’ATA à [!INCLUDE [Product short](includes/product-short.md)] est terminé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez plus en détail les fonctionnalités d’[Azure ATP](what-is.md), ses fonctions et les [alertes de sécurité](understanding-security-alerts.md).
+En savoir plus sur [[!INCLUDE [Product short](includes/product-short.md)]](what-is.md) les fonctionnalités, les fonctionnalités et les [alertes de sécurité](understanding-security-alerts.md).
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
+Avez-vous d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !

@@ -1,6 +1,6 @@
 ---
-title: Groupes de rôles Azure-protection avancée contre les menaces pour la gestion des accès
-description: Explique comment utiliser des groupes de rôles Azure ATP.
+title: Microsoft Defender pour les groupes de rôles d’identité pour la gestion des accès
+description: Vous guide tout au long de l’utilisation de Microsoft Defender pour les groupes de rôles d’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,39 +9,38 @@ ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d66d5c5af5721d94cb834307bb5a5ebee28848fc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 269343e6cdc5ceba875d5b6de1c740415a862eca
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910014"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275314"
 ---
-# <a name="azure-atp-role-groups"></a>Groupes de rôles Azure ATP
+# <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] groupes de rôles
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP offre la sécurité basée sur les rôles pour protéger les données conformément aux besoins de sécurité et de conformité spécifiques d’une organisation. Azure ATP prend en charge trois rôles distincts : Administrateurs, Utilisateurs et Observateurs.
+[!INCLUDE [Product long](includes/product-long.md)] offre une sécurité basée sur les rôles pour protéger les données en fonction des besoins spécifiques d’une organisation en matière de sécurité et de conformité. [!INCLUDE [Product short](includes/product-short.md)] prise en charge de trois rôles distincts : administrateurs, utilisateurs et visionneuses.
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Les groupes de rôles permettent de gérer les accès pour Azure ATP. À l’aide des groupes de rôles, vous pouvez séparer les tâches au sein de votre équipe de sécurité et accorder uniquement le nombre d’accès dont les utilisateurs ont besoin pour effectuer leur travail. Cet article explique la gestion des accès et l’autorisation des rôles Azure ATP, et vous aide à configurer des groupes de rôles dans Azure ATP.
+Les groupes de rôles permettent la gestion des accès pour [!INCLUDE [Product short](includes/product-short.md)] . À l’aide des groupes de rôles, vous pouvez séparer les tâches au sein de votre équipe de sécurité et accorder uniquement le nombre d’accès dont les utilisateurs ont besoin pour effectuer leur travail. Cet article explique la gestion des accès, l' [!INCLUDE [Product short](includes/product-short.md)] autorisation des rôles et vous permet d’être opérationnel avec les groupes de rôles dans [!INCLUDE [Product short](includes/product-short.md)] .
 
 > [!NOTE]
-> N’importe quel administrateur général ou de la sécurité de l’annuaire Azure Active Directory du locataire est automatiquement un administrateur Azure ATP.
+> Tout administrateur général ou administrateur de la sécurité sur le Azure Active Directory du locataire est automatiquement un [!INCLUDE [Product short](includes/product-short.md)] administrateur.
 
-## <a name="accessing-the-azure-atp-portal"></a>Accès au portail Azure ATP
+## <a name="accessing-the-product-short-portal"></a>Accès au [!INCLUDE [Product short](includes/product-short.md)] portail
 
-L’accès au portail Azure ATP (portal.atp.azure.com) est possible seulement par un utilisateur Azure AD qui a le rôle d’annuaire d’administrateur général ou de sécurité. Après être entré dans le portail avec le rôle requis, vous pouvez créer votre instance Azure ATP. Le service Azure ATP crée trois groupes de sécurité dans votre locataire Azure Active Directory : Administrateurs, Utilisateurs, Observateurs.
+L’accès au [!INCLUDE [Product short](includes/product-short.md)] portail (Portal.ATP.Azure.com) ne peut être effectué que par un utilisateur Azure ad disposant du rôle d’annuaire administrateur général ou administrateur de sécurité. Après avoir entré le portail avec le rôle requis, vous pouvez créer votre [!INCLUDE [Product short](includes/product-short.md)] instance. [!INCLUDE [Product short](includes/product-short.md)] le service crée trois groupes de sécurité dans votre Azure Active Directory locataire : administrateurs, utilisateurs, observateurs.
 
 > [!NOTE]
-> L’accès au portail Azure ATP est accordé uniquement aux utilisateurs appartenant aux groupes de sécurité Azure ATP, à votre annuaire Azure Active Directory ainsi qu’aux administrateurs généraux et de sécurité du locataire.
+> L’accès au [!INCLUDE [Product short](includes/product-short.md)] portail est accordé uniquement aux utilisateurs au sein des [!INCLUDE [Product short](includes/product-short.md)] groupes de sécurité, au sein de votre Azure Active Directory, ainsi qu’aux administrateurs globaux et de sécurité du utilisateurs locataires.
 
-## <a name="types-of-azure-atp-security-groups"></a>Types de groupes de sécurité Azure ATP
+## <a name="types-of-product-short-security-groups"></a>Types de [!INCLUDE [Product short](includes/product-short.md)] groupes de sécurité
 
-Azure ATP propose trois types de groupe de sécurité : Administrateurs *(nom de l’instance)* Azure ATP, Utilisateurs *(nom de l’instance)* Azure ATP et Observateurs *(nom de l’instance)* Azure ATP. Le tableau suivant décrit le type d’accès dans le portail Azure ATP disponible pour chaque rôle. En fonction du rôle que vous affectez, différents écrans et options de menu ne sont pas disponibles dans le portail Azure ATP, comme suit :
+[!INCLUDE [Product short](includes/product-short.md)] fournit trois types de groupes de sécurité : les administrateurs Azure ATP *(nom de l’instance)* , les utilisateurs Azure ATP *(nom de l’instance)* et les visionneuses Azure ATP *(nom* de l’instance). Le tableau suivant décrit le type d’accès dans le [!INCLUDE [Product short](includes/product-short.md)] portail disponible pour chaque rôle. Selon le rôle que vous attribuez, différents écrans et options de menu dans le [!INCLUDE [Product short](includes/product-short.md)] portail ne sont pas disponibles pour ces utilisateurs, comme suit :
 
 |Activité |Administrateurs *de Azure ATP (nom de l’instance)*|Utilisateurs du Azure ATP *(nom de l’instance)*|Visionneuses Azure ATP *(nom de l’instance)*|
 |----|----|----|----|
@@ -51,26 +50,26 @@ Azure ATP propose trois types de groupe de sécurité : Administrateurs *(nom d
 |Télécharger un rapport|Disponible|Disponible|Disponible|
 |Connexion|Disponible|Disponible|Disponible|
 |Partager/exporter les alertes de sécurité (via e-mail, obtenir un lien, télécharger les détails)|Disponible|Disponible|Disponible|
-|Mettre à jour la configuration d’Azure ATP - Mises à jour|Disponible|Non disponible|Non disponible|
-|Mettre à jour la configuration d’ATP - Étiquettes d’entité (sensible et honeytoken)|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’Azure ATP - Exclusions|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’Azure ATP - Langue|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’ATP - Notifications (e-mail et Syslog)|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’Azure ATP - Aperçu des détections|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’ATP - Rapports planifiés|Disponible|Disponible|Non disponible|
-|Mettre à jour la configuration d’Azure ATP - Sources de données (services d’annuaire, SIEM, VPN WD-ATP)|Disponible|Non disponible|Non disponible|
-|Mettre à jour la configuration d’Azure ATP - Capteurs (télécharger, regénérer la clé, configurer, supprimer)|Disponible|Non disponible|Non disponible|
+|Configuration des mises à jour [!INCLUDE [Product short](includes/product-short.md)] -mises à jour|Disponible|Non disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -balises d’entité (sensitive et honeytoken)|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -exclusions|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -langue|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -notifications (e-mail et syslog)|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -aperçu des détections|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -rapports planifiés|Disponible|Disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -sources de données (services d’annuaire, Siem, VPN WD-ATP)|Disponible|Non disponible|Non disponible|
+|Configuration de la mise à jour [!INCLUDE [Product short](includes/product-short.md)] -capteurs (Télécharger, régénérer la clé, configurer, supprimer)|Disponible|Non disponible|Non disponible|
 |Afficher les profils d’entité et les alertes de sécurité|Disponible|Disponible|Disponible|
 
-Quand les utilisateurs tentent d’accéder à une page qui n’est pas disponible pour leur groupe de rôles, ils sont redirigés vers la page Azure ATP d’accès non autorisé.
+Lorsque les utilisateurs essaient d’accéder à une page qui n’est pas disponible pour leur groupe de rôles, ils sont redirigés vers la [!INCLUDE [Product short](includes/product-short.md)] page non autorisée.
 
 ## <a name="add-and-remove-users"></a>Ajouter et supprimer des utilisateurs
 
-Azure ATP utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés à partir de [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups) . Seuls des utilisateurs Azure AD peuvent être ajoutés ou supprimés dans les groupes de sécurité.
+[!INCLUDE [Product short](includes/product-short.md)] utilise des groupes de sécurité Azure AD comme base pour les groupes de rôles. Les groupes de rôles peuvent être gérés à partir de la [page de gestion des groupes](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Seuls des utilisateurs Azure AD peuvent être ajoutés ou supprimés dans les groupes de sécurité.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Outil de dimensionnement ATP](https://aka.ms/aatpsizingtool)
-- [Architecture ATP](architecture.md)
-- [Installer Azure ATP](install-step1.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Installer [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

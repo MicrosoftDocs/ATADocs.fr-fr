@@ -1,23 +1,22 @@
 ---
-title: Évaluations des attributs de compte non sécurisés d’Azure Advanced Threat Protection
-description: Cet article offre une vue d’ensemble des entités d’Azure ATP avec le rapport d’évaluation de la posture de sécurité des identités d’attributs non sécurisés.
+title: Évaluation des attributs de compte non sécurisé Microsoft Defender pour l’identité
+description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités de l’identité avec des attributs non sécurisés rapport d’évaluation de la sécurité de l’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 08/25/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0f415d58026fe0e44b365d7f8a6f995226532bc
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 034948a5a355012aad387aa4d46e6e3c8d342dee
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912757"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277272"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Évaluation de la sécurité : Attributs de compte non sécurisés
 
@@ -25,7 +24,7 @@ ms.locfileid: "90912757"
 
 ## <a name="what-are-unsecure-account-attributes"></a>Qu’entend-on par « attributs de compte non sécurisés » ?
 
-Azure ATP supervise en permanence votre environnement pour identifier les comptes dont les valeurs d’attributs présentent un risque de sécurité. Vous en êtes informé à travers des rapports qui vous aident à protéger votre environnement.
+[!INCLUDE [Product long](includes/product-long.md)] surveille en permanence votre environnement afin d’identifier les comptes avec des valeurs d’attribut qui présentent un risque de sécurité et des rapports sur ces comptes pour vous aider à protéger votre environnement.
 
 ## <a name="what-risk-do-unsecure-account-attributes-pose"></a>Quels sont les risques posés par les attributs de compte non sécurisés ?
 
@@ -38,7 +37,7 @@ Par exemple, si l’attribut *PasswordNotRequired* est activé, un attaquant peu
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
 1. Utilisez le tableau du rapport pour identifier les comptes qui présentent des attributs non sécurisés.
-    ![Passer en revue les principales entités impactées et créer un plan d’action](media/atp-cas-isp-unsecure-account-attributes-1.png)
+    ![Passer en revue les principales entités impactées et créer un plan d’action](media/cas-isp-unsecure-account-attributes-1.png)
 1. Prenez les mesures appropriées sur ces comptes d’utilisateurs en modifiant ou supprimant les attributs en question.
 
 > [!NOTE]
@@ -59,5 +58,5 @@ Utilisez les mesures correctives adaptées à l’attribut en question, comme d�
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Filtrage des activités Azure ATP dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

@@ -1,6 +1,6 @@
 ---
-title: Configurer le concept des paramètres du capteur Azure ATP
-description: L’étape 5 de la procédure d’installation d’Azure ATP permet de configurer les paramètres du capteur autonome Azure ATP.
+title: Configurer Microsoft Defender pour les paramètres de capteur d’identité conceptuel
+description: L’étape 5 de l’installation de Microsoft Defender for Identity vous aide à configurer les paramètres de votre Defender pour le capteur autonome d’identité.
 author: shsagir
 ms.author: shsagir
 ms.date: 09/15/2019
@@ -9,73 +9,73 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 912b9ec8d7ff9f89bda80b6d1d3515cf93d9b9cd
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 06df6ebb9c5baa3ba2a568c78dd1ab175cdae9a8
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913014"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277014"
 ---
-# <a name="configure-azure-atp-sensor-settings"></a>Configurer les paramètres du capteur Azure ATP
+# <a name="configure-product-long-sensor-settings"></a>Configurer les [!INCLUDE [Product long](includes/product-long.md)] paramètres du capteur
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dans cet article, vous allez apprendre à configurer correctement les paramètres du capteur Azure ATP pour commencer à voir des données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti de toutes les fonctionnalités Azure ATP.
+Dans cet article, vous allez apprendre à configurer correctement les [!INCLUDE [Product long](includes/product-long.md)] paramètres de capteur pour commencer à afficher les données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti des [!INCLUDE [Product short](includes/product-short.md)] fonctionnalités complètes de.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Une [instance Azure ATP](install-step1.md) qui est [connectée à Active Directory](install-step2.md).
-- Une copie téléchargée de votre [package d’installation du capteur ATP](install-step3.md) et la clé d’accès.
+- [ [!INCLUDE [Product short](includes/product-short.md)] Instance](install-step1.md) qui est [connectée à Active Directory](install-step2.md).
+- Une copie téléchargée de votre [ [!INCLUDE [Product short](includes/product-short.md)] package d’installation de capteur](install-step3.md) et la clé d’accès.
 
 ## <a name="configure-sensor-settings"></a>Configurer les paramètres du capteur
 
-Une fois le capteur Azure ATP installé, procédez comme suit pour configurer ses paramètres.
+Une fois le [!INCLUDE [Product short](includes/product-short.md)] capteur installé, procédez comme suit pour configurer les [!INCLUDE [Product short](includes/product-short.md)] paramètres du capteur.
 
-1. Cliquez sur **Lancer** pour ouvrir votre navigateur et connectez-vous au portail Azure ATP.
+1. Cliquez sur **lancer** pour ouvrir votre navigateur et vous connecter au [!INCLUDE [Product short](includes/product-short.md)] portail.
 
-1. Dans le portail Azure ATP, accédez à **Configuration** et, sous la section **Système**, sélectionnez **Capteurs**.
+1. Dans le [!INCLUDE [Product short](includes/product-short.md)] portail, accédez à **configuration** et, sous **système** , sélectionnez **capteurs**.
 
-    ![Page Capteur](media/atp-sensor-config.png)
+    ![Page Capteur](media/sensor-config.png)
 
 1. Cliquez sur le capteur que vous voulez configurer et entrez les informations suivantes :
 
-    ![Configurer les paramètres du capteur](media/atp-sensor-config-2.png)
+    ![Configurer les paramètres du capteur](media/sensor-config-2.png)
 
-    - **Description** : entrez une description du capteur Azure ATP (facultatif).
-    - **Contrôleurs de domaine (FQDN)** (nécessaire pour le capteur autonome Azure ATP, non modifiable pour le capteur Azure ATP) : Entrez le nom de domaine complet de votre contrôleur de domaine et cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
+    - **Description** : entrez une description pour le [!INCLUDE [Product short](includes/product-short.md)] capteur (facultatif).
+    - **Contrôleurs de domaine (FQDN)** (requis pour le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome, il ne peut pas être modifié pour le [!INCLUDE [Product short](includes/product-short.md)] capteur) : entrez le nom de domaine complet de votre contrôleur de domaine, puis cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
 
-    Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine** :
-    - Tous les contrôleurs de domaine dont le trafic est surveillé par l’intermédiaire de la mise en miroir des ports par le capteur autonome Azure ATP doivent figurer dans la liste **Contrôleurs de domaine**. Si un contrôleur de domaine ne figure pas dans la liste **Contrôleurs de domaine**, il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.
-    - Au moins un contrôleur de domaine figurant dans la liste doit être un catalogue général. Azure ATP peut ainsi résoudre les objets d’ordinateur et d’utilisateur dans d’autres domaines de la forêt.
+    Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine**  :
+    - Tous les contrôleurs de domaine dont le trafic est surveillé via la mise en miroir des ports par le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome doivent être répertoriés dans la liste **contrôleurs de domaine** . Si un contrôleur de domaine ne figure pas dans la liste **Contrôleurs de domaine** , il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.
+    - Au moins un contrôleur de domaine figurant dans la liste doit être un catalogue général. Cela permet [!INCLUDE [Product short](includes/product-short.md)] à de résoudre les objets ordinateur et utilisateur dans d’autres domaines de la forêt.
 
     - **Adaptateurs de réseau de capture** (obligatoire) :
 
-    - Dans le cas des capteurs Azure ATP, il s’agit de toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
-    - Dans le cas d’un capteur autonome Azure ATP sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Ces cartes réseau reçoivent le trafic du contrôleur de domaine mis en miroir.
+    - Pour [!INCLUDE [Product short](includes/product-short.md)] les capteurs, toutes les cartes réseau utilisées pour la communication avec les autres ordinateurs de votre organisation.
+    - Pour le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome sur un serveur dédié, sélectionnez les cartes réseau qui sont configurées en tant que port miroir de destination. Ces cartes réseau reçoivent le trafic du contrôleur de domaine mis en miroir.
 
 1. Cliquez sur **Save**.
 
 ## <a name="validate-installations"></a>Valider les installations
 
-Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effectuez les vérifications suivantes :
+Pour vérifier que le [!INCLUDE [Product short](includes/product-short.md)] capteur a été correctement déployé, vérifiez les points suivants :
 
-1. Vérifiez que le service nommé **Capteur Azure Advanced Threat Protection** est en cours d’exécution. Après avoir enregistré les paramètres du capteur Azure ATP, vous devrez peut-être patienter quelques secondes avant le démarrage du service.
+1. Vérifiez que le service nommé **Capteur Azure Advanced Threat Protection** est en cours d’exécution. Une fois que vous avez enregistré les [!INCLUDE [Product short](includes/product-short.md)] paramètres du capteur, le démarrage du service peut prendre quelques secondes.
 
 1. Si le service ne démarre pas, examinez le fichier « Microsoft.Tri.sensor-Errors.log » qui se trouve dans le dossier par défaut suivant : « %programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs ».
 
     >[!NOTE]
-    > La version d’Azure ATP est fréquemment mise à jour. Pour vérifier la version, dans le portail Azure ATP, accédez à **Configuration**, puis à **À propos**.
+    > La version des [!INCLUDE [Product short](includes/product-short.md)] mises à jour fréquemment, pour vérifier la version la plus récente, dans le [!INCLUDE [Product short](includes/product-short.md)] portail, accédez à **configuration** , puis **à propos** de.
 
-1. Accédez à l’URL de votre instance Azure ATP. Dans le portail Azure ATP, recherchez un élément dans la barre de recherche, comme un utilisateur ou un groupe de votre domaine.
+1. Accédez à l' [!INCLUDE [Product short](includes/product-short.md)] URL de votre instance. Dans le [!INCLUDE [Product short](includes/product-short.md)] portail, recherchez un objet dans la barre de recherche, tel qu’un utilisateur ou un groupe sur votre domaine.
 
-1. Vérifiez la connectivité d’ATP sur n’importe quel appareil de domaine en procédant comme suit :
+1. Vérifiez [!INCLUDE [Product short](includes/product-short.md)] la connectivité sur tout périphérique de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
     1. Tapez `nslookup`
-    1. Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine où le capteur ATP est installé. Par exemple, `server contosodc.contoso.azure`
-        - Veillez à remplacer contosodc.contoso.azure et contoso.azure par le nom de domaine complet de votre capteur Azure ATP et le nom de domaine respectivement.
+    1. Tapez **Server** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel le [!INCLUDE [Product short](includes/product-short.md)] capteur est installé. Par exemple : `server contosodc.contoso.azure`
+        - Veillez à remplacer ContosoDC. contoso. Azure et contoso. Azure par le nom de domaine complet (FQDN) de votre [!INCLUDE [Product short](includes/product-short.md)] capteur et de votre nom de domaine, respectivement.
     1. Tapez `ls -d contoso.azure`
     1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.
-    1. À partir de la console Azure ATP, ouvrez le profil d’entité pour l’ordinateur à partir duquel vous avez exécuté le test de connectivité.
+    1. À partir de la [!INCLUDE [Product short](includes/product-short.md)] console, ouvrez le profil d’entité de l’ordinateur à partir duquel vous avez exécuté le test de connectivité.
     1. Vérifiez l’activité logique associée et confirmez la.
 
     > [!NOTE]
@@ -85,8 +85,8 @@ Pour vous assurer que le capteur Azure ATP a été déployé avec succès, effec
 
 - [Configuration du proxy](configure-proxy.md)
 - [Stratégie d’audit avancée](configure-windows-event-collection.md)
-- [Configurer Azure ATP pour effectuer des appels distants vers SAM](install-step8-samr.md)
+- [Configurer [!INCLUDE [Product short](includes/product-short.md)] pour effectuer des appels distants à Sam](install-step8-samr.md)
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://aka.ms/azureatpcommunity) dès aujourd’hui !
+Vous avez d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://aka.ms/MDIcommunity) dès aujourd’hui !

@@ -1,66 +1,59 @@
 ---
-title: Surveiller l’intégrité et les événements du système Azure-protection avancée contre les menaces
-description: Le centre d’intégrité Azure ATP vous permet de vérifier le bon fonctionnement du service Azure ATP, d’être alerté sur les problèmes potentiels et de consulter les événements système dans l’observateur d’événements.
+title: Surveiller Microsoft Defender pour l’intégrité et les événements du système d’identité
+description: Utilisez le centre d’intégrité pour vérifier le fonctionnement de Microsoft Defender for Identity service et recevoir des alertes en cas de problèmes potentiels et afficher les événements système dans l’observateur d’événements.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 1/3/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fc192856a247ca4ee47e5e73ddc366bb7592a0c0
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d1b7c7f5ce56bb7de5ab38b276c1de3074aa533d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910392"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276374"
 ---
-# <a name="work-with-azure-atp-health-and-events"></a>Utiliser l’intégrité et les événements Azure ATP
+# <a name="work-with-product-long-health-and-events"></a>Utiliser l' [!INCLUDE [Product long](includes/product-long.md)] intégrité et les événements
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-## <a name="azure-atp-health-center"></a>Centre d’intégrité Azure ATP 
+## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Centre d’intégrité
 
-Le centre d’intégrité Azure ATP vous indique les performances de votre instance Azure ATP et les problèmes éventuellement rencontrés.
+Le [!INCLUDE [Product long](includes/product-long.md)] Centre d’intégrité vous permet de savoir comment votre [!INCLUDE [Product short](includes/product-short.md)] instance s’exécute et vous avertit en cas de problème.
 
-## <a name="working-with-the-azure-atp-health-center"></a>Utilisation du centre d’intégrité Azure ATP
+## <a name="working-with-the-product-short-health-center"></a>Utilisation du [!INCLUDE [Product short](includes/product-short.md)] Centre d’intégrité
 
-Si un problème se produit, le centre d’intégrité Azure ATP déclenche une alerte en affichant un point rouge au-dessus de l’icône du centre d’intégrité dans la barre de menus.
+Le [!INCLUDE [Product short](includes/product-short.md)] Centre d’intégrité vous permet de savoir qu’il y a un problème en déclenchant une alerte (un point rouge) au-dessus de l’icône du centre d’intégrité dans la barre de navigation.
 
-![Barre d’outils avec point rouge pour le centre d’intégrité Azure ATP](media/atp-health-bar.png)
+![[! INCLUDe [Product Short] (includes/Product-Short. MD)] barre d’outils du point rouge du centre d’intégrité](media/health-bar.png)
 
-### <a name="managing-azure-atp-health"></a>Gestion de l’intégrité d’Azure ATP
-Pour vérifier l’intégrité globale de votre instance Azure ATP, cliquez sur l’icône du centre d’intégrité dans la barre de menus. ![Icône du centre d’intégrité Azure ATP](media/atp-red-dot.png)
+### <a name="managing-product-short-health"></a>Gestion de l' [!INCLUDE [Product short](includes/product-short.md)] intégrité
 
-- Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer**, en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
+Pour vérifier l’intégrité globale de votre [!INCLUDE [Product short](includes/product-short.md)] instance, sélectionnez **intégrité** ![ [ ! INCLUDe [Product Short] (includes/Product-Short. MD)] icône du centre d’intégrité](media/red-dot.png)
 
--   **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
+- Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer** , en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
--   **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
+- **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
+
+- **Fermé** : Utilisé pour effectuer le suivi des activités suspectes que vous avez identifiées, examinées et résolues.
 
     > [!NOTE]
-    > Azure ATP peut rouvrir une activité fermée si celle-ci est détectée à nouveau peu de temps après.
-    
--   **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire survient, Azure ATP ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes de nouveau averti.
+    > [!INCLUDE [Product short](includes/product-short.md)] peut rouvrir une activité fermée si la même activité est détectée à nouveau dans un laps de temps réduit.
 
--   **Rouvrir** : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
+- **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire ne s' [!INCLUDE [Product short](includes/product-short.md)] ouvre pas à nouveau, Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes de nouveau averti.
 
--   **Supprimer** : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
+- **Rouvrir**  : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
 
+- **Supprimer**  : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
-
-![Image montrant des problèmes dans le centre d’intégrité Azure ATP](media/atp-health-issue.png)
-
-
-
-
-
+![[! INCLUDe [Product Short] (includes/Product-Short. MD)] image des problèmes du centre d’intégrité](media/health-issue.png)
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

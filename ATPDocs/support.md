@@ -1,43 +1,40 @@
 ---
-title: Support Azure ATP
-description: Décrit le processus d’obtention de support pour Azure ATP.
+title: Microsoft Defender pour la prise en charge des identités
+description: Décrit le processus d’obtention de l’aide de support pour Microsoft Defender pour l’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 1/27/2019
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c7ae55cf1225f434b086ff3998c0104c2b13f8b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: b2b317bf7ca27a4158e741509f7b159457cd1698
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910000"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274172"
 ---
-# <a name="azure-advanced-threat-protection-information-and-support"></a>Informations et support d’Azure Advanced Threat Protection 
-
+# <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informations et support
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Utilisez les ressources suivantes pour en savoir plus sur le service Azure Advanced Threat Protection, son déploiement et son assistance pour votre organisation.
+Utilisez les ressources suivantes pour vous aider à en savoir plus sur, déployer et prendre en charge [!INCLUDE [Product long](includes/product-long.md)] votre organisation.
 
 |Pour effectuer cette opération...|... faites ceci :|
 |----|----|
-|Consulter notre documentation la plus lue|Lisez les dix pages les plus consultées :<br>- [Qu’est-ce qu’Azure-protection avancée contre les menaces ?](what-is.md)<br>- [Conditions préalables Azure ATP](prerequisites.md)<br>- [Architecture Azure ATP](architecture.md)<br>- [Planification de la capacité de Azure ATP](capacity-planning.md)<br>-[Création d’une instance](install-step1.md)<br>-[Comprendre les alertes de sécurité](understanding-security-alerts.md)<br>-[Azure ATP les alertes de sécurité](suspicious-activity-guide.md)<br>-[Examiner un ordinateur](investigate-a-computer.md)<br>-[Examiner un utilisateur](investigate-a-user.md)<br>-[Examiner les chemins de mouvement latéral](investigate-lateral-movement-path.md)
-|Contacter l’équipe de produit et vos homologues|Visitez la [communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)   pour Azure-protection avancée contre les menaces.|
-|Vérifier les informations d’abonnement et obtenir la liste des fonctionnalités prises en charge|Consultez les [informations d’abonnement](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)   et la [liste des fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features)   sur le site Web Azure-protection avancée contre les menaces.|
+|Consulter notre documentation la plus lue|Lisez les dix pages les plus consultées :<br>- [Qu’est-ce que c’est [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)<br>-[Création d’une instance](install-step1.md)<br>-[Comprendre les alertes de sécurité](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] alertes de sécurité](suspicious-activity-guide.md)<br>-[Examiner un ordinateur](investigate-a-computer.md)<br>-[Examiner un utilisateur](investigate-a-user.md)<br>-[Examiner les chemins de mouvement latéral](investigate-lateral-movement-path.md)
+|Contacter l’équipe de produit et vos homologues|Visitez la [communauté technique](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) de [!INCLUDE [Product short](includes/product-short.md)] .|
+|Vérifier les informations d’abonnement et obtenir la liste des fonctionnalités prises en charge|Consultez les [informations d’abonnement](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) et la liste des [fonctionnalités](https://www.microsoft.com/cloud-platform/azure-information-protection-features) à partir du [!INCLUDE [Product short](includes/product-short.md)] site Web.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informations sur les nouvelles versions et mises à jour
 
-L’équipe en charge du produit Azure Advanced Threat Protection poste des annonces sur les nouvelles versions et les mises à jour sur le  [blog Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
-Ces billets de blog complètent la documentation du produit et les informations de support.
+L' [!INCLUDE [Product short](includes/product-short.md)] équipe de produit publie des annonces sur les nouvelles versions et les mises à jour du [blog Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/). Ces billets de blog complètent la documentation du produit et les informations de support.
 
-Pour obtenir une liste à jour des nouvelles fonctionnalités et des changements récents dans Azure ATP, consultez [Nouveautés d’Azure Advanced Threat Protection](whats-new.md).
+Pour obtenir une liste actualisée des nouvelles fonctionnalités et des changements récents dans [!INCLUDE [Product short](includes/product-short.md)] , consultez [Nouveautés de [!INCLUDE [Product short](includes/product-short.md)] ](whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Options de support et ressources communautaires
 
@@ -45,14 +42,14 @@ La section suivante fournit des informations sur le support et les options de r�
 
 Pour contacter le support Microsoft :
 
-Si vous avez Support Premier, visitez le [portail pour support premier clients](https://premier.microsoft.com/)   pour soumettre des incidents, parcourir des solutions et obtenir de l’aide.
+Si vous avez Premier Support, visitez le [portail pour les clients Premier Support](https://premier.microsoft.com/) pour soumettre des incidents, rechercher des solutions et obtenir de l’aide.
 
 Pour les autres clients, utilisez les canaux de support comme suit :
 
 | Canaux|Instructions|
 |------|-----|
-|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure. <br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème**, choisissez **technique**, comme **service** sous sécurité & identité, choisissez **Azure-protection avancée contre les menaces**. <br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
-|Utiliser Azure Advanced Threat Protection| 1. cliquez sur l’icône «  ? » dans la barre de navigation supérieure du portail Azure-protection avancée contre les menaces<br>2. Recherchez Azure-protection avancée contre les menaces.<br>3. Ouvrez un ticket d’incident.<br>-Sélectionnez « support »<br>4. Ouvrez un ticket d’incident. Si vous réussissez à entrer dans le portail Azure Advanced Threat Protection, vous pouvez accéder au [portail de support assisté en ligne](https://support.microsoft.com/assistedsupportproducts). |
+|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure. <br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème** , choisissez **technique** , comme **service** sous sécurité & identité, choisissez **Azure-protection avancée contre les menaces**. <br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Utiliser le [!INCLUDE [Product short](includes/product-short.md)] portail| 1. cliquez sur l’icône «  ? » dans la barre de navigation supérieure du [!INCLUDE [Product short](includes/product-short.md)] portail<br>2. recherchez [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Ouvrez un ticket d’incident.<br>-Sélectionnez « support »<br>4. Ouvrez un ticket d’incident. Si vous parvient à entrer dans le [!INCLUDE [Product short](includes/product-short.md)] portail, vous pouvez accéder au [portail de support assisté en ligne (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Pour d’autres options de support, demandez à votre contact Microsoft.
 
@@ -60,22 +57,22 @@ Pour d’autres options de support, demandez à votre contact Microsoft.
 
 #### <a name="system-status-page"></a>Page de l’état du système
 
-Pour afficher l’état du système pour Azure ATP, visitez la page [**État du système**](https://health.atp.azure.com/). Cette page vous indique si le portail Azure ATP est opérationnel et actif, s’il existe des problèmes avec les détections et si la sonde est en mesure d’envoyer du trafic vers le cloud. Vous pouvez accéder à l’**État du système** dans la barre de menus Azure ATP.
+Pour afficher l’état du système pour [!INCLUDE [Product short](includes/product-short.md)] , visitez la page [**État du système**](https://health.atp.azure.com/) . Cette page vous donne des informations sur le fait que le [!INCLUDE [Product short](includes/product-short.md)] portail est opérationnel et actif, s’il existe des problèmes avec les détections et si le capteur est en mesure d’envoyer du trafic vers le Cloud. Vous pouvez accéder à l' **État du système** à partir de la barre de [!INCLUDE [Product short](includes/product-short.md)] menus.
 
 #### <a name="on-demand-videos"></a>Vidéos à la demande
 
-- Sessions Microsoft Ignite 2018 pour  [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
+- Microsoft enflamme 2018 sessions pour [[!INCLUDE [Product short](includes/product-short.md)]](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor) .
 
 Résolution des problèmes :
 
 - Si vous avez une question sur un point spécifique, consultez le [forum aux questions](technical-faq.md).
 
-- Si vous avez une question concernant un prérequis pour Azure Advanced Threat Protection, consultez [Prérequis d’ATP](prerequisites.md).
+- Si vous avez une question concernant un composant requis pour [!INCLUDE [Product short](includes/product-short.md)] , voir [ [!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md).
 
-- Si vous avez déployé Microsoft Defender ATP dans votre environnement et que vous souhaitez l’intégrer à Azure-protection avancée contre les menaces, consultez [intégration à Microsoft Defender ATP](integrate-msde.md).
+- Si vous avez Microsoft Defender pour un point de terminaison déployé dans votre environnement et que vous souhaitez l’intégrer à [!INCLUDE [Product short](includes/product-short.md)] , consultez [intégrer à Microsoft Defender pour point de terminaison](integrate-mde.md).
 
-- Pour plus d’informations concernant l’examen d’une alerte de sécurité, consultez le  [Guide des alertes de sécurité](suspicious-activity-guide.md).
+- Pour plus d’informations sur les alertes de sécurité des investigations, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Ressources communautaires
 
-Nous recommandons le  [groupe Tech Community pour Azure Advanced Threat Protection](https://aka.ms/azureatpcommunity). Vous pouvez y obtenir des réponses directement de l’équipe Azure Advanced Threat Protection, tout en bénéficiant de l’expérience partagée et des connaissances d’autres administrateurs et consultants.
+Nous recommandons le [groupe de communautés technologiques [!INCLUDE [Product short](includes/product-short.md)] pour ](https://aka.ms/MDIcommunity). Cette ressource fournit des réponses directes de l' [!INCLUDE [Product short](includes/product-short.md)] équipe en plus de l’avantage des expériences partagées et des connaissances d’autres administrateurs et consultants.

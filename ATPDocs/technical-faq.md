@@ -1,46 +1,47 @@
 ---
-title: Forum aux questions Azure Advanced Threat Protection
-description: Fournit une liste de questions fréquemment posées sur Azure ATP et les réponses correspondantes
+title: Forum aux questions sur Microsoft Defender for Identity
+description: Fournit une liste de questions fréquemment posées sur Microsoft Defender pour l’identité et les réponses associées.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/12/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 25d26cf71786c0d3d0c503d85fb4193ffd1d50fe
-ms.sourcegitcommit: 016ab00760cb6feb66666ce5c08f7ef340563da2
+ms.openlocfilehash: ccb3ee9afe32615246f8e6dc63e181475094a8b7
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91946481"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274370"
 ---
-# <a name="azure-atp-frequently-asked-questions"></a>Forum aux questions Azure ATP
+# <a name="product-long-frequently-asked-questions"></a>[!INCLUDE [Product long](includes/product-long.md)] Forum aux questions
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cet article fournit une liste de questions fréquemment posées sur Azure ATP et leur réponse, classées selon les catégories suivantes :
+Cet article fournit une liste des questions fréquemment posées et des réponses sur [!INCLUDE [Product long](includes/product-long.md)] divisées dans les catégories suivantes :
 
-- [Qu’est-ce qu’Azure ATP ?](#what-is-azure-atp)
+- [Quoi [!INCLUDE [Product short](includes/product-short.md)]](#what-is-azure-atp)
 - [Gestion des licences et confidentialité](#licensing-and-privacy)
 - [Déploiement](#deployment)
 - [Fonctionnement](#operation)
 - [Résolution des problèmes](#troubleshooting)
 
-## <a name="what-is-azure-atp"></a>Qu’est-ce qu’Azure ATP ?
+<a name="what-is-azure-atp"></a>
 
-### <a name="what-can-azure-atp-detect"></a>Que peut détecter Azure ATP ?
+## <a name="what-is-product-short"></a>Qu’est-ce que c’est [!INCLUDE [Product short](includes/product-short.md)] ?
 
-Azure ATP détecte les techniques et attaques malveillantes connues, les problèmes de sécurité et les risques qui menacent votre réseau.
-Pour obtenir la liste complète des détections fournies par Azure ATP, consultez [Quelles sont les détections effectuées par Azure ATP ?](suspicious-activity-guide.md).
+### <a name="what-can-product-short-detect"></a>Que peut [!INCLUDE [Product short](includes/product-short.md)] détecter ?
 
-### <a name="what-data-does-azure-atp-collect"></a>Quelles sont les données collectées par Azure ATP ?
+[!INCLUDE [Product short](includes/product-short.md)] détecte les attaques et les techniques malveillantes connues, les problèmes de sécurité et les risques liés à votre réseau.
+Pour obtenir la liste complète des [!INCLUDE [Product short](includes/product-short.md)] détections, consultez [Quelles sont les détections [!INCLUDE [Product short](includes/product-short.md)] effectuées ?](suspicious-activity-guide.md).
 
-Azure ATP collecte et stocke des informations provenant de vos serveurs configurés (contrôleurs de domaine, serveurs membres, etc.) dans une base de données spécifique au service à des fins d’administration, de suivi et de création de rapports. Les informations collectées comprennent le trafic réseau vers et depuis des contrôleurs de domaine (par exemple, l’authentification Kerberos, l’authentification NTLM, les requêtes DNS), les journaux de sécurité (par exemple, les événements de sécurité Windows), les informations Active Directory (structure, sous-réseaux, sites) et les informations sur les entités (par exemple, les noms, les adresses e-mail et les numéros de téléphone).
+### <a name="what-data-does-product-short-collect"></a>Quelles sont les données [!INCLUDE [Product short](includes/product-short.md)] collectées ?
+
+[!INCLUDE [Product short](includes/product-short.md)] collecte et stocke des informations à partir de vos serveurs configurés (contrôleurs de domaine, serveurs membres, etc.) dans une base de données spécifique au service à des fins d’administration, de suivi et de création de rapports. Les informations collectées comprennent le trafic réseau vers et depuis des contrôleurs de domaine (par exemple, l’authentification Kerberos, l’authentification NTLM, les requêtes DNS), les journaux de sécurité (par exemple, les événements de sécurité Windows), les informations Active Directory (structure, sous-réseaux, sites) et les informations sur les entités (par exemple, les noms, les adresses e-mail et les numéros de téléphone).
 
 Microsoft utilise ces données pour :
 
@@ -50,33 +51,33 @@ Microsoft utilise ces données pour :
 
 Microsoft n’exploite pas vos données à des fins publicitaires ni autres que la fourniture du service.
 
-### <a name="how-many-directory-service-credentials-does-azure-atp-support"></a>Combien d’informations d’identification du service d’annuaire Azure ATP prend-il en charge ?
+### <a name="how-many-directory-service-credentials-does-product-short-support"></a>Combien d’informations d’identification du service d’annuaire [!INCLUDE [Product short](includes/product-short.md)] prennent en charge ?
 
-Azure ATP prend actuellement en charge l’ajout de 10 informations d’identification de service d’annuaire différentes pour prendre en charge les environnements Active Directory avec des forêts non approuvées. Si vous avez besoin de comptes supplémentaires, ouvrez un ticket de support.
+[!INCLUDE [Product short](includes/product-short.md)] prend actuellement en charge l’ajout de 10 informations d’identification de service d’annuaire différentes pour prendre en charge Active Directory environnements avec des forêts non approuvées. Si vous avez besoin de comptes supplémentaires, ouvrez un ticket de support.
 
-### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>Azure ATP analyse-t-il seulement le trafic provenant d’Active Directory ?
+### <a name="does-product-short-only-leverage-traffic-from-active-directory"></a>N’utilise-t- [!INCLUDE [Product short](includes/product-short.md)] il que le trafic provenant de Active Directory ?
 
-En plus d’analyser le trafic Active Directory avec une technologie d’inspection approfondie des paquets, Azure ATP collecte également les événements Windows pertinents de votre contrôleur de domaine et crée des profils d’entité selon les informations d’Active Directory Domain Services. Azure ATP prend également en charge la réception de la gestion des comptes RADIUS des journaux VPN provenant de divers fournisseurs (Microsoft, Cisco, F5 et Checkpoint).
+Outre l’analyse du trafic Active Directory à l’aide de la technologie d’inspection approfondie des paquets, [!INCLUDE [Product short](includes/product-short.md)] collecte également les événements Windows pertinents à partir de votre contrôleur de domaine et crée des profils d’entité basés sur les informations de Active Directory Domain Services. [!INCLUDE [Product short](includes/product-short.md)] prend également en charge la gestion de la comptabilité RADIUS des journaux VPN de différents fournisseurs (Microsoft, Cisco, F5 et Checkpoint).
 
-### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Azure ATP surveille-t-il uniquement les appareils joints à un domaine ?
+### <a name="does-product-short-monitor-only-domain-joined-devices"></a>N' [!INCLUDE [Product short](includes/product-short.md)] analyse que les appareils joints à un domaine ?
 
-Non. Azure ATP surveille tous les appareils du réseau qui effectuent des demandes d’authentification et d’autorisation auprès d’Active Directory, notamment les appareils non-Windows et les appareils mobiles.
+Non. [!INCLUDE [Product short](includes/product-short.md)] surveille tous les appareils du réseau qui effectuent des demandes d’authentification et d’autorisation sur Active Directory, y compris les appareils non-Windows et mobiles.
 
-### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Azure ATP surveille-t-il les comptes d’ordinateurs et les comptes d’utilisateurs ?
+### <a name="does-product-short-monitor-computer-accounts-as-well-as-user-accounts"></a>Est-il [!INCLUDE [Product short](includes/product-short.md)] possible de surveiller les comptes d’ordinateur ainsi que les comptes d’utilisateur ?
 
-Oui. Étant donné que les comptes d’ordinateurs (de même que toute autre entité) peuvent être utilisés pour effectuer des activités malveillantes, Azure ATP surveille le comportement de tous les comptes d’ordinateurs et de toutes les autres entités dans l’environnement.
+Oui. Étant donné que les comptes d’ordinateurs (ainsi que toutes les autres entités) peuvent être utilisés pour effectuer des activités malveillantes, [!INCLUDE [Product short](includes/product-short.md)] surveille le comportement de tous les comptes d’ordinateur et toutes les autres entités de l’environnement.
 
-### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Quelle est la différence entre Advanced Threat Analytics (ATA) et Azure ATP ?
+### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-product-short"></a>Quelle est la différence entre Advanced Threat Analytics (ATA) et [!INCLUDE [Product short](includes/product-short.md)] ?
 
 ATA est une solution locale autonome avec plusieurs composants, tels que le centre ATA qui nécessite du matériel dédié localement.
 
-Azure ATP est une solution de sécurité basée sur le cloud qui tire parti de vos signaux Active Directory (Azure AD) locaux. La solution est très scalable et fréquemment mise à jour.
+[!INCLUDE [Product short](includes/product-short.md)] est une solution de sécurité basée sur le Cloud qui exploite vos signaux de Active Directory (Azure AD) locaux. La solution est très scalable et fréquemment mise à jour.
 
 La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
-Contrairement au capteur ATA, le capteur Azure ATP utilise également des sources de données telles que le Suivi d’événements pour Windows (ETW) permettant à Azure ATP de fournir des détections supplémentaires.
+Contrairement au capteur ATA, le [!INCLUDE [Product short](includes/product-short.md)] capteur utilise également des sources de données telles que suivi d’v nements pour Windows (ETW) permettant [!INCLUDE [Product short](includes/product-short.md)] de fournir des détections supplémentaires.
 
-Les mises à jour fréquentes d’Azure ATP incluent les fonctionnalités suivantes :
+[!INCLUDE [Product short](includes/product-short.md)]les mises à jour fréquentes de incluent les fonctionnalités suivantes :
 
 - **Prise en charge [des environnements multiforêts](multi-forest.md)**  : Permet aux organisations d’avoir une visibilité sur les forêts AD.
 
@@ -84,19 +85,19 @@ Les mises à jour fréquentes d’Azure ATP incluent les fonctionnalités suivan
 
 - **[Fonctions UEBA](/cloud-app-security/tutorial-ueba)**  : Insights sur les risques de chaque utilisateur via le scoring des priorités d’investigation des utilisateurs. Le score peut assister SecOps dans leurs investigations et aider les analystes à comprendre les activités inhabituelles de l’utilisateur et de l’organisation.
 
-- **Intégrations natives** : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
+- **Intégrations natives**  : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
 
-- **Contributions à la Protection Microsoft contre les menaces (MTP)**  : Fournit des données d’alerte et de menace à MTP. MTP tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un seul tableau de bord. Grâce à cette grande précision, les défenseurs peuvent se concentrer sur les menaces critiques et chasser les failles sophistiquées, en faisant confiance à l’automatisation puissante de MTP pour arrêter les attaques n’importe où dans la « kill chain » et faire revenir l’organisation à un état sécurisé.
+- **Contribue à Microsoft 365 Defender** : fournit des données d’alerte et de menace à Microsoft 365 Defender. Microsoft 365 Defender tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un tableau de bord unique. Grâce à cette richesse et à la clarté, les défenseurs peuvent se concentrer sur les menaces critiques et la recherche de failles sophistiquées, en faisant confiance à Microsoft 365 l’automatisation puissante de Defender arrête les attaques n’importe où dans la chaîne de suppression et rétablit l’organisation dans un état sécurisé.
 
 ## <a name="licensing-and-privacy"></a>Gestion des licences et confidentialité
 
-### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Où puis-je obtenir une licence pour Azure Advanced Threat Protection (ATP) ?
+### <a name="where-can-i-get-a-license-for-product-long"></a>Où puis-je obtenir une licence [!INCLUDE [Product long](includes/product-long.md)] ?
 
-Azure ATP est disponible dans le cadre de la suite Enterprise Mobility + Security 5 (EMS E5) et sous forme de licence autonome. Vous pouvez acquérir une licence directement sur le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence de fournisseur de solutions cloud (CSP).
+[!INCLUDE [Product short](includes/product-short.md)] est disponible dans le cadre de Enterprise Mobility + Security 5 suite (EMS E5) et en tant que licence autonome. Vous pouvez acquérir une licence directement sur le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence de fournisseur de solutions cloud (CSP).
 
-### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>Azure ATP n’a-t-elle besoin que d’une seule licence ou nécessite-t-elle une licence pour chaque utilisateur que je souhaite protéger ?
+### <a name="does-product-short-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>N’a [!INCLUDE [Product short](includes/product-short.md)] -t-il besoin que d’une seule licence ou nécessite-t-elle une licence pour chaque utilisateur que je souhaite protéger ?
 
-Pour plus d’informations sur les conditions de licence Azure ATP, consultez [Azure ATP Guide de licences](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
+Pour plus d’informations sur les [!INCLUDE [Product short](includes/product-short.md)] licences requises, consultez le [ [!INCLUDE [Product short](includes/product-short.md)] Guide des licences](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Est-ce que mes données sont isolées des données des autres clients ?
 
@@ -104,7 +105,7 @@ Oui, vos données sont isolées par l’authentification de l’accès et la sé
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Ai-je la possibilité de sélectionner l’emplacement où stocker mes données ?
 
-Non. Une fois créée, votre instance Azure ATP est automatiquement stockée dans le centre de données du pays le plus proche de l’emplacement géographique de votre locataire AAD. Après avoir créé votre instance Azure ATP, vous ne pouvez pas déplacer les données Azure ATP dans un autre centre de données.
+Non. Lorsque votre [!INCLUDE [Product short](includes/product-short.md)] instance est créée, elle est stockée automatiquement dans le centre de données du pays le plus proche de l’emplacement géographique de votre locataire AAD. [!INCLUDE [Product short](includes/product-short.md)] les données ne peuvent pas être déplacées une fois votre [!INCLUDE [Product short](includes/product-short.md)] instance créée dans un autre centre de données.
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Comment est-ce que Microsoft empêche les activités internes malveillantes et les abus de rôles dotés de privilèges élevés ?
 
@@ -118,51 +119,51 @@ En outre, Microsoft effectue des vérifications des antécédents sur certains m
 
 ## <a name="deployment"></a>Déploiement
 
-### <a name="how-many-azure-atp-sensors-do-i-need"></a>De combien de capteurs Azure ATP ai-je besoin ?
+### <a name="how-many-product-short-sensors-do-i-need"></a>De combien de [!INCLUDE [Product short](includes/product-short.md)] capteurs ai-je besoin ?
 
-Chaque contrôleur de domaine dans l’environnement doit être couvert par un capteur autonome ou capteur ATP. Pour plus d’informations, consultez [Dimensionnement du capteur Azure ATP](capacity-planning.md#sizing).
+Chaque contrôleur de domaine dans l’environnement doit être couvert par un capteur [!INCLUDE [Product short](includes/product-short.md)] ou un capteur autonome. Pour plus d’informations, consultez [ [!INCLUDE [Product short](includes/product-short.md)] dimensionnement du capteur](capacity-planning.md#sizing).
 
-### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Azure ATP prend-il en charge le trafic chiffré ?
+### <a name="does-product-short-work-with-encrypted-traffic"></a>Fonctionne-t- [!INCLUDE [Product short](includes/product-short.md)] il avec le trafic chiffré ?
 
 Les protocoles réseau avec le trafic chiffré (par exemple AtSvc et WMI) ne sont pas chiffrés, mais ils sont analysés par les capteurs.
 
-### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Azure ATP fonctionne-t-il avec le blindage Kerberos ?
+### <a name="does-product-short-work-with-kerberos-armoring"></a>Fonctionne-t- [!INCLUDE [Product short](includes/product-short.md)] il avec le blindage Kerberos ?
 
-L’activation du blindage Kerberos, également appelé FAST (Flexible Authentication Secure Tunneling), est prise en charge par Azure ATP, à l’exception de la détection d’attaques de type « Overpass-the-Hash » qui ne fonctionne pas avec le blindage Kerberos.
+L’activation du blindage Kerberos, également appelée FAST (flexible Authentication Secure Tunneling), est prise en charge par [!INCLUDE [Product short](includes/product-short.md)] , à l’exception de la détection de hachage excessive, qui ne fonctionne pas avec le blindage Kerberos.
 
-### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Comment puis-je surveiller un contrôleur de domaine virtuel à l’aide d’Azure ATP ?
+### <a name="how-do-i-monitor-a-virtual-domain-controller-using-product-short"></a>Comment faire surveiller un contrôleur de domaine virtuel à l’aide de [!INCLUDE [Product short](includes/product-short.md)] ?
 
-La plupart des contrôleurs de domaine virtuels peuvent être couverts par le capteur Azure ATP ; pour déterminer si celui-ci est approprié pour votre environnement, consultez [Planification de la capacité Azure ATP](capacity-planning.md).
+La plupart des contrôleurs de domaine virtuels peuvent être couverts par le [!INCLUDE [Product short](includes/product-short.md)] capteur, afin de déterminer si le capteur convient à [!INCLUDE [Product short](includes/product-short.md)] votre environnement, consultez [ [!INCLUDE [Product short](includes/product-short.md)] planification](capacity-planning.md)de la capacité.
 
-Si un contrôleur de domaine virtuel ne peut pas être couvert par le capteur Azure ATP, vous pouvez avoir un capteur autonome Azure ATP virtuel ou physique, comme décrit dans [Configurer la mise en miroir des ports](configure-port-mirroring.md).  
-Le moyen le plus simple consiste à configurer un capteur autonome Azure ATP virtuel sur chaque hôte où figure un contrôleur de domaine virtuel.  
+Si un contrôleur de domaine virtuel ne peut pas être couvert par le [!INCLUDE [Product short](includes/product-short.md)] capteur, vous pouvez disposer d’un capteur autonome virtuel ou physique, [!INCLUDE [Product short](includes/product-short.md)] comme décrit dans [configurer la mise en miroir des ports](configure-port-mirroring.md).  
+Le moyen le plus simple consiste à avoir un [!INCLUDE [Product short](includes/product-short.md)] capteur autonome virtuel sur chaque ordinateur hôte où se trouve un contrôleur de domaine virtuel.  
 Si vos contrôleurs de domaine virtuels passent d’un hôte à l’autre, vous devez effectuer l’une des étapes suivantes :
 
-- Quand le contrôleur de domaine virtuel passe à un autre hôte, préconfigurez le capteur autonome Azure ATP sur cet hôte pour qu’il reçoive le trafic du contrôleur de domaine virtuel ayant récemment été déplacé.
-- Associez le capteur autonome Azure ATP virtuel au contrôleur de domaine virtuel. Ainsi, s’il est déplacé, le capteur autonome Azure ATP est déplacé en même temps.
+- Lorsque le contrôleur de domaine virtuel est déplacé vers un autre hôte, préconfigurez le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome dans cet hôte pour recevoir le trafic à partir du contrôleur de domaine virtuel récemment déplacé.
+- Assurez-vous d’affilier le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome virtuel au contrôleur de domaine virtuel, de sorte que, s’il est déplacé, le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome le déplace.
 - Certains commutateurs virtuels peuvent envoyer le trafic entre les hôtes.
 
-### <a name="how-do-i-configure-the-azure-atp-sensors-to-communicate-with-azure-atp-cloud-service-when-i-have-a-proxy"></a>Comment configurer les capteurs Azure ATP pour communiquer avec le service cloud Azure ATP en présence d’un proxy ?
+### <a name="how-do-i-configure-the-product-short-sensors-to-communicate-with-product-short-cloud-service-when-i-have-a-proxy"></a>Comment faire configurer les [!INCLUDE [Product short](includes/product-short.md)] capteurs pour communiquer avec le [!INCLUDE [Product short](includes/product-short.md)] service Cloud lorsque j’ai un proxy ?
 
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com. Pour obtenir des instructions sur la façon de procéder, consultez [Configurer votre proxy ou pare-feu pour permettre la communication avec les capteurs Azure ATP](configure-proxy.md).
+Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com. Pour obtenir des instructions sur la procédure à suivre, consultez [configurer votre proxy ou pare-feu pour activer la communication avec les [!INCLUDE [Product short](includes/product-short.md)] capteurs](configure-proxy.md).
 
-### <a name="can-azure-atp-monitored-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Les contrôleurs de domaine supervisés par Azure ATP peuvent-ils être virtualisés dans votre solution IaaS ?
+### <a name="can-product-short-monitored-domain-controllers-be-virtualized-on-your-iaas-solution"></a>[!INCLUDE [Product short](includes/product-short.md)]Les contrôleurs de domaine peuvent-ils être virtualisés sur votre solution IaaS ?
 
-Oui, vous pouvez utiliser le capteur Azure ATP pour surveiller les contrôleurs de domaine qui se trouvent dans n’importe quelle solution IaaS.
+Oui, vous pouvez utiliser le [!INCLUDE [Product short](includes/product-short.md)] capteur pour surveiller les contrôleurs de domaine qui se trouvent dans n’importe quelle solution IaaS.
 
-### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Azure ATP peut-il prendre en charge plusieurs domaines et plusieurs forêts ?
+### <a name="can-product-short-support-multi-domain-and-multi-forest"></a>Peut [!INCLUDE [Product short](includes/product-short.md)] prendre en charge plusieurs domaines et plusieurs forêts ?
 
-Azure Advanced Threat Protection prend en charge les environnements à plusieurs domaines et plusieurs forêts. Pour plus d’informations et les exigences de confiance, consultez [Prise en charge de plusieurs forêts](multi-forest.md).
+[!INCLUDE [Product short](includes/product-short.md)] prend en charge les environnements à plusieurs domaines et plusieurs forêts. Pour plus d’informations et les exigences de confiance, consultez [Prise en charge de plusieurs forêts](multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Puis-je examiner l’intégrité globale du déploiement ?
 
-Oui. Vous pouvez examiner l’intégrité globale du déploiement ainsi que les problèmes spécifiques liés à la configuration, à la connectivité, etc. Dès qu’un problème se produit, vous êtes averti par des alertes Azure ATP.
+Oui, vous pouvez afficher l’intégrité globale du déploiement, ainsi que les problèmes spécifiques liés à la configuration, la connectivité, etc., et vous êtes alerté lorsqu’ils se produisent avec des [!INCLUDE [Product short](includes/product-short.md)] alertes d’intégrité.
 
 ## <a name="operation"></a>Opération
 
-### <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>De quelle façon Azure ATP s’intègre-t-il aux serveurs SIEM ?
+### <a name="what-kind-of-integration-does-product-short-have-with-siems"></a>Quel type d’intégration [!INCLUDE [Product short](includes/product-short.md)] avec Siems ?
 
-Vous pouvez configurer Azure ATP de façon à envoyer une alerte Syslog à n’importe quel serveur SIEM avec le format CEF, dans le cadre des alertes d’intégrité et quand une alerte de sécurité est détectée. Pour plus d’informations, consultez [Informations de référence sur le journal SIEM](cef-format-sa.md).
+[!INCLUDE [Product short](includes/product-short.md)] peut être configuré pour envoyer une alerte syslog, à n’importe quel serveur SIEM utilisant le format CEF, pour les alertes d’intégrité et lorsqu’une alerte de sécurité est détectée. Pour plus d’informations, consultez [Informations de référence sur le journal SIEM](cef-format-sa.md).
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Pourquoi certains comptes sont-ils considérés comme sensibles ?
 
@@ -172,14 +173,14 @@ Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appart
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Est-ce que je dois écrire mes propres règles et créer un seuil/une ligne de base ?
 
-Avec Azure Advanced Threat Protection, il est inutile de créer et d’ajuster des règles, des seuils ou des lignes de base. Azure ATP analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations mutuelles, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après son déploiement, Azure ATP commence à détecter les activités comportementales suspectes. En revanche, la détection des attaques malveillantes et des problèmes de sécurité connus est opérationnelle immédiatement après le déploiement.
+Avec [!INCLUDE [Product short](includes/product-short.md)] , il n’est pas nécessaire de créer des règles, des seuils ou des lignes de base, puis de les affiner. [!INCLUDE [Product short](includes/product-short.md)] analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations entre eux, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après le déploiement, [!INCLUDE [Product short](includes/product-short.md)] commence à détecter les activités suspectes comportementales. En revanche, [!INCLUDE [Product short](includes/product-short.md)] va commencer à détecter les attaques malveillantes connues et les problèmes de sécurité immédiatement après le déploiement.
 
-### <a name="which-traffic-does-azure-atp-generate-in-the-network-from-domain-controllers-and-why"></a>Quel trafic Azure ATP génère-t-il dans le réseau à partir des contrôleurs de domaine, et pourquoi ?
+### <a name="which-traffic-does-product-short-generate-in-the-network-from-domain-controllers-and-why"></a>Quel trafic génère-t- [!INCLUDE [Product short](includes/product-short.md)] il dans le réseau à partir de contrôleurs de domaine et pourquoi ?
 
-Azure ATP génère le trafic à partir des contrôleurs de domaine sur les ordinateurs de l’organisation dans l’un de trois scénarios :
+[!INCLUDE [Product short](includes/product-short.md)] génère le trafic des contrôleurs de domaine vers les ordinateurs de l’organisation dans l’un des trois scénarios suivants :
 
 1. **Résolution de nom réseau**  
-Azure ATP capture le trafic et les événements, pour apprendre et dresser le profil des utilisateurs et des activités de l’ordinateur sur le réseau. Pour apprendre et dresser le profil des activités en fonction des ordinateurs de l’organisation, Azure ATP a besoin relier les adresses IP aux comptes d’ordinateurs. Pour relier les adresses IP au nom des ordinateurs, les capteurs Azure ATP demandent l’adresse IP pour le nom d’ordinateur *sous-jacent* à l’adresse IP.
+[!INCLUDE [Product short](includes/product-short.md)] capture le trafic et les événements, l’apprentissage et le profilage des utilisateurs et des activités informatiques sur le réseau. Pour apprendre et profiler les activités conformément aux ordinateurs de l’organisation, [!INCLUDE [Product short](includes/product-short.md)] doit résoudre les adresses IP en comptes d’ordinateur. Pour résoudre les adresses IP en capteurs de noms d’ordinateur [!INCLUDE [Product short](includes/product-short.md)] , demandez l’adresse IP du nom de l’ordinateur *derrière* l’adresse IP.
 
     Les requêtes sont effectuées à l’aide d’une des quatre méthodes :
     - NTLM sur RPC (port TCP 135)
@@ -187,12 +188,12 @@ Azure ATP capture le trafic et les événements, pour apprendre et dresser le pr
     - RDP (port TCP 3389)
     - Interroger le serveur DNS à l’aide de la recherche DNS inversée de l’adresse IP (UDP 53)
 
-    Après avoir obtenu le nom d’ordinateur, les capteurs Azure ATP vérifient les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé à ce nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
+    Après avoir obtenu le nom de l’ordinateur,  [!INCLUDE [Product short](includes/product-short.md)] les capteurs vérifient les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé portant le même nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
 2. **Chemin de mouvement latéral (LMP)**  
-Pour générer des chemins de mouvement latéral potentiels pour les utilisateurs sensibles, Azure ATP requiert des informations sur les administrateurs locaux des ordinateurs. Dans ce scénario, le capteur Azure ATP utilise SAM-R (TCP 445) pour interroger l’adresse IP identifiée dans le trafic réseau, afin de déterminer les administrateurs locaux de l’ordinateur. Pour en savoir plus sur Azure ATP et SAM-R, consultez [Configurer les autorisations requises SAM-R](install-step8-samr.md).
+Pour créer des LMPs potentiels pour les utilisateurs sensibles, vous [!INCLUDE [Product short](includes/product-short.md)] devez disposer d’informations sur les administrateurs locaux sur les ordinateurs. Dans ce scénario, le [!INCLUDE [Product short](includes/product-short.md)] capteur utilise Sam-R (TCP 445) pour interroger l’adresse IP identifiée dans le trafic réseau afin de déterminer les administrateurs locaux de l’ordinateur. Pour en savoir plus sur [!INCLUDE [Product short](includes/product-short.md)] et Sam-r, consultez [configurer les autorisations requises Sam-r](install-step8-samr.md).
 
 3. **Interrogation d’Active Directory à l’aide de LDAP** pour les données d’entité  
-Les capteurs Azure ATP interrogent le contrôleur de domaine à partir du domaine auquel l’entité appartient. Il peut s’agir du même capteur ou d’un autre contrôleur de domaine de ce domaine.
+[!INCLUDE [Product short](includes/product-short.md)] les capteurs interrogent le contrôleur de domaine à partir du domaine auquel appartient l’entité. Il peut s’agir du même capteur ou d’un autre contrôleur de domaine de ce domaine.
 
 |Protocole|Service|Port|Source| Sens|
 |---------|---------|---------|---------|--------|
@@ -203,19 +204,19 @@ Les capteurs Azure ATP interrogent le contrôleur de domaine à partir du domain
 
 ### <a name="why-dont-activities-always-show-both-the-source-user-and-computer"></a>Pourquoi les activités n’affichent-elles pas toujours l’utilisateur source et l’ordinateur source ?
 
-Azure ATP capture les activités sur de nombreux protocoles différents. Dans certains cas, Azure ATP ne reçoit pas les données de l’utilisateur source dans le trafic. Azure ATP tente de mettre en corrélation la session de l’utilisateur et l’activité, et lorsque la tentative réussit, l’utilisateur source de l’activité est affiché. Lorsque la tentative de corrélation de l’utilisateur échoue, seul l’ordinateur source s’affiche.
+[!INCLUDE [Product short](includes/product-short.md)] capture des activités sur de nombreux protocoles différents. Dans certains cas, [!INCLUDE [Product short](includes/product-short.md)] ne reçoit pas les données de l’utilisateur source dans le trafic. [!INCLUDE [Product short](includes/product-short.md)] tente de mettre en corrélation la session de l’utilisateur avec l’activité et, lorsque la tentative est réussie, l’utilisateur source de l’activité s’affiche. Lorsque la tentative de corrélation de l’utilisateur échoue, seul l’ordinateur source s’affiche.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Que dois-je faire si le capteur autonome ou le capteur Azure ATP ne démarre pas ?
+### <a name="what-should-i-do-if-the-product-short-sensor-or-standalone-sensor-doesnt-start"></a>Que dois-je faire si le capteur [!INCLUDE [Product short](includes/product-short.md)] ou le capteur autonome ne démarre pas ?
 
-Examinez l’erreur la plus récente dans le [journal](troubleshooting-using-logs.md) des erreurs actuel (où Azure ATP est installé, sous le dossier « Logs »).
+Examinez l’erreur la plus récente dans le [Journal](troubleshooting-using-logs.md) des erreurs actuel (où [!INCLUDE [Product short](includes/product-short.md)] est installé dans le dossier « logs »).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](prerequisites.md)
-- [Planification de la capacité Azure ATP](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Résolution des problèmes](troubleshooting-known-issues.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

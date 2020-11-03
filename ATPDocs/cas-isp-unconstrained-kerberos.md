@@ -1,23 +1,22 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les délégations Kerberos sans contrainte'
-description: Cet article propose une vue d’ensemble des rapports d’évaluation de la posture de sécurité fournis par Azure ATP concernant les délégations Kerberos sans contrainte.
+title: Microsoft Defender for Identity authentification Kerberos non contrainte de l’évaluation de la sécurité des identités
+description: Cet article fournit une vue d’ensemble des rapports d’évaluation de l’évaluation de la sécurité des identités Kerberos sans contrainte de Microsoft Defender.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4676837537869f6984ffe27f20b5cbeae971bde
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912793"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277451"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Évaluation de la sécurité : Délégations Kerberos non sécurisées
 
@@ -29,21 +28,21 @@ La délégation Kerberos est un paramètre de délégation qui permet aux applic
 
 ## <a name="what-risk-does-unsecure-kerberos-delegation-pose-to-an-organization"></a>Quel risque présente la délégation Kerberos non sécurisée pour une organisation ?
 
-La délégation Kerberos non sécurisée permet à une entité d’emprunter l’identité de tout autre service choisi. Par exemple, imaginons que vous disposiez d’un site web IIS et que le compte du pool d’applications soit configuré avec une délégation sans contrainte. L’authentification Windows est activée sur le site web IIS, ce qui permet de prendre en charge l’authentification Kerberos native, et le site utilise un serveur SQL Server back-end pour les données métier. Avec votre compte d’administrateur de domaine, vous accédez au site web IIS et vous vous authentifiez auprès de celui-ci. Le site web, utilisant la délégation sans contrainte, peut obtenir un ticket de service d’un contrôleur de domaine au service SQL, et ce, en votre nom.
+La délégation Kerberos non sécurisée permet à une entité d’emprunter l’identité de tout autre service choisi. Par exemple, imaginons que vous disposiez d’un site web IIS et que le compte du pool d’applications soit configuré avec une délégation sans contrainte. L’authentification Windows est activée sur le site web IIS, ce qui permet de prendre en charge l’authentification Kerberos native, et le site utilise un serveur SQL Server back-end pour les données métier. Avec votre compte d’administrateur de domaine, vous accédez au site web IIS et vous vous authentifiez auprès de celui-ci. Le site Web, à l’aide de la délégation sans contrainte, peut obtenir un ticket de service d’un contrôleur de domaine au service SQL, et le faire dans votre nom.
 
-Le principal problème avec la délégation Kerberos est que vous vous en remettez à l’application pour faire toujours les bons choix. Des acteurs malveillants peuvent donc forcer l’application à commettre des actes inappropriés. Si vous êtes connecté en tant qu’**administrateur de domaine**, le site peut créer un ticket vers un autre service et agir en votre nom, à savoir en tant qu’**administrateur du domaine**. Par exemple, le site peut choisir un contrôleur de domaine et apporter des changements au groupe d’**administrateurs d’entreprise**. De même, le site peut acquérir le hachage du compte KRBTGT ou télécharger un fichier intéressant à partir du service des ressources humaines. Le risque est clair et les possibilités de la délégation non sécurisée sont quasiment illimitées.
+Le principal problème avec la délégation Kerberos est que vous vous en remettez à l’application pour faire toujours les bons choix. Des acteurs malveillants peuvent donc forcer l’application à commettre des actes inappropriés. Si vous êtes connecté en tant qu' **administrateur de domaine** , le site peut créer un ticket pour tous les autres services qu’il souhaite, en tant que vous, l’administrateur de **domaine**. Par exemple, le site peut choisir un contrôleur de domaine et apporter des modifications au groupe administrateurs de l' **entreprise** . De même, le site peut acquérir le hachage du compte KRBTGT ou télécharger un fichier intéressant à partir du service des ressources humaines. Le risque est clair et les possibilités de la délégation non sécurisée sont quasiment illimitées.
 
 Vous trouverez ci-dessous une description du risque encouru par différents types de délégation :
 
-- **Délégation sans contrainte** : Tout service peut être mal utilisé si l’une de ses entrées de délégation est sensible.
-- **Délégation contrainte** : Les entités contraintes peuvent être mal utilisées si l’une de leurs entrées de délégation est sensible.
-- **Délégation contrainte basée sur les ressources** : Les entités contraintes basées sur les ressources peuvent être mal utilisées si l’entité elle-même est sensible.
+- **Délégation sans contrainte**  : Tout service peut être mal utilisé si l’une de ses entrées de délégation est sensible.
+- **Délégation contrainte**  : Les entités contraintes peuvent être mal utilisées si l’une de leurs entrées de délégation est sensible.
+- **Délégation contrainte basée sur les ressources**  : Les entités contraintes basées sur les ressources peuvent être mal utilisées si l’entité elle-même est sensible.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
 1. Utilisez le tableau de rapport pour découvrir les entités autres que des contrôleurs de domaine qui sont configurées pour la **délégation Kerberos non sécurisée**.
 
-    ![Évaluation de la sécurité concernant la délégation Kerberos non sécurisée](media/atp-cas-isp-kerberos-delegation-2.png)
+    ![Évaluation de la sécurité concernant la délégation Kerberos non sécurisée](media/cas-isp-kerberos-delegation-2.png)
 1. Prenez les mesures appropriées pour les utilisateurs à risque, par exemple en supprimant leur attribut sans contrainte ou en le remplaçant par une délégation contrainte plus sécurisée.
 
 > [!NOTE]
@@ -61,7 +60,7 @@ Désactivez la délégation ou utilisez l’un des types de délégation Kerbero
 
     1. Sélectionnez **N’approuver cet ordinateur que pour la délégation aux services spécifiés**.
 
-        ![Correction de la délégation Kerberos sans contrainte](media/atp-cas-isp-unconstrained-kerberos-1.png)
+        ![Correction de la délégation Kerberos sans contrainte](media/cas-isp-unconstrained-kerberos-1.png)
 
     2. Spécifiez les **services auxquels ce compte peut présenter des informations d’identification déléguées**.
 
@@ -72,7 +71,7 @@ La KCD basée sur la ressource est configurée à l’aide de PowerShell. Vous d
 
 Passez en revue les utilisateurs sensibles listés dans les recommandations et supprimez-les des services auxquels le compte affecté peut présenter des informations d’identification déléguées.
 
-![Correction de la délégation Kerberos contrainte](media/atp-cas-isp-unconstrained-kerberos-2.png)
+![Correction de la délégation Kerberos contrainte](media/cas-isp-unconstrained-kerberos-2.png)
 
 ### <a name="resource-based-constrained-delegation-rbcd"></a>Délégation contrainte basée sur les ressources (RBCD)
 
@@ -80,5 +79,5 @@ Passez en revue les utilisateurs sensibles listés dans les recommandations et s
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Filtrage des activités Azure ATP dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

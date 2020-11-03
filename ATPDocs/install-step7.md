@@ -1,43 +1,42 @@
 ---
-title: Configuration d’exclusions de détection et de comptes honeytoken dans Azure Advanced Threat Protection
+title: Microsoft Defender for Identity configurer les exclusions de détection et les comptes honeytoken
 description: Configuration d’exclusions de détection et de comptes honeytoken
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/22/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 23b7fa2a6deea68b1567b8275fccd61f9822bf78
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 68ed20a243a307992b2d11c633728bf34abf6302
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912981"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277031"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurer des exclusions d’adresses IP et de comptes honeytoken
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP permet d’exclure des adresses IP ou des utilisateurs spécifiques d’un certain nombre de détections.
+[!INCLUDE [Product long](includes/product-long.md)] permet d’exclure des adresses IP ou des utilisateurs spécifiques d’un certain nombre de détections.
 
-Par exemple, une **exclusion DNS Reconnaissance** peut être un analyseur de sécurité qui utilise DNS comme mécanisme d’analyse. L’exclusion permet à Azure ATP d’ignorer ces analyseurs.
+Par exemple, une **exclusion DNS Reconnaissance** peut être un analyseur de sécurité qui utilise DNS comme mécanisme d’analyse. L’exclusion permet d' [!INCLUDE [Product short](includes/product-short.md)] ignorer ces scanneurs.
 
-Avec Azure ATP, vous pouvez aussi configurer des comptes honeytoken servant de pièges pour les utilisateurs malveillants. Toute authentification associée à ces comptes honeytoken (normalement dormants) déclenche une alerte.
+[!INCLUDE [Product short](includes/product-short.md)] active également la configuration des comptes honeytoken, qui sont utilisés comme interruptions pour les acteurs malveillants. toute authentification associée à ces comptes honeytoken (normalement dormant) déclenche une alerte.
 
 Pour la configuration, procédez comme suit :
 
-1. Dans le portail Azure ATP, cliquez sur l’icône des paramètres, puis sélectionnez **Configuration**.
+1. À partir du [!INCLUDE [Product short](includes/product-short.md)] portail, cliquez sur l’icône des paramètres et sélectionnez **configuration**.
 
-    ![Paramètres de configuration d’Azure ATP](media/atp-config-menu.png)
+    ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] paramètres de configuration](media/config-menu.png)
 
-1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
+1. Sous **Détection** , cliquez sur **Étiquettes d’entité**.
 
-1. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken et cliquez sur le signe **+** . Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Save**.
+1. Sous **Comptes Honeytoken** , entrez le nom du compte Honeytoken et cliquez sur le signe **+** . Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Save**.
 
     ![Honeytoken](media/honeytoken-sensitive.png)
 
@@ -48,15 +47,15 @@ Pour la configuration, procédez comme suit :
 
 1. Cliquez sur **Save**.
 
-Félicitations, vous avez correctement déployé Azure Advanced Threat Protection !
+Félicitations, vous avez réussi à déployer [!INCLUDE [Product long](includes/product-long.md)] !
 
 Vérifiez la chronologie des attaques pour afficher les alertes de sécurité générées par des activités détectées et rechercher des utilisateurs ou des ordinateurs et afficher leurs profils.
 
-L’analyse d’Azure ATP démarre immédiatement. Certaines détections, telles que [Ajouts suspects à des groupes sensibles](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), nécessitent une période d’apprentissage et ne sont pas disponibles immédiatement après le déploiement d’Azure ATP. La période d’apprentissage pour chaque alerte est indiquée dans le [guide des alertes de sécurité](suspicious-activity-guide.md) détaillé.
+[!INCLUDE [Product short](includes/product-short.md)] l’analyse démarre immédiatement. Certaines détections, telles que les [ajouts suspects à des groupes sensibles](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), nécessitent une période d’apprentissage et ne sont pas disponibles immédiatement après le [!INCLUDE [Product short](includes/product-short.md)] déploiement. La période d’apprentissage pour chaque alerte est indiquée dans le [Guide](suspicious-activity-guide.md)détaillé des alertes de sécurité.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Outil de dimensionnement Azure ATP](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Prérequis d’Azure ATP](prerequisites.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

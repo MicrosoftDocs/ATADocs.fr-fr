@@ -1,6 +1,6 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluation de l’exposition de texte clair'
-description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant l’exposition de texte clair.
+title: Évaluation de l’exposition Clear Text pour l’identité de Microsoft Defender
+description: Cet article fournit une vue d’ensemble du rapport d’évaluation de la sécurité de l’évaluation de l’exposition du texte en clair de Microsoft Defender pour l’identité.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,21 +9,20 @@ ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 413e7482900f34428056401085f04195ccb4e720
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 9586c5441f09959970752a15cfff3c2f953f1842
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913239"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277591"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Évaluation de la sécurité : Entités exposant les informations d’identification en texte clair
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-![Empêcher l’exposition d’informations d’identification en texte clair dans Cloud App Security](media/atp-cas-isp-clear-text-1.png)
+![Empêcher l’exposition d’informations d’identification en texte clair dans Cloud App Security](media/cas-isp-clear-text-1.png)
 
 ## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Quelles sont les informations fournies par l’évaluation de la sécurité concernant le texte clair?
 
@@ -38,7 +37,7 @@ Ce risque accru est dû au fait que le trafic non sécurisé, comme une liaison 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Comment faire pour utiliser cette évaluation de la sécurité afin d’améliorer la sécurité de mon organisation ?
 
 1. Passez en revue l’évaluation de la sécurité pour identifier les entités impactées.
-    ![Passer en revue les principales entités impactées et créer un plan d’action](media/atp-cas-isp-clear-text-2.png)
+    ![Passer en revue les principales entités impactées et créer un plan d’action](media/cas-isp-clear-text-2.png)
 1. Recherchez la raison pour laquelle ces entités utilisent LDAP en texte clair.
 1. Corrigez les problèmes et arrêtez l’exposition.
 1. Une fois la correction confirmée, nous vous recommandons d’exiger la signature LDAP au niveau du contrôleur de domaine. Pour en savoir plus sur la signature des serveurs LDAP, consultez [Contrôleur de domaine : conditions requises pour la signature de serveur LDAP](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
@@ -48,5 +47,5 @@ Ce risque accru est dû au fait que le trafic non sécurisé, comme une liaison 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Filtrage des activités Azure ATP dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

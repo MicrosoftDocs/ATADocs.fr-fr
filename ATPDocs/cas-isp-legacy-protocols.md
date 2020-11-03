@@ -1,23 +1,22 @@
 ---
-title: 'Azure Advanced Threat Protection : évaluation de la posture de sécurité des identités concernant les protocoles hérités'
-description: Cet article propose une vue d’ensemble du rapport d’évaluation de la posture de sécurité des identités fourni par Azure ATP concernant les protocoles hérités.
+title: Microsoft Defender pour identifier les anciens protocoles Identity Security position Assessment
+description: Cet article fournit une vue d’ensemble du rapport d’évaluation de l’évaluation de l’état de la sécurité des identités du protocole hérité de Microsoft Defender.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3465df4f9d932bd1b278971848ca59a592abed71
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 223ae21d15ecc15523c3670062aa6a2502281738
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913192"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276720"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Évaluation de la sécurité : Utilisation des protocoles hérités
 
@@ -46,7 +45,7 @@ Pour mettre hors service les protocoles hérités, votre organisation doit d’a
 
 1. Utilisez le tableau de rapport pour découvrir les principales entités qui utilisent des protocoles hérités.
 
-    ![Empêcher l’utilisation de protocoles hérités](media/atp-cas-isp-legacy-protocols-2.png)
+    ![Empêcher l’utilisation de protocoles hérités](media/cas-isp-legacy-protocols-2.png)
 1. Prenez les mesures nécessaires concernant ces entités pour découvrir les dépendances.
 1. Cessez d’utiliser les protocoles hérités, puis [désactivez complètement ces protocoles](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Supprimez MIC 2 et cessez d’utiliser les clients LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
@@ -56,5 +55,5 @@ Pour mettre hors service les protocoles hérités, votre organisation doit d’a
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Filtrage des activités Azure ATP dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
