@@ -1,6 +1,6 @@
 ---
-title: Dépannage des problèmes connus d’Azure ATP
-description: Décrit comment résoudre les problèmes d’Azure ATP.
+title: Dépannage de Microsoft Defender pour identifier les problèmes connus
+description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,17 +9,16 @@ ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0136b432a170a5e45b71d189d77d7e007ca7a53
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912345"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277825"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Dépannage des problèmes connus d’Azure ATP
+# <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -31,11 +30,11 @@ System.Net.Http.HttpRequestException: An error occurred while sending the reques
 
 **Résolution :**
 
-Assurez-vous que la communication n’est pas bloquée pour localhost, port TCP 444. Pour en savoir plus sur les prérequis Azure ATP, consultez les [ports](prerequisites.md#ports).
+Assurez-vous que la communication n’est pas bloquée pour localhost, port TCP 444. Pour en savoir plus sur les [!INCLUDE [Product long](includes/product-long.md)] conditions préalables, consultez [ports](prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Emplacement des journaux de déploiement
 
-Les journaux de déploiement Azure ATP se trouvent dans le répertoire temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : C:\Users\Administrator\AppData\Local\Temp (ou d’un répertoire au-dessus de %temp%). Pour plus d'informations, consultez [Résolution des problèmes liés à ATP à l’aide des journaux](troubleshooting-using-logs.md)
+Les [!INCLUDE [Product short](includes/product-short.md)] journaux de déploiement se trouvent dans le répertoire Temp de l’utilisateur qui a installé le produit. Dans l'emplacement d'installation par défaut, il s’agit de : C:\Users\Administrator\AppData\Local\Temp (ou d’un répertoire au-dessus de %temp%). Pour plus d’informations, consultez [résolution des problèmes [!INCLUDE [Product short](includes/product-short.md)] à l’aide des journaux](troubleshooting-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Le problème d’authentification du proxy se présente sous la forme d’erreur de licence
 
@@ -47,7 +46,7 @@ Si, lors de l’installation du capteur, vous recevez l’erreur suivante :  **
 
 **Cause :**
 
-Dans certains cas, lors de la communication via un proxy, lors de l’authentification, il peut répondre au capteur Azure ATP avec l’erreur 401 ou 403 au lieu de l’erreur 407. Le capteur Azure ATP interprétera l’erreur 401 ou 403 comme un problème de licence et non comme un problème d’authentification du proxy.
+Dans certains cas, lors de la communication via un proxy, lors de l’authentification, il peut répondre au [!INCLUDE [Product short](includes/product-short.md)] capteur avec l’erreur 401 ou 403 au lieu de l’erreur 407. Le [!INCLUDE [Product short](includes/product-short.md)] capteur interprétera l’erreur 401 ou 403 comme un problème de licence et non comme un problème d’authentification du proxy.
 
 **Résolution :**
 
@@ -59,11 +58,11 @@ Si, lors de l’installation du capteur, vous recevez l’erreur suivante : **�
 
 **Cause :**
 
-Le problème peut être provoqué par une erreur de configuration du proxy transparent sur Server Core, par exemple si les certificats racines requis par Azure ATP ne sont pas à jour ou sont manquants.
+Le problème peut être causé par une erreur de configuration de proxy transparente sur Server Core, comme les certificats racines requis par [!INCLUDE [Product short](includes/product-short.md)] ne sont pas actuels ou manquants.
 
 **Résolution :**
 
-Exécutez l’applet de commande PowerShell suivante pour vérifier que le certificat racine approuvé du service Azure ATP existe sur Server Core. L’exemple suivant utilise « DigiCert Baltimore Root » et « DigiCert Global Root ».
+Exécutez l’applet de commande PowerShell suivante pour vérifier que le [!INCLUDE [Product short](includes/product-short.md)] certificat racine approuvé du service existe sur Server Core. L’exemple suivant utilise « DigiCert Baltimore Root » et « DigiCert Global Root ».
 
 ```powershell
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
@@ -118,13 +117,13 @@ Utilisez la commande complète pour installer correctement.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problème d’association de cartes réseau du capteur Azure ATP <a name="nic-teaming"></a>
+## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] problème d’association de cartes réseau de capteur <a name="nic-teaming"></a>
 
-Si vous essayez d’installer le capteur ATP sur un ordinateur configuré avec une carte d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le capteur ATP sur une machine configurée avec une association de cartes réseau, suivez ces instructions :
+Si vous tentez d’installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec l’Association de cartes réseau, suivez ces instructions :
 
 1. Téléchargez le programme d’installation Npcap version 0.9984 à partir de  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
     - Vous pouvez également demander la version OEM du pilote Npcap (qui prend en charge l’installation sans assistance) de l’équipe de support.
-    - Les copies de Npcap ne sont pas prises en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement conjointement avec Azure ATP. Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Les copies de Npcap n’entrent pas en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement avec [!INCLUDE [Product short](includes/product-short.md)] . Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 Si vous n’avez pas encore installé le capteur :
 
@@ -143,7 +142,7 @@ Si vous avez déjà installé le capteur :
 
 ## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur Azure ATP n’est pas pris en charge en mode Groupe multiprocesseur.
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, [!INCLUDE [Product short](includes/product-short.md)] le capteur n’est pas pris en charge dans un mode de groupe à plusieurs processeurs.
 
 Solutions de contournement possibles :
 
@@ -151,13 +150,13 @@ Solutions de contournement possibles :
 
 - Si votre ordinateur dispose de moins de 64 cœurs logiques et s’exécute sur un hôte HP, vous pourrez peut-être modifier le paramètre BIOS **Optimisation de la taille du groupe NUMA** de la valeur par défaut **En cluster** à la valeur **Plat**.
 
-## <a name="microsoft-defender-atp-integration-issue"></a>Problème d’intégration de Microsoft Defender ATP
+## <a name="microsoft-defender-for-endpoint-integration-issue"></a>Problème d’intégration de Microsoft Defender for Endpoint
 
-Azure Advanced Threat Protection vous permet d’intégrer Azure ATP et Microsoft Defender ATP. Pour plus d’informations, consultez [Intégration d’Azure ATP et de Microsoft Defender ATP](integrate-msde.md).
+[!INCLUDE [Product short](includes/product-short.md)] vous permet d’intégrer [!INCLUDE [Product short](includes/product-short.md)] Microsoft Defender for Endpoint. Pour plus d’informations, consultez [intégration [!INCLUDE [Product short](includes/product-short.md)] à Microsoft Defender pour le point de terminaison](integrate-mde.md) .
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problème de capteur pour la machine virtuelle VMware
 
-Si vous avez un capteur Azure ATP sur des machines virtuelles VMware, vous pouvez recevoir l’alerte d’intégrité **Une partie du trafic réseau n’est pas analysée**. Ce scénario se produit à cause d’une différence de configuration dans VMware.
+Si vous disposez [!INCLUDE [Product short](includes/product-short.md)] d’un capteur sur des machines virtuelles VMware, vous risquez de recevoir une alerte d’intégrité indiquant que **le trafic réseau n’est pas analysé**. Ce scénario se produit à cause d’une différence de configuration dans VMware.
 
 Pour résoudre le problème
 
@@ -191,7 +190,7 @@ Si vous recevez l’alerte d’intégrité suivante : **Les informations d'iden
 
 **Cause :**
 
-le capteur n’a pas pu récupérer le compte gMSA désigné à partir du portail Azure ATP.
+Le capteur n’a pas pu récupérer le compte gMSA désigné à partir du [!INCLUDE [Product short](includes/product-short.md)] portail.
 
 **Résolution :**
 
@@ -199,7 +198,7 @@ Assurez-vous que les informations d’identification du compte gMSA sont correct
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Les téléchargements de rapports contenant plus de 300 000 entrées ne sont pas pris en charge
 
-Azure ATP ne prend pas en charge les téléchargements de rapports contenant plus de 300 000 entrées chacun. Les rapports de plus de 300 000 entrées ne s’affichent pas intégralement.
+[!INCLUDE [Product short](includes/product-short.md)] ne prend pas en charge les téléchargements de rapports contenant plus de 300 000 entrées par rapport. Les rapports de plus de 300 000 entrées ne s’affichent pas intégralement.
 
 **Cause :**
 
@@ -211,8 +210,8 @@ Aucune solution connue.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](prerequisites.md)
-- [Planification de la capacité Azure ATP](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)

@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35641a589571586da495c8fb28332c5d736ad67b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bd5facbf0cc6616a8467d0eb1b33c7603debabc8
+ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276728"
+ms.locfileid: "93278583"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Évaluation de la sécurité : Entités dormantes dans des groupes **sensibles**
 
@@ -39,6 +39,7 @@ Quelle que soit la cause du problème, comme le roulement du personnel ou la mau
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
 1. Utilisez le tableau du rapport pour découvrir les comptes sensibles dormants.
+    ![Corriger les entités dormantes des groupes sensibles ini](media/cas-isp-dormant-entities-sensitive-groups-1.png)
 1. Prenez ensuite les mesures appropriées pour supprimer ces comptes d’utilisateur ou leurs droits d’accès privilégiés.
 
 > [!NOTE]
