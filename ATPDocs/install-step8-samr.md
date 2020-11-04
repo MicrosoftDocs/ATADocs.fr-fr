@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e46d6b794386e21654d578f6273de8c7c8b89f2
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9e1bfe428a466e4870613798e4af116f27d63647
+ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276121"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342502"
 ---
 # <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurer [!INCLUDE [Product long](includes/product-long.md)] pour effectuer des appels distants à Sam
 
@@ -26,7 +26,7 @@ ms.locfileid: "93276121"
 
 ## <a name="configure-sam-r-required-permissions"></a>Configurer les autorisations requises SAM-R
 
-Pour vous assurer que les clients et serveurs Windows autorisent votre [!INCLUDE [Product short](includes/product-short.md)] compte à exécuter Sam-R, une modification doit être apportée à **stratégie de groupe** pour ajouter le [!INCLUDE [Product short](includes/product-short.md)] compte de service en plus des comptes configurés figurant dans la stratégie d' **accès réseau** . Veillez à appliquer les stratégies de groupe à tous les ordinateurs, à l’exception des contrôleurs de domaine.
+Pour vous assurer que les clients et serveurs Windows autorisent votre [!INCLUDE [Product short](includes/product-short.md)] compte à exécuter Sam-R, une modification doit être apportée à **stratégie de groupe** pour ajouter le [!INCLUDE [Product short](includes/product-short.md)] compte de service en plus des comptes configurés figurant dans la stratégie d' **accès réseau** . Veillez à appliquer les stratégies de groupe à tous les ordinateurs **à l’exception des contrôleurs de domaine**.
 
 > [!Note]
 > Avant d’appliquer de nouvelles stratégies telles que celle-ci, il est essentiel de vous assurer que votre environnement reste sécurisé et qu’aucun changement n’impacte la compatibilité de votre application. Commencez par activer puis vérifier la compatibilité des changements proposés en mode audit avant de les apporter à votre environnement de production.
