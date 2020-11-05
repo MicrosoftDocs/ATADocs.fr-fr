@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
+ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277825"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375554"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
@@ -121,7 +121,7 @@ Utilisez la commande complète pour installer correctement.
 
 Si vous tentez d’installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec l’Association de cartes réseau, suivez ces instructions :
 
-1. Téléchargez le programme d’installation Npcap version 0.9984 à partir de  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
+1. Téléchargez le programme d’installation de Npcap version 1,0 à partir de  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-1.00.exe) .
     - Vous pouvez également demander la version OEM du pilote Npcap (qui prend en charge l’installation sans assistance) de l’équipe de support.
     - Les copies de Npcap n’entrent pas en compte dans les cinq limites de licence utilisateur de cinq ou cinq ordinateurs, si elles sont installées et utilisées uniquement avec [!INCLUDE [Product short](includes/product-short.md)] . Pour plus d’informations, consultez [Gestion des licences NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
 

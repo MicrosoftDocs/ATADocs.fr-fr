@@ -1,27 +1,27 @@
-- name: Documentation Azure Advanced Threat Protection
+- name: Documentation Microsoft Defender pour Identity
   href: index.yml
 - name: Vue d’ensemble
   items:
-    - name: Qu’est-ce qu’Azure Advanced Threat Protection ?
+    - name: "Qu’est-ce que Microsoft Defender pour Identity\_?"
       href: what-is.md
-    - name: Architecture Azure ATP
+    - name: Architecture de Defender pour Identity
       href: architecture.md
-    - name: Prérequis d’Azure ATP
+    - name: Prérequis de Defender pour Identity
       href: prerequisites.md
-    - name: Azure ATP US Government
+    - name: Defender pour Identity pour US Government
       href: us-govt-gcc-high.md
-    - name: Nouveautés d’Azure ATP
+    - name: Nouveautés de Defender pour Identity
       href: whats-new.md
 - name: Démarrages rapides
   expanded: true
   items:
-    - name: Créer votre instance Azure ATP
+    - name: Créer votre instance Defender pour Identity
       href: install-step1.md
     - name: Se connecter à Active Directory
       href: install-step2.md
-    - name: Télécharger le package du capteur Azure ATP
+    - name: Télécharger le package du capteur Defender pour Identity
       href: install-step3.md
-    - name: Installer le capteur Azure ATP
+    - name: Installer le capteur Defender pour Identity
       href: install-step4.md
 - name: Didacticiels
   items:
@@ -45,9 +45,9 @@
       href: investigate-entity.md
 - name: Concepts
   items:
-    - name: Portail Azure ATP
+    - name: Portail Defender pour Identity
       href: workspace-portal.md
-    - name: Alertes de sécurité Azure ATP
+    - name: Alertes de sécurité Defender pour Identity
       href: suspicious-activity-guide.md
     - name: Activités supervisées
       href: monitored-activities.md
@@ -61,13 +61,13 @@
       href: reports.md
     - name: Rôles d'utilisateur
       href: role-groups.md
-    - name: Prise en charge multiforêt Azure ATP
+    - name: Prise en charge multiforêt de Defender pour Identity
       href: multi-forest.md
 - name: Guides pratiques
   items:
-    - name: Azure ATP avec Microsoft Cloud App Security
+    - name: Defender pour Identity avec Microsoft Cloud App Security
       items:
-        - name: Utiliser Azure ATP avec Cloud App Security
+        - name: Utiliser Defender pour Identity avec Cloud App Security
           href: mcas-integration.md
         - name: Filtrer des activités et définir des stratégies
           href: activities-filtering-mcas.md
@@ -111,7 +111,7 @@
           href: playbook-domain-dominance.md
     - name: Présentation des alertes de sécurité
       href: understanding-security-alerts.md
-    - name: Planifier votre capacité Azure ATP
+    - name: Planifier votre capacité Defender pour Identity
       href: capacity-planning.md
     - name: Gérer les alertes de sécurité
       href: working-with-suspicious-activities.md
@@ -127,39 +127,39 @@
       href: sensor-monitoring.md
     - name: Modifier le mot de passe de connectivité de domaine
       href: modifying-config-dcpassword.md
-    - name: Définir des notifications Azure ATP
+    - name: Définir des notifications Defender pour Identity
       href: notifications.md
     - name: Alertes d’intégrité
       items:
-        - name: Utiliser le centre d’intégrité Azure ATP
+        - name: Utiliser le centre d’intégrité Defender pour Identity
           href: health-center.md
-        - name: Gérer les alertes d’intégrité Azure ATP
+        - name: Gérer les alertes d’intégrité Defender pour Identity
           href: health-alerts.md
-    - name: Mise à jour différée des capteurs Azure ATP
+    - name: Mise à jour différée des capteurs Defender pour Identity
       href: sensor-update.md
     - name: Résolution des problèmes connus
       href: troubleshooting-known-issues.md
     - name: Résoudre les problèmes à l’aide des journaux
       href: troubleshooting-using-logs.md
-    - name: Intégrer avec Microsoft Defender ATP
-      href: integrate-msde.md
+    - name: Intégrer avec Microsoft Defender pour point de terminaison
+      href: integrate-mde.md
     - name: Intégration VPN
       href: install-step6-vpn.md
     - name: Intégrer à Syslog
       href: setting-syslog.md
     - name: Installation sans assistance
       href: silent-installation.md
-    - name: Configurer le capteur Azure ATP
+    - name: Configurer le capteur Defender pour Identity
       items:
-        - name: Configurer le capteur Azure ATP
+        - name: Configurer le capteur Defender pour Identity
           href: install-step5.md
         - name: Configurer la collecte d’événements Windows
           href: configure-windows-event-collection.md
-        - name: configuration du proxy ;
+        - name: Configuration du proxy
           href: configure-proxy.md
-        - name: Configurer Azure ATP pour effectuer des appels distants vers SAM
+        - name: Configurer Defender pour Identity pour passer des appels distants à SAM
           href: install-step8-samr.md
-    - name: Configuration du capteur autonome Azure ATP
+    - name: Configuration des capteurs autonomes de Defender pour Identity
       items:
         - name: Configurer la mise en miroir des ports
           href: configure-port-mirroring.md
@@ -169,17 +169,17 @@
           href: configure-event-collection.md
         - name: Configurer les transferts d’événements Windows
           href: configure-event-forwarding.md
-    - name: Passer d’ATA à Azure ATP
+    - name: Passer d’ATA à Defender pour Identity
       items:
-        - name: Passage d’ATA (Advanced Threat Analytics) à Azure ATP
+        - name: D’Advanced Threat Analytics (ATA) à Defender pour Identity
           href: migrate-from-ata-overview.md
 - name: Référence
   items:
     - name: Informations de référence sur le journal SIEM
       href: cef-format-sa.md
-    - name: Problèmes connus dans Azure ATP
+    - name: Problèmes connus de Defender pour Identity
       href: ./troubleshooting-known-issues.md
-    - name: Informations de référence sur les versions Azure ATP
+    - name: Informations de référence sur les versions Defender pour Identity
       href: release-reference.md
 - name: Ressources
   items:
@@ -187,7 +187,7 @@
       href: support.md
     - name: Forum aux questions
       href: technical-faq.md
-    - name: Plan de préparation Azure ATP
+    - name: Feuille de route de préparation Defender pour Identity
       href: resources.md
-    - name: Sécurité et confidentialité des données Azure ATP
+    - name: Sécurité et confidentialité des données Defender pour Identity
       href: privacy-compliance.md
