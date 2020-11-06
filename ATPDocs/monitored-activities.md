@@ -1,41 +1,40 @@
 ---
-title: Activités de domaine supervisées par Azure ATP
-description: Décrit chaque type d’activité supervisé par Azure Advanced Threat Protection
+title: Activités de domaine supervisées par Microsoft Defender pour Identity
+description: Décrit chacun des types d’activité supervisés par Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/19/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662fd074ef76207257721883b0223cc1ecc108b3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912717"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274846"
 ---
-# <a name="azure-atp-monitored-activities"></a>Activités supervisées par Azure ATP
+# <a name="product-long-monitored-activities"></a>Activités supervisées par [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
-Azure Advanced Threat Protection supervise les informations générées par l’annuaire Active Directory de votre organisation, ainsi que les activités réseau et les activités d’événement, dans le but de détecter les activités suspectes. Les informations relatives aux activités supervisées permettent à Azure ATP de déterminer la validité de chaque menace potentielle, mais également de les trier correctement et d’y répondre.
+[!INCLUDE [Product long](includes/product-long.md)] analyse les informations générées par l’annuaire Active Directory de votre organisation, ainsi que les activités réseau et les activités d’événement. L’objectif est de détecter les activités suspectes. Les informations relatives aux activités supervisées permettent à [!INCLUDE [Product short](includes/product-short.md)] de déterminer la validité de toutes les menaces potentielles, de les trier correctement et d’y répondre.
 
-En cas de menace réelle ou de **vrai positif**, Azure ATP vous permet de découvrir l’étendue de la violation pour chaque incident, d’examiner les entités impliquées et de déterminer la façon d’y remédier.
+En cas de menace réelle ou de **vrai positif** , [!INCLUDE [Product short](includes/product-short.md)] vous permet de découvrir l’étendue de la violation pour chaque incident, d’examiner les entités impliquées et de déterminer comment y remédier.
 
-Les informations supervisées par Azure ATP sont présentées sous la forme d’activités. Azure ATP prend en charge la supervision des types d’activités suivants :
+Les informations supervisées par [!INCLUDE [Product short](includes/product-short.md)] sont présentées sous la forme d’activités. [!INCLUDE [Product short](includes/product-short.md)] prend actuellement en charge la supervision des types d’activités suivants :
 
 > [!NOTE]
 >
-> - Cet article s’applique pour tous les types de capteurs Azure ATP.
-> - Les activités supervisées par Azure ATP s’affichent à la fois dans la page de profil de l’utilisateur et dans celle de la machine.
+> - Cet article s’applique pour tous les types de capteurs [!INCLUDE [Product short](includes/product-short.md)].
+> - Les activités supervisées par [!INCLUDE [Product short](includes/product-short.md)] s’affichent à la fois sur la page de profil de l’utilisateur et sur celle de la machine.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités surveillées des utilisateurs : Changements d’attributs AD du compte d’utilisateur
 
@@ -80,7 +79,7 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 |Activité supervisée|Description|
 |---------------------|------------------|
 |Réplication du service d’annuaire|L’utilisateur a tenté de répliquer le service d’annuaire.|
-|Requête DNS|Type de requête effectuée par l’utilisateur sur le contrôleur de domaine (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
+|Requête DNS|Type de requête effectuée par l’utilisateur sur le contrôleur de domaine ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
 |Extraction de données privées|L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
 |Création de service|L’utilisateur a tenté de créer un service sur un ordinateur distant.|
 |Énumération des sessions SMB|L’utilisateur a tenté d’énumérer tous les utilisateurs ayant une session SMB ouverte sur les contrôleurs de domaine.|
@@ -115,4 +114,4 @@ Les informations supervisées par Azure ATP sont présentées sous la forme d’
 - [Gestion des alertes de sécurité](working-with-suspicious-activities.md)
 - [Guide sur les alertes de sécurité](suspicious-activity-guide.md)
 - [Examiner les entités](investigate-entity.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

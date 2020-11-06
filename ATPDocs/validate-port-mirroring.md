@@ -1,41 +1,40 @@
 ---
-title: Valider la mise en miroir des ports dans Azure Advanced Threat Protection
-description: Explique comment vérifier que la mise en miroir des ports est configurée correctement dans Azure ATP
+title: Validation de la mise en miroir de ports dans Microsoft Defender pour Identity
+description: Explique comment vérifier que la mise en miroir de ports est configurée correctement dans Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 35598f9ea3cdee1ede33b1770471108493ea13c6
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 7a665a20da3940b3146a007eea6ee75bd35d7930
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912252"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274059"
 ---
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cet article s’applique uniquement si vous déployez le capteur autonome Azure ATP à la place du capteur Azure ATP.
+Cet article ne s’applique que dans le cadre du déploiement du capteur autonome [!INCLUDE [Product long](includes/product-long.md)] plutôt que du capteur [!INCLUDE [Product short](includes/product-short.md)].
 
 > [!NOTE]
-> Les capteurs autonomes Azure ATP ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur Azure ATP.
+> Les capteurs autonomes [!INCLUDE [Product short](includes/product-short.md)] ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur [!INCLUDE [Product short](includes/product-short.md)].
 
-Les étapes suivantes sont conçues pour vous guider dans le processus de validation de la mise en miroir des ports. Pour qu’Azure ATP fonctionne correctement, le capteur autonome Azure ATP doit pouvoir voir le trafic entrant et sortant du contrôleur de domaine. La principale source de données utilisée par Azure ATP est l’inspection approfondie des paquets du trafic réseau entrant et sortant de vos contrôleurs de domaine. Pour qu’Azure ATP puisse voir le trafic réseau, vous devez configurer la mise en miroir des ports. La mise en miroir des ports copie le trafic d’un port (le port source) vers un autre port (le port de destination).
+Les étapes suivantes sont conçues pour vous guider dans le processus de validation de la mise en miroir des ports. Pour que [!INCLUDE [Product short](includes/product-short.md)] fonctionne correctement, le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] doit pouvoir voir le trafic entrant et sortant du contrôleur de domaine. La principale source de données utilisée par [!INCLUDE [Product short](includes/product-short.md)] est l’inspection approfondie des paquets du trafic réseau entrant et sortant des contrôleurs de domaine. Pour que [!INCLUDE [Product short](includes/product-short.md)] puisse voir le trafic réseau, vous devez configurer la mise en miroir de ports. La mise en miroir des ports copie le trafic d’un port (le port source) vers un autre port (le port de destination).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Valider la mise en miroir à l’aide du Moniteur réseau
 
-1. Installez [Moniteur réseau Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) sur le capteur autonome ATP que vous souhaitez valider.
+1. Installez [Moniteur réseau Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) sur le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] que vous souhaitez valider.
 
     > [!IMPORTANT]
-    > Si vous choisissez d’installer Wireshark afin de valider la mise en miroir des ports, redémarrez le service du capteur autonome Azure ATP après la validation.
+    > Si vous choisissez d’installer Wireshark pour valider la mise en miroir de ports, redémarrez le service du capteur autonome [!INCLUDE [Product short](includes/product-short.md)] après la validation.
 
 1. Ouvrez le Moniteur réseau et créez un nouvel onglet de capture.
 
@@ -45,15 +44,15 @@ Les étapes suivantes sont conçues pour vous guider dans le processus de valida
 
     1. Cliquez sur **Nouvelle capture**.
 
-        ![Image de la création d’un nouvel onglet de capture](media/atp-port-mirroring-capture.png)
+        ![Image de la création d’un nouvel onglet de capture](media/port-mirroring-capture.png)
 
-1. Dans la fenêtre Filtre d’affichage, entrez le filtre **KerberosV5 OR LDAP**, puis cliquez sur **Appliquer**.
+1. Dans la fenêtre Filtre d’affichage, entrez le filtre **KerberosV5 OR LDAP** , puis cliquez sur **Appliquer**.
 
-    ![Image de l’application du filtre KerberosV5 or LDAP](media/atp-port-mirroring-filter-settings.png)
+    ![Image de l’application du filtre KerberosV5 or LDAP](media/port-mirroring-filter-settings.png)
 
 1. Pour démarrer la session de capture, cliquez sur **Démarrer**. Si vous ne voyez pas le trafic entrant et sortant du contrôleur de domaine, examinez la configuration de mise en miroir des ports.
 
-    ![Image du démarrage de la session de capture](media/atp-port-mirroring-capture-traffic.png)
+    ![Image du démarrage de la session de capture](media/port-mirroring-capture-traffic.png)
 
     > [!NOTE]
     > Il est important de vous assurer que vous voyez le trafic entrant et sortant des contrôleurs de domaine.
@@ -64,4 +63,4 @@ Les étapes suivantes sont conçues pour vous guider dans le processus de valida
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
 - [Configurer la mise en miroir des ports](configure-port-mirroring.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

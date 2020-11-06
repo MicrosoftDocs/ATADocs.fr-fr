@@ -1,31 +1,30 @@
 ---
-title: Configurer votre proxy ou pare-feu pour permettre la communication d’Azure ATP avec le capteur
-description: Décrit comment configurer votre pare-feu ou proxy pour permettre la communication entre le service cloud Azure ATP et les capteurs Azure ATP
+title: Configuration d’un proxy ou d’un pare-feu pour permettre la communication entre Microsoft Defender pour Identity et le capteur
+description: Explique comment configurer un pare-feu ou un proxy de façon à permettre la communication entre le service Cloud Microsoft Defender pour Identity et les capteurs Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/29/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 69a05db012422fef78d7f693f0e12ffebe31c72b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: b522a23bddd5710f0a3e2169afab180e6b8bb828
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912442"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277209"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurer le proxy du point de terminaison et les paramètres de connectivité Internet pour le capteur Azure ATP
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configuration des paramètres de proxy du point de terminaison et de connectivité Internet d’un capteur [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Chaque capteur Azure Advanced Threat Protection (ATP) a besoin d’une connectivité Internet au service cloud Azure ATP pour signaler les données de capteur et fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web.
+Chaque capteur [!INCLUDE [Product long](includes/product-long.md)] a besoin d’une connectivité Internet au service cloud [!INCLUDE [Product short](includes/product-short.md)] pour pouvoir envoyer ses données et fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web.
 
-Pour configurer votre serveur proxy, nous vous recommandons d’utiliser la ligne de commande pour vous assurer que seuls les services de capteur Azure ATP communiquent via le proxy.
+Pour configurer votre serveur proxy, nous vous recommandons de veiller à ce que seuls les services de capteur [!INCLUDE [Product short](includes/product-short.md)] communiquent via le proxy en ligne de commande.
 
 ## <a name="configure-proxy-server-using-the-command-line"></a>Configurer un serveur proxy à l’aide de la ligne de commande
 
@@ -41,9 +40,9 @@ Vous pouvez configurer votre serveur proxy lors de l’installation du capteur �
 >
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port pour le capteur Azure ATP.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port du capteur [!INCLUDE [Product short](includes/product-short.md)].|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Non|Si votre service de proxy nécessite une authentification, spécifiez un nom d’utilisateur au format DOMAINE\utilisateur.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. *Les informations d’identification sont chiffrées et stockées localement par le capteur Azure ATP.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. \* Les informations d’identification sont chiffrées et stockées en local par le capteur [!INCLUDE [Product short](includes/product-short.md)].|
 
 ## <a name="alternative-methods-to-configure-your-proxy-server"></a>Autres méthodes pour configurer votre serveur proxy
 
@@ -54,16 +53,16 @@ Vous pouvez utiliser l’une des méthodes alternatives suivantes pour configure
 
 ### <a name="configure-proxy-server-using-wininet"></a>Configurer le serveur proxy avec WinINet
 
-Vous pouvez configurer votre serveur proxy à l’aide d’une configuration de proxy Microsoft Windows Internet (WinINet) pour permettre au capteur Azure ATP de signaler des données de diagnostic et de communiquer avec le service cloud Azure ATP quand un ordinateur n’est pas autorisé à se connecter à Internet. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez toujours configurer les paramètres de proxy de navigateur Windows Internet (WinINet) pour la communication entre le capteur et le service cloud Azure ATP.
+Vous pouvez configurer votre serveur proxy suivant la configuration Microsoft Windows Internet (WinInet) pour permettre au capteur [!INCLUDE [Product short](includes/product-short.md)] d’envoyer des données de diagnostic et de communiquer avec le service cloud [!INCLUDE [Product short](includes/product-short.md)] quand un ordinateur n’est pas autorisé à se connecter à Internet. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez quand même configurer les paramètres de proxy de navigateur Windows Internet (WinInet) pour la communication entre le capteur et le service cloud [!INCLUDE [Product short](includes/product-short.md)].
 
-Quand vous configurez le proxy, souvenez-vous que le service de capteur Azure ATP incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** et que le service de mise à jour du capteur Azure ATP s’exécute dans le contexte du système à l’aide du compte **LocalSystem**.
+Quand vous configurez le proxy, n’oubliez pas que le service de capteur [!INCLUDE [Product short](includes/product-short.md)] incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** , tandis que le service de mise à jour du capteur [!INCLUDE [Product short](includes/product-short.md)] s’exécute dans le contexte du système à l’aide du compte **LocalSystem**.
 
 > [!NOTE]
 > Si vous utilisez un proxy transparent ou WPAD dans votre topologie de réseau, vous n’avez pas besoin de configurer WinINet pour votre proxy.
 
 ### <a name="configure-proxy-server-using-the-registry"></a>Configurer le serveur proxy avec le Registre
 
-Vous pouvez également configurer votre serveur proxy manuellement à l’aide d’un proxy statique basé sur le Registre pour permettre au capteur Azure ATP de signaler des données de diagnostic et de communiquer avec le service cloud Azure ATP quand un ordinateur n’est pas autorisé à se connecter à Internet.
+Vous pouvez également configurer manuellement votre serveur proxy à l’aide d’un proxy statique basé sur le Registre pour permettre au capteur [!INCLUDE [Product short](includes/product-short.md)] d’envoyer des données de diagnostic et de communiquer avec le service cloud [!INCLUDE [Product short](includes/product-short.md)] quand un ordinateur n’est pas autorisé à se connecter à Internet.
 
 > [!NOTE]
 > Les modifications de Registre doivent être appliquées uniquement à LocalService et à LocalSystem.
@@ -85,15 +84,17 @@ Le proxy statique est configurable par le biais du Registre. Vous devez copier l
 > [!NOTE]
 > Toutes les applications sont concernées, notamment les services Windows qui utilisent WinINET avec le contexte LocalService, LocalSytem.
 
-## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Activer l’accès aux URL du service Azure ATP dans le serveur proxy
+<a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-Pour activer l’accès à Azure ATP, nous recommandons d’autoriser le trafic vers les URL suivantes. Les URL mappent automatiquement vers l’emplacement de service correspondant à votre instance Azure ATP.
+## <a name="enable-access-to-product-short-service-urls-in-the-proxy-server"></a>Activation de l’accès aux URL du service [!INCLUDE [Product short](includes/product-short.md)] dans le serveur proxy
+
+Pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’autoriser le trafic à destination des URL suivantes. Les URL sont automatiquement mappées avec l’emplacement du service correspondant dans votre instance [!INCLUDE [Product short](includes/product-short.md)].
 
 - `<your-instance-name>.atp.azure.com` – pour la connectivité de la console. Par exemple, `contoso-corp.atp.azure.com`
 
 - `<your-instance-name>sensorapi.atp.azure.com` – pour la connectivité des capteurs. Par exemple, `contoso-corpsensorapi.atp.azure.com`
 
-Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à Azure ATP. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure ( **AzureAdvancedThreatProtection** ) pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Sinon, si vous avez besoin d’un contrôle plus précis, autorisez le trafic vers les points de terminaison appropriés dans le tableau suivant :
 
@@ -107,10 +108,10 @@ Sinon, si vous avez besoin d’un contrôle plus précis, autorisez le trafic ve
 
 > [!NOTE]
 >
-> - Pour garantir la sécurité maximale et la confidentialité des données, Azure ATP utilise l’authentification mutuelle basée sur les certificats entre chaque capteur Azure ATP et le back-end cloud Azure ATP. Si l’inspection SSL est utilisée dans votre environnement, assurez-vous que l’inspection est configurée pour l’authentification mutuelle, de sorte qu’elle n’interfère pas dans le processus d’authentification.
-> - Parfois, les adresses IP du service Azure ATP peuvent changer. Par conséquent, si vous configurez manuellement des adresses IP ou si votre proxy résout automatiquement les noms DNS en leur adresse IP et les utilise, vous devez vérifier régulièrement que les adresses IP configurées sont toujours à jour.
+> - Pour garantir une sécurité et une confidentialité des données maximales, [!INCLUDE [Product short](includes/product-short.md)] utilise l’authentification mutuelle par certificat entre chaque capteur [!INCLUDE [Product short](includes/product-short.md)] et le back-end cloud [!INCLUDE [Product short](includes/product-short.md)]. Si l’inspection SSL est utilisée dans votre environnement, assurez-vous que l’inspection est configurée pour l’authentification mutuelle, de sorte qu’elle n’interfère pas dans le processus d’authentification.
+> - Les adresses IP du service [!INCLUDE [Product short](includes/product-short.md)] sont susceptibles de changer de temps en temps. Par conséquent, si vous configurez manuellement des adresses IP ou si votre proxy résout automatiquement les noms DNS en leur adresse IP et les utilise, vous devez vérifier régulièrement que les adresses IP configurées sont toujours à jour.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer le transfert d’événements](configure-event-forwarding.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

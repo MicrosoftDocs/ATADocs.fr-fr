@@ -1,31 +1,30 @@
 ---
-title: Informations de référence sur le journal SIEM Azure ATP
-description: Fournit des exemples de journaux d’activités suspectes envoyés depuis Azure ATP vers votre serveur SIEM.
+title: Informations de référence sur les journaux SIEM Microsoft Defender pour Identity
+description: Donne des exemples de journaux d’activités suspectes envoyés au serveur SIEM par Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/08/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 681b0fc541956c4a778310e78d79234c0fdd7495
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e2ac1109454e3bef9baec2197d4db7f73698ed6c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911855"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276493"
 ---
-# <a name="azure-atp-siem-log-reference"></a>Informations de référence sur le journal SIEM Azure ATP
+# <a name="product-long-siem-log-reference"></a>Informations de référence sur les journaux SIEM [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP peut transférer les événements d’alerte de sécurité et d’alerte d’intégrité à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
+[!INCLUDE [Product short](includes/product-short.md)] peut transférer les événements d’alerte de sécurité et d’intégrité à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
 
-## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Exemples d’alertes de sécurité Azure ATP au format CEF
+## <a name="sample-product-short-security-alerts-in-cef-format"></a>Exemples d’alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] au format CEF
 
 Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 
@@ -38,7 +37,7 @@ Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 |msg|Description de l’alerte|
 |cnt|Pour les alertes qui comportent le nombre de fois où l’activité s’est produite (par exemple une attaque par force brute est associée à une certaine quantité de mots de passe devinés)|
 |app |Protocole utilisé dans cette alerte|
-|externalId|ID d’événement écrit par Azure ATP dans le journal des événements correspondant à chaque type d’alerte. Lors du transfert d’alertes à Microsoft Cloud App Security, ce champ est rempli avec l’ID d’alerte Cloud App Security correspondant.|
+|externalId|ID d’événement écrit par [!INCLUDE [Product short](includes/product-short.md)] dans le journal des événements correspondant à chaque type d’alerte. Lors du transfert d’alertes à Microsoft Cloud App Security, ce champ est rempli avec l’ID d’alerte Cloud App Security correspondant.|
 |cs#label|Chaînes du client autorisées par CEF, où cs#label est le nom du nouveau champ |
 |cs#|Chaînes du client autorisées par CEF, où cs# est sa valeur.|
 
@@ -49,11 +48,11 @@ Le champ cs1 est l’URL de l’alerte.
 Le champ cs2 identifie s’il s’agit d’une alerte nouvelle ou mise à jour.
 
 > [!NOTE]
-> Si vous envisagez de créer l’automatisation ou des scripts pour les journaux Azure ATP SIEM, nous vous recommandons d’utiliser le champ **externalId** afin d’identifier le type d’alerte au lieu d’utiliser le nom de l’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’**externalId** de chaque alerte est définitif. Pour obtenir la liste des ID externes, consultez [Mappage des noms d’alertes de sécurité et ID externes uniques](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+> Si vous envisagez de créer une automatisation ou des scripts pour les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’utiliser le champ **externalId** pour identifier le type d’alerte au lieu d’utiliser le nom d’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’ **externalId** de chaque alerte est définitif. Pour obtenir la liste des ID externes, consultez [Mappage des noms d’alertes de sécurité et ID externes uniques](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## <a name="sample-logs"></a>Exemples de journaux
 
-Les exemples de journaux sont conformes à la RFC 5424, mais Azure ATP prend également en charge la RFC 3164.
+Les exemples de journaux sont conformes à RFC 5424, mais [!INCLUDE [Product short](includes/product-short.md)] prend également en charge RFC 3164.
 
 Priorités :
 
@@ -203,8 +202,8 @@ Priorités :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prérequis d’Azure ATP](prerequisites.md)
-- [Planification de la capacité Azure ATP](capacity-planning.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)
