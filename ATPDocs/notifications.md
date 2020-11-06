@@ -1,38 +1,37 @@
 ---
-title: Définir des notifications Azure Advanced Threat Protection
-description: Décrit comment définir des alertes de sécurité Azure ATP qui vous notifient quand des activités suspectes sont détectées.
+title: Définition de notifications Microsoft Defender pour Identity
+description: Explique comment définir des alertes de sécurité Microsoft Defender pour Identity pour recevoir une notification en cas de détection d’activités suspectes.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/29/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b60044cbc2ccf05ff1802ecce6e3e11d42543f97
-ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
+ms.openlocfilehash: 1cb2ea1c5f853f6f3a56d4bcccd84b5958078329
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451748"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275575"
 ---
-# <a name="set-azure-atp-notifications"></a>Définir des notifications Azure ATP
+# <a name="set-product-long-notifications"></a>Définition de notifications [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP peut vous notifier par e-mail quand il détecte une activité suspecte, et qu’il émet une alerte de sécurité ou d’intégrité via un e-mail.
+[!INCLUDE [Product long](includes/product-long.md)] peut envoyer une notification en cas de détection d’une activité suspecte en émettant une alerte de sécurité ou d’intégrité par e-mail.
 
 Pour recevoir des notifications à une adresse e-mail spécifique, définissez les paramètres suivants :
 
-1. Dans le portail Azure ATP, sélectionnez l’option Paramètres dans la barre d’outils, puis **Configuration**.
+1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], sélectionnez l’option Paramètres dans la barre d’outils, puis **Configuration**.
 
-    ![Icône de paramètres de configuration d’Azure ATP](media/atp-config-menu.png)
+    ![Icône Paramètres de configuration [!INCLUDE [Product short](includes/product-short.md)]](media/config-menu.png)
 
 1. Cliquez sur **Notifications**.
-1. Sous **Notifications par e-mail**, ajoutez des adresses e-mail pour les notifications que vous voulez recevoir. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité.
+1. Sous **Notifications par e-mail** , ajoutez des adresses e-mail pour les notifications que vous voulez recevoir. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité.
 
     > [!NOTE]
     >
@@ -41,11 +40,11 @@ Pour recevoir des notifications à une adresse e-mail spécifique, définissez l
 
 1. Cliquez sur **Save**.
 
-    ![Notifications Azure ATP](media/atp-notifications.png)
+    ![Notifications [!INCLUDE [Product short](includes/product-short.md)]](media/notifications.png)
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Configurer la collecte d’événements](configure-event-collection.md)
 
 - [Définir les paramètres de Syslog](setting-syslog.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

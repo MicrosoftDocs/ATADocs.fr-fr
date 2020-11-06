@@ -1,23 +1,22 @@
 ---
-title: Identifier des comptes sensibles avec Azure ATP
-description: Décrit comment identifier des comptes sensibles à l’aide d’Azure Advanced Threat Protection (ATP)
+title: Étiquetage des comptes sensibles avec Microsoft Defender pour Identity
+description: Explique comment étiqueter les comptes sensibles avec Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/16/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e033e2b3b99664513fcaac04059dbbb27c380665
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 74e97750d25f48522d38246337682e0399d24c4d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912580"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274478"
 ---
 # <a name="working-with-sensitive-accounts"></a>Utilisation de comptes sensibles
 
@@ -25,7 +24,7 @@ ms.locfileid: "90912580"
 
 ## <a name="sensitive-entities"></a>Entités sensibles
 
-Les groupes de la liste suivante sont considérés comme **Sensibles** par Azure ATP. Toute entité qui est membre d’un de ces groupes est considérée comme sensible :
+Les groupes de la liste suivante sont considérés comme **Sensibles** par [!INCLUDE [Product long](includes/product-long.md)]. Toute entité qui est membre d’un de ces groupes est considérée comme sensible :
 
 - Administrateurs
 - Utilisateurs avec pouvoir
@@ -46,9 +45,9 @@ Les groupes de la liste suivante sont considérés comme **Sensibles** par Azure
 - Serveurs Microsoft Exchange
 
   > [!NOTE]
-  > Jusqu’à septembre 2018, les utilisateurs du Bureau à distance étaient aussi considérés automatiquement comme sensibles par Azure ATP. Les entités ou les groupes Bureau à distance ajoutés après cette date ne sont plus automatiquement marqués comme sensibles, contrairement aux entités ou groupes Bureau à distance ajoutés avant cette date, qui peuvent rester marqués comme sensibles. Ce paramètre Sensible peut désormais être modifié manuellement.
+  > Jusqu’en septembre 2018, les utilisateurs du Bureau à distance étaient aussi considérés automatiquement comme Sensibles par [!INCLUDE [Product short](includes/product-short.md)]. Les entités ou les groupes Bureau à distance ajoutés après cette date ne sont plus automatiquement marqués comme sensibles, contrairement aux entités ou groupes Bureau à distance ajoutés avant cette date, qui peuvent rester marqués comme sensibles. Ce paramètre Sensible peut désormais être modifié manuellement.
 
-En plus de ces groupes, Azure ATP identifie les serveurs actifs de grande valeur suivants et les marque automatiquement comme **Sensibles** :
+En plus de ces groupes, [!INCLUDE [Product short](includes/product-short.md)] identifie les serveurs d’actifs de grande valeur suivants et les marque automatiquement comme **Sensibles**  :
 
 - Serveur de l’autorité de certification
 - Serveur DHCP
@@ -57,21 +56,21 @@ En plus de ces groupes, Azure ATP identifie les serveurs actifs de grande valeur
 
 ## <a name="tagging-sensitive-accounts"></a>Identification des comptes sensibles
 
-En plus de ces groupes, vous pouvez identifier manuellement des groupes ou des comptes comme sensibles pour améliorer les détections. C’est important car certaines détections Azure ATP, telles que la détection des modifications des groupes sensibles et les chemins de mouvement latéral, s’appuient sur des groupes et des comptes considérés comme sensibles. Vous pouvez identifier manuellement d’autres utilisateurs ou groupes comme sensibles, tels que les membres du conseil d’administration, les cadres de la société, le directeur des ventes, etc., pour qu’Azure ATP les considère comme sensibles.
+En plus de ces groupes, vous pouvez identifier manuellement des groupes ou des comptes comme sensibles pour améliorer les détections. Ce point est important, car certaines détections [!INCLUDE [Product short](includes/product-short.md)] (par exemple, la détection des modifications des groupes sensibles et les chemins de mouvement latéral) s’appuient sur l’identification des groupes et des comptes sensibles. Vous pouvez marquer manuellement d’autres utilisateurs et groupes comme sensibles (par exemple, les membres du conseil d’administration, les dirigeants de la société ou le directeur des ventes) pour que [!INCLUDE [Product short](includes/product-short.md)] les considère comme sensibles.
 
-1. Dans le portail Azure ATP, cliquez sur l’icône d’engrenage **Configuration** dans la barre de menus.
+1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Configuration**.
 
-1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
+1. Sous **Détection** , cliquez sur **Étiquettes d’entité**.
 
-    ![Étiquettes d’entité Azure ATP](media/entity-tags.png)
+    ![Étiquettes d’entité [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
 
-1. Dans la section **Sensible**, tapez le nom des **comptes sensibles** et **groupes sensibles**, puis cliquez sur le signe **+** pour les ajouter.
+1. Dans la section **Sensible** , tapez le nom des **comptes sensibles** et **groupes sensibles** , puis cliquez sur le signe **+** pour les ajouter.
 
-    ![Exemple de compte sensible Azure ATP](media/sensitive-account-sample.png)
+    ![Exemple de compte sensible [!INCLUDE [Product short](includes/product-short.md)]](media/sensitive-account-sample.png)
 
 1. Cliquez sur **Save**.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

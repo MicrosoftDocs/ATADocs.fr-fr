@@ -1,41 +1,40 @@
 ---
-title: Définition des paramètres Syslog dans Azure Advanced Threat Protection
-description: Décrit le mode de notification d’Azure ATP (par e-mail ou transfert d’événements Azure ATP) quand il détecte des activités suspectes
+title: Définition des paramètres Syslog dans Microsoft Defender pour Identity
+description: Explique comment indiquer à Microsoft Defender pour Identity d’envoyer une notification (par e-mail ou par transfert d’événements Defender pour Identity) en cas de détection d’activités suspectes.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/16/2019
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 989b3cdb309d5d4d9ab19e0377c7712b9065a100
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 55487b6638fc8278ae94b3444f74f2abe2b2dc56
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912517"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275247"
 ---
 # <a name="integrate-with-syslog"></a>Intégrer à Syslog
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
-Azure ATP peut vous informer quand il détecte des activités suspectes et envoyer des alertes de sécurité ou d’intégrité à votre serveur Syslog via un capteur donné.
+[!INCLUDE [Product long](includes/product-long.md)] peut vous informer en cas de détection d’activités suspectes en envoyant des alertes de sécurité et d’intégrité à votre serveur Syslog par le biais d’un capteur désigné.
 
 Une fois que vous avez activé les notifications Syslog, vous pouvez définir les éléments suivants :
 
-   |Champ|Description|
-   |---------|---------------|
-   |capteur|Sélectionnez un capteur désigné comme responsable de l’agrégation de tous les événements Syslog et de leur transfert vers votre serveur SIEM.|
-   |Point de terminaison de service|Nom de domaine complet du serveur Syslog et modifiez éventuellement le numéro de port (par défaut, 514)|
-   |Transport|Peut être UDP, TCP ou TLS (Syslog sécurisé)|
-   |Format|Il s’agit du format utilisé par Azure ATP pour envoyer des événements au serveur SIEM : RFC 5424 ou 3164.|
+|Champ|Description|
+|---------|---------------|
+|capteur|Sélectionnez un capteur désigné comme responsable de l’agrégation de tous les événements Syslog et de leur transfert vers votre serveur SIEM.|
+|Point de terminaison de service|Nom de domaine complet du serveur Syslog et modifiez éventuellement le numéro de port (par défaut, 514)|
+|Transport|Peut être UDP, TCP ou TLS (Syslog sécurisé)|
+|Format|Format utilisé par [!INCLUDE [Product short](includes/product-short.md)] pour envoyer des événements au serveur SIEM : RFC 5424 ou RFC 3164.|
 
 1. Avant de configurer les notifications Syslog, collaborez avec votre administrateur SIEM pour connaître les informations suivantes :
 
@@ -44,29 +43,29 @@ Une fois que vous avez activé les notifications Syslog, vous pouvez définir le
     - Mode de transport à utiliser : UDP, TCP ou TLS (Syslog sécurisé)
     - Format sous lequel envoyer les données, RFC 3164 ou 5424
 
-1. Ouvrez le portail Azure ATP.
+1. Ouvrez le portail [!INCLUDE [Product short](includes/product-short.md)].
 1. Cliquez sur **Paramètres**.
-1. Dans le sous-menu **Notifications et rapports**, sélectionnez **Notifications**.
-1. Dans l’option **Service Syslog**, cliquez sur **Configurer**.
+1. Dans le sous-menu **Notifications et rapports** , sélectionnez **Notifications**.
+1. Dans l’option **Service Syslog** , cliquez sur **Configurer**.
 1. Sélectionnez le **Capteur**.
 1. Entrez l’URL du **Point de terminaison de service**.
 1. Sélectionnez le protocole de **Transport** (TCP ou UDP).
 1. Sélectionnez le format (RFC 3164 ou RFC 5424).
-1. Sélectionnez **Envoyer un message de test à syslog**, puis vérifiez que le message est reçu dans votre solution d’infrastructure Syslog.
+1. Sélectionnez **Envoyer un message de test à syslog** , puis vérifiez que le message est reçu dans votre solution d’infrastructure Syslog.
 1. Cliquez sur **Save**.
 
 Pour passer en revue ou modifier vos paramètres Syslog.
 
-1. Cliquez sur **Notifications**, puis, sous **Notifications Syslog**, cliquez sur **Configurer** et entrez les informations suivantes :
+1. Cliquez sur **Notifications** , puis, sous **Notifications Syslog** , cliquez sur **Configurer** et entrez les informations suivantes :
 
-    ![Image des paramètres du serveur Syslog Azure ATP](media/atp-syslog.png)
+    ![Image Paramètres du serveur Syslog [!INCLUDE [Product short](includes/product-short.md)]](media/syslog.png)
 
-1. Vous pouvez sélectionner les événements à envoyer à votre serveur Syslog. Sous **Notifications Syslog**, spécifiez quelles notifications doivent être envoyées à votre serveur Syslog : nouvelles alertes de sécurité, alertes de sécurité mises à jour et nouveaux problèmes d’intégrité.
+1. Vous pouvez sélectionner les événements à envoyer à votre serveur Syslog. Sous **Notifications Syslog** , spécifiez quelles notifications doivent être envoyées à votre serveur Syslog : nouvelles alertes de sécurité, alertes de sécurité mises à jour et nouveaux problèmes d’intégrité.
 
 > [!NOTE]
-> Si vous envisagez de créer l’automatisation ou des scripts pour les journaux Azure ATP SIEM, nous vous recommandons d’utiliser le champ **externalId** afin d’identifier le type d’alerte au lieu d’utiliser le nom de l’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’**externalId** de chaque alerte est définitif. Pour en savoir plus, consultez [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md).
+> Si vous envisagez de créer une automatisation ou des scripts pour les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’utiliser le champ **externalId** pour identifier le type d’alerte au lieu d’utiliser le nom d’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’ **externalId** de chaque alerte est définitif. Pour plus d’informations, consultez [Informations de référence sur les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de comptes sensibles](sensitive-accounts.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)
