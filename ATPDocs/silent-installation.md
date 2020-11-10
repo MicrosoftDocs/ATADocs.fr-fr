@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d78282a4580159e0b20374e3c3acbd2b5008aab6
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: edb9f414055a7d106913d1d394af44ef84ef4223
+ms.sourcegitcommit: 2b57f438c2902d5258aff8999b374c2f1808ceb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274171"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94430683"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] commutateurs et installation sans assistance
 
@@ -53,7 +53,7 @@ Utilisez la commande suivante pour effectuer une installation entièrement silen
 **Syntaxe Powershell** :
 
 ```powershell
-./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+.\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
 > [!NOTE]
@@ -99,9 +99,9 @@ Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 >
 > |Nom|Syntaxe|Obligatoire pour une installation sans assistance ?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Non|Spécifie le ProxyUrl et le numéro de port pour le [!INCLUDE [Product short](includes/product-short.md)] capteur.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port du capteur [!INCLUDE [Product short](includes/product-short.md)].|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Non|Si votre service de proxy nécessite une authentification, spécifiez un nom d’utilisateur au format DOMAINE\utilisateur.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. * Les informations d’identification sont chiffrées et stockées localement par le [!INCLUDE [Product short](includes/product-short.md)] capteur.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. \* Les informations d’identification sont chiffrées et stockées en local par le capteur [!INCLUDE [Product short](includes/product-short.md)].|
 
 ## <a name="update-the-product-short-sensor"></a>Mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] capteur
 
@@ -161,7 +161,7 @@ Pour désinstaller sans assistance le [!INCLUDE [Product short](includes/product
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Installer le [!INCLUDE [Product short](includes/product-short.md)] capteur](install-step4.md)
 - [Configurer le [!INCLUDE [Product short](includes/product-short.md)] capteur](install-step5.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)
