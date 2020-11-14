@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41ee2095939182a23a5f10088580113f1f0fdcd7
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 567fb2beb08425a69964932ca6807ff03a6b6549
+ms.sourcegitcommit: 69c55503b8b3f7ca99dbea872b17d81124831fad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911324"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94567921"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur la façon de configurer le transfert d’événem
 
 #### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Configuration de la passerelle ATA pour écouter les événements SIEM
 
-1. Dans la configuration ATA, sous **Sources de données**, cliquez sur **SIEM** et activez **Syslog**, puis cliquez sur **Enregistrer**.
+1. Dans la configuration ATA, sous **Sources de données** , cliquez sur **SIEM** et activez **Syslog** , puis cliquez sur **Enregistrer**.
 
     ![Image de l’activation du protocole UDP de l’écouteur syslog](media/ATA-enable-siem-forward-events.png)
 
@@ -126,7 +126,7 @@ Code d’erreur : 0x0
 
 - L’en-tête syslog est facultatif.
 
-- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires.
+- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires. Notez qu’il s’agit des caractères de contrôle CRLF (0D0A en hex) et non des caractères littéraux.
 - Les champs sont au format clé = valeur.
 - Les clés suivantes doivent exister et avoir une valeur :
   - EventCode = ID de l’événement Windows.

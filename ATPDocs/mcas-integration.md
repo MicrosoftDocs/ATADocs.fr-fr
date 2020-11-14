@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5051900ef8eb21f85a4f31723f455d3ae18ff36e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: eff9b785cb23db649615f11be6e713eed49f3b5d
+ms.sourcegitcommit: 931d463e793cd5710e7bc2bca13cd4ef669eb190
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275083"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94580888"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Utilisation [!INCLUDE [Product long](includes/product-long.md)] de avec Microsoft Cloud App Security
 
@@ -59,7 +59,7 @@ Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur da
 > - Si vous n’avez pas d’abonnement pour Cloud App Security, vous serez toujours en mesure d’utiliser le portail Cloud App Security pour examiner les [!INCLUDE [Product short](includes/product-short.md)] alertes et les recherches approfondies sur les utilisateurs et leurs activités gérées sur site, mais vous ne recevrez pas d’informations pertinentes de vos applications Cloud.
 > - [!INCLUDE [Product short](includes/product-short.md)] les administrateurs peuvent avoir besoin de nouvelles autorisations pour accéder à Cloud App Security. Pour savoir comment attribuer des autorisations à Cloud App Security, consultez [Gérer l’accès administrateur](/cloud-app-security/manage-admins).
 
-Consultez [ [!INCLUDE [Product short](includes/product-short.md)] intégration](/cloud-app-security/aatp-integration) pour savoir comment activer rapidement [!INCLUDE [Product short](includes/product-short.md)] dans Cloud App Security.
+Consultez [ [!INCLUDE [Product short](includes/product-short.md)] intégration](/cloud-app-security/mdi-integration) pour savoir comment activer rapidement [!INCLUDE [Product short](includes/product-short.md)] dans Cloud App Security.
 
 ## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] dans Cloud App Security
 
@@ -105,4 +105,4 @@ Consultez [ [!INCLUDE [Product short](includes/product-short.md)] activités à 
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Avez-vous d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) !

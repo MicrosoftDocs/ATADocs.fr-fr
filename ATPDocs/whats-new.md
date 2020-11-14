@@ -1,34 +1,48 @@
 ---
-title: Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
-description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version d’Azure ATP (Azure Advanced Threat Protection).
+title: Nouveautés de Microsoft Defender pour Identity
+description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de Microsoft Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/18/2020
+ms.date: 10/27/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 26b4abc16ced7707d586f8049c82b30e86acbd0c
-ms.sourcegitcommit: 3ef87e970ca495edb995e0ea32e14f7e364045ff
+ms.openlocfilehash: e4dcf816008316a244be44e631951c07f588fcd9
+ms.sourcegitcommit: 00142fc07a81b10922ae26418a4104a0ef4b366d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2020
-ms.locfileid: "92163664"
+ms.lasthandoff: 11/08/2020
+ms.locfileid: "94371482"
 ---
-# <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Nouveautés d’Azure ATP (Azure Advanced Threat Protection)
+# <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
 
-Cet article est fréquemment mis à jour pour vous informer des nouveautés des dernières versions d’Azure ATP.
+Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de [!INCLUDE [Product long](includes/product-long.md)] (anciennement Azure Advanced Threat Protection, ou Azure ATP).
 
-Pour plus d’informations sur les versions antérieures d’Azure ATP jusqu’à la version 2.55 (comprise), voir la [Référence sur les versions d’Azure ATP](release-reference.md).
+Pour plus d’informations sur les versions antérieures de [!INCLUDE [Product short](includes/product-short.md)] jusqu’à la version 2.55 (comprise), consultez les [Informations de référence sur les versions de [!INCLUDE [Product short](includes/product-short.md)]](release-reference.md).
 
 Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
 > [!IMPORTANT]
 >
-> Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.127.
+> Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.129.
+
+## <a name="product-short-release-2131"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.131
+
+Publication : 8 novembre 2020
+
+- **Nouvelle alerte de sécurité :  Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)**  
+L’alerte de sécurité *Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)* de [!INCLUDE [Product short](includes/product-short.md)] est désormais disponible. Dans cette détection, une alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)] est déclenchée quand un attaquant énumère des comptes de service et leurs noms SPN respectifs, puis demande des tickets TGS Kerberos pour les services. L’intention des attaquants peut être d’extraire les hachages des tickets et de les enregistrer en vue de les utiliser plus tard dans des attaques par force brute hors connexion. Pour plus d’informations, consultez [Exposition des noms SPN Kerberos](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="product-short-release-2130"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.130
+
+Publication : 25 octobre 2020
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2129"></a>Azure ATP version 2.129
 
@@ -40,7 +54,8 @@ Publication : 18 octobre 2020
 
 Publication : 27 septembre 2020
 
-- Nous supprimons les boutons bascule **Notification par e-mail** qui permettent d’activer les notifications par e-mail. Pour recevoir les notifications par e-mail, il suffit d’ajouter une adresse. Pour plus d’informations, consultez [Configurer les notifications](notifications.md).
+- **Modification de la configuration des notifications par e-mail**  
+Nous supprimons les boutons bascule **Notification par e-mail** qui permettent d’activer les notifications par e-mail. Pour recevoir les notifications par e-mail, il suffit d’ajouter une adresse. Pour plus d’informations, consultez [Configurer les notifications](notifications.md).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2127"></a>Azure ATP version 2.127
@@ -48,7 +63,7 @@ Publication : 27 septembre 2020
 Publication : 20 septembre 2020
 
 - **Nouvelle alerte de sécurité : Tentative suspectée de réaffectation des privilèges Netlogon (ID externe 2411)**  
-L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="azure-atp-release-2126"></a>Azure ATP version 2.126
@@ -301,7 +316,7 @@ Pour garantir que tous les utilisateurs soient informés de la disponibilité de
 Publication : 27 octobre 2019
 
 - **Amélioration de fonctionnalité : alerte de suspicion d’attaque par force brute**  
-Amélioration de l’[alerte de suspicion d’attaque par force brute (SMB)](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) à l’aide d’une analyse supplémentaire et amélioration de la logique de détection pour réduire les résultats d’alerte **vrai positif (B-TP)** et **faux positif (FP)** .
+Amélioration de l’ [alerte de suspicion d’attaque par force brute (SMB)](compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) à l’aide d’une analyse supplémentaire et amélioration de la logique de détection pour réduire les résultats d’alerte **vrai positif (B-TP)** et **faux positif (FP)** .
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
@@ -488,9 +503,10 @@ Marquage sensible manuel pour les serveurs Exchange
     Il est maintenant possible de marquer manuellement des entités comme serveurs Exchange lors de la configuration.
 
     Pour marquer manuellement une entité comme serveur Exchange :
-    1. Sur le portail Azure ATP, accédez au menu **Configuration**.
-    2. Sous **Détection**, sélectionnez **Étiquettes d’entité**, puis **Sensible**.
-    3. Sélectionnez **Serveurs Exchange**, puis ajoutez l’entité à marquer.
+
+    1. Dans le portail Azure ATP, ouvrez **Configuration**.
+    2. Sous **Détection** , sélectionnez **Étiquettes d’entité** , puis **Sensible**.
+    3. Sélectionnez **Serveurs Exchange** , puis ajoutez l’entité à marquer.
 
     Un ordinateur marqué comme serveur Exchange s’affiche comme tel. Il porte l’étiquette Sensible,  qui apparaît dans son profil d’entité. Il est pris en compte dans toutes les détections liées aux comptes sensibles et aux chemins de mouvement latéral.
 
@@ -637,7 +653,7 @@ En savoir plus sur les alertes de sécurité relatives à la [Suspicion d’atta
 Date de publication : 10 février 2019
 
 - **Nouvelle alerte de sécurité : Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)**  
-L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) d’Azure ATP est maintenant en préversion publique.    Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. En savoir plus sur la technique **ExchangePriv** dans l’[avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019 et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+L’alerte de sécurité [Suspicion d’attaque de relais NTLM (compte Exchange) - (préversion)](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) d’Azure ATP est maintenant en préversion publique.    Dans cette détection, une alerte de sécurité Azure ATP est déclenchée quand une utilisation d’informations d’identification d’un compte Exchange à partir d’une source suspecte est identifiée. Ces types d’attaques tentent de tirer parti des techniques de relais NTLM pour obtenir des privilèges Exchange d’un contrôleur de domaine ; elles sont appelées **ExchangePriv**. En savoir plus sur la technique **ExchangePriv** dans l’ [avis ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publié pour la première fois le 31 janvier 2019 et dans la [réponse à l’alerte Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Disponibilité générale : Exécution de code à distance sur DNS**  
 Cette alerte est maintenant en disponibilité générale. Pour plus d’informations et de caractéristiques d’alerte, consultez la [page de description de l’alerte de l’exécution de code à distance via DNS](lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036).
@@ -685,7 +701,7 @@ Azure ATP fournit maintenant des informations de couverture pour les contrôleur
 La détection de reconnaissance d’énumération de compte Azure ATP émet désormais des alertes quand elle détecte des tentatives d’énumération à l’aide de Kerberos ou de NTLM. Avant, la détection fonctionnait uniquement pour les tentatives à l’aide de Kerberos. Pour en savoir plus, consultez [Alertes de reconnaissance d’Azure ATP](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003).
 
 - **Amélioration de fonctionnalité : Alerte de tentative d’exécution de code à distance**
-  - Toutes les activités d’exécution à distance, telles que la création de service, l’exécution de WMI et l’exécution du nouveau **PowerShell**, ont été ajoutées à la chronologie des profils de la machine de destination. La machine de destination est le contrôleur de domaine sur lequel la commande a été exécutée.
+  - Toutes les activités d’exécution à distance, telles que la création de service, l’exécution de WMI et l’exécution du nouveau **PowerShell** , ont été ajoutées à la chronologie des profils de la machine de destination. La machine de destination est le contrôleur de domaine sur lequel la commande a été exécutée.
   - L’exécution de **PowerShell** a été ajoutée à la liste des activités d’exécution de code à distance listées dans la chronologie des alertes des profils d’entités.
   - Pour en savoir plus, consultez [Tentative d’exécution de code à distance](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019).  
 
@@ -717,7 +733,7 @@ L’alerte de sécurité Azure ATP [Exfiltration de données sur SMB](exfiltrati
 Une nouvelle description de l’alerte et des preuves supplémentaires ont été ajoutées pour faciliter la compréhension de l’alerte et fournir de meilleurs workflows d’investigation.
 
 - **Amélioration de fonctionnalité : activités logiques de requêtes DNS**  
-Des types de requêtes supplémentaires ont été ajoutés aux [activités supervisées Azure ATP](monitored-activities.md), notamment : **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
+Des types de requêtes supplémentaires ont été ajoutés aux [activités supervisées Azure ATP](monitored-activities.md), notamment : **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY**.
 
 - **Amélioration de fonctionnalité : Utilisation de Golden Ticket suspectée (anomalie de ticket) et Utilisation de Golden Ticket suspectée (compte inexistant)**  
 Une logique de détection améliorée a été appliquée à deux alertes afin de réduire le nombre d’alertes FP et de fournir des résultats plus précis.
@@ -811,12 +827,12 @@ Les articles Azure ATP décrivant les caractéristiques de la fonctionnalité de
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-Pour plus d’informations sur chacune des versions antérieures à la version 2.55 d’Azure ATP (comprise), voir la [Référence sur les versions d’Azure ATP](release-reference.md).
+Pour plus d’informations sur chacune des versions antérieures à la version 2.55 de [!INCLUDE [Product short](includes/product-short.md)] (comprise), consultez la [Référence sur les versions de [!INCLUDE [Product short](includes/product-short.md)]](release-reference.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Présentation d’Azure Advanced Threat Protection](what-is.md)
+- [Qu’est-ce que [!INCLUDE [Product long](includes/product-long.md)]?](what-is.md)
 - [Forum aux questions](technical-faq.md)
-- [Prérequis d’Azure ATP](prerequisites.md)
-- [Planification de la capacité Azure ATP](capacity-planning.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

@@ -1,29 +1,32 @@
 ---
-title: 'Démarrage rapide : Connecter Azure ATP à Active Directory'
-description: La deuxième étape de la procédure d’installation d’Azure ATP vous permet de configurer les paramètres de connectivité du domaine sur votre service cloud Azure ATP
+title: 'Démarrage rapide : Connecter Microsoft Defender pour Identity à Active Directory'
+description: La deuxième étape de la procédure d’installation de Microsoft Defender pour Identity vous aide à configurer les paramètres de connectivité du domaine sur votre service cloud Defender pour Identity
 author: shsagir
 ms.author: shsagir
-ms.date: 01/15/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 39721343f150969a501b58842c616386dbfb49c2
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.reviewer: itargoet
+ms.suite: ems
+ms.openlocfilehash: f0c4cc8342c9f45b8cc08166d14be1c512ca1065
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913033"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276223"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Démarrage rapide : Se connecter à votre forêt Active Directory
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dans ce guide de démarrage rapide, vous connectez Azure ATP à Active Directory (AD) pour récupérer les données portant sur des utilisateurs et des ordinateurs. Si vous connectez plusieurs forêts, consultez l’article [Prise en charge de plusieurs forêts](multi-forest.md).
+Dans ce guide de démarrage rapide, vous connectez [!INCLUDE [Product long](includes/product-long.md)] à Active Directory (AD) pour récupérer les données portant sur des utilisateurs et des ordinateurs. Si vous connectez plusieurs forêts, consultez l’article [Prise en charge de plusieurs forêts](multi-forest.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Une [instance Azure ATP](install-step1.md).
-- Examinez l’article [Prérequis d’Azure ATP](prerequisites.md).
+- Une [instance [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md).
+- Consultez l’article [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 - Au moins l’un des comptes de services d’annuaire suivants, avec accès en lecture à tous les objets dans les domaines analysés :
   - Un mot de passe et un compte d’utilisateur AD **standard**. Requis pour les capteurs exécutant Windows Server 2008 R2 SP1.
   - Un **compte de service administré du groupe** (gMSA). Requiert Windows Server 2012 ou version ultérieure.  
@@ -32,7 +35,7 @@ Dans ce guide de démarrage rapide, vous connectez Azure ATP à Active Directory
     > [!NOTE]
     >
     > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
-    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA** , vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
 
 ### <a name="how-to-set-up-a-gmsa-account"></a>Comment configurer un compte gMSA
 
@@ -41,27 +44,27 @@ Dans ce guide de démarrage rapide, vous connectez Azure ATP à Active Directory
 
 ## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Fournir un nom d’utilisateur et un mot de passe pour vous connecter à votre forêt Active Directory
 
-La première fois que vous ouvrez le portail Azure ATP, l’écran suivant s’affiche :
+La première fois que vous ouvrez le portail [!INCLUDE [Product short](includes/product-short.md)], l’écran suivant s’affiche :
 
-![Étape 1 de bienvenue Azure ATP](media/directory-services.png)
+![Étape 1 de bienvenue [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
 
-1. Entrez les informations suivantes, puis cliquez sur **Enregistrer** :
+1. Entrez les informations suivantes, puis cliquez sur **Enregistrer**  :
 
     |Champ|Commentaires|
     |---|---|
-    |**Nom d’utilisateur** (obligatoire)|Saisissez le nom d'utilisateur AD en lecture seule. Par exemple : **ATPuser**. Vous devez utiliser un compte d’utilisateur ou gMSA AD **standard**. N’utilisez **pas** le format UPN pour votre nom d’utilisateur.|
+    |**Nom d’utilisateur** (obligatoire)|Saisissez le nom d'utilisateur AD en lecture seule. Par exemple : **DefenderForIdentityUser**. Vous devez utiliser un compte d’utilisateur ou gMSA AD **standard**. N’utilisez **pas** le format UPN pour votre nom d’utilisateur.|
     |**Mot de passe** (requis pour le compte d’utilisateur AD standard)|Pour le compte d'utilisateur AD, saisissez le mot de passe de l’utilisateur en lecture seule. Par exemple : **Pencil1**.|
     |**Compte de service administré du groupe** (requis pour le compte gMSA)|Pour le compte gMSA, sélectionnez **Compte de service administré du groupe**.|
     |**Domaine** (obligatoire)|Entrez le domaine de l’utilisateur en lecture seule. Par exemple : **contoso.com**. Il est important d’entrer le nom de domaine complet où se trouve l’utilisateur. Par exemple, si le compte de l’utilisateur se trouve dans le domaine corp.contoso.com, vous devez entrer `corp.contoso.com`, et non contoso.com.|
 
-1. Dans le portail Azure ATP, cliquez sur **Télécharger le programme d’installation du capteur et installer le premier capteur** pour continuer.
+1. Dans le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Télécharger le programme d’installation du capteur et installer le premier capteur** pour continuer.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="step-by-step"]
-> [« Étape 1 : Créer l’instance Azure ATP](install-step1.md)
-> [Étape 3 : Télécharger le programme d’installation du capteur »](install-step3.md)
+> [« Étape 1 : Créer l’instance [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+> [Étape 3 : Télécharger le programme d’installation du capteur »](install-step3.md)
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://aka.ms/azureatpcommunity) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) !

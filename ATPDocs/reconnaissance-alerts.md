@@ -1,29 +1,28 @@
 ---
-title: Alertes de sécurité de la phase de reconnaissance Azure ATP
-description: Cet article décrit les alertes Azure ATP émises quand des attaques faisant généralement partie des efforts de la phase de reconnaissance sont détectées contre votre organisation.
+title: Alertes de sécurité de la phase de reconnaissance Microsoft Defender pour Identity
+description: Cet article décrit les alertes Microsoft Defender pour Identity émises quand des attaques faisant généralement partie des efforts de la phase de reconnaissance sont détectées contre votre organisation.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/27/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6eb8484ba49d4ae56a1baafce9ea3b76d0760165
-ms.sourcegitcommit: cd13e58303372d01463ae2ccf1e093d4f6d85fb5
+ms.openlocfilehash: 1a21762351400d298154e7dbf7503fd7d820e0a2
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91754389"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275353"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. Azure ATP identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
+En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
 1. **Reconnaissance**
 1. [Informations d’identification compromises](compromised-credentials-alerts.md)
@@ -31,9 +30,9 @@ En général, les cyberattaques sont lancées contre des entités accessibles, p
 1. [Dominance du domaine](domain-dominance-alerts.md)
 1. [Exfiltration](exfiltration-alerts.md)
 
-Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité Azure ATP, consultez [Présentation des alertes de sécurité](understanding-security-alerts.md). Pour plus d’informations sur les **vrais positifs (TP)** , les **vrais positifs bénins (B-TP)** et les **faux positifs (FP)** , consultez [Classifications des alertes de sécurité](understanding-security-alerts.md#security-alert-classifications).
+Pour en savoir plus sur la structure et les composants courants de toutes les alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)], consultez [Présentation des alertes de sécurité](understanding-security-alerts.md). Pour plus d’informations sur les **vrais positifs (TP)** , les **vrais positifs bénins (B-TP)** et les **faux positifs (FP)** , consultez [Classifications des alertes de sécurité](understanding-security-alerts.md#security-alert-classifications).
 
-Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Reconnaissance** détectées par Azure ATP sur votre réseau.
+Les alertes de sécurité suivantes vous aident à identifier et à résoudre les activités suspectes de la phase **Reconnaissance** détectées par [!INCLUDE [Product short](includes/product-short.md)] sur votre réseau.
 
 Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et pallier aux types d’attaques suivants :
 
@@ -54,11 +53,11 @@ Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et p
 
 Lors d’une reconnaissance à l’aide de l’énumération de comptes, un attaquant utilise un dictionnaire contenant des milliers de noms d’utilisateurs ou des outils comme KrbGuess afin d’essayer de deviner des noms d’utilisateur dans le domaine.
 
-**Kerberos** : L’attaquant effectue des requêtes Kerberos avec ces noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient la **Pré-authentification requise** au lieu de l’erreur Kerberos **Principal de sécurité inconnu**.
+**Kerberos**  : L’attaquant effectue des requêtes Kerberos avec ces noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient la **Pré-authentification requise** au lieu de l’erreur Kerberos **Principal de sécurité inconnu**.
 
-**NTLM** : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
+**NTLM**  : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
 
-Dans le cadre de cette détection d’alerte, Azure ATP détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, Azure ATP détecte cela comme une activité suspecte.
+Dans le cadre de cette détection d’alerte, [!INCLUDE [Product short](includes/product-short.md)] détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, [!INCLUDE [Product short](includes/product-short.md)] détecte cela comme une activité suspecte.
 
 **Période d’apprentissage**
 
@@ -68,7 +67,7 @@ Non applicable
 
 Certains serveurs et applications interrogent les contrôleurs de domaine pour déterminer si des comptes existent dans des scénarios d’utilisation légitime.
 
-Pour déterminer si cette requête était un **FP**, **BTP** ou **FP**, cliquez sur l’alerte pour accéder à sa page de détails :
+Pour déterminer si cette requête était un **FP** , **BTP** ou **FP** , cliquez sur l’alerte pour accéder à sa page de détails :
 
 1. Vérifiez si l’ordinateur source était censé effectuer ce type de requête. Dans ce cas, un **B-TP** pourrait être dû à des systèmes de ressources humaines ou à des serveurs Microsoft Exchange.
 
@@ -109,7 +108,7 @@ Les attaquants utilisent généralement un dictionnaire de noms de comptes aléa
     > [!NOTE]
     > Examinez les preuves pour déterminer le protocole d’authentification utilisé. Si l’authentification NTLM a été utilisée, activez l’audit NTLM de l’événement Windows 8004 sur le contrôleur de domaine pour déterminer le serveur de ressources auquel les utilisateurs ont tenté d’accéder.  
     > L’événement Windows 8004 est l’événement d’authentification NTLM qui inclut des informations sur l’ordinateur source, le compte d’utilisateur et le serveur auquel le compte d'utilisateur a essayé d’accéder.  
-    > Azure ATP capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur. À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source des informations est parfois remplacé par l’appareil ou le logiciel et affiche uniquement Poste de travail ou MSTSC comme source d’informations. En outre, l’ordinateur source n’est peut-être pas réellement présent sur votre réseau. Cela est possible, car les malfaiteurs ciblent communément les serveurs ouverts accessibles sur Internet à partir de l’extérieur du réseau, puis l’utilisent pour énumérer vos utilisateurs. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine pour obtenir le nom du serveur de ressources. Vous devez également examiner ce serveur, vérifier s’il est ouvert sur Internet et, si possible, le fermer.
+    > [!INCLUDE [Product short](includes/product-short.md)] capture les données de l’ordinateur source suivant l’événement Windows 4776, qui contient le nom de l’ordinateur source défini par l’ordinateur. À l’aide de l’événement Windows 4776 pour capturer ces informations, le champ source des informations est parfois remplacé par l’appareil ou le logiciel et affiche uniquement Poste de travail ou MSTSC comme source d’informations. En outre, l’ordinateur source n’est peut-être pas réellement présent sur votre réseau. Cela est possible, car les malfaiteurs ciblent communément les serveurs ouverts accessibles sur Internet à partir de l’extérieur du réseau, puis l’utilisent pour énumérer vos utilisateurs. Si vous avez fréquemment des appareils qui s’affichent comme Poste de travail ou MSTSC, veillez à activer l’audit NTLM sur les contrôleurs de domaine pour obtenir le nom du serveur de ressources. Vous devez également examiner ce serveur, vérifier s’il est ouvert sur Internet et, si possible, le fermer.
 
 1. Une fois que vous savez quel serveur a envoyé la validation de l’authentification, examinez-le en vérifiant ses événements, par exemple l’événement Windows 4624, pour mieux comprendre le processus d’authentification.
 
@@ -137,15 +136,15 @@ Non applicable
 
 1. Cliquez sur l’alerte pour afficher les requêtes qui ont été exécutées.
     - Vérifiez que l’ordinateur source est bien censé exécuter ces requêtes.
-        - Si oui, fermez l’alerte de sécurité en la signalant comme un faux positif (**FP**). S’il s’agit d’une activité en cours, excluez l’activité suspecte.
+        - Si oui, fermez l’alerte de sécurité en la signalant comme un faux positif ( **FP** ). S’il s’agit d’une activité en cours, excluez l’activité suspecte.
 1. Cliquez sur l’ordinateur source pour accéder à sa page de profil.
     - Recherchez toutes les activités inhabituelles qui se sont produites pendant l’exécution des requêtes, comme les recherches concernant les utilisateurs connectés, les ressources accessibles et autres requêtes de sondage.
-    - Si l’intégration Microsoft Defender ATP est activée, cliquez sur l’icône correspondante pour explorer la machine plus en détail.
+    - Si l’intégration Microsoft Defender pour point de terminaison est activée, cliquez sur l’icône correspondante pour explorer la machine plus en détail.
         - Recherchez les processus inhabituels et les alertes qui ont eu lieu lors de l’exécution des requêtes.
 1. Vérifiez les comptes exposés.
     - Recherchez les activités inhabituelles.
 
-Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette alerte comme un vrai positif (**TP**) et suivez les instructions fournies dans **Comprendre l’étendue de la violation**.
+Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette alerte comme un vrai positif ( **TP** ) et suivez les instructions fournies dans **Comprendre l’étendue de la violation**.
 
 **Comprendre l’étendue de la violation**
 
@@ -170,7 +169,7 @@ Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette ale
 
 Votre serveur DNS contient une carte de l’ensemble des ordinateurs, adresses IP et services de votre réseau. Ces informations sont utilisées par les attaquants pour mapper la structure de votre réseau et cibler les ordinateurs intéressants pour les étapes suivantes de l’attaque.
 
-Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité Azure ATP détecte les requêtes suspectes, soit les requêtes utilisant un AXFR (transfert) provenant de serveurs non DNS, soit les requêtes utilisant un nombre excessif de requêtes.
+Il existe plusieurs types de requêtes dans le protocole DNS. Cette alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)] détecte les requêtes suspectes, soit les requêtes utilisant un AXFR (transfert) provenant de serveurs non DNS, soit les requêtes utilisant un nombre excessif de requêtes.
 
 **Période d’apprentissage**
 
@@ -181,7 +180,7 @@ Cette alerte a une période d’apprentissage de 8 jours à partir du début de 
 1. Vérifiez si l’ordinateur source est un serveur DNS.
 
     - Si l’ordinateur source **est** un serveur DNS, fermez l’alerte de sécurité comme s’agissant d’un **FP**.
-    - Pour empêcher tout **FP** ultérieur, vérifiez que le port UDP 53 est **ouvert** entre le capteur Azure ATP et l’ordinateur source.
+    - Pour empêcher tout **FP** ultérieur, vérifiez que le port UDP 53 est **ouvert** entre le capteur [!INCLUDE [Product short](includes/product-short.md)] et l’ordinateur source.
 
 Les scanners de sécurité et les applications légitimes peuvent générer des requêtes DNS.
 
@@ -213,7 +212,7 @@ Il est important de prévenir toute attaque ultérieure à l’aide de requêtes
 
 La reconnaissance de principal de sécurité est utilisée par les attaquants pour obtenir des informations critiques sur l’environnement de domaine. Informations qui aident les attaquants à mapper la structure de domaine et à identifier des comptes privilégiés pour une utilisation dans les étapes ultérieures de leur chaîne d’attaque. Le protocole LDAP est l’une des méthodes les plus populaires utilisées à des fins légitimes et malveillantes pour interroger Active Directory. La reconnaissance de principal de sécurité basée sur LDAP est couramment utilisée en tant que première phase d’une attaque Kerberoasting. Les attaques Kerberoasting sont utilisées pour obtenir la liste cible des noms de principal de sécurité (SPN), pour lesquels les attaquants tentent ensuite d’obtenir des tickets TGS (Ticket Granting Server).
 
-Afin de permettre à Azure ATP de dresser avec précision le profil et d’apprendre les utilisateurs légitimes, aucune alerte de ce type n’est déclenchée dans les 10 premiers jours suivant le déploiement d’Azure ATP. Une fois que la phase d’apprentissage initiale d’Azure ATP est terminée, les alertes sont générées sur les ordinateurs qui effectuent des requêtes d’énumération LDAP suspectes ou des requêtes ciblant des groupes sensibles à l’aide de méthodes jamais observées auparavant.
+Afin de permettre à [!INCLUDE [Product short](includes/product-short.md)] de dresser avec précision le profil et d’apprendre les utilisateurs légitimes, aucune alerte de ce type n’est déclenchée dans les 10 premiers jours suivant le déploiement de [!INCLUDE [Product short](includes/product-short.md)]. Une fois que la phase d’apprentissage initiale de [!INCLUDE [Product short](includes/product-short.md)] est terminée, les alertes sont générées sur les ordinateurs qui effectuent des requêtes d’énumération LDAP suspectes ou des requêtes ciblant des groupes sensibles à l’aide de méthodes jamais observées auparavant.
 
 **Période d’apprentissage**
 
@@ -246,7 +245,7 @@ Afin de permettre à Azure ATP de dresser avec précision le profil et d’appre
 1. [Remplacer le compte d’utilisateur par un compte de service administré de groupe (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Les alertes de reconnaissance du principal de sécurité (LDAP) sont prises en charge uniquement par les capteurs ATP.
+> Les alertes de reconnaissance du principal de sécurité (LDAP) sont prises en charge uniquement par les capteurs [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="user-and-group-membership-reconnaissance-samr-external-id-2021"></a>Reconnaissance des utilisateurs et des membres d’un groupe (SAMR) (ID externe 2021)
 
@@ -255,7 +254,7 @@ Afin de permettre à Azure ATP de dresser avec précision le profil et d’appre
 **Description**
 
 La reconnaissance des utilisateurs et des membres d’un groupe permet aux attaquants de mapper la structure d’annuaire et de cibler des comptes privilégiés pour les étapes suivantes de leur attaque. Le protocole SAM-R (Security Account Manager Remote) est l’une des méthodes utilisées pour interroger l’annuaire et effectuer ce type de mappage.
-Dans le cadre de cette détection, aucune alerte n’est déclenchée durant le premier mois après le déploiement d’Azure ATP (période d’apprentissage). Pendant cette période d’apprentissage, Azure ATP effectue un profilage des requêtes SAM-R effectuées à partir des ordinateurs, qu’il s’agisse de requêtes d’énumération ou de requêtes individuelles sur des comptes sensibles.
+Dans le cadre de cette détection, aucune alerte n’est déclenchée durant le premier mois après le déploiement de [!INCLUDE [Product short](includes/product-short.md)] (période d’apprentissage). Pendant cette période d’apprentissage, [!INCLUDE [Product short](includes/product-short.md)] effectue un profilage des requêtes SAM-R effectuées à partir des ordinateurs, qu’il s’agisse de requêtes d’énumération ou de requêtes individuelles sur des comptes sensibles.
 
 **Période d’apprentissage**
 
@@ -317,7 +316,7 @@ Les applications et les scanners de sécurité sont susceptibles d’interroger 
 Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) pour renforcer la protection de votre environnement contre cette attaque.
 
 > [!NOTE]
-> Pour désactiver une alerte de sécurité Azure ATP, contactez le support technique.
+> Pour désactiver une alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)], contactez le support technique.
 
 > [!div class="nextstepaction"]
 > [Tutoriel sur les alertes indiquant des informations d’identification compromises](compromised-credentials-alerts.md)
@@ -331,6 +330,6 @@ Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-B
 - [Alertes de mouvement latéral](lateral-movement-alerts.md)
 - [Alertes de dominance du domaine](domain-dominance-alerts.md)
 - [Alertes d’exfiltration](exfiltration-alerts.md)
-- [Informations de référence sur le journal SIEM Azure ATP](cef-format-sa.md)
+- [Informations de référence sur les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md)
 - [Utilisation des chemins de mouvement latéral](use-case-lateral-movement-path.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

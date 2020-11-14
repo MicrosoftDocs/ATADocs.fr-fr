@@ -1,37 +1,37 @@
 ---
-title: Tutoriel sur l’investigation des ordinateurs Azure ATP
-description: Cet article explique comment utiliser les alertes de sécurité Azure ATP pour examiner un ordinateur suspect.
+title: Tutoriel sur l’investigation des ordinateurs Microsoft Defender pour Identity
+description: Cet article explique comment utiliser les alertes de sécurité Microsoft Defender pour Identity afin d’investiguer un ordinateur suspect.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 09/15/2019
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9bd8439c45c83438a601a03bb4d4d15d22fa4a7b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 070c578f03887f6afdc10117d6886b4f269c830d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912904"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276039"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutoriel : Procéder à une investigation sur un ordinateur
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
-Les preuves d’alertes Azure ATP fournissent des indications claires quand des ordinateurs ont été impliqués dans des activités suspectes ou quand il existe des indications suggérant qu’un ordinateur est compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.  
+Les preuves d’alertes [!INCLUDE [Product long](includes/product-long.md)] fournissent des indications claires quand des ordinateurs ont été impliqués dans des activités suspectes ou quand il existe des indications suggérant qu’un ordinateur est compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.  
 
 > [!div class="checklist"]
-> * Vérifiez l’ordinateur pour l’utilisateur connecté.
-> * Vérifiez si l’utilisateur accède à normalement aux ordinateurs.
-> * Examinez les activités suspectes provenant de l’ordinateur.
-> * Y a-t-il eu d’autres alertes au même moment ?
-
+>
+> - Vérifiez l’ordinateur pour l’utilisateur connecté.
+> - Vérifiez si l’utilisateur accède à normalement aux ordinateurs.
+> - Examinez les activités suspectes provenant de l’ordinateur.
+> - Y a-t-il eu d’autres alertes au même moment ?
 
 ## <a name="investigation-steps-for-suspicious-computers"></a>Étapes d’investigation pour les ordinateurs suspects
 
@@ -40,20 +40,19 @@ Pour accéder à la page de profil d’ordinateur, cliquez sur l’ordinateur me
 Examinez les informations et les activités suivantes dans le profil d’ordinateur :
 
 - Que s’est-il passé au moment de l’activité suspecte ?  
-  1. Qui était l’[utilisateur](investigate-a-user.md) connecté à l’ordinateur ?
-  2. Cet utilisateur a-t-il l’habitude de se connecter ou d’accéder à l’ordinateur source ou de destination ?
-  3. Quelles sont les ressources qui ont été sollicitées ? Par quels utilisateurs ?
+    1. Qui était l’[utilisateur](investigate-a-user.md) connecté à l’ordinateur ?
+    1. Cet utilisateur a-t-il l’habitude de se connecter ou d’accéder à l’ordinateur source ou de destination ?
+    1. Quelles sont les ressources qui ont été sollicitées ? Par quels utilisateurs ?
       - S’agissait-il de ressources très importantes ?
-  4. L’utilisateur était-il supposé accéder à ces ressources ?
-  5. L’[utilisateur](investigate-a-user.md) qui a accédé à l’ordinateur a-t-il effectué d’autres activités suspectes ?
+    1. L’utilisateur était-il supposé accéder à ces ressources ?
+    1. L’[utilisateur](investigate-a-user.md) qui a accédé à l’ordinateur a-t-il effectué d’autres activités suspectes ?
 
 - Activités suspectes supplémentaires à examiner :
-    1. D’autres alertes ont-elles été ouvertes au même moment que celle-ci dans Azure ATP, ou dans d’autres outils de sécurité tels que Microsoft Defender ATP, Azure Security Center et/ou Microsoft CAS ?
-    2. Y a-t-il eu des échecs d’ouverture de session ?
+    1. D’autres alertes ont-elles été ouvertes au même moment que celle-ci dans [!INCLUDE [Product short](includes/product-short.md)], ou dans d’autres outils de sécurité tels que Microsoft Defender pour point de terminaison, Azure Security Center et/ou Microsoft CAS ?
+    1. Y a-t-il eu des échecs d’ouverture de session ?
 
-
-- Si l’intégration Microsoft Defender ATP est activée, cliquez sur le badge Microsoft Defender ATP pour explorer l’ordinateur plus en détail. Dans Microsoft Defender ATP, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
-    1. De nouveaux programmes ont-ils été déployés ou installés ?
+- Si l’intégration Microsoft Defender pour point de terminaison est activée, cliquez sur le badge Microsoft Defender pour point de terminaison afin d’investiguer l’ordinateur plus en détail. Dans Microsoft Defender pour point de terminaison, vous pouvez voir quels processus et quelles alertes se sont produits au moment de l’alerte.
+    - De nouveaux programmes ont-ils été déployés ou installés ?
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -65,4 +64,4 @@ Examinez les informations et les activités suivantes dans le profil d’ordinat
 - [Alertes de mouvement latéral](lateral-movement-alerts.md)
 - [Alertes de dominance du domaine](domain-dominance-alerts.md)
 - [Alertes d’exfiltration](exfiltration-alerts.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

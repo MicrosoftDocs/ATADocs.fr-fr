@@ -1,56 +1,56 @@
 ---
-title: Tutoriel sur l’investigation des utilisateurs Azure ATP
-description: Cet article explique comment utiliser les alertes de sécurité Azure ATP pour examiner un utilisateur suspect.
+title: Tutoriel sur l’investigation des utilisateurs Microsoft Defender pour Identity
+description: Cet article explique comment utiliser les alertes de sécurité Microsoft Defender pour Identity afin d’examiner un utilisateur suspect.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 09/15/2019
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35da46d7094de5f99b487a8f8c0b6dd2afd23350
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6cd2dc6ae6a97ddd8cdcc45a273755f64fceff03
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912886"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275201"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutoriel : Procéder à une investigation sur un utilisateur
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
-Les preuves d’alertes et les chemins de mouvement latéral ATP Azure fournissent des indications claires quand des utilisateurs ont effectué des activités suspectes ou quand il existe des indications suggérant que leur compte a été compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.  
+Les preuves d’alertes et les chemins de mouvement latéral [!INCLUDE [Product long](includes/product-long.md)] fournissent des indications claires quand des utilisateurs ont effectué des activités suspectes ou quand il existe des indications suggérant que leur compte a été compromis. Dans ce tutoriel, vous allez utiliser les suggestions d’investigation afin de déterminer les risques pour votre organisation, choisir le mode de remédiation et déterminer la meilleure façon de prévenir les futures attaques similaires.
 
 > [!div class="checklist"]
-> * Rassemblez des informations sur l’utilisateur.
-> * Examinez les activités effectuées par l’utilisateur.
-> * Examinez les ressources auxquelles l’utilisateur a accédé.
-> * Examinez les chemins de mouvement latéral.
+>
+> - Rassemblez des informations sur l’utilisateur.
+> - Examinez les activités effectuées par l’utilisateur.
+> - Examinez les ressources auxquelles l’utilisateur a accédé.
+> - Examinez les chemins de mouvement latéral.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Étapes d’investigation recommandées pour les utilisateurs suspects
 
 Examinez les informations et les activités suivantes dans le profil utilisateur :
 
 1. Qui est l’[utilisateur](entity-profiles.md) ?
-     1. L’utilisateur est-il un [utilisateur sensible](sensitive-accounts.md) (par exemple, est-il administrateur ou figure-t-il sur une liste à surveiller) ?  
-     2. Quel est son rôle au sein de l’organisation ?
-     3. A-t-il une fonction importante dans l’organigramme de l’organisation ?
+    1. L’utilisateur est-il un [utilisateur sensible](sensitive-accounts.md) (par exemple, est-il administrateur ou figure-t-il sur une liste à surveiller) ?
+    1. Quel est son rôle au sein de l’organisation ?
+    1. A-t-il une fonction importante dans l’organigramme de l’organisation ?
 
 1. Activités suspectes à [examiner](investigate-entity.md) :
-     1. L’utilisateur a-t-il d’autres alertes ouvertes dans Azure ATP, ou dans d’autres outils de sécurité tels que Windows Defender-ATP, Azure Security Center et/ou Microsoft CAS ?
-     2. L’utilisateur a-t-il connu des échecs d’ouverture de session ?
-     3. À quelles ressources l’utilisateur a-t-il accédé ?  
-     4. L’utilisateur a-t-il accédé à des ressources très importantes ?  
-     5. L’utilisateur était-il censé accéder aux ressources auxquelles il a accédé ?  
-     6. Sur quels ordinateurs l’utilisateur s’est-il connecté ? 
-     7. L’utilisateur était-il censé se connecter à ces ordinateurs ?
-     8. Existe-t-il un [chemin de mouvement latéral](use-case-lateral-movement-path.md) entre l’utilisateur et un utilisateur sensible ?
-
+    1. L’utilisateur a-t-il d’autres alertes ouvertes dans [!INCLUDE [Product short](includes/product-short.md)], ou dans d’autres outils de sécurité tels que Microsoft Defender pour point de terminaison, Azure Security Center et/ou Microsoft CAS ?
+    1. L’utilisateur a-t-il connu des échecs d’ouverture de session ?
+    1. À quelles ressources l’utilisateur a-t-il accédé ?
+    1. L’utilisateur a-t-il accédé à des ressources très importantes ?
+    1. L’utilisateur était-il censé accéder aux ressources auxquelles il a accédé ?
+    1. Sur quels ordinateurs l’utilisateur s’est-il connecté ?
+    1. L’utilisateur était-il censé se connecter à ces ordinateurs ?
+    1. Existe-t-il un [chemin de mouvement latéral](use-case-lateral-movement-path.md) entre l’utilisateur et un utilisateur sensible ?
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -62,4 +62,4 @@ Examinez les informations et les activités suivantes dans le profil utilisateur
 - [Alertes de mouvement latéral](lateral-movement-alerts.md)
 - [Alertes de dominance du domaine](domain-dominance-alerts.md)
 - [Alertes d’exfiltration](exfiltration-alerts.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

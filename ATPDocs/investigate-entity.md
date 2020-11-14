@@ -1,45 +1,45 @@
 ---
-title: Guide pratique pour investiguer des utilisateurs et des ordinateurs avec Azure ATP
-description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Azure Advanced Threat Protection (ATP, Advanced Threat Protection)
+title: Guide pratique pour investiguer des utilisateurs et des ordinateurs avec Microsoft Defender pour Identity
+description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Microsoft Defender pour Identity
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/15/2019
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9557157c57638627df6ebaf6c84725d51b1456f1
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c333647c7a1d48edd379a02ea154c0dbf2c810c0
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912100"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276060"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutoriel : Examiner une entité
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Les fonctionnalités Azure ATP expliquées dans cette page sont également accessibles dans le nouveau [portail](https://portal.cloudappsecurity.com).
+> Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
-Dans ce tutoriel, vous allez apprendre à investiguer les entités connectées à des activités suspectes détectées par Azure Advanced Threat Protection (ATP). Après avoir consulté une alerte de sécurité dans la chronologie, vous découvrirez comment explorer l’entité impliquée dans l’alerte, puis comment utiliser les paramètres et détails suivants pour en savoir plus sur ce qui est arrivé et sur ce que vous devez faire pour réduire les risques.
+Dans ce tutoriel, vous allez apprendre à investiguer les entités connectées à des activités suspectes détectées par [!INCLUDE [Product long](includes/product-long.md)]. Après avoir consulté une alerte de sécurité dans la chronologie, vous découvrirez comment explorer l’entité impliquée dans l’alerte, puis comment utiliser les paramètres et détails suivants pour en savoir plus sur ce qui est arrivé et sur ce que vous devez faire pour réduire les risques.
 
 > [!div class="checklist"]
-> * Vérifier le profil de l’entité
-> * Vérifier les étiquettes des entités
-> * Vérifier les indicateurs de contrôle de compte d’utilisateur
-> * Croiser les informations avec Windows Defender
-> * Surveiller les utilisateurs et les groupes sensibles
-> * Passer en revue les chemins de mouvement latéral potentiels
-> * Vérifier l’état de honeytoken
+>
+> - Vérifier le profil de l’entité
+> - Vérifier les étiquettes des entités
+> - Vérifier les indicateurs de contrôle de compte d’utilisateur
+> - Croiser les informations avec Windows Defender
+> - Surveiller les utilisateurs et les groupes sensibles
+> - Passer en revue les chemins de mouvement latéral potentiels
+> - Vérifier l’état de honeytoken
 
 ## <a name="check-the-entity-profile"></a>Vérifier le profil de l’entité
 
-Le profil d’entité fournit une page complète sur l’entité, qui permet une enquête approfondie sur les utilisateurs, les ordinateurs, les périphériques et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique Azure ATP qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
+Le profil d’entité fournit une page complète sur l’entité, qui permet une enquête approfondie sur les utilisateurs, les ordinateurs, les périphériques et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique [!INCLUDE [Product short](includes/product-short.md)] qui peut examiner un groupe d’activités en cours (agrégées jusqu’à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 
 Pour accéder à une page de profil d’entité, cliquez sur le nom de l’entité, par exemple sur son nom d’utilisateur, dans la chronologie des alertes de sécurité. Vous pouvez également voir une version abrégée du profil de l’entité dans la page de l’alerte de sécurité, en pointant sur le nom de l’entité.
 
@@ -47,7 +47,9 @@ Le profil de l’entité vous permet de voir les activités de l’entité, les 
 
 ## <a name="check-entity-tags"></a>Vérifier les étiquettes des entités
 
-Azure ATP extrait des étiquettes d’Active Directory pour vous offrir une même interface permettant de surveiller vos utilisateurs et vos entités Active Directory. Ces étiquettes vous donnent des informations relatives à l’entité d’Active Directory, notamment :
+[!INCLUDE [Product short](includes/product-short.md)] extrait des étiquettes d’Active Directory pour vous offrir une même interface permettant de superviser vos utilisateurs et vos entités Active Directory.
+Ces étiquettes vous donnent des informations relatives à l’entité d’Active Directory, notamment :
+
 - Partiel : cet utilisateur, cet ordinateur ou ce groupe n’a été pas été synchronisé à partir du domaine, et a été partiellement résolu par le biais d’un catalogue global. Certains attributs ne sont pas disponibles.
 - Non résolu : cet ordinateur n’a pas été résolu en une entité valide dans la forêt Active Directory. Aucune information d’annuaire n’est disponible.
 - Supprimé : l’entité a été supprimée d’Active Directory.
@@ -58,7 +60,8 @@ Azure ATP extrait des étiquettes d’Active Directory pour vous offrir une mêm
 
 ## <a name="check-user-account-control-flags"></a>Vérifier les indicateurs de contrôle de compte d’utilisateur
 
-Les indicateurs de contrôle de compte d’utilisateur sont également importés depuis Active Directory. Les données du répertoire d’entités Azure ATP incluent 10 indicateurs qui permettent une investigation : 
+Les indicateurs de contrôle de compte d’utilisateur sont également importés depuis Active Directory. Les données du répertoire d’entités [!INCLUDE [Product short](includes/product-short.md)] incluent 10 indicateurs qui permettent une investigation :
+
 - Le mot de passe n’expire jamais
 - Approuvé pour délégation
 - Carte à puce nécessaire
@@ -68,9 +71,9 @@ Les indicateurs de contrôle de compte d’utilisateur sont également importés
 - Ne peut pas être délégué
 - Chiffrement DES uniquement
 - Authentification préalable Kerberos non requise
-- Compte désactivé 
+- Compte désactivé
 
-Azure ATP vous permet de savoir si ces indicateurs sont activés ou désactivés dans Azure Active Directory. Les icônes de couleur et le bouton bascule correspondant indiquent l’état de chaque indicateur. Dans l’exemple ci-dessous, seule l’option **Le mot de passe n'expire jamais** est activée dans Active Directory.
+[!INCLUDE [Product short](includes/product-short.md)] vous permet de savoir si ces indicateurs sont activés ou désactivés dans Azure Active Directory. Les icônes de couleur et le bouton bascule correspondant indiquent l’état de chaque indicateur. Dans l’exemple ci-dessous, seule l’option **Le mot de passe n'expire jamais** est activée dans Active Directory.
 
  ![indicateurs de contrôle de compte d’utilisateur](media/user-access-flags.png)
 
@@ -78,10 +81,9 @@ Azure ATP vous permet de savoir si ces indicateurs sont activés ou désactivés
 
 Pour vous fournir des insights résultant du croisement entre les produits, votre profil d’entité vous indique avec un badge les entités pour lesquelles des alertes sont actives dans Windows Defender. Ce badge vous permet de savoir combien d’alertes sont ouvertes pour l’entité dans Windows Defender et quel est leur niveau de gravité. Cliquez sur le badge pour accéder directement aux alertes associées à cette entité dans Windows Defender.
 
-
 ## <a name="keep-an-eye-on-sensitive-users-and-groups"></a>Surveiller les utilisateurs et les groupes sensibles
 
-Azure ATP importe des informations sur les utilisateurs et les groupes depuis Azure Active Directory, qui vous permettent d’identifier les utilisateurs automatiquement considérés comme sensibles, car membres des groupes suivants dans Active Directory :
+[!INCLUDE [Product short](includes/product-short.md)] importe des informations sur les utilisateurs et les groupes depuis Azure Active Directory, qui vous permettent d’identifier les utilisateurs automatiquement considérés comme sensibles, car membres des groupes suivants dans Active Directory :
 
 - Administrateurs
 - Utilisateurs avec pouvoir
@@ -90,32 +92,32 @@ Azure ATP importe des informations sur les utilisateurs et les groupes depuis Az
 - Opérateurs d'impression
 - Opérateurs de sauvegarde
 - Duplicateurs
-- Utilisateurs du Bureau à distance 
-- Opérateurs de configuration réseau 
+- Utilisateurs du Bureau à distance
+- Opérateurs de configuration réseau
 - Générateurs d’approbation de forêt entrante
 - Administrateurs du domaine
 - Contrôleurs de domaine
-- Propriétaires créateurs de la stratégie de groupe 
-- Contrôleurs de domaine en lecture seule 
-- Contrôleurs de domaine d’entreprise en lecture seule 
-- Administrateurs du schéma 
+- Propriétaires créateurs de la stratégie de groupe
+- Contrôleurs de domaine en lecture seule
+- Contrôleurs de domaine d’entreprise en lecture seule
+- Administrateurs du schéma
 - Administrateurs de l’entreprise
 
-En outre, vous pouvez **étiqueter manuellement**  des entités comme sensibles dans Azure ATP. Ceci est important, car certaines détections d’Azure ATP, comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, reposent sur l’état indiquant le caractère sensible d’une entité. Si vous étiquetez manuellement d’autres utilisateurs ou groupes comme sensibles, par exemple les membres du conseil d’administration, les cadres de la société et le directeur des ventes, Azure ATP les considère comme étant sensibles. Pour plus d’informations, consultez [Utilisation de comptes sensibles](sensitive-accounts.md).
+De plus, vous pouvez **étiqueter manuellement**  des entités comme sensibles dans [!INCLUDE [Product short](includes/product-short.md)]. C’est important, car certaines détections de [!INCLUDE [Product short](includes/product-short.md)], comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, reposent sur l’état indiquant le caractère sensible d’une entité. Si vous étiquetez manuellement d’autres utilisateurs ou groupes comme sensibles, par exemple les membres du conseil d’administration, les cadres de la société et le directeur des ventes, [!INCLUDE [Product short](includes/product-short.md)] les considère comme étant sensibles. Pour plus d’informations, consultez [Utilisation de comptes sensibles](sensitive-accounts.md).
 
 ## <a name="review-lateral-movement-paths"></a>Passer en revue les chemins de mouvement latéral
 
-Azure ATP peut vous aider à empêcher les attaques qui utilisent des chemins de mouvement latéral. Il est question de mouvement latéral quand un attaquant utilise de façon proactive des comptes non sensibles pour accéder à des comptes sensibles.
+[!INCLUDE [Product short](includes/product-short.md)] peut vous aider à empêcher les attaques qui utilisent des chemins de mouvement latéral. Il est question de mouvement latéral quand un attaquant utilise de façon proactive des comptes non sensibles pour accéder à des comptes sensibles.
 
-Si un chemin de mouvement latéral existe pour une entité, dans la page de profil de l’entité, vous pouvez cliquer sur l’onglet **Chemins d’accès de mouvement latéral**. Le diagramme qui s’affiche vous fournit un mappage des chemins possibles pour votre utilisateur sensible. 
+Si un chemin de mouvement latéral existe pour une entité, dans la page de profil de l’entité, vous pouvez cliquer sur l’onglet **Chemins d’accès de mouvement latéral**. Le diagramme qui s’affiche vous fournit un mappage des chemins possibles pour votre utilisateur sensible.
 
-Pour plus d’informations, consultez [Examen des chemins de mouvement latéral avec Azure ATP](use-case-lateral-movement-path.md).
+Pour plus d’informations, consultez [Examen des chemins de mouvement latéral avec [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md).
 
 ## <a name="check-honeytoken-status"></a>Vérifier l’état de honeytoken
 
-Avant de procéder à votre investigation, il est important de savoir si l’entité est un honeytoken. Vous pouvez marquer les comptes et les entités comme des honeytokens dans Azure ATP. Lorsque vous ouvrez le profil d’entité ou le mini-profil d’un compte ou d’une entité marquée comme un honeytoken, le badge honeytoken apparaît. Lors de l’investigation, le badge honeytoken vous avertit que l’activité en cours de validation a été effectuée par un compte que vous avez marqué comme un honeytoken.
+Avant de procéder à votre investigation, il est important de savoir si l’entité est un honeytoken. Vous pouvez marquer les comptes et les entités comme des honeytokens dans [!INCLUDE [Product short](includes/product-short.md)]. Lorsque vous ouvrez le profil d’entité ou le mini-profil d’un compte ou d’une entité marquée comme un honeytoken, le badge honeytoken apparaît. Lors de l’investigation, le badge honeytoken vous avertit que l’activité en cours de validation a été effectuée par un compte que vous avez marqué comme un honeytoken.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
-- [Consultez le forum Azure ATP !](https://aka.ms/azureatpcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

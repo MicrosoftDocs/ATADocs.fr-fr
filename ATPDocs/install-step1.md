@@ -1,66 +1,66 @@
 ---
-title: 'Démarrage rapide : Créer votre instance Azure ATP'
-description: Guide de démarrage rapide pour créer l’instance pour votre déploiement d’Azure ATP, qui est la première étape de l’installation d’Azure ATP.
+title: 'Démarrage rapide : Créer votre instance Microsoft Defender pour Identity'
+description: Guide de démarrage rapide afin de créer l’instance pour votre déploiement de Microsoft Defender pour Identity, qui est la première étape de l’installation de Defender pour Identity.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 10/31/2019
+ms.date: 10/26/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5c07d5bb568394cdb5c989279434445f88d0f7ea
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 50307054535447326b8b48641afaeec7cfc70551
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910273"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277138"
 ---
-# <a name="quickstart-create-your-azure-atp-instance"></a>Démarrage rapide : Créer votre instance Azure ATP
+# <a name="quickstart-create-your-product-long-instance"></a>Démarrage rapide : Créer votre instance [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Dans ce guide de démarrage rapide, vous allez créer votre instance Azure ATP dans le portail Azure ATP. Dans Azure ATP, vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
+Dans ce guide de démarrage rapide, vous allez créer votre instance [!INCLUDE [Product long](includes/product-long.md)] dans le portail [!INCLUDE [Product short](includes/product-short.md)]. Dans [!INCLUDE [Product short](includes/product-short.md)], vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
 
 > [!IMPORTANT]
-> Actuellement, les centres de données Azure ATP sont déployés en Europe, au Royaume-Uni, en Amérique du Nord, en Amérique Centrale, aux Antilles et en Asie. Votre instance est créée automatiquement dans le centre de données géographiquement le plus proche de votre annuaire Azure Active Directory (Azure AD). Une fois créées, les instances Azure ATP ne peuvent pas être déplacées.
+> Les centres de données [!INCLUDE [Product short](includes/product-short.md)] sont déployés en Europe, au Royaume-Uni, en Amérique du Nord, en Amérique Centrale, aux Caraïbes et en Asie. Votre instance est créée automatiquement dans le centre de données géographiquement le plus proche de votre annuaire Azure Active Directory (Azure AD). Une fois créées, les instances [!INCLUDE [Product short](includes/product-short.md)] ne peuvent pas être déplacées.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Une [licence Azure ATP](technical-faq.md#licensing-and-privacy).
-- Pour pouvoir accéder au portail Azure ATP, vous devez être [administrateur général ou administrateur de sécurité sur le locataire](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
-- Examinez l’article [Architecture Azure ATP](architecture.md).
-- Examinez l’article [Prérequis d’Azure ATP](prerequisites.md).
+- Une [licence [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.md#licensing-and-privacy).
+- Pour pouvoir accéder au portail [!INCLUDE [Product short](includes/product-short.md)], vous devez être [administrateur général ou administrateur de sécurité sur le locataire](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+- Consultez l’article [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
+- Consultez l’article [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
-## <a name="sign-in-to-the-azure-atp-portal"></a>Se connecter au portail Azure ATP
+## <a name="sign-in-to-the-product-short-portal"></a>Se connecter au portail [!INCLUDE [Product short](includes/product-short.md)]
 
-Après avoir vérifié que votre réseau est conforme aux exigences du capteur, commencez la création de votre instance Azure ATP.
+Après avoir vérifié que votre réseau est conforme à la configuration requise du capteur, commencez la création de votre instance [!INCLUDE [Product short](includes/product-short.md)].
 
-1. Accédez au [portail Azure ATP](https://portal.atp.azure.com)*.
+1. Accédez au [portail [!INCLUDE [Product short](includes/product-short.md)]](https://portal.atp.azure.com)*.
 
 1. Connectez-vous avec votre compte d’utilisateur Azure Active Directory.
 
-\* Les clients GCC High doivent utiliser le portail [Azure ATP GCC High](http://portal.atp.azure.us).
+\* Les clients GCC High doivent utiliser le portail [[!INCLUDE [Product short](includes/product-short.md)] GCC High](http://portal.atp.azure.us).
 
 ## <a name="create-your-instance"></a>Créer votre instance
 
 1. Cliquez sur **Créer une instance**.
 
-    ![Créer une instance Azure ATP](media/create-instance.png)
+    ![Créer l’instance [!INCLUDE [Product short](includes/product-short.md)]](media/create-instance.png)
 
-1. Votre instance Azure ATP prend automatiquement le nom de domaine initial Azure AD et est créée dans le centre de données le plus proche de votre annuaire Azure AD.
+1. Votre instance [!INCLUDE [Product short](includes/product-short.md)] prend automatiquement le nom de domaine initial Azure AD et est créée dans le centre de données le plus proche de votre annuaire Azure AD.
 
     ![Instance Azure créée](media/instance-created.png)
 
     > [!NOTE]
-    > Pour vous connecter à Azure ATP, vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle Azure ATP doté de droits d’accès au portail Azure ATP. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans Azure ATP, consultez [Utilisation de groupes de rôles Azure ATP](role-groups.md).
+    > Pour vous connecter à [!INCLUDE [Product short](includes/product-short.md)], vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle [!INCLUDE [Product short](includes/product-short.md)] doté de droits d’accès au portail [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation de groupes de rôles [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-1. Cliquez sur **Configuration**, sur **Gérer les groupes de rôles**, puis utilisez le lien [Centre d’administration Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles.
+1. Sélectionnez **Configuration** , sur **Gérer les groupes de rôles** , puis utilisez le lien [Centre d’administration Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles.
 
     ![Gérer les groupes de rôles](media/creation-manage-role-groups.png)
 
-- Conservation des données : les instances Azure ATP supprimées précédemment n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données Azure ATP, consultez [Sécurité et confidentialité des données Azure ATP](privacy-compliance.md).
+- Conservation des données : les instances [!INCLUDE [Product short](includes/product-short.md)] supprimées n’apparaissent pas dans l’interface utilisateur. Pour plus d’informations sur la conservation des données [!INCLUDE [Product short](includes/product-short.md)], consultez [Sécurité et confidentialité des données [!INCLUDE [Product short](includes/product-short.md)]](privacy-compliance.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -70,4 +70,4 @@ Après avoir vérifié que votre réseau est conforme aux exigences du capteur, 
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou vous voulez discuter d’Azure ATP et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté Azure ATP](https://aka.ms/azureatpcommunity) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) !
