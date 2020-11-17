@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dfaba62df29bb97009bad2440bb420f2c1477e9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276554"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558251"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
 
@@ -31,7 +31,7 @@ Les événements Windows suivants doivent être [configurés](#configure-audit-p
 - 4729 - Membre supprimé du groupe de sécurité global
 - 4730 - Groupe de sécurité global supprimé
 - 4732 - Membre ajouté au groupe de sécurité local
-- 4733 - Membre supprimé du groupe de sécurité global
+- 4733 - Membre supprimé du groupe de sécurité local
 - 4743 - Compte d’ordinateur supprimé
 - 4753 - Groupe de distribution global supprimé
 - 4756 - Membre ajouté au groupe de sécurité universel
@@ -48,20 +48,20 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
 
 1. Connectez-vous au serveur en tant **qu’administrateur de domaine**.
 1. Chargez l’Éditeur de gestion des stratégies de groupe. Pour cela, accédez à **Gestionnaire de serveur** > **Outils** > **Gestion des stratégies de groupe**.
-1. Développez l’unité d’organisation **Contrôleurs de domaine** , cliquez avec le bouton droit sur **Stratégie Contrôleurs de domaine par défaut** , puis sélectionnez **Modifier**.
+1. Développez l’unité d’organisation **Contrôleurs de domaine**, cliquez avec le bouton droit sur **Stratégie Contrôleurs de domaine par défaut**, puis sélectionnez **Modifier**.
 
     > [!NOTE]
     > Pour définir ces stratégies, vous pouvez utiliser la stratégie des contrôleurs de domaine par défaut ou un objet de stratégie de groupe dédié.
 
     ![Modifier la stratégie de contrôleur de domaine](media/advanced-audit-policy-check-step-1.png)
 
-1. À partir de la fenêtre qui s’ouvre, accédez à **Configuration ordinateur** > **Stratégies** > **Paramètres Windows** > **Paramètres de sécurité** , puis, selon la stratégie que vous souhaitez activer, effectuez les étapes suivantes :
+1. À partir de la fenêtre qui s’ouvre, accédez à **Configuration ordinateur** > **Stratégies** > **Paramètres Windows** > **Paramètres de sécurité**, puis, selon la stratégie que vous souhaitez activer, effectuez les étapes suivantes :
 
     **Pour la configuration avancée de la stratégie d’audit**
 
     1. Accédez à **Configuration avancée de la stratégie d’audit** > **Stratégies d’audit**.
         ![Configuration de la stratégie d’audit avancée](media/advanced-audit-policy-check-step-2.png)
-    1. Sous **Stratégies d’audit** , modifiez chacune des stratégies suivantes, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements des catégories **Réussite** et **Échec**.
+    1. Sous **Stratégies d’audit**, modifiez chacune des stratégies suivantes, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements des catégories **Réussite** et **Échec**.
 
         | Stratégie d’audit | Sous-catégorie | Déclenche les ID d’événement |
         | --- |---|---|
@@ -72,7 +72,7 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
         | Gestion de compte | Auditer la gestion des comptes d’utilisateurs | 4726 |
         | Système | Auditer l’extension du système de sécurité | 7045 |
 
-        Par exemple, pour configurer **Auditer la gestion des groupes de sécurité** , sous **Gestion de compte** , double-cliquez sur **Auditer la gestion des groupes de sécurité** , puis sélectionnez **Configurer les événements d’audit suivants** pour les événements des catégories **Réussite** et **Échec**.
+        Par exemple, pour configurer **Auditer la gestion des groupes de sécurité**, sous **Gestion de compte**, double-cliquez sur **Auditer la gestion des groupes de sécurité**, puis sélectionnez **Configurer les événements d’audit suivants** pour les événements des catégories **Réussite** et **Échec**.
 
         ![Auditer la gestion des groupes de sécurité](media/advanced-audit-policy-check-step-4.png)
 
@@ -84,7 +84,7 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
     > - Lorsque l’événement Windows 8004 est analysé par le capteur [!INCLUDE [Product short](includes/product-short.md)], les activités d’authentification NTLM [!INCLUDE [Product short](includes/product-short.md)] sont enrichies avec les données auxquelles le serveur a accédé.
 
     1. Accédez à **Stratégies locales** > **Options de sécurité**.
-    1. Sous **Options de sécurité** , configurez les stratégies de sécurité spécifiées de la façon suivante :
+    1. Sous **Options de sécurité**, configurez les stratégies de sécurité spécifiées de la façon suivante :
 
         | Paramètre de stratégie de sécurité | Valeur |
         |---|---|
@@ -92,12 +92,12 @@ Suivez les instructions ci-après pour modifier les stratégies d’audit avanc�
         | Sécurité réseau : restreindre NTLM : auditer l’authentification NTLM dans ce domaine | Activer tout |
         | Sécurité réseau : Restreindre NTLM : Auditer le trafic NTLM entrant | Activer l’audit de tous les comptes |
 
-        Par exemple, pour configurer **Trafic NTLM sortant vers des serveurs distants** , sous **Options de sécurité** , double-cliquez sur **Sécurité réseau : Restreindre NTLM : Trafic NTLM sortant vers des serveurs distants** , puis sélectionnez **Auditer tout**.
+        Par exemple, pour configurer **Trafic NTLM sortant vers des serveurs distants**, sous **Options de sécurité**, double-cliquez sur **Sécurité réseau : Restreindre NTLM : Trafic NTLM sortant vers des serveurs distants**, puis sélectionnez **Auditer tout**.
 
         ![Auditer le trafic NTLM sortant vers des serveurs distants](media/advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Si vous choisissez d’utiliser une stratégie de sécurité locale au lieu d’utiliser une stratégie de groupe, veillez à ajouter les journaux d’audit **Connexion de compte** , **Gestion de compte** et **Options de sécurité** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > Si vous choisissez d’utiliser une stratégie de sécurité locale au lieu d’utiliser une stratégie de groupe, veillez à ajouter les journaux d’audit **Connexion de compte**, **Gestion de compte** et **Options de sécurité** à votre stratégie locale. Si vous configurez la stratégie d’audit avancée, vous devez forcer la [sous-catégorie de stratégie d’audit](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 1. Après application au moyen d’un objet GPO, les nouveaux événements sont visibles sous vos **journaux d’événements Windows**.
 

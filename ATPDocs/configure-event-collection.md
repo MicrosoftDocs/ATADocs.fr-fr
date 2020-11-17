@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f691df3332d90e0f163d3773dd5570e0d17b5a95
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276479"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558234"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -121,7 +121,7 @@ Code d’erreur : 0x0
 
 - L’en-tête syslog est facultatif.
 
-- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires.
+- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires. Notez qu’il s’agit des caractères de contrôle CRLF (0D0A au format hexadécimal) et non des caractères littéraux.
 - Les champs sont au format clé = valeur.
 - Les clés suivantes doivent exister et avoir une valeur :
   - EventCode = ID de l’événement Windows.
