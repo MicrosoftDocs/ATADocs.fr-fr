@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 567fb2beb08425a69964932ca6807ff03a6b6549
-ms.sourcegitcommit: 69c55503b8b3f7ca99dbea872b17d81124831fad
+ms.openlocfilehash: 23831562f266a338cdc4cba2f3448a44b441dd35
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94567921"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690616"
 ---
 # <a name="install-ata---step-6"></a>Installer ATA - Étape 6
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Étape 5](install-ata-step5.md) 
@@ -62,7 +60,7 @@ Pour plus d’informations sur la façon de configurer le transfert d’événem
 
 #### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Configuration de la passerelle ATA pour écouter les événements SIEM
 
-1. Dans la configuration ATA, sous **Sources de données** , cliquez sur **SIEM** et activez **Syslog** , puis cliquez sur **Enregistrer**.
+1. Dans la configuration ATA, sous **Sources de données**, cliquez sur **SIEM** et activez **Syslog**, puis cliquez sur **Enregistrer**.
 
     ![Image de l’activation du protocole UDP de l’écouteur syslog](media/ATA-enable-siem-forward-events.png)
 
@@ -126,7 +124,7 @@ Code d’erreur : 0x0
 
 - L’en-tête syslog est facultatif.
 
-- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires. Notez qu’il s’agit des caractères de contrôle CRLF (0D0A en hex) et non des caractères littéraux.
+- Le séparateur de caractère « \r\n » est utilisé entre tous les champs obligatoires. Notez qu’il s’agit des caractères de contrôle CRLF (0D0A au format hexadécimal) et non des caractères littéraux.
 - Les champs sont au format clé = valeur.
 - Les clés suivantes doivent exister et avoir une valeur :
   - EventCode = ID de l’événement Windows.

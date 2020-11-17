@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ab1881d397875be6a70ba78846f0855b53bf608
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: db615ec2f1aab54567d41d0a742146b27d543975
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909513"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690752"
 ---
 # <a name="investigating-entity-profiles"></a>Enquête sur les profils d’entité
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le profil d’entité vous fournit un tableau de bord conçu pour des investigations approfondies sur les utilisateurs, les ordinateurs, les appareils et les ressources auxquelles ils ont accès et leur historique. La page de profil tire parti du nouveau traducteur d’activité logique ATA qui peut examiner un groupe d’activités en cours (agrégées jusqu'à une minute) et les regrouper en une seule activité logique pour vous permettre de mieux comprendre les activités réelles de vos utilisateurs.
 
@@ -70,7 +68,7 @@ Dans la section **Contrôle d’accès d’utilisateur**, ATA expose les paramè
 
 ## <a name="view-lateral-movement-paths"></a>Visualiser les chemins de mouvement latéral
 
-En cliquant sur l’onglet **Chemins d'accès de mouvement latéral**, vous pouvez afficher une image entièrement interactive et dynamique offrant une représentation visuelle des chemins de mouvement latéral en direction et en provenance de cet utilisateur qui peuvent être utilisés pour infiltrer votre réseau.
+En cliquant sur l’onglet **chemins de mouvement latéral** , vous pouvez afficher une carte entièrement dynamique et interactive qui vous fournit une représentation visuelle des chemins de mouvement latéral vers et à partir de cet utilisateur, qui peuvent être utilisés pour infiltrer votre réseau.
 
 Cette image vous fournit le nombre de tronçons entre ordinateurs ou utilisateurs qu’un attaquant aurait en direction et en provenance de cet utilisateur pour compromettre un compte sensible. De plus, si l’utilisateur lui-même a un compte sensible, vous pouvez voir combien de ressources et de comptes sont directement connectés. Pour plus d’informations, consultez [Chemins de mouvement latéral](use-case-lateral-movement-path.md). 
 

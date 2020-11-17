@@ -11,18 +11,16 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d2db03d8b4074465795ce3ba9113aac78647ad2c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: b8112eda2361a51752112907129ae79374cfcd5c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909245"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691109"
 ---
 # <a name="ata-capacity-planning"></a>Planification de la capacité ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article vous aide à déterminer le nombre de serveurs ATA nécessaires pour surveiller votre réseau. Il vous aide à estimer le nombre de passerelles ATA et/ou de passerelles légères ATA dont vous avez besoin, ainsi que la capacité du serveur pour votre centre ATA et vos passerelles ATA.
 

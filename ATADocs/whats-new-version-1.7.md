@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 39120a8dfabe4b78d8c77b94fd1051435c7e7311
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e8750b31bb8dec807202e0053df7cabad2850967
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912833"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689477"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Nouveautés d’ATA version 1.7
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Ces notes de publication fournissent des informations sur les problèmes connus de cette version d’Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-17-update"></a>Quelles sont les nouveautés d’ATA 1.7 ?
@@ -29,7 +28,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 - Détections nouvelles et mises à jour
 
-- Contrôle d'accès en fonction d'un rôle
+- Contrôle d’accès en fonction du rôle
 
 - Prise en charge de Windows Server 2016 et Windows Server 2016 Core
 
@@ -58,7 +57,7 @@ La mise à jour vers ATA 1.7 comprend des améliorations dans les domaines suiv
 
 - **Prise en charge de Windows Server 2016 et Windows Server Core** ATA 1.7 prend en charge le déploiement de passerelles légères sur les contrôleurs de domaine exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016 (Core inclus mais pas Nano). De plus, cette version prend en charge Windows Server 2016 pour les composants Centre ATA et Passerelle ATA.
 
-### <a name="user-experience"></a>Expérience utilisateur
+### <a name="user-experience"></a>Expérience de l'utilisateur
 - **Expérience de configuration** Dans cette version, l’expérience de configuration d’ATA a été repensée pour une meilleure expérience utilisateur et pour mieux prendre en charge les environnements à plusieurs passerelles ATA. Cette version introduit également la page de mise à jour de la passerelle ATA pour une gestion plus simple et plus performante des mises à jour automatiques pour les différentes passerelles.
 
 ## <a name="known-issues"></a>Problèmes connus

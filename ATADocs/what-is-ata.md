@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1b8deb682418774e5fc0a1c2bb514b80d6e6b19f
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: ca6b929929646be25113adb5edd8a9d03008590e
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910699"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689664"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Advanced Threat Analytics (ATA) est une plateforme locale qui aide à protéger votre entreprise contre plusieurs types d’attaques informatiques ciblées et de menaces internes avancées.
 
@@ -104,7 +102,7 @@ Vous pouvez afficher les activités suspectes de ce type dans le tableau de bord
 - Si vous choisissez d’effectuer une migration complète, elle peut durer très longtemps en fonction de la taille de la base de données. Quand vous sélectionnez vos options de migration, le temps estimé s’affiche : notez-le bien avant de décider quelle option choisir. 
 
 
-## <a name="whats-next"></a>Et ensuite ?
+## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
 - Pour plus d’informations sur la façon dont ATA s’intègre à votre réseau, voir [Architecture ATA](ata-architecture.md).
 

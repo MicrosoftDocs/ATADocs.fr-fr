@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d4e5dda205aba4737e074853f22659c6e74a98d5
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3f23eb1aa2adc49b3913ab1e4218653a5b8c874d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910738"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689919"
 ---
 # <a name="troubleshooting-service-startup"></a>Résolution des problèmes de démarrage du service
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Résolution des problèmes de démarrage du service Centre ATA
 

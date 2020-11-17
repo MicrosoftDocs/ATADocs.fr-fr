@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a717c771afe39c7e187487c3fd9c41d4c1691a3a
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 578e8ecdd598b404c570d41e71d487cf798cb602
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909525"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690786"
 ---
 # <a name="ata-disaster-recovery"></a>Récupération d’urgence d’ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article décrit comment récupérer rapidement votre centre ATA et restaurer les fonctionnalités ATA quand le centre ATA a cessé de fonctionner, mais que les passerelles ATA fonctionnent encore. 
 
@@ -34,7 +32,7 @@ Cet article décrit comment récupérer rapidement votre centre ATA et restaurer
 
 1. La configuration du centre ATA est sauvegardée dans un fichier toutes les 4 heures. Recherchez la dernière copie de sauvegarde de la configuration du centre ATA et enregistrez-la sur un ordinateur distinct. Pour obtenir une explication complète de la localisation de ces fichiers, consultez [Exporter et importer la configuration ATA](ata-configuration-file.md). 
 1. Exportez le certificat du centre ATA.
-    1. Dans le gestionnaire de certificats, accédez à **certificats (ordinateur local)**  ->  **Personal**  -> **certificats**personnels, puis sélectionnez **Centre ATA**.
+    1. Dans le gestionnaire de certificats, accédez à **certificats (ordinateur local)**  ->  **Personal**  -> **certificats** personnels, puis sélectionnez **Centre ATA**.
     2. Cliquez avec le bouton droit sur **Centre ATA** et sélectionnez **Toutes les tâches** puis **Exportation**. 
      ![Certificat du centre ATA](media/ata-center-cert.png)
     3. Suivez les instructions pour exporter le certificat, en veillant à exporter également la clé privée.

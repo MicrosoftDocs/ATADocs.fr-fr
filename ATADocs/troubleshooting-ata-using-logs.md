@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 869143d0a0c953bb3151908ceec59f1cbf0dfdf3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 49bf3e2e4e69d01713c57b48aea6b55ffab6b36b
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913356"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689987"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Résolution des problèmes liés à ATA à l’aide des journaux ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Les journaux ATA offrent un aperçu de ce que fait chaque composant ATA à un moment donné.
 

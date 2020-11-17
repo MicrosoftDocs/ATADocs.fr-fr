@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: be83debc8d912974dbb08ce0f7e963080b794d4c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908889"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691041"
 ---
 # <a name="ata-prerequisites"></a>Configuration requise pour ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article décrit la configuration requise pour réussir le déploiement d’ATA dans votre environnement.
 
@@ -91,11 +89,11 @@ Le nombre de contrôleurs de domaine que vous surveillez et la charge sur chacun
 
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, la passerelle n’est pas prise en charge en mode [groupe multiprocesseur](/windows/win32/procthread/processor-groups) . Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
-### <a name="time-synchronization"></a>Synchronisation temporelle
+### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 
 Vous devez disposer des éléments suivants :
 
@@ -109,11 +107,11 @@ Le tableau suivant répertorie les ports qui, au minimum, doivent être ouverts 
 
 |Protocole|Transport|Port|Vers/À partir de|Sens|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Entrant|
-|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Entrant|
-|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Entrant|
-|**SMTP** (facultatif)|TCP|25|Serveur SMTP|Règle de trafic sortant|
-|**SMTPS** (facultatif)|TCP|465|Serveur SMTP|Règle de trafic sortant|
+|**SSL** (communications ATA)|TCP|443|Passerelle ATA|Trafic entrant|
+|**HTTP** (facultatif)|TCP|80|Réseau d'entreprise|Trafic entrant|
+|**HTTPS**|TCP|443|Réseau d’entreprise et passerelle ATA|Trafic entrant|
+|**SMTP** (facultatif)|TCP|25|SMTP Server (Serveur SMTP)|Règle de trafic sortant|
+|**SMTPS** (facultatif)|TCP|465|SMTP Server (Serveur SMTP)|Règle de trafic sortant|
 |**Syslog** (facultatif)|TCP/UPS/TLS (configurable)|514 (par défaut)|Serveur syslog|Règle de trafic sortant|
 |**LDAP**|TCP et UDP|389|Contrôleurs de domaine|Sortant|
 |**LDAPS** (facultatif)|TCP|636|Contrôleurs de domaine|Sortant|
@@ -178,11 +176,11 @@ Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de 
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
-### <a name="time-synchronization"></a>Synchronisation temporelle
+### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 
 La passerelle ATA nécessite au moins une carte de gestion et au moins une carte de capture :
 
@@ -265,11 +263,11 @@ Pour en savoir plus sur la mémoire dynamique ou toute autre fonctionnalité de 
 
 Pour plus d’informations sur la configuration matérielle requise pour la passerelle légère ATA, consultez Planification de la [capacité ATA](ata-capacity-planning.md).
 
-### <a name="time-synchronization"></a>Synchronisation temporelle
+### <a name="time-synchronization"></a>Synchronisation de l’heure
 
 L’heure du serveur du centre ATA, des serveurs de la passerelle légère ATA et des contrôleurs de domaine doit être synchronisée pour que tout écart entre eux ne dépasse pas cinq minutes.
 
-### <a name="network-adapters"></a>Adaptateurs réseau
+### <a name="network-adapters"></a>Cartes réseau
 
 La passerelle légère ATA surveille le trafic local sur toutes les cartes réseau du contrôleur de domaine.
 

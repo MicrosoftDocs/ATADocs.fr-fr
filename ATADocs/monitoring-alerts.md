@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 456538f0b68f1eec0474f4579908a1dc2c42ee67
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 1fc64d0102cc93cc212045956c6cab9f47bd7797
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912010"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690310"
 ---
 # <a name="understanding-ata-health-alerts"></a>Compréhension des alertes d’intégrité ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le centre d’intégrité ATA vous permet de savoir quand il y a un problème avec le déploiement d’ATA, en déclenchant une alerte d’intégrité.
 Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
@@ -32,7 +30,7 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="center-running-out-of-disk-space"></a>Espace disque du centre insuffisant
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|L’espace libre sur le lecteur de l’ordinateur du centre ATA qui est utilisé pour stocker la base de données ATA est insuffisant.|Cela signifie que le disque dur dispose de moins de 200 Go d’espace libre ou qu’il y a moins de 20 % d’espace libre, selon celui des deux qui est le plus petit. Quand ATA reconnaît que le lecteur manque d’espace, il commence à supprimer les anciennes données de la base de données. S’il ne peut pas supprimer les anciennes données parce qu’il en a encore besoin pour le moteur de détection, vous recevez cette alerte. Quand vous recevez cette alerte, ATA arrête le suivi des nouvelles activités.|Augmentez la taille du disque ou libérez de l’espace sur ce lecteur.|Élevé|
+|L’espace libre sur le lecteur de l’ordinateur du centre ATA qui est utilisé pour stocker la base de données ATA est insuffisant.|Cela signifie que le disque dur dispose de moins de 200 Go d’espace libre ou qu’il y a moins de 20 % d’espace libre, selon celui des deux qui est le plus petit. Quand ATA reconnaît que le lecteur manque d’espace, il commence à supprimer les anciennes données de la base de données. S’il ne peut pas supprimer les anciennes données parce qu’il en a encore besoin pour le moteur de détection, vous recevez cette alerte. Quand vous recevez cette alerte, ATA arrête le suivi des nouvelles activités.|Augmentez la taille du disque ou libérez de l’espace sur ce lecteur.|Importante|
 ### <a name="failure-sending-mail"></a>Échec de l’envoi des e-mails
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
@@ -41,7 +39,7 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="center-overloaded"></a>Centre surchargé
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le centre ATA n’est pas en mesure de gérer la quantité de données transférées depuis les passerelles ATA. |Le centre ATA cesse l’analyse du nouveau trafic réseau et des événements. Cela signifie que la précision des détections et des profils est réduite alors que cette alerte d’intégrité est active.|Vérifiez que vous avez fourni suffisamment de ressources pour le centre ATA. Pour plus de détails sur la façon de planifier correctement la capacité du centre ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md). Analysez les performances du centre ATA en utilisant [Résolution des problèmes liés à ATA à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md).|Élevé|
+|Le centre ATA n’est pas en mesure de gérer la quantité de données transférées depuis les passerelles ATA. |Le centre ATA cesse l’analyse du nouveau trafic réseau et des événements. Cela signifie que la précision des détections et des profils est réduite alors que cette alerte d’intégrité est active.|Vérifiez que vous avez fourni suffisamment de ressources pour le centre ATA. Pour plus de détails sur la façon de planifier correctement la capacité du centre ATA, consultez [Planification de la capacité ATA](ata-capacity-planning.md). Analysez les performances du centre ATA en utilisant [Résolution des problèmes liés à ATA à l’aide des compteurs de performances](troubleshooting-ata-using-perf-counters.md).|Importante|
 
 ### <a name="failure-connecting-to-the-siem-server-using-syslog"></a>Échec de la connexion au serveur SIEM à l’aide de Syslog
 |Alerte|Description|Résolution|Gravité|
@@ -54,7 +52,7 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="ata-center-certificate-expired"></a>Le certificat du centre ATA a expiré
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le certificat du centre ATA a expiré.|Après l’expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Redéployez le centre ATA](install-ata-step1.md)|Élevé|
+|Le certificat du centre ATA a expiré.|Après l’expiration du certificat : la connectivité des passerelles ATA avec le centre ATA échoue. Le processus du centre ATA se bloque et toutes les fonctionnalités d’ATA sont arrêtées.|[Redéployez le centre ATA](install-ata-step1.md)|Importante|
 ## <a name="ata-gateway-issues"></a>Problèmes de la passerelle ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Le mot de passe de l’utilisateur en lecture seule est sur le point d’expirer
 |Alerte|Description|Résolution|Gravité|
@@ -63,7 +61,7 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="read-only-user-password-expired"></a>Le mot de passe de l’utilisateur en lecture seule a expiré
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Toutes les passerelles ATA cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-ata-config-dcpassword.md), puis mettez à jour le mot de passe dans la console ATA.|Élevé|
+|Le mot de passe de l’utilisateur en lecture seule, utilisé pour d’obtenir des données de l’annuaire, a expiré.|Toutes les passerelles ATA cessent de fonctionner (ou le feront sous peu) et aucune nouvelle donnée n’est collectée.|[Changez le mot de passe de connectivité du domaine](modifying-ata-config-dcpassword.md), puis mettez à jour le mot de passe dans la console ATA.|Importante|
 ### <a name="gateway-certificate-about-to-expire"></a>Le certificat de la passerelle est sur le point d’expirer
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
@@ -72,7 +70,7 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="gateway-certificate-expired"></a>Le certificat de la passerelle a expiré
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le certificat de la passerelle ATA a expiré.|Il n’existe pas de connectivité de cette passerelle ATA avec le centre ATA. Aucune donnée provenant de cette passerelle ATA n'est envoyée.|[Désinstallez et réinstallez la passerelle ATA](install-ata-step3.md).|Élevé|
+|Le certificat de la passerelle ATA a expiré.|Il n’existe pas de connectivité de cette passerelle ATA avec le centre ATA. Aucune donnée provenant de cette passerelle ATA n'est envoyée.|[Désinstallez et réinstallez la passerelle ATA](install-ata-step3.md).|Importante|
 ### <a name="domain-synchronizer-not-assigned"></a>Synchronisateur de domaine non affecté
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
@@ -109,11 +107,11 @@ Cet article décrit toutes les alertes d’intégrité pour chaque composant, en
 ### <a name="gateway-version-outdated"></a>Version de la passerelle obsolète
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le centre ATA est plus récent que la version installée sur la passerelle ATA. Conséquence : la passerelle ATA cesse de fonctionner comme prévu.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par cette passerelle ATA.|Mettez à jour automatiquement la passerelle ATA avec la dernière version en activant la [mise à jour automatique](install-ata-step1.md) dans la console ATA ou en téléchargeant le dernier package de la passerelle ATA disponible dans la console ATA.|Élevé|
+|Le centre ATA est plus récent que la version installée sur la passerelle ATA. Conséquence : la passerelle ATA cesse de fonctionner comme prévu.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par cette passerelle ATA.|Mettez à jour automatiquement la passerelle ATA avec la dernière version en activant la [mise à jour automatique](install-ata-step1.md) dans la console ATA ou en téléchargeant le dernier package de la passerelle ATA disponible dans la console ATA.|Importante|
 ### <a name="gateway-service-failed-to-start"></a>Échec du démarrage du service de passerelle
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Le démarrage du service de passerelle ATA échoue pendant au moins 30 minutes.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par cette passerelle ATA.|Surveillez les journaux de la passerelle ATA pour [comprendre la cause principale de l’échec du service de passerelle ATA](troubleshooting-ata-using-logs.md).|Élevé|
+|Le démarrage du service de passerelle ATA échoue pendant au moins 30 minutes.|Ceci peut impacter la capacité à détecter les activités suspectes provenant des contrôleurs de domaine surveillés par cette passerelle ATA.|Surveillez les journaux de la passerelle ATA pour [comprendre la cause principale de l’échec du service de passerelle ATA](troubleshooting-ata-using-logs.md).|Importante|
 ## <a name="lightweight-gateway"></a>Passerelle légère
 ### <a name="lightweight--gateway-reached-a-memory-resource-limit"></a>La passerelle légère a atteint la limite des ressources mémoire
 |Alerte|Description|Résolution|Gravité|

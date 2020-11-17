@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 55c12920020a0cbcda0b38e7b9d0cae083423a4e
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908856"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690973"
 ---
 # <a name="ata-silent-installation"></a>Installation en mode silencieux ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article fournit des instructions pour installer ATA sans assistance.
 

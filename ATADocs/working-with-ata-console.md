@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e5b9c8f908cc0d9fbbabcc0cf11feebdf1decb7b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 831b3cec06a943136c19b706d1b68063ec578dfa
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912189"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689460"
 ---
 # <a name="working-with-the-ata-console"></a>Utilisation de la console ATA
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Utilisez la console ATA pour surveiller les activités suspectes et les gérer.
 
@@ -105,7 +103,7 @@ Quand votre système rencontre un problème, par exemple une erreur de connectiv
 Les groupes de la liste suivante sont considérés comme **sensibles** par ATA. Une entité qui est membre de ces groupes est considérée comme sensible :
 
 - Contrôleurs de domaine d’entreprise en lecture seule 
-- Admins du domaine 
+- Administrateurs du domaine 
 - Contrôleurs de domaine 
 - Administrateurs de schéma
 - Administrateurs de l’entreprise 

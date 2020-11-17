@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4c240ff131442f5cee0dc3602a2e3309cd04e63d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910852"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689885"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Examiner les chemins de mouvement latéral avec ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Même si vous faites de votre mieux pour protéger vos utilisateurs sensibles, que les administrateurs ont des mots de passe complexes qu’ils changent fréquemment, que leurs ordinateurs sont renforcés et que le stockage de leurs données est sécurisé, des attaquants peuvent malgré tout utiliser des chemins de mouvement latéral pour accéder aux comptes sensibles. Dans les attaques de mouvement latéral, l’attaquant tire parti des instances lorsque des utilisateurs sensibles se connectent à un ordinateur où un utilisateur non sensible a des droits locaux. Les attaquants peuvent ensuite se déplacer latéralement, accéder à l’utilisateur moins sensible, puis se déplacer au sein de l’ordinateur pour se procurer les informations d’identification de l’utilisateur sensible.
 

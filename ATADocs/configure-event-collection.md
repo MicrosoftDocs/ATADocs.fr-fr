@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ebd10c417e1454e135d851270a6cd64fc4243b2
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: f833b799f14dec5b1ae1a7cf18bd9813f9912cd9
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909692"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690837"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Pour les versions 1.8 et ultérieures d’ATA, la configuration de la collecte d’événements n’est plus nécessaire pour les passerelles légères ATA. La passerelle légère ATA lit désormais les événements localement, sans qu’il soit nécessaire de configurer le transfert d’événements.

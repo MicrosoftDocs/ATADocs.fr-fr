@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3cd6da729d6401840532f1daf73604f699abbbde
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4cce018aac4528b62db8c143591c3380fc38c1a4
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912135"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689528"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article explique les principes de base d’Advanced Threat Analytics.
 
@@ -37,7 +35,7 @@ Chaque activité suspecte comporte les informations suivantes :
 
 - Gravité de l’activité suspecte (haute, moyenne ou faible)
 
-- État : Ouvert, fermé ou supprimé.
+- État : Ouvert, fermé ou supprimé.
 
 - La capacité à :
 
@@ -56,11 +54,11 @@ Pour filtrer la liste des activités suspectes :
 
 1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
 
-1. Pour filtrer la liste, sélectionnez **haute**, **moyenne**ou **faible**.
+1. Pour filtrer la liste, sélectionnez **Haute**, **Moyenne** ou **Faible**.
 
 **Gravité des activités suspectes**
 
--   **Low**
+-   **Faible**
 
     Correspond aux activités suspectes pouvant conduire à des attaques durant lesquelles des utilisateurs ou logiciels malveillants accèdent aux données d’une entreprise.
 
@@ -74,7 +72,7 @@ Pour filtrer la liste des activités suspectes :
 
 
 ## <a name="remediating-suspicious-activities"></a>Résolution des activités suspectes
-Vous pouvez modifier l’état d’une activité suspecte en cliquant sur l’état actuel de l’activité suspecte, puis en sélectionnant l’une des options suivantes : **ouvrir**, **supprimer**, **Fermer**ou **supprimer**.
+Vous pouvez modifier l’état d’une activité suspecte en cliquant sur l’état actuel de l’activité suspecte, puis en sélectionnant l’une des options suivantes : **ouvrir**, **supprimer**, **Fermer** ou **supprimer**.
 Pour cela, cliquez sur les trois points en haut à droite d’une activité suspecte spécifique pour afficher la liste des actions disponibles.
 
 ![Actions ATA pour les activités suspectes](media/sa-actions.png)
@@ -92,7 +90,7 @@ Pour cela, cliquez sur les trois points en haut à droite d’une activité susp
 
 - **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous pouvez supprimer toutes les activités suspectes du même type.
 
-- **Exclure** : Possibilité d’empêcher une entité de déclencher un certain type d’alertes. Par exemple, vous pouvez configurer ATA pour empêcher une entité spécifique (un utilisateur ou un ordinateur) d’alerter à nouveau pour un certain type d’activité suspecte, par exemple un administrateur spécifique qui exécute du code à distance ou un scanner de sécurité qui effectue une reconnaissance DNS. Outre ajouter des exclusions directement sur l’activité suspecte lors de sa détection dans la chronologie, vous pouvez également accéder aux **Exclusions** de la page Configuration et, pour chaque activité suspecte, vous pouvez ajouter et supprimer manuellement des entités ou des sous-réseaux exclus (par exemple pour pass-the-ticket). 
+- **Exclure** : Possibilité d’empêcher une entité de déclencher un certain type d’alertes. Par exemple, vous pouvez configurer ATA pour empêcher une entité spécifique (un utilisateur ou un ordinateur) d’alerter à nouveau pour un certain type d’activité suspecte, par exemple un administrateur spécifique qui exécute du code à distance ou un scanner de sécurité qui effectue une reconnaissance DNS. Outre ajouter des exclusions directement sur l’activité suspecte lors de sa détection dans la chronologie, vous pouvez également accéder aux **Exclusions** de la page Configuration et, pour chaque activité suspecte, vous pouvez ajouter et supprimer manuellement des entités ou des sous-réseaux exclus (par exemple pour pass-the-ticket). 
   > [!NOTE]
   > Les pages de configuration peuvent être modifiées seulement par des administrateurs d’ATA.
 
