@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cfb7474a01fe90b75939f80dbcc7f93dad485682
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 992ea4672c427a1bf29b7303cfc412793ff8ba4d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275519"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849058"
 ---
 # <a name="tutorial-overview-product-long-security-alert-lab"></a>Vue d’ensemble des tutoriels : labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 L’objectif des tutoriels du labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Ces quatre tutoriels expliquent comment installer et configurer un environnement fonctionnel pour tester certaines détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo se concentre sur les fonctionnalités liées à la *signature* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo n’inclut ni le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours.
 

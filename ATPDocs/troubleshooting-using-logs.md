@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: ea19abd7497d0d925e764a80666dc595862566f9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27e048b337ecd25b534f0c10096999a7173292c1
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274999"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846627"
 ---
 # <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>[!INCLUDE [Product long](includes/product-long.md)]Capteur de dépannage utilisant les [!INCLUDE [Product short](includes/product-short.md)] journaux
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Les [!INCLUDE [Product short](includes/product-short.md)] journaux fournissent des informations sur ce que chaque composant de [!INCLUDE [Product long](includes/product-long.md)] capteur fait à un moment donné.
 
@@ -54,8 +52,8 @@ Les [!INCLUDE [Product short](includes/product-short.md)] journaux de déploieme
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 76b24811cab5453bb462ec7ebe2d5477e2b6c072
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bf1a3207fe44bee729d1120f71e1038e11e3e853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274931"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847307"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutoriel : Playbook de contrôle du domaine
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le dernier tutoriel de cette série en quatre parties sur les alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est un playbook sur le contrôle de domaine. L’objectif du labo des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des attaques potentielles du réseau. Il explique comment tester certaines détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)] à l’aide de ses fonctionnalités liées à la *signature*. Les tutoriels ne comprennent ni les alertes et détections avancées de type Machine Learning, ni les alertes et détections comportementales des utilisateurs et des entités de [!INCLUDE [Product short](includes/product-short.md)]. Ces types de détections et d’alertes ne sont pas inclus dans le test, car ils nécessitent une période d’apprentissage et un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur les différents tutoriels de cette série, consultez la [vue d’ensemble des labos des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -101,7 +99,7 @@ Accédez à la page **Administrateur** sur le portail [!INCLUDE [Product short](
 
 L’API de protection des données (DPAPI) est utilisée par Windows pour protéger en toute sécurité les mots de passe enregistrés par les navigateurs et les fichiers chiffrés, ainsi que les autres données sensibles. Les contrôleurs de domaine détiennent une clé principale qui peut déchiffrer *tous* les secrets sur des machines Windows jointes au domaine.
 
-À l’aide de **mimikatz** , nous allons tenter d’exporter la clé principale à partir du contrôleur de domaine.
+À l’aide de **mimikatz**, nous allons tenter d’exporter la clé principale à partir du contrôleur de domaine.
 
 1. Exécutez la commande suivante sur le contrôleur de domaine :
 
@@ -129,7 +127,7 @@ Il existe deux ensembles d’outils de piratage courants qui permettent aux atta
 
 #### <a name="mimikatz-lsadumpdcsync"></a>Mimikatz lsadump::dcsync
 
-À partir de **VictimPC** , dans le contexte de **SamirA** , exécutez la commande Mimikatz suivante :
+À partir de **VictimPC**, dans le contexte de **SamirA**, exécutez la commande Mimikatz suivante :
 
 ```dos
 mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\temp\ContosoDC_krbtgt-export.txt
@@ -151,7 +149,7 @@ Une autre méthode de contrôle de domaine utilisée par les attaquants est conn
 
 Utilisons un Skeleton Key pour voir comment fonctionne ce type d’attaque :
 
-1. Déplacez **mimikatz** vers **ContosoDC** à l’aide des informations d'identification de **SamirA** collectées préalablement. Veillez à transmettre l’architecture appropriée de **mimikatz.exe** selon le type d’architecture du contrôleur de domaine (64 bits ou 32 bits). À partir du dossier **mimikatz** , exécutez :
+1. Déplacez **mimikatz** vers **ContosoDC** à l’aide des informations d'identification de **SamirA** collectées préalablement. Veillez à transmettre l’architecture appropriée de **mimikatz.exe** selon le type d’architecture du contrôleur de domaine (64 bits ou 32 bits). À partir du dossier **mimikatz**, exécutez :
 
    ```dos
    xcopy mimikatz.exe \\ContosoDC\c$\temp
@@ -169,7 +167,7 @@ Utilisons un Skeleton Key pour voir comment fonctionne ce type d’attaque :
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Exploitation du Skeleton Key corrigé LSASS
 
-Sur **VictimPC** , ouvrez une invite de commande (dans le contexte de **JeffL** ), exécutez la commande suivante pour tenter de devenir le contexte de RonHD.
+Sur **VictimPC**, ouvrez une invite de commande (dans le contexte de **JeffL**), exécutez la commande suivante pour tenter de devenir le contexte de RonHD.
 
 ```dos
 runas /user:ronhd@contoso.azure "notepad"
@@ -185,7 +183,7 @@ Mais Skeleton Key ajoute un mot de passe supplémentaire à chaque compte. Effec
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-Cette commande crée un nouveau processus, *le bloc-notes* , qui s’exécute dans le contexte de RonHD. **Skeleton Key peut être effectué pour _n’importe quel_ compte, notamment les comptes de services et les comptes d’ordinateurs.**
+Cette commande crée un nouveau processus, *le bloc-notes*, qui s’exécute dans le contexte de RonHD. **Skeleton Key peut être effectué pour _n’importe quel_ compte, notamment les comptes de services et les comptes d’ordinateurs.**
 
 > [!Important]
 > Il est important de redémarrer ContosoDC après avoir exécuté l’attaque Skeleton Key. Sinon, le processus LSASS.exe sur ContosoDC sera corrigé et modifié, entraînant la rétrogradation de chaque demande d’authentification à RC4.
@@ -200,7 +198,7 @@ Quels sont les événements détectés et signalés par [!INCLUDE [Product shor
 
 ### <a name="golden-ticket---existing-user"></a>Golden ticket – utilisateur existant
 
-Après avoir volé le « golden ticket » (compte « krbtgt ») [par réplication malveillante](#malicious-replication), un attaquant est en mesure de signer des tickets *comme s’il était le contrôleur de domaine*. **Mimikatz** , le SID de domaine et le compte « krbtgt » volé sont tous nécessaires pour accomplir cette attaque. Non seulement nous pouvons générer des tickets pour un utilisateur, mais encore nous pouvons générer des tickets pour des utilisateurs qui n’existent même pas.
+Après avoir volé le « golden ticket » (compte « krbtgt ») [par réplication malveillante](#malicious-replication), un attaquant est en mesure de signer des tickets *comme s’il était le contrôleur de domaine*. **Mimikatz**, le SID de domaine et le compte « krbtgt » volé sont tous nécessaires pour accomplir cette attaque. Non seulement nous pouvons générer des tickets pour un utilisateur, mais encore nous pouvons générer des tickets pour des utilisateurs qui n’existent même pas.
 
 1. En tant que JeffL, exécutez la commande sur ci-dessous sur **VictimPC** pour acquérir le SID du domaine :
 
@@ -212,7 +210,7 @@ Après avoir volé le « golden ticket » (compte « krbtgt ») [par réplic
 
 1. Identifiez et copier le SID de domaine mis en surbrillance dans la capture d’écran ci-dessus.
 
-1. À l’aide de **mimikatz** , prenez le SID de domaine copié ainsi que le code de hachage NTLM de l’utilisateur « krbtgt » volé pour générer le TGT. Insérez le texte suivant dans un cmd.exe comme JeffL :
+1. À l’aide de **mimikatz**, prenez le SID de domaine copié ainsi que le code de hachage NTLM de l’utilisateur « krbtgt » volé pour générer le TGT. Insérez le texte suivant dans un cmd.exe comme JeffL :
 
    ```dos
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"

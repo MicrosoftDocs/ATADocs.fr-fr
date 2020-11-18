@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1cb2ea1c5f853f6f3a56d4bcccd84b5958078329
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 3eb687b716ce69bb4be0aabc2b128b1cf46242ff
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275575"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847137"
 ---
 # <a name="set-product-long-notifications"></a>Définition de notifications [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] peut envoyer une notification en cas de détection d’une activité suspecte en émettant une alerte de sécurité ou d’intégrité par e-mail.
 
@@ -31,7 +29,7 @@ Pour recevoir des notifications à une adresse e-mail spécifique, définissez l
     ![Icône Paramètres de configuration [!INCLUDE [Product short](includes/product-short.md)]](media/config-menu.png)
 
 1. Cliquez sur **Notifications**.
-1. Sous **Notifications par e-mail** , ajoutez des adresses e-mail pour les notifications que vous voulez recevoir. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité.
+1. Sous **Notifications par e-mail**, ajoutez des adresses e-mail pour les notifications que vous voulez recevoir. Elles peuvent être envoyées pour de nouvelles alertes (activités suspectes) et de nouveaux problèmes d’intégrité.
 
     > [!NOTE]
     >

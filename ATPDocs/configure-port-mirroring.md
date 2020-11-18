@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 479ca268e2db61bd1667005d2aa2a38603888f0b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: c0dacdf37dbcc033a310fb4b0995ab8259db452f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276393"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848089"
 ---
 # <a name="configure-port-mirroring"></a>Configurer la mise en miroir des ports
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article ne s’applique que dans le cadre du déploiement de capteurs autonomes [!INCLUDE [Product long](includes/product-long.md)] plutôt que de capteurs [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -29,7 +27,7 @@ Cet article ne s’applique que dans le cadre du déploiement de capteurs autono
 
 La principale source de données utilisée par [!INCLUDE [Product short](includes/product-short.md)] est l’inspection approfondie des paquets du trafic réseau entrant et sortant des contrôleurs de domaine. Pour que [!INCLUDE [Product short](includes/product-short.md)] puisse voir le trafic réseau, vous devez configurer la mise en miroir de ports ou utiliser un TAP réseau.
 
-Pour la **mise en miroir des ports** , configurez-la pour chaque contrôleur de domaine à surveiller en tant que **source** du trafic réseau. En règle générale, vous devez collaborer avec l’équipe de virtualisation ou de mise en réseau pour configurer la mise en miroir des ports.
+Pour la **mise en miroir des ports**, configurez-la pour chaque contrôleur de domaine à surveiller en tant que **source** du trafic réseau. En règle générale, vous devez collaborer avec l’équipe de virtualisation ou de mise en réseau pour configurer la mise en miroir des ports.
 Pour plus d’informations, reportez-vous à la documentation de votre fournisseur.
 
 Vos contrôleurs de domaine et votre capteur autonome [!INCLUDE [Product short](includes/product-short.md)] peuvent être physiques ou virtuels. Voici les méthodes couramment employées dans le cadre de la mise en miroir des ports et quelques considérations à prendre en compte. Pour plus d’informations, reportez-vous à la documentation produit de votre commutateur ou de votre serveur de virtualisation. Le fabricant de votre commutateur peut utiliser une terminologie différente.

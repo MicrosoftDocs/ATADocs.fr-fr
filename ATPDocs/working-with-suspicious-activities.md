@@ -12,16 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e47b15249f024345eb72fa434447506389f7be4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b421bd06a40a3bd79ecdf22b613bbafb157abc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277962"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847698"
 ---
 # <a name="working-with-security-alerts"></a>Utilisation des alertes de sécurité
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
@@ -84,9 +82,9 @@ Pour désactiver les détections en préversion :
 
 Pour filtrer la liste des alertes de sécurité :
 
-1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout** , **Ouvert** , **Fermé** ou **Ignoré**.
+1. Dans le volet **Filtrer par** sur le côté gauche de l’écran, sélectionnez l’une des options suivantes : **Tout**, **Ouvert**, **Fermé** ou **Ignoré**.
 
-1. Pour filtrer la liste, sélectionnez **Haute** , **Moyenne** ou **Faible**.
+1. Pour filtrer la liste, sélectionnez **Haute**, **Moyenne** ou **Faible**.
 
 **Gravité des activités suspectes**
 
@@ -104,22 +102,22 @@ Pour filtrer la liste des alertes de sécurité :
 
 ## <a name="managing-security-alerts"></a>Gestion des alertes de sécurité
 
-Vous pouvez changer l’état d’une alerte de sécurité en cliquant sur son état actuel, puis en sélectionnant l’une des options suivantes : **Ouvertes** , **Ignorées** , **Fermées** ou **Supprimées**.
+Vous pouvez changer l’état d’une alerte de sécurité en cliquant sur son état actuel, puis en sélectionnant l’une des options suivantes : **Ouvertes**, **Ignorées**, **Fermées** ou **Supprimées**.
 Pour cela, cliquez sur les trois points en haut à droite d’une alerte pour afficher la liste des actions disponibles.
 
 ![Actions [!INCLUDE [Product short](includes/product-short.md)] pour les alertes de sécurité](media/sa-actions.png)
 
 **États des alertes de sécurité**
 
-- **Ouvert**  : toutes les nouvelles alertes de sécurité s’affichent dans la liste.
+- **Ouvert** : toutes les nouvelles alertes de sécurité s’affichent dans la liste.
 
-- **Fermé**  : utilisé pour effectuer le suivi des activités que vous avez identifiées, examinées et résolues.
+- **Fermé** : utilisé pour effectuer le suivi des activités que vous avez identifiées, examinées et résolues.
 
-- **Ignoré**  : permet d’ignorer temporairement une alerte, et de n’être averti de nouveau qu’en cas de nouvelle instance. Si une alerte similaire survient, [!INCLUDE [Product short](includes/product-short.md)] ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours avant de réapparaître, une nouvelle alerte est ouverte.
+- **Ignoré** : permet d’ignorer temporairement une alerte, et de n’être averti de nouveau qu’en cas de nouvelle instance. Si une alerte similaire survient, [!INCLUDE [Product short](includes/product-short.md)] ne la rouvre pas. Cependant, si l’alerte cesse pendant sept jours avant de réapparaître, une nouvelle alerte est ouverte.
 
 - **Supprimer** : Si vous supprimez une alerte, elle est supprimée du système et de la base de données, et vous NE pourrez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
-- **Exclure**  : Possibilité d’empêcher une entité de déclencher un certain type d’alertes. Par exemple, vous pouvez configurer [!INCLUDE [Product short](includes/product-short.md)] de façon à empêcher une entité spécifique (un utilisateur ou un ordinateur) de déclencher à nouveau une alerte pour un certain type d’activité (par exemple, un administrateur qui exécute du code à distance ou un scanner de sécurité qui effectue une reconnaissance DNS). En plus d’ajouter des exclusions directement dans l’alerte de sécurité lorsque celle-ci est détectée dans la chronologie, vous pouvez également accéder aux **Exclusions** de la page Configuration et, pour chaque alerte de sécurité, ajouter et supprimer manuellement des entités ou des sous-réseaux exclus (par exemple, pour les attaques pass-the-ticket).
+- **Exclure** : Possibilité d’empêcher une entité de déclencher un certain type d’alertes. Par exemple, vous pouvez configurer [!INCLUDE [Product short](includes/product-short.md)] de façon à empêcher une entité spécifique (un utilisateur ou un ordinateur) de déclencher à nouveau une alerte pour un certain type d’activité (par exemple, un administrateur qui exécute du code à distance ou un scanner de sécurité qui effectue une reconnaissance DNS). En plus d’ajouter des exclusions directement dans l’alerte de sécurité lorsque celle-ci est détectée dans la chronologie, vous pouvez également accéder aux **Exclusions** de la page Configuration et, pour chaque alerte de sécurité, ajouter et supprimer manuellement des entités ou des sous-réseaux exclus (par exemple, pour les attaques pass-the-ticket).
 
 > [!NOTE]
 > Les pages de configuration ne sont modifiables que par les administrateurs [!INCLUDE [Product short](includes/product-short.md)].

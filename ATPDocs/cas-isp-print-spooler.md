@@ -11,20 +11,18 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3ce32384545ea3751966ba9a677348ac70fe266b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 90333e1588ebb110c940467177aa5aef762fb428
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277474"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848752"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ![Désactiver le service Spouleur d’impression](media/cas-isp-print-spooler-1.png)
 
-## <a name="what-is-the-print-spooler-service"></a>Qu’est-ce que le service **Spouleur d’impression**  ?
+## <a name="what-is-the-print-spooler-service"></a>Qu’est-ce que le service **Spouleur d’impression** ?
 
 Le Spouleur d’impression est un service logiciel qui gère les processus d’impression. Il accepte les travaux d’impression des ordinateurs et vérifie que les ressources de l’imprimante sont disponibles. Il planifie également l’ordre dans lequel les travaux d’impression sont envoyés à la file d’attente à l’impression. Au début des ordinateurs personnels, les utilisateurs devaient attendre que les fichiers soient imprimés avant d’effectuer d’autres opérations. Grâce aux spouleurs d’impression modernes, l’impression a désormais un impact minime sur la productivité globale des utilisateurs.
 
@@ -37,7 +35,7 @@ En raison du risque d’exposition, les contrôleurs de domaine et les systèmes
 Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de domaine, tous les serveurs sont potentiellement exposés à ce type d’attaque.
 
    > [!NOTE]
-   > Veillez à examiner vos paramètres de **Spouleur d’impression** , configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
+   > Veillez à examiner vos paramètres de **Spouleur d’impression**, configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
@@ -56,4 +54,4 @@ Résolvez ce problème spécifique en désactivant le service de spouleur d’im
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

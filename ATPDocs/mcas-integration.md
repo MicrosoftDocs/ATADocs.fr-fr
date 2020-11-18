@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eff9b785cb23db649615f11be6e713eed49f3b5d
-ms.sourcegitcommit: 931d463e793cd5710e7bc2bca13cd4ef669eb190
+ms.openlocfilehash: 70a316deaafec0c251c91defbc47ec5281eba617
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94580888"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848871"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Utilisation [!INCLUDE [Product long](includes/product-long.md)] de avec Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article est conçu pour vous aider à comprendre et à naviguer dans l’expérience d’investigation améliorée lors de l’utilisation du portail Microsoft Cloud App Security avec [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -92,9 +90,9 @@ Pour accéder à une page utilisateur d’un utilisateur système :
 1. Ouvrez **Alertes** dans le menu principal.
 1. Sélectionnez et filtrez la file d’attente des alertes pour un utilisateur spécifique à l’aide du champ **Nom d’utilisateur**.
 
- ou
+ or
 
-1. À partir du menu **Examiner** , sélectionnez **Journal d’activité**.
+1. À partir du menu **Examiner**, sélectionnez **Journal d’activité**.
 1. Filtrez la file d’attente du journal d’activité par utilisateur.
 
     ![Journal d’activité](media/mcas-activity-filter.png)

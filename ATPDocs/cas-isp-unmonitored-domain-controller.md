@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ffa62906d0c4f8a40c1beb388e497ed12ee41733
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f3cf20aed80167b581a78fea5306916578bbd4c6
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276636"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848327"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Évaluation de la sécurité : Contrôleurs de domaine non supervisés
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-unmonitored-domain-controllers"></a>Qu’entend-on par contrôleurs de domaine non supervisés ?
 
@@ -44,4 +42,4 @@ Pour fonctionner avec une efficacité maximale, tous les contrôleurs de domaine
 ## <a name="see-also"></a>Voir aussi
 
 - [Superviser la couverture de vos contrôleurs de domaine](sensor-monitoring.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e87d71ead236d36e032a43c825980f98f7f15eb4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e0f7f1d21132aadba7fc6b3719baf3d290e8d2fb
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277176"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848599"
 ---
 # <a name="excluding-entities-from-detections"></a>Exclusion d’entités des détections
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article explique comment exclure des entités du processus de déclenchement des alertes. Certaines entités sont exclues afin de limiter les vrais positifs sans gravité tout en garantissant la détection des vrais positifs. Pour supprimer le bruit généré par [!INCLUDE [Product long](includes/product-long.md)] à propos d’activités effectuées par des utilisateurs spécifiques dans le cadre de leur activité professionnelle normale, vous pouvez désactiver (ou exclure) des entités spécifiques du processus de déclenchement des alertes. Par ailleurs, certaines entités courantes sont exclues par défaut.
 
@@ -28,7 +26,7 @@ Par exemple, les activités approuvées dans le cadre des opérations informatiq
 
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entités exclues par défaut du processus de déclenchement des alertes
 
- Pour certaines alertes (par exemple, **Communication suspecte sur DNS** ), des exclusions de domaine automatiques sont ajoutées par [!INCLUDE [Product short](includes/product-short.md)] sur la base des recherches et des commentaires des clients.
+ Pour certaines alertes (par exemple, **Communication suspecte sur DNS**), des exclusions de domaine automatiques sont ajoutées par [!INCLUDE [Product short](includes/product-short.md)] sur la base des recherches et des commentaires des clients.
 
 ![Exclusions automatiques des alertes Communication suspecte sur DNS](media/dns-auto-exclusions.png)
 
@@ -41,7 +39,7 @@ Il y a deux façons d’exclure manuellement des entités : soit directement à 
 
     ![Exclure une entité](media/exclude-in-sa.png)
 
-- **Sur la page de configuration** :  pour vérifier ou modifier des exclusions, cliquez sur **Exclusions** sous **Configuration** > **Détection** , puis sélectionnez l’alerte de sécurité à laquelle l’exclusion sera appliquée (par exemple, **Reconnaissance DNS** ).
+- **Sur la page de configuration** :  pour vérifier ou modifier des exclusions, cliquez sur **Exclusions** sous **Configuration** > **Détection**, puis sélectionnez l’alerte de sécurité à laquelle l’exclusion sera appliquée (par exemple, **Reconnaissance DNS**).
 
     ![Configuration d’exclusion](media/exclusions.png)
 

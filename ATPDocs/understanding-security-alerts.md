@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba5adecd1812d95f043d520773b1006a6e75b5b9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27df0fb3be637b2a3390df9378f68b2db9a10b8d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277808"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848905"
 ---
 # <a name="understanding-security-alerts"></a>Présentation des alertes de sécurité
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Les alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] expliquent en termes clairs et à l’aide de graphismes les activités suspectes identifiées sur votre réseau ainsi que les acteurs et les ordinateurs impliqués dans les menaces. Les alertes sont classées par gravité, colorées afin de faciliter le filtrage visuel et organisées par phase de menace. Chaque alerte est conçue pour vous aider à comprendre rapidement et précisément ce qui se passe sur votre réseau. Des listes de preuves d’alertes contiennent des liens directs vers les ordinateurs et les utilisateurs impliqués, afin de rendre vos recherches plus faciles et plus directes.
 
@@ -124,7 +122,7 @@ Dans chaque alerte, le dernier onglet présente les **entités connexes**. Les e
 
 **Json d’entité unique**
 
-Comprend les données relatives au compte apprises par [!INCLUDE [Product short](includes/product-short.md)] à partir d’Active Directory. Sont inclus tous les attributs (par exemple, *Distinguished Name* , *SID* , *LockoutTime* et *PasswordExpiryTime* ). Pour les comptes d’utilisateur, inclut les données telles que *Department* , *Mail* et *PhoneNumber*. Pour les comptes d’ordinateur, sont incluses des données comme *OperatingSystem* , *IsDomainController* et *DnsName*.
+Comprend les données relatives au compte apprises par [!INCLUDE [Product short](includes/product-short.md)] à partir d’Active Directory. Sont inclus tous les attributs (par exemple, *Distinguished Name*, *SID*, *LockoutTime* et *PasswordExpiryTime*). Pour les comptes d’utilisateur, inclut les données telles que *Department*, *Mail* et *PhoneNumber*. Pour les comptes d’ordinateur, sont incluses des données comme *OperatingSystem*, *IsDomainController* et *DnsName*.
 
 **Json de profil d’entité unique**
 
@@ -150,15 +148,15 @@ Les données de résolution de noms réseau sont cruciales pour détecter les al
 - Suspicion d’attaque DCSync (réplication de services d’annuaire)
 - Reconnaissance de mappage de réseau (DNS)
 
-Utilisez les informations de résolution de noms réseau fournies sous l’onglet **Activités réseau** du rapport d’alerte pour déterminer si une alerte est un **FP**. En cas d’alerte **FP** , il est courant que le résultat de certitude de résolution de noms réseau soit donné avec une confiance faible.
+Utilisez les informations de résolution de noms réseau fournies sous l’onglet **Activités réseau** du rapport d’alerte pour déterminer si une alerte est un **FP**. En cas d’alerte **FP**, il est courant que le résultat de certitude de résolution de noms réseau soit donné avec une confiance faible.
 
 Les données des rapports téléchargés apparaissent dans deux colonnes :
 
 - **Ordinateur source/de destination**
 
-  - *Certitude*  : une certitude de faible résolution peut indiquer une résolution de noms incorrecte.
+  - *Certitude* : une certitude de faible résolution peut indiquer une résolution de noms incorrecte.
 - **Ordinateur source/de destination**
-  - *Méthode de résolution*  : indique les méthodes de résolution de noms réseau utilisées pour résoudre l’adresse IP à l’ordinateur de l’organisation.
+  - *Méthode de résolution* : indique les méthodes de résolution de noms réseau utilisées pour résoudre l’adresse IP à l’ordinateur de l’organisation.
 
 ![Activités réseau](media/network-activities.png)
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4fb7bf73ed996007e3a3c84b568afe373d822fd6
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e8086ccc3771ec4c8bbc2121083711e29063e2a5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277096"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848567"
 ---
 # <a name="understanding-product-long-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le centre d’intégrité [!INCLUDE [Product long](includes/product-long.md)] vous informe en cas de problème dans votre instance [!INCLUDE [Product short](includes/product-short.md)] en déclenchant une alerte d’intégrité. Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
 
@@ -40,7 +38,7 @@ Le centre d’intégrité [!INCLUDE [Product long](includes/product-long.md)] vo
 
 |Alerte|Description|Résolution|Gravité|
 |----|----|----|----|
-|Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard**  : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-step2.md#prerequisites).|Moyenne|
+|Les informations d’identification du compte d'utilisateur des services d'annuaire sont incorrectes.|Cela a un impact sur la capacité des capteurs à détecter les activités à l’aide de requêtes LDAP sur les contrôleurs de domaine.|- Pour des comptes AD **standard** : Vérifiez que le nom d’utilisateur, le mot de passe et le domaine dans la page de configuration **Services d’annuaire** sont corrects.<br>- Pour **Comptes de service administré du groupe :** Vérifiez que le nom d’utilisateur et le domaine dans la page de configuration **Services d’annuaire** sont corrects. Vérifiez également tous les autres composants requis du **compte gMSA** décrits dans la page [Se connecter à votre forêt Active Directory](install-step2.md#prerequisites).|Moyenne|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Taux de réussite faible dans la résolution de noms active
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 643a5f0a23f18d5e972f2bead87e0a078cf7b54c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277451"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848735"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Évaluation de la sécurité : Délégations Kerberos non sécurisées
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-kerberos-delegation"></a>Qu’est-ce que la délégation Kerberos ?
 
@@ -30,13 +28,13 @@ La délégation Kerberos est un paramètre de délégation qui permet aux applic
 
 La délégation Kerberos non sécurisée permet à une entité d’emprunter l’identité de tout autre service choisi. Par exemple, imaginons que vous disposiez d’un site web IIS et que le compte du pool d’applications soit configuré avec une délégation sans contrainte. L’authentification Windows est activée sur le site web IIS, ce qui permet de prendre en charge l’authentification Kerberos native, et le site utilise un serveur SQL Server back-end pour les données métier. Avec votre compte d’administrateur de domaine, vous accédez au site web IIS et vous vous authentifiez auprès de celui-ci. Le site Web, à l’aide de la délégation sans contrainte, peut obtenir un ticket de service d’un contrôleur de domaine au service SQL, et le faire dans votre nom.
 
-Le principal problème avec la délégation Kerberos est que vous vous en remettez à l’application pour faire toujours les bons choix. Des acteurs malveillants peuvent donc forcer l’application à commettre des actes inappropriés. Si vous êtes connecté en tant qu' **administrateur de domaine** , le site peut créer un ticket pour tous les autres services qu’il souhaite, en tant que vous, l’administrateur de **domaine**. Par exemple, le site peut choisir un contrôleur de domaine et apporter des modifications au groupe administrateurs de l' **entreprise** . De même, le site peut acquérir le hachage du compte KRBTGT ou télécharger un fichier intéressant à partir du service des ressources humaines. Le risque est clair et les possibilités de la délégation non sécurisée sont quasiment illimitées.
+Le principal problème avec la délégation Kerberos est que vous vous en remettez à l’application pour faire toujours les bons choix. Des acteurs malveillants peuvent donc forcer l’application à commettre des actes inappropriés. Si vous êtes connecté en tant qu' **administrateur de domaine**, le site peut créer un ticket pour tous les autres services qu’il souhaite, en tant que vous, l’administrateur de **domaine**. Par exemple, le site peut choisir un contrôleur de domaine et apporter des modifications au groupe administrateurs de l' **entreprise** . De même, le site peut acquérir le hachage du compte KRBTGT ou télécharger un fichier intéressant à partir du service des ressources humaines. Le risque est clair et les possibilités de la délégation non sécurisée sont quasiment illimitées.
 
 Vous trouverez ci-dessous une description du risque encouru par différents types de délégation :
 
-- **Délégation sans contrainte**  : Tout service peut être mal utilisé si l’une de ses entrées de délégation est sensible.
-- **Délégation contrainte**  : Les entités contraintes peuvent être mal utilisées si l’une de leurs entrées de délégation est sensible.
-- **Délégation contrainte basée sur les ressources**  : Les entités contraintes basées sur les ressources peuvent être mal utilisées si l’entité elle-même est sensible.
+- **Délégation sans contrainte** : Tout service peut être mal utilisé si l’une de ses entrées de délégation est sensible.
+- **Délégation contrainte** : Les entités contraintes peuvent être mal utilisées si l’une de leurs entrées de délégation est sensible.
+- **Délégation contrainte basée sur les ressources** : Les entités contraintes basées sur les ressources peuvent être mal utilisées si l’entité elle-même est sensible.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
@@ -80,4 +78,4 @@ Passez en revue les utilisateurs sensibles listés dans les recommandations et s
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

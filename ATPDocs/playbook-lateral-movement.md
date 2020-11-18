@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8830feaf5d849d4ed38ea1bcc01002d04f6d2380
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f51c707c2ac01fbbd16258efab8c0ac74d3076b0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274829"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849092"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le playbook sur le mouvement latéral est le troisième de la série de quatre tutoriels sur les alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]. L’objectif du labo des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Le playbook explique comment tester certaines détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)]. Il se concentre sur les fonctionnalités liées à la *signature* de [!INCLUDE [Product short](includes/product-short.md)]. Il ne comprend ni détections avancées de type Machine Learning, ni détections comportementales des utilisateurs et des entités (qui impliquent une période d’apprentissage sur du trafic réseau réel pouvant aller jusqu’à 30 jours). Pour plus d’informations sur les différents tutoriels de cette série, consultez la [vue d’ensemble des labos des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -47,7 +45,7 @@ Grâce à nos attaques simulées dans le tutoriel précédent, le playbook de re
 
 ## <a name="dump-credentials-in-memory-from-victimpc"></a>Vider les informations d’identification en mémoire à partir de VictimPC
 
-Au cours de nos attaques de reconnaissance fictives, **VictimPC** n’a pas été exposé uniquement aux informations d’identification de JeffL. Il y a d’autres comptes utiles à découvrir sur cet ordinateur. Pour obtenir un mouvement latéral à l’aide de **VictimPC** , nous allons tenter d’énumérer des informations d’identification en mémoire sur la ressource partagée. Le vidage des informations d’identification en mémoire à l’aide de **mimikatz** est une méthode d’attaque populaire avec un outil commun.
+Au cours de nos attaques de reconnaissance fictives, **VictimPC** n’a pas été exposé uniquement aux informations d’identification de JeffL. Il y a d’autres comptes utiles à découvrir sur cet ordinateur. Pour obtenir un mouvement latéral à l’aide de **VictimPC**, nous allons tenter d’énumérer des informations d’identification en mémoire sur la ressource partagée. Le vidage des informations d’identification en mémoire à l’aide de **mimikatz** est une méthode d’attaque populaire avec un outil commun.
 
 ### <a name="mimikatz-sekurlsalogonpasswords"></a>Mimikatz sekurlsa::logonpasswords
 
@@ -72,7 +70,7 @@ Au cours de nos attaques de reconnaissance fictives, **VictimPC** n’a pas ét�
 
 Un attaquant peut ne pas savoir initialement qui est RonHD ou ne pas connaître sa valeur en tant que cible. Tout qu’il sait est qu’il peut utiliser les informations d’identification s’il est avantageux de le faire. Toutefois, à l’aide de la commande **net** nous, agissant comme un attaquant, pouvons découvrir de quels groupes RonHD est membre.
 
-À partir de **VictimPC** , exécutez la commande suivante :
+À partir de **VictimPC**, exécutez la commande suivante :
 
 ```dos
 net user ronhd /domain
@@ -84,9 +82,9 @@ Il ressort des résultats que RonHD est membre du groupe de sécurité « Suppo
 
 ### <a name="mimikatz-sekurlsapth"></a>Mimikatz sekurlsa::pth
 
-À l’aide d’une technique courante appelée **Overpass-the-Hash** , le code de hachage NTLM collecté est utilisé pour obtenir un Ticket TGT (Ticket Granting). Avec le ticket TGT d’un utilisateur, un attaquant peut usurper l’identité un utilisateur compromis tels que RonHD. En usurpant l’identité en tant que RonHD, nous pouvons accéder à n’importe quelle ressource de domaine à laquelle l’utilisateur compromis ou ses groupes de sécurité respectifs ont accès.
+À l’aide d’une technique courante appelée **Overpass-the-Hash**, le code de hachage NTLM collecté est utilisé pour obtenir un Ticket TGT (Ticket Granting). Avec le ticket TGT d’un utilisateur, un attaquant peut usurper l’identité un utilisateur compromis tels que RonHD. En usurpant l’identité en tant que RonHD, nous pouvons accéder à n’importe quelle ressource de domaine à laquelle l’utilisateur compromis ou ses groupes de sécurité respectifs ont accès.
 
-1. À partir de **VictimPC** , accédez au répertoire contenant le dossier **Mimikatz.exe**. emplacement de stockage sur votre système de fichiers et exécutez la commande suivante :
+1. À partir de **VictimPC**, accédez au répertoire contenant le dossier **Mimikatz.exe**. emplacement de stockage sur votre système de fichiers et exécutez la commande suivante :
 
     ```dos
     mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
@@ -124,7 +122,7 @@ Nous allons utiliser **PowerSploit** ```Get-NetLocalGroup``` pour nous aider à 
 
     Cet ordinateur a deux administrateurs locaux, l’administrateur intégré « ContosoAdmin » et « Support technique ». Nous savons que RonHD est membre du groupe de sécurité « Support technique ». On nous a également donné le nom de l’ordinateur, AdminPC. Étant donné que nous avons les informations d’identification de RonHD, nous devrions pouvoir les utiliser pour nous déplacer latéralement vers AdminPC et d’accéder à cet ordinateur.
 
-1. À partir de la *même invite de commandes, qui s’exécute dans le contexte de RonHD* , tapez **quitter** sortir de PowerShell si nécessaire. Ensuite, exécutez la commande suivante :
+1. À partir de la *même invite de commandes, qui s’exécute dans le contexte de RonHD*, tapez **quitter** sortir de PowerShell si nécessaire. Ensuite, exécutez la commande suivante :
 
     ```dos
     dir \\adminpc\c$
@@ -164,7 +162,7 @@ Nous allons ici :
 
 ### <a name="pass-the-ticket"></a>Pass-the-ticket
 
-À partir de l’invite de commandes exécutée dans le contexte de *RonHD* sur **VictimPC** , accédez à l’emplacement où se trouvent nos outils d’attaque courants. Ensuite, exécutez *xcopy* pour les déplacer vers l’ordinateur AdminPC :
+À partir de l’invite de commandes exécutée dans le contexte de *RonHD* sur **VictimPC**, accédez à l’emplacement où se trouvent nos outils d’attaque courants. Ensuite, exécutez *xcopy* pour les déplacer vers l’ordinateur AdminPC :
 
 ```dos
 xcopy mimikatz.exe \\adminpc\c$\temp
@@ -203,7 +201,7 @@ Avec Mimikatz préparé sur AdminPC, nous allons utiliser PsExec pour l’exécu
     > [!Note]
     > Les pirates plus sophistiquées ne touchent pas au disque lorsqu’ils exécutent du code arbitraire sur un ordinateur après avoir obtenu des privilèges d’administrateur sur ce dernier.
 
-    Sur notre **VictimPC** , ces tickets collectés se trouvent dans notre dossier **c:\temp\adminpc_tickets**  :
+    Sur notre **VictimPC**, ces tickets collectés se trouvent dans notre dossier **c:\temp\adminpc_tickets** :
 
     ![C:\temp\tickets est résultat mimikatz exporté à partir d’AdminPC](media/playbook-escalation-export_tickets4.png)
 
@@ -211,7 +209,7 @@ Avec Mimikatz préparé sur AdminPC, nous allons utiliser PsExec pour l’exécu
 
 Avec les tickets localement sur VictimPC, il est maintenant temps de devenir SamiraA par « En passant le Ticket ».
 
-1. À partir de l’emplacement de **Mimikatz** sur le système de fichiers de **VictimPC** , ouvrez une nouvelle **invite de commandes avec élévation de privilèges** et exécutez la commande suivante :
+1. À partir de l’emplacement de **Mimikatz** sur le système de fichiers de **VictimPC**, ouvrez une nouvelle **invite de commandes avec élévation de privilèges** et exécutez la commande suivante :
 
     ```dos
     mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
@@ -230,7 +228,7 @@ Avec les tickets localement sur VictimPC, il est maintenant temps de devenir Sam
 1. Notez que ces tickets restent inutilisés. En agissant comme un attaquant, nous avons réussi à « passer le ticket ». Nous avons collecté les informations d’identification de SamirA dans AdminPC avant de les passer à un autre processus s’exécutant sur VictimPC.
 
     > [!Note]
-    > Comme dans l’attaque Pass-the-Hash, [!INCLUDE [Product short](includes/product-short.md)] ne sait pas que le ticket a été transmis sur la base de l’activité du client local. Cependant, il détecte l’activité *une fois le ticket utilisé* , autrement dit, exploité pour accéder à une autre ressource ou à un autre service.
+    > Comme dans l’attaque Pass-the-Hash, [!INCLUDE [Product short](includes/product-short.md)] ne sait pas que le ticket a été transmis sur la base de l’activité du client local. Cependant, il détecte l’activité *une fois le ticket utilisé*, autrement dit, exploité pour accéder à une autre ressource ou à un autre service.
 
 1. Terminez votre attaque simulée en accédant au contrôleur de domaine à partir de **VictimPC**. Dans l’invite de commandes maintenant en cours d’exécution avec les tickets de SamirA en mémoire, exécutez :
 

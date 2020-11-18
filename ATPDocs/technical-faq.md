@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ccb3ee9afe32615246f8e6dc63e181475094a8b7
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: b677512817fc910c5845fa7e1544003bfec60593
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274370"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848939"
 ---
 # <a name="product-long-frequently-asked-questions"></a>[!INCLUDE [Product long](includes/product-long.md)] Forum aux questions
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article fournit une liste des questions fréquemment posées et des réponses sur [!INCLUDE [Product long](includes/product-long.md)] divisées dans les catégories suivantes :
 
@@ -32,7 +30,7 @@ Cet article fournit une liste des questions fréquemment posées et des réponse
 
 <a name="what-is-azure-atp"></a>
 
-## <a name="what-is-product-short"></a>Qu’est-ce que c’est [!INCLUDE [Product short](includes/product-short.md)] ?
+## <a name="what-is-product-short"></a>Qu’est-ce que [!INCLUDE [Product short](includes/product-short.md)] ?
 
 ### <a name="what-can-product-short-detect"></a>Que peut [!INCLUDE [Product short](includes/product-short.md)] détecter ?
 
@@ -85,9 +83,9 @@ Contrairement au capteur ATA, le [!INCLUDE [Product short](includes/product-shor
 
 - **[Fonctions UEBA](/cloud-app-security/tutorial-ueba)**  : Insights sur les risques de chaque utilisateur via le scoring des priorités d’investigation des utilisateurs. Le score peut assister SecOps dans leurs investigations et aider les analystes à comprendre les activités inhabituelles de l’utilisateur et de l’organisation.
 
-- **Intégrations natives**  : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
+- **Intégrations natives** : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
 
-- **Contribue à Microsoft 365 Defender** : fournit des données d’alerte et de menace à Microsoft 365 Defender. Microsoft 365 Defender tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un tableau de bord unique. Grâce à cette richesse et à la clarté, les défenseurs peuvent se concentrer sur les menaces critiques et la recherche de failles sophistiquées, en faisant confiance à Microsoft 365 l’automatisation puissante de Defender arrête les attaques n’importe où dans la chaîne de suppression et rétablit l’organisation dans un état sécurisé.
+- **Contribue à Microsoft 365 Defender**: fournit des données d’alerte et de menace à Microsoft 365 Defender. Microsoft 365 Defender tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un tableau de bord unique. Grâce à cette richesse et à la clarté, les défenseurs peuvent se concentrer sur les menaces critiques et la recherche de failles sophistiquées, en faisant confiance à Microsoft 365 l’automatisation puissante de Defender arrête les attaques n’importe où dans la chaîne de suppression et rétablit l’organisation dans un état sécurisé.
 
 ## <a name="licensing-and-privacy"></a>Gestion des licences et confidentialité
 
@@ -214,9 +212,9 @@ Examinez l’erreur la plus récente dans le [Journal](troubleshooting-using-log
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
 - [Résolution des problèmes](troubleshooting-known-issues.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

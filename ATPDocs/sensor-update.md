@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 094e853cb3c58ad43d9b52898e3bc7b2bcd72bca
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d65de1862d97a1d8dbb84fdc84252851fbe44d63
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274239"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846780"
 ---
 # <a name="update-product-long-sensors"></a>Mise à jour des capteurs [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Il est essentiel de maintenir les capteurs [!INCLUDE [Product long](includes/product-long.md)] à jour pour bénéficier de la meilleure protection possible dans votre organisation.
 
@@ -44,7 +42,7 @@ Les capteurs [!INCLUDE [Product short](includes/product-short.md)] acceptent deu
 
 > [!NOTE]
 >
-> - Contrôlez le redémarrage automatique des capteurs (pour les mises à jour **majeures** ) sur la page de configuration du portail [!INCLUDE [Product short](includes/product-short.md)].
+> - Contrôlez le redémarrage automatique des capteurs (pour les mises à jour **majeures**) sur la page de configuration du portail [!INCLUDE [Product short](includes/product-short.md)].
 > - Le capteur [!INCLUDE [Product short](includes/product-short.md)] réserve toujours au moins 15 % de la mémoire et du processeur disponibles sur le contrôleur de domaine sur lequel il est installé. Si le service [!INCLUDE [Product short](includes/product-short.md)] consomme trop de mémoire, il est automatiquement arrêté et redémarré par le service de mise à jour des capteurs [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="delayed-sensor-update"></a>Mise à jour différée des capteurs

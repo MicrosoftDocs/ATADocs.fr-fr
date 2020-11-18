@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 44731f9d987eda3d87339b1502de609de9d222ed
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 170385cfb1bd3fc82a77d67cd6f82d2197c458bf
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277523"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848769"
 ---
 # <a name="security-assessment-microsoft-laps-usage"></a>Évaluation de la sécurité : Utilisation de Microsoft LAPS
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-microsoft-laps"></a>Qu’est-ce que Microsoft LAPS ?
 
@@ -45,4 +43,4 @@ LAPS simplifie la gestion des mots de passe tout en permettant aux clients d’i
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

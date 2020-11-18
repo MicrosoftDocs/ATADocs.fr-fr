@@ -11,23 +11,21 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f8d7237d3202ed4b0645b92d61f37cc7c89085da
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274846"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847222"
 ---
 # <a name="product-long-monitored-activities"></a>Activités supervisées par [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
 
 [!INCLUDE [Product long](includes/product-long.md)] analyse les informations générées par l’annuaire Active Directory de votre organisation, ainsi que les activités réseau et les activités d’événement. L’objectif est de détecter les activités suspectes. Les informations relatives aux activités supervisées permettent à [!INCLUDE [Product short](includes/product-short.md)] de déterminer la validité de toutes les menaces potentielles, de les trier correctement et d’y répondre.
 
-En cas de menace réelle ou de **vrai positif** , [!INCLUDE [Product short](includes/product-short.md)] vous permet de découvrir l’étendue de la violation pour chaque incident, d’examiner les entités impliquées et de déterminer comment y remédier.
+En cas de menace réelle ou de **vrai positif**, [!INCLUDE [Product short](includes/product-short.md)] vous permet de découvrir l’étendue de la violation pour chaque incident, d’examiner les entités impliquées et de déterminer comment y remédier.
 
 Les informations supervisées par [!INCLUDE [Product short](includes/product-short.md)] sont présentées sous la forme d’activités. [!INCLUDE [Product short](includes/product-short.md)] prend actuellement en charge la supervision des types d’activités suivants :
 
@@ -79,7 +77,7 @@ Les informations supervisées par [!INCLUDE [Product short](includes/product-sho
 |Activité supervisée|Description|
 |---------------------|------------------|
 |Réplication du service d’annuaire|L’utilisateur a tenté de répliquer le service d’annuaire.|
-|Requête DNS|Type de requête effectuée par l’utilisateur sur le contrôleur de domaine ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
+|Requête DNS|Type de requête effectuée par l’utilisateur sur le contrôleur de domaine (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Extraction de données privées|L’utilisateur a tenté ou a réussi à interroger des données privées à l’aide du protocole LSARPC.|
 |Création de service|L’utilisateur a tenté de créer un service sur un ordinateur distant.|
 |Énumération des sessions SMB|L’utilisateur a tenté d’énumérer tous les utilisateurs ayant une session SMB ouverte sur les contrôleurs de domaine.|

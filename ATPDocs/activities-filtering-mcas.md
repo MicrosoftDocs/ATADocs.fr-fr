@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e20bbb73e916c9ea7139ac17a59cd7de2f1a08a4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 0f6a359745ae03ce0b982e00b7f4c06d556eb702
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276955"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848820"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Utilisez les filtres d’activité et créez des stratégies d’action avec [!INCLUDE [Product long](includes/product-long.md)] dans Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article est conçu pour vous aider à comprendre comment filtrer et créer des stratégies d’action pour les [!INCLUDE [Product short](includes/product-short.md)] activités à l’aide de Microsoft Cloud App Security.
 
@@ -76,4 +74,4 @@ En savoir plus sur le scoring de priorité d’examen et les fonctionnalités su
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Avez-vous d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) !

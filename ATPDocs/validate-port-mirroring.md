@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7a665a20da3940b3146a007eea6ee75bd35d7930
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: a6b3a3ef5d16a3e92a4bcf6a8d52d96c9c4036ce
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274059"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846729"
 ---
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article ne s’applique que dans le cadre du déploiement du capteur autonome [!INCLUDE [Product long](includes/product-long.md)] plutôt que du capteur [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -46,7 +44,7 @@ Les étapes suivantes sont conçues pour vous guider dans le processus de valida
 
         ![Image de la création d’un nouvel onglet de capture](media/port-mirroring-capture.png)
 
-1. Dans la fenêtre Filtre d’affichage, entrez le filtre **KerberosV5 OR LDAP** , puis cliquez sur **Appliquer**.
+1. Dans la fenêtre Filtre d’affichage, entrez le filtre **KerberosV5 OR LDAP**, puis cliquez sur **Appliquer**.
 
     ![Image de l’application du filtre KerberosV5 or LDAP](media/port-mirroring-filter-settings.png)
 

@@ -9,30 +9,28 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9cac463b5a99075901a9c0f68db37affcb50cf9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 2fa0a70299b897a2c8b29e01ebb97e9740b0eb66
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276802"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848616"
 ---
 # <a name="plan-capacity-for-product-long"></a>Planifier la capacité pour [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide, vous déterminez le nombre de [!INCLUDE [Product long](includes/product-long.md)] capteurs dont vous avez besoin.
 
 ## <a name="prerequisites"></a>Prérequis
 
 - Téléchargez l' [ [!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool).
-- Passez en revue l’article sur l' [ [!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) .
-- Consultez l’article [ [!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md) .
+- Consultez l’article [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
+- Consultez l’article [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
 ## <a name="use-the-sizing-tool"></a>Utiliser l’outil de dimensionnement
 
 La façon la plus simple et recommandée pour déterminer la capacité de votre [!INCLUDE [Product short](includes/product-short.md)] déploiement consiste à utiliser l' [!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement. Si vous ne parvenez pas à utiliser l’outil, vous pouvez collecter manuellement les informations sur le trafic. Pour plus d’informations la méthode manuelle, consultez la section [Estimateur de trafic du contrôleur de domaine](#manual-sizing) au bas de cet article.
 
-1. Exécutez l' [!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement, **TriSizingTool.exe** , à partir du fichier zip que vous avez téléchargé.
+1. Exécutez l' [!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement, **TriSizingTool.exe**, à partir du fichier zip que vous avez téléchargé.
 1. Lorsque l’exécution de l’outil est terminée, ouvrez le fichier Excel des résultats.
 1. Dans le fichier Excel, recherchez et cliquez sur la feuille **Résumé Azure ATP**. L’autre feuille n’est pas nécessaire, car elle concerne la planification d’ATA.
     ![Exemple d’outil de planification des capacités](media/capacity-tool.png)
@@ -44,7 +42,7 @@ La façon la plus simple et recommandée pour déterminer la capacité de votre 
 
 Un [!INCLUDE [Product short](includes/product-short.md)] capteur peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau généré par le contrôleur de domaine. Le tableau suivant est une estimation. La quantité finale analysée par le capteur étant dépendante du volume et de la distribution du trafic.
 
-La capacité de processeur et de mémoire vive (RAM) suivante fait référence à la **consommation propre du capteur** , et pas à la capacité du contrôleur de domaine.
+La capacité de processeur et de mémoire vive (RAM) suivante fait référence à la **consommation propre du capteur**, et pas à la capacité du contrôleur de domaine.
 
 |Paquets par seconde|Processeur (cœurs)\*|Mémoire\*\* (Go)|
 |----|----|-----|
@@ -97,7 +95,7 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 
     ![Image d’Ensembles de collecteurs de données](media/traffic-estimation-2.png)
 
-1. Cliquez avec le bouton de droite sur **Défini par l’utilisateur** , puis sélectionnez **Nouveau**  &gt; **Ensemble de collecteurs de données**.
+1. Cliquez avec le bouton de droite sur **Défini par l’utilisateur**, puis sélectionnez **Nouveau** &gt; **Ensemble de collecteurs de données**.
 
     ![Image du nouvel ensemble de collecteurs de données](media/traffic-estimation-3.png)
 
@@ -109,7 +107,7 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 
 1. Sous **Quels compteurs de performance enregistrer dans un journal ?** , cliquez sur **Ajouter**.
 
-1. Développez **Carte réseau**. Sélectionnez **Paquets/s** , puis l’instance appropriée. Si vous n’êtes pas sûr, vous pouvez sélectionner **&lt;Toutes les instances&gt;** , puis cliquer sur **Ajouter** et **OK**.
+1. Développez **Carte réseau**. Sélectionnez **Paquets/s**, puis l’instance appropriée. Si vous n’êtes pas sûr, vous pouvez sélectionner **&lt;Toutes les instances&gt;** , puis cliquer sur **Ajouter** et **OK**.
 
     > [!NOTE]
     > Pour effectuer cette opération dans une ligne de commande, exécutez `ipconfig /all` pour afficher le nom de la carte réseau et sa configuration.
@@ -120,7 +118,7 @@ Pour déterminer le nombre de paquets par seconde, effectuez les étapes suivant
 
 1. Définissez l’emplacement où vous voulez enregistrer les données.
 
-1. Sous **Créer l’ensemble de collecteurs de données** , sélectionnez **Démarrer maintenant cet ensemble de collecteurs de données** , puis cliquez sur **Terminer**.
+1. Sous **Créer l’ensemble de collecteurs de données**, sélectionnez **Démarrer maintenant cet ensemble de collecteurs de données**, puis cliquez sur **Terminer**.
 
     Vous devez maintenant voir l’ensemble de collecteurs de données que vous venez de créer avec un triangle vert indiquant qu’il est activé.
 
@@ -143,4 +141,4 @@ Dans ce guide, vous avez déterminé le nombre de [!INCLUDE [Product short](incl
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://aka.ms/MDIcommunity) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) !

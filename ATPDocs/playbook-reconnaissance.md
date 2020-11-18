@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 25f21451a61f3d41b5694e3b594769e4f8b1614b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b3b0ecf72ae1b7f8b1ebaf3756433afd297dde
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275760"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847188"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Le deuxième tutoriel de cette série en quatre parties sur les alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est un playbook sur la reconnaissance. L’objectif du labo des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Le playbook explique comment tester certaines détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)] et se concentre sur ses fonctionnalités liées à la *signature*. Ce playbook n’inclut pas les alertes ou les détections basées sur le Machine Learning avancé, ni les détections de comportements basées utilisateur/entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur les différents tutoriels de cette série, consultez la [vue d’ensemble des labos des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -58,7 +56,7 @@ Une des premières choses que fait un attaquant est d’essayer d’obtenir une 
 
 ### <a name="run-nslookup-from-victimpc"></a>Exécuter nslookup à partir de VictimPC
 
-Pour tester la reconnaissance DNS, nous utilisons l’outil de ligne de commande natif, *nslookup* , pour lancer un transfert de zone DNS. Les serveurs DNS avec une configuration correcte refusent les requêtes de ce type et n’autorisent pas la tentative de transfert de zone.
+Pour tester la reconnaissance DNS, nous utilisons l’outil de ligne de commande natif, *nslookup*, pour lancer un transfert de zone DNS. Les serveurs DNS avec une configuration correcte refusent les requêtes de ce type et n’autorisent pas la tentative de transfert de zone.
 
 Connectez-vous à **VictimPC** avec les informations d’identification JeffL compromises. Exécutez la commande suivante :
 
@@ -66,7 +64,7 @@ Connectez-vous à **VictimPC** avec les informations d’identification JeffL co
 nslookup
 ```
 
-Tapez **serveur** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel est installé le capteur [!INCLUDE [Product short](includes/product-short.md)].
+Tapez **serveur**, puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel est installé le capteur [!INCLUDE [Product short](includes/product-short.md)].
 
 ```nslookup
 server contosodc.contoso.azure
@@ -88,7 +86,7 @@ Si **ContsoDC** est votre premier capteur déployé, attendez 15 minutes pour pe
 
 La visibilité de ce type de tentative (réussie ou non) est essentielle pour la protection contre les menaces de domaine. Après l’installation récente de l’environnement, vous devez accéder à la **chronologie des activités logiques** pour voir l’activité détectée.
 
-Dans la recherche [!INCLUDE [Product short](includes/product-short.md)], tapez **VictimPC** , puis cliquez dessus pour afficher la chronologie.
+Dans la recherche [!INCLUDE [Product short](includes/product-short.md)], tapez **VictimPC**, puis cliquez dessus pour afficher la chronologie.
 
 ![Vue générale de la détection de reconnaissance DNS par [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-recon-nslookupdetection1.png)
 
@@ -112,7 +110,7 @@ Pour illustrer une méthode de reconnaissance de service d’annuaire commune, n
 
 N’importe quel ordinateur ou utilisateur authentifié peut potentiellement énumérer d’autres utilisateurs et groupes dans un domaine. Cette capacité d’énumération est requise pour le bon fonctionnement de la plupart des applications. Notre utilisateur compromis, JeffL, est un compte de domaine non privilégié. Lors de cette attaque simulée, nous verrons exactement comment même un compte de domaine non privilégié peut toujours fournir des points de données à un attaquant.
 
-1. À partir de **VictimPC** , exécutez la commande suivante :
+1. À partir de **VictimPC**, exécutez la commande suivante :
 
     ```dos
     net user /domain
@@ -156,7 +154,7 @@ Avec les informations collectées lors de notre reconnaissance, nous connaissons
 
 ### <a name="directory-service-enumeration-detected-in-product-short"></a>Détection de l’énumération des services d’annuaire dans [!INCLUDE [Product short](includes/product-short.md)]
 
-Si notre labo avait une *activité réelle en direct pendant 30 jours une fois [!INCLUDE [Product short](includes/product-short.md)] installé* , l’activité de JeffL serait potentiellement considérée comme anormale. Une activité anormale s’afficherait dans la chronologie des activités suspectes. Cependant, étant donné que nous venons d’installer l’environnement, nous devons accéder à la chronologie des activités logiques.
+Si notre labo avait une *activité réelle en direct pendant 30 jours une fois [!INCLUDE [Product short](includes/product-short.md)] installé*, l’activité de JeffL serait potentiellement considérée comme anormale. Une activité anormale s’afficherait dans la chronologie des activités suspectes. Cependant, étant donné que nous venons d’installer l’environnement, nous devons accéder à la chronologie des activités logiques.
 
 Dans la recherche [!INCLUDE [Product short](includes/product-short.md)], voyons à quoi ressemble la chronologie des activités logiques de JeffL :
 
@@ -168,7 +166,7 @@ Nous pouvons voir lorsque JeffL est connecté à VictimPC à l’aide du protoco
 
 De nombreuses activités sont consignées dans la chronologie des activités logiques, qui est une fonctionnalité majeure pour la forensique numérique et la réponse aux incidents (DFIR). Sont également visibles les activités initialement détectées non par [!INCLUDE [Product short](includes/product-short.md)], mais par Microsoft Defender pour point de terminaison, Microsoft 365 ou autre.
 
-En jetant un coup d’œil à la **page de ContosoDC** , nous pouvons également voir les ordinateurs auxquels JeffL s’est connecté.
+En jetant un coup d’œil à la **page de ContosoDC**, nous pouvons également voir les ordinateurs auxquels JeffL s’est connecté.
 
 ![JeffL connecté aux ordinateurs](media/playbook-recon-dsenumeration-jeffvloggedin.png)
 

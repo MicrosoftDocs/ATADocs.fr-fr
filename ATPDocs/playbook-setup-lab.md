@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8adbc288f2512b6322797931b8fcb2a17649e8a4
-ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
+ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278612"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847052"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutoriel : Configuration d’un labo d’alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 L’objectif du labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Ce premier tutoriel d’une série en quatre parties explique comment créer un environnement labo permettant de tester les détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)]. Le labo des alertes de sécurité se concentre sur les fonctionnalités liées à la *signature* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo n’inclut pas le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur les différents tutoriels de cette série, consultez la [vue d’ensemble des labos des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -124,14 +122,14 @@ Pour autoriser le Service [!INCLUDE [Product short](includes/product-short.md)] 
 
 ### <a name="add-sensitive-group-to-product-short"></a>Ajout d’un groupe sensible à [!INCLUDE [Product short](includes/product-short.md)]
 
-Après avoir ajouté le groupe de sécurité « Support technique » comme **Groupe sensible** , vous pourrez utiliser la fonctionnalité de graphe de mouvement latéral de [!INCLUDE [Product short](includes/product-short.md)]. Le balisage d’utilisateurs et de groupes très sensibles qui ne sont pas nécessairement des administrateurs de domaine mais disposent de privilèges pour de nombreuses ressources est une meilleure pratique.
+Après avoir ajouté le groupe de sécurité « Support technique » comme **Groupe sensible**, vous pourrez utiliser la fonctionnalité de graphe de mouvement latéral de [!INCLUDE [Product short](includes/product-short.md)]. Le balisage d’utilisateurs et de groupes très sensibles qui ne sont pas nécessairement des administrateurs de domaine mais disposent de privilèges pour de nombreuses ressources est une meilleure pratique.
 
 1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Configuration**.
 
-1. Sous **Détection** , sélectionnez **Étiquettes d’entité**.
+1. Sous **Détection**, sélectionnez **Étiquettes d’entité**.
 
     ![Étiquettes d’entité [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
-1. Dans la section **Sensible** , tapez le nom « Support technique » pour **Groupes sensibles** , puis cliquez sur le signe **+** pour les ajouter.
+1. Dans la section **Sensible**, tapez le nom « Support technique » pour **Groupes sensibles**, puis cliquez sur le signe **+** pour les ajouter.
     ](media/playbook-labsetup-helpdesksensitivegroup.png)Étiquetage de « Support technique » comme groupe sensible [!INCLUDE [Product short](includes/product-short.md)] pour activer les graphes et les rapports de mouvement latéral de ce groupe privilégié![
 1. Cliquez sur **Enregistrer**.
 
@@ -218,14 +216,14 @@ Nous remercions les auteurs de ces outils de recherche d’avoir permis à la co
     Remove-LocalGroupMember -Group "Administrators" -Member "Domain Admins"
     ```
 
-1. Après avoir exécuté le script, **Support technique** se trouve dans la liste locale **Administrateurs** > **Membres** d’ **AdminPC**.
+1. Après avoir exécuté le script, **Support technique** se trouve dans la liste locale **Administrateurs** > **Membres** d’**AdminPC**.
 ![Support technique dans le groupe d’administrateurs locaux pour AdminPC](media/playbook-labsetup-localgrouppolicies1.png)
 
 ### <a name="simulate-domain-activities-from-adminpc"></a>Simulez des activités de domaine à partir d’AdminPC
 
 Des activités de domaine simulées sont nécessaires à partir de SamiraA. Cette étape peut être effectuée manuellement, ou à l’aide du script PowerShell fourni. Le script PowerShell accède au contrôleur de domaine toutes les 5 minutes et entraîne dans l’activité réseau simulée en tant que Samira.
 
-En tant que **SamiraA** , exécutez le script suivant dans une invite PowerShell d’AdminPC :
+En tant que **SamiraA**, exécutez le script suivant dans une invite PowerShell d’AdminPC :
 
 ```powerShell
 while ($true)
@@ -250,7 +248,7 @@ Passez en revue la liste de vérification pour vous assurer que la configuration
 
 ## <a name="mission-accomplished"></a>Mission accomplie !
 
-Votre labo [!INCLUDE [Product short](includes/product-short.md)] est maintenant prêt à l’emploi. Les méthodes utilisées dans cette configuration ont été choisies sachant que les ressources doivent être gérées (par *quelque chose* ou *quelqu'un* ) et que la gestion nécessite des privilèges d’administrateur local. Il y a d’autres manières de simuler un flux de travail de gestion dans le labo :
+Votre labo [!INCLUDE [Product short](includes/product-short.md)] est maintenant prêt à l’emploi. Les méthodes utilisées dans cette configuration ont été choisies sachant que les ressources doivent être gérées (par *quelque chose* ou *quelqu'un*) et que la gestion nécessite des privilèges d’administrateur local. Il y a d’autres manières de simuler un flux de travail de gestion dans le labo :
 
 - Connexion et déconnexion de VictimPC avec le compte de RonHD
 - Ajout d’une autre version d’une tâche planifiée

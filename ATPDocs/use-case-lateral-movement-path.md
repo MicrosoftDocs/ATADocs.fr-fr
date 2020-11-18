@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3676eb1b7a4528fcbd6d45b4052c5a49f03c4718
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d6d8706e750ed7db841ea9483af8eb86f15b857c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277707"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848888"
 ---
 # <a name="product-long-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
@@ -80,7 +78,7 @@ Les insights de sécurité ne sont jamais trop tardifs pour empêcher l’attaqu
 
 - Veillez à ce que les utilisateurs n’aient accès qu’aux ressources nécessaires. Dans l’exemple, Ron Harper étend considérablement l’exposition de Nick Cowley. Est-il nécessaire que Ron Harper soit inclus dans le groupe ? Serait-il possible de créer des sous-groupes pour minimiser l’exposition aux mouvements latéraux ?
 
-**Conseil**  : Quand aucun risque d’activité de chemin de mouvement latéral n’est détecté pour une entité au cours des dernières 48 heures, choisissez d’ **afficher une autre date** et recherchez des chemins de mouvement latéral potentiels antérieurs. Le **rapport des chemins de mouvement latéral vers les utilisateurs sensibles** est toujours disponible si des chemins de mouvement latéral ont été détectés et vous fournit des informations sur les chemins de mouvement latéral potentiels détectés pour les utilisateurs sensibles.
+**Conseil** : Quand aucun risque d’activité de chemin de mouvement latéral n’est détecté pour une entité au cours des dernières 48 heures, choisissez d’**afficher une autre date** et recherchez des chemins de mouvement latéral potentiels antérieurs. Le **rapport des chemins de mouvement latéral vers les utilisateurs sensibles** est toujours disponible si des chemins de mouvement latéral ont été détectés et vous fournit des informations sur les chemins de mouvement latéral potentiels détectés pour les utilisateurs sensibles.
 
 **Conseil** : pour savoir comment configurer vos clients et serveurs de façon à autoriser [!INCLUDE [Product short](includes/product-short.md)] à effectuer les opérations SAM-R nécessaires à la détection des chemins de mouvement latéral, consultez [Configuration de SAM-R](install-step8-samr.md).
 

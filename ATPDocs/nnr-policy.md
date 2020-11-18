@@ -11,22 +11,20 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 228d583fde3e08c497721e0aa5a8aa1b61318937
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9b9688031ea9916a09b8beaa2ce5c67633fd935f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274788"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847239"
 ---
 # <a name="what-is-network-name-resolution"></a>Présentation de la résolution de noms réseau
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 La résolution de noms de réseau (NNR) est un composant principal des  [!INCLUDE [Product long](includes/product-long.md)] fonctionnalités. [!INCLUDE [Product short](includes/product-short.md)] capture les activités basées sur le trafic réseau, les événements Windows et ETW. ces activités contiennent normalement des données IP.
 
 À l’aide de NNR, [!INCLUDE [Product short](includes/product-short.md)] peut corréler entre des activités brutes (contenant des adresses IP) et les ordinateurs concernés impliqués dans chaque activité. En fonction des activités brutes, [!INCLUDE [Product short](includes/product-short.md)] profils entités, y compris les ordinateurs, et génère des alertes de sécurité pour les activités suspectes.
 
-Pour résoudre les adresses IP en noms d’ordinateur, [!INCLUDE [Product short](includes/product-short.md)] les capteurs recherchent les adresses IP à l’aide des méthodes suivantes :
+Pour résoudre les adresses IP en noms d’ordinateur, les capteurs [!INCLUDE [Product short](includes/product-short.md)] recherchent les adresses IP à l’aide des méthodes suivantes :
 
 - NTLM sur RPC (port TCP 135)
 - NetBIOS (port UDP 137)
@@ -51,12 +49,12 @@ Les données NNR sont cruciales pour détecter les alertes suivantes :
 - Suspicion d’attaque DCSync (réplication de services d’annuaire)
 - Reconnaissance de mappage de réseau (DNS)
 
-Pour améliorer votre capacité à déterminer si une alerte est un **vrai positif (TP)** ou un **faux positif (FP)** , [!INCLUDE [Product short](includes/product-short.md)] comprend le degré de certitude de la résolution des noms d’ordinateur dans la preuve de chaque alerte de sécurité.
+Pour améliorer votre capacité à déterminer si une alerte est un **vrai positif (TP)** ou un **faux positif (FP)**, [!INCLUDE [Product short](includes/product-short.md)] comprend le degré de certitude de la résolution des noms d’ordinateur dans la preuve de chaque alerte de sécurité.
 
-Par exemple, si des noms d’ordinateurs sont résolus avec une **certitude élevée** , cela augmente la confiance que l’alerte de sécurité qui en résulte est un **vrai positif** ou **TP**.
+Par exemple, si des noms d’ordinateurs sont résolus avec une **certitude élevée**, cela augmente la confiance que l’alerte de sécurité qui en résulte est un **vrai positif** ou **TP**.
 
-La preuve inclut l’heure, l’adresse IP et le nom de l’ordinateur qui ont permis la résolution de l’adresse IP. Lorsque la certitude de résolution est **faible** , utilisez ces informations pour identifier l’appareil qui était la source réelle de l’adresse IP à cet instant.
-Après avoir confirmé l’appareil, vous pouvez déterminer si l’alerte est un **faux positif** ou **FP** , comme dans les exemples suivants :
+La preuve inclut l’heure, l’adresse IP et le nom de l’ordinateur qui ont permis la résolution de l’adresse IP. Lorsque la certitude de résolution est **faible**, utilisez ces informations pour identifier l’appareil qui était la source réelle de l’adresse IP à cet instant.
+Après avoir confirmé l’appareil, vous pouvez déterminer si l’alerte est un **faux positif** ou **FP**, comme dans les exemples suivants :
 
 - Suspicion d’usurpation d’identité (pass-the-ticket) : l’alerte a été déclenchée pour le même ordinateur.
 - Suspicion d’attaque DCSync (réplication de services d’annuaire) : l’alerte a été déclenchée à partir d’un contrôleur de domaine.
@@ -101,6 +99,6 @@ Chaque alerte d’intégrité fournit des détails spécifiques sur la méthode,
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

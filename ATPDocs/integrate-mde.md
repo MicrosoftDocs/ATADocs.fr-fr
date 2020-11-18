@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0e059516346d5b2c832e5bd5ea73008b1f51082
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 50bb601a00396aefee99d5115b1eb8825e74e39c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278085"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848548"
 ---
 # <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Intégrer [!INCLUDE [Product long](includes/product-long.md)] à Microsoft Defender for Endpoint
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] permet une intégration à [!INCLUDE [Product long](includes/product-long.md)] Defender for Endpoint, pour une solution de protection des menaces encore plus complète. Tandis que [!INCLUDE [Product short](includes/product-short.md)] surveille le trafic sur vos contrôleurs de domaine, Defender for Endpoint surveille vos points de terminaison, en fournissant une interface unique à partir de laquelle vous pouvez protéger votre environnement.
 
@@ -59,14 +57,14 @@ Pour activer cette fonctionnalité, vous avez besoin d’une licence pour [!INCL
 
 ## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Comment intégrer à [!INCLUDE [Product short](includes/product-short.md)] Defender pour le point de terminaison
 
-1. Dans le [!INCLUDE [Product short](includes/product-short.md)] portail, sélectionnez **configuration**.
+1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Configuration**.
 
     ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] menu de configuration](media/msde-configuration.png)
 1. Dans la liste configurations, sélectionnez **Microsoft Defender pour point de terminaison** et définissez le basculement de l’intégration **sur activé**.
 
     ![Activer l’intégration de Windows Defender](media/msde-enable-integration.png)
 
-1. Dans le [portail Defender pour les points de terminaison](https://securitycenter.windows.com/preferences/advanced), accédez à **paramètres** , **fonctionnalités avancées** et définissez **[!INCLUDE [Product long](includes/product-long.md)] intégration** sur **activé**.
+1. Dans le [portail Defender pour les points de terminaison](https://securitycenter.windows.com/preferences/advanced), accédez à **paramètres**, **fonctionnalités avancées** et définissez **[!INCLUDE [Product long](includes/product-long.md)] intégration** sur **activé**.
 
     ![Defender pour le point de terminaison activer l’intégration](media/msde-enable.png)
 
@@ -96,7 +94,7 @@ Si vous cliquez sur le badge, vous êtes dirigé vers le portail Defender pour l
 ## <a name="see-also"></a>Voir aussi
 
 - [Examen des chemins de mouvement latéral avec [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Outil de dimensionnement [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
 - [Installer [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af05ee5bbd064e31b231ad36374b4c069d8f7cfc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 20e02b3281480024b67a1ef5908d82586c11f955
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275387"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849018"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dès que le premier [!INCLUDE [Product long](includes/product-long.md)] capteur est installé et configuré sur un contrôleur de domaine de votre réseau, [!INCLUDE [Product short](includes/product-short.md)] commence à surveiller votre environnement pour les contrôleurs de domaine.
 
@@ -40,13 +38,13 @@ Le fichier Excel téléchargé contient les informations de couverture suivantes
 
 |Intitulé|Description|
 |----|----|
-|Nom d’hôte|Nom de l'ordinateur|
+|HostName|Nom de l'ordinateur|
 |Nom de domaine|Nom de domaine|
 |Surveillé|[!INCLUDE [Product short](includes/product-short.md)] État de l’analyse|
 |Type de capteur|[!INCLUDE [Product short](includes/product-short.md)] capteur ou [!INCLUDE [Product short](includes/product-short.md)] capteur autonome|
-|Unité d’organisation|Emplacement dans Active Directory |
+|Unité d'organisation|Emplacement dans Active Directory |
 |Version du système d'exploitation| Version du système d’exploitation détecté|
-|Adresse IP|Adresse IP détectée|
+|Adresse IP|Adresse IP détectée|
 
 ## <a name="search-domain-controllers"></a>Rechercher les contrôleurs de domaine
 
@@ -63,7 +61,7 @@ La gestion de votre flotte de capteurs et de contrôleurs de domaine peut consti
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
 - [Configuration des [!INCLUDE [Product short](includes/product-short.md)] capteurs](install-step5.md)
 - [Prise en charge de plusieurs forêts](multi-forest.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

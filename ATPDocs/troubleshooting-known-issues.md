@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
-ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
+ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375554"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848922"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensor-failure-communication-error"></a>Erreur d’échec de communication du capteur
 
@@ -142,7 +140,7 @@ Si vous avez déjà installé le capteur :
 
 ## <a name="multi-processor-group-mode"></a>Mode Groupe multiprocesseur
 
-Pour les systèmes d’exploitation Windows 2008R2 et 2012, [!INCLUDE [Product short](includes/product-short.md)] le capteur n’est pas pris en charge dans un mode de groupe à plusieurs processeurs.
+Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur [!INCLUDE [Product short](includes/product-short.md)] n’est pas pris en charge en mode Groupe multiprocesseur.
 
 Solutions de contournement possibles :
 
@@ -210,8 +208,8 @@ Aucune solution connue.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurer la collecte d’événements](configure-event-collection.md)
 - [Configuration du transfert d’événements Windows](configure-event-forwarding.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

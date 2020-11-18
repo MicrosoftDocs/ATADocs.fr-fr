@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f3a6771591fb3e3d63a45887b1f7a89bddc57d7
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 7d2097a4d65cd3b153bc111d87092dcbf8ff9d74
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275722"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847256"
 ---
 # <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] prise en charge de plusieurs forêts
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="multi-forest-support-set-up"></a>Configuration de la prise en charge de plusieurs forêts
 
@@ -44,9 +42,9 @@ Pour détecter les activités inter-forêts, [!INCLUDE [Product short](includes/
   - Les informations d’identification supplémentaires sont requises uniquement pour chaque forêt disposant d’une approbation non-Kerberos ou d’aucune approbation.
   - Il existe une limite par défaut de 10 forêts non approuvées par [!INCLUDE [Product short](includes/product-short.md)] instance. Si votre organisation possède plus de 10 forêts, contactez le support.
 
-![[! INCLUDe [Product Short] (includes/Product-Short. MD)] étape de bienvenue 1](media/directory-services-add-no-trust-forests.png)
+![Étape 1 de bienvenue [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services-add-no-trust-forests.png)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 - L’utilisateur que vous configurez dans la [!INCLUDE [Product short](includes/product-short.md)] console sous **services d’annuaire** doit être approuvé dans toutes les autres forêts et doit avoir au moins l’autorisation lecture seule pour exécuter des requêtes LDAP sur les contrôleurs de domaine.
 - Si des [!INCLUDE [Product short](includes/product-short.md)] capteurs autonomes sont installés sur des ordinateurs autonomes, plutôt que directement sur les contrôleurs de domaine, assurez-vous que les ordinateurs sont autorisés à communiquer avec tous les contrôleurs de domaine de la forêt distante à l’aide de LDAP.
@@ -56,7 +54,7 @@ Pour détecter les activités inter-forêts, [!INCLUDE [Product short](includes/
   |Protocole|Transport|Port|Vers/À partir de|Sens|
   |----|----|----|----|----|
   |**Ports Internet**||||
-  |SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] service Cloud|Sortant|
+  |SSL (*.atp.azure.com)|TCP|443|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|Sortant|
   |**Ports internes**||||
   |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
   |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
@@ -78,7 +76,7 @@ Lorsque [!INCLUDE [Product short](includes/product-short.md)] mappe vos forêts,
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Outil de dimensionnement [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
 - [Installer [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

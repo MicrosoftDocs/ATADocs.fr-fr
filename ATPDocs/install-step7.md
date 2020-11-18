@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 68ed20a243a307992b2d11c633728bf34abf6302
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fb4aa3b26c9026a62aac81bd1a88b50b95141ecd
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277031"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848480"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurer des exclusions d’adresses IP et de comptes honeytoken
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] permet d’exclure des adresses IP ou des utilisateurs spécifiques d’un certain nombre de détections.
 
@@ -30,13 +28,13 @@ Par exemple, une **exclusion DNS Reconnaissance** peut être un analyseur de sé
 
 Pour la configuration, procédez comme suit :
 
-1. À partir du [!INCLUDE [Product short](includes/product-short.md)] portail, cliquez sur l’icône des paramètres et sélectionnez **configuration**.
+1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur l’icône des paramètres, puis sélectionnez **Configuration**.
 
     ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] paramètres de configuration](media/config-menu.png)
 
-1. Sous **Détection** , cliquez sur **Étiquettes d’entité**.
+1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
 
-1. Sous **Comptes Honeytoken** , entrez le nom du compte Honeytoken et cliquez sur le signe **+** . Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Save**.
+1. Sous **Comptes Honeytoken**, entrez le nom du compte Honeytoken et cliquez sur le signe **+** . Le champ des comptes Honeytoken peut faire l’objet d’une recherche et affiche automatiquement les entités dans votre réseau. Cliquez sur **Save**.
 
     ![Honeytoken](media/honeytoken-sensitive.png)
 
@@ -55,7 +53,7 @@ Vérifiez la chronologie des attaques pour afficher les alertes de sécurité g�
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

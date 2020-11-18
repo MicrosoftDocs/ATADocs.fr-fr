@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 269343e6cdc5ceba875d5b6de1c740415a862eca
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9a3927c565f3b2e7173519c31cb3bfcde9eed2a7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275314"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848990"
 ---
 # <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] groupes de rôles
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] offre une sécurité basée sur les rôles pour protéger les données en fonction des besoins spécifiques d’une organisation en matière de sécurité et de conformité. [!INCLUDE [Product short](includes/product-short.md)] prise en charge de trois rôles distincts : administrateurs, utilisateurs et visionneuses.
 
@@ -69,7 +67,7 @@ Lorsque les utilisateurs essaient d’accéder à une page qui n’est pas dispo
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] SOA](architecture.md)
+- [Outil de dimensionnement [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
 - [Installer [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

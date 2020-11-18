@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 032a5f289657485b744ad335dc51777a8ba72602
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 368b328cb6863074bd47f0785aafccf7f491fa54
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275040"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847341"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -45,7 +43,7 @@ Dans ce guide, vous allez :
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Un locataire Azure Active Directory avec au moins un administrateur global/de sécurité est requis pour créer une [!INCLUDE [Product short](includes/product-short.md)] instance. Chaque [!INCLUDE [Product short](includes/product-short.md)] instance de prend en charge plusieurs Active Directory limite de forêt et de niveau fonctionnel de forêt (FFL) de Windows 2003 et versions ultérieures.
+- Un locataire Azure Active Directory avec au moins un administrateur global/de sécurité est requis pour créer une [!INCLUDE [Product short](includes/product-short.md)] instance. Chaque instance [!INCLUDE [Product short](includes/product-short.md)] prend en charge une limite de forêt Active Directory multiple et le niveau fonctionnel de forêt (FFL) Windows 2003 et versions ultérieures.
 
 - [!INCLUDE [Product short](includes/product-short.md)] nécessite .NET Framework 4,7 ou une version ultérieure et peut nécessiter un contrôleur de domaine (redémarrage) si la version actuelle de .NET Framework n’est pas 4,7 ou version ultérieure.
 
@@ -147,4 +145,4 @@ En savoir plus sur [[!INCLUDE [Product short](includes/product-short.md)]](what-
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Avez-vous d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) !

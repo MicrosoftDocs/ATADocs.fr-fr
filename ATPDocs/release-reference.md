@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3f8554cf5d3c01d4d8d54a289255070fdef0e52d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e582ebdaeab6f2dd462e9519f19dd568a3e96ee0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274557"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846865"
 ---
 # <a name="release-reference-of-product-long"></a>Référence de version de [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article est une référence de toutes les [!INCLUDE [Product short](includes/product-short.md)] versions (anciennement Azure-protection avancée contre les menaces, également appelées Azure ATP) jusqu’à la version 2,55 (et notamment). Pour les [!INCLUDE [Product short](includes/product-short.md)] mises à jour récentes de [ [!INCLUDE [Product short](includes/product-short.md)] la](whats-new.md)version (2,56 et versions ultérieures), consultez Nouveautés.
 
@@ -87,7 +85,7 @@ Le contenu de la documentation Azure ATP a fait récemment l’objet de modifica
 
 Publication : 21 octobre 2018
 
-- Maintenant, vous pouvez activer/désactiver l’ **intégration WD-ATP** à partir de l’écran [Configuration](integrate-mde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
+- Maintenant, vous pouvez activer/désactiver l’**intégration WD-ATP** à partir de l’écran [Configuration](integrate-mde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) du portail Azure ATP. (Pour accéder à cette fonctionnalité, l’utilisateur Azure ATP doit être administrateur général ou de la sécurité sur le locataire AAD).
 
 - Cette version contient également des améliorations et des correctifs de bogues pour l’infrastructure des capteurs internes.
 
@@ -351,7 +349,7 @@ Date de publication : 25 mars 2018
 Date de publication : 18 mars 2018
 
 - L’authentification multifacteur (MFA) est maintenant prise en charge dans Azure ATP. Les locataires qui utilisent MFA peuvent maintenant accéder au portail Azure ATP.
-- Azure ATP propose désormais une page [**État du système**](https://health.atp.azure.com/) pour vous indiquer si le portail de gestion Espace de travail est opérationnel et actif, s’il existe des problèmes avec les détections et si la sonde est en mesure d’envoyer du trafic vers le cloud. Vous pouvez accéder à l’ **État du système** dans la barre de menus Azure ATP.
+- Azure ATP propose désormais une page [**État du système**](https://health.atp.azure.com/) pour vous indiquer si le portail de gestion Espace de travail est opérationnel et actif, s’il existe des problèmes avec les détections et si la sonde est en mesure d’envoyer du trafic vers le cloud. Vous pouvez accéder à l’**État du système** dans la barre de menus Azure ATP.
 
 ## <a name="azure-atp-release-224"></a>Azure ATP version 2.24
 
@@ -376,8 +374,8 @@ L’infrastructure des capteurs Azure ATP a été améliorée au niveau des perf
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Qu’est-ce que c’est [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)
-- [Forum Aux Questions (FAQ)](technical-faq.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] planification de la capacité](capacity-planning.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Qu’est-ce que [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
+- [Forum aux questions](technical-faq.md)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planification de capacité [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

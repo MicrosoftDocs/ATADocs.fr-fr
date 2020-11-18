@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e2ac1109454e3bef9baec2197d4db7f73698ed6c
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d8625b9d6b634399f61201dc3bb7dd9c956fe36f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276493"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848242"
 ---
 # <a name="product-long-siem-log-reference"></a>Informations de référence sur les journaux SIEM [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product short](includes/product-short.md)] peut transférer les événements d’alerte de sécurité et d’intégrité à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
 
@@ -48,7 +46,7 @@ Le champ cs1 est l’URL de l’alerte.
 Le champ cs2 identifie s’il s’agit d’une alerte nouvelle ou mise à jour.
 
 > [!NOTE]
-> Si vous envisagez de créer une automatisation ou des scripts pour les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’utiliser le champ **externalId** pour identifier le type d’alerte au lieu d’utiliser le nom d’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’ **externalId** de chaque alerte est définitif. Pour obtenir la liste des ID externes, consultez [Mappage des noms d’alertes de sécurité et ID externes uniques](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+> Si vous envisagez de créer une automatisation ou des scripts pour les journaux SIEM [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’utiliser le champ **externalId** pour identifier le type d’alerte au lieu d’utiliser le nom d’alerte à cet effet. Les noms d’alerte peuvent parfois être modifiés alors que l’**externalId** de chaque alerte est définitif. Pour obtenir la liste des ID externes, consultez [Mappage des noms d’alertes de sécurité et ID externes uniques](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## <a name="sample-logs"></a>Exemples de journaux
 

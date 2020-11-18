@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74e97750d25f48522d38246337682e0399d24c4d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 3f32d974b9dcfb946279b14eebc116ca74b5b3f5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274478"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846916"
 ---
 # <a name="working-with-sensitive-accounts"></a>Utilisation de comptes sensibles
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensitive-entities"></a>Entités sensibles
 
@@ -47,7 +45,7 @@ Les groupes de la liste suivante sont considérés comme **Sensibles** par [!INC
   > [!NOTE]
   > Jusqu’en septembre 2018, les utilisateurs du Bureau à distance étaient aussi considérés automatiquement comme Sensibles par [!INCLUDE [Product short](includes/product-short.md)]. Les entités ou les groupes Bureau à distance ajoutés après cette date ne sont plus automatiquement marqués comme sensibles, contrairement aux entités ou groupes Bureau à distance ajoutés avant cette date, qui peuvent rester marqués comme sensibles. Ce paramètre Sensible peut désormais être modifié manuellement.
 
-En plus de ces groupes, [!INCLUDE [Product short](includes/product-short.md)] identifie les serveurs d’actifs de grande valeur suivants et les marque automatiquement comme **Sensibles**  :
+En plus de ces groupes, [!INCLUDE [Product short](includes/product-short.md)] identifie les serveurs d’actifs de grande valeur suivants et les marque automatiquement comme **Sensibles** :
 
 - Serveur de l’autorité de certification
 - Serveur DHCP
@@ -60,11 +58,11 @@ En plus de ces groupes, vous pouvez identifier manuellement des groupes ou des c
 
 1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Configuration**.
 
-1. Sous **Détection** , cliquez sur **Étiquettes d’entité**.
+1. Sous **Détection**, cliquez sur **Étiquettes d’entité**.
 
     ![Étiquettes d’entité [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
 
-1. Dans la section **Sensible** , tapez le nom des **comptes sensibles** et **groupes sensibles** , puis cliquez sur le signe **+** pour les ajouter.
+1. Dans la section **Sensible**, tapez le nom des **comptes sensibles** et **groupes sensibles**, puis cliquez sur le signe **+** pour les ajouter.
 
     ![Exemple de compte sensible [!INCLUDE [Product short](includes/product-short.md)]](media/sensitive-account-sample.png)
 

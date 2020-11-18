@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9586c5441f09959970752a15cfff3c2f953f1842
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 6a5d110d35ad3b49205d4c0b7b03412fe26626ae
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277591"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848786"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Évaluation de la sécurité : Entités exposant les informations d’identification en texte clair
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ![Empêcher l’exposition d’informations d’identification en texte clair dans Cloud App Security](media/cas-isp-clear-text-1.png)
 
@@ -48,4 +46,4 @@ Ce risque accru est dû au fait que le trafic non sécurisé, comme une liaison 
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

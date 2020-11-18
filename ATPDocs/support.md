@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b2b317bf7ca27a4158e741509f7b159457cd1698
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 2c35f69c3696e069cb48a6d1e04ba88b5d595ac0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274172"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848956"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informations et support
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Utilisez les ressources suivantes pour vous aider à en savoir plus sur, déployer et prendre en charge [!INCLUDE [Product long](includes/product-long.md)] votre organisation.
 
@@ -48,7 +46,7 @@ Pour les autres clients, utilisez les canaux de support comme suit :
 
 | Canaux|Instructions|
 |------|-----|
-|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure. <br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème** , choisissez **technique** , comme **service** sous sécurité & identité, choisissez **Azure-protection avancée contre les menaces**. <br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure. <br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème**, choisissez **technique**, comme **service** sous sécurité & identité, choisissez **Azure-protection avancée contre les menaces**. <br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Utiliser le [!INCLUDE [Product short](includes/product-short.md)] portail| 1. cliquez sur l’icône «  ? » dans la barre de navigation supérieure du [!INCLUDE [Product short](includes/product-short.md)] portail<br>2. recherchez [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Ouvrez un ticket d’incident.<br>-Sélectionnez « support »<br>4. Ouvrez un ticket d’incident. Si vous parvient à entrer dans le [!INCLUDE [Product short](includes/product-short.md)] portail, vous pouvez accéder au [portail de support assisté en ligne (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Pour d’autres options de support, demandez à votre contact Microsoft.

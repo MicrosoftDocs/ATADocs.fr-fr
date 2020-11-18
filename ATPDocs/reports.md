@@ -12,16 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c54fdf3c0bb5497ff482c961214718771263e732
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 68c129e0c92c369bb666483dc17013c54a84e282
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275456"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849041"
 ---
 # <a name="product-long-reports"></a>Rapports [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 La section Rapports [!INCLUDE [Product long](includes/product-long.md)] du portail [!INCLUDE [Product short](includes/product-short.md)] vous permet de planifier ou de générer et de télécharger immédiatement des rapports qui donnent des informations sur l’état du système et des entités. La fonctionnalité de rapports vous permet de créer des rapports sur l’intégrité du système, sur les alertes de sécurité et sur les chemins de mouvement latéral potentiels détectés dans votre environnement.
 
@@ -42,12 +40,12 @@ Pour générer un rapport à la demande :
 
 1. Dans la barre de menus du portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur l’icône Rapport ![icône Rapport](media/report-icon.png).
 
-1. Sous le type de rapport sélectionné, définissez les dates **De** et **À** , puis cliquez sur **Télécharger**.
+1. Sous le type de rapport sélectionné, définissez les dates **De** et **À**, puis cliquez sur **Télécharger**.
  ![Capture d’écran montrant le téléchargement du rapport](media/reports.png)
 
 Pour définir un rapport planifié :
 
-1. Cliquez sur **Définir les rapports planifiés** sur la page **Rapports** , ou sur **Rapports planifiés** sous Notifications et rapports sur la page de configuration du portail [!INCLUDE [Product short](includes/product-short.md)].
+1. Cliquez sur **Définir les rapports planifiés** sur la page **Rapports**, ou sur **Rapports planifiés** sous Notifications et rapports sur la page de configuration du portail [!INCLUDE [Product short](includes/product-short.md)].
 
     ![Planification de rapports](media/sched-reports.png)
 

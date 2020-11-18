@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b3aa953324e855cfe4aafb77ea6b1b1959b7f8c
-ms.sourcegitcommit: 90a332d67f62636b2d3a935f6bbdcbf24d74e6f0
+ms.openlocfilehash: 6b2b620895d0a59886a140ff340b6772744c6bac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94551661"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848650"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configuration des paramètres de proxy du point de terminaison et de connectivité Internet d’un capteur [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Chaque capteur [!INCLUDE [Product long](includes/product-long.md)] a besoin d’une connectivité Internet au service cloud [!INCLUDE [Product short](includes/product-short.md)] pour pouvoir envoyer ses données et fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web.
 
@@ -55,7 +53,7 @@ Vous pouvez utiliser l’une des méthodes alternatives suivantes pour configure
 
 Vous pouvez configurer votre serveur proxy suivant la configuration Microsoft Windows Internet (WinInet) pour permettre au capteur [!INCLUDE [Product short](includes/product-short.md)] d’envoyer des données de diagnostic et de communiquer avec le service cloud [!INCLUDE [Product short](includes/product-short.md)] quand un ordinateur n’est pas autorisé à se connecter à Internet. Si vous utilisez WinHTTP pour la configuration du proxy, vous devez quand même configurer les paramètres de proxy de navigateur Windows Internet (WinInet) pour la communication entre le capteur et le service cloud [!INCLUDE [Product short](includes/product-short.md)].
 
-Quand vous configurez le proxy, n’oubliez pas que le service de capteur [!INCLUDE [Product short](includes/product-short.md)] incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService** , tandis que le service de mise à jour du capteur [!INCLUDE [Product short](includes/product-short.md)] s’exécute dans le contexte du système à l’aide du compte **LocalSystem**.
+Quand vous configurez le proxy, n’oubliez pas que le service de capteur [!INCLUDE [Product short](includes/product-short.md)] incorporé s’exécute dans le contexte du système à l’aide du compte **LocalService**, tandis que le service de mise à jour du capteur [!INCLUDE [Product short](includes/product-short.md)] s’exécute dans le contexte du système à l’aide du compte **LocalSystem**.
 
 > [!NOTE]
 > Si vous utilisez un proxy transparent ou WPAD dans votre topologie de réseau, vous n’avez pas besoin de configurer WinINet pour votre proxy.
@@ -94,7 +92,7 @@ Pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]
 
 - `<your-instance-name>sensorapi.atp.azure.com` – pour la connectivité des capteurs. Par exemple, `contoso-corpsensorapi.atp.azure.com`
 
-Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure ( **AzureAdvancedThreatProtection** ) pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+Vous pouvez également utiliser les plages d’adresses IP dans notre étiquette de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Sinon, si vous avez besoin d’un contrôle plus précis, autorisez le trafic vers les points de terminaison appropriés dans le tableau suivant :
 

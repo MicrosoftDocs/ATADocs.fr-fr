@@ -9,23 +9,21 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06df6ebb9c5baa3ba2a568c78dd1ab175cdae9a8
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277014"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848497"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Configurer les [!INCLUDE [Product long](includes/product-long.md)] paramètres du capteur
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans cet article, vous allez apprendre à configurer correctement les [!INCLUDE [Product long](includes/product-long.md)] paramètres de capteur pour commencer à afficher les données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti des [!INCLUDE [Product short](includes/product-short.md)] fonctionnalités complètes de.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [ [!INCLUDE [Product short](includes/product-short.md)] Instance](install-step1.md) qui est [connectée à Active Directory](install-step2.md).
-- Une copie téléchargée de votre [ [!INCLUDE [Product short](includes/product-short.md)] package d’installation de capteur](install-step3.md) et la clé d’accès.
+- Une [instance [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) qui est [connectée à Active Directory](install-step2.md).
+- Une copie téléchargée de votre [package d’installation du capteur [!INCLUDE [Product short](includes/product-short.md)]](install-step3.md) et la clé d’accès.
 
 ## <a name="configure-sensor-settings"></a>Configurer les paramètres du capteur
 
@@ -33,7 +31,7 @@ Une fois le [!INCLUDE [Product short](includes/product-short.md)] capteur instal
 
 1. Cliquez sur **lancer** pour ouvrir votre navigateur et vous connecter au [!INCLUDE [Product short](includes/product-short.md)] portail.
 
-1. Dans le [!INCLUDE [Product short](includes/product-short.md)] portail, accédez à **configuration** et, sous **système** , sélectionnez **capteurs**.
+1. Dans le [!INCLUDE [Product short](includes/product-short.md)] portail, accédez à **configuration** et, sous **système**, sélectionnez **capteurs**.
 
     ![Page Capteur](media/sensor-config.png)
 
@@ -41,11 +39,11 @@ Une fois le [!INCLUDE [Product short](includes/product-short.md)] capteur instal
 
     ![Configurer les paramètres du capteur](media/sensor-config-2.png)
 
-    - **Description** : entrez une description pour le [!INCLUDE [Product short](includes/product-short.md)] capteur (facultatif).
+    - **Description**: entrez une description pour le [!INCLUDE [Product short](includes/product-short.md)] capteur (facultatif).
     - **Contrôleurs de domaine (FQDN)** (requis pour le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome, il ne peut pas être modifié pour le [!INCLUDE [Product short](includes/product-short.md)] capteur) : entrez le nom de domaine complet de votre contrôleur de domaine, puis cliquez sur le signe plus (+) pour l’ajouter à la liste. Par exemple, **dc01.contoso.com**.
 
-    Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine**  :
-    - Tous les contrôleurs de domaine dont le trafic est surveillé via la mise en miroir des ports par le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome doivent être répertoriés dans la liste **contrôleurs de domaine** . Si un contrôleur de domaine ne figure pas dans la liste **Contrôleurs de domaine** , il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.
+    Les informations suivantes s’appliquent aux serveurs que vous entrez dans la liste **Contrôleurs de domaine** :
+    - Tous les contrôleurs de domaine dont le trafic est surveillé via la mise en miroir des ports par le [!INCLUDE [Product short](includes/product-short.md)] capteur autonome doivent être répertoriés dans la liste **contrôleurs de domaine** . Si un contrôleur de domaine ne figure pas dans la liste **Contrôleurs de domaine**, il est possible que la détection des activités suspectes ne fonctionne pas comme prévu.
     - Au moins un contrôleur de domaine figurant dans la liste doit être un catalogue général. Cela permet [!INCLUDE [Product short](includes/product-short.md)] à de résoudre les objets ordinateur et utilisateur dans d’autres domaines de la forêt.
 
     - **Adaptateurs de réseau de capture** (obligatoire) :
@@ -71,7 +69,7 @@ Pour vérifier que le [!INCLUDE [Product short](includes/product-short.md)] capt
 1. Vérifiez [!INCLUDE [Product short](includes/product-short.md)] la connectivité sur tout périphérique de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
     1. Tapez `nslookup`
-    1. Tapez **Server** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel le [!INCLUDE [Product short](includes/product-short.md)] capteur est installé. Par exemple : `server contosodc.contoso.azure`
+    1. Tapez **Server** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel le [!INCLUDE [Product short](includes/product-short.md)] capteur est installé. Par exemple, `server contosodc.contoso.azure`
         - Veillez à remplacer ContosoDC. contoso. Azure et contoso. Azure par le nom de domaine complet (FQDN) de votre [!INCLUDE [Product short](includes/product-short.md)] capteur et de votre nom de domaine, respectivement.
     1. Tapez `ls -d contoso.azure`
     1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.
@@ -85,8 +83,8 @@ Pour vérifier que le [!INCLUDE [Product short](includes/product-short.md)] capt
 
 - [Configuration du proxy](configure-proxy.md)
 - [Stratégie d’audit avancée](configure-windows-event-collection.md)
-- [Configurer [!INCLUDE [Product short](includes/product-short.md)] pour effectuer des appels distants à Sam](install-step8-samr.md)
+- [Configuration de [!INCLUDE [Product short](includes/product-short.md)] pour effectuer des appels distants à SAM](install-step8-samr.md)
 
 ## <a name="join-the-community"></a>Rejoindre la communauté
 
-Vous avez d’autres questions ou un intérêt à discuter [!INCLUDE [Product short](includes/product-short.md)] et à la sécurité associée avec d’autres personnes ? Rejoignez la [ [!INCLUDE [Product short](includes/product-short.md)] communauté](https://aka.ms/MDIcommunity) dès aujourd’hui !
+Vous avez d’autres questions ou vous voulez discuter de [!INCLUDE [Product short](includes/product-short.md)] et de la sécurité associée avec d’autres utilisateurs ? Rejoignez la [Communauté [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) !

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edb9f414055a7d106913d1d394af44ef84ef4223
-ms.sourcegitcommit: 2b57f438c2902d5258aff8999b374c2f1808ceb4
+ms.openlocfilehash: d87aa443bad2731ee3e5ff226930980ac52c79d7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94430683"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846712"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] commutateurs et installation sans assistance
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article fournit des instructions et des instructions pour les [!INCLUDE [Product long](includes/product-long.md)] commutateurs et l’installation sans assistance.
 
@@ -62,7 +60,7 @@ Utilisez la commande suivante pour effectuer une installation entièrement silen
 > [!NOTE]
 > Copiez la clé d’accès à partir de la [!INCLUDE [Product short](includes/product-short.md)] section **configuration** du portail, **capteurs** .
 
-**Options d’installation**  :
+**Options d’installation** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -72,7 +70,7 @@ Utilisez la commande suivante pour effectuer une installation entièrement silen
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
-**Paramètres d’installation**  :
+**Paramètres d’installation** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -81,7 +79,7 @@ Utilisez la commande suivante pour effectuer une installation entièrement silen
 > |InstallationPath|InstallationPath=""|Non|Définit le chemin d’accès pour l’installation des [!INCLUDE [Product short](includes/product-short.md)] binaires de capteur. Chemin d’accès par défaut : %programfiles%\capteur Azure Advanced Threat Protection
 > |AccessKey|AccessKey="\*\*"|Oui|Définit la clé d’accès utilisée pour inscrire le [!INCLUDE [Product short](includes/product-short.md)] capteur auprès de l' [!INCLUDE [Product short](includes/product-short.md)] instance.|
 
-**Exemples**  :
+**Exemples** :
 
 Utilisez la commande suivante pour installer le capteur en mode silencieux [!INCLUDE [Product short](includes/product-short.md)] :
 
@@ -93,7 +91,7 @@ Utilisez la commande suivante pour installer le capteur en mode silencieux [!INC
 
 Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
-**Syntaxe**  :
+**Syntaxe** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -107,13 +105,13 @@ Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
 Utilisez la commande suivante pour mettre à jour le capteur en mode silencieux [!INCLUDE [Product short](includes/product-short.md)] :
 
-**Syntaxe**  :
+**Syntaxe** :
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
-**Options d’installation**  :
+**Options d’installation** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -123,7 +121,7 @@ Utilisez la commande suivante pour mettre à jour le capteur en mode silencieux 
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Oui|Spécifie les paramètres d’installation de .Net Framework. Doit être définie de manière à effectuer l’installation sans assistance de .Net Framework.|
 
-**Exemples**  :
+**Exemples** :
 
 Pour mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] capteur en mode silencieux :
 
@@ -135,13 +133,13 @@ Pour mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] cap
 
 Utilisez la commande suivante pour effectuer une désinstallation sans assistance du [!INCLUDE [Product short](includes/product-short.md)] capteur :
 
-**Syntaxe**  :
+**Syntaxe** :
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
-**Options d’installation**  :
+**Options d’installation** :
 
 > [!div class="mx-tableFixed"]
 >
@@ -151,7 +149,7 @@ Utilisez la commande suivante pour effectuer une désinstallation sans assistanc
 > |Désinstaller|/uninstall|Oui|Exécute la désinstallation sans assistance du [!INCLUDE [Product short](includes/product-short.md)] capteur à partir du serveur.|
 > |Aide|/help|Non|Fournit une aide et une référence rapide. Affiche l’utilisation correcte de la commande d’installation, y compris la liste de tous les comportements et options.|
 
-**Exemples**  :
+**Exemples** :
 
 Pour désinstaller sans assistance le [!INCLUDE [Product short](includes/product-short.md)] capteur du serveur :
 
