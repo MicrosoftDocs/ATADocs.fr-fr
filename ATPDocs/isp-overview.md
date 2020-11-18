@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5f6eed2ee9220555bbd870f66e2cacbbb82ed1c
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58e079764c2e59623b94b78f29f0ad00d6219dcc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847426"
 ---
 # <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]évaluations de la sécurité des identités de l’identité
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En raison d’un manque de visibilité, les organisations de toutes tailles ne savent généralement pas si leurs applications et services locaux peuvent introduire une faille de sécurité. Ce problème de visibilité limitée est particulièrement vrai en ce qui concerne l’utilisation de composants non pris en charge ou obsolètes.
 
@@ -74,4 +72,4 @@ Pour accéder aux évaluations de la posture de sécurité des identités :
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [En savoir plus sur l’utilisation de Cloud App Security avec [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

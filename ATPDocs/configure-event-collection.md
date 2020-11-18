@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: 7624f2d959e37b2bf88d4b14c31c5a6f1ddd6853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558234"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848225"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Pour améliorer les capacités de détection, [!INCLUDE [Product long](includes/product-long.md)] a besoin des événements Windows qui figurent dans [Configurer la collecte des événements](configure-windows-event-collection.md#configure-event-collection). Ils peuvent être lus automatiquement par le capteur [!INCLUDE [Product short](includes/product-short.md)] ou, si celui-ci n’est pas déployé, transférés au capteur autonome [!INCLUDE [Product short](includes/product-short.md)] de deux manières : en configurant le capteur autonome de façon à écouter les événements SIEM ou en configurant le [transfert d’événements Windows](configure-event-forwarding.md).
 

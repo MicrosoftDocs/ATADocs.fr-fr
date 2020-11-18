@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: fd2d06ad49756a0a1b78cd055546b5db64bb0940
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558251"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848174"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 La détection [!INCLUDE [Product long](includes/product-long.md)] s’appuie sur certaines entrées du journal des événements Windows pour améliorer les détections et fournir des informations supplémentaires sur les auteurs d’actions spécifiques (par exemple, ouverture de sessions NTLM, modification de groupes de sécurité et autres événements similaires). Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Des paramètres incorrects de stratégie d’audit avancé peuvent empêcher l’enregistrement des événements nécessaires dans le journal des événements et aboutir à une couverture incomplète de [!INCLUDE [Product short](includes/product-short.md)].
 

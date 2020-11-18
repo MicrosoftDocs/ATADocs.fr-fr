@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d9dd51c1cfba0bf51a57653e8cc1f97744fb3374
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 06b628caf47945a9bfa645b5b73593c02a1093b4
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276414"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848157"
 ---
 # <a name="understanding-entity-profiles"></a>Présentation des profils d’entité
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
@@ -42,7 +40,7 @@ Par défaut, le volet principal du profil d’entité affiche une chronologie de
 
 En haut, vous pouvez afficher les vignettes de résumé qui vous donnent une vue d’ensemble rapide de ce que vous devez comprendre en un coup d’œil sur votre entité – le nombre de machines auxquelles l’utilisateur s’est connecté, le nombre de ressources auxquelles il a accédé et les emplacements à partir desquels un utilisateur s’est connecté au VPN (si configuré).
 
-À l’aide du bouton **Filtrer par** , situé au-dessus de la chronologie des activités, vous pouvez filtrer les activités par type d’activité. Vous pouvez également éliminer par filtrage un type spécifique (bruyant) d’activité. Cela est utile pour enquêter lorsque vous voulez comprendre les bases de ce que fait une entité sur le réseau. Vous pouvez également accéder à une date spécifique et exporter vers Excel les activités filtrées. Le fichier exporté fournit une page pour les modifications des services d’annuaire (éléments ayant changé dans Active Directory pour ce compte) et une page distincte pour les activités.
+À l’aide du bouton **Filtrer par**, situé au-dessus de la chronologie des activités, vous pouvez filtrer les activités par type d’activité. Vous pouvez également éliminer par filtrage un type spécifique (bruyant) d’activité. Cela est utile pour enquêter lorsque vous voulez comprendre les bases de ce que fait une entité sur le réseau. Vous pouvez également accéder à une date spécifique et exporter vers Excel les activités filtrées. Le fichier exporté fournit une page pour les modifications des services d’annuaire (éléments ayant changé dans Active Directory pour ce compte) et une page distincte pour les activités.
 
 ## <a name="view-directory-data"></a>Consulter les données d'annuaire
 
@@ -50,7 +48,7 @@ L’onglet **Données de l'annuaire** fournit les informations statiques disponi
 
 ![données d’annuaire du profil utilisateur](media/user-profile-dir-data.png)
 
-Dans la section **Contrôle d’accès utilisateur** , [!INCLUDE [Product short](includes/product-short.md)] expose les paramètres de sécurité susceptibles de réclamer votre attention. Vous pouvez voir des indicateurs importants sur l’utilisateur, indiquant par exemple si l’utilisateur peut appuyer sur Entrée pour contourner le mot de passe, si l’utilisateur a un mot de passe qui n’expire jamais, etc.
+Dans la section **Contrôle d’accès utilisateur**, [!INCLUDE [Product short](includes/product-short.md)] expose les paramètres de sécurité susceptibles de réclamer votre attention. Vous pouvez voir des indicateurs importants sur l’utilisateur, indiquant par exemple si l’utilisateur peut appuyer sur Entrée pour contourner le mot de passe, si l’utilisateur a un mot de passe qui n’expire jamais, etc.
 
 ## <a name="view-lateral-movement-paths"></a>Visualiser les chemins de mouvement latéral
 

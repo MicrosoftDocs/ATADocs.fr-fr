@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d55f682b8056900ea19fb2684fa322fdb100df3
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bdaec29f2b8eb6d9d62105d48a59fde7c578f05
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276212"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847783"
 ---
 # <a name="integrate-vpn"></a>Intégrer le VPN
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] peut collecter des informations de gestion de comptes à partir de solutions VPN. Lors de la configuration, la page de profil de l’utilisateur contient des informations sur les connexions VPN, comme les adresses IP et les emplacements d’origine des connexions. Elles viennent en complément du processus d’investigation en fournissant des informations supplémentaires sur l’activité des utilisateurs, ainsi qu’une nouvelle détection pour les connexions VPN anormales. L’appel pour résoudre une adresse IP externe à un emplacement est anonyme. Aucun identificateur personnel n’est envoyé durant cet appel.
 
@@ -38,7 +36,7 @@ Pour activer l’intégration VPN, veillez à définir les paramètres suivants 
 - Ouvrez le port UDP 1813 sur vos [!INCLUDE [Product short](includes/product-short.md)] capteurs et/ou [!INCLUDE [Product short](includes/product-short.md)] capteurs autonomes.
 
 > [!NOTE]
-> Si vous activez la **gestion des comptes RADIUS** , le [!INCLUDE [Product short](includes/product-short.md)] capteur active une stratégie de pare-feu Windows préconfigurée appelée **[!INCLUDE [Product long](includes/product-long.md)] capteur** pour autoriser la gestion de comptes RADIUS entrante sur le port UDP 1813.
+> Si vous activez la **gestion des comptes RADIUS**, le [!INCLUDE [Product short](includes/product-short.md)] capteur active une stratégie de pare-feu Windows préconfigurée appelée **[!INCLUDE [Product long](includes/product-long.md)] capteur** pour autoriser la gestion de comptes RADIUS entrante sur le port UDP 1813.
 
 L’exemple ci-dessous utilise Microsoft Routing and Remote Access Server (RRAS) pour décrire le processus de configuration VPN.
 
@@ -50,11 +48,11 @@ Effectuez les étapes suivantes sur votre serveur RRAS.
 
 1. Ouvrez la console Routage et accès distant.
 1. Cliquez avec le bouton droit sur le nom du serveur et cliquez sur **Propriétés**.
-1. Sous l’onglet **Sécurité** , sous **Fournisseur de comptes** , sélectionnez **Gestion de comptes RADIUS** et cliquez sur **Configurer**.
+1. Sous l’onglet **Sécurité**, sous **Fournisseur de comptes**, sélectionnez **Gestion de comptes RADIUS** et cliquez sur **Configurer**.
 
     ![Configuration de RADIUS](media/radius-setup.png)
 
-1. Dans la fenêtre **Ajouter un serveur RADIUS** , tapez le **nom du serveur** du capteur le plus proche [!INCLUDE [Product short](includes/product-short.md)] (qui dispose d’une connectivité réseau). Pour la haute disponibilité, vous pouvez ajouter des [!INCLUDE [Product short](includes/product-short.md)] capteurs supplémentaires en tant que serveurs RADIUS. Sous **Port** , veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques. Prenez note de la nouvelle chaîne secrète partagée, car vous devrez la remplir ultérieurement pendant la [!INCLUDE [Product short](includes/product-short.md)] Configuration. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
+1. Dans la fenêtre **Ajouter un serveur RADIUS** , tapez le **nom du serveur** du capteur le plus proche [!INCLUDE [Product short](includes/product-short.md)] (qui dispose d’une connectivité réseau). Pour la haute disponibilité, vous pouvez ajouter des [!INCLUDE [Product short](includes/product-short.md)] capteurs supplémentaires en tant que serveurs RADIUS. Sous **Port**, veillez à configurer la valeur par défaut 1813. Cliquez sur **Modifier** et tapez une nouvelle chaîne secrète partagée de caractères alphanumériques. Prenez note de la nouvelle chaîne secrète partagée, car vous devrez la remplir ultérieurement pendant la [!INCLUDE [Product short](includes/product-short.md)] Configuration. Cochez la case **Envoyer des messages de comptes RADIUS actifs et inactifs** et cliquez sur **OK** dans toutes les boîtes de dialogue ouvertes.
 
     ![Configuration du VPN](media/vpn-set-accounting.png)
 
@@ -75,7 +73,7 @@ Une fois cette option activée, tous les [!INCLUDE [Product short](includes/prod
 
 ## <a name="see-also"></a>Voir aussi
 
-- [[!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement](https://aka.ms/aatpsizingtool)
+- [Outil de dimensionnement [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
 - [Configurer la collecte d’événements](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

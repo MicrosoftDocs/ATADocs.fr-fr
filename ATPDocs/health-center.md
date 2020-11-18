@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1b7c7f5ce56bb7de5ab38b276c1de3074aa533d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bf828278e0223aaaf52b41932b2612c7225dd7f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276374"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847936"
 ---
 # <a name="work-with-product-long-health-and-events"></a>Utiliser l' [!INCLUDE [Product long](includes/product-long.md)] intégrité et les événements
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Centre d’intégrité
 
@@ -36,7 +34,7 @@ Le [!INCLUDE [Product short](includes/product-short.md)] Centre d’intégrité 
 
 Pour vérifier l’intégrité globale de votre [!INCLUDE [Product short](includes/product-short.md)] instance, sélectionnez **intégrité** ![ [ ! INCLUDe [Product Short] (includes/Product-Short. MD)] icône du centre d’intégrité](media/red-dot.png)
 
-- Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer** , en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
+- Il est possible de gérer tous les problèmes ouverts en leur appliquant l’opération **Fermer** ou **Supprimer**, en cliquant sur les trois points dans l’angle de l’alerte et en sélectionnant l’option correspondante.
 
 - **Ouvert** : Toutes les nouvelles activités suspectes apparaissent dans cette liste.
 
@@ -47,13 +45,13 @@ Pour vérifier l’intégrité globale de votre [!INCLUDE [Product short](includ
 
 - **Ignoré** : La suppression d’une activité signifie que vous voulez l’ignorer pour le moment, et être averti de nouveau seulement en cas de nouvelle instance. Si une alerte similaire ne s' [!INCLUDE [Product short](includes/product-short.md)] ouvre pas à nouveau, Cependant, si l’alerte cesse pendant sept jours puis réapparaît, vous êtes de nouveau averti.
 
-- **Rouvrir**  : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
+- **Rouvrir** : vous pouvez rouvrir une alerte fermée ou supprimée de sorte qu’elle figure à nouveau à l’état **Ouvert** dans la chronologie.
 
-- **Supprimer**  : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
+- **Supprimer** : dans la chronologie des alertes de sécurité, vous avez aussi la possibilité de supprimer un problème d’intégrité. Si vous supprimez une alerte, celle-ci est supprimée de l’instance et vous NE pouvez PAS la restaurer. Si vous cliquez sur Supprimer, vous supprimez toutes les alertes de sécurité du même type.
 
 ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] image des problèmes du centre d’intégrité](media/health-issue.png)
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

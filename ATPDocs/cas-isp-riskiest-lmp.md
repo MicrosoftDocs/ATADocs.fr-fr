@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df369b2a718b1aa2cb552bb42712a6b36275e2ee
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 40175ace8046ae7b0edb77f4cac6e036eed997e7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276669"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848344"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Évaluation de la sécurité : Chemins de mouvement latéral les plus risqués
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-risky-lateral-movement-paths"></a>En quoi consistent les chemins de mouvement latéral risqués ?
 
@@ -33,7 +31,7 @@ Apprenez-en plus sur les chemins de mouvement latéral :
 
 ## <a name="what-risk-do-risky-lateral-movement-paths-pose"></a>Quels risques les chemins de mouvement latéral risqués font-ils courir ?
 
-Quand une organisation ne parvient pas à sécuriser ses comptes **sensibles** , elle laisse la porte ouverte aux acteurs malveillants.
+Quand une organisation ne parvient pas à sécuriser ses comptes **sensibles**, elle laisse la porte ouverte aux acteurs malveillants.
 
 Les acteurs malveillants, à l’instar des voleurs, recherchent souvent le moyen le plus simple et le plus silencieux de s’introduire dans un environnement. Les comptes sensibles qui présentent des chemins de mouvement latéral risqués sont une aubaine pour les attaquants et peuvent être exposés à des risques.
 
@@ -56,4 +54,4 @@ Par exemple, les chemins les plus risqués sont mieux repérés par les attaquan
 ## <a name="see-also"></a>Voir aussi
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtrage des activités dans Cloud App Security](activities-filtering-mcas.md)
-- [Consultez le [!INCLUDE [Product short](includes/product-short.md)] Forum !](https://aka.ms/MDIcommunity)
+- [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)
