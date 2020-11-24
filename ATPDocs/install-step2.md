@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c4cc8342c9f45b8cc08166d14be1c512ca1065
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58a5f6c37a5b5bc4e224393aac5ad9771d6a1f6b
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276223"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847868"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Démarrage rapide : Se connecter à votre forêt Active Directory
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide de démarrage rapide, vous connectez [!INCLUDE [Product long](includes/product-long.md)] à Active Directory (AD) pour récupérer les données portant sur des utilisateurs et des ordinateurs. Si vous connectez plusieurs forêts, consultez l’article [Prise en charge de plusieurs forêts](multi-forest.md).
 
@@ -35,7 +33,7 @@ Dans ce guide de démarrage rapide, vous connectez [!INCLUDE [Product long](incl
     > [!NOTE]
     >
     > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
-    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA** , vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
 
 ### <a name="how-to-set-up-a-gmsa-account"></a>Comment configurer un compte gMSA
 
@@ -48,7 +46,7 @@ La première fois que vous ouvrez le portail [!INCLUDE [Product short](includes/
 
 ![Étape 1 de bienvenue [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
 
-1. Entrez les informations suivantes, puis cliquez sur **Enregistrer**  :
+1. Entrez les informations suivantes, puis cliquez sur **Enregistrer** :
 
     |Champ|Commentaires|
     |---|---|

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 733ae9db30bef0958234cf3ba3157b33533a85e1
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: d9a37aa5fc952606dbf8c6d9148c53ef43fccf98
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342442"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848633"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -157,11 +155,11 @@ Non applicable
 Si l’ordinateur source est un contrôleur de domaine, la résolution qui a peu ou pas de chance de réussir peut empêcher [!INCLUDE [Product short](includes/product-short.md)] de confirmer l’identification.
 
 1. Vérifiez si l’ordinateur source est un contrôleur de domaine.
-    Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+    Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les changements dans votre instance Active Directory peuvent mettre du temps à se synchroniser.
 
-1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les serveurs et les applications risquent de répliquer les données à partir d’Active Directory, tels que les appareils Azure AD Connect ou les appareils de supervision des performances réseau.
 
@@ -214,11 +212,11 @@ Non applicable
 Si l’ordinateur source est un contrôleur de domaine, la résolution qui a peu ou pas de chance de réussir peut empêcher [!INCLUDE [Product short](includes/product-short.md)]d’effectuer l’identification.
 
 1. Vérifiez si l’ordinateur source est un contrôleur de domaine.
-    Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+    Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les changements dans votre instance Active Directory peuvent mettre du temps à se synchroniser.
 
-1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les serveurs et les applications risquent de répliquer les données à partir d’Active Directory, tels que les appareils Azure AD Connect ou les appareils de supervision des performances réseau.
 
@@ -275,11 +273,11 @@ Non applicable
 Si l’ordinateur source est un contrôleur de domaine, la résolution qui a peu ou pas de chance de réussir peut empêcher [!INCLUDE [Product short](includes/product-short.md)]d’effectuer l’identification.
 
 1. Vérifiez si l’ordinateur source est un contrôleur de domaine.
-    Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+    Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les changements dans votre instance Active Directory peuvent mettre du temps à se synchroniser.
 
-1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+1. L’ordinateur source est-il un contrôleur de domaine qui vient d’être promu ? Si la réponse est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 Les serveurs et les applications risquent de répliquer les données à partir d’Active Directory, tels que les appareils Azure AD Connect ou les appareils de supervision des performances réseau.
 
@@ -334,7 +332,7 @@ Certaines ressources légitimes, qui ne prennent pas en charge le chiffrement re
       - Vérifiez cela dans Active Directory en consultant l’attribut *msDS-SupportedEncryptionTypes* du compte de service de la ressource.
    1. Si une seule ressource fait actuellement l’objet d’un accès, vérifiez qu’il s’agit d’une ressource valide à laquelle ces utilisateurs sont censés accéder.
 
-      Si la réponse à l’une des questions précédentes est **oui** , il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+      Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
 
 Les applications peuvent s’authentifier avec un code de chiffrement plus faible. Certaines s’authentifient pour le compte d’utilisateurs, comme les serveurs IIS et SQL.
 
@@ -344,7 +342,7 @@ Les applications peuvent s’authentifier avec un code de chiffrement plus faibl
     - Vérifiez les rôles de l’ordinateur.
     Des serveurs fonctionnent-ils avec ces types d’applications ?
 
-     Si la réponse à l’une des questions précédentes est **oui** , il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
+     Si la réponse à l’une des questions précédentes est **oui**, il s’agit probablement d’une activité **T-BP**. Vérifiez si la ressource peut prendre en charge un code de chiffrement fort, implémentez un code de chiffrement plus fort dans la mesure du possible et **fermez** l’alerte de sécurité.
 
 **Comprendre l’étendue de la violation**
 
@@ -428,7 +426,7 @@ La synchronisation des changements dans Active Directory peut prendre du temps.
 1. L’utilisateur a-t-il été récemment ajouté ?
 1. L’utilisateur a-t-il été récemment supprimé d’Active Directory  ?
 
-Si la réponse à toutes les questions précédentes est **oui** , **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
+Si la réponse à toutes les questions précédentes est **oui**, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 
@@ -458,7 +456,7 @@ Non applicable
 
 Les services de fédération peuvent générer des tickets qui déclencheront cette alerte.
 1. L’ordinateur source héberge-t-il les services de fédération qui génèrent ces types de tickets ?
-    - Si l’ordinateur source héberge des services qui génèrent ces types de tickets, fermez l’alerte de sécurité en la signalant comme une activité de type vrai positif bénin ( **B-TP** ).
+    - Si l’ordinateur source héberge des services qui génèrent ces types de tickets, fermez l’alerte de sécurité en la signalant comme une activité de type vrai positif bénin (**B-TP**).
 
 **Comprendre l’étendue de la violation**
 
@@ -490,7 +488,7 @@ Non applicable
 **TP, B-TP ou FP**
 
 1. Les services de fédération peuvent générer des tickets qui déclencheront cette alerte. L’ordinateur source héberge-t-il des services de ce type ?
-    - Si oui, fermez l’alerte de sécurité en la signalant comme un vrai positif bénin ( **B-TP** ).
+    - Si oui, fermez l’alerte de sécurité en la signalant comme un vrai positif bénin (**B-TP**).
 1. Affichez la page de profil de l’utilisateur source et regardez ce qui s’est produit pendant l’activité.
     1. L’utilisateur est-il censé avoir accès à cette ressource ?
     1. Le principal est-il censé accéder à ce service ?
@@ -499,7 +497,7 @@ Non applicable
 1. Les utilisateurs connectés sont-ils censés avoir accès à ces ressources ?
     - Si vous avez activé l’intégration de Microsoft Defender pour point de terminaison, cliquez sur l’icône correspondante pour en savoir plus.
 
-Si vous avez répondu « Oui » aux questions précédentes, fermez l’alerte de sécurité en la signalant comme un faux positif ( **FP** ).
+Si vous avez répondu « Oui » aux questions précédentes, fermez l’alerte de sécurité en la signalant comme un faux positif (**FP**).
 
 **Comprendre l’étendue de la violation**
 
@@ -532,7 +530,7 @@ Non applicable
 1. Le réseau présente-t-il un problème de synchronisation d’heure, où les ordinateurs ne sont pas tous synchronisés ?
     - Cliquez sur le bouton **Télécharger les détails** pour voir le fichier Excel du rapport de l’alerte de sécurité, voir les activités réseau associées et vérifier s’il existe une différence entre « StartTime » et « DomainControllerStartTime ».
 
-Si la réponse aux questions précédentes est **oui** , **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
+Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP**.
 
 **Comprendre l’étendue de la violation**
 

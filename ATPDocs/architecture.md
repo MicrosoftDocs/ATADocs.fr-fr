@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e6baa54d7e8738d6132bf33d9ce8f4e829e6243f
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: cb67a36402c0b6b193fbd5ee11b63113714cd885
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276755"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848803"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Architecture de Microsoft Defender pour Identity
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] supervise vos contrôleurs de domaine en capturant et en analysant le trafic réseau, ainsi qu’en utilisant les événements Windows provenant directement de vos contrôleurs de domaine. Ensuite, il analyse les données relatives aux attaques et aux menaces. [!INCLUDE [Product short](includes/product-short.md)] utilise le profilage, la détection déterministe, le machine learning et les algorithmes comportementaux pour en savoir plus sur votre réseau, pour détecter les anomalies et pour vous avertir des activités suspectes.
 

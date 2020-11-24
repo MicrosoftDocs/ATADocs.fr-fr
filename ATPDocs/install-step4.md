@@ -9,16 +9,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9c612167b4d87958c6a27235443a0dd5ab464613
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f03f2722f86cec0ca019828b21e4851d0b1305f8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276288"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847885"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Démarrage rapide : Installer le capteur [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide de démarrage rapide, vous allez installer le capteur [!INCLUDE [Product long](includes/product-long.md)] sur un contrôleur de domaine. Si vous préférez une installation sans assistance, consultez l’article [Installation sans assistance](silent-installation.md).
 
@@ -34,8 +32,8 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 1. Vérifiez que l’ordinateur dispose d’une connectivité au(x) point(s) de terminaison approprié(s) du [service cloud [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) :
 1. Extrayez les fichiers d’installation à partir du fichier zip. L’installation directe à partir du fichier zip est vouée à l’échec.
-1. Exécutez **Azure ATP sensor setup.exe** , puis suivez les instructions de l’Assistant Installation.
-1. Dans la page **Bienvenue** , sélectionnez votre langue, puis cliquez sur **Suivant**.
+1. Exécutez **Azure ATP sensor setup.exe**, puis suivez les instructions de l’Assistant Installation.
+1. Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
 
     ![Langage d’installation du capteur autonome [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-language.png)
 
@@ -50,7 +48,7 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
     > [!NOTE]
     > Un avertissement s’affiche si le contrôleur de domaine ou le serveur dédié ne présente pas la configuration matérielle minimale requise pour l’installation. Cet avertissement ne vous empêche pas de cliquer sur **Suivant** et d’effectuer l’installation. Cela peut être le bon choix pour installer [!INCLUDE [Product short](includes/product-short.md)] dans un petit environnement de test de laboratoire qui nécessite moins de place pour le stockage des données. Pour les environnements de production, nous vous recommandons fortement de respecter le guide de [planification de la capacité](capacity-planning.md) [!INCLUDE [Product short](includes/product-short.md)] pour vous assurer que vos contrôleurs de domaine ou serveurs dédiés répondent aux conditions requises.
 
-1. Sous **Configurer le capteur** , entrez le chemin d’installation et la clé d’accès que vous avez copiée à l’étape précédente, en fonction de votre environnement :
+1. Sous **Configurer le capteur**, entrez le chemin d’installation et la clé d’accès que vous avez copiée à l’étape précédente, en fonction de votre environnement :
 
     ![Image de configuration du capteur [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-config.png)
 

@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6cd2dc6ae6a97ddd8cdcc45a273755f64fceff03
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f92e8ffc2ed30e858c5bb0e7728f8f4c76309a2a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848463"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutoriel : Procéder à une investigation sur un utilisateur
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).

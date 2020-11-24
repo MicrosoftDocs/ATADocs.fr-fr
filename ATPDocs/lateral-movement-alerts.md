@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 774f8f3f560b52d5a39a96aacc9b145d1ca2d445
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 78d7a4d51459c5ea9099198e43097757ee2c588e
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275797"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847651"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutoriel : Alertes de mouvement latéral
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -136,7 +134,7 @@ La résolution correcte des adresses IP aux ordinateurs de l’organisation est 
 1. L’adresse IP est-elle partagée (par exemple, par un appareil NAT) ?
 1. Le capteur ne résout-il pas une ou plusieurs des adresses IP de destination ? Si une adresse IP de destination n’est pas résolue, cela peut indiquer que les ports appropriés entre le capteur et les appareils ne sont pas ouverts correctement.
 
-    Si la réponse à l’une des questions précédentes est **oui** , vérifiez si les ordinateurs sources et de destination sont identiques. S’ils sont identiques, il s’agit d’un **FP** et il n’y a eu aucune tentative réelle d’attaque **pass-the-ticket**.
+    Si la réponse à l’une des questions précédentes est **oui**, vérifiez si les ordinateurs sources et de destination sont identiques. S’ils sont identiques, il s’agit d’un **FP** et il n’y a eu aucune tentative réelle d’attaque **pass-the-ticket**.
 
 La fonctionnalité [Credential Guard à distance](/windows/security/identity-protection/remote-credential-guard) des connexions RDP, quand elle est utilisée avec Windows 10 sur Windows Server 2016 et ultérieur, peut déclencher des alertes **B-TP**.
 Utilisez la preuve d’alerte pour vérifier si l’utilisateur a établi une connexion Bureau à distance de l’ordinateur source à l’ordinateur de destination.
@@ -335,7 +333,7 @@ Non applicable
 **TP, B-TP ou FP**
 
 - Déterminer si le compte se connecte régulièrement à l’ordinateur
-  - Si le certificat est régulièrement utilisé sur des ordinateurs, **fermez** l’alerte comme en la signalant comme un faux positif ( **FP** ).
+  - Si le certificat est régulièrement utilisé sur des ordinateurs, **fermez** l’alerte comme en la signalant comme un faux positif (**FP**).
 
 **Comprendre l’étendue de la violation**
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1a21762351400d298154e7dbf7503fd7d820e0a2
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 00c57a9be51c1ac8b48500c1a15ce16ddc441362
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275353"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849007"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -53,9 +51,9 @@ Dans ce tutoriel, vous allez apprendre à comprendre, classifier, prévenir et p
 
 Lors d’une reconnaissance à l’aide de l’énumération de comptes, un attaquant utilise un dictionnaire contenant des milliers de noms d’utilisateurs ou des outils comme KrbGuess afin d’essayer de deviner des noms d’utilisateur dans le domaine.
 
-**Kerberos**  : L’attaquant effectue des requêtes Kerberos avec ces noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient la **Pré-authentification requise** au lieu de l’erreur Kerberos **Principal de sécurité inconnu**.
+**Kerberos** : L’attaquant effectue des requêtes Kerberos avec ces noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient la **Pré-authentification requise** au lieu de l’erreur Kerberos **Principal de sécurité inconnu**.
 
-**NTLM**  : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
+**NTLM** : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
 
 Dans le cadre de cette détection d’alerte, [!INCLUDE [Product short](includes/product-short.md)] détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, [!INCLUDE [Product short](includes/product-short.md)] détecte cela comme une activité suspecte.
 
@@ -67,7 +65,7 @@ Non applicable
 
 Certains serveurs et applications interrogent les contrôleurs de domaine pour déterminer si des comptes existent dans des scénarios d’utilisation légitime.
 
-Pour déterminer si cette requête était un **FP** , **BTP** ou **FP** , cliquez sur l’alerte pour accéder à sa page de détails :
+Pour déterminer si cette requête était un **FP**, **BTP** ou **FP**, cliquez sur l’alerte pour accéder à sa page de détails :
 
 1. Vérifiez si l’ordinateur source était censé effectuer ce type de requête. Dans ce cas, un **B-TP** pourrait être dû à des systèmes de ressources humaines ou à des serveurs Microsoft Exchange.
 
@@ -136,7 +134,7 @@ Non applicable
 
 1. Cliquez sur l’alerte pour afficher les requêtes qui ont été exécutées.
     - Vérifiez que l’ordinateur source est bien censé exécuter ces requêtes.
-        - Si oui, fermez l’alerte de sécurité en la signalant comme un faux positif ( **FP** ). S’il s’agit d’une activité en cours, excluez l’activité suspecte.
+        - Si oui, fermez l’alerte de sécurité en la signalant comme un faux positif (**FP**). S’il s’agit d’une activité en cours, excluez l’activité suspecte.
 1. Cliquez sur l’ordinateur source pour accéder à sa page de profil.
     - Recherchez toutes les activités inhabituelles qui se sont produites pendant l’exécution des requêtes, comme les recherches concernant les utilisateurs connectés, les ressources accessibles et autres requêtes de sondage.
     - Si l’intégration Microsoft Defender pour point de terminaison est activée, cliquez sur l’icône correspondante pour explorer la machine plus en détail.
@@ -144,7 +142,7 @@ Non applicable
 1. Vérifiez les comptes exposés.
     - Recherchez les activités inhabituelles.
 
-Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette alerte comme un vrai positif ( **TP** ) et suivez les instructions fournies dans **Comprendre l’étendue de la violation**.
+Si vous avez répondu « Oui » à la question 2 ou 3, considérez cette alerte comme un vrai positif (**TP**) et suivez les instructions fournies dans **Comprendre l’étendue de la violation**.
 
 **Comprendre l’étendue de la violation**
 

@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b5b67ad5330fd7be41ed63e6db105e2f1d4a9e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275637"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847001"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cet article décrit les conditions requises pour réussir le déploiement de [!INCLUDE [Product long](includes/product-long.md)] dans votre environnement.
 
@@ -69,14 +67,14 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
     > [!NOTE]
     >
     > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
-    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA** , vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
     > - Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
 - Si vous exécutez Wireshark sur le capteur autonome [!INCLUDE [Product short](includes/product-short.md)], redémarrez le service de capteur [!INCLUDE [Product short](includes/product-short.md)] après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.
 
 - Si vous essayez d’installer le capteur [!INCLUDE [Product short](includes/product-short.md)] sur un ordinateur configuré avec une carte d’association de cartes réseau, vous recevrez une erreur d’installation. Si vous souhaitez installer le capteur [!INCLUDE [Product short](includes/product-short.md)] sur un ordinateur configuré avec une association de cartes réseau, consultez [Problème d’association de cartes réseau du capteur [!INCLUDE [Product short](includes/product-short.md)]](troubleshooting-known-issues.md#nic-teaming).
 
-- Recommandation relative au conteneur **Objets supprimés**  : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à [!INCLUDE [Product short](includes/product-short.md)] de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
+- Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à [!INCLUDE [Product short](includes/product-short.md)] de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-step7.md).
 
@@ -96,7 +94,7 @@ L’accès au portail [!INCLUDE [Product short](includes/product-short.md)] s’
 - Pare-feu/proxy ouvert : pour communiquer avec le service cloud [!INCLUDE [Product short](includes/product-short.md)], vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com.
 
     > [!NOTE]
-    > Vous pouvez également utiliser notre étiquette de service Azure ( **AzureAdvancedThreatProtection** ) pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Vous pouvez également utiliser notre étiquette de service Azure (**AzureAdvancedThreatProtection**) pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur les balises de service, consultez les fichiers sur les [balises de service de réseau virtuel](/azure/virtual-network/service-tags-overview) ou sur le [téléchargement des balises de service](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Diagramme de l’architecture [!INCLUDE [Product short](includes/product-short.md)]](media/architecture-topology.png)
 
@@ -238,7 +236,7 @@ L’heure des serveurs et contrôleurs de domaine sur lesquels le capteur est in
 
 Le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] nécessite au moins une carte de gestion et au moins une carte de capture :
 
-- **Carte de gestion**  : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Le capteur utilise cette carte pour interroger le contrôleur de domaine qu’il protège et procéder à la résolution des comptes d’ordinateur.
+- **Carte de gestion** : cette carte est utilisée pour les communications sur votre réseau d’entreprise. Le capteur utilise cette carte pour interroger le contrôleur de domaine qu’il protège et procéder à la résolution des comptes d’ordinateur.
 
     Elle doit être configurée avec les paramètres suivants :
 
@@ -253,7 +251,7 @@ Le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] néces
         > [!NOTE]
         > Si le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] est membre du domaine, le suffixe peut être configuré automatiquement.
 
-- **Carte de capture**  : cette carte est utilisée pour capturer le trafic à destination et en provenance des contrôleurs de domaine.
+- **Carte de capture** : cette carte est utilisée pour capturer le trafic à destination et en provenance des contrôleurs de domaine.
 
     > [!IMPORTANT]
     >

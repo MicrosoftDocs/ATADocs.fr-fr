@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6bd5e8677a37555db09925d98d242334e1e4967c
-ms.sourcegitcommit: 13d1ba61abae691d38d8e210b3adad71285d5c26
+ms.openlocfilehash: 306ecc4fa1022420627d0f12cea43a738d50b45a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93380622"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848854"
 ---
 # <a name="what-is-product-long"></a>Qu’est-ce que [!INCLUDE [Product long](includes/product-long.md)] ?
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] (anciennement Azure Advanced Threat Protection ou Azure ATP) est une solution de sécurité cloud qui s’appuie sur vos signaux Active Directory locaux pour identifier, détecter et investiguer les menaces avancées, les identités compromises et les actions des utilisateurs internes malveillants dirigées contre votre entreprise.
 

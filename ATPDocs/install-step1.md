@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50307054535447326b8b48641afaeec7cfc70551
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fcb99edccdd8ce98be4b9335d7703503307fd0ac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277138"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848577"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Démarrage rapide : Créer votre instance [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide de démarrage rapide, vous allez créer votre instance [!INCLUDE [Product long](includes/product-long.md)] dans le portail [!INCLUDE [Product short](includes/product-short.md)]. Dans [!INCLUDE [Product short](includes/product-short.md)], vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
 
@@ -56,7 +54,7 @@ Après avoir vérifié que votre réseau est conforme à la configuration requis
     > [!NOTE]
     > Pour vous connecter à [!INCLUDE [Product short](includes/product-short.md)], vous devez utiliser un compte d’utilisateur auquel a été attribué un rôle [!INCLUDE [Product short](includes/product-short.md)] doté de droits d’accès au portail [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation de groupes de rôles [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-1. Sélectionnez **Configuration** , sur **Gérer les groupes de rôles** , puis utilisez le lien [Centre d’administration Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles.
+1. Sélectionnez **Configuration**, sur **Gérer les groupes de rôles**, puis utilisez le lien [Centre d’administration Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) pour gérer vos groupes de rôles.
 
     ![Gérer les groupes de rôles](media/creation-manage-role-groups.png)
 

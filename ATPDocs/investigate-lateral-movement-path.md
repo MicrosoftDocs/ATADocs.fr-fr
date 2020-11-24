@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d489a02d600d82067f325d8b6f2c358f903f0908
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: de9f13a5f29e90ad27a5b07f6b6a92952db6f70d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275985"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848531"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutoriel : Utiliser des chemins de mouvement latéral
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
@@ -61,7 +59,7 @@ Pour détecter tous les comptes sensibles de votre réseau qui sont exposés en 
 
 1. Dans le menu du portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur l’icône Rapports ![icône Rapports](media/report-icon.png).
 
-1. Sous **Chemins d’accès par mouvement latéral à des comptes sensibles** , le rapport est grisé en l’absence de chemins potentiels de mouvement latéral. S’il en existe, il présélectionne automatiquement la première date présentant des données pertinentes. Il contient des données couvrant au maximum les 60 derniers jours.
+1. Sous **Chemins d’accès par mouvement latéral à des comptes sensibles**, le rapport est grisé en l’absence de chemins potentiels de mouvement latéral. S’il en existe, il présélectionne automatiquement la première date présentant des données pertinentes. Il contient des données couvrant au maximum les 60 derniers jours.
 
     ![Capture d’écran montrant la sélection de la date du rapport](media/reports.png)
 

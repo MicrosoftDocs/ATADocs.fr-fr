@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 200670e30e3c18e327bebc3959b78537596491a7
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: 1f5d63a4bf5a4ab22b43648394d3e82fb39357ef
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342450"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848049"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine ou des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -43,12 +41,12 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 
 **Description**
 
-Les contrôleurs de domaine contiennent les données les plus sensibles de l’organisation. Pour la plupart des attaquants, l’une des priorités consiste à accéder au contrôleur de domaine afin de dérober vos données les plus sensibles. Par exemple, l’exfiltration du fichier Ntds.dit, stocké sur le contrôleur de domaine, permet à un attaquant de falsifier des tickets TGT (Ticket Granting Ticket) Kerberos fournissant une autorisation d’accès à n’importe quelle ressource. Les tickets TGT Kerberos falsifiés permettent à l’attaquant d’affecter au délai d’expiration du ticket n’importe quelle valeur arbitraire. Une alerte [!INCLUDE [Product short](includes/product-short.md)] d’ **exfiltration de données sur SMB** se déclenche quand des transferts de données suspects sont observés à partir de vos contrôleurs de domaine supervisés.
+Les contrôleurs de domaine contiennent les données les plus sensibles de l’organisation. Pour la plupart des attaquants, l’une des priorités consiste à accéder au contrôleur de domaine afin de dérober vos données les plus sensibles. Par exemple, l’exfiltration du fichier Ntds.dit, stocké sur le contrôleur de domaine, permet à un attaquant de falsifier des tickets TGT (Ticket Granting Ticket) Kerberos fournissant une autorisation d’accès à n’importe quelle ressource. Les tickets TGT Kerberos falsifiés permettent à l’attaquant d’affecter au délai d’expiration du ticket n’importe quelle valeur arbitraire. Une alerte [!INCLUDE [Product short](includes/product-short.md)] d’**exfiltration de données sur SMB** se déclenche quand des transferts de données suspects sont observés à partir de vos contrôleurs de domaine supervisés.
 
 **TP, B-TP ou FP**
 
 1. Ces utilisateurs sont-ils censés copier ces fichiers sur cet ordinateur ?
-    - Si la réponse à cette question est **oui** , **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur.
+    - Si la réponse à cette question est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur.
 
 **Comprendre l’étendue de la violation**
 
@@ -63,7 +61,7 @@ Les contrôleurs de domaine contiennent les données les plus sensibles de l’o
     - Recherchez les fichiers qui ont été copiés et supprimez-les.  
     Vérifiez s’il y a eu d’autres activités sur ces fichiers. Ont-ils été transférés vers un autre emplacement ? Vérifiez s’ils ont été transférés hors du réseau de l’organisation.
     - Recherchez les utilisateurs connectés au moment de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
-1. Si l’un des fichiers est le fichier **ntds.dit**  :
+1. Si l’un des fichiers est le fichier **ntds.dit** :
     - Changez deux fois le mot de passe du compte KRBTGT en suivant les conseils de l’article [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) (Scripts de réinitialisation du mot de passe du compte KRBTGT maintenant disponibles pour les clients) et en utilisant [l’outil de réinitialisation du mot de passe/des clés du compte KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Cette double réinitialisation de KRBTGT invalide tous les tickets Kerberos dans ce domaine. L’invalidation de tous les tickets Kerberos dans le domaine signifie que **tous** les services seront interrompus et ne refonctionneront qu’une fois qu’ils auront été renouvelés ou, dans certains cas, redémarrés.
 
@@ -73,7 +71,7 @@ Les contrôleurs de domaine contiennent les données les plus sensibles de l’o
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Communication suspecte sur DNS (ID externe 2031)
 
-*Nom précédent*  : Communication suspecte sur DNS
+*Nom précédent* : Communication suspecte sur DNS
 
 **Description**
 

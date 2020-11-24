@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f971bf0ccadf2eba52b40c95591abaff0c963e0e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: b2d1978a822b8062422c41696043b1563d8bc893
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277077"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848514"
 ---
 # <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Démarrage rapide : Télécharger le package d’installation du capteur [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Dans ce guide de démarrage rapide, vous allez télécharger le package d’installation du capteur [!INCLUDE [Product long](includes/product-long.md)] à partir du portail.
 
@@ -35,7 +33,7 @@ Cliquez sur **Télécharger** dans la liste des étapes en haut de la page pour 
 
 ![Paramètres de configuration du capteur [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-config.png)
 
-Pour accéder ultérieurement à l’écran de configuration du capteur, sélectionnez **Configuration** puis, sous **Système** , cliquez sur **Capteurs**.  
+Pour accéder ultérieurement à l’écran de configuration du capteur, sélectionnez **Configuration** puis, sous **Système**, cliquez sur **Capteurs**.  
 
 1. Cliquez sur **Télécharger** pour enregistrer le package localement.
 1. Copiez la **clé d’** **accès**. Le capteur [!INCLUDE [Product short](includes/product-short.md)] a besoin de la clé d’accès pour se connecter à votre instance [!INCLUDE [Product short](includes/product-short.md)]. La clé d’accès est un mot de passe à usage unique pour le déploiement du capteur, après quoi toutes les communications sont effectuées à l’aide de certificats pour l’authentification et le chiffrement TLS. Utilisez le bouton **Regénérer** si vous avez besoin de regénérer la clé d’accès. Vous pouvez le faire sans que cela n’affecte les capteurs déjà déployés, car elle est utilisée uniquement pour l’inscription initiale du capteur.
