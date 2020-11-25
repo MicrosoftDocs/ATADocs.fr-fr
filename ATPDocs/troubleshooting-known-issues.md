@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: e37e413a355db72e04e1b6f72a71c570148c9f04
+ms.sourcegitcommit: 4563d22ad0fc63022a57c5d2d4fbc425e900bf84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848922"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96028697"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
@@ -158,7 +158,7 @@ Si vous disposez [!INCLUDE [Product short](includes/product-short.md)] d’un ca
 
 Pour résoudre le problème
 
-Définissez le paramètre suivant sur **Désactivé** dans la configuration de carte réseau de la machine virtuelle : **IPv4 TSO Offload**.
+Sur le système d’exploitation invité, définissez les éléments suivants sur **désactivé** dans la configuration de la carte réseau de l’ordinateur virtuel : **déchargement IPv4 TSO**.
 
  ![Problème de capteur VMware](media/vm-sensor-issue.png)
 
