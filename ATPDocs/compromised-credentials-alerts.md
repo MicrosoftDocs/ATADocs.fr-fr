@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f0b06f81986eedaac03f58c9c040a0b3348c304
-ms.sourcegitcommit: 3c5ca2cb13ebe6c839ede951b238261d1fc73f26
+ms.openlocfilehash: 18d3f9461eba901f875863a5e7ccc7cab7ebc4c8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93343550"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848667"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 En général, les cyberattaques sont lancées contre des entités accessibles, par exemple un utilisateur avec des privilèges peu élevés, puis rapidement, elles se déplacent latéralement jusqu’à ce que l’attaquant parvienne à accéder à des ressources importantes, comme des comptes sensibles, des administrateurs de domaine et des données hautement sensibles. [!INCLUDE [Product long](includes/product-long.md)] identifie ces menaces avancées à la source tout au long de la chaîne d’annihilation des attaques et les classifie selon les phases suivantes :
 
@@ -40,14 +38,11 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > - [Suspicion d’attaque par force brute (Kerberos, NTLM) (ID externe 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
 > - [Suspicion d’attaque par force brute (LDAP) (ID externe 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Suspicion d’attaque par force brute (SMB) (ID externe 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)](#suspected-netlogon-priv-elev-2411)
 > - [Suspicion d’attaque de ransomware WannaCry (ID externe 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspicion d’utilisation du framework de piratage Metasploit (ID externe 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Connexion VPN suspecte (ID externe 2025)](#suspicious-vpn-connection-external-id-2025)
-
-<!--
-> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
--->
 
 ## <a name="honeytoken-activity-external-id-2014"></a>Activité Honeytoken (ID externe 2014)
 
@@ -89,7 +84,7 @@ Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des
 
 Dans une attaque par force brute, l’attaquant tente de s’authentifier en utilisant plusieurs mots de passe auprès de différents comptes jusqu'à ce qu’un mot de passe correct soit trouvé, ou en utilisant un mot de passe dans une attaque par pulvérisation de mots de passe à grande échelle qui fonctionne au moins pour un compte. Lorsqu’un mot de passe est trouvé, l’attaquant se connecte en utilisant le compte authentifié.
 
-Dans cette détection, une alerte est déclenchée quand de nombreux échecs d’authentification se produisent avec Kerberos ou NTLM, ou quand une pulvérisation de mots de passe est détectée. Avec Kerberos ou NTLM, ce type d’attaque est généralement *horizontal* , avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, *vertical* , avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou un mélange des deux.
+Dans cette détection, une alerte est déclenchée quand de nombreux échecs d’authentification se produisent avec Kerberos ou NTLM, ou quand une pulvérisation de mots de passe est détectée. Avec Kerberos ou NTLM, ce type d’attaque est généralement *horizontal*, avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, *vertical*, avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou un mélange des deux.
 
 Dans une pulvérisation de mots de passe, après avoir correctement dressé la liste des utilisateurs valides à partir du contrôleur de domaine, les attaquants tentent d’utiliser UN mot de passe élaboré avec soin sur tous les comptes d’utilisateur connus (un mot de passe sur de nombreux comptes). Si la pulvérisation de mots de passe initiale échoue, ils réessayent en utilisant un autre mot de passe élaboré avec soin, généralement après avoir attendu 30 minutes entre les tentatives. Ce délai d’attente évite aux attaquants de déclencher la plupart des seuils de verrouillage de compte temporels. La pulvérisation de mots de passe est rapidement devenue la technique préférée des pirates et des tests d’intrusion. Les attaques par pulvérisation de mots de passe se sont révélées efficaces pour créer une brèche dans une organisation et pour effectuer des déplacements latéraux afin d’essayer d’élever des privilèges. La période minimale avant le déclenchement d’une alerte est d’une semaine.
 
@@ -105,11 +100,11 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
     - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?
     - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi).
 
-      Si la réponse aux questions ci-dessus est **oui** , **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+      Si la réponse aux questions ci-dessus est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
-1. S’il n’y a pas de **comptes devinés** , vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
+1. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
     - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
-    - Si la réponse à la question précédente est **oui** , arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+    - Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
 **Comprendre l’étendue de la violation**
 
@@ -152,12 +147,12 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
     - Est-il possible que ces comptes aient échoué à cause d’un mot de passe incorrect ?
     - Vérifiez auprès du ou des utilisateurs s’ils ont généré l’activité (ils ne sont pas arrivés à se connecter plusieurs fois, puis ont réussi).
 
-        Si la réponse aux questions précédentes est **oui** , **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+        Si la réponse aux questions précédentes est **oui**, **fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
-1. S’il n’y a pas de **comptes devinés** , vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
+1. S’il n’y a pas de **comptes devinés**, vérifiez si les **comptes attaqués** sont normalement utilisés à partir de l’ordinateur source.
     - Regardez si un script s’exécute sur l’ordinateur source avec des informations d’identification incorrectes/anciennes.
 
-        Si la réponse à la question précédente est **oui** , arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
+        Si la réponse à la question précédente est **oui**, arrêtez et modifiez le script, ou supprimez-le. **Fermez** l’alerte de sécurité comme s’agissant d’une activité B-TP.
 
 **Comprendre l’étendue de la violation**
 
@@ -191,7 +186,7 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 
 1. Vérifiez si l’ordinateur source exécute son propre type de pile NTLM ou SMB d’application.
     1. Si l’ordinateur source exécute ce type d’application alors qu’il ne devrait pas continuer à le faire, corrigez la configuration de l’application si nécessaire. **Fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP**.
-    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, **fermez** l’alerte de sécurité en la signalant comme un vrai positif bénin ( **B-TP** ), puis excluez cet ordinateur.
+    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, **fermez** l’alerte de sécurité en la signalant comme un vrai positif bénin (**B-TP**), puis excluez cet ordinateur.
 
 **Comprendre l’étendue de la violation**
 
@@ -208,35 +203,33 @@ Parfois, les applications implémentent leur propre pile NTLM ou SMB.
 1. Appliquez des [mots de passe complexes et longs](/windows/security/threat-protection/security-policy-settings/password-policy) dans l’organisation. Les mots de passe complexes et longs assurent le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
 1. [Désactivez SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
-<!--
-## Suspected Kerberos SPN exposure (external ID 2410)
+## <a name="suspected-kerberos-spn-exposure-external-id-2410"></a>Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)
 
 **Description**
 
-Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
+Les attaquants utilisent des outils pour énumérer les comptes de service et leurs noms de principal du service (SPN) respectifs, demander un ticket de service Kerberos pour les services, capturer les tickets du service d’attribution de tickets (TGS) dans la mémoire et extraire leurs hachages, puis les enregistrer pour les utiliser plus tard dans une attaque par force brute hors connexion.
 
-**Learning period**
+**Période d’apprentissage**
 
-None
+Aucun
 
-**TP, B-TP, or FP**
+**TP, B-TP ou FP**
 
-1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
-    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+1. Vérifiez si l’ordinateur source exécute un outil d’attaque tel que PowerSploit ou Rubeus.
+    1. Si oui, c’est un vrai positif. Suivez les instructions dans  **Comprendre l’étendue de la violation**.
+    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, fermez l’alerte de sécurité comme s’il s’agissait d’une activité T-BP et excluez cet ordinateur.
 
-**Understand the scope of the breach**
+**Comprendre l’étendue de la violation**
 
-1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investiguez les [comptes exposés](investigate-a-user.md). Recherchez une activité malveillante ou un comportement suspect pour ces comptes.
+1. Examinez l’[ordinateur source](investigate-a-computer.md).
 
-**Remediation:**
+**Correction :**
 
-1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
--->
+1. Incluez l’ordinateur source.
+    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Réinitialisez les mots de passe des utilisateurs exposés et activez MFA ou, si vous avez configuré les stratégies utilisateur à haut risque appropriées dans Azure Active Directory Identity Protection, vous pouvez utiliser l’action [**Confirmer que l’utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
@@ -244,7 +237,7 @@ None
 
 Microsoft a publié [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472), qui annonce qu’une nouvelle vulnérabilité autorise l’élévation de privilèges au contrôleur de domaine.
 
-Une vulnérabilité d’élévation de privilèges existe quand une personne malveillante établit une connexion via un canal sécurisé Netlogon vulnérable à un contrôleur de domaine à l’aide du protocole distant Netlogon ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de *vulnérabilité d’élévation des privilèges Netlogon*.
+Une vulnérabilité d’élévation de privilèges existe quand une personne malveillante établit une connexion via un canal sécurisé Netlogon vulnérable à un contrôleur de domaine à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de *vulnérabilité d’élévation des privilèges Netlogon*.
 
 **Période d’apprentissage**
 
