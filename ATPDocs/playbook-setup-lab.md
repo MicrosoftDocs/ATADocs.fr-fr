@@ -1,21 +1,14 @@
 ---
 title: Tutoriel de configuration du labo des alertes de sécurité Microsoft Defender pour Identity
 description: Ce tutoriel vise à configurer un labo de test Microsoft Defender pour Identity pour simuler des menaces à des fins de détection par Defender pour Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847052"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542555"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutoriel : Configuration d’un labo d’alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
 

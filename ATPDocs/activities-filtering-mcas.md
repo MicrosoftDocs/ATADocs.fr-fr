@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender pour le filtrage et les stratégies d’activité d’identité dans Microsoft Cloud App Security
 description: Vue d’ensemble de Microsoft Defender pour le filtrage et les stratégies d’activité d’identité avec Microsoft Cloud App Security.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 0f6a359745ae03ce0b982e00b7f4c06d556eb702
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 5956ebfb9904465e876a21b918255f44ec651ae9
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848820"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544247"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Utilisez les filtres d’activité et créez des stratégies d’action avec [!INCLUDE [Product long](includes/product-long.md)] dans Microsoft Cloud App Security
 

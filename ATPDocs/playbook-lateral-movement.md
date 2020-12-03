@@ -1,21 +1,14 @@
 ---
 title: Playbook du mouvement latéral des alertes de sécurité Microsoft Defender pour Identity
 description: Le playbook Microsoft Defender pour Identity explique comment simuler des menaces de mouvement latéral à des fins de détection par Defender pour Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: f51c707c2ac01fbbd16258efab8c0ac74d3076b0
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 50880150bb8937875677985f3a61119495d566eb
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849092"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542700"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
 

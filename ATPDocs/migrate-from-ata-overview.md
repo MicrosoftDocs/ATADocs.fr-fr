@@ -1,22 +1,14 @@
 ---
 title: Advanced Threat Analytics à Microsoft Defender pour le déplacement de l’identité
 description: Découvrez comment déplacer une installation Advanced Threat Analytics existante vers Microsoft Defender pour l’identité.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 368b328cb6863074bd47f0785aafccf7f491fa54
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: be1edf7981bbf72daeb285a9d0d0896892839f59
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847341"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542683"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) [!INCLUDE [Product long](includes/product-long.md)]
 

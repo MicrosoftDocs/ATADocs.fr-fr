@@ -1,22 +1,14 @@
 ---
 title: Évaluation des contrôleurs de domaine Microsoft Defender pour les identités non surveillées
 description: Cet article fournit une vue d’ensemble du rapport d’évaluation de l’évaluation de la sécurité des identités des contrôleurs de domaine non surveillés de Microsoft Defender.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: f3cf20aed80167b581a78fea5306916578bbd4c6
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 86a1e02b84cf874f23fbf7b69d50c482cd15713b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848327"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544145"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Évaluation de la sécurité : Contrôleurs de domaine non supervisés
 

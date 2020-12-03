@@ -1,22 +1,14 @@
 ---
 title: Dépannage de Microsoft Defender pour identifier les problèmes connus
 description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e37e413a355db72e04e1b6f72a71c570148c9f04
-ms.sourcegitcommit: 4563d22ad0fc63022a57c5d2d4fbc425e900bf84
+ms.openlocfilehash: aed05bd1df03f8ebb292f4425dbb0eb8c54ca9d3
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96028697"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544281"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 

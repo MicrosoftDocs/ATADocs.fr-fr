@@ -1,22 +1,14 @@
 ---
 title: Rapport d’évaluation de l’état de sécurité de l’identité du chiffrement faible de Microsoft Defender
 description: Cet article fournit une vue d’ensemble du rapport d’évaluation de l’évaluation du chiffrement faible de l’identité de Microsoft Defender.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: a27d972e95c2c6b4ed4d87ebad747ef14ac0f24d
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 9001fcc0aa871c14924fdd5c913e488e00104f3b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848701"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543499"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Évaluation de la sécurité : Utilisation de chiffrements faibles
 

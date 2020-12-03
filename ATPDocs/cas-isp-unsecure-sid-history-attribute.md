@@ -1,22 +1,14 @@
 ---
 title: Évaluations des attributs d’historique SID non sécurisés de Microsoft Defender
 description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités de l’identité avec un attribut d’historique SID non sécurisé rapport d’évaluation de l’état de la sécurité de l’identité.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 5af86879b48f2d8159a78d5965fb53ff8373ae56
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 112e225a3212c57842644260b42ffccb4507cec5
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848276"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544128"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Évaluation de la sécurité : Attributs d’historique SID non sécurisés
 

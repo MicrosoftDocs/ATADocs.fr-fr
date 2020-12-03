@@ -1,22 +1,14 @@
 ---
 title: Analyse des contrôleurs de domaine et des capteurs installés installés sur vos contrôleurs de domaine à l’aide de Microsoft Defender pour l’identité
 description: Décrit comment surveiller Microsoft Defender pour les capteurs d’identité et la couverture de capteur à l’aide de Defender pour l’identité
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 20e02b3281480024b67a1ef5908d82586c11f955
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 370e35388356de148b8756464633120bf5d74e5d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849018"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544366"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Superviser la couverture de vos contrôleurs de domaine
 
@@ -44,7 +36,7 @@ Le fichier Excel téléchargé contient les informations de couverture suivantes
 |Type de capteur|[!INCLUDE [Product short](includes/product-short.md)] capteur ou [!INCLUDE [Product short](includes/product-short.md)] capteur autonome|
 |Unité d'organisation|Emplacement dans Active Directory |
 |Version du système d'exploitation| Version du système d’exploitation détecté|
-|Adresse IP|Adresse IP détectée|
+|Adresse IP|Adresse IP détectée|
 
 ## <a name="search-domain-controllers"></a>Rechercher les contrôleurs de domaine
 

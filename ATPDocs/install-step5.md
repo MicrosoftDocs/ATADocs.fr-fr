@@ -1,20 +1,14 @@
 ---
 title: Configurer Microsoft Defender pour les paramètres de capteur d’identité conceptuel
 description: L’étape 5 de l’installation de Microsoft Defender for Identity vous aide à configurer les paramètres de votre Defender pour le capteur autonome d’identité.
-author: shsagir
-ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 329bfd4f6de2e15865c81d22651e833a63d07b6d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848497"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543108"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Configurer les [!INCLUDE [Product long](includes/product-long.md)] paramètres du capteur
 
@@ -69,7 +63,7 @@ Pour vérifier que le [!INCLUDE [Product short](includes/product-short.md)] capt
 1. Vérifiez [!INCLUDE [Product short](includes/product-short.md)] la connectivité sur tout périphérique de domaine en procédant comme suit :
     1. Ouvrez une invite de commandes
     1. Tapez `nslookup`
-    1. Tapez **Server** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel le [!INCLUDE [Product short](includes/product-short.md)] capteur est installé. Par exemple, `server contosodc.contoso.azure`
+    1. Tapez **Server** , puis le nom de domaine complet ou l’adresse IP du contrôleur de domaine sur lequel le [!INCLUDE [Product short](includes/product-short.md)] capteur est installé. Par exemple : `server contosodc.contoso.azure`
         - Veillez à remplacer ContosoDC. contoso. Azure et contoso. Azure par le nom de domaine complet (FQDN) de votre [!INCLUDE [Product short](includes/product-short.md)] capteur et de votre nom de domaine, respectivement.
     1. Tapez `ls -d contoso.azure`
     1. Répétez les étapes 3 et 4 pour chaque capteur que vous souhaitez tester.

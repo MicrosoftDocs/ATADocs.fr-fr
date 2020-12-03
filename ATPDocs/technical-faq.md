@@ -1,22 +1,14 @@
 ---
 title: Forum aux questions sur Microsoft Defender for Identity
 description: Fournit une liste de questions fréquemment posées sur Microsoft Defender pour l’identité et les réponses associées.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: b677512817fc910c5845fa7e1544003bfec60593
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 6b8ac890f60a283f5749cd262a8b7f65819e3231
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848939"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544298"
 ---
 # <a name="product-long-frequently-asked-questions"></a>[!INCLUDE [Product long](includes/product-long.md)] Forum aux questions
 

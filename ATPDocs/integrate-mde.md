@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender pour l’intégration des identités avec Microsoft Defender pour le point de terminaison
 description: Comment intégrer Microsoft Defender for Identity à Microsoft Defender for Endpoint pour la couverture complète de la détection des menaces
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 50bb601a00396aefee99d5115b1eb8825e74e39c
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 73cf4809e20d92534786d1df1ad580fffd5706b8
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848548"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542955"
 ---
 # <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Intégrer [!INCLUDE [Product long](includes/product-long.md)] à Microsoft Defender for Endpoint
 

@@ -1,22 +1,14 @@
 ---
 title: Évaluation de l’état de la sécurité des identités du spouleur d’impression Microsoft Defender
 description: Cet article fournit une vue d’ensemble des rapports d’évaluation de l’évaluation de l’état de sécurité des identités du spouleur d’impression de Microsoft Defender.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 90333e1588ebb110c940467177aa5aef762fb428
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 56b5ae3a235227f4c1f444b50d30730e71d0f8d5
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848752"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543652"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible
 

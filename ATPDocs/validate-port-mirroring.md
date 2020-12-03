@@ -1,22 +1,14 @@
 ---
 title: Validation de la mise en miroir de ports dans Microsoft Defender pour Identity
 description: Explique comment vérifier que la mise en miroir de ports est configurée correctement dans Microsoft Defender pour Identity.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: bennyl
-ms.suite: ems
-ms.openlocfilehash: a6b3a3ef5d16a3e92a4bcf6a8d52d96c9c4036ce
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 80944d45e92533a37edcbb855f913ea605bdef1d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846729"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544264"
 ---
 # <a name="validate-port-mirroring"></a>Valider la mise en miroir des ports
 

@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender for Identity configurer les exclusions de détection et les comptes honeytoken
 description: Configuration d’exclusions de détection et de comptes honeytoken
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: fb4aa3b26c9026a62aac81bd1a88b50b95141ecd
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: e89beee20318fc5799e183af599bb10c91c0a35b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848480"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543023"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurer des exclusions d’adresses IP et de comptes honeytoken
 

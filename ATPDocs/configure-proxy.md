@@ -1,22 +1,14 @@
 ---
 title: Configuration d’un proxy ou d’un pare-feu pour permettre la communication entre Microsoft Defender pour Identity et le capteur
 description: Explique comment configurer un pare-feu ou un proxy de façon à permettre la communication entre le service Cloud Microsoft Defender pour Identity et les capteurs Microsoft Defender pour Identity.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 6b2b620895d0a59886a140ff340b6772744c6bac
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 4606ab39457cbf1210974cb9f150d7410051c361
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848650"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543431"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configuration des paramètres de proxy du point de terminaison et de connectivité Internet d’un capteur [!INCLUDE [Product long](includes/product-long.md)]
 
