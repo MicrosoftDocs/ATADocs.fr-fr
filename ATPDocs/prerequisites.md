@@ -4,18 +4,18 @@ description: Décrit les conditions requises pour réussir le déploiement de Mi
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/26/2020
+ms.date: 11/24/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 23078e7e4281629f378e27281a21124d959f0902
+ms.sourcegitcommit: 24530d8fac3b63dee766b124b6a5549c1b9ef808
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96028656"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -132,7 +132,7 @@ Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
 | Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
 
-\* Nécessite [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Les capteurs installés sur Server 2019 sans cette mise à jour seront automatiquement arrêtés.
+\* Requiert [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) ou une mise à jour cumulative plus récente. Les capteurs installés sur Server 2019 sans cette mise à jour seront automatiquement arrêtés si la version de fichier du fichier *ntdsai.dll* dans le répertoire système est antérieure à *10.0.17763.316*.
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
