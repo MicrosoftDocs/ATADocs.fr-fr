@@ -1,22 +1,14 @@
 ---
 title: Présentation du portail Microsoft Defender pour Identity
 description: Explique comment se connecter au portail Microsoft Defender pour Identity et à ses composants.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e695bd20717bbb26cffcd5a6cb069eb2c520c876
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 00e29d828a58a76bfdbec1e28582135466d756ea
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847596"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544570"
 ---
 # <a name="working-with-the-product-long-portal"></a>Utilisation du portail [!INCLUDE [Product long](includes/product-long.md)]
 

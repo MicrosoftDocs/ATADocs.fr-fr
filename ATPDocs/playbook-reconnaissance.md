@@ -1,21 +1,14 @@
 ---
 title: Tutoriel du playbook de reconnaissance Microsoft Defender pour Identity
 description: Le tutoriel du playbook de reconnaissance Microsoft Defender pour Identity explique comment simuler des menaces de reconnaissance à des fins de détection par Defender pour Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 93b3b0ecf72ae1b7f8b1ebaf3756433afd297dde
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: dcaac8ed69bb4c3b9ccd262af929652dbc12126a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847188"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544485"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 

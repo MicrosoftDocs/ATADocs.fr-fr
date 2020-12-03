@@ -1,22 +1,14 @@
 ---
 title: Microsoft Defender pour la prise en charge de plusieurs forêts d’identité
 description: Prise en charge de plusieurs forêts Active Directory dans Microsoft Defender pour l’identité.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 7d2097a4d65cd3b153bc111d87092dcbf8ff9d74
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 05cf574aa56f379cb636036c382cc87fb289990e
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847256"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544553"
 ---
 # <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] prise en charge de plusieurs forêts
 
