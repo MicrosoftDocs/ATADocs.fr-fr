@@ -63,6 +63,10 @@
       href: role-groups.md
     - name: Prise en charge multiforêt de Defender pour Identity
       href: multi-forest.md
+    - name: Sécurité
+      items:
+        - name: Base de référence de la sécurité
+          href: security-baseline.md
 - name: Guides pratiques
   items:
     - name: Defender pour Identity avec Microsoft Cloud App Security
