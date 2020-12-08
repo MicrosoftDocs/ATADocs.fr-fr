@@ -1,22 +1,14 @@
 ---
 title: Alertes de sécurité Microsoft Defender pour Identity indiquant une dominance du domaine
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie des efforts de la phase de dominance du domaine sont détectées dans votre organisation.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: d9a37aa5fc952606dbf8c6d9148c53ef43fccf98
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: 8289b25087fc6e5743ed46d301a27239d82036ad
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848633"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543295"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 

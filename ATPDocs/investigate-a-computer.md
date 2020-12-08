@@ -1,21 +1,14 @@
 ---
 title: Tutoriel sur l’investigation des ordinateurs Microsoft Defender pour Identity
 description: Cet article explique comment utiliser les alertes de sécurité Microsoft Defender pour Identity afin d’investiguer un ordinateur suspect.
-keywords: ''
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 72a7f92d6fd77842b8fe34866d8757df8bc9203e
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: dac0630eda6ef81b0af3125fcd05d1d91b43c906
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847681"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543920"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutoriel : Procéder à une investigation sur un ordinateur
 

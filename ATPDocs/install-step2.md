@@ -1,21 +1,14 @@
 ---
 title: 'Démarrage rapide : Connecter Microsoft Defender pour Identity à Active Directory'
 description: La deuxième étape de la procédure d’installation de Microsoft Defender pour Identity vous aide à configurer les paramètres de connectivité du domaine sur votre service cloud Defender pour Identity
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 58a5f6c37a5b5bc4e224393aac5ad9771d6a1f6b
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: 1dd9954e22e38b1db7d41d42358cd03dd15ea1c2
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94847868"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543975"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Démarrage rapide : Se connecter à votre forêt Active Directory
 

@@ -1,22 +1,14 @@
 ---
 title: Tutoriel sur les alertes d’exfiltration Microsoft Defender pour Identity
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie de la phase d’exfiltration sont détectées dans votre organisation.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 1f5d63a4bf5a4ab22b43648394d3e82fb39357ef
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: fe933d2fa989645fbe0ea7fd586816905e75ee6a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848049"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544026"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutoriel : Alertes d’exfiltration
 

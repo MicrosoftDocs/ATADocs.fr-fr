@@ -1,22 +1,14 @@
 ---
 title: Alertes de sécurité Microsoft Defender pour Identity indiquant des informations d’identification compromises
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie de la phase de compromission des informations d’identification sont détectées dans votre organisation.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 18d3f9461eba901f875863a5e7ccc7cab7ebc4c8
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: cc46b15e62f6aab0776598fa58bb2559c7612fd7
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848667"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543465"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 
