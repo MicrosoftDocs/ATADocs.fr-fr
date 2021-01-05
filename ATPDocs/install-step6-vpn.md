@@ -1,14 +1,14 @@
 ---
 title: Installer Microsoft Defender pour l’intégration de l’identité VPN
 description: Collectez les informations de comptabilité pour Microsoft Defender pour l’identité en intégrant un VPN.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: how-to
-ms.openlocfilehash: e7c406a198eb78c98c795ba43d9b4076610540c7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 80b4bdf29db05d0c2f42887dacff223b3067ba49
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543958"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753403"
 ---
 # <a name="integrate-vpn"></a>Intégrer le VPN
 
@@ -28,7 +28,9 @@ Pour activer l’intégration VPN, veillez à définir les paramètres suivants 
 - Ouvrez le port UDP 1813 sur vos [!INCLUDE [Product short](includes/product-short.md)] capteurs et/ou [!INCLUDE [Product short](includes/product-short.md)] capteurs autonomes.
 
 > [!NOTE]
-> Si vous activez la **gestion des comptes RADIUS**, le [!INCLUDE [Product short](includes/product-short.md)] capteur active une stratégie de pare-feu Windows préconfigurée appelée **[!INCLUDE [Product long](includes/product-long.md)] capteur** pour autoriser la gestion de comptes RADIUS entrante sur le port UDP 1813.
+>
+> - Si vous activez la **gestion des comptes RADIUS**, le [!INCLUDE [Product short](includes/product-short.md)] capteur active une stratégie de pare-feu Windows préconfigurée appelée **[!INCLUDE [Product long](includes/product-long.md)] capteur** pour autoriser la gestion de comptes RADIUS entrante sur le port UDP 1813.
+> - L’intégration VPN n’est pas prise en charge dans les environnements adhérant aux normes FIPS (Federal Information Processing Standards)
 
 L’exemple ci-dessous utilise Microsoft Routing and Remote Access Server (RRAS) pour décrire le processus de configuration VPN.
 

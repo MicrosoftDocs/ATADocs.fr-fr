@@ -3,12 +3,12 @@ title: Dépannage de Microsoft Defender pour identifier les problèmes connus
 description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.openlocfilehash: aed05bd1df03f8ebb292f4425dbb0eb8c54ca9d3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
+ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544281"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762501"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
@@ -184,7 +184,7 @@ Le capteur n’a pas pu récupérer le compte gMSA désigné à partir du [!INCL
 
 **Résolution :**
 
-Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte. Dans la stratégie appliquée, vous devrez peut-être ajouter le compte gMSA aux attributions des droits utilisateur **Ouvrir une session en tant que service**.
+Assurez-vous que les informations d’identification du compte gMSA sont correctes et que le capteur a été autorisé à récupérer les informations d’identification du compte. Si [!INCLUDE [Product short](includes/product-short.md)]  ne requiert pas l’autorisation **ouvrir une session en tant que service** pour les comptes gMSA, ce problème est souvent résolu en ajoutant l’autorisation au compte.
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Les téléchargements de rapports contenant plus de 300 000 entrées ne sont pas pris en charge
 

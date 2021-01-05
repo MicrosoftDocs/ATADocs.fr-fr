@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender pour la prise en charge des identités
 description: Décrit le processus d’obtention de l’aide de support pour Microsoft Defender pour l’identité.
-ms.date: 10/27/2020
+ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: bd5c340633a5f52d7ac25bd075acc9381bb9fd19
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f883fad5631b23eae2154b3253bcbcb30e7929e3
+ms.sourcegitcommit: 082c85462e1d96a2bbf1ba914de5a0028a32743e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544332"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705664"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informations et support
 
@@ -38,7 +38,7 @@ Pour les autres clients, utilisez les canaux de support comme suit :
 
 | Canaux|Instructions|
 |------|-----|
-|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure. <br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème**, choisissez **technique**, comme **service** sous sécurité & identité, choisissez **Azure-protection avancée contre les menaces**. <br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
+|Utilisation du portail Azure|1. Sélectionnez **nouvelle demande de support** dans **aide + support** dans la portail Azure.<br>2. quand vous y êtes invité, dans le panneau de **base** , en tant que **type de problème**, choisissez **technique**, comme **service** sous sécurité & identité, choisissez **[!INCLUDE [Product short](includes/product-short.md)]** .<br>3. Assurez-vous que l’une des options suivantes est sélectionnée :<br>- Abonnement avec support technique inclus. Cette option est visible si vous disposez d’un abonnement Azure payant ou d’essai.<br>- Support technique inclus. Cette option est visible si vous ne disposez pas d’un abonnement Azure.|
 |Utiliser le [!INCLUDE [Product short](includes/product-short.md)] portail| 1. cliquez sur l’icône «  ? » dans la barre de navigation supérieure du [!INCLUDE [Product short](includes/product-short.md)] portail<br>2. recherchez [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Ouvrez un ticket d’incident.<br>-Sélectionnez « support »<br>4. Ouvrez un ticket d’incident. Si vous parvient à entrer dans le [!INCLUDE [Product short](includes/product-short.md)] portail, vous pouvez accéder au [portail de support assisté en ligne (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Pour d’autres options de support, demandez à votre contact Microsoft.
@@ -63,6 +63,6 @@ Résolution des problèmes :
 
 - Pour plus d’informations sur les alertes de sécurité des investigations, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
-### <a name="community-resources"></a>Ressources communautaires
+### <a name="community-resources"></a>Ressources de la communauté
 
 Nous recommandons le [groupe de communautés technologiques [!INCLUDE [Product short](includes/product-short.md)] pour ](https://aka.ms/MDIcommunity). Cette ressource fournit des réponses directes de l' [!INCLUDE [Product short](includes/product-short.md)] équipe en plus de l’avantage des expériences partagées et des connaissances d’autres administrateurs et consultants.
