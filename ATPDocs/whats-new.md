@@ -1,16 +1,16 @@
 ---
 title: Nouveautés de Microsoft Defender pour Identity
 description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de Microsoft Defender pour Identity.
-ms.date: 12/06/2020
+ms.date: 12/20/2020
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1978606c29a364d1808e1413cde6eeabe1e3d2d3
-ms.sourcegitcommit: d5cef371dd882e26445d2cedad6a85bfbe1f3911
+ms.openlocfilehash: e2c338e2105b8eb228493d20f1b47f230d9e1464
+ms.sourcegitcommit: 183be34e4e4c71fb75a676eab6a2840fdc205519
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925628"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97889329"
 ---
 # <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,20 @@ Flux RSS : Recevez une notification quand cette page est mise à jour en copian
 > [!IMPORTANT]
 >
 > Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.129.
+
+## <a name="product-short-release-2135"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.135
+
+Mise en production du 20 décembre 2020
+
+- Nous avons amélioré notre alerte [Reconnaissance d’attributs Active Directory (LDAP) (ID externe 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) pour détecter également les techniques utilisées pour obtenir les informations nécessaires à la génération de jetons de sécurité, comme dans le cadre de la [campagne Solorigate](https://aka.ms/solorigate). 
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="product-short-release-2134"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.134
+
+Mise en production du 13 décembre 2020
+
+- Notre [détecteur Netlogon récemment mis en production](#azure-atp-release-2127-2) a été amélioré pour fonctionner également lorsque la transaction de canal Netlogon se produit sur un canal chiffré. Pour plus d’informations sur le détecteur, consultez [Tentative suspectée d’élévation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="product-short-release-2133"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.133
 
@@ -41,7 +55,7 @@ Publication : 17 novembre 2020
 Publication : 8 novembre 2020
 
 - **Nouvelle alerte de sécurité :  Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)**  
-L’alerte de sécurité *Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)* de [!INCLUDE [Product short](includes/product-short.md)] est désormais disponible. Dans cette détection, une alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)] est déclenchée quand un attaquant énumère des comptes de service et leurs noms SPN respectifs, puis demande des tickets TGS Kerberos pour les services. L’intention des attaquants peut être d’extraire les hachages des tickets et de les enregistrer en vue de les utiliser plus tard dans des attaques par force brute hors connexion. Pour plus d’informations, consultez [Exposition des noms SPN Kerberos](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+L’alerte de sécurité *Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)* de [!INCLUDE [Product short](includes/product-short.md)] est désormais disponible. Dans cette détection, une alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)] est déclenchée quand un attaquant énumère des comptes de service et leurs noms SPN respectifs, puis demande des tickets TGS Kerberos pour les services. L’intention des attaquants peut être d’extraire les codes de hachage des tickets et de les enregistrer en vue de les utiliser plus tard dans des attaques par force brute hors connexion. Pour plus d’informations, consultez [Exposition des noms SPN Kerberos](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="product-short-release-2130"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.130
@@ -67,6 +81,8 @@ Nous supprimons les boutons bascule **Notification par e-mail** qui permettent d
 ## <a name="azure-atp-release-2127"></a>Azure ATP version 2.127
 
 Publication : 20 septembre 2020
+
+<a name="azure-atp-release-2127-2"></a>
 
 - **Nouvelle alerte de sécurité : Tentative suspectée de réaffectation des privilèges Netlogon (ID externe 2411)**  
 L’alerte de sécurité *Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)* d’Azure ATP est désormais disponible. Dans cette détection, une alerte de sécurité Azure ATP est déclenchée lorsqu’une personne malveillante établit une connexion à un canal sécurisé Netlogon vulnérable à un contrôleur de domaine, à l’aide du protocole distant Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), également connu sous le nom de vulnérabilité d’élévation de privilèges *Netlogon*. Pour plus d’informations, consultez [Tentative suspectée de réaffectation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).

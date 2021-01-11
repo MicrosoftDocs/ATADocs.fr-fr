@@ -1,14 +1,14 @@
 ---
 title: Alertes de sécurité Microsoft Defender pour Identity indiquant une dominance du domaine
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie des efforts de la phase de dominance du domaine sont détectées dans votre organisation.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 8289b25087fc6e5743ed46d301a27239d82036ad
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543295"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753358"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -83,7 +83,7 @@ Les scanners de sécurité avancés peuvent générer légitimement ce type d’
 
 **Description**
 
-Les attaquants qui compromettent les informations d’identification d’administration ou qui exploitent une faille de sécurité de type zero-day peuvent exécuter des commandes à distance sur votre contrôleur de domaine. Cela peut servir pour obtenir une persistance, collecter des informations, lancer des attaques par déni de service (DOS) ou toute autre raison. [!INCLUDE [Product short](includes/product-short.md)] détecte les connexions PSexec, les connexions WMI à distance et les connexions PowerShell.
+Les attaquants qui compromettent les informations d’identification d’administration ou qui exploitent une faille de sécurité de type zero-day peuvent exécuter des commandes à distance sur votre contrôleur de domaine ou serveur AD FS. Cela peut servir pour obtenir une persistance, collecter des informations, lancer des attaques par déni de service (DOS) ou toute autre raison. [!INCLUDE [Product short](includes/product-short.md)] détecte les connexions PSexec, les connexions WMI à distance et les connexions PowerShell.
 
 **Période d’apprentissage**
 
@@ -613,7 +613,7 @@ Les modifications de groupe légitimes qui se produisent rarement et le système
 
 **Description**
 
-Un service suspect a été créé sur un contrôleur de domaine dans votre organisation. Cette alerte s’appuie sur l’événement 7045 pour identifier cette activité suspecte.
+Un service suspect a été créé sur un contrôleur de domaine ou un serveur AD FS dans votre organisation. Cette alerte s’appuie sur l’événement 7045 pour identifier cette activité suspecte.
 
 **Période d’apprentissage**
 

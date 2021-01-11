@@ -1,14 +1,14 @@
 ---
 title: Alertes de sécurité Microsoft Defender pour Identity indiquant des informations d’identification compromises
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie de la phase de compromission des informations d’identification sont détectées dans votre organisation.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc46b15e62f6aab0776598fa58bb2559c7612fd7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4bb5313307d16c87969ac280967356e8595b767a
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543465"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753318"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 
@@ -129,7 +129,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
 
 Dans une attaque par force brute, l’attaquant tente de s’authentifier en essayant plusieurs mots de passe pour différents comptes jusqu’à ce qu’il trouve le bon mot de passe de l’un des comptes. Une fois qu’il a deviné le mot de passe d’un compte, l’attaquant utilise ce compte pour se connecter au réseau.
 
-Dans cette détection, une alerte est déclenchée quand [!INCLUDE [Product short](includes/product-short.md)] détecte un nombre massif d’authentifications de liaison simple. Cette alerte détecte les attaques par force brute *horizontales* avec un petit nombre de mots de passe pour de nombreux utilisateurs, *verticales* avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou un mélange des deux options.
+Dans cette détection, une alerte est déclenchée quand [!INCLUDE [Product short](includes/product-short.md)] détecte un nombre massif d’authentifications de liaison simple. Cette alerte détecte les attaques par force brute *horizontales* avec un petit nombre de mots de passe pour de nombreux utilisateurs, *verticales* avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou un mélange des deux options. L’alerte est basée sur les événements d’authentification des capteurs exécutés sur le contrôleur de domaine et les serveurs de AD FS.
 
 **TP, B-TP ou FP**
 

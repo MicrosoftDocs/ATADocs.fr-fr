@@ -1,14 +1,14 @@
 ---
 title: Alertes de sécurité de la phase de reconnaissance Microsoft Defender pour Identity
 description: Cet article décrit les alertes Microsoft Defender pour Identity émises quand des attaques faisant généralement partie des efforts de la phase de reconnaissance sont détectées contre votre organisation.
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 83db36589f3eb2cfaa9cb6db4c4f6e074437ae03
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: e4a604d5ae36c65a73f6aaa5a08e41b2553041b8
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544400"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753339"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutoriel : Alertes de reconnaissance
 
@@ -47,7 +47,7 @@ Lors d’une reconnaissance à l’aide de l’énumération de comptes, un atta
 
 **NTLM** : L’attaquant effectue des requêtes d’authentification NTLM avec l’annuaire de noms pour tenter de trouver un nom d’utilisateur valide dans le domaine. Quand l’attaquant parvient à deviner un nom d’utilisateur, il obtient **WrongPassword (0xc000006a)** au lieu de l’erreur NTLM **NoSuchUser (0xc0000064)** .
 
-Dans le cadre de cette détection d’alerte, [!INCLUDE [Product short](includes/product-short.md)] détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, [!INCLUDE [Product short](includes/product-short.md)] détecte cela comme une activité suspecte.
+Dans le cadre de cette détection d’alerte, [!INCLUDE [Product short](includes/product-short.md)] détecte d’où provient l’attaque par énumération de comptes, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, [!INCLUDE [Product short](includes/product-short.md)] détecte cela comme une activité suspecte. L’alerte est basée sur les événements d’authentification des capteurs exécutés sur le contrôleur de domaine et les serveurs de AD FS.
 
 **Période d’apprentissage**
 

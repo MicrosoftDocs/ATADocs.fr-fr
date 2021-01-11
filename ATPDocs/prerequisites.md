@@ -1,14 +1,14 @@
 ---
 title: Prérequis de Microsoft Defender pour Identity
 description: Décrit les conditions requises pour réussir le déploiement de Microsoft Defender pour Identity dans votre environnement
-ms.date: 11/24/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: d451a2b2cc9cb9f3de35974fda49b3b61f2ad552
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544417"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753386"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,23 +115,23 @@ Cette section décrit les exigences pour le capteur [!INCLUDE [Product short](in
 
 ### <a name="general"></a>Général
 
-Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge l’installation sur un contrôleur de domaine sous Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019\* (Server Core inclus mais pas Nano Server), comme indiqué dans le tableau suivant.
+Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge l’installation sur un contrôleur de domaine sous Active Directory Federation Services (AD FS) exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019\* (Server Core inclus mais pas Nano Server), comme indiqué dans le tableau suivant.
 
-| Version du système d'exploitation   | Server avec Expérience utilisateur | Server Core | Nano Server    |
-| -------------------------- | ------------------------------ | ----------- | -------------- |
-| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Non applicable |
-| Windows Server 2012        | &#10004;                       | &#10004;    | Non applicable |
-| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Non applicable |
-| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
-| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+| Version du système d'exploitation   | Server avec Expérience utilisateur | Server Core | Nano Server    | Installations prises en charge  |
+| -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Non applicable | Contrôleur de domaine        |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Non applicable | Contrôleur de domaine        |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Non applicable | Contrôleur de domaine        |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Contrôleur de domaine, AD FS |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Contrôleur de domaine, AD FS |
 
 \* Requiert [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) ou une mise à jour cumulative plus récente. Les capteurs installés sur Server 2019 sans cette mise à jour seront automatiquement arrêtés si la version de fichier du fichier *ntdsai.dll* dans le répertoire système est antérieure à *10.0.17763.316*.
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
-Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur \*.atp.azure.com.
+Pour que les capteurs exécutés sur des contrôleurs de domaine et AD FS communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur \*.atp.azure.com.
 
-Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé automatiquement et peut nécessiter un redémarrage du contrôleur de domaine. Cette étape peut également être requise si un redémarrage est déjà en attente.
+Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé et peut nécessiter un redémarrage du serveur. Un redémarrage peut également être nécessaire si un redémarrage est déjà en attente.
 
 > [!NOTE]
 > Un minimum de 5 Go d’espace disque sont nécessaires et 10 Go sont recommandés. Cela inclut l’espace nécessaire pour les fichiers binaires [!INCLUDE [Product short](includes/product-short.md)], les journaux [!INCLUDE [Product short](includes/product-short.md)] et les journaux de performances.
@@ -141,7 +141,7 @@ Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’es
 Le capteur [!INCLUDE [Product short](includes/product-short.md)] nécessite au minimum deux cœurs et 6 Go de RAM sur le contrôleur de domaine.
 Pour bénéficier de performances optimales, choisissez **Hautes performances** comme **Option d’alimentation** de la machine exécutant le capteur [!INCLUDE [Product short](includes/product-short.md)].
 
-Vous pouvez déployer les capteurs [!INCLUDE [Product short](includes/product-short.md)] sur des contrôleurs de domaine de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les contrôleurs de domaine et de la quantité de ressources installées.
+[!INCLUDE [Product short](includes/product-short.md)] capteurs peuvent être déployés sur un contrôleur de domaine ou des serveurs AD FS de différentes charges et tailles, en fonction de la quantité de trafic réseau vers et depuis les serveurs et de la quantité de ressources installées.
 
 Pour les systèmes d’exploitation Windows 2008R2 et 2012, le capteur [!INCLUDE [Product short](includes/product-short.md)] n’est pas pris en charge en mode [Groupe multiprocesseur](/windows/win32/procthread/processor-groups). Pour plus d’informations sur le mode Groupe multiprocesseur, consultez la [résolution des problèmes](troubleshooting-known-issues.md#multi-processor-group-mode).
 
@@ -184,6 +184,8 @@ Le tableau suivant liste les ports qui, au minimum, sont requis par le capteur [
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
 La détection [!INCLUDE [Product short](includes/product-short.md)] s’appuie sur des [journaux d’événements Windows](configure-windows-event-collection.md#configure-event-collection) spécifiques que le capteur analyse à partir de vos contrôleurs de domaine. Pour auditer les bons événements et les inclure dans le journal des événements Windows, la stratégie d’audit avancée de vos contrôleurs de domaine doit être correctement configurée. Pour plus d’informations sur la configuration des stratégies appropriées, consultez [Stratégie d'audit avancée](configure-windows-event-collection.md). Pour [vous assurer que l’événement Windows 8004 est audité](configure-windows-event-collection.md#configure-audit-policies) en fonction des besoins du service, vérifiez vos [paramètres d’audit NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+
+Pour les capteurs exécutés sur des serveurs AD FS, configurez le niveau d’audit sur **Verbose**. Pour plus d’informations sur la configuration du niveau d’audit, consultez [Informations d’audit d’événements pour AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016).
 
 > [!NOTE]
 > À l’aide du compte d’utilisateur du service d’annuaire, le capteur interroge les points de terminaison de votre organisation à la recherche des administrateurs locaux en utilisant SAM-R (ouverture de session réseau) pour générer le [graphe des chemins de mouvement latéral](use-case-lateral-movement-path.md). Pour plus d’informations, consultez [Configurer les autorisations requises SAM-R](install-step8-samr.md).

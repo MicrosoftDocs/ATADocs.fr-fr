@@ -1,14 +1,14 @@
 ---
 title: Architecture de Microsoft Defender pour Identity
 description: Décrit l’architecture de Microsoft Defender pour Identity
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 11be2df6437f6b67968d395a24756d4b0514ea69
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544213"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753272"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Architecture de Microsoft Defender pour Identity
 
@@ -20,7 +20,7 @@ Architecture [!INCLUDE [Product short](includes/product-short.md)] :
 
 Cette section explique comment fonctionne le flux de capture des événements et du réseau [!INCLUDE [Product short](includes/product-short.md)] et décrit en détail les fonctionnalités des composants principaux : le portail [!INCLUDE [Product short](includes/product-short.md)], le capteur [!INCLUDE [Product short](includes/product-short.md)] et le service cloud [!INCLUDE [Product short](includes/product-short.md)].
 
-Directement installé sur vos contrôleurs de domaine, le capteur [!INCLUDE [Product short](includes/product-short.md)] accède aux journaux d’événements dont il a besoin directement sur les contrôleurs de domaine. Une fois les journaux et le trafic réseau analysés par le capteur, [!INCLUDE [Product short](includes/product-short.md)] envoie uniquement les informations analysées au service cloud [!INCLUDE [Product short](includes/product-short.md)] (ce qui ne présente qu’une partie des journaux envoyés).
+Directement installé sur votre contrôleur de domaine ou serveurs AD FS, le capteur [!INCLUDE [Product short](includes/product-short.md)] accède aux journaux d’événements dont il a besoin directement sur les serveurs. Une fois les journaux et le trafic réseau analysés par le capteur, [!INCLUDE [Product short](includes/product-short.md)] envoie uniquement les informations analysées au service cloud [!INCLUDE [Product short](includes/product-short.md)] (ce qui ne présente qu’une partie des journaux envoyés).
 
 ## <a name="product-short-components"></a>Composants [!INCLUDE [Product short](includes/product-short.md)]
 
@@ -30,7 +30,9 @@ Directement installé sur vos contrôleurs de domaine, le capteur [!INCLUDE [Pro
 Le portail [!INCLUDE [Product short](includes/product-short.md)] vous permet de créer votre instance [!INCLUDE [Product short](includes/product-short.md)], montre les données provenant des capteurs [!INCLUDE [Product short](includes/product-short.md)], et vous permet de superviser, gérer et examiner les menaces dans votre environnement réseau.
 
 - **Capteur [!INCLUDE [Product short](includes/product-short.md)]**  
-Les capteurs [!INCLUDE [Product short](includes/product-short.md)] sont installés directement sur vos contrôleurs de domaine. Le capteur supervise directement le trafic des contrôleurs de domaine, sans recourir à un serveur dédié, ou à une configuration de mise en miroir de ports.
+[!INCLUDE [Product short](includes/product-short.md)] capteurs peuvent être installés directement sur les serveurs suivants :
+  - **Contrôleurs de domaine** : Le capteur supervise directement le trafic des contrôleurs de domaine, sans recourir à un serveur dédié, ou à une configuration de mise en miroir de ports.
+  - **AD FS** : Le capteur analyse directement le trafic réseau et les événements d’authentification.
 - **Service cloud [!INCLUDE [Product short](includes/product-short.md)]**  
 Le service cloud [!INCLUDE [Product short](includes/product-short.md)] s’exécute dans l’infrastructure Azure et est actuellement disponible aux États-Unis, en Europe et en Asie. Le service cloud [!INCLUDE [Product short](includes/product-short.md)] est connecté à Microsoft Intelligent Security Graph.
 

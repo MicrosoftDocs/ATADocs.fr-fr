@@ -1,14 +1,14 @@
 ---
 title: Activités de domaine supervisées par Microsoft Defender pour Identity
 description: Décrit chacun des types d’activité supervisés par Microsoft Defender pour Identity.
-ms.date: 10/26/2020
+ms.date: 12/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8ef0972efec4fc5d39d42cd72e43ca7f95e94ef5
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5ca3a3681eb15b1b2a8935942daaf7a39f9c15c3
+ms.sourcegitcommit: 78fb0cead845c7098c780f4daa624a741e350ec2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542615"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97763623"
 ---
 # <a name="product-long-monitored-activities"></a>Activités supervisées par [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -25,6 +25,7 @@ Les informations supervisées par [!INCLUDE [Product short](includes/product-sho
 >
 > - Cet article s’applique pour tous les types de capteurs [!INCLUDE [Product short](includes/product-short.md)].
 > - Les activités supervisées par [!INCLUDE [Product short](includes/product-short.md)] s’affichent à la fois sur la page de profil de l’utilisateur et sur celle de la machine.
+> - [!INCLUDE [Product short](includes/product-short.md)] activités contrôlées sont également disponibles dans la page [Chasse avancée](https://portal.cloudappsecurity.com/) de [Cloud App Security](https://security.microsoft.com/advanced-hunting) et Microsoft 365 Defender.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Activités surveillées des utilisateurs : Changements d’attributs AD du compte d’utilisateur
 
