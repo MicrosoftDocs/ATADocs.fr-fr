@@ -1,14 +1,14 @@
 ---
 title: Installer Microsoft Defender pour l’identité en mode silencieux
 description: Cette rubrique décrit comment installer Microsoft Defender en mode silencieux pour l’identité.
-ms.date: 10/27/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: 056451d5f0881360643bfc453366a8ccdb0ddccc
-ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
+ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97746874"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062533"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] commutateurs et installation sans assistance
 
@@ -92,6 +92,8 @@ Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Non|Spécifie l’URL du proxy et le numéro de port du capteur [!INCLUDE [Product short](includes/product-short.md)].|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Non|Si votre service de proxy nécessite une authentification, spécifiez un nom d’utilisateur au format DOMAINE\utilisateur.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Non|Spécifie le mot de passe du nom d’utilisateur du proxy. \* Les informations d’identification sont chiffrées et stockées en local par le capteur [!INCLUDE [Product short](includes/product-short.md)].|
+
+Pour plus d’informations sur la configuration du proxy, consultez [configurer le proxy de point de terminaison et les paramètres de connectivité Internet pour votre [!INCLUDE [Product long](includes/product-long.md)] capteur](configure-proxy.md).
 
 ## <a name="update-the-product-short-sensor"></a>Mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] capteur
 

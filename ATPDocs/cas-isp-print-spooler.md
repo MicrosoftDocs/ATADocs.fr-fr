@@ -1,14 +1,14 @@
 ---
 title: Évaluation de l’état de la sécurité des identités du spouleur d’impression Microsoft Defender
 description: Cet article fournit une vue d’ensemble des rapports d’évaluation de l’évaluation de l’état de sécurité des identités du spouleur d’impression de Microsoft Defender.
-ms.date: 10/26/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: 56b5ae3a235227f4c1f444b50d30730e71d0f8d5
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: dc380efcff1353203786a91b481d1e091e860071
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543652"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062516"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible
 
@@ -26,8 +26,10 @@ En raison du risque d’exposition, les contrôleurs de domaine et les systèmes
 
 Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de domaine, tous les serveurs sont potentiellement exposés à ce type d’attaque.
 
-   > [!NOTE]
-   > Veillez à examiner vos paramètres de **Spouleur d’impression**, configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
+> [!NOTE]
+>
+> - Veillez à examiner vos paramètres de **Spouleur d’impression**, configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
+> - Le rôle de contrôleur [de domaine ajoute un thread au service du spouleur](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) chargé d’effectuer le nettoyage des impressions, en supprimant les objets de la file d’attente à l’impression obsolètes du Active Directory. Par conséquent, la recommandation de sécurité pour désactiver le service **spouleur d’impression** est un compromis entre la sécurité et la possibilité d’effectuer le nettoyage de l’impression. Pour résoudre le problème, vous devez envisager de nettoyer régulièrement les objets de file d’attente à l’impression obsolètes, soit manuellement, soit à l’aide d’un script d’automatisation.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 
