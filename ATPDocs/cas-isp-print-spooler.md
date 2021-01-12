@@ -3,12 +3,12 @@ title: Évaluation de l’état de la sécurité des identités du spouleur d’
 description: Cet article fournit une vue d’ensemble des rapports d’évaluation de l’évaluation de l’état de sécurité des identités du spouleur d’impression de Microsoft Defender.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: dc380efcff1353203786a91b481d1e091e860071
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 104b763de6950ff07d984ee053e5b0e05cd42dc7
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062516"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114205"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Évaluation de la sécurité : Contrôleurs de domaine avec le service Spouleur d’impression disponible
 
@@ -29,7 +29,7 @@ Bien que cette évaluation de la sécurité se concentre sur les contrôleurs de
 > [!NOTE]
 >
 > - Veillez à examiner vos paramètres de **Spouleur d’impression**, configurations et dépendances avant de désactiver ce service et d’empêcher les flux de travail d’impression actifs.
-> - Le rôle de contrôleur [de domaine ajoute un thread au service du spouleur](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) chargé d’effectuer le nettoyage des impressions, en supprimant les objets de la file d’attente à l’impression obsolètes du Active Directory. Par conséquent, la recommandation de sécurité pour désactiver le service **spouleur d’impression** est un compromis entre la sécurité et la possibilité d’effectuer le nettoyage de l’impression. Pour résoudre le problème, vous devez envisager de nettoyer régulièrement les objets de file d’attente à l’impression obsolètes, soit manuellement, soit à l’aide d’un script d’automatisation.
+> - Le rôle de contrôleur [de domaine ajoute un thread au service du spouleur](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) chargé d’effectuer le nettoyage des impressions, en supprimant les objets de la file d’attente à l’impression obsolètes du Active Directory. Par conséquent, la recommandation de sécurité pour désactiver le service **spouleur d’impression** est un compromis entre la sécurité et la possibilité d’effectuer le nettoyage de l’impression. Pour résoudre le problème, vous devez envisager de nettoyer régulièrement les objets de file d’attente à l’impression obsolètes, soit manuellement, soit à l’aide d’un script d’automatisation.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Comment faire pour utiliser cette évaluation de la sécurité ?
 

@@ -1,14 +1,14 @@
 ---
 title: Dépannage de Microsoft Defender pour identifier les problèmes connus
 description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
-ms.date: 09/07/2020
+ms.date: 01/12/2021
 ms.topic: how-to
-ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
-ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
+ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762501"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114239"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
@@ -152,7 +152,7 @@ Pour résoudre le problème
 
 Sur le système d’exploitation invité, définissez les éléments suivants sur **désactivé** dans la configuration de la carte réseau de l’ordinateur virtuel : **déchargement IPv4 TSO**.
 
- ![Problème de capteur VMware](media/vm-sensor-issue.png)
+![Problème de capteur VMware](media/vm-sensor-issue.png)
 
 Utilisez la commande suivante pour vérifier si le déchargement d’envoi volumineux (LSO) est activé ou désactivé :
 
@@ -165,6 +165,11 @@ Si LSO est activé, utilisez la commande suivante pour le désactiver :
 `Disable-NetAdapterLso -Name {name of adapter}`
 
 ![Désactiver l’état LSO](media/disable-lso-vmware.png)
+
+> [!NOTE]
+>
+> - Vous devrez peut-être redémarrer votre ordinateur pour que ces modifications prennent effet.
+> - Ces étapes peuvent varier en fonction de votre version de VMWare. Consultez la documentation VMWare pour plus d’informations sur la façon de désactiver LSO/TSO pour votre version VMWare.
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Le capteur n’a pas réussi à récupérer les informations d'identification du compte de service administré du groupe (gMSA)
 
