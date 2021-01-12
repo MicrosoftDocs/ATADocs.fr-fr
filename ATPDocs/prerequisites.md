@@ -3,12 +3,12 @@ title: Prérequis de Microsoft Defender pour Identity
 description: Décrit les conditions requises pour réussir le déploiement de Microsoft Defender pour Identity dans votre environnement
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753386"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062550"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -166,18 +166,18 @@ Le capteur n’est pas pris en charge sur les contrôleurs de domaine exécutant
 Le tableau suivant liste les ports qui, au minimum, sont requis par le capteur [!INCLUDE [Product short](includes/product-short.md)] :
 
 |Protocole|Transport|Port|Du|À|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Ports Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (\*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
 |SSL (localhost)|TCP|444|Capteur [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Ports internes**|||||
 |DNS|TCP et UDP|53|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Serveurs DNS|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |RADIUS|UDP|1813|RADIUS|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
 |**Ports NNR**\*|||||
-|NTLM sur RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
-|RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
+|NTLM sur RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 
 \* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
@@ -258,9 +258,9 @@ Le capteur autonome [!INCLUDE [Product short](includes/product-short.md)] néces
 Le tableau suivant liste les ports qui, au minimum, doivent être configurés sur la carte de gestion pour répondre aux conditions requises du capteur autonome [!INCLUDE [Product short](includes/product-short.md)] :
 
 |Protocole|Transport|Port|Du|À|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Ports Internet**||||
-|SSL (*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (\*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
 |SSL (localhost)|TCP|444|Capteur [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Ports internes**||||
 |LDAP|TCP et UDP|389|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Contrôleurs de domaine|
@@ -274,9 +274,9 @@ Le tableau suivant liste les ports qui, au minimum, doivent être configurés su
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
 |RADIUS|UDP|1813|RADIUS|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
 |**Ports NNR** \*|||||
-|NTLM sur RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
-|RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Tous les appareils sur le réseau|
+|NTLM sur RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
+|RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 
 \* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 

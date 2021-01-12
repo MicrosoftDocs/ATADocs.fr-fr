@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/22/2020
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 024ca22c366e98c0c09a0c13152c453ce33363c0
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: b49e2b10713f23c4256a7236bfa7162189c6e43b
+ms.sourcegitcommit: 373151a0e86e4933c5cb7c8f17c4d386356c98dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690038"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114967"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Résolution des problèmes connus d’ATA
 
@@ -29,7 +29,7 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 
 > [!div class="mx-tableFixed"]
 >
-> |Error|Description|Résolution|
+> |Erreur|Description|Résolution|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException : Une erreur locale s’est produite.|La passerelle ATA n’a pas pu s’authentifier auprès du contrôleur de domaine.|1. Vérifiez que l’enregistrement DNS du contrôleur de domaine est correctement configuré sur le serveur DNS. <br>2. Vérifiez que l’heure de la passerelle ATA est synchronisée avec l’heure du contrôleur de domaine.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException : Impossible de valider la chaîne de certificats|La passerelle ATA n’a pas pu valider le certificat du centre ATA.|1. Vérifiez que le certificat d’autorité de certification racine est installé dans le magasin de certificats de l’autorité de certification approuvée sur la passerelle ATA.<br>2. Vérifiez que la liste de révocation de certificats (CRL) est disponible et que la validation de la révocation des certificats peut être effectuée.|
@@ -57,20 +57,21 @@ Cette section détaille les erreurs possibles dans les déploiements d’ATA et 
 
 > [!div class="mx-tableFixed"]
 >
-> |Error|Description|Résolution|
+> |Erreur|Description|Résolution|
 > |-------------|----------|---------|
 > |L’installation de .Net Framework 4.6.1 échoue avec l’erreur 0x800713ec.|Les composants requis pour .Net Framework 4.6.1 ne sont pas installés sur le serveur. |Avant d’installer ATA, vérifiez que les mises à jour Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) et [KB2919355](https://support.microsoft.com/kb/2919355) sont installées sur le serveur.|
 > |System.Threading.Tasks.TaskCanceledException : une tâche a été annulée|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu accéder au centre ATA.|1. Vérifiez la connectivité réseau au centre ATA en y accédant à l’aide de son adresse IP. <br></br>2. Vérifiez la configuration du proxy ou du pare-feu.|
 > |System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException : le serveur distant a retourné une erreur : (407) Authentification proxy requise.|Le processus de déploiement a dépassé le délai d’expiration, car il n’a pas pu atteindre le centre ATA en raison d’une configuration incorrecte du proxy.|Désactivez la configuration du proxy avant le déploiement puis réactivez la configuration du proxy. Vous pouvez aussi configurer une exception dans le proxy.|
-> |System.Net.Sockets.SocketException : Une connexion existante a dû être fermée par l’hôte distant||Activez TLS 1,2 pour .net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit :<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>Configuration du proxy</br>Problèmes de mise en réseau</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
+> |System.Net.Sockets.SocketException : Une connexion existante a dû être fermée par l’hôte distant||Activez TLS 1,2 pour .net en définissant les clés de Registre pour utiliser les valeurs par défaut du système d’exploitation pour SSL et TLS, comme suit :<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001`|
+> |Erreur [ \\ [] DeploymentModel [ \\ ]] échec de l’authentification de gestion [ \\ [] CurrentlyLoggedOnUser = <domain> \\ <username> Status = FailedAuthentication exception = [ \\ ]]|Le processus de déploiement de la passerelle ATA ou de la passerelle légère ATA n’a pas réussi à s’authentifier auprès du centre ATA.|Ouvrez un navigateur sur l’ordinateur où s’est produit l’échec du processus de déploiement et essayez d’accéder à la console ATA. </br>Si ce n’est pas possible, cherchez à identifier le problème qui se trouve à l’origine de l’échec d’authentification du navigateur auprès du centre ATA. </br>Points à vérifier : </br>Configuration du proxy</br>Problèmes de mise en réseau</br>paramètres de stratégie de groupe pour l’authentification sur cet ordinateur différents du centre ATA.|
 > | Error [\\[]DeploymentModel[\\]] Failed management authentication|La validation du certificat du centre a échoué|Il est possible que la validation du certificat du centre nécessite une connexion Internet. Vérifiez que votre service de passerelle affiche la configuration de proxy appropriée pour permettre la connexion et la validation.|
+> | Lors du déploiement du centre et de la sélection d’un certificat, une erreur « non pris en charge » est signalée|Cela peut se produire si le certificat sélectionné ne répond pas à la configuration requise ou si la clé privée du certificat n’est pas accessible.|Assurez-vous que vous exécutez le déploiement avec des privilèges élevés (**exécuter en tant qu’administrateur**) et que le certificat sélectionné répond à la [Configuration requise](ata-prerequisites.md#certificates).|
 
 ## <a name="ata-center-errors"></a>Erreurs du centre ATA
 
 > [!div class="mx-tableFixed"]
 >
-> |Error|Description|Résolution|
+> |Erreur|Description|Résolution|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: Accès refusé.|Le centre ATA n’est pas parvenu à utiliser le certificat émis pour le déchiffrement. La raison la plus probable en est que la valeur KeySpec (KeyNumber) du certificat utilisé a été définie sur Signature (AT\\_SIGNATURE), dont le déchiffrement n’est pas pris en charge, au lieu de KeyExchange (AT\\_KEYEXCHANGE).|1. Arrêtez le service du centre ATA. <br></br>2. Supprimez le certificat du centre ATA dans le magasin de certificats du centre. (Avant cela, veillez à sauvegarder le certificat avec la clé privée dans un fichier PFX.) <br></br>3. Ouvrez une invite de commandes avec élévation de privilèges et exécutez certutil-importpfx "CenterCertificate. pfx" sur \\ _KEYEXCHANGE <br></br>4. Démarrez le service du centre ATA. <br></br>5. Vérifiez que tout fonctionne maintenant comme prévu.|
 

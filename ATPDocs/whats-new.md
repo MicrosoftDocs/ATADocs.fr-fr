@@ -1,16 +1,16 @@
 ---
 title: Nouveautés de Microsoft Defender pour Identity
 description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de Microsoft Defender pour Identity.
-ms.date: 12/20/2020
+ms.date: 01/06/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: e2c338e2105b8eb228493d20f1b47f230d9e1464
-ms.sourcegitcommit: 183be34e4e4c71fb75a676eab6a2840fdc205519
+ms.openlocfilehash: 4fec3e83fafb061eedb04018215b2e11c2fbb228
+ms.sourcegitcommit: 382d56413793419a8a82e531b0a0ec0a360bac14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97889329"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97937414"
 ---
 # <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -24,11 +24,18 @@ Flux RSS : Recevez une notification quand cette page est mise à jour en copian
 >
 > Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.129.
 
+## <a name="product-short-release-2136"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.136
+
+Publication : 3 janvier 2021
+
+- Defender pour Identity prend désormais en charge l’installation de capteurs sur les serveurs Services de fédération Active Directory (AD FS). L’installation du capteur sur des [serveurs AD FS compatibles](prerequisites.md#azure-atp-sensor-requirements) étend la visibilité de Microsoft Defender pour Identity dans un environnement hybride en surveillant ce composant d’infrastructure critique. Nous avons également actualisé certaines de nos détections existantes ([Création de service malveillant](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspicion d’attaque par force brute (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Reconnaissance d’énumération de compte](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) pour qu’elles fonctionnent également sur les données AD FS. Pour démarrer le déploiement du capteur Microsoft Defender pour Identity pour un serveur AD FS, [téléchargez le package de déploiement le plus récent](install-step3.md#download-the-setup-package) à partir de la page de configuration du capteur.
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
 ## <a name="product-short-release-2135"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.135
 
 Mise en production du 20 décembre 2020
 
-- Nous avons amélioré notre alerte [Reconnaissance d’attributs Active Directory (LDAP) (ID externe 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) pour détecter également les techniques utilisées pour obtenir les informations nécessaires à la génération de jetons de sécurité, comme dans le cadre de la [campagne Solorigate](https://aka.ms/solorigate). 
+- Nous avons amélioré notre alerte [Reconnaissance d’attributs Active Directory (LDAP) (ID externe 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) pour détecter également les techniques utilisées pour obtenir les informations nécessaires à la génération de jetons de sécurité, comme dans le cadre de la [campagne Solorigate](https://aka.ms/solorigate).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="product-short-release-2134"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.134

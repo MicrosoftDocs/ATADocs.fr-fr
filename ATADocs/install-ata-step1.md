@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/07/2019
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d5c61390abddf29b92afc0bb6cb2336b0bc9d7ea
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 0578f8698ffe768563d68325b5a5096af1cb2e49
+ms.sourcegitcommit: 373151a0e86e4933c5cb7c8f17c4d386356c98dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690735"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114984"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -49,7 +49,7 @@ Effectuez les opérations suivantes sur le serveur du centre ATA.
 
 1. Connectez-vous à l’ordinateur sur lequel vous installez le centre ATA en tant qu’utilisateur membre du groupe Administrateurs local.
 
-1. Exécutez **Microsoft ATA Center Setup.EXE**, puis suivez les instructions de l’Assistant Installation.
+1. Exécutez le **Centre ATA Microsoft Setup.EXE** avec des privilèges élevés (**exécuter en tant qu’administrateur**) et suivez l’Assistant d’installation.
 
     > [!NOTE]
     > Veillez à exécuter le fichier d’installation à partir d’un lecteur local, et non à partir d’un fichier ISO monté, pour éviter les problèmes liés à un redémarrage obligatoire dans le cadre de l’installation.
