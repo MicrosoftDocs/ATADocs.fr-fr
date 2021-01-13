@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0578f8698ffe768563d68325b5a5096af1cb2e49
-ms.sourcegitcommit: 373151a0e86e4933c5cb7c8f17c4d386356c98dd
+ms.openlocfilehash: 33a021ce3cee1d06d34d732cedce5f9f5e62c4e5
+ms.sourcegitcommit: affaeabba518199355a248fbf18feefa28fb268f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114984"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163035"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -26,7 +26,7 @@ ms.locfileid: "98114984"
 > [!NOTE]
 > **Cycle de vie de support**
 >
-> La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). Le support ATA standard a pris fin le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 > [!div class="step-by-step"]
 > [Étape 2»](install-ata-step2.md)
