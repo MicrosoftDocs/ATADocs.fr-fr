@@ -1,14 +1,14 @@
 ---
 title: Évaluation des attributs de compte non sécurisé Microsoft Defender pour l’identité
 description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités de l’identité avec des attributs non sécurisés rapport d’évaluation de la sécurité de l’identité.
-ms.date: 10/26/2020
+ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: befa5e059a93e6f2e15fd84450948285a94173a6
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
+ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543550"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98541796"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Évaluation de la sécurité : Attributs de compte non sécurisés
 
@@ -39,7 +39,7 @@ Utilisez les mesures correctives adaptées à l’attribut en question, comme d�
 
 | Action recommandée | Correction | Raison |
 | --- | --- | --- |
-| Supprimer Utiliser les types de chiffrement DES via Kerberos pour ce compte| Supprimer ce paramètre des propriétés de compte dans Active Directory (AD) | La suppression de ce paramètre nécessite une pré-authentification Kerberos pour le compte, ce qui améliore la sécurité. |
+| Supprimer ne pas exiger la pré-authentification Kerberos| Supprimer ce paramètre des propriétés de compte dans Active Directory (AD) | La suppression de ce paramètre nécessite une pré-authentification Kerberos pour le compte, ce qui améliore la sécurité. |
 | Supprimer Stocker le mot de passe en utilisant un chiffrement réversible | Supprimer ce paramètre des propriétés de compte dans AD | La suppression de ce paramètre empêche le déchiffrement facile du mot de passe du compte. |
 | Supprimer Mot de passe non nécessaire | Supprimer ce paramètre des propriétés de compte dans AD | La suppression de ce paramètre nécessite l’utilisation d’un mot de passe avec le compte et empêche l’accès non autorisé aux ressources. |
 | Supprimer Mot de passe stocké avec un chiffrement faible | Réinitialiser le mot de passe du compte | Le fait de changer le mot de passe du compte permet l’utilisation d’algorithmes de chiffrement plus forts pour sa protection. |
