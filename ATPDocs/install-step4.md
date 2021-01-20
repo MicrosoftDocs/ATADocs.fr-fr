@@ -3,12 +3,12 @@ title: Guide de démarrage rapide pour l’installation du capteur Microsoft Def
 description: L’étape 4 de l’installation de Microsoft Defender pour Identity vous aide à installer le capteur Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 3688ace52e4581f8b94186c58c3e355e855e16d0
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4d68820bd6da88bca64bb8917f069d04adbc29b0
+ms.sourcegitcommit: 4f3da69b8e30cbc3e3fb43d38c3518001a10f7a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543992"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163533"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Démarrage rapide : Installer le capteur [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -26,7 +26,7 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
 1. Vérifiez que l’ordinateur dispose d’une connectivité au(x) point(s) de terminaison approprié(s) du [service cloud [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) :
 1. Extrayez les fichiers d’installation à partir du fichier zip. L’installation directe à partir du fichier zip est vouée à l’échec.
-1. Exécutez **Azure ATP sensor setup.exe**, puis suivez les instructions de l’Assistant Installation.
+1. Exécutez **Azure ATP sensor setup.exe** avec des privilèges élevés (**Exécuter en tant qu’administrateur**), puis suivez les instructions de l’Assistant Installation.
 1. Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
 
     ![Langage d’installation du capteur autonome [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-language.png)

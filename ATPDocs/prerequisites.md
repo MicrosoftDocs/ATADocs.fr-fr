@@ -1,14 +1,14 @@
 ---
 title: Prérequis de Microsoft Defender pour Identity
 description: Décrit les conditions requises pour réussir le déploiement de Microsoft Defender pour Identity dans votre environnement
-ms.date: 12/23/2020
+ms.date: 01/12/2021
 ms.topic: overview
-ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
+ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062550"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98203471"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,7 +115,7 @@ Cette section décrit les exigences pour le capteur [!INCLUDE [Product short](in
 
 ### <a name="general"></a>Général
 
-Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge l’installation sur un contrôleur de domaine sous Active Directory Federation Services (AD FS) exécutant Windows Server 2008 R2 SP1 (Server Core non inclus), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (Windows Server Core inclus mais pas Windows Nano Server), Windows Server 2019\* (Server Core inclus mais pas Nano Server), comme indiqué dans le tableau suivant.
+Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge l’installation sur les contrôleurs de domaine ou serveurs de services de fédération Active Directory (AD FS), comme indiqué dans le tableau suivant.
 
 | Version du système d'exploitation   | Server avec Expérience utilisateur | Server Core | Nano Server    | Installations prises en charge  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
@@ -169,17 +169,19 @@ Le tableau suivant liste les ports qui, au minimum, sont requis par le capteur [
 |------------|-------------|--------|-----------|---|
 |**Ports Internet**|||||
 |SSL (\*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
-|SSL (localhost)|TCP|444|Capteur [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Ports internes**|||||
 |DNS|TCP et UDP|53|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Serveurs DNS|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |RADIUS|UDP|1813|RADIUS|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
-|**Ports NNR**\*|||||
+|**Ports localhost**\*|Requis pour la mise à jour du service de capteur||||
+|SSL (localhost)|TCP|444|Service de capteur|Service de mise à jour du capteur|
+|**Ports NNR**\*\*|||||
 |NTLM sur RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 
-\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
+\* Par défaut, le trafic localhost vers localhost est autorisé, sauf s’il est bloqué par une stratégie de pare-feu personnalisée.  
+\*\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
 ### <a name="windows-event-logs"></a>Journaux d'événements Windows
 
@@ -261,7 +263,6 @@ Le tableau suivant liste les ports qui, au minimum, doivent être configurés su
 |------------|-------------|--------|-----------|---|
 |**Ports Internet**||||
 |SSL (\*.atp.azure.com)|TCP|443|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Service cloud [!INCLUDE [Product short](includes/product-short.md)]|
-|SSL (localhost)|TCP|444|Capteur [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Ports internes**||||
 |LDAP|TCP et UDP|389|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Contrôleurs de domaine|
 |LDAP sécurisé (LDAPS)|TCP|636|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Contrôleurs de domaine|
@@ -273,12 +274,15 @@ Le tableau suivant liste les ports qui, au minimum, doivent être configurés su
 |DNS|TCP et UDP|53|Capteur [!INCLUDE [Product short](includes/product-short.md)]|Serveurs DNS|
 |Syslog (facultatif)|TCP/UDP|514, selon la configuration|Serveur SIEM|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
 |RADIUS|UDP|1813|RADIUS|Capteur [!INCLUDE [Product short](includes/product-short.md)]|
-|**Ports NNR** \*|||||
+|**Ports localhost**\*|Requis pour la mise à jour du service de capteur||||
+|SSL (localhost)|TCP|444|Service de capteur|Service de mise à jour du capteur|
+|**Ports NNR**\*\*|||||
 |NTLM sur RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 |RDP|TCP|3389, seulement le premier paquet de Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Tous les appareils sur le réseau|
 
-\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
+\* Par défaut, le trafic localhost vers localhost est autorisé, sauf s’il est bloqué par une stratégie de pare-feu personnalisée.  
+\*\* Un de ces ports est obligatoire, mais nous vous recommandons de les ouvrir tous.
 
 > [!NOTE]
 >
