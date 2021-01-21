@@ -3,12 +3,12 @@ title: Configuration de la collecte d’événements Windows Microsoft Defender 
 description: Cette étape de l’installation de Microsoft Defender pour Identity consiste à configurer la collecte d’événements Windows.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 2a8c4f64a5d4bbd42f4bfea9fe2675d792a013f9
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4a81eceeb940e15139acb083e266eab1caf5456b
+ms.sourcegitcommit: 0b3877f2bf74735b7ba33408d237231a73242165
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544094"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615012"
 ---
 # <a name="configure-windows-event-collection"></a>Configurer la collecte d’événements Windows
 
@@ -16,6 +16,10 @@ La détection [!INCLUDE [Product long](includes/product-long.md)] s’appuie sur
 
 Les événements Windows suivants doivent être [configurés](#configure-audit-policies) et [collectés](#configure-event-collection) par [!INCLUDE [Product short](includes/product-short.md)] pour améliorer les fonctionnalités de détection des menaces :
 
+- 1202 - Le service de fédération a validé de nouvelles informations d’identification
+- 1203 - Échec de la validation des nouvelles informations d’identification par le service de fédération
+- 4624 - Connexion réussie d’un compte
+- 4625 - Échec de connexion d’un compte
 - 4726 - Compte d’utilisateur supprimé
 - 4728 - Membre ajouté au groupe de sécurité global
 - 4729 - Membre supprimé du groupe de sécurité global
