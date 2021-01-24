@@ -1,14 +1,14 @@
 ---
 title: Microsoft Defender pour l’identité dans Microsoft Cloud App Security
 description: Vue d’ensemble de Microsoft Defender pour les fonctionnalités d’identité dans Microsoft Cloud App Security.
-ms.date: 01/05/2020
+ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: ef4cbe9f0c49311a3d10b79e03fc725ea5131105
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
+ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543856"
+ms.lasthandoff: 01/24/2021
+ms.locfileid: "98746933"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Utilisation [!INCLUDE [Product long](includes/product-long.md)] de avec Microsoft Cloud App Security
 
@@ -63,7 +63,7 @@ Accédez à vos [!INCLUDE [Product short](includes/product-short.md)] données e
 
 ## <a name="alert-management"></a>Gestion des alertes
 
-Lorsque [!INCLUDE [Product short](includes/product-short.md)] vous utilisez avec Cloud App Security, la fermeture des alertes dans un service ne les ferme pas automatiquement dans l’autre service. Décidez où gérer et corriger les alertes pour éviter la duplication des efforts.
+Lorsque [!INCLUDE [Product short](includes/product-short.md)] vous utilisez avec Cloud App Security, la fermeture des alertes dans un service ne les ferme pas automatiquement dans l’autre service. Plus précisément, la fermeture des alertes dans Cloud App Security ne les ferme pas dans Defender pour l’identité, mais la fermeture des alertes dans Defender pour l’identité synchronisera la fermeture dans Cloud App Security. Décidez où gérer et corriger les alertes pour éviter la duplication des efforts.
 
 ## <a name="siem-notification"></a>Notification SIEM
 
@@ -82,7 +82,7 @@ Pour accéder à une page utilisateur d’un utilisateur système :
 1. Ouvrez **Alertes** dans le menu principal.
 1. Sélectionnez et filtrez la file d’attente des alertes pour un utilisateur spécifique à l’aide du champ **Nom d’utilisateur**.
 
- or
+ ou
 
 1. À partir du menu **Examiner**, sélectionnez **Journal d’activité**.
 1. Filtrez la file d’attente du journal d’activité par utilisateur.
