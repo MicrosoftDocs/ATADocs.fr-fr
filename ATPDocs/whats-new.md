@@ -1,16 +1,16 @@
 ---
 title: Nouveautés de Microsoft Defender pour Identity
 description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de Microsoft Defender pour Identity.
-ms.date: 01/17/2021
+ms.date: 01/24/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 71a276e5849293b60d8dc59949bc1b903bef03f9
-ms.sourcegitcommit: 1cd2fd6d6f3aca149fae1b0399d6eb406f379447
+ms.openlocfilehash: 2a5531653e09136b0aad5f88b0e9f8b76c161e2b
+ms.sourcegitcommit: 15b93f776cf29f5587fde7b9a2534b7b8b39730e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98537508"
+ms.lasthandoff: 01/24/2021
+ms.locfileid: "98746898"
 ---
 # <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -18,52 +18,58 @@ Cet article est mis à jour fréquemment pour vous informer des nouveautés de l
 
 Pour plus d’informations sur les versions antérieures de [!INCLUDE [Product short](includes/product-short.md)] jusqu’à la version 2.55 (comprise), consultez les [Informations de référence sur les versions de [!INCLUDE [Product short](includes/product-short.md)]](release-reference.md).
 
-Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+Flux RSS : Recevez une notification quand cette page est mise à jour en copiant et collant l’URL suivante dans votre lecteur de flux : `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
 
 > [!IMPORTANT]
 >
 > Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.129.
 
-## <a name="product-short-release-2137"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.137
+## <a name="defender-for-identity-release-2138"></a>Defender pour Identity version 2.138
+
+Publication : 24 janvier 2021
+
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
+
+## <a name="defender-for-identity-release-2137"></a>Defender pour Identity version 2.137
 
 Publication : 17 janvier 2021
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2136"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.136
+## <a name="defender-for-identity-release-2136"></a>Defender pour Identity version 2.136
 
 Publication : 3 janvier 2021
 
 - Defender pour Identity prend désormais en charge l’installation de capteurs sur les serveurs Services de fédération Active Directory (AD FS). L’installation du capteur sur des [serveurs AD FS compatibles](prerequisites.md#azure-atp-sensor-requirements) étend la visibilité de Microsoft Defender pour Identity dans un environnement hybride en surveillant ce composant d’infrastructure critique. Nous avons également actualisé certaines de nos détections existantes ([Création de service malveillant](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspicion d’attaque par force brute (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Reconnaissance d’énumération de compte](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) pour qu’elles fonctionnent également sur les données AD FS. Pour démarrer le déploiement du capteur Microsoft Defender pour Identity pour un serveur AD FS, [téléchargez le package de déploiement le plus récent](install-step3.md#download-the-setup-package) à partir de la page de configuration du capteur.
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2135"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.135
+## <a name="defender-for-identity-release-2135"></a>Defender pour Identity version 2.135
 
 Mise en production du 20 décembre 2020
 
 - Nous avons amélioré notre alerte [Reconnaissance d’attributs Active Directory (LDAP) (ID externe 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) pour détecter également les techniques utilisées pour obtenir les informations nécessaires à la génération de jetons de sécurité, comme dans le cadre de la [campagne Solorigate](https://aka.ms/solorigate).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2134"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.134
+## <a name="defender-for-identity-release-2134"></a>Defender pour Identity version 2.134
 
 Mise en production du 13 décembre 2020
 
 - Notre [détecteur Netlogon récemment mis en production](#azure-atp-release-2127-2) a été amélioré pour fonctionner également lorsque la transaction de canal Netlogon se produit sur un canal chiffré. Pour plus d’informations sur le détecteur, consultez [Tentative suspectée d’élévation des privilèges Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2133"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.133
+## <a name="defender-for-identity-release-2133"></a>Defender pour Identity version 2.133
 
 Mise en production du 6 décembre 2020
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2132"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.132
+## <a name="defender-for-identity-release-2132"></a>Defender pour Identity version 2.132
 
 Publication : 17 novembre 2020
 
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2131"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.131
+## <a name="defender-for-identity-release-2131"></a>Defender pour Identity version 2.131
 
 Publication : 8 novembre 2020
 
@@ -71,7 +77,7 @@ Publication : 8 novembre 2020
 L’alerte de sécurité *Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)* de [!INCLUDE [Product short](includes/product-short.md)] est désormais disponible. Dans cette détection, une alerte de sécurité [!INCLUDE [Product short](includes/product-short.md)] est déclenchée quand un attaquant énumère des comptes de service et leurs noms SPN respectifs, puis demande des tickets TGS Kerberos pour les services. L’intention des attaquants peut être d’extraire les codes de hachage des tickets et de les enregistrer en vue de les utiliser plus tard dans des attaques par force brute hors connexion. Pour plus d’informations, consultez [Exposition des noms SPN Kerberos](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
-## <a name="product-short-release-2130"></a>[!INCLUDE [Product short](includes/product-short.md)] version 2.130
+## <a name="defender-for-identity-release-2130"></a>Defender pour Identity version 2.130
 
 Publication : 25 octobre 2020
 

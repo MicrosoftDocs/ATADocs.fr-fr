@@ -3,12 +3,12 @@ title: 'Démarrage rapide : Connecter Microsoft Defender pour Identity à Activ
 description: La deuxième étape de la procédure d’installation de Microsoft Defender pour Identity vous aide à configurer les paramètres de connectivité du domaine sur votre service cloud Defender pour Identity
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 1dd9954e22e38b1db7d41d42358cd03dd15ea1c2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b1379570d87957fc943bf8b0727b6b0294f26695
+ms.sourcegitcommit: b6da51c97e8fb70ca04c0c0d5ea694700db9de86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543975"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634554"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Démarrage rapide : Se connecter à votre forêt Active Directory
 
@@ -37,13 +37,13 @@ Dans ce guide de démarrage rapide, vous connectez [!INCLUDE [Product long](incl
 
 La première fois que vous ouvrez le portail [!INCLUDE [Product short](includes/product-short.md)], l’écran suivant s’affiche :
 
-![Étape 1 de bienvenue [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
+![Bienvenue, phase 1, paramètres des services d’annuaire](media/directory-services.png)
 
 1. Entrez les informations suivantes, puis cliquez sur **Enregistrer** :
 
     |Champ|Commentaires|
     |---|---|
-    |**Nom d’utilisateur** (obligatoire)|Saisissez le nom d'utilisateur AD en lecture seule. Par exemple : **DefenderForIdentityUser**. Vous devez utiliser un compte d’utilisateur ou gMSA AD **standard**. N’utilisez **pas** le format UPN pour votre nom d’utilisateur.|
+    |**Nom d’utilisateur** (obligatoire)|Saisissez le nom d'utilisateur AD en lecture seule. Par exemple : **DefenderForIdentityUser**. Vous devez utiliser un compte d’utilisateur ou gMSA AD **standard**. N’utilisez **pas** le format UPN pour votre nom d’utilisateur.<br />**REMARQUE :** Nous vous recommandons d’éviter d’utiliser des comptes attribués à des utilisateurs spécifiques.|
     |**Mot de passe** (requis pour le compte d’utilisateur AD standard)|Pour le compte d'utilisateur AD, saisissez le mot de passe de l’utilisateur en lecture seule. Par exemple : **Pencil1**.|
     |**Compte de service administré du groupe** (requis pour le compte gMSA)|Pour le compte gMSA, sélectionnez **Compte de service administré du groupe**.|
     |**Domaine** (obligatoire)|Entrez le domaine de l’utilisateur en lecture seule. Par exemple : **contoso.com**. Il est important d’entrer le nom de domaine complet où se trouve l’utilisateur. Par exemple, si le compte de l’utilisateur se trouve dans le domaine corp.contoso.com, vous devez entrer `corp.contoso.com`, et non contoso.com.|
