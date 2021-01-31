@@ -3,12 +3,12 @@ title: Évaluation des attributs de compte non sécurisé Microsoft Defender pou
 description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités de l’identité avec des attributs non sécurisés rapport d’évaluation de la sécurité de l’identité.
 ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
-ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
+ms.openlocfilehash: 64aa95a423d0c8fc0bb210c2c10bc63f8c33bca4
+ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98541796"
+ms.lasthandoff: 01/31/2021
+ms.locfileid: "99217700"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Évaluation de la sécurité : Attributs de compte non sécurisés
 
@@ -20,7 +20,7 @@ ms.locfileid: "98541796"
 
 Quand une organisation ne parvient pas à sécuriser ses attributs de compte, elle laisse la porte ouverte aux acteurs malveillants.
 
-Les acteurs malveillants, à l’instar des voleurs, recherchent souvent le moyen le plus simple et le plus silencieux de s’introduire dans un environnement. Les comptes configurés avec des attributs non sécurisés sont une aubaine pour les attaquants et peuvent être exposés à des risques.
+Les acteurs malveillants, à l’instar des voleurs, recherchent souvent le moyen le plus simple et le plus silencieux de s’introduire dans un environnement. Les comptes configurés avec des attributs non sécurisés sont des fenêtres d’opportunités pour les attaquants et peuvent exposer des risques.
 
 Par exemple, si l’attribut *PasswordNotRequired* est activé, un attaquant peut facilement accéder au compte. Cela est particulièrement risqué si le compte dispose d’un accès privilégié à d’autres ressources.
 
@@ -31,7 +31,9 @@ Par exemple, si l’attribut *PasswordNotRequired* est activé, un attaquant peu
 1. Prenez les mesures appropriées sur ces comptes d’utilisateurs en modifiant ou supprimant les attributs en question.
 
 > [!NOTE]
-> Cette évaluation est mise à jour en quasi-temps réel.
+>
+> - Cette évaluation est mise à jour en quasi-temps réel.
+> - Cette évaluation peut contenir des entités supprimées précédemment si les [conditions préalables](prerequisites.md#before-you-start) pour [!INCLUDE [Product long](includes/product-long.md)] ne sont pas remplies.
 
 ## <a name="remediation"></a>Correction
 
