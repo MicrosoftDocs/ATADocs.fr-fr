@@ -1,14 +1,14 @@
 ---
 title: Prérequis de Microsoft Defender pour Identity
 description: Décrit les conditions requises pour réussir le déploiement de Microsoft Defender pour Identity dans votre environnement
-ms.date: 01/12/2021
+ms.date: 01/27/2021
 ms.topic: overview
-ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
-ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
+ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
+ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98203471"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98912469"
 ---
 # <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -60,7 +60,7 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
     > [!NOTE]
     >
     > - Pour les ordinateurs du capteur exécutant Windows Server 2012 et versions ultérieures, nous vous recommandons d’utiliser un compte **gMSA** pour améliorer la sécurité et la gestion automatique des mots de passe.
-    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 et d’autres qui exécutent Windows Server 2012 ou version ultérieure, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
+    > - Si vous avez plusieurs capteurs, certains exécutant Windows Server 2008 R2 et d’autres exécutant Windows Server 2012 ou ultérieur, en plus de la recommandation d’utiliser un compte **gMSA**, vous devez également utiliser au moins un compte d’utilisateur AD **standard**.
     > - Si vous avez défini des listes de contrôle d’accès (ACL) personnalisées sur différentes unités d’organisation dans votre domaine, vérifiez que l’utilisateur sélectionné dispose d’autorisations d’accès en lecture à ces unités d’organisation.
 
 - Si vous exécutez Wireshark sur le capteur autonome [!INCLUDE [Product short](includes/product-short.md)], redémarrez le service de capteur [!INCLUDE [Product short](includes/product-short.md)] après avoir arrêté la capture Wireshark. Si vous ne redémarrez pas le service de capteur, le capteur arrête la capture du trafic.

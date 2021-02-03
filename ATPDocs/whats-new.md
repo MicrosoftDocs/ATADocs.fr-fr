@@ -1,16 +1,16 @@
 ---
 title: Nouveautés de Microsoft Defender pour Identity
 description: Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de Microsoft Defender pour Identity.
-ms.date: 01/24/2021
+ms.date: 01/31/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 2a5531653e09136b0aad5f88b0e9f8b76c161e2b
-ms.sourcegitcommit: 15b93f776cf29f5587fde7b9a2534b7b8b39730e
+ms.openlocfilehash: 9cc03386390f0d5fac0f7e8cc79127fc0e29f819
+ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2021
-ms.locfileid: "98746898"
+ms.lasthandoff: 01/31/2021
+ms.locfileid: "99217717"
 ---
 # <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,13 @@ Flux RSS : Recevez une notification quand cette page est mise à jour en copian
 > [!IMPORTANT]
 >
 > Les noms des produits Microsoft de protection contre les menaces changent. Vous trouverez [ici](https://www.microsoft.com/security/blog/?p=91813) plus d’informations sur ce sujet et sur les autres mises à jour. Nous utiliserons les nouveaux noms à partir de la version 2.129.
+
+## <a name="defender-for-identity-release-2139"></a>Defender pour Identity version 2.139
+
+Publication : 31 janvier 2021
+
+- Nous avons mis à jour la gravité de l’exposition du SPN Kerberos suspecté en la définissant sur Haute pour mieux refléter l’impact de l’alerte. Pour plus d’informations sur l’alerte, consultez [Exposition du SPN Kerberos suspecté (ID externe 2410)](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410)
+- Cette version contient des améliorations et des corrections de bogues pour l’infrastructure des capteurs internes.
 
 ## <a name="defender-for-identity-release-2138"></a>Defender pour Identity version 2.138
 
