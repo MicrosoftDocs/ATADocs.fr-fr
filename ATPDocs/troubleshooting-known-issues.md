@@ -1,14 +1,14 @@
 ---
 title: Dépannage de Microsoft Defender pour identifier les problèmes connus
 description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
-ms.date: 01/12/2021
+ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
+ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114239"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99551609"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
 
@@ -202,6 +202,24 @@ Il s’agit d’une limitation de conception.
 **Résolution :**
 
 Aucune solution connue.
+
+## <a name="sensor-fails-to-enumerate-event-logs"></a>Le capteur ne parvient pas à énumérer les journaux des événements
+
+Si vous observez un nombre limité d’alertes d’événements de sécurité ou d’activités logiques dans la [!INCLUDE [Product short](includes/product-short.md)] console, mais qu’aucune alerte d’intégrité n’est déclenchée. 
+
+**Entrées du journal du capteur :**
+
+Erreur EventLogException System. Diagnostics. Eventing. Reader. EventLogException : le handle n’est pas valide au niveau de void System. Diagnostics. Eventing. Reader. EventLogException. Throw (int errorCode) au niveau de l’objet System. Diagnostics. Eventing. Reader. NativeWrapper. EvtGetEventInfo (handle EventLogHandle, EvtEventPropertyId enumType) au niveau de la chaîne System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog ()
+
+**Cause :**
+
+Une liste de Access Control discrétionnaires limite l’accès aux journaux des événements requis par le compte de service local.
+
+**Résolution :**
+
+Assurez-vous que la liste de Access Control discrétionnaires comprend l’entrée suivante :
+
+`(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
 
 ## <a name="see-also"></a>Voir aussi
 
