@@ -1,0 +1,203 @@
+### YamlMime:FAQ
+metadata:
+  title: Forum aux questions sur Microsoft Defender for Identity
+  description: Fournit une liste de questions fréquemment posées sur Microsoft Defender pour l’identité et les réponses associées.
+  ms.date: 10/27/2020
+  ms.topic: conceptual
+  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
+  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/14/2021
+  ms.locfileid: "100520713"
+title: Forum aux questions sur Microsoft Defender for Identity
+summary: >
+  Cet article fournit la liste des questions fréquemment posées et des réponses sur Microsoft Defender for Identity divisées dans les catégories suivantes :
+sections:
+- name: Qu’est-ce que Defender pour l’identité ?
+  questions:
+  - question: Qu’est-ce que peut défendre pour la détection d’identité ?
+    answer: >
+      Defender for Identity détecte les attaques et les techniques malveillantes connues, les problèmes de sécurité et les risques liés à votre réseau.
+
+      Pour obtenir la liste complète des détections d’identité, consultez [Quelles sont les détections qui sont effectuées par Defender pour l’identité ?](suspicious-activity-guide.md).
+  - question: Quelles sont les données collectées par Defender pour l’identité ?
+    answer: >
+      Defender for Identity collecte et stocke les informations de vos serveurs configurés (contrôleurs de domaine, serveurs membres, etc.) dans une base de données spécifique au service à des fins d’administration, de suivi et de création de rapports. Les informations collectées comprennent le trafic réseau vers et depuis des contrôleurs de domaine (par exemple, l’authentification Kerberos, l’authentification NTLM, les requêtes DNS), les journaux de sécurité (par exemple, les événements de sécurité Windows), les informations Active Directory (structure, sous-réseaux, sites) et les informations sur les entités (par exemple, les noms, les adresses e-mail et les numéros de téléphone).
+
+
+      Microsoft utilise ces données pour :
+
+
+      - identifier de manière proactive les indicateurs d’attaque dans votre organisation ;
+
+      - générer des alertes si une possible attaque a été détectée ;
+
+      - fournir à vos opérations de sécurité une vue sur les entités liées aux signaux des menaces de votre réseau, ce qui vous permet de rechercher et de détecter la présence de menaces de sécurité sur le réseau.
+
+
+      Microsoft n’exploite pas vos données à des fins publicitaires ni autres que la fourniture du service.
+  - question: Combien d’informations d’identification de service d’annuaire est-ce que Defender pour la prise en charge des identités ?
+    answer: >
+      Defender for Identity prend actuellement en charge l’ajout de 10 informations d’identification de service d’annuaire différentes pour la prise en charge de Active Directory environnements avec des forêts non approuvées. Si vous avez besoin de comptes supplémentaires, ouvrez un ticket de support.
+  - question: Defender pour l’identité exploite-t-il uniquement le trafic à partir de Active Directory ?
+    answer: >
+      En plus d’analyser le trafic Active Directory à l’aide de la technologie d’inspection approfondie des paquets, Defender for Identity collecte également les événements Windows pertinents de votre contrôleur de domaine et crée des profils d’entité basés sur les informations de Active Directory Domain Services. Defender for Identity prend également en charge la gestion de la comptabilité RADIUS des journaux VPN de différents fournisseurs (Microsoft, Cisco, F5 et Checkpoint).
+  - question: Defender pour l’analyse d’identité n’utilise-t-il que des appareils joints à un domaine ?
+    answer: >
+      Non. Defender for Identity surveille tous les appareils du réseau qui effectuent des demandes d’authentification et d’autorisation sur Active Directory, y compris les appareils non-Windows et mobiles.
+  - question: Defender pour les comptes d’ordinateur de l’analyseur d’identité et les comptes d’utilisateurs ?
+    answer: >
+      Oui. Étant donné que les comptes d’ordinateurs (ainsi que toutes les autres entités) peuvent être utilisés pour effectuer des activités malveillantes, Defender pour l’identité surveille le comportement de tous les comptes d’ordinateur et toutes les autres entités de l’environnement.
+  - question: Quelle est la différence entre Advanced Threat Analytics (ATA) et Defender for Identity ?
+    answer: >
+      ATA est une solution locale autonome avec plusieurs composants, tels que le centre ATA qui nécessite du matériel dédié localement.
+
+
+      Defender for Identity est une solution de sécurité basée sur le Cloud qui s’appuie sur les signaux de Active Directory (Azure AD) locaux. La solution est très scalable et fréquemment mise à jour.
+
+
+      La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+
+
+      Contrairement au capteur ATA, l’Defender pour le capteur d’identité utilise également des sources de données telles que Suivi d’v nements pour Windows (ETW) permettant à Defender d’obtenir une identité pour fournir des détections supplémentaires.
+
+
+      Les mises à jour fréquentes de Defender pour les identités incluent les fonctionnalités suivantes :
+
+
+      - **Prise en charge [des environnements multiforêts](multi-forest.md)**  : Permet aux organisations d’avoir une visibilité sur les forêts AD.
+
+
+      - **[Évaluations de la posture de sécurité des identités](isp-overview.md)**  : Identifie les configurations incorrectes et les composants exploitables courants, et fournit des voies d’atténuation pour réduire la surface d’attaque.
+
+
+      - **[Fonctions UEBA](/cloud-app-security/tutorial-ueba)**  : Insights sur les risques de chaque utilisateur via le scoring des priorités d’investigation des utilisateurs. Le score peut assister SecOps dans leurs investigations et aider les analystes à comprendre les activités inhabituelles de l’utilisateur et de l’organisation.
+
+
+      - **Intégrations natives** : Intègre Microsoft Cloud App Security et Azure AD Identity Protection pour fournir une vue hybride de ce qui se produit dans les environnements locaux et hybrides.
+
+
+      - **Contribue à Microsoft 365 Defender**: fournit des données d’alerte et de menace à Microsoft 365 Defender. Microsoft 365 Defender tire parti du portefeuille de sécurité Microsoft 365 (identités, points de terminaison, données et applications) pour analyser automatiquement les données de menace inter-domaines, en créant une image complète de chaque attaque dans un tableau de bord unique. Grâce à cette richesse et à la clarté, les défenseurs peuvent se concentrer sur les menaces critiques et la recherche de failles sophistiquées, en faisant confiance à Microsoft 365 l’automatisation puissante de Defender arrête les attaques n’importe où dans la chaîne de suppression et rétablit l’organisation dans un état sécurisé.
+- name: Gestion des licences et confidentialité
+  questions:
+  - question: Où puis-je obtenir une licence pour Microsoft Defender pour l’identité ?
+    answer: >
+      Defender for Identity est disponible dans le cadre de Enterprise Mobility + Security 5 suite (EMS E5) et en tant que licence autonome. Vous pouvez acquérir une licence directement sur le [portail Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou via le modèle de licence de fournisseur de solutions cloud (CSP).
+  - question: Defender pour l’identité a-t-il besoin d’une seule licence ou nécessite-t-il une licence pour chaque utilisateur que je souhaite protéger ?
+    answer: >
+      Pour plus d’informations sur les conditions requises pour les licences d’identité, consultez [Defender pour obtenir des conseils en matière de licences d’identité](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
+  - question: Est-ce que mes données sont isolées des données des autres clients ?
+    answer: Oui, vos données sont isolées par l’authentification de l’accès et la séparation logique basée sur les identificateurs client. Chaque client peut uniquement accéder aux données collectées dans sa propre organisation et aux données génériques fournies par Microsoft.
+  - question: Ai-je la possibilité de sélectionner l’emplacement où stocker mes données ?
+    answer: >
+      Non. Lorsque votre Defender pour instance d’identité est créé, il est stocké automatiquement dans le centre de données du pays le plus proche de l’emplacement géographique de votre locataire AAD. Impossible de déplacer Defender pour les données d’identité une fois que votre Defender pour l’instance d’identité est créé dans un autre centre de données.
+  - question: Comment est-ce que Microsoft empêche les activités internes malveillantes et les abus de rôles dotés de privilèges élevés ?
+    answer: >
+      Les développeurs et administrateurs Microsoft, par conception, ont reçu des privilèges suffisants pour effectuer les tâches qui leur ont été affectées afin de faire fonctionner et évoluer le service. Microsoft déploie des combinaisons de contrôles préventifs, défensifs et réactifs favorisant la protection contre les activités de développement et/ou d’administration non autorisées, comprenant les mécanismes suivants :
+
+
+      - contrôles d’accès stricts aux données sensibles ;
+
+      - combinaisons de contrôles améliorant la détection indépendante des activités malveillantes ;
+
+      - niveaux multiples de surveillance, d’enregistrement et de génération de rapports.
+
+
+      En outre, Microsoft effectue des vérifications des antécédents sur certains membres du personnel d’exploitation et limite l’accès aux applications, aux systèmes et à l’infrastructure réseau par rapport au niveau de ces vérifications. Le personnel d’exploitation suit un processus formel quand il doit accéder au compte d’un client ou à des informations associées dans l’exercice de ses fonctions.
+- name: Déploiement
+  questions:
+  - question: De combien de défenseurs d’identité ai-je besoin ?
+    answer: >
+      Chaque contrôleur de domaine dans l’environnement doit être couvert par un Defender pour le capteur d’identité ou le capteur autonome. Pour plus d’informations, consultez [Defender pour le dimensionnement du capteur d’identité](capacity-planning.md#sizing).
+  - question: Defender pour l’identité fonctionne-t-il avec le trafic chiffré ?
+    answer: Les protocoles réseau avec le trafic chiffré (par exemple AtSvc et WMI) ne sont pas chiffrés, mais ils sont analysés par les capteurs.
+  - question: Defender pour l’identité fonctionne-t-il avec le blindage Kerberos ?
+    answer: >
+      L’activation du blindage Kerberos, également appelé vitesse (flexible Authentication Secure Tunneling), est prise en charge par Defender pour l’identité, à l’exception de la détection de hachage excessive, qui ne fonctionne pas avec le blindage Kerberos.
+  - question: Comment faire surveiller un contrôleur de domaine virtuel à l’aide de Defender pour l’identité ?
+    answer: >
+      La plupart des contrôleurs de domaine virtuels peuvent être couverts par l’Defender pour le capteur d’identité, afin de déterminer si l’Defender du capteur d’identité est approprié à votre environnement, consultez [Defender pour la planification de la capacité d’identité](capacity-planning.md).
+
+
+      Si un contrôleur de domaine virtuel ne peut pas être couvert par l’Defender pour le capteur d’identité, vous pouvez avoir un défendeur virtuel ou physique pour le capteur autonome d’identité, comme décrit dans [configurer la mise en miroir des ports](configure-port-mirroring.md).
+
+      Le moyen le plus simple consiste à disposer d’un outil Virtual Defender pour le capteur autonome d’identité sur chaque ordinateur hôte où se trouve un contrôleur de domaine virtuel.
+
+      Si vos contrôleurs de domaine virtuels passent d’un hôte à l’autre, vous devez effectuer l’une des étapes suivantes :
+
+
+      - Lorsque le contrôleur de domaine virtuel est déplacé vers un autre hôte, préconfigurez le capteur de protection autonome de l’identité de cet hôte pour qu’il reçoive le trafic du contrôleur de domaine virtuel récemment déplacé.
+
+      - Assurez-vous que vous avez affilié le capteur autonome Virtual Defender pour identité au contrôleur de domaine virtuel. ainsi, s’il est déplacé, Defender pour le capteur autonome d’identité le déplace.
+
+      - Certains commutateurs virtuels peuvent envoyer le trafic entre les hôtes.
+  - question: Comment faire configurer l’Defender pour que les capteurs d’identité communiquent avec Defender pour Identity Cloud service lorsque j’ai un proxy ?
+    answer: >
+      Pour que vos contrôleurs de domaine communiquent avec le service cloud, vous devez ouvrir le port 443 dans votre pare-feu/proxy sur *.atp.azure.com. Pour obtenir des instructions sur la procédure à suivre, consultez [configurer votre proxy ou pare-feu pour activer la communication avec Defender pour les capteurs d’identité](configure-proxy.md).
+  - question: Est-il possible de protéger les contrôleurs de domaine contrôlés par l’identité sur votre solution IaaS ?
+    answer: >
+      Oui, vous pouvez utiliser le capteur de protection des identités pour analyser les contrôleurs de domaine qui se trouvent dans n’importe quelle solution IaaS.
+  - question: Defender peut-il prendre en charge plusieurs domaines et plusieurs forêts ?
+    answer: >
+      Defender for Identity prend en charge les environnements à plusieurs domaines et plusieurs forêts. Pour plus d’informations et les exigences de confiance, consultez [Prise en charge de plusieurs forêts](multi-forest.md).
+  - question: Puis-je examiner l’intégrité globale du déploiement ?
+    answer: >
+      Oui, vous pouvez afficher l’intégrité globale du déploiement, ainsi que les problèmes spécifiques liés à la configuration, la connectivité, etc., et vous êtes alerté lorsqu’ils se produisent avec Defender pour les alertes d’intégrité des identités.
+- name: Opération
+  questions:
+  - question: Quel type d’intégration l’identité a-t-elle avec SIEMs ?
+    answer: >
+      Defender for Identity peut être configuré pour envoyer une alerte syslog, à n’importe quel serveur SIEM utilisant le format CEF, pour les alertes d’intégrité et lorsqu’une alerte de sécurité est détectée. Pour plus d’informations, consultez [Informations de référence sur le journal SIEM](cef-format-sa.md).
+  - question: Pourquoi certains comptes sont-ils considérés comme sensibles ?
+    answer: >
+      Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
+
+
+      Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](sensitive-accounts.md).
+  - question: Est-ce que je dois écrire mes propres règles et créer un seuil/une ligne de base ?
+    answer: >
+      Avec Defender for Identity, il n’est pas nécessaire de créer des règles, des seuils ou des lignes de base, puis de les affiner. Defender for Identity analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations entre eux, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après le déploiement, Defender pour l’identité commence à détecter les activités suspectes comportementales. En revanche, Defender for Identity commence à détecter les attaques malveillantes connues et les problèmes de sécurité immédiatement après le déploiement.
+  - question: Quel est le trafic généré par Defender pour l’identité dans le réseau à partir des contrôleurs de domaine et pourquoi ?
+    answer: >
+      Defender for Identity génère le trafic des contrôleurs de domaine vers les ordinateurs de l’organisation dans l’un des trois scénarios suivants :
+
+
+      1. **Résolution de noms réseau** Defender for Identity capture le trafic et les événements, l’apprentissage et le profilage des utilisateurs et des activités informatiques sur le réseau. Pour apprendre et profiler les activités conformément aux ordinateurs de l’organisation, Defender for Identity doit résoudre les adresses IP en comptes d’ordinateur. Pour résoudre les adresses IP en noms d’ordinateur Defender pour les capteurs d’identité, demandez l’adresse IP du nom de l’ordinateur *derrière* l’adresse IP.
+
+          Les requêtes sont effectuées à l’aide d’une des quatre méthodes :
+          - NTLM sur RPC (port TCP 135)
+          - NetBIOS (port UDP 137)
+          - RDP (port TCP 3389)
+          - Interroger le serveur DNS à l’aide de la recherche DNS inversée de l’adresse IP (UDP 53)
+
+          Après avoir obtenu le nom de l’ordinateur, Defender pour les capteurs d’identité vérifie les détails dans Active Directory pour voir s’il existe un objet ordinateur corrélé portant le même nom d’ordinateur. Si une correspondance est trouvée, une association est établie entre l’adresse IP et l’objet ordinateur correspondant.
+      2. **Chemin de mouvement latéral (LMP)** Pour générer des LMPs potentiels pour les utilisateurs sensibles, Defender for Identity requiert des informations sur les administrateurs locaux sur les ordinateurs. Dans ce scénario, l’Defender pour le capteur d’identité utilise SAM-R (TCP 445) pour interroger l’adresse IP identifiée dans le trafic réseau afin de déterminer les administrateurs locaux de l’ordinateur. Pour en savoir plus sur Defender pour l’identité et SAM-R, consultez [configurer les autorisations requises Sam-r](install-step8-samr.md).
+
+
+      3. **Interrogation de Active Directory à l’aide de LDAP** pour Entity Data Defender pour les capteurs d’identité interrogez le contrôleur de domaine à partir du domaine auquel appartient l’entité. Il peut s’agir du même capteur ou d’un autre contrôleur de domaine de ce domaine.
+
+
+      |Protocole|Service|Port|Source| Sens|
+
+      |---------|---------|---------|---------|--------|
+
+      |LDAP|TCP et UDP|389|Contrôleurs de domaine|Sortant|
+
+      |LDAP sécurisé (LDAPS)|TCP|636|Contrôleurs de domaine|Sortant|
+
+      |LDAP vers le catalogue global|TCP|3268|Contrôleurs de domaine|Sortant|
+
+      |LDAPS vers le catalogue global|TCP|3269|Contrôleurs de domaine|Sortant|
+  - question: Pourquoi les activités n’affichent-elles pas toujours l’utilisateur source et l’ordinateur source ?
+    answer: >
+      Defender for Identity capture des activités sur de nombreux protocoles différents. Dans certains cas, Defender for Identity ne reçoit pas les données de l’utilisateur source dans le trafic. Defender pour les identités tente de mettre en corrélation la session de l’utilisateur avec l’activité et, lorsque la tentative réussit, l’utilisateur source de l’activité s’affiche. Lorsque la tentative de corrélation de l’utilisateur échoue, seul l’ordinateur source s’affiche.
+- name: Résolution des problèmes
+  questions:
+  - question: Que dois-je faire si l’Defender pour le capteur d’identité ou le capteur autonome ne démarre pas ?
+    answer: >
+      Examinez l’erreur la plus récente dans le [Journal](troubleshooting-using-logs.md) des erreurs actuel (où Defender for Identity est installé sous le dossier « logs »).
+- name: Voir aussi
+  questions:
+  - question: ''
+    answer: "\n- [Prérequis de Defender pour Identity](prerequisites.md)\n- [Defender pour la planification de la capacité d’identité](capacity-planning.md)\n- [Configurer la collecte d’événements](configure-event-collection.md)\n- [Configuration du transfert d’événements Windows](configure-event-forwarding.md)\n- [Résolution des problèmes](troubleshooting-known-issues.md)\n- [Consultez le Forum Defender for Identity.](https://aka.ms/MDIcommunity)"
