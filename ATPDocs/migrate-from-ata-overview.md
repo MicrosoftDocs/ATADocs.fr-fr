@@ -3,12 +3,12 @@ title: Advanced Threat Analytics à Microsoft Defender pour le déplacement de l
 description: Découvrez comment déplacer une installation Advanced Threat Analytics existante vers Microsoft Defender pour l’identité.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: be1edf7981bbf72daeb285a9d0d0896892839f59
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542683"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515340"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -17,7 +17,7 @@ ms.locfileid: "96542683"
 
 Utilisez ce guide pour passer d’une installation ATA existante au service ( [!INCLUDE [Product long](includes/product-long.md)] ). Ce guide explique les conditions [!INCLUDE [Product short](includes/product-short.md)] préalables et la configuration requise, ainsi que les détails de la planification et de l’exécution de votre déplacement. Des étapes de validation et des conseils pour tirer parti des dernières solutions de sécurité et de protection contre les menaces avec [!INCLUDE [Product short](includes/product-short.md)] après l’installation sont également inclus.
 
-Pour en savoir plus sur les différences entre ATA et [!INCLUDE [Product short](includes/product-short.md)] , consultez le [ [!INCLUDE [Product short](includes/product-short.md)] Forum aux questions](technical-faq.md#what-is-azure-atp).
+Pour en savoir plus sur les différences entre ATA et [!INCLUDE [Product short](includes/product-short.md)] , consultez le [ [!INCLUDE [Product short](includes/product-short.md)] Forum aux questions](technical-faq.yml).
 
 Dans ce guide, vous allez :
 

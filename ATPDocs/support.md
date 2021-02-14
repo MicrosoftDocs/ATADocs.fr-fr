@@ -3,12 +3,12 @@ title: Microsoft Defender pour la prise en charge des identités
 description: Décrit le processus d’obtention de l’aide de support pour Microsoft Defender pour l’identité.
 ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: f883fad5631b23eae2154b3253bcbcb30e7929e3
-ms.sourcegitcommit: 082c85462e1d96a2bbf1ba914de5a0028a32743e
+ms.openlocfilehash: 80b863208c560cc0bfe74800efe1a220ee190fc3
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97705664"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515323"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informations et support
 
@@ -55,7 +55,7 @@ Pour afficher l’état du système pour [!INCLUDE [Product short](includes/prod
 
 Résolution des problèmes :
 
-- Si vous avez une question sur un point spécifique, consultez le [forum aux questions](technical-faq.md).
+- Si vous avez une question sur un point spécifique, consultez le [forum aux questions](technical-faq.yml).
 
 - Si vous avez une question concernant un composant requis pour [!INCLUDE [Product short](includes/product-short.md)] , voir [ [!INCLUDE [Product short](includes/product-short.md)] conditions préalables](prerequisites.md).
 
@@ -63,6 +63,6 @@ Résolution des problèmes :
 
 - Pour plus d’informations sur les alertes de sécurité des investigations, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
-### <a name="community-resources"></a>Ressources de la communauté
+### <a name="community-resources"></a>Ressources communautaires
 
 Nous recommandons le [groupe de communautés technologiques [!INCLUDE [Product short](includes/product-short.md)] pour ](https://aka.ms/MDIcommunity). Cette ressource fournit des réponses directes de l' [!INCLUDE [Product short](includes/product-short.md)] équipe en plus de l’avantage des expériences partagées et des connaissances d’autres administrateurs et consultants.
