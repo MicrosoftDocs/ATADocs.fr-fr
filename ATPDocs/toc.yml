@@ -1,199 +1,200 @@
-- name: Documentation Microsoft Defender pour Identity
-  href: index.yml
-- name: Vue d’ensemble
-  items:
-    - name: "Qu’est-ce que Microsoft Defender pour Identity\_?"
-      href: what-is.md
-    - name: Architecture de Defender pour Identity
-      href: architecture.md
-    - name: Prérequis de Defender pour Identity
-      href: prerequisites.md
-    - name: Defender pour Identity pour US Government
-      href: us-govt-gcc-high.md
-    - name: Nouveautés de Defender pour Identity
-      href: whats-new.md
-- name: Démarrages rapides
-  expanded: true
-  items:
-    - name: Créer votre instance Defender pour Identity
-      href: install-step1.md
-    - name: Se connecter à Active Directory
-      href: install-step2.md
-    - name: Télécharger le package du capteur Defender pour Identity
-      href: install-step3.md
-    - name: Installer le capteur Defender pour Identity
-      href: install-step4.md
-- name: Tutoriels
-  items:
-    - name: Alertes de reconnaissance
-      href: reconnaissance-alerts.md
-    - name: Alertes indiquant des informations d’identification compromises
-      href: compromised-credentials-alerts.md
-    - name: Alertes de mouvement latéral
-      href: lateral-movement-alerts.md
-    - name: Alertes de dominance du domaine
-      href: domain-dominance-alerts.md
-    - name: Alertes d’exfiltration
-      href: exfiltration-alerts.md
-    - name: Procéder à une investigation sur un utilisateur
-      href: investigate-a-user.md
-    - name: Procéder à une investigation sur un ordinateur
-      href: investigate-a-computer.md
-    - name: Examiner les chemins de mouvement latéral
-      href: investigate-lateral-movement-path.md
-    - name: Examiner les entités
-      href: investigate-entity.md
-- name: Concepts
-  items:
-    - name: Portail Defender pour Identity
-      href: workspace-portal.md
-    - name: Alertes de sécurité Defender pour Identity
-      href: suspicious-activity-guide.md
-    - name: Activités supervisées
-      href: monitored-activities.md
-    - name: Présentation des profils d’entité
-      href: entity-profiles.md
-    - name: Chemins de mouvement latéral
-      href: use-case-lateral-movement-path.md
-    - name: Comprendre la résolution de noms réseau (NNR)
-      href: nnr-policy.md
-    - name: Rapports
-      href: reports.md
-    - name: Rôles d'utilisateur
-      href: role-groups.md
-    - name: Prise en charge multiforêt de Defender pour Identity
-      href: multi-forest.md
-    - name: Sécurité
-      items:
-        - name: Base de référence de la sécurité
-          href: security-baseline.md
-- name: Guides pratiques
-  items:
-    - name: Defender pour Identity avec Microsoft Cloud App Security
-      items:
-        - name: Utiliser Defender pour Identity avec Cloud App Security
-          href: mcas-integration.md
-        - name: Filtrer des activités et définir des stratégies
-          href: activities-filtering-mcas.md
-        - name: Évaluations de la posture de sécurité des identités
-          items:
-            - name: Présentation de la posture de sécurité des identités
-              href: isp-overview.md
-            - name: Évaluation des contrôleurs de domaine avec le service Spouleur d’impression disponible
-              href: cas-isp-print-spooler.md
-            - name: Évaluation des entités dormantes dans des groupes sensibles
-              href: cas-isp-dormant-entities.md
-            - name: Évaluation des entités exposant les informations d’identification en texte clair
-              href: cas-isp-clear-text.md
-            - name: Évaluation de l’utilisation LAPS
-              href: cas-isp-laps.md
-            - name: Évaluation de l’utilisation des protocoles hérités
-              href: cas-isp-legacy-protocols.md
-            - name: Chemins de mouvement latéral les plus risqués
-              href: cas-isp-riskiest-lmp.md
-            - name: Contrôleurs de domaine non supervisés
-              href: cas-isp-unmonitored-domain-controller.md
-            - name: Attributs de compte non sécurisé
-              href: cas-isp-unsecure-account-attributes.md
-            - name: Évaluation de la délégation Kerberos non sécurisée
-              href: cas-isp-unconstrained-kerberos.md
-            - name: "Attributs d’historique SID non\_sécurisés"
-              href: cas-isp-unsecure-sid-history-attribute.md
-            - name: Évaluation de l’utilisation du chiffrement faible
-              href: cas-isp-weak-cipher.md
-    - name: Laboratoire des alertes de sécurité
-      items:
-        - name: Vue d’ensemble du laboratoire
-          href: playbook-lab-overview.md
-        - name: 1 - Configuration du laboratoire
-          href: playbook-setup-lab.md
-        - name: 2 - Playbook de reconnaissance
-          href: playbook-reconnaissance.md
-        - name: 3 - Playbook de mouvement latéral
-          href: playbook-lateral-movement.md
-        - name: 4 - Playbook de dominance du domaine
-          href: playbook-domain-dominance.md
-    - name: Présentation des alertes de sécurité
-      href: understanding-security-alerts.md
-    - name: Planifier votre capacité Defender pour Identity
-      href: capacity-planning.md
-    - name: Gérer les alertes de sécurité
-      href: working-with-suspicious-activities.md
-    - name: Exclure des entités des détections
-      href: excluding-entities-from-detections.md
-    - name: Gérer des comptes sensibles
-      href: sensitive-accounts.md
-    - name: Rechercher et filtrer dans des activités supervisées
-      href: activities-search.md
-    - name: Utiliser des exclusions et des comptes honeytoken
-      href: install-step7.md
-    - name: Superviser les contrôleurs de domaine
-      href: sensor-monitoring.md
-    - name: Modifier le mot de passe de connectivité de domaine
-      href: modifying-config-dcpassword.md
-    - name: Définir des notifications Defender pour Identity
-      href: notifications.md
-    - name: Alertes d’intégrité
-      items:
-        - name: Utiliser le centre d’intégrité Defender pour Identity
-          href: health-center.md
-        - name: Gérer les alertes d’intégrité Defender pour Identity
-          href: health-alerts.md
-    - name: Mise à jour différée des capteurs Defender pour Identity
-      href: sensor-update.md
-    - name: Résolution des problèmes connus
-      href: troubleshooting-known-issues.md
-    - name: Résoudre les problèmes à l’aide des journaux
-      href: troubleshooting-using-logs.md
-    - name: Intégrer avec Microsoft Defender pour point de terminaison
-      href: integrate-mde.md
-    - name: Intégration VPN
-      href: install-step6-vpn.md
-    - name: Intégrer à Syslog
-      href: setting-syslog.md
-    - name: Installation sans assistance
-      href: silent-installation.md
-    - name: Configurer le capteur Defender pour Identity
-      items:
-        - name: Configurer le capteur Defender pour Identity
-          href: install-step5.md
-        - name: Configurer la collecte d’événements Windows
-          href: configure-windows-event-collection.md
-        - name: Configuration du proxy
-          href: configure-proxy.md
-        - name: Configurer Defender pour Identity pour passer des appels distants à SAM
-          href: install-step8-samr.md
-    - name: Configuration des capteurs autonomes de Defender pour Identity
-      items:
-        - name: Configurer la mise en miroir des ports
-          href: configure-port-mirroring.md
-        - name: Valider la mise en miroir des ports
-          href: validate-port-mirroring.md
-        - name: Configurer la collecte d’événements
-          href: configure-event-collection.md
-        - name: Configurer les transferts d’événements Windows
-          href: configure-event-forwarding.md
-    - name: Désinstaller un capteur
-      href: uninstall-sensor.md
-    - name: Passer d’ATA à Defender pour Identity
-      items:
-        - name: D’Advanced Threat Analytics (ATA) à Defender pour Identity
-          href: migrate-from-ata-overview.md
-- name: Référence
-  items:
-    - name: Informations de référence sur le journal SIEM
-      href: cef-format-sa.md
-    - name: Problèmes connus de Defender pour Identity
-      href: ./troubleshooting-known-issues.md
-    - name: Informations de référence sur les versions Defender pour Identity
-      href: release-reference.md
-- name: Ressources
-  items:
-    - name: Support et informations
-      href: support.md
-    - name: Forum aux questions
-      href: technical-faq.md
-    - name: Feuille de route de préparation Defender pour Identity
-      href: resources.md
-    - name: Sécurité et confidentialité des données Defender pour Identity
-      href: privacy-compliance.md
+items:
+  - name: Documentation Microsoft Defender pour Identity
+    href: index.yml
+  - name: Vue d’ensemble
+    items:
+      - name: "Qu’est-ce que Microsoft Defender pour Identity\_?"
+        href: what-is.md
+      - name: Architecture de Defender pour Identity
+        href: architecture.md
+      - name: Prérequis de Defender pour Identity
+        href: prerequisites.md
+      - name: Defender pour Identity pour US Government
+        href: us-govt-gcc-high.md
+      - name: Nouveautés de Defender pour Identity
+        href: whats-new.md
+  - name: Démarrages rapides
+    expanded: true
+    items:
+      - name: Créer votre instance Defender pour Identity
+        href: install-step1.md
+      - name: Se connecter à Active Directory
+        href: install-step2.md
+      - name: Télécharger le package du capteur Defender pour Identity
+        href: install-step3.md
+      - name: Installer le capteur Defender pour Identity
+        href: install-step4.md
+  - name: Tutoriels
+    items:
+      - name: Alertes de reconnaissance
+        href: reconnaissance-alerts.md
+      - name: Alertes indiquant des informations d’identification compromises
+        href: compromised-credentials-alerts.md
+      - name: Alertes de mouvement latéral
+        href: lateral-movement-alerts.md
+      - name: Alertes de dominance du domaine
+        href: domain-dominance-alerts.md
+      - name: Alertes d’exfiltration
+        href: exfiltration-alerts.md
+      - name: Procéder à une investigation sur un utilisateur
+        href: investigate-a-user.md
+      - name: Procéder à une investigation sur un ordinateur
+        href: investigate-a-computer.md
+      - name: Examiner les chemins de mouvement latéral
+        href: investigate-lateral-movement-path.md
+      - name: Examiner les entités
+        href: investigate-entity.md
+  - name: Concepts
+    items:
+      - name: Portail Defender pour Identity
+        href: workspace-portal.md
+      - name: Alertes de sécurité Defender pour Identity
+        href: suspicious-activity-guide.md
+      - name: Activités supervisées
+        href: monitored-activities.md
+      - name: Présentation des profils d’entité
+        href: entity-profiles.md
+      - name: Chemins de mouvement latéral
+        href: use-case-lateral-movement-path.md
+      - name: Comprendre la résolution de noms réseau (NNR)
+        href: nnr-policy.md
+      - name: Rapports
+        href: reports.md
+      - name: Rôles d'utilisateur
+        href: role-groups.md
+      - name: Prise en charge multiforêt de Defender pour Identity
+        href: multi-forest.md
+      - name: Sécurité
+        items:
+          - name: Base de référence de la sécurité
+            href: security-baseline.md
+  - name: Guides pratiques
+    items:
+      - name: Defender pour Identity avec Microsoft Cloud App Security
+        items:
+          - name: Utiliser Defender pour Identity avec Cloud App Security
+            href: mcas-integration.md
+          - name: Filtrer des activités et définir des stratégies
+            href: activities-filtering-mcas.md
+          - name: Évaluations de la posture de sécurité des identités
+            items:
+              - name: Présentation de la posture de sécurité des identités
+                href: isp-overview.md
+              - name: Évaluation des contrôleurs de domaine avec le service Spouleur d’impression disponible
+                href: cas-isp-print-spooler.md
+              - name: Évaluation des entités dormantes dans des groupes sensibles
+                href: cas-isp-dormant-entities.md
+              - name: Évaluation des entités exposant les informations d’identification en texte clair
+                href: cas-isp-clear-text.md
+              - name: Évaluation de l’utilisation LAPS
+                href: cas-isp-laps.md
+              - name: Évaluation de l’utilisation des protocoles hérités
+                href: cas-isp-legacy-protocols.md
+              - name: Chemins de mouvement latéral les plus risqués
+                href: cas-isp-riskiest-lmp.md
+              - name: Contrôleurs de domaine non supervisés
+                href: cas-isp-unmonitored-domain-controller.md
+              - name: Attributs de compte non sécurisé
+                href: cas-isp-unsecure-account-attributes.md
+              - name: Évaluation de la délégation Kerberos non sécurisée
+                href: cas-isp-unconstrained-kerberos.md
+              - name: "Attributs d’historique SID non\_sécurisés"
+                href: cas-isp-unsecure-sid-history-attribute.md
+              - name: Évaluation de l’utilisation du chiffrement faible
+                href: cas-isp-weak-cipher.md
+      - name: Laboratoire des alertes de sécurité
+        items:
+          - name: Vue d’ensemble du laboratoire
+            href: playbook-lab-overview.md
+          - name: 1 - Configuration du laboratoire
+            href: playbook-setup-lab.md
+          - name: 2 - Playbook de reconnaissance
+            href: playbook-reconnaissance.md
+          - name: 3 - Playbook de mouvement latéral
+            href: playbook-lateral-movement.md
+          - name: 4 - Playbook de dominance du domaine
+            href: playbook-domain-dominance.md
+      - name: Présentation des alertes de sécurité
+        href: understanding-security-alerts.md
+      - name: Planifier votre capacité Defender pour Identity
+        href: capacity-planning.md
+      - name: Gérer les alertes de sécurité
+        href: working-with-suspicious-activities.md
+      - name: Exclure des entités des détections
+        href: excluding-entities-from-detections.md
+      - name: Gérer des comptes sensibles
+        href: sensitive-accounts.md
+      - name: Rechercher et filtrer dans des activités supervisées
+        href: activities-search.md
+      - name: Utiliser des exclusions et des comptes honeytoken
+        href: install-step7.md
+      - name: Superviser les contrôleurs de domaine
+        href: sensor-monitoring.md
+      - name: Modifier le mot de passe de connectivité de domaine
+        href: modifying-config-dcpassword.md
+      - name: Définir des notifications Defender pour Identity
+        href: notifications.md
+      - name: Alertes d’intégrité
+        items:
+          - name: Utiliser le centre d’intégrité Defender pour Identity
+            href: health-center.md
+          - name: Gérer les alertes d’intégrité Defender pour Identity
+            href: health-alerts.md
+      - name: Mise à jour différée des capteurs Defender pour Identity
+        href: sensor-update.md
+      - name: Résolution des problèmes connus
+        href: troubleshooting-known-issues.md
+      - name: Résoudre les problèmes à l’aide des journaux
+        href: troubleshooting-using-logs.md
+      - name: Intégrer avec Microsoft Defender pour point de terminaison
+        href: integrate-mde.md
+      - name: Intégration VPN
+        href: install-step6-vpn.md
+      - name: Intégrer à Syslog
+        href: setting-syslog.md
+      - name: Installation sans assistance
+        href: silent-installation.md
+      - name: Configurer le capteur Defender pour Identity
+        items:
+          - name: Configurer le capteur Defender pour Identity
+            href: install-step5.md
+          - name: Configurer la collecte d’événements Windows
+            href: configure-windows-event-collection.md
+          - name: Configuration du proxy
+            href: configure-proxy.md
+          - name: Configurer Defender pour Identity pour passer des appels distants à SAM
+            href: install-step8-samr.md
+      - name: Configuration des capteurs autonomes de Defender pour Identity
+        items:
+          - name: Configurer la mise en miroir des ports
+            href: configure-port-mirroring.md
+          - name: Valider la mise en miroir des ports
+            href: validate-port-mirroring.md
+          - name: Configurer la collecte d’événements
+            href: configure-event-collection.md
+          - name: Configurer les transferts d’événements Windows
+            href: configure-event-forwarding.md
+      - name: Désinstaller un capteur
+        href: uninstall-sensor.md
+      - name: Passer d’ATA à Defender pour Identity
+        items:
+          - name: D’Advanced Threat Analytics (ATA) à Defender pour Identity
+            href: migrate-from-ata-overview.md
+  - name: Référence
+    items:
+      - name: Informations de référence sur le journal SIEM
+        href: cef-format-sa.md
+      - name: Problèmes connus de Defender pour Identity
+        href: troubleshooting-known-issues.md
+      - name: Informations de référence sur les versions Defender pour Identity
+        href: release-reference.md
+  - name: Ressources
+    items:
+      - name: Support et informations
+        href: support.md
+      - name: Forum aux questions
+        href: technical-faq.yml
+      - name: Feuille de route de préparation Defender pour Identity
+        href: resources.md
+      - name: Sécurité et confidentialité des données Defender pour Identity
+        href: privacy-compliance.md
