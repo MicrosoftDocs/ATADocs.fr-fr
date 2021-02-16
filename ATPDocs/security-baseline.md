@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 12/03/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: 595a532bb02aeda6f82005a28833f71a3d074a18
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 8615019a2317a552b548a7b9026a75f9936c9237
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114256"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534342"
 ---
 # <a name="azure-security-baseline-for-microsoft-defender-for-identity"></a>Ligne de base de sécurité Azure pour Microsoft Defender pour l’identité
 
@@ -28,7 +28,7 @@ Pour voir comment Microsoft Defender for Identity est entièrement mappé au tes
 
 **Aide**: utilisez les balises de service de réseau virtuel Azure pour définir les contrôles d’accès réseau sur les groupes de sécurité réseau ou le pare-feu Azure configurés pour votre Defender pour les ressources d’identité. Vous pouvez utiliser des balises de service à la place des adresses IP spécifiques lors de la création de règles de sécurité. En spécifiant le nom de balise de service (par exemple : « AzureAdvancedThreatProtection ») dans le champ source ou de destination approprié d’une règle, vous pouvez autoriser ou refuser le trafic pour le service correspondant. Microsoft gère les préfixes d’adresse englobés par la balise de service et met à jour automatiquement la balise de service quand les adresses changent.
 
-- [Activer l’accès à Defender pour les URL du service d’identité dans le serveur proxy](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
+- [Activer l’accès à Defender pour les URL du service d’identité dans le serveur proxy](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server)
 
 - [Présentation et usage des balises de service](/azure/virtual-network/service-tags-overview)
 
@@ -47,7 +47,7 @@ Pour voir comment Microsoft Defender for Identity est entièrement mappé au tes
 - Les ressources cloud Microsoft, comme le portail Azure, le stockage Azure, les machines virtuelles Azure (Linux et Windows), les applications Azure Key Vault, PaaS et SaaS.
 - Les ressources de votre organisation, comme les applications sur Azure ou les ressources réseau de votre entreprise.
 
-La sécurisation d’Azure AD doit être d’une priorité élevée dans les pratiques de sécurité cloud de votre organisation. Azure AD fournit un score d'identité sécurisée pour vous aider à évaluer la sécurité des identités par rapport aux recommandations de Microsoft en matière de meilleures pratiques. Utilisez le score pour évaluer avec précision votre configuration par rapport aux meilleures pratiques recommandées et apporter des améliorations à votre posture de sécurité.
+La sécurisation de Azure AD doit être une priorité élevée dans la pratique de sécurité du Cloud de votre organisation. Azure AD fournit un score sécurisé d’identité pour vous aider à évaluer la sécurité des identités par rapport aux recommandations de Microsoft en matière de meilleures pratiques. Utilisez le score pour évaluer avec précision votre configuration par rapport aux meilleures pratiques recommandées et apporter des améliorations à votre posture de sécurité.
 
 Remarque : Azure AD prend en charge l’identité externe, ce qui permet aux utilisateurs sans compte Microsoft de se connecter à leurs applications et ressources avec leur identité externe.
 
@@ -105,7 +105,7 @@ Vous pouvez activer l’accès privilégié juste-à-temps (JIT) aux ressources 
 
 - [Sécurisation de l’accès privilégié pour les déploiements hybrides et cloud dans Azure AD](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
-**Supervision Azure Security Center** : Oui
+**Supervision d’Azure Security Center** : Oui
 
 **Responsabilité** : Customer
 
@@ -185,7 +185,7 @@ Pour la plateforme sous-jacente gérée par Microsoft, Microsoft traite tout le 
 
 **Conseils** : Assurez-vous que les équipes de sécurité reçoivent des autorisations de lecteur de sécurité dans votre locataire et vos abonnements Azure afin qu’elles puissent surveiller les risques de sécurité à l’aide d’Azure Security Center. 
 
-Selon la façon dont les responsabilités de l’équipe de sécurité sont structurées, la surveillance des risques de sécurité peut être la responsabilité d’une équipe de sécurité centrale ou d’une équipe locale. Cela dit, les insights et les risques liés à la sécurité doivent toujours être agrégés de manière centralisée au sein d’une organisation. 
+Selon la façon dont les responsabilités de l’équipe de sécurité sont structurées, la surveillance des risques de sécurité peut incomber à une équipe de sécurité centrale ou une équipe locale. Cela dit, les insights et les risques liés à la sécurité doivent toujours être agrégés de manière centralisée au sein d’une organisation. 
 
 Les autorisations de lecteur de sécurité peuvent être appliquées globalement à un locataire entier (groupe d’administration racine) ou étendues à des groupes d’administration ou à des abonnements spécifiques. 
 
@@ -229,7 +229,7 @@ Transférez tous les journaux de Defender pour l’identité à votre SIEM qui p
 
 - Utilisateurs avec indicateur de risque : un utilisateur à risque correspond à un indicateur de compte d’utilisateur susceptible d’être compromis.
 
-Azure Security Center pouvez également alerter certaines activités suspectes, telles qu’un nombre excessif de tentatives d’authentification ayant échoué, les comptes dépréciés dans l’abonnement. En plus de la surveillance de base de l’hygiène de sécurité, le module Protection contre les menaces d’Azure Security Center peut également collecter des alertes de sécurité plus approfondies à partir de ressources de calcul Azure individuelles (machines virtuelles, conteneurs ou service d’application), de ressources de données (base de données SQL et stockage) et de couches de service Azure. Cette capacité vous permet de voir les anomalies de compte à l’intérieur des ressources individuelles.
+Azure Security Center pouvez également alerter certaines activités suspectes, telles qu’un nombre excessif de tentatives d’authentification ayant échoué, les comptes dépréciés dans l’abonnement. En plus de la surveillance de base de l’hygiène de sécurité, Azure Security Center module de protection contre les menaces peut également collecter des alertes de sécurité plus approfondies à partir des ressources de calcul Azure (machines virtuelles, conteneurs, app service), des ressources de données (base de données SQL et stockage) et des couches de service Azure. Cette capacité vous permet de voir les anomalies de compte à l’intérieur des ressources individuelles.
 
 - [Rapports d’activité d’audit dans Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -246,7 +246,7 @@ Azure Security Center pouvez également alerter certaines activités suspectes, 
 
 En outre, activez et intégrez les données dans Azure Sentinel ou une solution SIEM tierce.
 
-De nombreuses organisations choisissent d’utiliser Azure Sentinel pour les données « chaudes » qui sont utilisées fréquemment et Stockage Azure pour les données « froides » qui sont utilisées moins fréquemment.
+De nombreuses organisations choisissent d’utiliser Azure Sentinel pour les données « chaudes » utilisées fréquemment et le stockage Azure pour les données « froides » utilisées moins fréquemment.
 
 Defender for Identity propose de transférer tous les journaux liés à la sécurité à votre serveur SIEM pour une gestion centralisée.
 
@@ -287,7 +287,7 @@ Defender for Identity propose de transférer tous les journaux liés à la sécu
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3 : Détection et analyse – créer des incidents en fonction d’alertes de haute qualité
 
-**Instructions** : Veillez à avoir un processus de création d’alertes de bonne qualité et de mesure de la qualité des alertes. Cela vous permet de tirer les leçons des incidents passés et de classer par ordre de priorité les alertes pour les analystes, afin qu’ils ne perdent pas de temps sur les faux positifs. 
+**Instructions** : Veillez à avoir un processus de création d’alertes de bonne qualité et de mesure de la qualité des alertes. Cela vous permet d’apprendre les leçons des incidents passés et de hiérarchiser les alertes pour les analystes, afin qu’ils ne perdent pas de temps sur les faux positifs. 
 
 Vous pouvez créer des alertes de bonne qualité en vous basant sur l’expérience des incidents passés, sur les sources validées par la communauté, et sur des outils conçus pour générer et nettoyer les alertes en fusionnant et en mettant en corrélation différentes sources de signaux. 
 
@@ -392,21 +392,21 @@ Suivez les règles d’engagement de pénétration du cloud Microsoft pour vous 
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
--   Norme de classification des données en fonction des risques pour l’entreprise
+-  Norme de classification des données en fonction des risques pour l’entreprise
 
--   Visibilité de l’organisation de sécurité sur les risques et l’inventaire des actifs 
+-  Visibilité de l’organisation de sécurité sur les risques et l’inventaire des actifs 
 
--   Approbation de l’organisation de sécurité pour les services Azure en vue de leur utilisation 
+-  Approbation de l’organisation de sécurité pour les services Azure en vue de leur utilisation 
 
--   Sécurité des ressources tout au long de leur cycle de vie
+-  Sécurité des ressources tout au long de leur cycle de vie
 
--   Stratégie de contrôle d’accès requise conformément à la classification des données organisationnelles
+-  Stratégie de contrôle d’accès requise conformément à la classification des données organisationnelles
 
--   Utilisation des fonctionnalités de protection des données Azure natives et de tiers
+-  Utilisation des fonctionnalités de protection des données Azure natives et de tiers
 
--   Exigences de chiffrement des données pour les cas d’utilisation en transit et au repos
+-  Exigences de chiffrement des données pour les cas d’utilisation en transit et au repos
 
--   Normes de chiffrement appropriées
+-  Normes de chiffrement appropriées
 
 Pour plus d’informations, consultez les références suivantes :
 - [Recommandation d’architecture de sécurité Azure - Stockage, données et chiffrement](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
@@ -467,21 +467,21 @@ Assurez-vous que la stratégie de segmentation est implémentée de manière coh
 
 ### <a name="gs-5-define-network-security-strategy"></a>GS-5 : Définir la stratégie de sécurité réseau
 
-**Conseils** : Établissez une approche de sécurité réseau Azure dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
+**Guide**: établissez une approche de sécurité réseau Azure dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
--   Responsabilité centralisée pour la gestion et la sécurité du réseau
+-  Responsabilité centralisée pour la gestion et la sécurité du réseau
 
--   Modèle de segmentation de réseau virtuel aligné avec la stratégie de segmentation de l’entreprise
+-  Modèle de segmentation de réseau virtuel aligné avec la stratégie de segmentation de l’entreprise
 
--   Stratégie de correction dans différents scénarios de menaces et d’attaques
+-  Stratégie de correction dans différents scénarios de menaces et d’attaques
 
--   Stratégie de périphérie d’Internet et d’entrée et de sortie
+-  Stratégie de périphérie d’Internet et d’entrée et de sortie
 
--   Stratégie de cloud hybride et d’interconnexion locale
+-  Stratégie de cloud hybride et d’interconnexion locale
 
--   Artefacts de sécurité réseau à jour (par exemple diagrammes réseau, architecture de réseau de référence)
+-  Artefacts de sécurité réseau à jour (par exemple diagrammes réseau, architecture de réseau de référence)
 
 Pour plus d’informations, consultez les références suivantes :
 - [Meilleures pratiques pour la sécurité Azure 11 – Architecture. Stratégie de sécurité unifiée unique](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
@@ -498,19 +498,19 @@ Pour plus d’informations, consultez les références suivantes :
 
 ### <a name="gs-6-define-identity-and-privileged-access-strategy"></a>GS-6 : Définir une stratégie d’accès privilégié et d’identité
 
-**Conseils** : Établissez une approche d’identité Azure et d’accès privilégié dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
+**Guide**: établissez une approche d’identité et d’accès privilégié Azure dans le cadre de la stratégie de contrôle d’accès de sécurité globale de votre organisation.  
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
--   Un système centralisé d’identité et d’authentification et son interconnexion avec d’autres systèmes d’identité internes et externes
+-  Un système centralisé d’identité et d’authentification et son interconnexion avec d’autres systèmes d’identité internes et externes
 
--   Méthodes d’authentification fortes dans différents cas d’usage et différentes conditions
+-  Méthodes d’authentification fortes dans différents cas d’usage et différentes conditions
 
--   Protection des utilisateurs disposant de privilèges élevés
+-  Protection des utilisateurs disposant de privilèges élevés
 
--   Surveillance et gestion des activités anormales des utilisateurs  
+-  Surveillance et gestion des activités anormales des utilisateurs  
 
--   Vérification de l’identité et de l’accès des utilisateurs et processus de rapprochement
+-  Vérification de l’identité et de l’accès des utilisateurs et processus de rapprochement
 
 Pour plus d’informations, consultez les références suivantes :
 
@@ -532,19 +532,19 @@ Pour plus d’informations, consultez les références suivantes :
 
 Cette stratégie doit inclure les recommandations, stratégies et normes documentées pour les éléments suivants : 
 
--   Rôle et responsabilités de l’organisation d’opérations de sécurité (SecOP) 
+-  Le rôle et les responsabilités de l’organisation opérations de sécurité (SecOP) 
 
--   Un processus de réponse aux incidents bien défini, aligné avec NIST ou autre cadre réglementaire du secteur 
+-  Un processus de réponse aux incidents bien défini, aligné avec NIST ou autre cadre réglementaire du secteur 
 
--   Capture et rétention des journaux pour prendre en charge la détection des menaces, la réponse aux incidents et les besoins de conformité
+-  Capture et rétention des journaux pour prendre en charge la détection des menaces, la réponse aux incidents et les besoins de conformité
 
--   Visibilité centralisée des informations de corrélation sur les menaces, avec SIEM, les fonctionnalités Azure natives et d’autres sources 
+-  Visibilité centralisée des informations de corrélation sur les menaces, avec SIEM, les fonctionnalités Azure natives et d’autres sources 
 
--   Plan de communication et de notification avec vos clients, fournisseurs et les parties publiques pertinentes
+-  Plan de communication et de notification avec vos clients, fournisseurs et les parties publiques pertinentes
 
--   Utilisation de plateformes Azure natives et tierces pour la gestion des incidents, comme la journalisation et la détection des menaces, les investigations et la correction et l’éradication des attaques
+-  Utilisation de plateformes Azure natives et tierces pour la gestion des incidents, comme la journalisation et la détection des menaces, les investigations et la correction et l’éradication des attaques
 
--   Processus de gestion des incidents et des activités postérieures aux incidents, comme les leçons apprises et la rétention des preuves
+-  Processus de gestion des incidents et des activités postérieures aux incidents, comme les leçons apprises et la rétention des preuves
 
 Pour plus d’informations, consultez les références suivantes :
 

@@ -3,14 +3,14 @@ title: Configurer SAM-R pour activer la détection de chemin de mouvement latér
 description: Explique comment configurer Microsoft Defender pour l’identité pour effectuer des appels distants à SAM.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 24c1d6baf99e3d65a96897d2d0b90ffe94ad42eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f1870161b60b975eef818d0a6d6cae63a4fb12c3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543941"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534274"
 ---
-# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configuration de [!INCLUDE [Product long](includes/product-long.md)] pour effectuer des appels distants à SAM
+# <a name="configure-microsoft-defender-for-identity-to-make-remote-calls-to-sam"></a>Configurer Microsoft Defender pour l’identité pour effectuer des appels distants à SAM
 
 [!INCLUDE [Product long](includes/product-long.md)]la détection de [chemin de mouvement latéral](use-case-lateral-movement-path.md) s’appuie sur les requêtes qui identifient les administrateurs locaux sur des ordinateurs spécifiques. Ces requêtes sont exécutées avec le protocole SAM-R, en utilisant le [!INCLUDE [Product short](includes/product-short.md)] compte de service créé lors de l' [!INCLUDE [Product short](includes/product-short.md)] étape d’installation  [2. Connectez-vous à AD](install-step2.md).
 

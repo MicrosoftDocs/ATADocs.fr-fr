@@ -3,14 +3,14 @@ title: Microsoft Defender pour l’intégration des identités avec Microsoft De
 description: Comment intégrer Microsoft Defender for Identity à Microsoft Defender for Endpoint pour la couverture complète de la détection des menaces
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 73cf4809e20d92534786d1df1ad580fffd5706b8
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 356f97509fe3af81a4d1c896e7b64b2779e6028a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542955"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533866"
 ---
-# <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Intégrer [!INCLUDE [Product long](includes/product-long.md)] à Microsoft Defender for Endpoint
+# <a name="integrate-microsoft-defender-for-identity-with-microsoft-defender-for-endpoint"></a>Intégrer Microsoft Defender for Identity à Microsoft Defender for Endpoint
 
 [!INCLUDE [Product long](includes/product-long.md)] permet une intégration à [!INCLUDE [Product long](includes/product-long.md)] Defender for Endpoint, pour une solution de protection des menaces encore plus complète. Tandis que [!INCLUDE [Product short](includes/product-short.md)] surveille le trafic sur vos contrôleurs de domaine, Defender for Endpoint surveille vos points de terminaison, en fournissant une interface unique à partir de laquelle vous pouvez protéger votre environnement.
 
@@ -47,7 +47,7 @@ Pour activer cette fonctionnalité, vous avez besoin d’une licence pour [!INCL
 
 <a name="how-to-integrate-azure-atp-with-microsoft-defender-atp"></a>
 
-## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Comment intégrer à [!INCLUDE [Product short](includes/product-short.md)] Defender pour le point de terminaison
+## <a name="how-to-integrate-defender-for-identity-with-defender-for-endpoint"></a>Comment intégrer Defender for Identity à Defender for Endpoint
 
 1. Sur le portail [!INCLUDE [Product short](includes/product-short.md)], cliquez sur **Configuration**.
 

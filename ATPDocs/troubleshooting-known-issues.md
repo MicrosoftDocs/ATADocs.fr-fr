@@ -3,14 +3,14 @@ title: Dépannage de Microsoft Defender pour identifier les problèmes connus
 description: Décrit comment vous pouvez résoudre les problèmes liés à l’identité dans Microsoft Defender.
 ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
-ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
+ms.openlocfilehash: f11d840aa46ec86c88c04ea2892443fd2dc20db3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99551609"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534495"
 ---
-# <a name="troubleshooting-product-long-known-issues"></a>Résolution des [!INCLUDE [Product long](includes/product-long.md)] problèmes connus
+# <a name="troubleshooting-microsoft-defender-for-identity-known-issues"></a>Dépannage de Microsoft Defender pour identifier les problèmes connus
 
 ## <a name="sensor-failure-communication-error"></a>Erreur d’échec de communication du capteur
 
@@ -107,7 +107,9 @@ Utilisez la commande complète pour installer correctement.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] problème d’association de cartes réseau de capteur <a name="nic-teaming"></a>
+<a name="nic-teaming"></a>
+
+## <a name="defender-for-identity-sensor-nic-teaming-issue"></a>Problème d’association de cartes réseau pour le capteur d’identité
 
 Si vous tentez d’installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec un adaptateur d’association de cartes réseau, vous recevez une erreur d’installation. Si vous souhaitez installer le [!INCLUDE [Product short](includes/product-short.md)] capteur sur un ordinateur configuré avec l’Association de cartes réseau, suivez ces instructions :
 

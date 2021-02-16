@@ -3,14 +3,14 @@ title: Microsoft Defender pour l’identité dans Microsoft Cloud App Security
 description: Vue d’ensemble de Microsoft Defender pour les fonctionnalités d’identité dans Microsoft Cloud App Security.
 ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
-ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
+ms.openlocfilehash: 93ece5c8345929984473b057fdad2d4eec6fb9c0
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2021
-ms.locfileid: "98746933"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533832"
 ---
-# <a name="using-product-long-with-microsoft-cloud-app-security"></a>Utilisation [!INCLUDE [Product long](includes/product-long.md)] de avec Microsoft Cloud App Security
+# <a name="using-microsoft-defender-for-identity-with-microsoft-cloud-app-security"></a>Utilisation de Microsoft Defender for Identity avec Microsoft Cloud App Security
 
 Cet article est conçu pour vous aider à comprendre et à naviguer dans l’expérience d’investigation améliorée lors de l’utilisation du portail Microsoft Cloud App Security avec [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -33,7 +33,7 @@ En s’intégrant à [!INCLUDE [Product short](includes/product-short.md)] , le 
 - [!INCLUDE [Product long](includes/product-long.md)], qui utilise Machine Learning et l’analyse comportementale pour identifier les attaques sur votre réseau local
 - Azure Active Directory Identity Protection, qui détecte et prévient de manière proactive les risques pouvant affecter les identités dans le cloud au niveau des utilisateurs et des connexions
 
-## <a name="access-product-short"></a>Accéder [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="access-defender-for-identity"></a>Access Defender pour l’identité
 
 Choisissez de continuer à utiliser [!INCLUDE [Product short](includes/product-short.md)] dans le [!INCLUDE [Product short](includes/product-short.md)] portail, ou vous pouvez accéder aux [!INCLUDE [Product short](includes/product-short.md)] alertes et au score d’identité à l’aide du portail Microsoft Cloud App Security. Dans l’un ou l’autre flux de travail, [!INCLUDE [Product short](includes/product-short.md)] les tâches d’installation et de configuration continuent à être gérées dans le [!INCLUDE [Product short](includes/product-short.md)] portail.
 
@@ -51,7 +51,7 @@ Pour bénéficier de l’ensemble des fonctionnalités d’examen utilisateur da
 
 Consultez [ [!INCLUDE [Product short](includes/product-short.md)] intégration](/cloud-app-security/mdi-integration) pour savoir comment activer rapidement [!INCLUDE [Product short](includes/product-short.md)] dans Cloud App Security.
 
-## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] dans Cloud App Security
+## <a name="defender-for-identity-in-cloud-app-security"></a>Defender pour l’identité dans Cloud App Security
 
 Consultez le [démarrage rapide de Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) pour vous familiariser avec les principes fondamentaux de l’utilisation du portail Cloud App Security.
 

@@ -3,26 +3,26 @@ title: Surveiller Microsoft Defender pour l’intégrité et les événements du
 description: Utilisez le centre d’intégrité pour vérifier le fonctionnement de Microsoft Defender for Identity service et recevoir des alertes en cas de problèmes potentiels et afficher les événements système dans l’observateur d’événements.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e2a4c757682194013d34bddd6581402b5fe60920
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ac03020c559a860fded89a496bc927da06fce3d9
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544009"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534291"
 ---
-# <a name="work-with-product-long-health-and-events"></a>Utiliser l' [!INCLUDE [Product long](includes/product-long.md)] intégrité et les événements
+# <a name="work-with-microsoft-defender-for-identity-health-and-events"></a>Utiliser Microsoft Defender pour l’intégrité et les événements de l’identité
 
-## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Centre d’intégrité
+## <a name="microsoft-defender-for-identity-health-center"></a>Microsoft Defender pour Identity Health Center
 
 Le [!INCLUDE [Product long](includes/product-long.md)] Centre d’intégrité vous permet de savoir comment votre [!INCLUDE [Product short](includes/product-short.md)] instance s’exécute et vous avertit en cas de problème.
 
-## <a name="working-with-the-product-short-health-center"></a>Utilisation du [!INCLUDE [Product short](includes/product-short.md)] Centre d’intégrité
+## <a name="working-with-the-defender-for-identity-health-center"></a>Utilisation de Defender pour Identity Health Center
 
 Le [!INCLUDE [Product short](includes/product-short.md)] Centre d’intégrité vous permet de savoir qu’il y a un problème en déclenchant une alerte (un point rouge) au-dessus de l’icône du centre d’intégrité dans la barre de navigation.
 
 ![[! INCLUDe [Product Short] (includes/Product-Short. MD)] barre d’outils du point rouge du centre d’intégrité](media/health-bar.png)
 
-### <a name="managing-product-short-health"></a>Gestion de l' [!INCLUDE [Product short](includes/product-short.md)] intégrité
+### <a name="managing-defender-for-identity-health"></a>Gestion de Defender pour l’intégrité de l’identité
 
 Pour vérifier l’intégrité globale de votre [!INCLUDE [Product short](includes/product-short.md)] instance, sélectionnez **intégrité** ![ [ ! INCLUDe [Product Short] (includes/Product-Short. MD)] icône du centre d’intégrité](media/red-dot.png)
 

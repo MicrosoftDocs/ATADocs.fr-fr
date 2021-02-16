@@ -3,12 +3,12 @@ title: Utilisation des alertes de sécurité dans Microsoft Defender pour Identi
 description: Explique comment examiner les alertes de sécurité émises par Microsoft Defender pour Identity.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 8cd2cf79ef590d852c66a426d0217104f55b29a1
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: cb589442143bfd78f13360c076d9f5205c0a21af
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544587"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534427"
 ---
 # <a name="working-with-security-alerts"></a>Utilisation des alertes de sécurité
 
@@ -51,7 +51,7 @@ Les alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] 
 - [Alertes de dominance du domaine](domain-dominance-alerts.md)
 - [Alertes d’exfiltration](exfiltration-alerts.md)
 
-## <a name="preview-detections"></a>Détections en préversion <a name="preview-detections"></a>
+## <a name="preview-detections"></a>Détections en préversion 
 
 L’équipe de recherche [!INCLUDE [Product short](includes/product-short.md)] travaille sans relâche à l’implémentation de nouvelles détections pour les attaques récemment découvertes. Dans la mesure où [!INCLUDE [Product short](includes/product-short.md)] est un service cloud, ces nouvelles détections sont publiées rapidement pour permettre aux clients [!INCLUDE [Product short](includes/product-short.md)] d’en bénéficier aussi vite que possible.
 

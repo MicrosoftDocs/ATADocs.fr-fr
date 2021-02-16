@@ -3,14 +3,14 @@ title: Modifier Microsoft Defender pour la configuration d’identité-mot de pa
 description: Décrit comment modifier le mot de passe de connectivité du domaine sur le capteur Microsoft Defender pour l’identité autonome.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 294786515c45136be77447b9ad1e9ddf5e2e5e95
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2a82226a4eda3a7db762df4e04728848f7e1958e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544502"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533815"
 ---
-# <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>Modifier la [!INCLUDE [Product long](includes/product-long.md)] configuration du portail-mot de passe de connectivité du domaine
+# <a name="change-microsoft-defender-for-identity-portal-configuration---domain-connectivity-password"></a>Modifier la configuration de Microsoft Defender pour Identity Portal-mot de passe de connectivité du domaine
 
 ## <a name="change-the-domain-connectivity-password"></a>Modifier le mot de passe de connectivité de domaine
 

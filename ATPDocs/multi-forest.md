@@ -3,14 +3,14 @@ title: Microsoft Defender pour la prise en charge de plusieurs forêts d’ident
 description: Prise en charge de plusieurs forêts Active Directory dans Microsoft Defender pour l’identité.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: 05cf574aa56f379cb636036c382cc87fb289990e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c0a5c135d73ecbcdd23b6ed2ea8a12a212a0f23d
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544553"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533662"
 ---
-# <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] prise en charge de plusieurs forêts
+# <a name="microsoft-defender-for-identity-multi-forest-support"></a>Microsoft Defender pour la prise en charge de plusieurs forêts d’identité
 
 ## <a name="multi-forest-support-set-up"></a>Configuration de la prise en charge de plusieurs forêts
 
@@ -24,7 +24,7 @@ Avec la prise en charge de plusieurs forêts Active Directory :
 - améliore la détection et réduit les faux positifs grâce à l’intégration Active Directory avancée et à la résolution de comptes ;
 - améliore le contrôle et facilite le déploiement ; Alertes d’intégrité et rapports améliorés pour la couverture inter-organisationnelle lorsque vos contrôleurs de domaine sont tous analysés à partir d’une [!INCLUDE [Product short](includes/product-short.md)] console unique.
 
-## <a name="product-short-detection-activity-across-multiple-forests"></a>[!INCLUDE [Product short](includes/product-short.md)] activité de détection sur plusieurs forêts
+## <a name="defender-for-identity-detection-activity-across-multiple-forests"></a>Defender pour l’activité de détection d’identité dans plusieurs forêts
 
 Pour détecter les activités inter-forêts, [!INCLUDE [Product short](includes/product-short.md)] les capteurs interrogent les contrôleurs de domaine dans les forêts distantes pour créer des profils pour toutes les entités impliquées, (y compris les utilisateurs et les ordinateurs des forêts distantes).
 

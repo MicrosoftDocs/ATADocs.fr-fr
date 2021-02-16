@@ -3,14 +3,14 @@ title: Définition de notifications Microsoft Defender pour Identity
 description: Explique comment définir des alertes de sécurité Microsoft Defender pour Identity pour recevoir une notification en cas de détection d’activités suspectes.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 49d78935b9246797b1d83f24a06a7ffe16f57699
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ad02fab44b76fc9d30af59a331ec5243796224d5
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544468"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533645"
 ---
-# <a name="set-product-long-notifications"></a>Définition de notifications [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="set-microsoft-defender-for-identity-notifications"></a>Définition de notifications Microsoft Defender pour Identity
 
 [!INCLUDE [Product long](includes/product-long.md)] peut envoyer une notification en cas de détection d’une activité suspecte en émettant une alerte de sécurité ou d’intégrité par e-mail.
 

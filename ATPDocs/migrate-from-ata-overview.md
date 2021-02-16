@@ -3,14 +3,14 @@ title: Advanced Threat Analytics à Microsoft Defender pour le déplacement de l
 description: Découvrez comment déplacer une installation Advanced Threat Analytics existante vers Microsoft Defender pour l’identité.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 45b9004bc439a28e144686e3147b94b6019a7a0f
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515340"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533798"
 ---
-# <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>ATA (Advanced Threat Analytics) à Microsoft Defender pour l’identité
 
 > [!NOTE]
 > La version finale d’ATA est mise à la [disposition générale](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA prendra fin au support standard le 12 janvier 2021. Le support étendu se poursuivra jusqu’au 2026 janvier. Pour plus d’informations, consultez [notre blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -70,7 +70,7 @@ Veillez à rassembler les informations suivantes avant de commencer le transfert
 
 Procédez à la migration [!INCLUDE [Product short](includes/product-short.md)] en deux étapes simples :
 
-### <a name="step-1-create-and-install-product-short-instance-and-sensors"></a>Étape 1 : créer et installer une [!INCLUDE [Product short](includes/product-short.md)] instance et des capteurs
+### <a name="step-1-create-and-install-defender-for-identity-instance-and-sensors"></a>Étape 1 : créer et installer Defender pour l’instance d’identité et les capteurs
 
 1. [Créer votre nouvelle [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
 
@@ -81,7 +81,7 @@ Procédez à la migration [!INCLUDE [Product short](includes/product-short.md)] 
     - [Récupérer votre [!INCLUDE [Product short](includes/product-short.md)] Clé d’accès](install-step3.md#download-the-setup-package).
     - [Installez [!INCLUDE [Product short](includes/product-short.md)] les capteurs sur vos contrôleurs de domaine](install-step4.md).
 
-### <a name="step-2-configure-and-validate-product-short-instance"></a>Étape 2 : configurer et valider l' [!INCLUDE [Product short](includes/product-short.md)] instance
+### <a name="step-2-configure-and-validate-defender-for-identity-instance"></a>Étape 2 : configurer et valider Defender pour l’instance d’identité
 
 - [Configurer le capteur](install-step5.md)
 

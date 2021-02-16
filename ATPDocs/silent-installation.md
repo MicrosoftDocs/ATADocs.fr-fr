@@ -3,14 +3,14 @@ title: Installer Microsoft Defender pour l’identité en mode silencieux
 description: Cette rubrique décrit comment installer Microsoft Defender en mode silencieux pour l’identité.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 0c22f5bcbffd415a81b84c94570cfcd7387aab56
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062533"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534393"
 ---
-# <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] commutateurs et installation sans assistance
+# <a name="microsoft-defender-for-identity-switches-and-silent-installation"></a>Microsoft Defender pour les commutateurs d’identité et l’installation sans assistance
 
 Cet article fournit des instructions et des instructions pour les [!INCLUDE [Product long](includes/product-long.md)] commutateurs et l’installation sans assistance.
 
@@ -27,7 +27,7 @@ Quand vous installez [!INCLUDE [Product short](includes/product-short.md)] , .ne
 
 Pour suivre la progression de votre déploiement, surveillez les [!INCLUDE [Product short](includes/product-short.md)] journaux du programme d’installation, qui se trouvent dans `%AppData%\Local\Temp` .
 
-## <a name="product-short-sensor-silent-installation"></a>[!INCLUDE [Product short](includes/product-short.md)] installation sans assistance du capteur
+## <a name="defender-for-identity-sensor-silent-installation"></a>Defender pour l’installation sans assistance du capteur d’identité
 
 > [!NOTE]
 > Lors du déploiement silencieux du [!INCLUDE [Product short](includes/product-short.md)] capteur par le biais d’System Center Configuration Manager ou d’un autre système de déploiement de logiciels, il est recommandé de créer deux packages de déploiement :</br>- .NET Framework 4.7 (ou version ultérieure), en prévoyant éventuellement le redémarrage du contrôleur de domaine</br>- [!INCLUDE [Product short](includes/product-short.md)] cellule. </br>Rendez le [!INCLUDE [Product short](includes/product-short.md)] package de capteur dépendant du déploiement du package .NET Framework. </br>Obtenez le [package de déploiement hors connexion .NET Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
@@ -95,7 +95,7 @@ Utilisez les commandes suivantes pour effectuer l’authentification du proxy :
 
 Pour plus d’informations sur la configuration du proxy, consultez [configurer le proxy de point de terminaison et les paramètres de connectivité Internet pour votre [!INCLUDE [Product long](includes/product-long.md)] capteur](configure-proxy.md).
 
-## <a name="update-the-product-short-sensor"></a>Mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] capteur
+## <a name="update-the-defender-for-identity-sensor"></a>Mettre à jour l’Defender pour le capteur d’identité
 
 Utilisez la commande suivante pour mettre à jour le capteur en mode silencieux [!INCLUDE [Product short](includes/product-short.md)] :
 
@@ -125,7 +125,7 @@ Pour mettre à jour le [!INCLUDE [Product short](includes/product-short.md)] cap
 
 <a name="silently-uninstall-sensor"></a>
 
-## <a name="uninstall-the-product-short-sensor-silently"></a>Désinstaller le [!INCLUDE [Product short](includes/product-short.md)] capteur en mode silencieux
+## <a name="uninstall-the-defender-for-identity-sensor-silently"></a>Désinstallation de l’Defender pour le capteur d’identité en mode silencieux
 
 Utilisez la commande suivante pour effectuer une désinstallation sans assistance du [!INCLUDE [Product short](includes/product-short.md)] capteur :
 

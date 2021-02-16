@@ -3,14 +3,14 @@ title: Planification de votre déploiement Microsoft Defender pour les identité
 description: Vous aide à planifier votre déploiement et à déterminer le nombre de serveurs Microsoft Defender pour les serveurs d’identité qui seront nécessaires pour prendre en charge votre réseau
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: a5db3865b75e79a7b5f69dd5223e27497cc7ae18
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 8266742f2766977685d465b3634c7a71a51af682
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544230"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533894"
 ---
-# <a name="plan-capacity-for-product-long"></a>Planifier la capacité pour [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="plan-capacity-for-microsoft-defender-for-identity"></a>Planifier la capacité pour Microsoft Defender pour l’identité
 
 Dans ce guide, vous déterminez le nombre de [!INCLUDE [Product long](includes/product-long.md)] capteurs dont vous avez besoin.
 
@@ -32,7 +32,9 @@ La façon la plus simple et recommandée pour déterminer la capacité de votre 
 1. Recherchez le champ **Paquets occupés/s** dans le tableau du capteur Azure ATP du fichier Excel des résultats et prenez note de celui-ci.
 1. Correspond à votre champ **paquets occupés/s** au champ **paquets par seconde** dans la section [ [!INCLUDE [Product short](includes/product-short.md)] table du capteur](#sizing) de cet article. Utilisez les champs pour déterminer la mémoire et le processeur qui seront utilisés par le capteur.
 
-## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]dimensionnement du capteur
+<a name="sizing"></a>
+
+## <a name="defender-for-identity-sensor-sizing"></a>Defender pour le dimensionnement du capteur d’identité
 
 Un [!INCLUDE [Product short](includes/product-short.md)] capteur peut prendre en charge la surveillance d’un contrôleur de domaine en fonction de la quantité de trafic réseau généré par le contrôleur de domaine. Le tableau suivant est une estimation. La quantité finale analysée par le capteur étant dépendante du volume et de la distribution du trafic.
 
@@ -73,7 +75,9 @@ Nous vous recommandons de ne pas utiliser des cœurs hyper-thread. L’utilisati
 |VMWare|Assurez-vous que la quantité de mémoire configurée et la mémoire réservée sont identiques ou sélectionnez l’option suivante dans le paramètre de la machine virtuelle – **Réserver toute la mémoire invitée (tout verrouillé)** .|
 |Autre hôte de virtualisation|Reportez-vous à la documentation donnée par le fournisseur pour savoir comment s’assurer que la mémoire est entièrement allouée à la machine virtuelle à tout moment. |
 
-## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Estimation du trafic des contrôleurs de domaine
+<a name="manual-sizing"></a>
+
+## <a name="domain-controller-traffic-estimation"></a>Estimation du trafic des contrôleurs de domaine
 
 Si, pour une raison quelconque, vous ne pouvez pas utiliser l' [!INCLUDE [Product short](includes/product-short.md)] outil de dimensionnement, collectez manuellement les informations du compteur Paquets/s de tous vos contrôleurs de domaine. Collectez les informations pendant 24 heures avec un intervalle de collecte court, environ 5 secondes. Ensuite, pour chaque contrôleur de domaine, calculez la moyenne quotidienne et la moyenne des périodes les plus actives (15 minutes). Les sections suivantes expliquent comment collecter le compteur de paquets/s dans un contrôleur de domaine.
 

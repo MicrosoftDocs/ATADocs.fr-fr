@@ -3,12 +3,12 @@ title: 'Démarrage rapide : Créer votre instance Microsoft Defender pour Ident
 description: Guide de démarrage rapide afin de créer l’instance pour votre déploiement de Microsoft Defender pour Identity, qui est la première étape de l’installation de Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 299edc14a51f92efa94969a3f442b2e1ca5d8e2b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543210"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515357"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Démarrage rapide : Créer votre instance [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -19,7 +19,7 @@ Dans ce guide de démarrage rapide, vous allez créer votre instance [!INCLUDE [
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Une [licence [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.md#licensing-and-privacy).
+- Une [licence [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.yml#licensing-and-privacy).
 - Pour pouvoir accéder au portail [!INCLUDE [Product short](includes/product-short.md)], vous devez être [administrateur général ou administrateur de sécurité sur le locataire](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
 - Consultez l’article [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 - Consultez l’article [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).

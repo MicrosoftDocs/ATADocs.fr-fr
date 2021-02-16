@@ -3,14 +3,14 @@ title: Microsoft Defender pour la prise en charge des identités
 description: Décrit le processus d’obtention de l’aide de support pour Microsoft Defender pour l’identité.
 ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: 80b863208c560cc0bfe74800efe1a220ee190fc3
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 5a4364bf28b56159937e2564449eb7e0b4d6150d
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515323"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533398"
 ---
-# <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informations et support
+# <a name="microsoft-defender-for-identity-information-and-support"></a>Microsoft Defender pour les informations d’identification et le support
 
 Utilisez les ressources suivantes pour vous aider à en savoir plus sur, déployer et prendre en charge [!INCLUDE [Product long](includes/product-long.md)] votre organisation.
 

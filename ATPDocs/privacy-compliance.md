@@ -3,14 +3,14 @@ title: Stratégie de données personnelles de Microsoft Defender for Identity
 description: Fournit des liens vers des informations sur la façon de supprimer des informations privées et des données personnelles de Microsoft Defender pour l’identité.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: c5af419c2be751a8b9f92855f57f13669860de1a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b8336d4b6508fc9de462dcdbb6bc6389dd2fa0f2
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542360"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533394"
 ---
-# <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] sécurité et confidentialité des données
+# <a name="microsoft-defender-for-identity-data-security-and-privacy"></a>Microsoft Defender pour la sécurité et la confidentialité des données d’identité
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -44,6 +44,6 @@ Dans, [!INCLUDE [Product short](includes/product-short.md)] vous avez la possibi
 
 - Pour plus d’informations sur [!INCLUDE [Product short](includes/product-short.md)] l’approbation et la conformité, consultez le [portail de confiance des services](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) et le site de [conformité Microsoft 365 entreprise RGPD](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## <a name="security-and-privacy-for-product-short-us-government-gcc-high-customers"></a>Sécurité et confidentialité pour les [!INCLUDE [Product short](includes/product-short.md)] clients du gouvernement des États-Unis GCC High
+## <a name="security-and-privacy-for-defender-for-identity-us-government-gcc-high-customers"></a>Sécurité et confidentialité pour Defender pour Identity US Government High Customers
 
 Pour plus d’informations sur [!INCLUDE [Product short](includes/product-short.md)] les normes de conformité et l’emplacement des données client pour les clients des États-Unis, reportez-vous au [Enterprise Mobility + Security pour la description du service US Government](/enterprise-mobility-security/solutions/ems-govt-service-description).

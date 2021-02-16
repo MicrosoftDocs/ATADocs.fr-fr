@@ -3,14 +3,14 @@ title: Configurer Microsoft Defender pour les paramètres de capteur d’identit
 description: L’étape 5 de l’installation de Microsoft Defender for Identity vous aide à configurer les paramètres de votre Defender pour le capteur autonome d’identité.
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.openlocfilehash: 329bfd4f6de2e15865c81d22651e833a63d07b6d
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 42dc42caad1b76cf706cf85d34fd60f5c7a52756
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543108"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534012"
 ---
-# <a name="configure-product-long-sensor-settings"></a>Configurer les [!INCLUDE [Product long](includes/product-long.md)] paramètres du capteur
+# <a name="configure-microsoft-defender-for-identity-sensor-settings"></a>Configurer Microsoft Defender pour les paramètres du capteur d’identité
 
 Dans cet article, vous allez apprendre à configurer correctement les [!INCLUDE [Product long](includes/product-long.md)] paramètres de capteur pour commencer à afficher les données. Vous devez effectuer une configuration et une intégration supplémentaires pour tirer parti des [!INCLUDE [Product short](includes/product-short.md)] fonctionnalités complètes de.
 

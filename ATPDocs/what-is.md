@@ -3,12 +3,12 @@ title: Qu’est-ce que Microsoft Defender pour Identity ?
 description: Explique ce qu’est Microsoft Defender pour Identity et quels types d’activités suspectes il peut détecter
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 1aceb1889ea3f85305d64b5bde6a252b804d56f0
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 1329c93e18941ca42e9d446abdb0576480543992
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753343"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515561"
 ---
 # <a name="what-is-product-long"></a>Qu’est-ce que [!INCLUDE [Product long](includes/product-long.md)] ?
 
@@ -107,6 +107,6 @@ Nous vous recommandons de déployer [!INCLUDE [Product short](includes/product-s
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Forum aux questions [!INCLUDE [Product short](includes/product-short.md)]](technical-faq.md)
+- [Forum aux questions [!INCLUDE [Product short](includes/product-short.md)]](technical-faq.yml)
 - [Utilisation des alertes de sécurité](working-with-suspicious-activities.md)
 - [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

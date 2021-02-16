@@ -3,18 +3,18 @@ title: Résolution des problèmes de Microsoft Defender pour l’identité à l�
 description: Décrit comment vous pouvez utiliser Microsoft Defender pour les journaux d’identité pour résoudre les problèmes
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: beea555d45f1e06ea3eddeffbf057c392003a8d2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2c902576b4cf7b0acf58371bafe4bb60404890ba
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542105"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534512"
 ---
-# <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>[!INCLUDE [Product long](includes/product-long.md)]Capteur de dépannage utilisant les [!INCLUDE [Product short](includes/product-short.md)] journaux
+# <a name="troubleshooting-microsoft-defender-for-identity-sensor-using-the-defender-for-identity-logs"></a>Résolution des problèmes de Microsoft Defender pour le capteur d’identité à l’aide de Defender pour les journaux d’identité
 
 Les [!INCLUDE [Product short](includes/product-short.md)] journaux fournissent des informations sur ce que chaque composant de [!INCLUDE [Product long](includes/product-long.md)] capteur fait à un moment donné.
 
-Les [!INCLUDE [Product short](includes/product-short.md)] journaux se trouvent dans un sous-dossier **Logs** appelé logs [!INCLUDE [Product short](includes/product-short.md)] , où est installé. l’emplacement par défaut est : **C:\Program Files\Azure Advanced \\ Threat Protection Sensor**. Dans l’emplacement de l’installation par défaut, il se trouve ici : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
+Les [!INCLUDE [Product short](includes/product-short.md)] journaux se trouvent dans un sous-dossier  appelé logs [!INCLUDE [Product short](includes/product-short.md)] , où est installé. l’emplacement par défaut est : **C:\Program Files\Azure Advanced \\ Threat Protection Sensor**. Dans l’emplacement de l’installation par défaut, il se trouve ici : **C:\Program Files\Azure Advanced Threat Protection Sensor\numéro de version\Logs**.
 
 Le [!INCLUDE [Product short](includes/product-short.md)] capteur contient les journaux suivants :
 
@@ -27,7 +27,7 @@ Le [!INCLUDE [Product short](includes/product-short.md)] capteur contient les jo
 > [!NOTE]
 > Les trois premiers fichiers journaux ont une taille maximale de 50 Mo. Quand cette taille est atteinte, un nouveau fichier journal est ouvert et le précédent est renommé en « &lt;nom_fichier_origine&gt;-Archive-00000 » où le nombre augmente chaque fois qu’il est renommé. Par défaut, s’il existe déjà plus de 10 fichiers du même type, les plus anciens sont supprimés.
 
-## <a name="product-short-deployment-logs"></a>[!INCLUDE [Product short](includes/product-short.md)] Journaux de déploiement
+## <a name="defender-for-identity-deployment-logs"></a>Defender pour les journaux de déploiement des identités
 
 Les [!INCLUDE [Product short](includes/product-short.md)] journaux de déploiement se trouvent dans le répertoire Temp de l’utilisateur qui a installé le produit. Dans l’emplacement d’installation par défaut, il se trouve à l’emplacement suivant : **C:\Users\Administrator\AppData\Local\Temp** (ou un répertoire au-dessus de% temp%).
 
