@@ -3,12 +3,12 @@ title: Évaluation de la sécurité des entités dormantes Microsoft Defender fo
 description: Cet article fournit une vue d’ensemble de Microsoft Defender pour les entités dormantes de l’identité dans les groupes sensibles rapport d’évaluation de la sécurité des identités.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e96b7af917f898c7ef9f701b7e7ffda1cf001598
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 44d7cc7c7152d95230440eeef45ee42a9e11c55d
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544196"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630728"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Évaluation de la sécurité : Entités dormantes dans des groupes **sensibles**
 
@@ -16,7 +16,7 @@ ms.locfileid: "96544196"
 
 [!INCLUDE [Product long](includes/product-long.md)] Découvre si des utilisateurs particuliers sont **sensibles** , et fournissent des attributs qui se trouvent s’ils sont inactifs, désactivés ou arrivés à expiration.
 
-Toutefois, des comptes **sensibles** peuvent également devenir *dormants* s’ils ne sont pas utilisés pendant 180 jours. Les [entités sensibles](sensitive-accounts.md) constituent des cibles privilégiées pour les acteurs malveillants cherchant à accéder aux données sensibles d’une organisation.
+Toutefois, des comptes **sensibles** peuvent également devenir *dormants* s’ils ne sont pas utilisés pendant 180 jours. Les [entités sensibles](manage-sensitive-honeytoken-accounts.md) constituent des cibles privilégiées pour les acteurs malveillants cherchant à accéder aux données sensibles d’une organisation.
 
 ## <a name="what-risk-do-dormant-entities-create-in-sensitive-groups"></a>Quel est le risque associé à la présence d’entités dormantes dans des groupes **sensibles** ?
 

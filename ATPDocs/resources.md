@@ -3,12 +3,12 @@ title: Liste des ressources utiles pour Microsoft Defender pour l’identité
 description: Cet article fournit une liste de ressources utiles pour Microsoft Defender pour l’identité
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8a814a51fdc63f59b36288922017280e0d7f3968
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: 218422d15ac797998b0eb0ecfb87c5b641823246
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533305"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630456"
 ---
 # <a name="microsoft-defender-for-identity-readiness-guide"></a>Guide Microsoft Defender pour Identity Readiness
 
@@ -53,9 +53,9 @@ Une fois que [!INCLUDE [Product short](includes/product-short.md)] est opératio
 
 - [ [!INCLUDE [Product short](includes/product-short.md)] Guide d’alerte de sécurité](suspicious-activity-guide.md) Apprenez à trier et suivez les étapes suivantes avec vos [!INCLUDE [Product short](includes/product-short.md)] détections.
 - [[!INCLUDE [Product short](includes/product-short.md)] chemins de mouvement latéral](use-case-lateral-movement-path.md)
-- [Identifier des groupes comme sensibles](sensitive-accounts.md) Gagnez en visibilité dans l’exposition des informations d’identification sur les groupes de sécurité sensibles.
+- [Identifier des groupes comme sensibles](manage-sensitive-honeytoken-accounts.md) Gagnez en visibilité dans l’exposition des informations d’identification sur les groupes de sécurité sensibles.
 
-## <a name="security-best-practices"></a>Meilleures pratiques en matière de sécurité
+## <a name="security-best-practices"></a>Bonnes pratiques de sécurité
 
 - Forum [ [!INCLUDE [Product short](includes/product-short.md)] aux questions](technical-faq.yml) (FAQ) : cet article fournit une liste de questions fréquemment posées sur [!INCLUDE [Product short](includes/product-short.md)] et fournit des conseils et des réponses.
 
@@ -71,5 +71,5 @@ Channel 9 : [Page Microsoft Security Channel 9](https://channel9.msdn.com/Show
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation de comptes sensibles](sensitive-accounts.md)
+- [Utilisation de comptes sensibles](manage-sensitive-honeytoken-accounts.md)
 - [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)

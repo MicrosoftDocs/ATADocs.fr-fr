@@ -4,12 +4,12 @@ metadata:
   description: Fournit une liste de questions fréquemment posées sur Microsoft Defender pour l’identité et les réponses associées.
   ms.date: 10/27/2020
   ms.topic: conceptual
-  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
-  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.openlocfilehash: 67326d1f4ba6291560fc25a21bca298d87bc5a58
+  ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/14/2021
-  ms.locfileid: "100520713"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100630473"
 title: Forum aux questions sur Microsoft Defender for Identity
 summary: >
   Cet article fournit la liste des questions fréquemment posées et des réponses sur Microsoft Defender for Identity divisées dans les catégories suivantes :
@@ -154,7 +154,7 @@ sections:
       Cela arrive quand un compte est membre de groupes désignés comme sensibles (par exemple, « Administrateurs de domaine »).
 
 
-      Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](sensitive-accounts.md).
+      Pour comprendre pourquoi un compte est sensible, vous pouvez examiner son appartenance au groupe pour déterminer à quels groupes sensibles il appartient. Le groupe auquel il appartient peut également être sensible en raison d’un autre groupe ; dans ce cas, répétez la procédure jusqu’à ce que vous trouviez le groupe sensible de plus haut niveau. Vous pouvez aussi [marquer manuellement des comptes comme étant sensibles](manage-sensitive-honeytoken-accounts.md).
   - question: Est-ce que je dois écrire mes propres règles et créer un seuil/une ligne de base ?
     answer: >
       Avec Defender for Identity, il n’est pas nécessaire de créer des règles, des seuils ou des lignes de base, puis de les affiner. Defender for Identity analyse les comportements des utilisateurs, des appareils et des ressources, ainsi que leurs relations entre eux, et peut détecter rapidement les activités suspectes et les attaques connues. Trois semaines après le déploiement, Defender pour l’identité commence à détecter les activités suspectes comportementales. En revanche, Defender for Identity commence à détecter les attaques malveillantes connues et les problèmes de sécurité immédiatement après le déploiement.

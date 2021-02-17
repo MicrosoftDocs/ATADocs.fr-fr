@@ -3,12 +3,12 @@ title: Définition des paramètres Syslog dans Microsoft Defender pour Identity
 description: Explique comment indiquer à Microsoft Defender pour Identity d’envoyer une notification (par e-mail ou par transfert d’événements Defender pour Identity) en cas de détection d’activités suspectes.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 587fd2cab00b982ace580ef2b8b587157c960891
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 06064b549db61a65b068f78a66d886f29805444f
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544349"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630507"
 ---
 # <a name="integrate-with-syslog"></a>Intégrer à Syslog
 
@@ -57,5 +57,5 @@ Pour passer en revue ou modifier vos paramètres Syslog.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation de comptes sensibles](sensitive-accounts.md)
+- [Utilisation de comptes sensibles](manage-sensitive-honeytoken-accounts.md)
 - [Consulter le forum [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity)
