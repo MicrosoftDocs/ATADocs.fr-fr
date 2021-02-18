@@ -3,14 +3,14 @@ title: Tutoriel de configuration du labo des alertes de sécurité Microsoft Def
 description: Ce tutoriel vise à configurer un labo de test Microsoft Defender pour Identity pour simuler des menaces à des fins de détection par Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3fa1a3322a76f61f924da521654d3d722c994916
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542555"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533594"
 ---
-# <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutoriel : Configuration d’un labo d’alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="tutorial-setup-a-microsoft-defender-for-identity-security-alert-lab"></a>Tutoriel : Configurer un labo des alertes de sécurité Microsoft Defender pour Identity
 
 L’objectif du labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Ce premier tutoriel d’une série en quatre parties explique comment créer un environnement labo permettant de tester les détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)]. Le labo des alertes de sécurité se concentre sur les fonctionnalités liées à la *signature* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo n’inclut pas le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours. Pour plus d’informations sur les différents tutoriels de cette série, consultez la [vue d’ensemble des labos des alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -66,11 +66,13 @@ Il existe un groupe de sécurité « Support technique » dont Ron HelpDesk es
 | Samira Abbasi | SamiraA | Chez Contoso, cet utilisateur est notre administrateur de domaine. |
 | [!INCLUDE [Product short](includes/product-short.md)] | AATPService | Compte de service de [!INCLUDE [Product short](includes/product-short.md)] | account |
 
-## <a name="product-short-base-lab-environment"></a>Environnement de labo de base [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-base-lab-environment"></a>Environnement de labo de base Defender pour Identity
 
 Pour configurer le labo de base, nous allons ajouter des utilisateurs et des groupes à Active Directory, puis modifier une stratégie SAM et un groupe sensible dans [!INCLUDE [Product short](includes/product-short.md)].
 
-### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Alimenter Active Directory avec des utilisateurs sur ContosoDC
+<a name="bkmk_hydrate"></a>
+
+### <a name="hydrate-active-directory-users-on-contosodc"></a> Alimenter Active Directory avec des utilisateurs sur ContosoDC
 
 Pour simplifier le labo, nous avons automatisé le processus de création d’utilisateurs et de groupes fictifs dans Active Directory. Ce script est exécuté comme une condition préalable à ce tutoriel. Vous pouvez utiliser ou modifier le script pour alimenter l’environnement Active Directory de votre labo. Si vous préférez ne pas utiliser de script, vous pouvez le faire manuellement.
 
@@ -95,8 +97,8 @@ Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 # Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Take note of the "AATPService" user below which will be our service account for [!INCLUDE [Product short](includes/product-short.md)].
-# Create new AD user [!INCLUDE [Product short](includes/product-short.md)] Service
+# Take note of the "AATPService" user below which will be our service account for Defender for Identity.
+# Create new AD user Defender for Identity Service
 
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
 ```
@@ -113,7 +115,7 @@ Pour autoriser le Service [!INCLUDE [Product short](includes/product-short.md)] 
 
     ![Ajoutez le service](media/samr-add-service.png)
 
-### <a name="add-sensitive-group-to-product-short"></a>Ajout d’un groupe sensible à [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="add-sensitive-group-to-defender-for-identity"></a>Ajouter un groupe sensible à Defender pour Identity
 
 Après avoir ajouté le groupe de sécurité « Support technique » comme **Groupe sensible**, vous pourrez utiliser la fonctionnalité de graphe de mouvement latéral de [!INCLUDE [Product short](includes/product-short.md)]. Le balisage d’utilisateurs et de groupes très sensibles qui ne sont pas nécessairement des administrateurs de domaine mais disposent de privilèges pour de nombreuses ressources est une meilleure pratique.
 
@@ -126,7 +128,7 @@ Après avoir ajouté le groupe de sécurité « Support technique » comme **G
     ](media/playbook-labsetup-helpdesksensitivegroup.png)Étiquetage de « Support technique » comme groupe sensible [!INCLUDE [Product short](includes/product-short.md)] pour activer les graphes et les rapports de mouvement latéral de ce groupe privilégié![
 1. Cliquez sur **Enregistrer**.
 
-### <a name="product-short-lab-base-setup-checklist"></a>Liste de contrôle de la configuration de base du labo [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="defender-for-identity-lab-base-setup-checklist"></a>Liste de contrôle de la configuration de base du labo Defender pour Identity
 
 Vous disposez maintenant d’un labo [!INCLUDE [Product short](includes/product-short.md)] de base. [!INCLUDE [Product short](includes/product-short.md)] est prêt à l’emploi, et les utilisateurs en attente. Passez en revue la liste de vérification pour vous assurer que le labo de base est terminé.
 
@@ -158,7 +160,9 @@ Inspectez le groupe d’administrateurs sur **VictimPC** et assurez-vous qu’il
 
 ![le support technique et JeffV doivent se trouver dans le groupe des administrateurs locaux pour VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simulez la prise en charge du support technique sur VictimPC
+<a name="helpdesk-simulation"></a>
+
+### <a name="simulate-helpdesk-support-on-victimpc"></a> Simulez la prise en charge du support technique sur VictimPC
 
 Pour simuler un réseau actif et géré, créez une tâche planifiée sur la machine **VictimPC** afin d’exécuter le processus « cmd.exe » en tant que **RonHD**.
 

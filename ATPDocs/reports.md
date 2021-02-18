@@ -3,14 +3,14 @@ title: Rapports Microsoft Defender pour Identity
 description: Explique comment générer des rapports dans Microsoft Defender pour Identity afin de superviser le réseau.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: ca2724526aa7fd1dcf31d2e8242930e215ed6a05
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1d09bd832167d960323ed0422a7858e9e512c4e1
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544451"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533458"
 ---
-# <a name="product-long-reports"></a>Rapports [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-reports"></a>Rapports Microsoft Defender pour Identity
 
 La section Rapports [!INCLUDE [Product long](includes/product-long.md)] du portail [!INCLUDE [Product short](includes/product-short.md)] vous permet de planifier ou de générer et de télécharger immédiatement des rapports qui donnent des informations sur l’état du système et des entités. La fonctionnalité de rapports vous permet de créer des rapports sur l’intégrité du système, sur les alertes de sécurité et sur les chemins de mouvement latéral potentiels détectés dans votre environnement.
 

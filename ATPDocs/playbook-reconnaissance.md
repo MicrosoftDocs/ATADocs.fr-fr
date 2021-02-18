@@ -3,12 +3,12 @@ title: Tutoriel du playbook de reconnaissance Microsoft Defender pour Identity
 description: Le tutoriel du playbook de reconnaissance Microsoft Defender pour Identity explique comment simuler des menaces de reconnaissance à des fins de détection par Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: dcaac8ed69bb4c3b9ccd262af929652dbc12126a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 735e3d24586e9fee1fdead3782d5e996f555ef03
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544485"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533679"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutoriel : Playbook de reconnaissance
 
@@ -75,7 +75,7 @@ ls -d contoso.azure
 
 Si **ContsoDC** est votre premier capteur déployé, attendez 15 minutes pour permettre à la base de données principale de terminer le déploiement des microservices nécessaires.
 
-### <a name="network-mapping-reconnaissance-dns-detected-in-product-short"></a>Détection de la reconnaissance de mappage de réseau (DNS) dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="network-mapping-reconnaissance-dns-detected-in-defender-for-identity"></a>Reconnaissance de mappage de réseau (DNS) détectée dans Defender pour Identity
 
 La visibilité de ce type de tentative (réussie ou non) est essentielle pour la protection contre les menaces de domaine. Après l’installation récente de l’environnement, vous devez accéder à la **chronologie des activités logiques** pour voir l’activité détectée.
 
@@ -145,7 +145,7 @@ N’importe quel ordinateur ou utilisateur authentifié peut potentiellement én
 
 Avec les informations collectées lors de notre reconnaissance, nous connaissons maintenant le groupe de sécurité du support technique. Ces informations ne sont cependant pas *encore* intéressantes. Nous savons également que **SamiraA** est un membre du groupe d’administrateurs du domaine. Si nous pouvons collecter les informations d’identification de SamiraA, nous pouvons accéder au contrôleur de domaine proprement dit.
 
-### <a name="directory-service-enumeration-detected-in-product-short"></a>Détection de l’énumération des services d’annuaire dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="directory-service-enumeration-detected-in-defender-for-identity"></a>Énumération des services d’annuaire détectée dans Defender pour Identity
 
 Si notre labo avait une *activité réelle en direct pendant 30 jours une fois [!INCLUDE [Product short](includes/product-short.md)] installé*, l’activité de JeffL serait potentiellement considérée comme anormale. Une activité anormale s’afficherait dans la chronologie des activités suspectes. Cependant, étant donné que nous venons d’installer l’environnement, nous devons accéder à la chronologie des activités logiques.
 
@@ -187,7 +187,7 @@ NetSess.exe ContosoDC
 
 Nous savons déjà que SamiraA est un administrateur de domaine. Cette attaque nous a permis d’obtenir l’adresse IP de SamiraA, à savoir 10.0.24.6. En tant qu’attaquant, nous avons appris qui nous devons exactement compromettre. Nous avons également l’emplacement réseau où ces informations d’identification sont enregistrées.
 
-### <a name="user-and-ip-address-reconnaissance-smb-detected-in-product-short"></a>Détection de la reconnaissance des utilisateurs et des adresses IP dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="user-and-ip-address-reconnaissance-smb-detected-in-defender-for-identity"></a>Reconnaissance des utilisateurs et des adresses IP (SMB) détectée dans Defender pour Identity
 
 Voyons maintenant ce que [!INCLUDE [Product short](includes/product-short.md)] a détecté :
 

@@ -3,14 +3,14 @@ title: Présentation des alertes d’intégrité Microsoft Defender pour Identit
 description: Cet article décrit toutes les alertes d’intégrité pour chaque composant, en listant la cause et les étapes nécessaires pour résoudre le problème.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 30f88e239ac7c9fb2853688d3977e03401e8a353
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 23c5ec5d87c38338dee43fb6665d7ed23830c1ff
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543091"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534325"
 ---
-# <a name="understanding-product-long-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="understanding-microsoft-defender-for-identity-sensor-health-alerts"></a>Présentation des alertes d’intégrité du capteur Microsoft Defender pour Identity
 
 Le centre d’intégrité [!INCLUDE [Product long](includes/product-long.md)] vous informe en cas de problème dans votre instance [!INCLUDE [Product short](includes/product-short.md)] en déclenchant une alerte d’intégrité. Cet article décrit toutes les alertes d’intégrité pour chaque composant, en répertoriant la cause et les étapes nécessaires pour résoudre le problème.
 

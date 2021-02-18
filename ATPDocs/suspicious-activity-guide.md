@@ -3,14 +3,14 @@ title: Guide des alertes de sécurité Microsoft Defender pour Identity
 description: Cet article donne la liste des alertes de sécurité émises par Microsoft Defender pour Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: b6870f7c02dcd9497c08f8ebba33fde967092a4c
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: eb74cc45084b9973da9f141794a2684942aaed0a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542190"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533410"
 ---
-# <a name="product-long-security-alerts"></a>Alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-security-alerts"></a>Alertes de sécurité Microsoft Defender pour Identity
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).

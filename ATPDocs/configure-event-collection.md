@@ -3,12 +3,12 @@ title: Installation de Microsoft Defender pour Identity
 description: Cette étape de l’installation de Microsoft Defender pour Identity consiste à configurer des sources de données.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 6de6b52af73c22387ad16c28e4a0b0e84c888847
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 71c762ed8791f01f3cf2c89a3b612f937a618b84
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544060"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534240"
 ---
 # <a name="configure-event-collection"></a>Configurer la collecte d’événements
 
@@ -50,7 +50,7 @@ Pour plus d’informations sur la façon de configurer le transfert d’événem
 > [!NOTE]
 > Si vous n’utilisez pas de serveur SIEM/Syslog, vous pouvez configurer vos contrôleurs de domaine Windows de façon à transférer tous les événements requis pour qu’ils soient collectés et analysés par [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="configuring-the-product-short-sensor-to-listen-for-siem-events"></a>Configuration du capteur [!INCLUDE [Product short](includes/product-short.md)] pour écouter les événements SIEM
+## <a name="configuring-the-defender-for-identity-sensor-to-listen-for-siem-events"></a>Configuration du capteur Defender pour Identity pour écouter les événements SIEM
 
 - Configurez votre serveur SIEM ou Syslog de façon à transférer tous les événements requis à l’adresse IP de l’un des capteurs autonomes [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur la configuration de votre serveur SIEM, consultez l’aide en ligne de SIEM ou explorez les options de support technique à votre disposition pour obtenir les formats à respecter pour chaque serveur SIEM.
 

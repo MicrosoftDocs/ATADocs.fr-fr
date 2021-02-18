@@ -3,12 +3,12 @@ title: Playbook du contrôle de domaine Microsoft Defender pour Identity
 description: Le playbook du contrôle de domaine Microsoft Defender pour Identity explique comment simuler des attaques de contrôle de domaine à des fins de détection par Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: fc79528c5adb2b487b3b68f2919facadfd7ebe2e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ae0221c9b9d59f884e96853584e78b497328fd23
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542785"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533781"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutoriel : Playbook de contrôle du domaine
 
@@ -69,7 +69,7 @@ L’exécution de code à distance porte bien son nom. Des attaquants se donnent
 
 En agissant comme un attaquant, vous avez pu créer un nouvel utilisateur dans votre labo à l’aide de WMI. Vous avez également ajouté le nouvel utilisateur au groupe Administrateurs à l’aide de PsExec. Du point de vue de la persistance, d’autres informations d’identification légitimes indépendantes ont été créées sur le contrôleur de domaine. De nouvelles informations d’identification permettent à un attaquant d’avoir accès en permanence au contrôleur de domaine si l’accès précédemment obtenu avec des informations d'identification a été découvert et supprimé.
 
-### <a name="remote-code-execution-detection-in-product-short"></a>Détection d’exécution de code à distance dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="remote-code-execution-detection-in-defender-for-identity"></a>Détection d’exécution de code à distance dans Defender pour Identity
 
 Connectez-vous au portail [!INCLUDE [Product short](includes/product-short.md)] pour voir si [!INCLUDE [Product short](includes/product-short.md)] a détecté quelque chose à la suite de notre dernière attaque simulée :
 
@@ -105,7 +105,7 @@ L’API de protection des données (DPAPI) est utilisée par Windows pour proté
 
 En tant qu’attaquants, nous disposons maintenant de la clé qui nous permettra de déchiffrer les fichiers chiffrés par DPAPI/les données sensibles à partir de *n’importe quelle* machine dans toute la forêt.
 
-### <a name="dpapi-detection-in-product-short"></a>Détection d’attaques DPAPI dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="dpapi-detection-in-defender-for-identity"></a>Détection d’attaque DPAPI dans Defender pour Identity
 
 Vérifions sur le portail [!INCLUDE [Product short](includes/product-short.md)] que [!INCLUDE [Product short](includes/product-short.md)] a réussi à détecter notre attaque DPAPI :
 
@@ -129,7 +129,7 @@ Nous avons répliqué les informations du compte « krbtgt » dans `c:\\temp\\
 
 ![Réplication malveillante via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### <a name="malicious-replication-detection-in-product-short"></a>Détection de réplication malveillante dans [!INCLUDE [Product short](includes/product-short.md)]
+#### <a name="malicious-replication-detection-in-defender-for-identity"></a>Détection de réplication malveillante dans Defender pour Identity
 
 Sur le portail [!INCLUDE [Product short](includes/product-short.md)], vérifiez que le Centre d’opérations de sécurité est au courant de la réplication malveillante que nous avons simulée à partir de VictimPC.
 
@@ -180,7 +180,7 @@ Cette commande crée un nouveau processus, *le bloc-notes*, qui s’exécute dan
 > [!Important]
 > Il est important de redémarrer ContosoDC après avoir exécuté l’attaque Skeleton Key. Sinon, le processus LSASS.exe sur ContosoDC sera corrigé et modifié, entraînant la rétrogradation de chaque demande d’authentification à RC4.
 
-### <a name="skeleton-key-attack-detection-in-product-short"></a>Détection d’attaque Skeleton Key dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="skeleton-key-attack-detection-in-defender-for-identity"></a>Détection d’attaque Skeleton Key dans Defender pour Identity
 
 Quels sont les événements détectés et signalés par [!INCLUDE [Product short](includes/product-short.md)] ?
 

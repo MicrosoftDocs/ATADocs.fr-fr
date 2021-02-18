@@ -3,14 +3,14 @@ title: Activités de domaine supervisées par Microsoft Defender pour Identity
 description: Décrit chacun des types d’activité supervisés par Microsoft Defender pour Identity.
 ms.date: 12/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 5ca3a3681eb15b1b2a8935942daaf7a39f9c15c3
-ms.sourcegitcommit: 78fb0cead845c7098c780f4daa624a741e350ec2
+ms.openlocfilehash: 28115bc246f6128aeb2bc408a1107e34796c039a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97763623"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533747"
 ---
-# <a name="product-long-monitored-activities"></a>Activités supervisées par [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-monitored-activities"></a>Activités supervisées par Microsoft Defender pour Identity
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).

@@ -3,14 +3,14 @@ title: Configuration d’un proxy ou d’un pare-feu pour permettre la communica
 description: Explique comment configurer un pare-feu ou un proxy de façon à permettre la communication entre le service Cloud Microsoft Defender pour Identity et les capteurs Microsoft Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 4606ab39457cbf1210974cb9f150d7410051c361
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ea3a16db97a4ac039509d2fe295ba803cb67de35
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543431"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534155"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configuration des paramètres de proxy du point de terminaison et de connectivité Internet d’un capteur [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-microsoft-defender-for-identity-sensor"></a>Configurer les paramètres de proxy du point de terminaison et de connectivité Internet de votre capteur Microsoft Defender pour Identity
 
 Chaque capteur [!INCLUDE [Product long](includes/product-long.md)] a besoin d’une connectivité Internet au service cloud [!INCLUDE [Product short](includes/product-short.md)] pour pouvoir envoyer ses données et fonctionner correctement. Dans certaines organisations, les contrôleurs de domaine ne sont pas connectés directement à Internet, mais plutôt par le biais d’une connexion de proxy web.
 
@@ -76,7 +76,7 @@ Le proxy statique est configurable par le biais du Registre. Vous devez copier l
 
 <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-## <a name="enable-access-to-product-short-service-urls-in-the-proxy-server"></a>Activation de l’accès aux URL du service [!INCLUDE [Product short](includes/product-short.md)] dans le serveur proxy
+## <a name="enable-access-to-defender-for-identity-service-urls-in-the-proxy-server"></a>Activer l’accès aux URL du service Defender pour Identity dans le serveur proxy
 
 Pour activer l’accès à [!INCLUDE [Product short](includes/product-short.md)], nous vous recommandons d’autoriser le trafic à destination des URL suivantes. Les URL sont automatiquement mappées avec l’emplacement du service correspondant dans votre instance [!INCLUDE [Product short](includes/product-short.md)].
 

@@ -3,20 +3,20 @@ title: Mise à jour des capteurs Microsoft Defender pour Identity
 description: Explique comment mettre à jour et différer les mises à jour de capteurs dans Microsoft Defender pour Identity.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 6db4db087f64431812a3998f2c79f066dfb09ea2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3d77e5ebd6fdec2647f08aa32c1e2076a1487293
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542394"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534410"
 ---
-# <a name="update-product-long-sensors"></a>Mise à jour des capteurs [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="update-microsoft-defender-for-identity-sensors"></a>Mise à jour des capteurs Microsoft Defender pour Identity
 
 Il est essentiel de maintenir les capteurs [!INCLUDE [Product long](includes/product-long.md)] à jour pour bénéficier de la meilleure protection possible dans votre organisation.
 
 Le service [!INCLUDE [Product long](includes/product-long.md)] est en général mis à jour plusieurs fois par mois : nouvelles détections, nouvelles fonctionnalités et amélioration du niveau de performance. Elles s’accompagnent souvent d’une mise à jour mineure des capteurs. Les capteurs [!INCLUDE [Product short](includes/product-short.md)] et les mises à jour correspondantes ne possèdent jamais d’autorisations d’accès en écriture à vos contrôleurs de domaine. Les mises à jour contrôlent seulement les capteurs [!INCLUDE [Product short](includes/product-short.md)] et leurs fonctionnalités de détection.
 
-## <a name="product-short-sensor-update-types"></a>Types de mises à jour des capteurs [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-update-types"></a>Types de mises à jour des capteurs Defender pour Identity
 
 Les capteurs [!INCLUDE [Product short](includes/product-short.md)] acceptent deux types de mises à jour :
 

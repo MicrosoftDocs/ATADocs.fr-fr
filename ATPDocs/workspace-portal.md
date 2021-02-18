@@ -3,14 +3,14 @@ title: Présentation du portail Microsoft Defender pour Identity
 description: Explique comment se connecter au portail Microsoft Defender pour Identity et à ses composants.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 00e29d828a58a76bfdbec1e28582135466d756ea
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: be8c3449b1debeb2cc0aa0da2ad560e394996344
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544570"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534546"
 ---
-# <a name="working-with-the-product-long-portal"></a>Utilisation du portail [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="working-with-the-microsoft-defender-for-identity-portal"></a>Utilisation du portail Microsoft Defender pour Identity
 
 > [!NOTE]
 > Toutes les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail Cloud App Security](https://portal.cloudappsecurity.com).
@@ -23,12 +23,12 @@ Le portail [!INCLUDE [Product short](includes/product-short.md)] offre un aperç
 
 Cet article explique comment utiliser les éléments clés du portail [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="enabling-access-to-the-product-short-portal"></a>Activation de l’accès au portail [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="enabling-access-to-the-defender-for-identity-portal"></a>Activation de l’accès au portail Microsoft Defender pour Identity
 
 Vous devez vous connecter au portail [!INCLUDE [Product short](includes/product-short.md)] en tant qu’utilisateur affecté à un groupe de sécurité Azure Active Directory y ayant accès.
 Pour plus d’informations sur le contrôle d’accès en fonction du rôle (RBAC) dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation de groupes de rôles [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-## <a name="logging-into-the-product-short-portal"></a>Connexion au portail [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="logging-into-the-defender-for-identity-portal"></a>Connexion au portail Microsoft Defender pour Identity
 
 1. Vous avez deux possibilités pour accéder au portail [!INCLUDE [Product short](includes/product-short.md)] : connectez-vous au portail [https://portal.atp.azure.com](https://portal.atp.azure.com) et sélectionnez votre instance, ou bien accédez à l’URL de l’instance (`https://*instancename*.atp.azure.com` ).
 

@@ -3,12 +3,12 @@ title: Playbook du mouvement latéral des alertes de sécurité Microsoft Defend
 description: Le playbook Microsoft Defender pour Identity explique comment simuler des menaces de mouvement latéral à des fins de détection par Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 50880150bb8937875677985f3a61119495d566eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b0305dfbcfba45a796d2c50e21ab31fba8705520
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542700"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533713"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutoriel : Playbook de mouvement latéral
 
@@ -131,7 +131,7 @@ Nous allons utiliser **PowerSploit** ```Get-NetLocalGroup``` pour nous aider à 
 
 Vous pouvez voir que, pour ce processus particulier, nous avons un TGT de RonHD en mémoire. Nous avons effectué avec succès une attaque Overpass-the-Hash dans notre labo. Nous avons converti le code de hachage NTLM compromis précédemment et l’avons utilisé pour obtenir un TGT Kerberos. Ce TGT Kerberos a été ensuite utilisé pour accéder à une autre ressource réseau, dans le cas présent, AdminPC.
 
-### <a name="overpass-the-hash-detected-in-product-short"></a>Détection d’une attaque Overpass-the-Hash dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="overpass-the-hash-detected-in-defender-for-identity"></a>Attaque Overpass-the-Hash détectée dans Defender pour Identity
 
 En examinant la console [!INCLUDE [Product short](includes/product-short.md)], nous pouvons voir les informations suivantes :
 
@@ -233,7 +233,7 @@ Avec les tickets localement sur VictimPC, il est maintenant temps de devenir Sam
 
 Opération réussie. Nos attaques fictives nous ont permis d’accéder en tant qu’administrateur à notre contrôleur de domaine et de réussir à compromettre le domaine/la forêt Active Directory de notre labo.
 
-### <a name="pass-the-ticket-detection-in-product-short"></a>Détection Pass-the-Ticket dans [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="pass-the-ticket-detection-in-defender-for-identity"></a>Détection d’attaque Pass-the-Ticket dans Defender pour Identity
 
 La plupart des outils de sécurité n’ont aucun moyen de détecter l’utilisation d’informations d’identification légitimes pour accéder à une ressource légitime. Quels sont en revanche les événements détectés et signalés par [!INCLUDE [Product short](includes/product-short.md)] dans cette chaîne ?
 

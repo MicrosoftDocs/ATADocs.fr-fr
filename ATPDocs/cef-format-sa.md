@@ -3,18 +3,18 @@ title: Informations de référence sur les journaux SIEM Microsoft Defender pour
 description: Donne des exemples de journaux d’activités suspectes envoyés au serveur SIEM par Microsoft Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: f5be050f11fc41e19c37410060acb825642369e3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: fd2c2547e00f1bf2542ab0fd42a14854d3d25287
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544111"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534189"
 ---
-# <a name="product-long-siem-log-reference"></a>Informations de référence sur les journaux SIEM [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-siem-log-reference"></a>Informations de référence sur les journaux SIEM Microsoft Defender pour Identity
 
 [!INCLUDE [Product short](includes/product-short.md)] peut transférer les événements d’alerte de sécurité et d’intégrité à votre serveur SIEM. Les alertes et les événements sont au format CEF. Cet article de référence fournit des exemples des journaux envoyés à votre serveur SIEM.
 
-## <a name="sample-product-short-security-alerts-in-cef-format"></a>Exemples d’alertes de sécurité [!INCLUDE [Product short](includes/product-short.md)] au format CEF
+## <a name="sample-defender-for-identity-security-alerts-in-cef-format"></a>Exemples d’alertes de sécurité Defender pour Identity au format CEF
 
 Les champs suivants et leurs valeurs sont transférés à votre serveur SIEM :
 

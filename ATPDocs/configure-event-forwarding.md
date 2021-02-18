@@ -3,12 +3,12 @@ title: Configuration du transfert d’événements Windows dans Microsoft Defend
 description: Décrit les options de configuration du transfert d’événements Windows avec Microsoft Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: f3a11a3d39972b3bdb3df38669ef2fa4b10cc5fb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: eb9ae24f1e51acda9ca91c459963677a5b5c300e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543533"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534223"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuration du transfert d’événements Windows
 
@@ -22,7 +22,7 @@ Pour améliorer les capacités de détection, [!INCLUDE [Product short](includes
 > - Les capteurs autonomes [!INCLUDE [Product short](includes/product-short.md)] ne prennent pas en charge la collecte d’entrées de journal du Suivi d’événements pour Windows (ETW) qui fournissent les données pour de nombreuses détections. Pour une couverture complète de votre environnement, nous vous recommandons de déployer le capteur [!INCLUDE [Product short](includes/product-short.md)].
 > - Vérifiez que le contrôleur de domaine est correctement configuré pour capturer les événements requis.
 
-## <a name="wef-configuration-for-product-short-standalone-sensors-with-port-mirroring"></a>Configuration WEF du capteur autonome [!INCLUDE [Product short](includes/product-short.md)] avec mise en miroir de ports
+## <a name="wef-configuration-for-defender-for-identity-standalone-sensors-with-port-mirroring"></a>Configuration WEF du capteur autonome Defender pour Identity avec mise en miroir de ports
 
 Une fois que vous avez configuré la mise en miroir de ports des contrôleurs de domaine au capteur autonome [!INCLUDE [Product short](includes/product-short.md)], suivez les instructions ci-dessous pour configurer le transfert d’événements Windows selon la configuration Initialisation par la source. Il s’agit de l’une des façons de configurer Windows Event Forwarding.
 

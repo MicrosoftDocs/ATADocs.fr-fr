@@ -3,12 +3,12 @@ title: Tutoriel des alertes de sécurité Microsoft Defender pour Identity
 description: Cet article explique comment utiliser et comprendre les alertes de sécurité Microsoft Defender pour Identity.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: f7ec5a676dfa9e243db024639867fcf8227380f2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bec99de6189e51fa86cfd96dc219de3fe54538fa
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544315"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534529"
 ---
 # <a name="understanding-security-alerts"></a>Présentation des alertes de sécurité
 
@@ -122,7 +122,7 @@ Comprend toutes les données profilées par [!INCLUDE [Product short](includes/p
 
 ![Entités associées](media/related-entities.png)
 
-### <a name="how-can-i-use-product-short-information-in-an-investigation"></a>Utilité des informations de [!INCLUDE [Product short](includes/product-short.md)] dans le cadre d’un examen
+### <a name="how-can-i-use-defender-for-identity-information-in-an-investigation"></a>Comment puis-je utiliser les informations de Defender pour Identity dans le cadre d’une investigation ?
 
 Les investigations peuvent être aussi détaillées qu’il le faut. Voici quelques méthodes d’examen possibles à l’aide des données fournies par [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -130,7 +130,7 @@ Les investigations peuvent être aussi détaillées qu’il le faut. Voici quelq
 - Les utilisateurs associés partagent-ils des ressources, des applications ou des ordinateurs ?
 - Un compte est-il actif alors que son PasswordExpiryTime est déjà passé ?
 
-## <a name="product-short-and-nnr-network-name-resolution"></a>[!INCLUDE [Product short](includes/product-short.md)] et résolution de noms réseau
+## <a name="defender-for-identity-and-nnr-network-name-resolution"></a>Defender pour Identity et résolution de noms réseau (NNR)
 
 Les fonctionnalités de détection de [!INCLUDE [Product short](includes/product-short.md)] s’appuient sur la résolution de noms réseau active pour faire correspondre les adresses IP avec les ordinateurs de votre organisation. [!INCLUDE [Product short](includes/product-short.md)] peut ainsi corréler les activités brutes (contenant des adresses IP) aux ordinateurs concernés impliqués dans chacune d’elles. À partir des activités brutes, il profile les entités, notamment les ordinateurs, et génère des alertes.
 

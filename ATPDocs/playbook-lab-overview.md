@@ -3,14 +3,14 @@ title: Vue d’ensemble des tutoriels du labo des alertes de sécurité Microsof
 description: Cette vue d’ensemble des tutoriels décrit les quatre parties du labo des alertes de sécurité Microsoft Defender pour Identity visant à simuler des menaces à des fins de détection par Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 5d4de0173019b318fda8a5c2ee80db72c832ab7b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 61602a6bb7d3037d2278c2f492395ed058e8910b
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544434"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533560"
 ---
-# <a name="tutorial-overview-product-long-security-alert-lab"></a>Vue d’ensemble des tutoriels : labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="tutorial-overview-microsoft-defender-for-identity-security-alert-lab"></a>Présentation du tutoriel : Labo des alertes de sécurité Microsoft Defender pour Identity
 
 L’objectif des tutoriels du labo des alertes de sécurité [!INCLUDE [Product long](includes/product-long.md)] est d’illustrer les fonctionnalités de **[!INCLUDE [Product short](includes/product-short.md)]** concernant l’identification et la détection des activités suspectes et des attaques potentielles du réseau. Ces quatre tutoriels expliquent comment installer et configurer un environnement fonctionnel pour tester certaines détections *discrètes* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo se concentre sur les fonctionnalités liées à la *signature* de [!INCLUDE [Product short](includes/product-short.md)]. Ce labo n’inclut ni le Machine Learning avancé, ni les détections de comportements basées sur utilisateur ou l’entité, car celles-ci nécessitent une période d’apprentissage avec un trafic réseau réel pouvant aller jusqu’à 30 jours.
 

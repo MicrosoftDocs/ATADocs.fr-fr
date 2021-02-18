@@ -3,14 +3,14 @@ title: Présentation et utilisation des chemins de mouvement latéral avec Micro
 description: Cet article décrit les chemins de mouvement latéral potentiels de Microsoft Defender pour Identity.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 21d672a6c2220229060189120f1daefacd47416b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 60fac487690d5ff71eb2df5d6ee52c15c336941e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544536"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533441"
 ---
-# <a name="product-long-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-lateral-movement-paths-lmps"></a>Chemins de mouvement latéral Microsoft Defender pour Identity
 
 > [!NOTE]
 > Les fonctionnalités [!INCLUDE [Product long](includes/product-long.md)] décrites sur cette page sont également accessibles sur le nouveau [portail](https://portal.cloudappsecurity.com).
@@ -23,7 +23,7 @@ Les chemins de mouvement latéral constituent l’un des composants clés des in
 
 Les attaques par mouvements latéraux sont généralement effectuées selon différentes techniques. Certaines des méthodes les plus répandues utilisées par les attaquants sont le vol d’informations d’identification et Pass-the-Ticket. Dans les deux méthodes, vos comptes non sensibles sont utilisés pour des mouvements latéraux par les attaquants, qui exploitent des ordinateurs non sensibles partageant avec des comptes sensibles des informations d’identification stockées dans des comptes, des groupes et des ordinateurs.
 
-## <a name="where-can-i-find-product-short-lmps"></a>Emplacement des chemins de mouvement latéral [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="where-can-i-find-defender-for-identity-lmps"></a>Où puis-je trouver les chemins de mouvement latéral Defender pour Identity ?
 
 Chaque ordinateur ou profil d’utilisateur dont [!INCLUDE [Product short](includes/product-short.md)] a détecté qu’il se trouve dans un chemin de mouvement latéral comporte un onglet **Chemins de mouvement latéral**. Les ordinateurs et les profils sans cet onglet n’ont jamais été découverts dans un chemin de mouvement latéral potentiel.
 
