@@ -122,12 +122,12 @@ items:
         href: working-with-suspicious-activities.md
       - name: Exclure des entités des détections
         href: excluding-entities-from-detections.md
-      - name: Gérer des comptes sensibles
-        href: sensitive-accounts.md
       - name: Rechercher et filtrer dans des activités supervisées
         href: activities-search.md
-      - name: Utiliser des exclusions et des comptes honeytoken
-        href: install-step7.md
+      - name: Gérer les comptes sensibles ou honeytoken
+        href: manage-sensitive-honeytoken-accounts.md
+      - name: Configurer les exclusions de détection
+        href: configure-detection-exclusions.md
       - name: Superviser les contrôleurs de domaine
         href: sensor-monitoring.md
       - name: Modifier le mot de passe de connectivité de domaine

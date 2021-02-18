@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 44f197908a3818df6bba627a3de3a7edf79fd0af
-ms.sourcegitcommit: 061b0540673d058e85285d4f0dd90a7fdeae7275
+ms.openlocfilehash: ca930cbcdc61504e8039c02aabe5cd59ae7c5b22
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100569775"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097332"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>Qu’est-ce qu’Advanced Threat Analytics ?
 
@@ -119,5 +119,5 @@ Vous pouvez afficher les activités suspectes de ce type dans le tableau de bord
 
 
 ## <a name="see-also"></a>Voir aussi
-Manuel d’activité [suspecte ATA](https://aka.ms/ataplaybook) 
+Manuel d’activité [suspecte ATA](/samples/browse/?redirectedfrom=TechNet-Gallery) 
  [Consultez le Forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

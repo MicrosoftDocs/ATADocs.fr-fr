@@ -3,12 +3,12 @@ title: Advanced Threat Analytics à Microsoft Defender pour le déplacement de l
 description: Découvrez comment déplacer une installation Advanced Threat Analytics existante vers Microsoft Defender pour l’identité.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: f363543cca20e0dba853c58db1e1c1cc0c60ce22
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 6a7a5391e908964c7bc570ef478fdc037e9b1051
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630541"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097298"
 ---
 # <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>ATA (Advanced Threat Analytics) à Microsoft Defender pour l’identité
 
@@ -101,7 +101,7 @@ Connectez-vous au [!INCLUDE [Product short](includes/product-short.md)] portail 
 | 5  | Configurer [l’intégration de WDATP](integrate-mde.md)| - [ ] |
 | 6  | Définir des comptes [HoneyTokens](configure-detection-exclusions.md)| - [ ] |
 | 7  | Étiqueter les [entités sensibles](manage-sensitive-honeytoken-accounts.md)| - [ ] |
-| 8  | Créer des [exclusions d’alerte de sécurité](excluding-entities-from-detections.md)| - [ ] |
+| 8  | Créer des [exclusions d’alerte de sécurité](configure-detection-exclusions.md)| - [ ] |
 | 9 | [Activer/désactiver les notifications par e-mail](notifications.md) | - [ ] |
 | 10  | [Paramètres de planification des rapports](reports.md) (liste des rapports et planifications).| - [ ] |
 | 11  | Configurer des [autorisations en fonction du rôle](role-groups.md) | - [ ] |

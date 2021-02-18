@@ -3,12 +3,12 @@ title: Exclusions de détection de la configuration de Microsoft Defender pour l
 description: Configuration des exclusions de détection.
 ms.date: 02/17/2021
 ms.topic: how-to
-ms.openlocfilehash: 6e771e2a2755845fe4f02fb9d21750720bbbe37d
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 802b54f3185a50468fe4227d4099b9edbfc8f469
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630782"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097366"
 ---
 # <a name="configure-detection-exclusions"></a>Configurer les exclusions de détection
 
@@ -34,7 +34,7 @@ Pour configurer des exclusions à partir de la page Configuration, procédez com
     1. Cliquez sur l’icône plus **(+)**.
 
     > [!TIP]
-    > Le champ utilisateur ou ordinateur peut faire l’objet d’une recherche et sera automatiquement rempli avec les entités de votre réseau. Pour plus d’informations, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md) et le [Guide des alertes de sécurité](suspicious-activity-guide.md).
+    > Le champ utilisateur ou ordinateur peut faire l’objet d’une recherche et sera automatiquement rempli avec les entités de votre réseau. Pour plus d’informations, consultez le [Guide des alertes de sécurité](suspicious-activity-guide.md).
 
     ![Exclusion d’entités des détections](media/exclusions.png)
 

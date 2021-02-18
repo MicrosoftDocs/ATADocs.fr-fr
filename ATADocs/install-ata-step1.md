@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 33a021ce3cee1d06d34d732cedce5f9f5e62c4e5
-ms.sourcegitcommit: affaeabba518199355a248fbf18feefa28fb268f
+ms.openlocfilehash: bef73309e71acd067c02a5ff597f0b5397a09fc7
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163035"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097553"
 ---
 # <a name="install-ata---step-1"></a>Installer ATA - Étape 1
 
@@ -128,7 +128,7 @@ Si vous avez installé ATA dans un autre répertoire, modifiez les chemins d’a
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Guide de déploiement ATA POC](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)

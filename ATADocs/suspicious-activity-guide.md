@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eeccc1e5a5dd16b2d480bf82034a085159baff60
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 9a22617587fab0aeacbc52f8b539c4a1042419d3
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690089"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097264"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guide ATA (Advanced Threat Analytics) des activités suspectes
 
@@ -45,7 +45,7 @@ Pour avoir une définition des groupes sensibles dans ATA, consultez [Utilisatio
 La détection s’appuie sur les [événements audités sur les contrôleurs de domaine](configure-event-collection.md).
 Pour vérifier que vos contrôleurs de domaine auditent les événements souhaités, utilisez l’outil indiqué dans le blog [ATA Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog).
 
-**Examen**
+**Investigation**
 
 1. La modification du groupe est-elle légitime ? </br>Les modifications de groupe légitimes qui se produisent rarement et qui n’ont pas été apprises comme « normales » peuvent entraîner une alerte, qui serait considérée comme un vrai positif sans gravité.
 
@@ -66,7 +66,7 @@ Configurez [Privileged Access Management pour Active Directory](/microsoft-ident
 
 Une relation de confiance rompue signifie que les exigences de sécurité des services de domaine Active Directory ne sont pas respectées pour ces ordinateurs. Considéré comme une défaillance de sécurité et de conformité élémentaire, c’est une cible facile pour les attaquants. Cette détection déclenche une alerte si plus de cinq échecs d’authentification Kerberos ont été observés pour le même compte d’ordinateur dans un délai de 24 heures.
 
-**Examen**
+**Investigation**
 
 L’ordinateur en cours d’examen permet-il aux utilisateurs du domaine de se connecter ?
 - Si c’est le cas, vous pouvez ignorer cet ordinateur dans la procédure de correction.
@@ -86,7 +86,7 @@ Dans une attaque par force brute, un attaquant tente de s’authentifier en essa
 
 Dans cette détection, une alerte est déclenchée quand ATA détecte un nombre massif d’authentifications de liaison simple. Il peut s’agir *d’un* petit ensemble de mots de passe entre plusieurs utilisateurs. ou *verticalement»* avec un grand ensemble de mots de passe sur quelques utilisateurs seulement. ou une combinaison de ces deux options.
 
-**Examen**
+**Investigation**
 
 1. Si de nombreux comptes sont concernés, cliquez sur **Télécharger les détails** pour afficher la liste complète dans une feuille de calcul Excel.
 
@@ -112,7 +112,7 @@ Il existe trois types de détection :
 
 1. Overpass-the-Hash. Un intrus peut utiliser un code de hachage faible dérobé pour créer un ticket fort via une demande Kerberos AS. Dans le cadre de cette détection, le type de chiffrement du message AS_REQ reçu de l’ordinateur source a été abaissé par rapport au comportement appris (l’ordinateur utilisait l’algorithme AES).
 
-**Examen**
+**Investigation**
 
 Vérifiez tout d’abord la description de l’alerte pour voir lequel des trois types de détection ci-dessus sont à traiter. Pour plus d’informations, téléchargez la feuille de calcul Excel.
 
@@ -143,7 +143,7 @@ Les comptes Honeytoken sont des comptes servant de leurre pour identifier et sui
 
 Pour plus d’informations sur les comptes Honeytoken, consultez [Installer ATA - Étape 7](install-ata-step7.md).
 
-**Examen**
+**Investigation**
 
 1. Vérifiez si le propriétaire de l’ordinateur source a utilisé le compte Honeytoken pour s’authentifier, à l’aide de la méthode décrite dans la page de l’activité suspecte (par exemple, Kerberos, LDAP, NTLM).
 
@@ -163,7 +163,7 @@ Assurez-vous que les comptes Honeytoken sont utilisés uniquement pour leur rôl
 
 Pass-the-Hash est une technique de mouvement latéral par laquelle les attaquants volent le code de hachage NTLM d’un utilisateur sur un ordinateur et utilisent ensuite ce code pour accéder à un autre ordinateur.
 
-**Examen**
+**Investigation**
 
 Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement utilisé par l’utilisateur ciblé ? Si oui, l’alerte est un faux positif, si non, c’est probablement un vrai positif.
 
@@ -179,7 +179,7 @@ Le code de hachage volé d’un ordinateur est-il détenu ou régulièrement uti
 
 Pass-the-Ticket est une technique de mouvement latéral par laquelle les attaquants volent un ticket Kerberos sur un ordinateur et réutilisent ensuite ce ticket pour accéder à un autre ordinateur. Cette détection vérifie si un ticket Kerberos a été utilisé sur plusieurs ordinateurs différents.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur le bouton **Télécharger les détails** pour afficher la liste complète des adresses IP impliquées. L’adresse IP de l’un ou des deux ordinateurs fait-elle partie d’un sous-réseau alloué à partir d’un pool DHCP de taille insuffisante, par exemple, VPN ou WiFi ? L’adresse IP est-elle partagée ? Par exemple, par un appareil NAT ? Si vous répondez par l’affirmative à l’une de ces questions, l’alerte est un faux positif.
 
@@ -199,7 +199,7 @@ Les attaquants ayant des droits d’administrateur de domaine peuvent compromett
 
 Cette détection déclenche une alerte quand un ticket TGT Kerberos est utilisé depuis plus longtemps que la durée autorisée définie dans la stratégie de sécurité [Durée de vie maximale du ticket utilisateur](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj852169(v=ws.11)).
 
-**Examen**
+**Investigation**
 
 1. Le paramètre **Durée de vie maximale du ticket utilisateur** défini dans la stratégie de sécurité a-t-il été modifié récemment (au cours des dernières heures) ? Si c’est le cas, **Fermez** l’alerte (il s’agit d’un faux positif).
 
@@ -219,7 +219,7 @@ En outre, étant donné que la création d’un Golden Ticket nécessite des dro
 L’API de protection des données (DPAPI) est utilisée par Windows pour protéger les mots de passe enregistrés par les navigateurs, les clés de chiffrement et d’autres données sensibles. Les contrôleurs de domaine détiennent une clé principale de sauvegarde qui peut être utilisée pour déchiffrer tous les secrets chiffrés avec DPAPI sur des machines Windows jointes au domaine. Des attaquants peuvent utiliser cette clé principale pour déchiffrer les secrets protégés avec DPAPI sur toutes les machines jointes au domaine.
 Cette détection déclenche une alerte quand DPAPI est utilisé pour récupérer la clé principale de sauvegarde.
 
-**Examen**
+**Investigation**
 
 1. L’ordinateur source exécute-t-il un scanner de sécurité approuvé par l’organisation dans Active Directory ?
 
@@ -239,7 +239,7 @@ La réplication Active Directory est le processus par lequel les modifications a
 
 Dans cette détection, une alerte est déclenchée quand une demande de réplication est lancée à partir d’un ordinateur qui n’est pas un contrôleur de domaine.
 
-**Examen**
+**Investigation**
 
 1. L’ordinateur en question est-il un contrôleur de domaine ? Par exemple, un contrôleur de domaine récemment promu ayant rencontré des problèmes de réplication. Si c’est le cas, **fermez** l’activité suspecte.
 1. L’ordinateur en question est-il supposé répliquer des données à partir d’Active Directory ? Par exemple, Azure AD Connect. Si c’est le cas, **fermez et excluez** l’activité suspecte.
@@ -265,7 +265,7 @@ Dans certains scénarios, les attaquants effectuent des attaque par déni de ser
 Dans cette détection, une alerte est déclenchée quand plus de 5 % de l’ensemble des comptes sont supprimés. La détection nécessite un accès en lecture sur le conteneur d’objets supprimés.
 Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur d’objets supprimés, consultez la section **Changing permissions on a deleted object container** (Modifier les autorisations sur un conteneur d’objets supprimés) dans [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) (Afficher ou définir des autorisations sur un objet répertoire).
 
-**Examen**
+**Investigation**
 
 Passez en revue la liste des comptes supprimés et déterminez si un modèle ou un motif particulier justifie cette suppression à grande échelle.
 
@@ -279,7 +279,7 @@ Supprimez les autorisations des utilisateurs qui peuvent supprimer des comptes d
 
 Des vulnérabilités connues dans les versions antérieures de Windows Server permettent aux attaquants de manipuler le certificat PAC (Privileged Attribute Certificate). PAC est un champ du ticket Kerberos qui contient des données d’autorisation utilisateur (dans Active Directory, il s’agit de l’appartenance au groupe) et accorde des privilèges supplémentaires aux attaquants.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur l’alerte pour accéder à la page de détails correspondante.
 
@@ -301,7 +301,7 @@ Lors d’une reconnaissance à l’aide de l’énumération de comptes, un atta
 
 Dans cette détection, ATA peut détecter d'où vient l’attaque, le nombre total de tentatives et combien ont abouti. Si le nombre d’utilisateurs inconnus est trop élevé, ATA le détecte comme une activité suspecte.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur l’alerte pour accéder à la page de détails correspondante.
 
@@ -329,7 +329,7 @@ La reconnaissance des services d’annuaire permet aux attaquants de mapper la s
 
 Dans cette détection, aucune alerte n’est déclenchée durant le premier mois après le déploiement d’ATA. Pendant cette période d’apprentissage, ATA effectue un profilage des requêtes SAM-R effectuées à partir des ordinateurs, qu’il s’agisse de requêtes d’énumération ou de requêtes individuelles sur des comptes sensibles.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur l’alerte pour accéder à la page de détails correspondante. Examinez quels types de requêtes ont été effectuées (par exemple, des requêtes Administrateur entreprise ou Administrateur) et si elles ont réussi ou échoué.
 
@@ -364,7 +364,7 @@ Votre serveur DNS contient une carte de l’ensemble des ordinateurs, adresses I
 
 Il existe plusieurs types de requêtes dans le protocole DNS. ATA détecte les demandes de transfert AXFR qui ne proviennent pas de serveurs DNS.
 
-**Examen**
+**Investigation**
 
 1. La machine source (**En provenance de…**) est-elle un serveur DNS ? Si c’est le cas, il s’agit probablement d’un faux positif. Pour le vérifier, cliquez sur l’alerte pour accéder à la page de détails correspondante. Dans le tableau, sous **Requête**, vérifiez quels domaines ont été interrogés. S’agit-il de domaines existants ? Si c’est le cas, **fermez** l’activité suspecte (c’est un faux positif). De plus, vérifiez que le port UDP 53 est ouvert entre la passerelle ATA et l’ordinateur source pour éviter les futurs faux positifs.
 1. L’ordinateur source exécute-t-il un scanner de sécurité ? Si c’est le cas, **excluez les entités** dans ATA, soit directement en choisissant **Fermer et exclure**, soit via la page **Exclusion**, sous **Configuration** (disponible pour les administrateurs d’ATA).
@@ -383,7 +383,7 @@ L’énumération SMB (Server Message Block) permet aux attaquants d’obtenir d
 
 Dans cette détection, une alerte est déclenchée quand une énumération de sessions SMB est effectuée sur un contrôleur de domaine.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur l’alerte pour accéder à la page de détails correspondante. Déterminez le ou les comptes qui ont effectué l’opération et ceux qui ont été exposés, le cas échéant.
 
@@ -407,7 +407,7 @@ Utilisez [l’outil Net Cease](https://gallery.technet.microsoft.com/Net-Cease-B
 
 Les attaquants qui compromettent les informations d’identification d’administration ou qui exploitent une faille de sécurité de type zero-day peuvent exécuter des commandes à distance sur votre contrôleur de domaine. Ils peuvent ainsi obtenir une persistance, collecter des informations, lancer des attaques par déni de service (DOS), etc. ATA détecte les connexions PSexec et les connexions WMI à distance.
 
-**Examen**
+**Investigation**
 
 1. Cette situation est fréquente pour les stations de travail d’administration, ainsi que pour les membres des équipes informatiques et les comptes de service qui effectuent des tâches d’administration sur des contrôleurs de domaine. Si c’est le cas et que l’alerte a été mise à jour parce que le même administrateur ou ordinateur effectue la tâche, **supprimez** l’alerte.
 1. L’ordinateur en question est-il autorisé à effectuer cette exécution à distance sur votre contrôleur de domaine ?
@@ -430,7 +430,7 @@ Les attaquants qui compromettent les informations d’identification d’adminis
 
 Certains services envoient des informations d’identification de compte au format texte brut, y compris pour des comptes sensibles. Les attaquants qui surveillent le trafic réseau peuvent intercepter ces informations d’identification et les réutiliser à des fins malveillantes. L’alerte est déclenchée dès qu’un mot de passe en texte clair est envoyé pour un compte sensible. Pour les comptes non sensibles, elle est déclenchée si les mots de passe en texte clair pour au moins cinq comptes différents sont envoyés à partir de l’ordinateur source.
 
-**Examen**
+**Investigation**
 
 Cliquez sur l’alerte pour accéder à la page de détails correspondante. Déterminez quels comptes ont été exposés. Si de nombreux comptes sont concernés, cliquez sur **Télécharger les détails** pour afficher la liste complète dans une feuille de calcul Excel.
 
@@ -448,7 +448,7 @@ Dans une attaque par force brute, un attaquant tente de s’authentifier en essa
 
 Dans cette détection, une alerte est déclenchée après l’échec de nombreuses tentatives d’authentification utilisant Kerberos ou NTLM. L’attaque peut être horizontale avec un petit nombre de mots de passe possibles pour de nombreux utilisateurs, verticale avec un grand nombre de mots de passe pour seulement quelques utilisateurs, ou à la fois horizontale et verticale. La période minimale avant le déclenchement d’une alerte est d’une semaine.
 
-**Examen**
+**Investigation**
 
 1. Cliquez sur **Télécharger les détails** pour consulter toutes les informations dans une feuille de calcul Excel. Vous pouvez obtenir les informations suivantes :
    - Liste des comptes attaqués
@@ -468,7 +468,7 @@ Les [mots de passe longs et complexes](/windows/device-security/security-policy-
 
 Les attaquants tentent d’exécuter des services suspects sur votre réseau. ATA déclenche une alerte lorsqu’un nouveau service qui semble suspect est créé sur un contrôleur de domaine. Cette alerte s’appuie sur l’événement 7045 et est détectée sur chaque contrôleur de domaine couvert par une passerelle ATA ou la passerelle légère.
 
-**Examen**
+**Investigation**
 
 1. Si l’ordinateur en question est une station de travail d’administration ou un ordinateur sur lequel les membres de l’équipe informatique et les comptes de service effectuent des tâches d’administration, il peut s’agir d’un faux positif et vous pouvez être amené à **supprimer** l’alerte et à l’ajouter à la liste des exclusions, si nécessaire.
 
@@ -490,7 +490,7 @@ Les attaquants tentent d’exécuter des services suspects sur votre réseau. AT
 
 ATA apprend le comportement de l’entité pour les utilisateurs, les ordinateurs et les ressources sur une période glissante de trois semaines. Le modèle de comportement est basé sur les activités suivantes : les machines auxquelles les entités se sont connectées, les ressources pour lesquelles l’entité a demandé l’accès et la durée de ces opérations. ATA envoie une alerte en cas d’écart par rapport au comportement de l’entité en fonction des algorithmes de Machine Learning.
 
-**Examen**
+**Investigation**
 
 1. L’utilisateur en question est-il supposé effectuer ces opérations normalement ?
 
@@ -506,7 +506,7 @@ ATA apprend le comportement de l’entité pour les utilisateurs, les ordinateur
 
 Les attaquants utilisent des outils qui implémentent différents protocoles (SMB, Kerberos, NTLM) de façon inhabituelle. Ce type de trafic réseau est admis par Windows sans avertissement, mais ATA est capable de reconnaître une activité malveillante potentielle. Le comportement est révélateur de certaines techniques comme l’attaque Over-Pass-the-Hash, ou de l’exploitation des failles de sécurité par de puissants ransomwares tels que WannaCry.
 
-**Examen**
+**Investigation**
 
 Identifiez le protocole inhabituel, à partir de la chronologie des activités suspectes, et cliquez sur l’activité suspecte pour accéder à la page de détails correspondante. Le protocole s’affiche au-dessus de la flèche : Kerberos ou NTLM.
 
@@ -543,6 +543,6 @@ Appliquez les derniers correctifs à tous vos ordinateurs et vérifiez que toute
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Scénario d’activité suspecte ATA](https://aka.ms/ataplaybook)
+- [Scénario d’activité suspecte ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Gestion des activités suspectes](working-with-suspicious-activities.md)

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5f571f6c9d357860cf295198ac7d614ec20874f2
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 4dc19494581b8ccc6c079170a1288674b2d80455
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689647"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097383"
 ---
 # <a name="install-ata---step-7"></a>Installer ATA - Étape 7
 
@@ -99,7 +99,7 @@ Une fois que la passerelle ATA reçoit les événements VPN et les envoie au Cen
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Guide de déploiement ATA POC](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Outil de dimensionnement ATA](https://aka.ms/aatpsizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)

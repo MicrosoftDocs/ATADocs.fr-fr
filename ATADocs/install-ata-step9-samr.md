@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ce78fc1f03dd310aa454063692e8ee1aae5c22c
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 568dadf614105753d1ea9e8bc0d7c1e95a9ee027
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690548"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097434"
 ---
 # <a name="install-ata---step-9"></a>Installer ATA - Étape 9
 
@@ -55,7 +55,7 @@ Pour vous assurer que les clients et serveurs Windows autorisent le compte de se
 > [« Étape 8](install-ata-step7.md)
 
 ## <a name="see-also"></a>Voir aussi
-- [Guide de déploiement ATA POC](https://aka.ms/atapoc)
+- [Guide de déploiement ATA POC](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Outil de dimensionnement ATA](https://aka.ms/atasizingtool)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurer la collecte d’événements](configure-event-collection.md)

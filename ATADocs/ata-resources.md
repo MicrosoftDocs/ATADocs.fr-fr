@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 61b2a3dcc2249f41ce6dfdceb9ccd823885a95a7
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 7f8413ba144196a4f64e21dfd688583a05b874ed
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691007"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096988"
 ---
 # <a name="ata-readiness-roadmap"></a>Guide de préparation à ATA
 
@@ -58,7 +58,7 @@ Ces ressources vous permettent de télécharger et d’installer le Centre ATA, 
 
 [Télécharger ATA](https://aka.ms/ataeval) -Avant de déployer ATA, si vous n’avez pas pris la décision d’acheter ATA, vous pouvez télécharger la version d’évaluation.
 
-[Manuel ATA POC](https://aka.ms/atapoc) -Vous guide dans toutes les étapes nécessaires pour effectuer un déploiement POC d’ATA.
+[Manuel ATA POC](/samples/browse/?redirectedfrom=TechNet-Gallery) -Vous guide dans toutes les étapes nécessaires pour effectuer un déploiement POC d’ATA.
 
 [Vidéo de déploiement d’ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) - Cette vidéo fournit une vue d’ensemble des étapes de déploiement d’ATA en moins de 10 minutes.
 
@@ -74,7 +74,7 @@ Les paramètres nécessaires de base dans ATA sont configurés dans l’Assistan
 
 Une fois qu’ATA est opérationnel, vous pouvez voir les activités suspectes détectées dans la chronologie des attaques. Il s’agit de la page de destination qui s’affiche par défaut quand vous vous connectez à la console ATA. Par défaut, toutes les activités suspectes ouvertes sont affichées dans la chronologie des attaques. Vous pouvez également voir le niveau de gravité attribué à chaque activité. Investiguez sur chaque activité suspecte en explorant les entités (ordinateurs, appareils, utilisateurs) pour ouvrir leurs pages de profil qui contiennent des informations supplémentaires. Ces ressources vous permettent d’utiliser les activités suspectes d’ATA :
 
-[Manuel sur les activités suspectes d’ATA](https://aka.ms/ataplaybook) : cet article vous guide dans les techniques d’attaque contre le vol d’informations d’identification à l’aide d’outils de recherche facilement disponibles sur Internet. À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
+[Manuel sur les activités suspectes d’ATA](/samples/browse/?redirectedfrom=TechNet-Gallery) : cet article vous guide dans les techniques d’attaque contre le vol d’informations d’identification à l’aide d’outils de recherche facilement disponibles sur Internet. À chaque point de l’attaque, vous pouvez voir comment ATA vous permet d’y voir plus clair dans ces menaces.
 
 [Guide des activités suspectes d’ATA](suspicious-activity-guide.md)
 

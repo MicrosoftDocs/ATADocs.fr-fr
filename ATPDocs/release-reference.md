@@ -3,12 +3,12 @@ title: Référence des versions antérieures dans Microsoft Defender pour l’id
 description: Cet article est une référence des versions précédentes mises à jour de Microsoft Defender pour l’identité.
 ms.date: 10/27/2020
 ms.topic: reference
-ms.openlocfilehash: 44da038cc03bb24cbc70d524e24b259c81d9fa00
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: 8d46e2e127e6823e45b1201845bc9f6716fec9b8
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533373"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097026"
 ---
 # <a name="release-reference-of-microsoft-defender-for-identity"></a>Informations de référence sur la version de Microsoft Defender pour l’identité
 
@@ -30,7 +30,7 @@ L’alerte de sécurité [Communications suspectes sur DNS](suspicious-activity-
 Publication : 11 novembre 2018
 
 - **Amélioration de fonctionnalité : Des exclusions de domaine par défaut ont été ajoutées à l’alerte Communication suspecte sur DNS**  
-Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [Exclusion d’entités des détections](excluding-entities-from-detections.md).
+Trois autres domaines courants ont été ajoutés à la liste des exclusions de domaine par défaut. La liste des exclusions reste entièrement personnalisable. Pour en savoir plus, consultez [configurer des exclusions de détection](configure-detection-exclusions.md).
 
 - **Améliorations de la documentation : Mise à jour sur les journaux SIEM et conseils pour les problèmes connus**  
 Un mappage des **externalId** et des explications complémentaires ont été ajoutés aux descriptions dans les journaux SIEM. Pour en savoir plus, consultez [Informations de référence sur les journaux SIEM](cef-format-sa.md).

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4cce018aac4528b62db8c143591c3380fc38c1a4
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: c402169f6e838e6869395d39eb7df650638af5f2
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689528"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097315"
 ---
 # <a name="working-with-suspicious-activities"></a>Gestion des activités suspectes
 
@@ -100,6 +100,6 @@ Pour cela, cliquez sur les trois points en haut à droite d’une activité susp
 
 
 ## <a name="see-also"></a>Voir aussi
-- [Scénario d’activité suspecte ATA](https://aka.ms/ataplaybook)
+- [Scénario d’activité suspecte ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Consultez le forum ATA !](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modification de la configuration d’ATA](modifying-ata-center-configuration.md)
