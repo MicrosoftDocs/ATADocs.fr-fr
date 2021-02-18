@@ -3,12 +3,12 @@ title: Présentation du portail Microsoft Defender pour Identity
 description: Explique comment se connecter au portail Microsoft Defender pour Identity et à ses composants.
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: be8c3449b1debeb2cc0aa0da2ad560e394996344
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: db140bafe14f0667348c96ecf318669abbdae5f3
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100534546"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630745"
 ---
 # <a name="working-with-the-microsoft-defender-for-identity-portal"></a>Utilisation du portail Microsoft Defender pour Identity
 
@@ -77,7 +77,7 @@ Quand votre système rencontre un problème (par exemple, une erreur de connecti
 
 ### <a name="sensitive-groups"></a>Groupes sensibles
 
-Pour plus d’informations sur les groupes sensibles dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation des groupes sensibles](sensitive-accounts.md).
+Pour plus d’informations sur les groupes sensibles dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation des groupes sensibles](manage-sensitive-honeytoken-accounts.md).
 
 ### <a name="mini-profile"></a>Mini-profil
 
