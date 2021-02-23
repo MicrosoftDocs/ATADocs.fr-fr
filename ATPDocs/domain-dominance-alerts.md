@@ -3,12 +3,12 @@ title: Alertes de sécurité Microsoft Defender pour Identity indiquant une domi
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie des efforts de la phase de dominance du domaine sont détectées dans votre organisation.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 82ebc2fdc88eb1a7b35e70ba8983f22d592c48e9
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753358"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630706"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutoriel : Alertes de dominance du domaine
 
@@ -570,7 +570,7 @@ Skeleton Key est un programme malveillant qui s’exécute sur les contrôleurs 
 
 Des attaquants ajoutent des utilisateurs à des groupes avec des privilèges élevés. Le but d’ajouter des utilisateurs est d’accéder à davantage de ressources et d’obtenir un accès persistant. Cette détection s’appuie sur le profilage des activités de modification des utilisateurs d’un groupe et déclenche une alerte quand un ajout anormal à un groupe sensible est observé. [!INCLUDE [Product short](includes/product-short.md)] effectue un profilage en continu.
 
-Pour une définition des groupes sensibles dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation des comptes sensibles](sensitive-accounts.md).
+Pour une définition des groupes sensibles dans [!INCLUDE [Product short](includes/product-short.md)], consultez [Utilisation des comptes sensibles](manage-sensitive-honeytoken-accounts.md).
 
 La détection s’appuie sur les événements audités sur les contrôleurs de domaine. Assurez-vous que vos contrôleurs de domaine [auditent les événements nécessaires](configure-windows-event-collection.md).
 

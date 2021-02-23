@@ -3,12 +3,12 @@ title: Tutoriel sur l’investigation des utilisateurs Microsoft Defender pour I
 description: Cet article explique comment utiliser les alertes de sécurité Microsoft Defender pour Identity afin d’examiner un utilisateur suspect.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: c9d3cb67ff4eeae0e1f4a0808751d96c67cf326e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 783b2b4cc12bfa84812810f754deedb70c1718bb
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542819"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630524"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutoriel : Procéder à une investigation sur un utilisateur
 
@@ -29,7 +29,7 @@ Les preuves d’alertes et les chemins de mouvement latéral [!INCLUDE [Product 
 Examinez les informations et les activités suivantes dans le profil utilisateur :
 
 1. Qui est l’[utilisateur](entity-profiles.md) ?
-    1. L’utilisateur est-il un [utilisateur sensible](sensitive-accounts.md) (par exemple, est-il administrateur ou figure-t-il sur une liste à surveiller) ?
+    1. L’utilisateur est-il un [utilisateur sensible](manage-sensitive-honeytoken-accounts.md) (par exemple, est-il administrateur ou figure-t-il sur une liste à surveiller) ?
     1. Quel est son rôle au sein de l’organisation ?
     1. A-t-il une fonction importante dans l’organigramme de l’organisation ?
 

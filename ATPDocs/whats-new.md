@@ -5,14 +5,14 @@ ms.date: 02/14/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 47efcf034d9f5117a5004448c147887716176fc2
-ms.sourcegitcommit: 0746f8fadd94b75a10214bfc5084b0ddba67d087
+ms.openlocfilehash: 220570e73ec1f023daadcbb36061bba391da7a12
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100521223"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534462"
 ---
-# <a name="whats-new-in-product-long"></a>Nouveautés de [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="whats-new-in-microsoft-defender-for-identity"></a>Nouveautés de Microsoft Defender pour Identity
 
 Cet article est mis à jour fréquemment pour vous informer des nouveautés de la dernière version de [!INCLUDE [Product long](includes/product-long.md)] (anciennement Azure Advanced Threat Protection, ou Azure ATP).
 

@@ -3,12 +3,12 @@ title: Alertes de sécurité Microsoft Defender pour Identity indiquant des info
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie de la phase de compromission des informations d’identification sont détectées dans votre organisation.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4bb5313307d16c87969ac280967356e8595b767a
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 195f9007e91dcbcdf5c0801d7a06bb21534e683e
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753318"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630694"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 
@@ -44,7 +44,7 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 
 Les comptes Honeytoken sont des comptes servant de leurre pour identifier et suivre l’activité malveillante qui implique ces comptes. Les comptes Honeytoken doivent rester inutilisés et avoir un nom évocateur pour attirer et leurrer les attaquants (par exemple, SQL-Admin). Toute activité observée sur ces comptes peut être le signe d’un comportement malveillant.
 
-Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des exclusions de détection et des comptes honeytoken](install-step7.md).
+Pour plus d’informations sur les comptes honeytoken, consultez [Configurer des exclusions de détection et des comptes honeytoken](configure-detection-exclusions.md).
 
 **TP, B-TP ou FP**
 

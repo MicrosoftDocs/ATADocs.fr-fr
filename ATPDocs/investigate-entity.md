@@ -3,12 +3,12 @@ title: Guide pratique pour investiguer des utilisateurs et des ordinateurs avec 
 description: Décrit comment investiguer les activités suspectes effectuées par des utilisateurs, des entités, des ordinateurs ou des appareils avec Microsoft Defender pour Identity
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 9f52bcc6dce4f11b8d29def2574a6b298e5a5e99
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2a98e9134959261f075412f05d39ac2bf9d21218
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543890"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630598"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutoriel : Examiner une entité
 
@@ -93,7 +93,7 @@ Pour vous fournir des insights résultant du croisement entre les produits, votr
 - Administrateurs du schéma
 - Administrateurs de l’entreprise
 
-De plus, vous pouvez **étiqueter manuellement**  des entités comme sensibles dans [!INCLUDE [Product short](includes/product-short.md)]. C’est important, car certaines détections de [!INCLUDE [Product short](includes/product-short.md)], comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, reposent sur l’état indiquant le caractère sensible d’une entité. Si vous étiquetez manuellement d’autres utilisateurs ou groupes comme sensibles, par exemple les membres du conseil d’administration, les cadres de la société et le directeur des ventes, [!INCLUDE [Product short](includes/product-short.md)] les considère comme étant sensibles. Pour plus d’informations, consultez [Utilisation de comptes sensibles](sensitive-accounts.md).
+De plus, vous pouvez **étiqueter manuellement**  des entités comme sensibles dans [!INCLUDE [Product short](includes/product-short.md)]. C’est important, car certaines détections de [!INCLUDE [Product short](includes/product-short.md)], comme la détection des modifications des groupes sensibles et le chemin de mouvement latéral, reposent sur l’état indiquant le caractère sensible d’une entité. Si vous étiquetez manuellement d’autres utilisateurs ou groupes comme sensibles, par exemple les membres du conseil d’administration, les cadres de la société et le directeur des ventes, [!INCLUDE [Product short](includes/product-short.md)] les considère comme étant sensibles. Pour plus d’informations, consultez [Utilisation de comptes sensibles](manage-sensitive-honeytoken-accounts.md).
 
 ## <a name="review-lateral-movement-paths"></a>Passer en revue les chemins de mouvement latéral
 
