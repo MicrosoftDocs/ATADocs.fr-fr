@@ -3,14 +3,14 @@ title: 'Démarrage rapide : Télécharger le package d’installation du capteu
 description: L’étape 3 de l’installation de Microsoft Defender pour Identity vous aide à télécharger le package d’installation du capteur Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: f0eb884a7367ae50e076e0298f720a94def7da8c
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 66e335931f830fac4f20a910396614669c14b465
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543125"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534053"
 ---
-# <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Démarrage rapide : Télécharger le package d’installation du capteur [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="quickstart-download-the-microsoft-defender-for-identity-sensor-setup-package"></a>Démarrage rapide : Télécharger le package d’installation du capteur Microsoft Defender pour Identity
 
 Dans ce guide de démarrage rapide, vous allez télécharger le package d’installation du capteur [!INCLUDE [Product long](includes/product-long.md)] à partir du portail.
 

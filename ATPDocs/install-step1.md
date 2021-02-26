@@ -3,14 +3,14 @@ title: 'Démarrage rapide : Créer votre instance Microsoft Defender pour Ident
 description: Guide de démarrage rapide afin de créer l’instance pour votre déploiement de Microsoft Defender pour Identity, qui est la première étape de l’installation de Defender pour Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 19fb02269da5b4529941ffa89c07d914b0633754
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515357"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534257"
 ---
-# <a name="quickstart-create-your-product-long-instance"></a>Démarrage rapide : Créer votre instance [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="quickstart-create-your-microsoft-defender-for-identity-instance"></a>Démarrage rapide : Créer votre instance Microsoft Defender pour Identity
 
 Dans ce guide de démarrage rapide, vous allez créer votre instance [!INCLUDE [Product long](includes/product-long.md)] dans le portail [!INCLUDE [Product short](includes/product-short.md)]. Dans [!INCLUDE [Product short](includes/product-short.md)], vous avez une seule instance, qui était appelée espace de travail. Une seule instance vous permet de gérer plusieurs forêts à partir d’un même volet.
 
@@ -24,7 +24,7 @@ Dans ce guide de démarrage rapide, vous allez créer votre instance [!INCLUDE [
 - Consultez l’article [Architecture [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 - Consultez l’article [Prérequis de [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
-## <a name="sign-in-to-the-product-short-portal"></a>Se connecter au portail [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="sign-in-to-the-defender-for-identity-portal"></a>Se connecter au portail Defender pour Identity
 
 Après avoir vérifié que votre réseau est conforme à la configuration requise du capteur, commencez la création de votre instance [!INCLUDE [Product short](includes/product-short.md)].
 

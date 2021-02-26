@@ -1,16 +1,16 @@
 ---
 title: Guide de démarrage rapide pour l’installation du capteur Microsoft Defender pour Identity
 description: L’étape 4 de l’installation de Microsoft Defender pour Identity vous aide à installer le capteur Defender pour Identity.
-ms.date: 10/26/2020
+ms.date: 02/17/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4d68820bd6da88bca64bb8917f069d04adbc29b0
-ms.sourcegitcommit: 4f3da69b8e30cbc3e3fb43d38c3518001a10f7a1
+ms.openlocfilehash: a9837c36dcdb90dba124eda5f8d6b9f082787d74
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163533"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097405"
 ---
-# <a name="quickstart-install-the-product-long-sensor"></a>Démarrage rapide : Installer le capteur [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="quickstart-install-the-microsoft-defender-for-identity-sensor"></a>Démarrage rapide : Installer le capteur Microsoft Defender pour Identity
 
 Dans ce guide de démarrage rapide, vous allez installer le capteur [!INCLUDE [Product long](includes/product-long.md)] sur un contrôleur de domaine. Si vous préférez une installation sans assistance, consultez l’article [Installation sans assistance](silent-installation.md).
 
@@ -19,12 +19,13 @@ Dans ce guide de démarrage rapide, vous allez installer le capteur [!INCLUDE [P
 - Une [instance [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) qui est [connectée à Active Directory](install-step2.md).
 - Une copie téléchargée de votre [package d’installation du capteur [!INCLUDE [Product short](includes/product-short.md)]](install-step3.md) et la clé d’accès.
 - Vérifiez que Microsoft .NET Framework 4.7 (ou version ultérieure) est installé sur l’ordinateur. Si Microsoft .NET Framework 4.7 (ou version ultérieure) n’est pas installé, le package d’installation du capteur [!INCLUDE [Product short](includes/product-short.md)] l’installe, ce qui peut nécessiter un redémarrage du serveur.
+- Pour les installations de capteur sur des serveurs AD FS, si vous utilisez un serveur SQL externe, configurez le serveur SQL pour autoriser le compte *Service d’annuaire* (**Configuration** > **Service d’annuaire** > **Nom d’utilisateur**) et les autorisations *connect*, *log in*, *read* et *select* pour la base de données **AdfsConfiguration**.
 
 ## <a name="install-the-sensor"></a>Installer le capteur
 
 Effectuez les opérations suivantes sur le contrôleur de domaine.
 
-1. Vérifiez que l’ordinateur dispose d’une connectivité au(x) point(s) de terminaison approprié(s) du [service cloud [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) :
+1. Vérifiez que l’ordinateur dispose d’une connectivité au(x) point(s) de terminaison approprié(s) du [service cloud [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server).
 1. Extrayez les fichiers d’installation à partir du fichier zip. L’installation directe à partir du fichier zip est vouée à l’échec.
 1. Exécutez **Azure ATP sensor setup.exe** avec des privilèges élevés (**Exécuter en tant qu’administrateur**), puis suivez les instructions de l’Assistant Installation.
 1. Dans la page **Bienvenue**, sélectionnez votre langue, puis cliquez sur **Suivant**.
@@ -60,6 +61,23 @@ Effectuez les opérations suivantes sur le contrôleur de domaine.
 
     - Service de capteur [!INCLUDE [Product short](includes/product-short.md)] et service de mise à jour du capteur [!INCLUDE [Product short](includes/product-short.md)]
     - Microsoft Visual C++ 2013 Redistributable
+
+## <a name="post-installation-steps-for-ad-fs-servers"></a>Étapes post-installation pour les serveurs AD FS
+
+Utilisez les étapes suivantes pour configurer Defender pour Identity une fois que vous avez terminé l’installation du capteur sur un serveur AD FS.
+
+1. Dans le portail [!INCLUDE [Product short](includes/product-short.md)], sélectionnez **Configuration**.
+
+1. Sous **Système**, sélectionnez **Capteurs**.
+
+    ![[!INCLUDE [Product short](includes/product-short.md)] page de configuration de capteur](media/sensor-config.png)
+
+1. Sélectionnez le capteur que vous avez installé sur le serveur AD FS.
+1. Dans la fenêtre contextuelle, dans le champ **Contrôleur de domaine de résolution**, entrez le FQDN des contrôleurs de domaine de résolution, puis cliquez sur l’icône plus **(+)** et sur **Enregistrer**.  
+
+    ![[!INCLUDE [Product short](includes/product-short.md)] configurer la résolution de capteur AD FS](media/sensor-config-adfs-resolver.png)
+
+    L’initialisation du capteur peut prendre quelques minutes, pendant lesquelles l’état du service de capteur AD FS passe de **arrêté** à **en cours d’exécution**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

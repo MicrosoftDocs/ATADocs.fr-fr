@@ -3,12 +3,12 @@ title: Architecture de Microsoft Defender pour Identity
 description: Décrit l’architecture de Microsoft Defender pour Identity
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 920c4fa99ebe2dad211fd7edae9ed928c1426510
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753272"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533883"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Architecture de Microsoft Defender pour Identity
 
@@ -22,7 +22,7 @@ Cette section explique comment fonctionne le flux de capture des événements et
 
 Directement installé sur votre contrôleur de domaine ou serveurs AD FS, le capteur [!INCLUDE [Product short](includes/product-short.md)] accède aux journaux d’événements dont il a besoin directement sur les serveurs. Une fois les journaux et le trafic réseau analysés par le capteur, [!INCLUDE [Product short](includes/product-short.md)] envoie uniquement les informations analysées au service cloud [!INCLUDE [Product short](includes/product-short.md)] (ce qui ne présente qu’une partie des journaux envoyés).
 
-## <a name="product-short-components"></a>Composants [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-components"></a>Composants Defender pour Identity
 
 [!INCLUDE [Product short](includes/product-short.md)] est constitué des composants suivants :
 
@@ -36,7 +36,7 @@ Le portail [!INCLUDE [Product short](includes/product-short.md)] vous permet de 
 - **Service cloud [!INCLUDE [Product short](includes/product-short.md)]**  
 Le service cloud [!INCLUDE [Product short](includes/product-short.md)] s’exécute dans l’infrastructure Azure et est actuellement disponible aux États-Unis, en Europe et en Asie. Le service cloud [!INCLUDE [Product short](includes/product-short.md)] est connecté à Microsoft Intelligent Security Graph.
 
-## <a name="product-short-portal"></a>Portail [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-portal"></a>Portail Defender pour Identity
 
 Utilisez le portail [!INCLUDE [Product short](includes/product-short.md)] pour :
 
@@ -50,7 +50,7 @@ Utilisez le portail [!INCLUDE [Product short](includes/product-short.md)] pour 
 > [!NOTE]
 > Si aucun capteur n’est installé dans votre instance [!INCLUDE [Product short](includes/product-short.md)] dans un délai de 60 jours, il se peut qu’elle soit supprimée et que vous deviez la recréer.
 
-## <a name="product-short-sensor"></a>Capteur [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor"></a>Capteur Defender pour Identity
 
 Les fonctionnalités principales du capteur [!INCLUDE [Product short](includes/product-short.md)] sont les suivantes :
 
@@ -61,7 +61,7 @@ Les fonctionnalités principales du capteur [!INCLUDE [Product short](includes/p
 - Effectuer la résolution des entités réseau (utilisateurs, groupes et ordinateurs)
 - Transférer les données pertinentes au service cloud [!INCLUDE [Product short](includes/product-short.md)]
 
-## <a name="product-short-sensor-features"></a>Fonctionnalités du capteur [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-features"></a>Fonctionnalités du capteur Defender pour Identity
 
 Le capteur [!INCLUDE [Product short](includes/product-short.md)] lit les événements localement, ce qui évite les frais liés à l’achat et à la maintenance de matériel et de configurations supplémentaires. Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend également en charge le suivi d’événements pour Windows (ETW) qui fournit des informations de journaux pour plusieurs détections. Les détections ETW reconnaissent notamment les suspicions d’attaques DCShadow tentées via des demandes de réplication de contrôleur de domaine et la promotion de contrôleur de domaine.
 

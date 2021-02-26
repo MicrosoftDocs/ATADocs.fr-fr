@@ -1,16 +1,16 @@
 ---
 title: Prérequis de Microsoft Defender pour Identity
 description: Décrit les conditions requises pour réussir le déploiement de Microsoft Defender pour Identity dans votre environnement
-ms.date: 01/27/2021
+ms.date: 02/17/2021
 ms.topic: overview
-ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
-ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
+ms.openlocfilehash: 5b5f3c44a750896c6662bc22ac3e26bd63b47559
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912469"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097349"
 ---
-# <a name="product-long-prerequisites"></a>Prérequis de [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-prerequisites"></a>Prérequis de Microsoft Defender pour Identity
 
 Cet article décrit les conditions requises pour réussir le déploiement de [!INCLUDE [Product long](includes/product-long.md)] dans votre environnement.
 
@@ -69,13 +69,13 @@ Cette section liste les informations que vous devez rassembler ainsi que les com
 
 - Recommandation relative au conteneur **Objets supprimés** : L’utilisateur doit disposer d’autorisations en lecture seule sur le conteneur Objets supprimés. Des autorisations en lecture seule sur ce conteneur permettent à [!INCLUDE [Product short](includes/product-short.md)] de détecter les suppressions d’utilisateurs dans votre annuaire Active Directory. Pour plus d’informations sur la configuration des autorisations en lecture seule sur le conteneur Objets supprimés, consultez la section **Modification des autorisations sur un conteneur d’objets supprimés** de l’article [Afficher ou définir des autorisations sur un objet annuaire](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](install-step7.md).
+- **Honeytoken** facultatif : Compte d’un utilisateur sans activité réseau. Ce compte est configuré comme utilisateur honeytoken [!INCLUDE [Product short](includes/product-short.md)]. Pour plus d’informations sur l’utilisation des honeytokens, consultez [Configurer des exclusions et un utilisateur honeytoken](configure-detection-exclusions.md).
 
 - Facultatif : Quand vous déployez le capteur autonome, vous devez transférer les [événements Windows](configure-windows-event-collection.md#configure-event-collection) à [!INCLUDE [Product short](includes/product-short.md)] pour continuer à améliorer les détections basées sur l’authentification [!INCLUDE [Product short](includes/product-short.md)], les ajouts aux groupes sensibles et les détections de création de services suspects.  Le capteur [!INCLUDE [Product short](includes/product-short.md)] reçoit automatiquement ces événements. Dans le capteur autonome [!INCLUDE [Product short](includes/product-short.md)], vous pouvez recevoir ces événements de votre serveur SIEM ou en définissant les transferts d’événements Windows à partir de votre contrôleur de domaine. Les événements collectés fournissent à [!INCLUDE [Product short](includes/product-short.md)] des informations supplémentaires qui ne sont pas accessibles par le biais du trafic réseau du contrôleur de domaine.
 
 <a name="azure-atp-portal-requirements"></a>
 
-## <a name="product-short-portal-requirements"></a>Exigences pour le portail [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-portal-requirements"></a>Configuration requise du portail Defender pour Identity
 
 L’accès au portail [!INCLUDE [Product short](includes/product-short.md)] s’effectue via un navigateur. Les navigateurs et paramètres suivants sont pris en charge :
 
@@ -94,7 +94,7 @@ L’accès au portail [!INCLUDE [Product short](includes/product-short.md)] s’
 > [!NOTE]
 > Par défaut, [!INCLUDE [Product short](includes/product-short.md)] prend en charge jusqu’à 200 capteurs. Si vous voulez installer plus de capteurs, contactez le support [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="product-short-network-name-resolution-nnr-requirements"></a>Exigences pour [!INCLUDE [Product short](includes/product-short.md)] NNR (Network Name Resolution, résolution de noms réseau)
+## <a name="defender-for-identity-network-name-resolution-nnr-requirements"></a>Conditions requises de la résolution de noms réseau (NNR) Defender pour Identity
 
 La résolution de noms réseau (NNR) est l’un des principaux composants de la fonctionnalité [!INCLUDE [Product short](includes/product-short.md)]. Pour résoudre les adresses IP en noms d’ordinateur, les capteurs [!INCLUDE [Product short](includes/product-short.md)] recherchent les adresses IP à l’aide des méthodes suivantes :
 
@@ -109,7 +109,7 @@ Pour obtenir les meilleurs résultats, nous vous recommandons d’utiliser toute
 
 <a name="azure-atp-sensor-requirements"></a>
 
-## <a name="product-short-sensor-requirements"></a>Exigences pour le capteur [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-requirements"></a>Configuration requise du capteur Defender pour Identity
 
 Cette section décrit les exigences pour le capteur [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -129,7 +129,7 @@ Le capteur [!INCLUDE [Product short](includes/product-short.md)] prend en charge
 
 Le contrôleur de domaine peut être un contrôleur de domaine en lecture seule (RODC).
 
-Pour que les capteurs exécutés sur des contrôleurs de domaine et AD FS communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxies sur \*.atp.azure.com.
+Pour que les capteurs exécutés sur des contrôleurs de domaine et AD FS communiquent avec le service cloud, vous devez ouvrir le port 443 dans vos pare-feu et proxys sur `*.atp.azure.com`. Si vous effectuez l’installation sur une batterie de serveurs AD FS, nous vous recommandons d’installer le capteur sur chaque serveur AD FS, ou au moins sur le nœud principal.
 
 Pendant l’installation, si .NET Framework 4.7 (ou version ultérieure) n’est pas installé, celui-ci est installé et peut nécessiter un redémarrage du serveur. Un redémarrage peut également être nécessaire si un redémarrage est déjà en attente.
 
@@ -194,7 +194,7 @@ Pour les capteurs exécutés sur des serveurs AD FS, configurez le niveau d’au
 
 <a name="azure-atp-standalone-sensor-requirements"></a>
 
-## <a name="product-short-standalone-sensor-requirements"></a>Conditions requises pour le capteur autonome [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-standalone-sensor-requirements"></a>Conditions requises du capteur autonome Defender pour Identity
 
 Cette section décrit les conditions requises pour le capteur autonome [!INCLUDE [Product short](includes/product-short.md)].
 
