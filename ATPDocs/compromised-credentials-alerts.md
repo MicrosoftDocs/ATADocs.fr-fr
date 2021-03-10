@@ -1,14 +1,14 @@
 ---
 title: Alertes de sécurité Microsoft Defender pour Identity indiquant des informations d’identification compromises
 description: Cet article décrit les alertes Microsoft Defender pour Identity qui sont émises quand des attaques faisant généralement partie de la phase de compromission des informations d’identification sont détectées dans votre organisation.
-ms.date: 12/23/2020
+ms.date: 02/21/2021
 ms.topic: tutorial
-ms.openlocfilehash: 195f9007e91dcbcdf5c0801d7a06bb21534e683e
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 86cc7247905be22535dd570be08d44c716ef46fa
+ms.sourcegitcommit: 001a68a16620001467003f31c245531e0e4d436d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630694"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117156"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutoriel : Alertes indiquant des informations d’identification compromises
 
@@ -31,7 +31,8 @@ Les alertes de sécurité suivantes vous aident à identifier et à résoudre le
 > - [Suspicion d’attaque par force brute (LDAP) (ID externe 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Suspicion d’attaque par force brute (SMB) (ID externe 2033)](#suspected-brute-force-attack-smb-external-id-2033)
 > - [Suspicion d’exposition de noms SPN Kerberos (ID externe 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
-> - [Tentative suspectée de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspicion de tentative de réaffectation des privilèges Netlogon (exploitation CVE-2020-1472) (ID externe 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspicion d’attaque AS-REP Roasting (ID externe 2412)](#suspected-as-rep-roasting-attack-external-id-2412)
 > - [Suspicion d’attaque de ransomware WannaCry (ID externe 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspicion d’utilisation du framework de piratage Metasploit (ID externe 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Connexion VPN suspecte (ID externe 2025)](#suspicious-vpn-connection-external-id-2025)
@@ -159,7 +160,7 @@ Il est important de vérifier si des tentatives de connexion ont abouti à une a
     - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 1. Réinitialisez les mots de passe de l’utilisateur source et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
 1. Appliquez des [mots de passe complexes et longs](/windows/device-security/security-policy-settings/password-policy) dans l’organisation afin d’assurer le niveau minimum de sécurité nécessaire contre les futures attaques par force brute.
-1. Empêchez l’utilisation du protocole de texte clair LDAP dans votre organisation.
+1. Empêchez l’utilisation future du protocole de texte clair LDAP dans votre organisation.
 
 ## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Suspicion d’attaque par force brute (SMB) (ID externe 2033)
 
@@ -205,11 +206,11 @@ Les attaquants utilisent des outils pour énumérer les comptes de service et le
 
 Aucun
 
-**TP, B-TP ou FP**
+**TP, B-TP ou FP**
 
 1. Vérifiez si l’ordinateur source exécute un outil d’attaque tel que PowerSploit ou Rubeus.
-    1. Si oui, c’est un vrai positif. Suivez les instructions dans  **Comprendre l’étendue de la violation**.
-    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, fermez l’alerte de sécurité comme s’il s’agissait d’une activité T-BP et excluez cet ordinateur.
+    1. Si oui, c’est un vrai positif. Suivez les instructions dans **Comprendre l’étendue de la violation**.
+    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, fermez l’alerte de sécurité comme s’agissant d’une activité T-BP et excluez cet ordinateur.
 
 **Comprendre l’étendue de la violation**
 
@@ -235,15 +236,15 @@ Une vulnérabilité d’élévation de privilèges existe quand une personne mal
 
 Aucun
 
-**TP, B-TP ou FP**
+**TP, B-TP ou FP**
 
 Si l’ordinateur source est un contrôleur de domaine, la résolution qui a peu ou pas de chance de réussir peut empêcher [!INCLUDE [Product short](includes/product-short.md)] de confirmer son identification.
 
-1. Si l’ordinateur source est un contrôleur de domaine, **fermez**  l’alerte comme s’agissant d’une activité  **B-TP** .
+1. Si l’ordinateur source est un contrôleur de domaine, **fermez** l’alerte comme s’agissant d’une activité **B-TP**.
 
-1. Si l’ordinateur source est supposé générer ce type d’activité et doit continuer à le faire,  **fermez**  l’alerte de sécurité comme s’agissant d’une activité  **B-TP**  et excluez l’ordinateur pour éviter d’autres alertes bénignes.
+1. Si l’ordinateur source est supposé générer ce type d’activité et doit continuer à le faire, **fermez** l’alerte de sécurité comme s’agissant d’une activité **B-TP** et excluez l’ordinateur pour éviter d’autres alertes bénignes.
 
-Sinon, considérez cette alerte comme  **TP**  et suivez les instructions présentées dans  **Comprendre l’étendue de la violation**.
+Sinon, considérez cette alerte comme **TP** et suivez les instructions présentées dans **Comprendre l’étendue de la violation**.
 
 **Comprendre l’étendue de la violation**
 
@@ -257,6 +258,32 @@ Sinon, considérez cette alerte comme  **TP**  et suivez les instructions pr
 1. Passez en revue [nos conseils](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) sur la gestion des modifications apportées à la connexion au canal sécurisé Netlogon qui concerne et peuvent empêcher cette vulnérabilité.
 1. Incluez l’ordinateur source.
     - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+
+## <a name="suspected-as-rep-roasting-attack-external-id-2412"></a>Suspicion d’attaque AS-REP Roasting (ID externe 2412)
+
+Les attaquants utilisent des outils pour détecter les comptes dont la *préauthentification Kerberos* est désactivée et envoyer des requêtes AS-REQ sans horodatage chiffré. En réponse, ils reçoivent des messages AS-REP avec des données TGT, qui peuvent être chiffrés avec un algorithme non sécurisé tel que RC4. Ils les enregistrent pour une utilisation ultérieure dans une attaque de piratage de mot de passe hors connexion (semblable à Kerberoasting) et pour exposer des informations d’identification en texte clair.
+
+**Période d’apprentissage**
+
+Aucun
+
+**TP, B-TP ou FP**
+
+1. Vérifiez si l’ordinateur source exécute un outil d’attaque tel que PowerSploit ou Rubeus.
+    1. Si oui, c’est un vrai positif. Suivez les instructions dans **Comprendre l’étendue de la violation**.
+    1. Si l’ordinateur source exécute ce type d’application et qu’il doit continuer à le faire, **fermez** l’alerte de sécurité comme s’agissant d’une activité **T-BP** et excluez cet ordinateur.
+
+**Comprendre l’étendue de la violation**
+
+1. Investiguez les [comptes exposés](investigate-a-user.md). Recherchez une activité malveillante ou un comportement suspect pour ces comptes.
+1. Examinez l’[ordinateur source](investigate-a-computer.md).
+
+**Correction :**
+
+1. Incluez l’ordinateur source.
+    - Trouvez l’outil qui a effectué l’attaque et supprimez-le.
+    - Recherchez les utilisateurs qui étaient connectés aux environs de l’heure de l’activité, car ils peuvent également être compromis. Réinitialisez leurs mots de passe et activez l’authentification multifacteur (MFA) ou, si vous avez configuré les stratégies utilisateur à haut risque pertinentes dans Azure Active Directory Identity Protection, vous pouvez utiliser l'action [**Confirmer que l'utilisateur est compromis**](/cloud-app-security/accounts#governance-actions) dans le portail Cloud App Security.
+1. Activez la préauthentification Kerberos. Pour plus d’informations sur les attributs de compte et sur la manière de les corriger, consultez [Attributs de compte non sécurisés](cas-isp-unsecure-account-attributes.md).
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Suspicion d’attaque de ransomware WannaCry (ID externe 2035)
 
